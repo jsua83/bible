@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 323</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 323</h1>
+        <p class="sub-title">찬송가 546장 주님 약속하신 말씀 위에서</p>
+        <p class="sub-title">데살로니가후서 1장~3장 — 재림과 종말에 대한 바른 자세</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 546장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1vRPUesY0QTLMeEevC6dPo2thAzVVzRgU" alt="찬송가 546장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 데살로니가후서 1장~3장<br>'재림과 종말에 대한 바른 자세'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 바울은 데살로니가후서를 시작하며 데살로니가 성도들을 따뜻하게 칭찬해 줍니다.</span>
+            데살로니가전서가 바울이 데살로니가 성도들의 소식을 전해 듣고 기뻐하며, 미처 다하지 못한 재림에 대한 가르침을 담아 <strong>따뜻한 분위기로 써 보낸 첫 번째 편지</strong>라면, 데살로니가후서는 재림에 대해 오해하는 일부 사람에 관한 소식을 듣고 <strong>그들을 엄격하게 경고하며 성도들의 바른 신앙생활에 대해 써 보낸 두 번째 편지</strong>입니다.<br><br>
+            데살로니가후서는 사도 바울이 교회들에게 써 보낸 편지 중에서 <strong>가장 짧은 분량</strong>이지만, '종말'에 관한 매우 중요한 사실들이 기록되어 있습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 바울은 핍박 가운데 있는 데살로니가 성도들이 하나님의 부르심에 합당한 영광의 자리에 서게 될 것을 하나님께 간구합니다.</span>
+            당시 데살로니가 성도들은 사도 바울을 3주 만에 쫓아낸 세력들에 의해 <strong>극심한 박해와 환난</strong> 가운데 있었습니다. 그래서 바울은 먼저 두 가지를 알려주며 격려합니다.
+            <div class="quote">
+                <strong>첫째,</strong> 그들이 믿음으로 인내하고 있음을 자랑스러워한다는 사실을 알려주며, 그들의 고통은 지나가는 시험임을 말합니다.<br>
+                <strong>둘째,</strong> 바울처럼 멀리서 기도하며 함께하는 이들이 있음을 알려주고, 하나님께서 함께하시므로 결국에는 보상해 주실 것이라고 위로합니다.
+            </div>
+            그리고 바울은 데살로니가 성도들이 <strong>하나님의 부르심에 합당하게 살기를 간절히 기도합니다</strong>(살후 1:11~12).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 바울은 데살로니가 성도들에게 재림과 종말에 대한 바른 자세를 가르쳐 줍니다.</span>
+            바울이 데살로니가 성도들에게 두 번째 편지를 쓴 이유는 분명합니다. <strong>"재림의 날이 이미 왔다"는 잘못된 말에 흔들리거나 두려워하지 말라</strong>는 것입니다.<br><br>
+            계속해서 바울은 재림 전에 일어날 일과 앞으로 있을 <strong>'불법의 사람'</strong>에 대해 가르쳐 줍니다(살후 2:3~12). 재림에 대한 바른 지식이 없으면 잘못된 가르침에 쉽게 흔들릴 수 있기 때문입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 바울은 데살로니가 성도들에게 주의 재림의 때를 위한 최선의 준비는 기록된 성경으로 무장하는 것이라고 가르칩니다.</span>
+            바울은 마지막 때에 크고 작은 어두운 영들이 미혹할 것이라고 말합니다.
+            <div class="quote">
+                <strong>그때를 위한 최선의 준비는 하나님의 말씀으로 무장하는 것입니다.</strong>
+            </div>
+            바울은 데살로니가 성도들에게 그동안 가르침을 받았던 전통, 곧 <strong>자신이 전해 준 복음의 진리를 굳게 지키라</strong>고 권면합니다(살후 2:13~15).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 바울은 재림에 대해 끝내 오해하는 자들을 경고하며 실생활에서의 해결책을 제시해 줍니다.</span>
+            바울은 데살로니가 성도들이 실제 생활에서 그리스도인으로 어떻게 살아야 하는지를 가르칩니다(살후 3:6~18). 사실 이 내용이 바울이 두 번째 편지를 쓴 <strong>가장 중요한 이유</strong> 중 하나입니다.<br><br>
+            재림에 대해 바르게 이해하지 못하고 오해하여 <strong>일하지 않고 게으른 자들이 있다는 소식</strong>을 들은 바울에게는 이를 바로잡는 일이 매우 중요했기 때문입니다(살후 3:10~11). 바울은 그들에게 이렇게 당부하며 축복기도로 편지를 맺습니다.
+            <div class="quote">
+                <strong>"조용히 일하여 자기 양식을 먹으라"</strong> (살후 3:12)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 데살로니가후서 1장~3장 '재림과 종말에 대한 바른 자세'를 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 데살로니가후서 1장 -->
+        <div class="chapter-title">데살로니가후서 1장 (1~12절)</div>
+        <div class="verse"><span class="verse-num">1</span> 바울과 실루아노와 디모데는 하나님 우리 아버지와 주 예수 그리스도 안에 있는 데살로니가인의 교회에 편지하노니</div>
+        <div class="verse"><span class="verse-num">2</span> 하나님 아버지와 주 예수 그리스도로부터 은혜와 평강이 너희에게 있을지어다</div>
+        <div class="verse"><span class="verse-num">3</span> 형제들아 우리가 너희를 위하여 항상 하나님께 감사할지니 이것이 당연함은 너희의 믿음이 더욱 자라고 너희가 다 각기 서로 사랑함이 풍성함이니</div>
+        <div class="verse"><span class="verse-num">4</span> 그러므로 너희가 견디고 있는 모든 박해와 환난 중에서 너희 인내와 믿음으로 말미암아 하나님의 여러 교회에서 우리가 친히 자랑하노라</div>
+        <div class="verse"><span class="verse-num">5</span> 이는 하나님의 공의로운 심판의 표요 너희로 하여금 하나님의 나라에 합당한 자로 여김을 받게 하려 함이니 그 나라를 위하여 너희가 또한 고난을 받느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 너희로 환난을 받게 하는 자들에게는 환난으로 갚으시고</div>
+        <div class="verse"><span class="verse-num">7</span> 환난을 받는 너희에게는 우리와 함께 안식으로 갚으시는 것이 하나님의 공의시니 주 예수께서 자기의 능력의 천사들과 함께 하늘로부터 불꽃 가운데에 나타나실 때에</div>
+        <div class="verse"><span class="verse-num">8</span> 하나님을 모르는 자들과 우리 주 예수의 복음에 복종하지 않는 자들에게 형벌을 내리시리니</div>
+        <div class="verse"><span class="verse-num">9</span> 이런 자들은 주의 얼굴과 그의 힘의 영광을 떠나 영원한 멸망의 형벌을 받으리로다</div>
+        <div class="verse"><span class="verse-num">10</span> 그 날에 그가 강림하사 그의 성도들에게서 영광을 받으시고 모든 믿는 자들에게서 놀랍게 여김을 얻으시리니 이는 (우리의 증거가 너희에게 믿어졌음이라)</div>
+        <div class="verse"><span class="verse-num">11</span> 이러므로 우리도 항상 너희를 위하여 기도함은 우리 하나님이 너희를 그 부르심에 합당한 자로 여기시고 모든 선을 기뻐함과 믿음의 역사를 능력으로 이루게 하시고</div>
+        <div class="verse"><span class="verse-num">12</span> 우리 하나님과 주 예수 그리스도의 은혜대로 우리 주 예수의 이름이 너희 가운데서 영광을 받으시고 너희도 그 안에서 영광을 받게 하려 함이라</div>
+
+        <!-- 데살로니가후서 2장 -->
+        <div class="chapter-title">데살로니가후서 2장 (1~17절)</div>
+        <div class="verse"><span class="verse-num">1</span> 형제들아 우리가 너희에게 구하는 것은 우리 주 예수 그리스도의 강림하심과 우리가 그 앞에 모임에 관하여</div>
+        <div class="verse"><span class="verse-num">2</span> 영으로나 또는 말로나 또는 우리에게서 받았다 하는 편지로나 주의 날이 이르렀다고 해서 쉽게 마음이 흔들리거나 두려워하거나 하지 말아야 한다는 것이라</div>
+        <div class="verse"><span class="verse-num">3</span> 누가 어떻게 하여도 너희가 미혹되지 말라 먼저 배교하는 일이 있고 저 불법의 사람 곧 멸망의 아들이 나타나기 전에는 그 날이 이르지 아니하리니</div>
+        <div class="verse"><span class="verse-num">4</span> 그는 대적하는 자라 신이라고 불리는 모든 것과 숭배함을 받는 것에 대항하여 그 위에 자기를 높이고 하나님의 성전에 앉아 자기를 하나님이라고 내세우느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 너희와 함께 있을 때에 이 일을 너희에게 말한 것을 기억하지 못하느냐</div>
+        <div class="verse"><span class="verse-num">6</span> 너희는 지금 그로 하여금 그의 때에 나타나게 하려 하여 막는 것이 있는 것을 아나니</div>
+        <div class="verse"><span class="verse-num">7</span> 불법의 비밀이 이미 활동하였으나 지금은 그것을 막는 자가 있어 그 중에서 옮겨질 때까지 하리라</div>
+        <div class="verse"><span class="verse-num">8</span> 그 때에 불법한 자가 나타나리니 주 예수께서 그 입의 기운으로 그를 죽이시고 강림하여 나타나심으로 폐하시리라</div>
+        <div class="verse"><span class="verse-num">9</span> 악한 자의 나타남은 사탄의 활동을 따라 모든 능력과 표적과 거짓 기적과</div>
+        <div class="verse"><span class="verse-num">10</span> 불의의 모든 속임으로 멸망하는 자들에게 있으리니 이는 그들이 진리의 사랑을 받지 아니하여 구원함을 받지 못함이라</div>
+        <div class="verse"><span class="verse-num">11</span> 이러므로 하나님이 미혹의 역사를 그들에게 보내사 거짓 것을 믿게 하심은</div>
+        <div class="verse"><span class="verse-num">12</span> 진리를 믿지 않고 불의를 좋아하는 모든 자들로 하여금 심판을 받게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">13</span> 주께서 사랑하시는 형제들아 우리가 항상 너희에 관하여 마땅히 하나님께 감사할 것은 하나님이 처음부터 너희를 택하사 성령의 거룩하게 하심과 진리를 믿음으로 구원을 받게 하심이니</div>
+        <div class="verse"><span class="verse-num">14</span> 이를 위하여 우리의 복음으로 너희를 부르사 우리 주 예수 그리스도의 영광을 얻게 하려 하심이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 그러므로 형제들아 굳건하게 서서 말로나 우리의 편지로 가르침을 받은 전통을 지키라</div>
+        <div class="verse"><span class="verse-num">16</span> 우리 주 예수 그리스도와 우리를 사랑하시고 영원한 위로와 좋은 소망을 은혜로 주신 하나님 우리 아버지께서</div>
+        <div class="verse"><span class="verse-num">17</span> 너희 마음을 위로하시고 모든 선한 일과 말에 굳건하게 하시기를 원하노라</div>
+
+        <!-- 데살로니가후서 3장 -->
+        <div class="chapter-title">데살로니가후서 3장 (1~18절)</div>
+        <div class="verse"><span class="verse-num">1</span> 끝으로 형제들아 너희는 우리를 위하여 기도하기를 주의 말씀이 너희 가운데서와 같이 퍼져 나가 영광스럽게 되고</div>
+        <div class="verse"><span class="verse-num">2</span> 또한 우리를 부당하고 악한 사람들에게서 건지시옵소서 하라 믿음은 모든 사람의 것이 아니니라</div>
+        <div class="verse"><span class="verse-num">3</span> 주는 미쁘사 너희를 굳건하게 하시고 악한 자에게서 지키시리라</div>
+        <div class="verse"><span class="verse-num">4</span> 너희에 대하여는 우리가 명한 것을 너희가 행하고 또 행할 줄을 우리가 주 안에서 확신하노니</div>
+        <div class="verse"><span class="verse-num">5</span> 주께서 너희 마음을 인도하여 하나님의 사랑과 그리스도의 인내에 들어가게 하시기를 원하노라</div>
+        <div class="verse"><span class="verse-num">6</span> 형제들아 우리 주 예수 그리스도의 이름으로 너희를 명하노니 게으르게 행하고 우리에게서 받은 전통대로 행하지 아니하는 모든 형제에게서 떠나라</div>
+        <div class="verse"><span class="verse-num">7</span> 어떻게 우리를 본받아야 할지를 너희가 스스로 아나니 우리가 너희 가운데서 무질서하게 행하지 아니하며</div>
+        <div class="verse"><span class="verse-num">8</span> 누구에게서든지 음식을 값없이 먹지 않고 오직 수고하고 애써 주야로 일함은 너희 아무에게도 폐를 끼치지 아니하려 함이니</div>
+        <div class="verse"><span class="verse-num">9</span> 우리에게 권리가 없는 것이 아니요 오직 스스로 너희에게 본을 보여 우리를 본받게 하려 함이니라</div>
+        <div class="verse"><span class="verse-num">10</span> 우리가 너희와 함께 있을 때에도 너희에게 명하기를 누구든지 일하기 싫어하거든 먹지도 말게 하라 하였더니</div>
+        <div class="verse"><span class="verse-num">11</span> 우리가 들은즉 너희 가운데 게으르게 행하여 도무지 일하지 아니하고 일을 만들기만 하는 자들이 있다 하니</div>
+        <div class="verse"><span class="verse-num">12</span> 이런 자들에게 우리가 명하고 주 예수 그리스도 안에서 권하기를 조용히 일하여 자기 양식을 먹으라 하노라</div>
+        <div class="verse"><span class="verse-num">13</span> 형제들아 너희는 선을 행하다가 낙심하지 말라</div>
+        <div class="verse"><span class="verse-num">14</span> 누가 이 편지에 한 우리 말을 순종하지 아니하거든 그 사람을 지목하여 사귀지 말고 그로 하여금 부끄럽게 하라</div>
+        <div class="verse"><span class="verse-num">15</span> 그러나 원수와 같이 생각하지 말고 형제 같이 권면하라</div>
+        <div class="verse"><span class="verse-num">16</span> 평강의 주께서 친히 때마다 일마다 너희에게 평강을 주시고 주께서 너희 모든 사람과 함께 하시기를 원하노라</div>
+        <div class="verse"><span class="verse-num">17</span> 나 바울은 친필로 문안하노니 이는 편지마다 표시로서 이렇게 쓰노라</div>
+        <div class="verse"><span class="verse-num">18</span> 우리 주 예수 그리스도의 은혜가 너희 무리에게 있을지어다</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 326</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 326</h1>
+        <p class="sub-title">찬송가 340장 어지러운 세상 중에</p>
+        <p class="sub-title">사도행전 18장 23절~19장 — 바울의 3차 전도여행</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 340장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1-XB2CVSF6_EvNWvbUljm9Fk0kWWlQ3_S" alt="찬송가 340장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사도행전 18장 23절~19장<br>'바울의 3차 전도여행'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 바울은 4년여에 걸친 3차 전도여행 중에 에베소에서 고린도전·후서를, 그리고 고린도에서 로마서를 씁니다.</span>
+            바울의 3차 전도여행과 예루살렘 여행은 <strong>A.D. 53년부터 57년경까지 약 4년</strong>에 걸쳐 진행되었습니다. 3차 전도여행은 1차, 2차 전도여행지들을 돌아보는 것이었고, <strong>에베소에서 사역하면서 제자들을 길러냈습니다.</strong>
+            <div class="quote">
+                <strong>에베소에서</strong> → 고린도전서와 고린도후서를 기록했습니다.<br>
+                <strong>고린도에서</strong> → 로마서를 기록했습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 바울의 동역자인 브리스길라와 아굴라는 아볼로가 고린도 교회에서 사역할 수 있도록 돕습니다.</span>
+            바울의 3차 전도여행은 그동안 뿌려졌던 <strong>복음의 씨앗들이 그 땅에서 잘 뿌리내릴 수 있도록 돕는 목회적 차원</strong>의 전도여행이었습니다.<br><br>
+            그때 에베소에서는 <strong>브리스길라와 아굴라 부부</strong>가 아볼로에게 예수님의 이야기를 전해 고린도로 파송하는 일이 있었습니다. 든든한 동역자들이 각자의 자리에서 복음을 위해 함께 일한 것입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 오순절 예루살렘에서 120명에게 임했던 성령 강림 사건이 바울의 3차 전도여행 중 에베소에서 열두 명쯤 되는 이들에게 임합니다.</span>
+            에베소에서 <strong>놀라운 성령 강림 사건</strong>이 일어납니다(행 19:1~7). 바울이 에베소에서 예수님을 증거하고 세례를 베풀고 안수합니다. 그러자 마치 <strong>오순절 마가의 다락방에 120명에게 임하셨던 것처럼</strong>, 그곳에 있는 <strong>열두 명쯤 되는 사람에게 성령이 임하심으로 방언과 예언을 하는 역사</strong>가 일어났습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 바울은 2차 전도여행 중 1년 6개월 동안 고린도 교회를 세웠고, 3차 전도여행 중 3년 동안 에베소 교회를 세웠습니다.</span>
+            바울의 3차 전도여행의 하이라이트는 <strong>에베소 지역의 두란노 서원에서 집중적으로 제자들을 길러낸 일</strong>이라고 할 수 있습니다(행 19:8~10).
+            <div class="quote">
+                <strong>2차 전도여행</strong> — 고린도에서 <strong>1년 6개월</strong> 동안 머물며 고린도 교회를 세웠습니다.<br>
+                <strong>3차 전도여행</strong> — 에베소에서 <strong>3년</strong> 동안 머물며 에베소 교회를 세웠습니다.
+            </div>
+            또한 바울은 에베소에서 놀라운 전도의 성과를 내어 <strong>에베소의 많은 사람이 예수님을 믿게 됩니다</strong>(행 19:17~20).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 고린도 법정에서는 아가야 총독 갈리오가, 에베소에서는 에베소 서기장이 바울에게 유리한 판결을 내립니다.</span>
+            바울이 에베소를 떠나기 직전, 아데미 신상 모형을 만들어 팔던 은장색 <strong>데메드리오</strong>가 경제적으로 막대한 피해를 입자 주변 사람들을 선동하여 바울을 잡고 복음 전파를 막으려는 소동을 일으킵니다(행 19:23~27).<br><br>
+            이 사건은 <strong>에베소 서기장이 소동을 진화시키고 무리를 해산시킴으로</strong> 마무리됩니다(행 19:35~41). 일찍이 고린도 법정에서 바울 사건을 기각했던 <strong>아가야 총독 갈리오</strong> 때처럼(행 18:12~16), 에베소에서도 에베소 지역 로마 서기장의 합리적인 판결로 <strong>바울은 또 한 번의 위기를 넘기게 됩니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 사도행전 18장 23절~19장 '바울의 3차 전도여행'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 사도행전 18장 -->
+        <div class="chapter-title">사도행전 18장 (23~28절)</div>
+        <div class="verse"><span class="verse-num">23</span> 얼마 있다가 떠나 갈라디아와 브루기아 땅을 차례로 다니며 모든 제자를 굳건하게 하니라</div>
+        <div class="verse"><span class="verse-num">24</span> 알렉산드리아에서 난 아볼로라 하는 유대인이 에베소에 이르니 이 사람은 언변이 좋고 성경에 능통한 자라</div>
+        <div class="verse"><span class="verse-num">25</span> 그가 일찍이 주의 도를 배워 열심으로 예수에 관한 것을 자세히 말하며 가르치나 요한의 세례만 알 따름이라</div>
+        <div class="verse"><span class="verse-num">26</span> 그가 회당에서 담대히 말하기 시작하거늘 브리스길라와 아굴라가 듣고 데려다가 하나님의 도를 더 정확하게 풀어 이르더라</div>
+        <div class="verse"><span class="verse-num">27</span> 아볼로가 아가야로 건너가고자 함으로 형제들이 그를 격려하며 제자들에게 편지를 써 영접하라 하였더니 그가 가매 은혜로 말미암아 믿은 자들에게 많은 유익을 주니</div>
+        <div class="verse"><span class="verse-num">28</span> 이는 성경으로써 예수는 그리스도라고 증언하여 공중 앞에서 힘있게 유대인의 말을 이김이러라</div>
+
+        <!-- 사도행전 19장 -->
+        <div class="chapter-title">사도행전 19장 (1~41절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아볼로가 고린도에 있을 때에 바울이 윗지방으로 다녀 에베소에 와서 어떤 제자들을 만나</div>
+        <div class="verse"><span class="verse-num">2</span> 이르되 너희가 믿을 때에 성령을 받았느냐 이르되 아니라 우리는 성령이 계심도 듣지 못하였노라</div>
+        <div class="verse"><span class="verse-num">3</span> 바울이 이르되 그러면 너희가 무슨 세례를 받았느냐 대답하되 요한의 세례니라</div>
+        <div class="verse"><span class="verse-num">4</span> 바울이 이르되 요한이 회개의 세례를 베풀며 백성에게 말하되 내 뒤에 오시는 이를 믿으라 하였으니 이는 곧 예수라 하거늘</div>
+        <div class="verse"><span class="verse-num">5</span> 그들이 듣고 주 예수의 이름으로 세례를 받으니</div>
+        <div class="verse"><span class="verse-num">6</span> 바울이 그들에게 안수하매 성령이 그들에게 임하시므로 방언도 하고 예언도 하니</div>
+        <div class="verse"><span class="verse-num">7</span> 모두 열두 사람쯤 되니라</div>
+        <div class="verse"><span class="verse-num">8</span> 바울이 회당에 들어가 석 달 동안 담대히 하나님 나라에 관하여 강론하며 권면하되</div>
+        <div class="verse"><span class="verse-num">9</span> 어떤 사람들은 마음이 굳어 순종하지 않고 무리 앞에서 이 도를 비방하거늘 바울이 그들을 떠나 제자들을 따로 세우고 두란노 서원에서 날마다 강론하니라</div>
+        <div class="verse"><span class="verse-num">10</span> 두 해 동안 이같이 하니 아시아에 사는 자는 유대인이나 헬라인이나 다 주의 말씀을 듣더라</div>
+        <div class="verse"><span class="verse-num">11</span> 하나님이 바울의 손으로 놀라운 능력을 행하게 하시니</div>
+        <div class="verse"><span class="verse-num">12</span> 심지어 사람들이 바울의 몸에서 손수건이나 앞치마를 가져다가 병든 사람에게 얹으면 그 병이 떠나고 악귀도 나가더라</div>
+        <div class="verse"><span class="verse-num">13</span> 이에 돌아다니며 마술하는 어떤 유대인들이 시험삼아 악귀 들린 자들에게 주 예수의 이름을 불러 말하되 내가 바울이 전파하는 예수를 의지하여 너희에게 명하노라 하더라</div>
+        <div class="verse"><span class="verse-num">14</span> 유대의 한 제사장 스게와의 일곱 아들도 이 일을 행하더니</div>
+        <div class="verse"><span class="verse-num">15</span> 악귀가 대답하여 이르되 내가 예수도 알고 바울도 알거니와 너희는 누구냐 하며</div>
+        <div class="verse"><span class="verse-num">16</span> 악귀 들린 사람이 그들에게 뛰어올라 눌러 이기니 그들이 상하여 벗은 몸으로 그 집에서 도망하는지라</div>
+        <div class="verse"><span class="verse-num">17</span> 에베소에 사는 유대인과 헬라인들이 다 이 일을 알고 두려워하며 주 예수의 이름을 높이고</div>
+        <div class="verse"><span class="verse-num">18</span> 믿은 사람들이 많이 와서 자복하여 행한 일을 알리며</div>
+        <div class="verse"><span class="verse-num">19</span> 또 마술을 행하던 많은 사람이 그 책을 모아 가지고 와서 모든 사람 앞에서 불사르니 그 책 값을 계산한즉 은 오만이나 되더라</div>
+        <div class="verse"><span class="verse-num">20</span> 이와 같이 주의 말씀이 힘이 있어 흥왕하여 세력을 얻으니라</div>
+        <div class="verse"><span class="verse-num">21</span> 이 일이 있은 후에 바울이 마게도냐와 아가야를 거쳐 예루살렘에 가기로 작정하여 이르되 내가 거기 갔다가 후에 로마도 보아야 하리라 하고</div>
+        <div class="verse"><span class="verse-num">22</span> 자기를 돕는 사람 중에서 디모데와 에라스도 두 사람을 마게도냐로 보내고 자기는 아시아에 얼마 동안 더 있으니라</div>
+        <div class="verse"><span class="verse-num">23</span> 그 때쯤 되어 이 도로 말미암아 적지 않은 소동이 있었으니</div>
+        <div class="verse"><span class="verse-num">24</span> 즉 데메드리오라 하는 어떤 은장색이 은으로 아데미의 신상 모형을 만들어 직공들에게 적지 않은 벌이를 하게 하더니</div>
+        <div class="verse"><span class="verse-num">25</span> 그가 그 직공들과 그러한 영업하는 자들을 모아 이르되 여러분도 알거니와 우리의 풍족한 생활이 이 생업에 있는데</div>
+        <div class="verse"><span class="verse-num">26</span> 이 바울이 에베소뿐 아니라 거의 전 아시아를 통하여 수많은 사람을 권유하여 말하되 사람의 손으로 만든 것들은 신이 아니라 하니 이는 그대들도 보고 들은 것이라</div>
+        <div class="verse"><span class="verse-num">27</span> 우리의 이 영업이 천하여질 위험이 있을 뿐 아니라 큰 여신 아데미의 신전도 무시 당하게 되고 온 아시아와 천하가 위하는 그의 위엄도 떨어질까 하노라 하더라</div>
+        <div class="verse"><span class="verse-num">28</span> 그들이 이 말을 듣고 분노가 가득하여 외쳐 이르되 크다 에베소 사람의 아데미여 하니</div>
+        <div class="verse"><span class="verse-num">29</span> 온 시내가 요란하여 바울과 같이 다니는 마게도냐 사람 가이오와 아리스다고를 붙들어 일제히 연극장으로 달려 들어가는지라</div>
+        <div class="verse"><span class="verse-num">30</span> 바울이 백성 가운데로 들어가고자 하나 제자들이 말리고</div>
+        <div class="verse"><span class="verse-num">31</span> 또 아시아 관리 중에 바울의 친구된 어떤 이들이 그에게 통지하여 연극장에 들어가지 말라 권하더라</div>
+        <div class="verse"><span class="verse-num">32</span> 사람들이 외쳐 어떤 이는 이런 말을, 어떤 이는 저런 말을 하니 모인 무리가 분란하여 태반이나 어찌하여 모였는지 알지 못하더라</div>
+        <div class="verse"><span class="verse-num">33</span> 유대인들이 무리 가운데서 알렉산더를 권하여 앞으로 밀어내니 알렉산더가 손짓하며 백성에게 변명하려 하나</div>
+        <div class="verse"><span class="verse-num">34</span> 그들은 그가 유대인인 줄 알고 다 한 소리로 외쳐 이르되 크다 에베소 사람의 아데미여 하기를 두 시간이나 하더니</div>
+        <div class="verse"><span class="verse-num">35</span> 서기장이 무리를 진정시키고 이르되 에베소 사람들아 에베소 시가 큰 아데미와 제우스에게서 내려온 우상의 신전지기가 된 줄을 누가 알지 못하겠느냐</div>
+        <div class="verse"><span class="verse-num">36</span> 이 일이 그렇지 않다 할 수 없으니 너희가 가만히 있어서 무엇이든지 경솔히 아니하여야 하리라</div>
+        <div class="verse"><span class="verse-num">37</span> 신전의 물건을 도둑질하지도 아니하였고 우리 여신을 비방하지도 아니한 이 사람들을 너희가 붙잡아 왔으니</div>
+        <div class="verse"><span class="verse-num">38</span> 만일 데메드리오와 그와 함께 있는 직공들이 누구에게 고발할 것이 있으면 재판 날도 있고 총독들도 있으니 피차 고소할 것이요</div>
+        <div class="verse"><span class="verse-num">39</span> 만일 그 외에 무엇을 원하면 정식으로 민회에서 결정할지라</div>
+        <div class="verse"><span class="verse-num">40</span> 오늘 아무 까닭도 없는 이 일에 우리가 소요 사건으로 책망 받을 위험이 있고 우리는 이 불법 집회에 관하여 보고할 자료가 없다 하고</div>
+        <div class="verse"><span class="verse-num">41</span> 이에 그 모임을 흩어지게 하니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
