@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 312</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 312</h1>
+        <p class="sub-title">찬송가 190장 성령이여 강림하사</p>
+        <p class="sub-title">요한복음 14~15장 — 보혜사 성령</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 190장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1kKFI6P6QfcKDOsp21IzjmgzrpHQVf0bb" alt="찬송가 190장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 요한복음 14~15장<br>'보혜사 성령'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 사도 요한은 예수님께서 마지막 유월절과 첫 번째 성찬식 때에 제자들과 많은 대화를 나누셨다고 증언합니다.</span>
+            요한복음은 예수님의 마지막 한 주간에 대해 중요한 자료들을 많이 제공합니다. 특히 요한은 예수님께서 산헤드린 공회에 잡히시기 전에 제자들과 마지막 유월절을 첫 번째 성찬식으로 보내시면서 하셨던 말씀을 최대한 자세히 증언해 주고 있습니다. <strong>마치 마지막 만찬 자리를 생중계하는 듯합니다.</strong><br><br>
+            제자들을 향한 예수님의 위로와, 도마·빌립·유다의 질문에 대한 예수님의 가르침 등이 자세히 기록되어 있습니다(요 14:5~24).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 예수님께서 승천하신 이후에 성부 하나님께서는 성자 예수님의 이름으로 성령님을 제자들에게 보내십니다.</span>
+            예수님께서는 하나님께서 보내시는 <strong>보혜사 성령님</strong>께서 다음 세 가지를 행하실 것이라고 말씀해 주십니다.
+            <div class="quote">
+                <strong>첫째,</strong> 모든 것을 가르쳐 주십니다.<br>
+                <strong>둘째,</strong> 예수님의 가르침을 생각나게 하십니다.<br>
+                <strong>셋째,</strong> 모든 것을 도와주십니다.
+            </div>
+            그리고 <strong>세상이 주는 것과 같지 않은 평안</strong>을 주실 것이라고 약속하십니다(요 14:27).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 예수님께서는 하나님과 예수님과 제자들(그리스도인) 사이의 관계를 포도나무 비유로 말씀해 주십니다.</span>
+            예수님께서는 하나님과 예수님과 제자들(그리스도인)의 관계를 <strong>농부와 참포도나무와 포도나무 가지</strong>로 말씀해 주십니다(요 15:1~2). 이후에 사도 바울도 이 내용을 이어받아 메시지를 전합니다(롬 11:17~18).<br><br>
+            예수님께서 제자들에게 주시는 메시지는 다음 세 가지입니다(요 15:7~11).
+            <div class="quote">
+                <strong>첫째,</strong> 예수님 안에 거하면 무엇이든지 구하는 대로 이룰 것입니다.<br>
+                <strong>둘째,</strong> 열매를 많이 맺으면 하나님께서 영광을 받으시고 제자들은 주의 제자가 될 것입니다.<br>
+                <strong>셋째,</strong> 하나님의 계명을 지키면 주의 사랑 안에 거하게 되고 기쁨이 충만할 것입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님께서 아브라함을 친구로 삼으셨듯이 예수님께서도 제자들을 친구로 삼아 주십니다.</span>
+            아브라함은 믿음으로 의인이라 칭함을 받았고, 모리아 산에서의 순종으로 말미암아 <strong>하나님과 친구가 되는 영광</strong>을 누렸습니다(사 41:8; 약 2:23). 하나님께서 아브라함을 친구라 불러 주셨듯이, 예수님께서도 제자들을 친구라 불러 주십니다.<br><br>
+            예수님께서 주신 새 계명을 지키는 자는 다음과 같은 복을 받게 됩니다.
+            <div class="quote">
+                <strong>첫째,</strong> 예수님의 친구로 삼아 주십니다.<br>
+                <strong>둘째,</strong> 하나님께 들은 것을 다 알려 주십니다.<br>
+                <strong>셋째,</strong> 열매를 많이 맺어 무엇이든 구하는 것을 다 받게 해 주십니다.
+            </div>
+            예수님의 제자들은 <strong>예수님의 고난의 길을 함께 걸어갈 친구</strong>가 될 것입니다. 그리고 진리의 성령께서 오셔서 제자들을 진리 가운데 인도하실 것입니다. 결국 예수님께서는 더욱 가까이 계시며, 환난을 당하는 제자들에게 <strong>세상을 이길 힘을 더하여 주실 것</strong>입니다(요 16:33).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 예수님께서는 세상이 예수님을 미워한 것처럼 제자들(그리스도인)도 미워할 것이라고 미리 말씀해 주십니다.</span>
+            예수님께서는 제자들과 세상과의 관계를 말씀해 주십니다(요 15:18~19). <strong>제자들이 세상에 속한 자가 아니기 때문에,</strong> 세상은 예수님을 미워한 것처럼 제자들을 미워할 것이라고 말씀해 주신 것입니다. 이는 말씀대로 이루어질 것입니다(요 15:25).<br><br>
+            그러나 예수님께서는 소망의 말씀도 함께 주십니다.
+            <div class="quote"><strong>"곧 오실 보혜사 성령께서 제자들을 도우실 것이다"</strong></div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 요한복음 14~15장 '보혜사 성령'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 요한복음 14장 -->
+        <div class="chapter-title">요한복음 14장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 너희는 마음에 근심하지 말라 하나님을 믿으니 또 나를 믿으라</div>
+        <div class="verse"><span class="verse-num">2</span> 내 아버지 집에 거할 곳이 많도다 그렇지 않으면 너희에게 일렀으리라 내가 너희를 위하여 거처를 예비하러 가노니</div>
+        <div class="verse"><span class="verse-num">3</span> 가서 너희를 위하여 거처를 예비하면 내가 다시 와서 너희를 내게로 영접하여 나 있는 곳에 너희도 있게 하리라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 어디로 가는지 그 길을 너희가 아느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 도마가 이르되 주여 주께서 어디로 가시는지 우리가 알지 못하거늘 그 길을 어찌 알겠사옵나이까</div>
+        <div class="verse"><span class="verse-num">6</span> 예수께서 이르시되 내가 곧 길이요 진리요 생명이니 나로 말미암지 않고는 아버지께로 올 자가 없느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 너희가 나를 알았더라면 내 아버지도 알았으리로다 이제부터는 너희가 그를 알았고 또 보았느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 빌립이 이르되 주여 아버지를 우리에게 보여 주옵소서 그리하면 족하겠나이다</div>
+        <div class="verse"><span class="verse-num">9</span> 예수께서 이르시되 빌립아 내가 이렇게 오래 너희와 함께 있으되 네가 나를 알지 못하느냐 나를 본 자는 아버지를 보았거늘 어찌하여 아버지를 보이라 하느냐</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 아버지 안에 거하고 아버지는 내 안에 계신 것을 네가 믿지 아니하느냐 내가 너희에게 이르는 말은 스스로 하는 것이 아니라 아버지께서 내 안에 계셔서 그의 일을 하시는 것이라</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 아버지 안에 거하고 아버지께서 내 안에 계심을 믿으라 그렇지 못하겠거든 행하는 그 일로 말미암아 나를 믿으라</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 진실로 진실로 너희에게 이르노니 나를 믿는 자는 내가 하는 일을 그도 할 것이요 또한 그보다 큰 일도 하리니 이는 내가 아버지께로 감이라</div>
+        <div class="verse"><span class="verse-num">13</span> 너희가 내 이름으로 무엇을 구하든지 내가 행하리니 이는 아버지로 하여금 아들로 말미암아 영광을 받으시게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">14</span> 내 이름으로 무엇이든지 내게 구하면 내가 행하리라</div>
+        <div class="verse"><span class="verse-num">15</span> 너희가 나를 사랑하면 나의 계명을 지키리라</div>
+        <div class="verse"><span class="verse-num">16</span> 내가 아버지께 구하겠으니 그가 또 다른 보혜사를 너희에게 주사 영원토록 너희와 함께 있게 하리니</div>
+        <div class="verse"><span class="verse-num">17</span> 그는 진리의 영이라 세상은 능히 그를 받지 못하나니 이는 그를 보지도 못하고 알지도 못함이라 그러나 너희는 그를 아나니 그는 너희와 함께 거하심이요 또 너희 속에 계시겠음이라</div>
+        <div class="verse"><span class="verse-num">18</span> 내가 너희를 고아와 같이 버려두지 아니하고 너희에게로 오리라</div>
+        <div class="verse"><span class="verse-num">19</span> 조금 있으면 세상은 다시 나를 보지 못할 것이로되 너희는 나를 보리니 이는 내가 살아 있고 너희도 살아 있겠음이라</div>
+        <div class="verse"><span class="verse-num">20</span> 그 날에는 내가 아버지 안에, 너희가 내 안에, 내가 너희 안에 있는 것을 너희가 알리라</div>
+        <div class="verse"><span class="verse-num">21</span> 나의 계명을 지키는 자라야 나를 사랑하는 자니 나를 사랑하는 자는 내 아버지께 사랑을 받을 것이요 나도 그를 사랑하여 그에게 나를 나타내리라</div>
+        <div class="verse"><span class="verse-num">22</span> 가룟인 아닌 유다가 이르되 주여 어찌하여 자기를 우리에게는 나타내시고 세상에는 아니하려 하시나이까</div>
+        <div class="verse"><span class="verse-num">23</span> 예수께서 대답하여 이르시되 사람이 나를 사랑하면 내 말을 지키리니 내 아버지께서 그를 사랑하실 것이요 우리가 그에게 가서 거처를 그와 함께 하리라</div>
+        <div class="verse"><span class="verse-num">24</span> 나를 사랑하지 아니하는 자는 내 말을 지키지 아니하나니 너희가 듣는 말은 내 말이 아니요 나를 보내신 아버지의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">25</span> 내가 아직 너희와 함께 있어서 이 말을 너희에게 하였거니와</div>
+        <div class="verse"><span class="verse-num">26</span> 보혜사 곧 아버지께서 내 이름으로 보내실 성령 그가 너희에게 모든 것을 가르치고 내가 너희에게 말한 모든 것을 생각나게 하리라</div>
+        <div class="verse"><span class="verse-num">27</span> 평안을 너희에게 끼치노니 곧 나의 평안을 너희에게 주노라 내가 너희에게 주는 것은 세상이 주는 것과 같지 아니하니라 너희는 마음에 근심하지도 말고 두려워하지도 말라</div>
+        <div class="verse"><span class="verse-num">28</span> 내가 갔다가 너희에게로 온다 하는 말을 너희가 들었나니 나를 사랑하였더라면 내가 아버지께로 감을 기뻐하였으리라 아버지는 나보다 크심이라</div>
+        <div class="verse"><span class="verse-num">29</span> 이제 일이 일어나기 전에 너희에게 말한 것은 일이 일어날 때에 너희로 믿게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">30</span> 이 후에는 내가 너희와 말을 많이 하지 아니하리니 이 세상의 임금이 오겠음이라 그러나 그는 내게 관계할 것이 없으니</div>
+        <div class="verse"><span class="verse-num">31</span> 오직 내가 아버지를 사랑하는 것과 아버지께서 명하신 대로 행하는 것을 세상이 알게 하려 함이로라 일어나라 여기를 떠나자 하시니라</div>
+
+        <!-- 요한복음 15장 -->
+        <div class="chapter-title">요한복음 15장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 나는 참포도나무요 내 아버지는 농부라</div>
+        <div class="verse"><span class="verse-num">2</span> 무릇 내게 붙어 있어 열매를 맺지 아니하는 가지는 아버지께서 그것을 제거해 버리시고 무릇 열매를 맺는 가지는 더 열매를 맺게 하려 하여 그것을 깨끗하게 하시느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희는 내가 일러준 말로 이미 깨끗하여졌으니</div>
+        <div class="verse"><span class="verse-num">4</span> 내 안에 거하라 나도 너희 안에 거하리라 가지가 포도나무에 붙어 있지 아니하면 스스로 열매를 맺을 수 없음 같이 너희도 내 안에 있지 아니하면 그러하리라</div>
+        <div class="verse"><span class="verse-num">5</span> 나는 포도나무요 너희는 가지라 그가 내 안에, 내가 그 안에 거하면 사람이 열매를 많이 맺나니 나를 떠나서는 너희가 아무 것도 할 수 없음이라</div>
+        <div class="verse"><span class="verse-num">6</span> 사람이 내 안에 거하지 아니하면 가지처럼 밖에 버려져 마르나니 사람들이 그것을 모아다가 불에 던져 사르느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 너희가 내 안에 거하고 내 말이 너희 안에 거하면 무엇이든지 원하는 대로 구하라 그리하면 이루리라</div>
+        <div class="verse"><span class="verse-num">8</span> 너희가 열매를 많이 맺으면 내 아버지께서 영광을 받으실 것이요 너희는 내 제자가 되리라</div>
+        <div class="verse"><span class="verse-num">9</span> 아버지께서 나를 사랑하신 것 같이 나도 너희를 사랑하였으니 나의 사랑 안에 거하라</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 아버지의 계명을 지켜 그의 사랑 안에 거하는 것 같이 너희도 내 계명을 지키면 내 사랑 안에 거하리라</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 이것을 너희에게 이름은 내 기쁨이 너희 안에 있어 너희 기쁨을 충만하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">12</span> 내 계명은 곧 내가 너희를 사랑한 것 같이 너희도 서로 사랑하라 하는 이것이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 사람이 친구를 위하여 자기 목숨을 버리면 이보다 더 큰 사랑이 없나니</div>
+        <div class="verse"><span class="verse-num">14</span> 너희는 내가 명하는 대로 행하면 곧 나의 친구라</div>
+        <div class="verse"><span class="verse-num">15</span> 이제부터는 너희를 종이라 하지 아니하리니 종은 주인이 하는 것을 알지 못함이라 너희를 친구라 하였노니 내가 내 아버지께 들은 것을 다 너희에게 알게 하였음이라</div>
+        <div class="verse"><span class="verse-num">16</span> 너희가 나를 택한 것이 아니요 내가 너희를 택하여 세웠나니 이는 너희로 가서 열매를 맺게 하고 또 너희 열매가 항상 있게 하여 내 이름으로 아버지께 무엇을 구하든지 다 받게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">17</span> 내가 이것을 너희에게 명함은 너희로 서로 사랑하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">18</span> 세상이 너희를 미워하면 너희보다 먼저 나를 미워한 줄을 알라</div>
+        <div class="verse"><span class="verse-num">19</span> 너희가 세상에 속하였으면 세상이 자기의 것을 사랑할 것이나 너희는 세상에 속한 자가 아니요 도리어 내가 너희를 세상에서 택하였기 때문에 세상이 너희를 미워하느니라</div>
+        <div class="verse"><span class="verse-num">20</span> 내가 너희에게 종이 주인보다 더 크지 못하다 한 말을 기억하라 사람들이 나를 박해하였은즉 너희도 박해할 것이요 내 말을 지켰은즉 너희 말도 지킬 것이라</div>
+        <div class="verse"><span class="verse-num">21</span> 그러나 사람들이 내 이름으로 말미암아 이 모든 일을 너희에게 하리니 이는 나를 보내신 이를 알지 못함이라</div>
+        <div class="verse"><span class="verse-num">22</span> 내가 와서 그들에게 말하지 아니하였더라면 죄가 없었으려니와 지금은 그 죄를 핑계할 수 없느니라</div>
+        <div class="verse"><span class="verse-num">23</span> 나를 미워하는 자는 또 내 아버지를 미워하느니라</div>
+        <div class="verse"><span class="verse-num">24</span> 내가 아무도 못한 일을 그들 중에서 하지 아니하였더라면 그들에게 죄가 없었으려니와 지금은 그들이 나와 내 아버지를 보았고 또 미워하였도다</div>
+        <div class="verse"><span class="verse-num">25</span> 그러나 이는 그들의 율법에 기록된 바 그들이 이유 없이 나를 미워하였다 한 말을 응하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">26</span> 내가 아버지께로부터 너희에게 보낼 보혜사 곧 아버지께로부터 나오시는 진리의 성령이 오실 때에 그가 나를 증언하실 것이요</div>
+        <div class="verse"><span class="verse-num">27</span> 너희도 처음부터 나와 함께 있었으므로 증언하느니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
