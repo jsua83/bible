@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 296</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 296</h1>
+        <p class="sub-title">찬송가 208장 내 주의 나라와</p>
+        <p class="sub-title">누가복음 1~2장 — 열두 살 때 유월절</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 208장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1lcRDOMMrtfZlYyRyqmZJmdHWJSalFU5l" alt="찬송가 208장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 누가복음 1~2장<br>'열두 살 때 유월절'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님을 사모하는 두 여인 엘리사벳과 마리아의 순종을 통해 인류 역사에 있어 가장 위대한 사건이 시작됩니다.</span>
+            누가는 역사가답게 <strong>누가복음의 집필 배경과 집필 목적, 그리고 집필 방법</strong>을 상세히 밝히며 시작합니다(눅 1:1~4). 당시 예수 그리스도를 증언하는 복음서를 기록하는 일이 많았던 것 같습니다.<br><br>
+            누가복음은 누가가 <strong>로마 제국의 고위층이었을 데오빌로</strong>에게 예수님에 관한 중요한 이야기들을 차근차근 설명하기 위해 집필한 것입니다. 누가는 역사가답게 예수 그리스도에 관한 모든 자료를 조사하고 <strong>처음부터 역사 순서대로 자세하고 상세히 기록합니다.</strong> 누가는 예수님의 이야기를 세례 요한의 출생 예고에서부터 시작하며(눅 1:5~7), 예수님 탄생 이야기는 <strong>엘리사벳과 마리아가 하나님께 순종하는 놀라운 이야기</strong>로 시작됩니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 제사장 사가랴의 아들로 태어난 세례 요한은 성전이 아닌 광야에서 생활합니다.</span>
+            예수님의 길을 예비한 세례 요한의 탄생 이야기는 <strong>사가랴에게 나타난 주의 사자의 전언(傳言)</strong>으로부터 시작됩니다(눅 1:11~13). 천사는 사가랴에게 나타나 아내 엘리사벳이 아들을 낳을 것이라고 전하는데, 이는 <strong>사가랴의 기도가 응답된 것</strong>이라고 말합니다(눅 1:13~17).<br><br>
+            하나님께서 천사를 통해 주신 요한에 대한 말씀은 마치 <strong>'나실인'의 규정</strong>을 연상케 합니다(민 6:2~8). 또한 요한은 말라기에서 예고한 <strong>선지자 엘리야</strong>였습니다(말 4:5~6).<br><br>
+            천사가 사가랴에게 요한이 예수님의 길을 예비하며 말라기 이후 400년 만에 하나님께서 보내신 선지자가 될 것이라고 말했음에도, <strong>사가랴는 그 사실을 믿지 못했습니다.</strong> 사가랴가 천사의 말대로 한동안 말을 못하게 된 것은(눅 1:18~20) 사가랴의 의심으로 인한 징벌이기도 했지만, <strong>사가랴에게 믿음을 주시려는 하나님의 표적</strong>이기도 했습니다.<br><br>
+            마침내 제사장 가문의 아들로 태어난 요한이 생후 8일째 할례를 받는 날 사가랴의 입이 열리고, <strong>천사의 예언대로 아들의 이름을 '요한'이라 정합니다.</strong> 이 기적의 소식이 온 유대에 퍼지면서 모든 사람이 세례 요한에게 관심을 가지게 되고, 사가랴는 소리 높여 하나님을 찬양합니다(눅 1:68~79).<br><br>
+            이제 세례 요한이 주의 길을 예비하기 위해 준비됩니다. 세례 요한은 본격적인 사역을 시작하기 전까지, <strong>즉 하나님의 말씀이 임하시기 전까지 성전이 아닌 빈들에서 생활합니다</strong>(눅 3:2).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 예수님의 베들레헴 탄생은 800년 전 미가 선지자의 예언과 로마 황제의 호적 명령이 맞물린 이야기입니다.</span>
+            누가복음 2장부터 본격적으로 예수님의 탄생 이야기가 시작됩니다(눅 2:1~7). 예수님께서는 나사렛이 아닌 <strong>베들레헴</strong>에서 태어나십니다. 예수님의 베들레헴 탄생은 놀랍게도 <strong>미가 선지자의 예언이 성취된 것</strong>입니다(미 5:2).<br><br>
+            요셉이 해산을 앞둔 마리아를 데리고 베들레헴까지 간 이유는, 당시 로마의 황제 <strong>옥타비아누스(가이사 아구스도)</strong>가 로마 제국의 통치를 받는 모든 식민지 사람들에게 정해진 날까지 반드시 자기 고향으로 돌아가 호적하라고 명령했기 때문입니다(눅 2:1). 미가 선지자의 예언과 로마 황제의 호적 명령이 맞물려 <strong>하나님의 구원 계획이 이루어진 것</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 아기 예수님이 이 땅에 오셨을 때 동방박사들은 예물을 바쳤고, 베들레헴의 목자들은 경배하고 찬양했으며, 시므온은 감사기도를 드렸습니다.</span>
+            베들레헴에서 태어나신 아기 예수님께서는 제사장 나라 율법에 따라 <strong>할례를 받고</strong>(눅 2:21), 천사가 말한 대로 이름은 <strong>'예수'</strong>라 일컬음을 받습니다(마 1:20~21).<br><br>
+            이후 정해진 때가 이르자 요셉과 마리아는 아기 예수님의 <strong>정결예식을 위해 예루살렘으로 올라갑니다</strong>(눅 2:22~24). 이는 제사장 나라 율법대로 첫 아들은 하나님의 것으로 속전을 바친 것입니다(출 13:2, 12; 민 18:15~16). 또한 율법에 따라 산모인 마리아도 어린 양 한 마리와 비둘기 한 마리를 드려야 했지만(레 12:6~8), <strong>가난한 요셉과 마리아는 법에 정해진 대로 비둘기 두 마리로 정결예식을 드립니다.</strong><br><br>
+            이렇게 아기 예수님의 할례와 정결예식, 그리고 산모인 마리아의 정결예식까지 모두 행하자, <strong>시므온과 안나가 아기 예수님을 보고 하나님께 영광을 올립니다</strong>(눅 2:25~38).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 누가는 예수님께서 어린 시절 부모와 함께 해마다 제사장 나라의 유월절을 지키셨다고 기록합니다.</span>
+            누가복음에 기록된 <strong>열두 살 때의 예수님 일화</strong>입니다(눅 2:41~52). 예수님께서는 어린 시절에 부모님과 함께 제사장 나라 율법으로 유월절을 지키셨습니다. 예수님께서는 열두 살 되던 해 유월절에 예루살렘에 올라갔을 때 <strong>성전에서 선생들에게 듣기도 하시며 묻기도 하셨습니다.</strong> 이는 유대인들의 교육법으로 토론하며 대화를 하신 것입니다.<br><br>
+            <strong>이때 예수님과의 대화를 들은 모든 사람이 예수님의 지혜와 대답을 놀랍게 여겼습니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 누가복음 1~2장 '열두 살 때 유월절'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 누가복음 1장 -->
+        <div class="chapter-title">누가복음 1장 (1~80절)</div>
+        <div class="verse"><span class="verse-num">1</span> 우리 중에 이루어진 사실에 대하여</div>
+        <div class="verse"><span class="verse-num">2</span> 처음부터 목격자와 말씀의 일꾼 된 자들이 전하여 준 그대로 내력을 저술하려고 붓을 든 사람이 많은지라</div>
+        <div class="verse"><span class="verse-num">3</span> 그 모든 일을 근원부터 자세히 미루어 살핀 나도 데오빌로 각하에게 차례대로 써 보내는 것이 좋은 줄 알았노니</div>
+        <div class="verse"><span class="verse-num">4</span> 이는 각하가 알고 있는 바를 더 확실하게 하려 함이로라</div>
+        <div class="verse"><span class="verse-num">5</span> 유대 왕 헤롯 때에 아비야 반열에 제사장 한 사람이 있었으니 이름은 사가랴요 그의 아내는 아론의 자손이니 이름은 엘리사벳이라</div>
+        <div class="verse"><span class="verse-num">6</span> 이 두 사람이 하나님 앞에 의인이니 주의 모든 계명과 규례대로 흠이 없이 행하더라</div>
+        <div class="verse"><span class="verse-num">7</span> 엘리사벳이 잉태를 못하므로 그들에게 자식이 없고 두 사람의 나이가 많더라</div>
+        <div class="verse"><span class="verse-num">8</span> 마침 사가랴가 그 반열의 차례대로 하나님 앞에서 제사장의 직무를 행할새</div>
+        <div class="verse"><span class="verse-num">9</span> 제사장의 전례를 따라 제비를 뽑아 주의 성전에 들어가 분향하고</div>
+        <div class="verse"><span class="verse-num">10</span> 모든 백성은 그 분향하는 시간에 밖에서 기도하더니</div>
+        <div class="verse"><span class="verse-num">11</span> 주의 사자가 그에게 나타나 향단 우편에 선지라</div>
+        <div class="verse"><span class="verse-num">12</span> 사가랴가 보고 놀라며 무서워하니</div>
+        <div class="verse"><span class="verse-num">13</span> 천사가 그에게 이르되 사가랴여 무서워하지 말라 너의 간구함이 들린지라 네 아내 엘리사벳이 네게 아들을 낳아 주리니 그 이름을 요한이라 하라</div>
+        <div class="verse"><span class="verse-num">14</span> 너도 기뻐하고 즐거워할 것이요 많은 사람도 그의 태어남을 기뻐하리니</div>
+        <div class="verse"><span class="verse-num">15</span> 이는 그가 주 앞에 큰 자가 되며 포도주나 독한 술을 마시지 아니하며 모태로부터 성령의 충만함을 받아</div>
+        <div class="verse"><span class="verse-num">16</span> 이스라엘 자손을 주 곧 그들의 하나님께로 많이 돌아오게 하겠음이라</div>
+        <div class="verse"><span class="verse-num">17</span> 그가 또 엘리야의 심령과 능력으로 주 앞에 먼저 와서 아버지의 마음을 자식에게, 거스르는 자를 의인의 슬기에 돌아오게 하고 주를 위하여 세운 백성을 준비하리라</div>
+        <div class="verse"><span class="verse-num">18</span> 사가랴가 천사에게 이르되 내가 이것을 어떻게 알리요 내가 늙고 아내도 나이가 많으니이다</div>
+        <div class="verse"><span class="verse-num">19</span> 천사가 대답하여 이르되 나는 하나님 앞에 서 있는 가브리엘이라 이 좋은 소식을 전하여 네게 말하라고 보내심을 받았노라</div>
+        <div class="verse"><span class="verse-num">20</span> 보라 이 일이 되는 날까지 네가 말 못하는 자가 되어 능히 말을 못하리니 이는 네가 내 말을 믿지 아니함이거니와 때가 이르면 내 말이 이루어지리라 하더라</div>
+        <div class="verse"><span class="verse-num">21</span> 백성들이 사가랴를 기다리며 그가 성전 안에서 지체함을 이상히 여기더라</div>
+        <div class="verse"><span class="verse-num">22</span> 그가 나와서 그들에게 말을 못하니 백성들이 그가 성전 안에서 환상을 본 줄 알았더라 그가 몸짓으로 뜻을 표시하며 그냥 말 못하는 대로 있더니</div>
+        <div class="verse"><span class="verse-num">23</span> 그 직무의 날이 다 되매 집으로 돌아가니라</div>
+        <div class="verse"><span class="verse-num">24</span> 이 후에 그의 아내 엘리사벳이 잉태하고 다섯 달 동안 숨어 있으며 이르되</div>
+        <div class="verse"><span class="verse-num">25</span> 주께서 나를 돌보시는 날에 사람들 앞에서 내 부끄러움을 없게 하시려고 이렇게 행하심이라 하더라</div>
+        <div class="verse"><span class="verse-num">26</span> 여섯째 달에 천사 가브리엘이 하나님의 보내심을 받아 갈릴리 나사렛이란 동네에 가서</div>
+        <div class="verse"><span class="verse-num">27</span> 다윗의 자손 요셉이라 하는 사람과 약혼한 처녀에게 이르니 그 처녀의 이름은 마리아라</div>
+        <div class="verse"><span class="verse-num">28</span> 그에게 들어가 이르되 은혜를 받은 자여 평안할지어다 주께서 너와 함께 하시도다 하니</div>
+        <div class="verse"><span class="verse-num">29</span> 처녀가 그 말을 듣고 놀라 이런 인사가 어찌함인가 생각하매</div>
+        <div class="verse"><span class="verse-num">30</span> 천사가 이르되 마리아여 무서워하지 말라 네가 하나님께 은혜를 입었느니라</div>
+        <div class="verse"><span class="verse-num">31</span> 보라 네가 잉태하여 아들을 낳으리니 그 이름을 예수라 하라</div>
+        <div class="verse"><span class="verse-num">32</span> 그가 큰 자가 되고 지극히 높으신 이의 아들이라 일컬어질 것이요 주 하나님께서 그 조상 다윗의 왕위를 그에게 주시리니</div>
+        <div class="verse"><span class="verse-num">33</span> 영원히 야곱의 집을 왕으로 다스리실 것이며 그 나라가 무궁하리라</div>
+        <div class="verse"><span class="verse-num">34</span> 마리아가 천사에게 말하되 나는 남자를 알지 못하니 어찌 이 일이 있으리이까</div>
+        <div class="verse"><span class="verse-num">35</span> 천사가 대답하여 이르되 성령이 네게 임하시고 지극히 높으신 이의 능력이 너를 덮으시리니 이러므로 나실 바 거룩한 이는 하나님의 아들이라 일컬어지리라</div>
+        <div class="verse"><span class="verse-num">36</span> 보라 네 친족 엘리사벳도 늙어서 아들을 배었느니라 본래 임신하지 못한다고 알려진 이가 이미 여섯 달이 되었나니</div>
+        <div class="verse"><span class="verse-num">37</span> 대저 하나님의 모든 말씀은 능하지 못하심이 없느니라</div>
+        <div class="verse"><span class="verse-num">38</span> 마리아가 이르되 주의 여종이오니 말씀대로 내게 이루어지이다 하매 천사가 떠나가니라</div>
+        <div class="verse"><span class="verse-num">39</span> 이 때에 마리아가 일어나 빨리 산골로 가서 유대 한 동네에 이르러</div>
+        <div class="verse"><span class="verse-num">40</span> 사가랴의 집에 들어가 엘리사벳에게 문안하니</div>
+        <div class="verse"><span class="verse-num">41</span> 엘리사벳이 마리아가 문안함을 들으매 아이가 복중에서 뛰노는지라 엘리사벳이 성령의 충만함을 받아</div>
+        <div class="verse"><span class="verse-num">42</span> 큰 소리로 불러 이르되 여자 중에 네가 복이 있으며 네 태중의 아이도 복이 있도다</div>
+        <div class="verse"><span class="verse-num">43</span> 내 주의 어머니가 내게 나아오니 이 어찌 된 일인가</div>
+        <div class="verse"><span class="verse-num">44</span> 보라 네 문안하는 소리가 내 귀에 들릴 때에 아이가 내 복중에서 기쁨으로 뛰놀았도다</div>
+        <div class="verse"><span class="verse-num">45</span> 주께서 하신 말씀이 반드시 이루어지리라고 믿은 그 여자에게 복이 있도다</div>
+        <div class="verse"><span class="verse-num">46</span> 마리아가 이르되 내 영혼이 주를 찬양하며</div>
+        <div class="verse"><span class="verse-num">47</span> 내 마음이 하나님 내 구주를 기뻐하였음은</div>
+        <div class="verse"><span class="verse-num">48</span> 그의 여종의 비천함을 돌보셨음이라 보라 이제 후로는 만세에 나를 복이 있다 일컬으리로다</div>
+        <div class="verse"><span class="verse-num">49</span> 능하신 이가 큰 일을 내게 행하셨으니 그 이름이 거룩하시며</div>
+        <div class="verse"><span class="verse-num">50</span> 긍휼하심이 두려워하는 자에게 대대로 이르는도다</div>
+        <div class="verse"><span class="verse-num">51</span> 그의 팔로 힘을 보이사 마음의 생각이 교만한 자들을 흩으셨고</div>
+        <div class="verse"><span class="verse-num">52</span> 권세 있는 자를 그 위에서 내리치셨으며 비천한 자를 높이셨고</div>
+        <div class="verse"><span class="verse-num">53</span> 주리는 자를 좋은 것으로 배불리셨으며 부자는 빈 손으로 보내셨도다</div>
+        <div class="verse"><span class="verse-num">54</span> 그 종 이스라엘을 도우사 긍휼히 여기시고 기억하시되</div>
+        <div class="verse"><span class="verse-num">55</span> 우리 조상에게 말씀하신 것과 같이 아브라함과 그 자손에게 영원히 하시리로다 하니라</div>
+        <div class="verse"><span class="verse-num">56</span> 마리아가 석 달쯤 함께 있다가 집으로 돌아가니라</div>
+        <div class="verse"><span class="verse-num">57</span> 엘리사벳이 해산할 기한이 차서 아들을 낳으니</div>
+        <div class="verse"><span class="verse-num">58</span> 이웃과 친족이 주께서 그를 크게 긍휼히 여기심을 듣고 함께 즐거워하더라</div>
+        <div class="verse"><span class="verse-num">59</span> 팔 일이 되매 아이를 할례하러 와서 그 아버지의 이름을 따라 사가랴라 하고자 하더니</div>
+        <div class="verse"><span class="verse-num">60</span> 그 어머니가 대답하여 이르되 아니라 요한이라 할 것이라 하매</div>
+        <div class="verse"><span class="verse-num">61</span> 그들이 이르되 네 친족 중에 이 이름으로 이름한 이가 없다 하고</div>
+        <div class="verse"><span class="verse-num">62</span> 그의 아버지께 몸짓하여 무엇으로 이름을 지으려 하는가 물으니</div>
+        <div class="verse"><span class="verse-num">63</span> 그가 서판을 달라 하여 그 이름을 요한이라 쓰매 다 놀랍게 여기더라</div>
+        <div class="verse"><span class="verse-num">64</span> 이에 그 입이 곧 열리고 혀가 풀리며 말을 하여 하나님을 찬송하니</div>
+        <div class="verse"><span class="verse-num">65</span> 그 근처에 사는 자가 다 두려워하고 이 모든 말이 온 유대 산골에 두루 퍼지매</div>
+        <div class="verse"><span class="verse-num">66</span> 듣는 사람이 다 이 말을 마음에 두며 이르되 이 아이가 장차 어찌 될까 하니 이는 주의 손이 그와 함께 하심이러라</div>
+        <div class="verse"><span class="verse-num">67</span> 그 부친 사가랴가 성령의 충만함을 받아 예언하여 이르되</div>
+        <div class="verse"><span class="verse-num">68</span> 찬송하리로다 주 이스라엘의 하나님이여 그 백성을 돌보사 속량하시며</div>
+        <div class="verse"><span class="verse-num">69</span> 우리를 위하여 구원의 뿔을 그 종 다윗의 집에 일으키셨으니</div>
+        <div class="verse"><span class="verse-num">70</span> 이것은 주께서 예로부터 거룩한 선지자의 입으로 말씀하신 바와 같이</div>
+        <div class="verse"><span class="verse-num">71</span> 우리 원수에게서와 우리를 미워하는 모든 자의 손에서 구원하시는 일이라</div>
+        <div class="verse"><span class="verse-num">72</span> 우리 조상을 긍휼히 여기시며 그 거룩한 언약을 기억하셨으니</div>
+        <div class="verse"><span class="verse-num">73</span> 곧 우리 조상 아브라함에게 하신 맹세라</div>
+        <div class="verse"><span class="verse-num">74</span> 우리가 원수의 손에서 건지심을 받고</div>
+        <div class="verse"><span class="verse-num">75</span> 종신토록 주의 앞에서 성결과 의로 두려움이 없이 섬기게 하리라 하셨도다</div>
+        <div class="verse"><span class="verse-num">76</span> 이 아이여 네가 지극히 높으신 이의 선지자라 일컬음을 받고 주 앞에 앞서 가서 그 길을 준비하여</div>
+        <div class="verse"><span class="verse-num">77</span> 주의 백성에게 그 죄 사함으로 말미암는 구원을 알게 하리니</div>
+        <div class="verse"><span class="verse-num">78</span> 이는 우리 하나님의 긍휼로 인함이라 이로써 돋는 해가 위로부터 우리에게 임하여</div>
+        <div class="verse"><span class="verse-num">79</span> 어둠과 죽음의 그늘에 앉은 자에게 비치고 우리 발을 평강의 길로 인도하시리로다 하니라</div>
+        <div class="verse"><span class="verse-num">80</span> 아이가 자라며 심령이 강하여지며 이스라엘에게 나타나는 날까지 빈 들에 있으니라</div>
+
+        <!-- 누가복음 2장 -->
+        <div class="chapter-title">누가복음 2장 (1~52절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 때에 가이사 아구스도가 영을 내려 천하로 다 호적하라 하였으니</div>
+        <div class="verse"><span class="verse-num">2</span> 이 호적은 구레뇨가 수리아 총독이 되었을 때에 처음 한 것이라</div>
+        <div class="verse"><span class="verse-num">3</span> 모든 사람이 호적하러 각각 고향으로 돌아가매</div>
+        <div class="verse"><span class="verse-num">4</span> 요셉도 다윗의 집 족속이므로 갈릴리 나사렛 동네에서 유대를 향하여 베들레헴이라 하는 다윗의 동네로</div>
+        <div class="verse"><span class="verse-num">5</span> 그 약혼한 마리아와 함께 호적하러 올라가니 마리아가 이미 잉태하였더라</div>
+        <div class="verse"><span class="verse-num">6</span> 거기 있을 그 때에 해산할 날이 차서</div>
+        <div class="verse"><span class="verse-num">7</span> 첫아들을 낳아 강보로 싸서 구유에 뉘었으니 이는 여관에 있을 곳이 없음이러라</div>
+        <div class="verse"><span class="verse-num">8</span> 그 지역에 목자들이 밤에 밖에서 자기 양 떼를 지키더니</div>
+        <div class="verse"><span class="verse-num">9</span> 주의 사자가 곁에 서고 주의 영광이 그들을 두루 비추매 크게 무서워하는지라</div>
+        <div class="verse"><span class="verse-num">10</span> 천사가 이르되 무서워하지 말라 보라 내가 온 백성에게 미칠 큰 기쁨의 좋은 소식을 너희에게 전하노라</div>
+        <div class="verse"><span class="verse-num">11</span> 오늘 다윗의 동네에 너희를 위하여 구주가 나셨으니 곧 그리스도 주시니라</div>
+        <div class="verse"><span class="verse-num">12</span> 너희가 가서 강보에 싸여 구유에 뉘어 있는 아기를 보리니 이것이 너희에게 표적이니라 하더니</div>
+        <div class="verse"><span class="verse-num">13</span> 홀연히 수많은 천군이 그 천사와 함께 하나님을 찬송하여 이르되</div>
+        <div class="verse"><span class="verse-num">14</span> 지극히 높은 곳에서는 하나님께 영광이요 땅에서는 하나님이 기뻐하신 사람들 중에 평화로다 하니라</div>
+        <div class="verse"><span class="verse-num">15</span> 천사들이 떠나 하늘로 올라가니 목자가 서로 말하되 이제 베들레헴으로 가서 주께서 우리에게 알리신 바 이 이루어진 일을 보자 하고</div>
+        <div class="verse"><span class="verse-num">16</span> 빨리 가서 마리아와 요셉과 구유에 누인 아기를 찾아서</div>
+        <div class="verse"><span class="verse-num">17</span> 보고 천사가 자기들에게 이 아기에 대하여 말한 것을 전하니</div>
+        <div class="verse"><span class="verse-num">18</span> 듣는 자가 다 목자들이 그들에게 말한 것들을 놀랍게 여기되</div>
+        <div class="verse"><span class="verse-num">19</span> 마리아는 이 모든 말을 마음에 새기어 생각하니라</div>
+        <div class="verse"><span class="verse-num">20</span> 목자들은 자기들에게 이르던 바와 같이 듣고 본 그 모든 것으로 인하여 하나님께 영광을 돌리고 찬송하며 돌아가니라</div>
+        <div class="verse"><span class="verse-num">21</span> 할례할 팔 일이 되매 그 이름을 예수라 하니 곧 잉태하기 전에 천사가 일컬은 바러라</div>
+        <div class="verse"><span class="verse-num">22</span> 모세의 법대로 정결예식의 날이 차매 아기를 데리고 예루살렘에 올라가니</div>
+        <div class="verse"><span class="verse-num">23</span> 이는 주의 율법에 쓴 바 첫 태에 처음 난 남자마다 주의 거룩한 자라 하리라 한 대로 아기를 주께 드리고</div>
+        <div class="verse"><span class="verse-num">24</span> 또 주의 율법에 말씀하신 대로 산비둘기 한 쌍이나 혹은 어린 집비둘기 둘로 제사하려 함이더라</div>
+        <div class="verse"><span class="verse-num">25</span> 예루살렘에 시므온이라 하는 사람이 있으니 이 사람은 의롭고 경건하여 이스라엘의 위로를 기다리는 자라 성령이 그 위에 계시더라</div>
+        <div class="verse"><span class="verse-num">26</span> 그가 주의 그리스도를 보기 전에는 죽지 아니하리라 하는 성령의 지시를 받았더니</div>
+        <div class="verse"><span class="verse-num">27</span> 성령의 감동으로 성전에 들어가매 마침 부모가 율법의 관례대로 행하고자 하여 그 아기 예수를 데리고 오는지라</div>
+        <div class="verse"><span class="verse-num">28</span> 시므온이 아기를 안고 하나님을 찬송하여 이르되</div>
+        <div class="verse"><span class="verse-num">29</span> 주재여 이제는 말씀하신 대로 종을 평안히 놓아 주시는도다</div>
+        <div class="verse"><span class="verse-num">30</span> 내 눈이 주의 구원을 보았사오니</div>
+        <div class="verse"><span class="verse-num">31</span> 이는 만민 앞에 예비하신 것이요</div>
+        <div class="verse"><span class="verse-num">32</span> 이방을 비추는 빛이요 주의 백성 이스라엘의 영광이니이다 하니</div>
+        <div class="verse"><span class="verse-num">33</span> 그의 부모가 그에 대한 말들을 놀랍게 여기더라</div>
+        <div class="verse"><span class="verse-num">34</span> 시므온이 그들에게 축복하고 그의 어머니 마리아에게 말하여 이르되 보라 이는 이스라엘 중 많은 사람을 패하거나 흥하게 하며 비방을 받는 표적이 되기 위하여 세움을 받았고</div>
+        <div class="verse"><span class="verse-num">35</span> 또 칼이 네 마음을 찌르듯 하리니 이는 여러 사람의 마음의 생각을 드러내려 함이니라 하더라</div>
+        <div class="verse"><span class="verse-num">36</span> 또 아셀 지파 바누엘의 딸 안나라 하는 선지자가 있어 나이가 매우 많았더라 그가 결혼한 후 일곱 해 동안 남편과 함께 살다가</div>
+        <div class="verse"><span class="verse-num">37</span> 과부가 되고 팔십사 세가 되었더라 이 사람이 성전을 떠나지 아니하고 주야로 금식하며 기도함으로 섬기더니</div>
+        <div class="verse"><span class="verse-num">38</span> 마침 이 때에 나아와서 하나님께 감사하고 예루살렘의 속량을 바라는 모든 사람에게 그에 대하여 말하니라</div>
+        <div class="verse"><span class="verse-num">39</span> 주의 율법을 따라 모든 일을 마치고 갈릴리로 돌아가 본 동네 나사렛에 이르니라</div>
+        <div class="verse"><span class="verse-num">40</span> 아기가 자라며 강하여지고 지혜가 충만하며 하나님의 은혜가 그의 위에 있더라</div>
+        <div class="verse"><span class="verse-num">41</span> 그의 부모가 해마다 유월절이 되면 예루살렘으로 가더니</div>
+        <div class="verse"><span class="verse-num">42</span> 예수께서 열두 살 되었을 때에 그들이 이 절기의 관례를 따라 올라갔다가</div>
+        <div class="verse"><span class="verse-num">43</span> 그 날들을 마치고 돌아갈 때에 아이 예수는 예루살렘에 머무셨더라 그 부모는 이를 알지 못하고</div>
+        <div class="verse"><span class="verse-num">44</span> 동행 중에 있는 줄로 생각하고 하룻길을 간 후 친족과 아는 자 중에서 찾되</div>
+        <div class="verse"><span class="verse-num">45</span> 만나지 못하매 찾으면서 예루살렘에 돌아갔더니</div>
+        <div class="verse"><span class="verse-num">46</span> 사흘 후에 성전에서 만난즉 그가 선생들 중에 앉으사 그들에게 듣기도 하시며 묻기도 하시니</div>
+        <div class="verse"><span class="verse-num">47</span> 듣는 자가 다 그 지혜와 대답을 놀랍게 여기더라</div>
+        <div class="verse"><span class="verse-num">48</span> 그의 부모가 보고 놀라며 그의 어머니는 이르되 아이야 어찌하여 우리에게 이렇게 하였느냐 보라 네 아버지와 내가 근심하여 너를 찾았노라</div>
+        <div class="verse"><span class="verse-num">49</span> 예수께서 이르시되 어찌하여 나를 찾으셨나이까 내가 내 아버지 집에 있어야 될 줄을 알지 못하셨나이까 하시니</div>
+        <div class="verse"><span class="verse-num">50</span> 그 부모가 그가 하신 말씀을 깨닫지 못하더라</div>
+        <div class="verse"><span class="verse-num">51</span> 예수께서 함께 내려가사 나사렛에 이르러 순종하여 받드시더라 그 어머니는 이 모든 말을 마음에 두니라</div>
+        <div class="verse"><span class="verse-num">52</span> 예수는 지혜와 키가 자라가며 하나님과 사람에게 더욱 사랑스러워 가시더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
