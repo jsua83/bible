@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 288</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 288</h1>
+        <p class="sub-title">찬송가 180장 하나님의 나팔 소리</p>
+        <p class="sub-title">마태복음 24~25장 — 예수님의 종말 이야기</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 180장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1eZ05AK1zpBurBsi4l8WTWbwWBC1PazCk" alt="찬송가 180장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 마태복음 24~25장<br>'예수님의 종말 이야기'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 예수님의 종말에 대한 말씀은 60여 년 후 사도 요한이 밧모섬에서 쓰게 될 요한계시록의 밑그림이 됩니다.</span>
+            당시 예루살렘 성전은 헤롯에 의해 수십 년째 증축 공사를 하고 있었습니다. 그런데 예수님께서 예루살렘 성전을 바라보시며 <strong>성전이 완벽하게 무너질 것이라고 제자들에게 말씀하십니다</strong>(마 24:1~2). 과거 바벨론 제국에 의해 예루살렘 성전이 파괴되었던 것과 같이 완전히 파괴될 것을 말씀하신 것입니다(렘 26:18; 학 2:15).<br><br>
+            예수님의 말씀대로 예루살렘 성전은 A.D. 64년경에 완공되지만, <strong>A.D. 70년에 로마의 티투스 장군에 의해 돌 위에 돌 하나 남기지 않고 완전히 파괴됩니다.</strong> 이어서 예수님께서 종말에 대한 여러 징조를 말씀하십니다(마 24:4~28).<br><br>
+            놀라운 사실은 예수님께서 종말에 관해 제자들에게 말씀하신 모든 내용이 <strong>60여 년 후 사도 요한이 밧모섬에서 기록하게 되는 요한계시록 내용의 전반적인 밑그림</strong>이 된다는 것입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 예수님께서는 제자들에게 종말에 관해 가르쳐 주시며 예수님의 재림을 예고하십니다.</span>
+            예수님께서 제자들에게 <strong>종말 때의 징조와 예수님의 재림</strong>에 대해 가르쳐 주십니다(마 24:29~31). 그리고 며칠 후 열린 산헤드린 공회 재판에서도 예수님께서 대제사장과 공회원들에게 재림에 대해 예고하십니다(마 26:63~64).<br><br>
+            실제 예수님께서 부활하신 후 제자들 앞에서 하늘로 올라가시며 <strong>천사를 통해 재림을 또다시 약속하십니다</strong>(행 1:9~11). 예수님께서는 초림 때와는 달리 <strong>크신 능력과 영광으로 재림하실 것</strong>입니다(단 7:13; 계 1:7).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 예수님께서는 예수님의 재림 시기는 하늘의 천사도 모르고 오직 아버지만 아신다고 말씀하십니다.</span>
+            예수님께서 제자들에게 재림의 시기와 이를 위한 그리스도인들의 준비를 말씀해 주십니다. 예수님께서는 이렇게 말씀하십니다.<br><br>
+            <strong>"재림의 때는 아버지 외에는 아무도 알지 못한다"</strong> (마 24:36)<br><br>
+            이때 일어날 <strong>거짓 그리스도와 거짓 선지자들의 미혹에 대해 미리 경고하시며 깨어 있을 것</strong>을 당부하십니다(마 24:23~27, 42). 이어서 예수님께서는 여러 비유를 통해 지혜롭게 재림을 준비하게 해 주십니다(마 24:32~51).<br><br>
+            <strong>무화과나무 비유, 노아의 때 비유,</strong> 아무도 모르는 재림의 때에 일어날 상황에 대한 비유, <strong>집 주인과 도둑 비유, 충성된 종과 악한 종 비유</strong>를 통해 말씀해 주십니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 예수님께서 예수님의 재림을 기다리며 소망하는 그리스도인들의 올바른 삶의 자세에 대해 가르쳐 주십니다.</span>
+            예수님께서는 제자들에게 재림의 때를 지혜롭게 기다리며 소망할 수 있도록 비유를 통해 가르쳐 주십니다.<br><br>
+            <strong>① 열 처녀의 비유</strong> (마 25:1~13)<br><br>
+            당시 혼인 잔치는 해가 진 후 시작되었습니다. 신랑이 도착하면 신부의 들러리들이 횃불을 들고 맞이하여 잔치 장소로 안내하고, 초대된 모든 사람이 잔치 장소로 들어간 후 문을 닫아 불청객의 출입을 막았습니다. 잔치를 밝힐 횃불을 꺼뜨리지 않으려면 그때그때 기름을 부어야 하기 때문에 <strong>반드시 여분의 기름을 따로 준비해야 했습니다.</strong><br><br>
+            미련한 자와 슬기로운 자, 모두 공통적으로 더디 오는 신랑을 기다리면서 졸고 잤습니다. 그런데 혼인 잔치가 시작되면서 <strong>미련한 자와 슬기로운 자의 준비는 너무나 큰 차이가 났습니다.</strong><br><br>
+            <strong>② 달란트 비유</strong> (마 25:14~30)<br><br>
+            주인은 종들에게 재능대로 달란트를 맡깁니다. 오랜 시간이 지나 주인이 돌아와 결산합니다. <strong>다섯 달란트 남긴 종과 두 달란트 남긴 종에게 주인이 칭찬합니다.</strong> 그러나 한 달란트 받아서 땅에 감춘 종은 주인에게 책망을 받습니다. 한 달란트 받은 종은 심판 후의 악인의 모습이었습니다(계 20:12).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 예수님께서는 양과 염소 비유를 통해 하나님의 심판 기준에 대해 말씀하십니다.</span>
+            예수님께서는 제자들에게 심판의 날을 말씀하시며 <strong>양과 염소의 비유</strong>로 가르쳐 주십니다(마 25:31~46). 이는 하나님의 심판이 <strong>'모든 민족'을 대상으로 이루어진다</strong>는 말씀입니다(마 24:14; 눅 24:46~47; 겔 34:17).<br><br>
+            먼저 오른편 양에 대한 심판입니다. 이들은 이런 평가를 받으며 큰 상을 받습니다.<br><br>
+            <strong>"내 형제 중에 지극히 작은 자 하나에게 한 것이 곧 내게 한 것이니라"</strong> (마 25:40)<br><br>
+            반면 예수님께서는 왼편 염소들에 대해 <strong>'아니하였고'를 다섯 번이나 말씀하시면서</strong>, 그들이 악을 행한 것이 아니라 <strong>선을 행하지 않은 것</strong>을 지적하십니다. 그러므로 예수님께서는 이렇게 말씀하십니다.<br><br>
+            <strong>"그들은 영벌에, 의인들은 영생에 들어가리라"</strong> (마 25:46)<br><br>
+            예수님의 사랑의 기준이 언제나 <strong>'한 영혼 사랑'</strong>임을 기억해야 합니다(마 18:5~6, 10~14).
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 마태복음 24~25장 '예수님의 종말 이야기'를 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 마태복음 24장 -->
+        <div class="chapter-title">마태복음 24장 (1~51절)</div>
+        <div class="verse"><span class="verse-num">1</span> 예수께서 성전에서 나와서 가실 때에 제자들이 성전 건물들을 가리켜 보이려고 나아오니</div>
+        <div class="verse"><span class="verse-num">2</span> 대답하여 이르시되 너희가 이 모든 것을 보지 못하느냐 내가 진실로 너희에게 이르노니 돌 하나도 돌 위에 남지 않고 다 무너뜨려지리라</div>
+        <div class="verse"><span class="verse-num">3</span> 예수께서 감람 산 위에 앉으셨을 때에 제자들이 조용히 와서 이르되 우리에게 이르소서 어느 때에 이런 일이 있겠사오며 또 주의 임하심과 세상 끝에는 무슨 징조가 있사오리이까</div>
+        <div class="verse"><span class="verse-num">4</span> 예수께서 대답하여 이르시되 너희가 사람의 미혹을 받지 않도록 주의하라</div>
+        <div class="verse"><span class="verse-num">5</span> 많은 사람이 내 이름으로 와서 이르되 나는 그리스도라 하여 많은 사람을 미혹하리라</div>
+        <div class="verse"><span class="verse-num">6</span> 난리와 난리 소문을 듣겠으나 너희는 삼가 두려워하지 말라 이런 일이 있어야 하되 아직 끝은 아니니라</div>
+        <div class="verse"><span class="verse-num">7</span> 민족이 민족을, 나라가 나라를 대적하여 일어나겠고 곳곳에 기근과 지진이 있으리니</div>
+        <div class="verse"><span class="verse-num">8</span> 이 모든 것은 재난의 시작이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 그 때에 사람들이 너희를 환난에 넘겨 주겠으며 너희를 죽이리니 너희가 내 이름 때문에 모든 민족에게 미움을 받으리라</div>
+        <div class="verse"><span class="verse-num">10</span> 그 때에 많은 사람이 실족하게 되어 서로 잡아 주고 서로 미워하겠으며</div>
+        <div class="verse"><span class="verse-num">11</span> 거짓 선지자가 많이 일어나 많은 사람을 미혹하겠으며</div>
+        <div class="verse"><span class="verse-num">12</span> 불법이 성하므로 많은 사람의 사랑이 식어지리라</div>
+        <div class="verse"><span class="verse-num">13</span> 그러나 끝까지 견디는 자는 구원을 얻으리라</div>
+        <div class="verse"><span class="verse-num">14</span> 이 천국 복음이 모든 민족에게 증언되기 위하여 온 세상에 전파되리니 그제야 끝이 오리라</div>
+        <div class="verse"><span class="verse-num">15</span> 그러므로 너희가 선지자 다니엘이 말한 바 멸망의 가증한 것이 거룩한 곳에 선 것을 보거든 (읽는 자는 깨달을진저)</div>
+        <div class="verse"><span class="verse-num">16</span> 그 때에 유대에 있는 자들은 산으로 도망할지어다</div>
+        <div class="verse"><span class="verse-num">17</span> 지붕 위에 있는 자는 집 안에 있는 물건을 가지러 내려 가지 말며</div>
+        <div class="verse"><span class="verse-num">18</span> 밭에 있는 자는 겉옷을 가지러 뒤로 돌이키지 말지어다</div>
+        <div class="verse"><span class="verse-num">19</span> 그 날에는 아이 밴 자들과 젖 먹이는 자들에게 화가 있으리로다</div>
+        <div class="verse"><span class="verse-num">20</span> 너희가 도망하는 일이 겨울에나 안식일에 되지 않도록 기도하라</div>
+        <div class="verse"><span class="verse-num">21</span> 이는 그 때에 큰 환난이 있겠음이라 창세로부터 지금까지 이런 환난이 없었고 후에도 없으리라</div>
+        <div class="verse"><span class="verse-num">22</span> 그 날들을 감하지 아니하면 모든 육체가 구원을 얻지 못할 것이나 그러나 택하신 자들을 위하여 그 날들을 감하시리라</div>
+        <div class="verse"><span class="verse-num">23</span> 그 때에 사람이 너희에게 말하되 보라 그리스도가 여기 있다 혹은 저기 있다 하여도 믿지 말라</div>
+        <div class="verse"><span class="verse-num">24</span> 거짓 그리스도들과 거짓 선지자들이 일어나 큰 표적과 기사를 보여 할 수만 있으면 택하신 자들도 미혹하리라</div>
+        <div class="verse"><span class="verse-num">25</span> 보라 내가 너희에게 미리 말하였노라</div>
+        <div class="verse"><span class="verse-num">26</span> 그러면 사람들이 너희에게 말하되 보라 그리스도가 광야에 있다 하여도 나가지 말고 보라 골방에 있다 하여도 믿지 말라</div>
+        <div class="verse"><span class="verse-num">27</span> 번개가 동편에서 나서 서편까지 번쩍임 같이 인자의 임함도 그러하리라</div>
+        <div class="verse"><span class="verse-num">28</span> 주검이 있는 곳에는 독수리들이 모일 것이니라</div>
+        <div class="verse"><span class="verse-num">29</span> 그 날 환난 후에 즉시 해가 어두워지며 달이 빛을 내지 아니하며 별들이 하늘에서 떨어지며 하늘의 권능들이 흔들리리라</div>
+        <div class="verse"><span class="verse-num">30</span> 그 때에 인자의 징조가 하늘에서 보이겠고 그 때에 땅의 모든 족속들이 통곡하며 그들이 인자가 구름을 타고 능력과 큰 영광으로 오는 것을 보리라</div>
+        <div class="verse"><span class="verse-num">31</span> 그가 큰 나팔소리와 함께 천사들을 보내리니 그들이 그의 택하신 자들을 하늘 이 끝에서 저 끝까지 사방에서 모으리라</div>
+        <div class="verse"><span class="verse-num">32</span> 무화과나무의 비유를 배우라 그 가지가 연하여지고 잎사귀를 내면 여름이 가까운 줄을 아나니</div>
+        <div class="verse"><span class="verse-num">33</span> 이와 같이 너희도 이 모든 일을 보거든 인자가 가까이 곧 문 앞에 이른 줄 알라</div>
+        <div class="verse"><span class="verse-num">34</span> 내가 진실로 너희에게 말하노니 이 세대가 지나가기 전에 이 일이 다 일어나리라</div>
+        <div class="verse"><span class="verse-num">35</span> 천지는 없어질지언정 내 말은 없어지지 아니하리라</div>
+        <div class="verse"><span class="verse-num">36</span> 그러나 그 날과 그 때는 아무도 모르나니 하늘의 천사들도, 아들도 모르고 오직 아버지만 아시느니라</div>
+        <div class="verse"><span class="verse-num">37</span> 노아의 때와 같이 인자의 임함도 그러하리라</div>
+        <div class="verse"><span class="verse-num">38</span> 홍수 전에 노아가 방주에 들어가던 날까지 사람들이 먹고 마시고 장가 들고 시집 가고 있으면서</div>
+        <div class="verse"><span class="verse-num">39</span> 홍수가 나서 그들을 다 멸하기까지 깨닫지 못하였으니 인자의 임함도 이와 같으리라</div>
+        <div class="verse"><span class="verse-num">40</span> 그 때에 두 사람이 밭에 있으매 한 사람은 데려가고 한 사람은 버려둠을 당할 것이요</div>
+        <div class="verse"><span class="verse-num">41</span> 두 여자가 맷돌질을 하고 있으매 한 사람은 데려가고 한 사람은 버려둠을 당할 것이니라</div>
+        <div class="verse"><span class="verse-num">42</span> 그러므로 깨어 있으라 어느 날에 너희 주가 임할는지 너희가 알지 못함이니라</div>
+        <div class="verse"><span class="verse-num">43</span> 너희도 아는 바니 만일 집 주인이 도둑이 어느 시각에 올 줄을 알았더라면 깨어 있어 그 집을 뚫지 못하게 하였으리라</div>
+        <div class="verse"><span class="verse-num">44</span> 이러므로 너희도 준비하고 있으라 생각하지 않은 때에 인자가 오리라</div>
+        <div class="verse"><span class="verse-num">45</span> 충성되고 지혜 있는 종이 되어 주인에게 그 집 사람들을 맡아 때를 따라 양식을 나눠 줄 자가 누구냐</div>
+        <div class="verse"><span class="verse-num">46</span> 주인이 올 때에 그 종이 이렇게 하는 것을 보면 그 종이 복이 있으리로다</div>
+        <div class="verse"><span class="verse-num">47</span> 내가 진실로 너희에게 이르노니 주인이 그의 모든 소유를 그에게 맡기리라</div>
+        <div class="verse"><span class="verse-num">48</span> 만일 그 악한 종이 마음에 생각하기를 주인이 더디 오리라 하여</div>
+        <div class="verse"><span class="verse-num">49</span> 동료들을 때리며 술친구들과 더불어 먹고 마시게 되면</div>
+        <div class="verse"><span class="verse-num">50</span> 생각하지 않은 날 알지 못하는 시각에 그 종의 주인이 이르러</div>
+        <div class="verse"><span class="verse-num">51</span> 엄히 때리고 외식하는 자가 받는 벌에 처하리니 거기서 슬피 울며 이를 갈리라</div>
+
+        <!-- 마태복음 25장 -->
+        <div class="chapter-title">마태복음 25장 (1~46절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 때에 천국은 마치 등을 들고 신랑을 맞으러 나간 열 처녀와 같다 하리니</div>
+        <div class="verse"><span class="verse-num">2</span> 그 중의 다섯은 미련하고 다섯은 슬기 있는 자라</div>
+        <div class="verse"><span class="verse-num">3</span> 미련한 자들은 등을 가지되 기름을 가지지 아니하고</div>
+        <div class="verse"><span class="verse-num">4</span> 슬기 있는 자들은 그릇에 기름을 담아 등과 함께 가져갔더니</div>
+        <div class="verse"><span class="verse-num">5</span> 신랑이 더디 오므로 다 졸며 잘새</div>
+        <div class="verse"><span class="verse-num">6</span> 밤중에 소리가 나되 보라 신랑이로다 맞으러 나오라 하매</div>
+        <div class="verse"><span class="verse-num">7</span> 이에 그 처녀들이 다 일어나 등을 준비할새</div>
+        <div class="verse"><span class="verse-num">8</span> 미련한 자들이 슬기 있는 자들에게 이르되 우리 등불이 꺼져가니 너희 기름을 좀 나눠 달라 하거늘</div>
+        <div class="verse"><span class="verse-num">9</span> 슬기 있는 자들이 대답하여 이르되 우리와 너희가 쓰기에 다 부족할까 하노니 차라리 파는 자들에게 가서 너희 쓸 것을 사라 하니</div>
+        <div class="verse"><span class="verse-num">10</span> 그들이 사러 간 사이에 신랑이 오므로 준비하였던 자들은 함께 혼인 잔치에 들어가고 문은 닫힌지라</div>
+        <div class="verse"><span class="verse-num">11</span> 그 후에 남은 처녀들이 와서 이르되 주여 주여 우리에게 열어 주소서</div>
+        <div class="verse"><span class="verse-num">12</span> 대답하여 이르되 진실로 너희에게 이르노니 내가 너희를 알지 못하노라 하였느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그런즉 깨어 있으라 너희는 그 날과 그 때를 알지 못하느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 또 어떤 사람이 타국에 갈 때 그 종들을 불러 자기 소유를 맡김과 같으니</div>
+        <div class="verse"><span class="verse-num">15</span> 각각 그 재능대로 한 사람에게는 금 다섯 달란트를, 한 사람에게는 두 달란트를, 한 사람에게는 한 달란트를 주고 떠났더니</div>
+        <div class="verse"><span class="verse-num">16</span> 다섯 달란트 받은 자는 바로 가서 그것으로 장사하여 또 다섯 달란트를 남기고</div>
+        <div class="verse"><span class="verse-num">17</span> 두 달란트 받은 자도 그같이 하여 또 두 달란트를 남겼으되</div>
+        <div class="verse"><span class="verse-num">18</span> 한 달란트 받은 자는 가서 땅을 파고 그 주인의 돈을 감추어 두었더니</div>
+        <div class="verse"><span class="verse-num">19</span> 오랜 후에 그 종들의 주인이 돌아와 그들과 결산할새</div>
+        <div class="verse"><span class="verse-num">20</span> 다섯 달란트 받았던 자는 다섯 달란트를 더 가지고 와서 이르되 주인이여 내게 다섯 달란트를 주셨는데 보소서 내가 또 다섯 달란트를 남겼나이다</div>
+        <div class="verse"><span class="verse-num">21</span> 그 주인이 이르되 잘하였도다 착하고 충성된 종아 네가 적은 일에 충성하였으매 내가 많은 것을 네게 맡기리니 네 주인의 즐거움에 참여할지어다 하고</div>
+        <div class="verse"><span class="verse-num">22</span> 두 달란트 받았던 자도 와서 이르되 주인이여 내게 두 달란트를 주셨는데 보소서 내가 또 두 달란트를 남겼나이다</div>
+        <div class="verse"><span class="verse-num">23</span> 그 주인이 이르되 잘하였도다 착하고 충성된 종아 네가 적은 일에 충성하였으매 내가 많은 것을 네게 맡기리니 네 주인의 즐거움에 참여할지어다 하고</div>
+        <div class="verse"><span class="verse-num">24</span> 한 달란트 받았던 자는 와서 이르되 주인이여 당신은 굳은 사람이라 심지 않은 데서 거두고 헤치지 않은 데서 모으는 줄을 내가 알았으므로</div>
+        <div class="verse"><span class="verse-num">25</span> 두려워하여 나가서 당신의 달란트를 땅에 감추어 두었었나이다 보소서 당신의 것을 가지셨나이다</div>
+        <div class="verse"><span class="verse-num">26</span> 그 주인이 대답하여 이르되 악하고 게으른 종아 나는 심지 않은 데서 거두고 헤치지 않은 데서 모으는 줄로 네가 알았느냐</div>
+        <div class="verse"><span class="verse-num">27</span> 그러면 네가 마땅히 내 돈을 취리하는 자들에게나 맡겼다가 내가 돌아와서 내 원금과 이자를 받게 하였을 것이니라 하고</div>
+        <div class="verse"><span class="verse-num">28</span> 그에게서 그 한 달란트를 빼앗아 열 달란트 가진 자에게 주라</div>
+        <div class="verse"><span class="verse-num">29</span> 무릇 있는 자는 받아 풍족하게 되고 없는 자는 그 있는 것까지 빼앗기리라</div>
+        <div class="verse"><span class="verse-num">30</span> 이 무익한 종을 바깥 어두운 데로 내쫓으라 거기서 슬피 울며 이를 갈리라 하니라</div>
+        <div class="verse"><span class="verse-num">31</span> 인자가 자기 영광으로 모든 천사와 함께 올 때에 자기 영광의 보좌에 앉으리니</div>
+        <div class="verse"><span class="verse-num">32</span> 모든 민족을 그 앞에 모으고 각각 구분하기를 목자가 양과 염소를 구분하는 것 같이 하여</div>
+        <div class="verse"><span class="verse-num">33</span> 양은 그 오른편에 염소는 왼편에 두리라</div>
+        <div class="verse"><span class="verse-num">34</span> 그 때에 임금이 그 오른편에 있는 자들에게 이르시되 내 아버지께 복 받을 자들이여 나아와 창세로부터 너희를 위하여 예비된 나라를 상속받으라</div>
+        <div class="verse"><span class="verse-num">35</span> 내가 주릴 때에 너희가 먹을 것을 주었고 목마를 때에 마시게 하였고 나그네 되었을 때에 영접하였고</div>
+        <div class="verse"><span class="verse-num">36</span> 헐벗었을 때에 옷을 입혔고 병들었을 때에 돌보았고 옥에 갇혔을 때에 와서 보았느니라</div>
+        <div class="verse"><span class="verse-num">37</span> 이에 의인들이 대답하여 이르되 주여 우리가 어느 때에 주께서 주리신 것을 보고 음식을 대접하였으며 목마르신 것을 보고 마시게 하였나이까</div>
+        <div class="verse"><span class="verse-num">38</span> 어느 때에 나그네 되신 것을 보고 영접하였으며 헐벗으신 것을 보고 옷 입혔나이까</div>
+        <div class="verse"><span class="verse-num">39</span> 어느 때에 병드신 것이나 옥에 갇히신 것을 보고 가서 뵈었나이까 하리니</div>
+        <div class="verse"><span class="verse-num">40</span> 임금이 대답하여 이르시되 내가 진실로 너희에게 이르노니 너희가 여기 내 형제 중에 지극히 작은 자 하나에게 한 것이 곧 내게 한 것이니라 하시고</div>
+        <div class="verse"><span class="verse-num">41</span> 또 왼편에 있는 자들에게 이르시되 저주를 받은 자들아 나를 떠나 마귀와 그 사자들을 위하여 예비된 영원한 불에 들어가라</div>
+        <div class="verse"><span class="verse-num">42</span> 내가 주릴 때에 너희가 먹을 것을 주지 아니하였고 목마를 때에 마시게 하지 아니하였고</div>
+        <div class="verse"><span class="verse-num">43</span> 나그네 되었을 때에 영접하지 아니하였고 헐벗었을 때에 옷 입히지 아니하였고 병들었을 때와 옥에 갇혔을 때에 돌보지 아니하였느니라 하시니</div>
+        <div class="verse"><span class="verse-num">44</span> 그들도 대답하여 이르되 주여 우리가 어느 때에 주께서 주리신 것이나 목마르신 것이나 나그네 되신 것이나 헐벗으신 것이나 병드신 것이나 옥에 갇히신 것을 보고 공양하지 아니하더이까</div>
+        <div class="verse"><span class="verse-num">45</span> 이에 임금이 대답하여 이르시되 내가 진실로 너희에게 이르노니 이 지극히 작은 자 하나에게 하지 아니한 것이 곧 내게 하지 아니한 것이니라 하시리니</div>
+        <div class="verse"><span class="verse-num">46</span> 그들은 영벌에, 의인들은 영생에 들어가리라 하시니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

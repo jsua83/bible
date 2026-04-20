@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 294</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 294</h1>
+        <p class="sub-title">찬송가 50장 내게 있는 모든 것을</p>
+        <p class="sub-title">마가복음 11~13장 — 마지막 일주일</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 50장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1cDUb1vtPQYF3OPTKd97-_br_RwVijME5" alt="찬송가 50장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 마가복음 11~13장<br>'마지막 일주일'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 예수님께서는 예루살렘에 입성하심으로 최후의 사명을 향해 한 걸음 더 나아가십니다.</span>
+            예수님의 마지막 한 주간 이야기가 마가복음 11장에서 16장까지 펼쳐집니다. 이제 예수님께서 예루살렘에 입성하심으로 최후의 사명, <strong>십자가를 향해 한 걸음 더 나아가십니다.</strong><br><br>
+            당시 예루살렘 성안의 유대 백성들은 아모스 선지자와 이사야 선지자가 예언한 <strong>강력하고 힘 있는 메시아</strong>를 기대했습니다(암 9:11; 사 9:6~7). 그런데 이사야 선지자는 강력하고 힘 있는 메시아의 모습뿐 아니라 <strong>고난받는 메시아의 모습</strong>도 예언했습니다(사 53:5~6). 유대 백성들의 열렬한 환영을 받으며 예루살렘에 입성하신 예수님께서는 날이 저물자 열두 제자들을 데리고 <strong>베다니로 나가십니다</strong>(막 11:11).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 예수님께서는 제자들에게 무화과나무가 말라버린 사건을 가지고 '믿음'과 '기도'에 관한 가르침을 주십니다.</span>
+            베다니에서 다시 예루살렘 성안으로 들어가시는 중에 시장하셨던 예수님께서 때마침 무화과나무를 보시고 열매를 기대하십니다. 그런데 <strong>열매는 없이 잎사귀만 무성한 무화과나무</strong>를 보고 말씀하십니다.<br><br>
+            <strong>"영원토록 사람이 네게서 열매를 따 먹지 못하리라"</strong> (막 11:12~14)<br><br>
+            예수님께서 무화과나무를 저주하신 것은 단지 그 나무를 저주하신 것이 아니라, <strong>예루살렘이 멸망할 것을 예언하신 것</strong>입니다. 다음 날 아침 말라버린 무화과나무를 베드로가 보고 예수님께 묻자, 예수님께서는 무화과나무를 가지고 제자들에게 <strong>'믿음'과 '기도'</strong>에 관한 가르침을 주십니다(막 11:20~25).<br><br>
+            <strong>첫째,</strong> '하나님을 믿으라.'<br>
+            <strong>둘째,</strong> '믿고 의심하지 말라.'<br>
+            <strong>셋째,</strong> '기도하고 구하는 것은 받은 줄로 믿으라.'<br>
+            <strong>넷째,</strong> '아무에게나 혐의가 있거든 용서하라.'
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 세금은 고대로부터 오늘날까지 언제나 예민한 정치 문제입니다.</span>
+            예수님께서는 <strong>포도원 주인과 악한 농부의 비유</strong>, 그리고 <strong>모퉁잇돌에 대한 비유</strong>를 말씀하십니다(막 12:1~12). 이 비유는 산헤드린 공회원들을 가리킨 것이었습니다.<br><br>
+            산헤드린 공회원들은 얼마 전 논쟁에 능한 공회원들을 갈릴리까지 파견해 예수님을 곤경에 빠뜨리려 했습니다. 그런데 예수님과의 논쟁에서 오히려 망신만 당하고 돌아왔습니다. 이제 예수님께서 예루살렘 성안에 들어와 계신 상태입니다. 그들은 <strong>예루살렘에서 예수님을 완전히 누르지 않으면 자신들의 기득권이 뿌리째 흔들릴 수 있다는 위기</strong>를 느끼고, 할 수 있는 모든 공격을 다합니다.<br><br>
+            그들의 첫 번째 공격은 <strong>세금 문제</strong>였습니다(막 12:13~17). 그러나 그들은 또다시 예수님과의 논쟁에서 망신만 당합니다. 그러자 산헤드린 공회는 사태의 심각성을 더 느끼며 <strong>예수님을 반드시 죽이겠다고 결심합니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 예수님께서는 예수님의 가르침에 동의한 한 서기관에게 그가 하나님 나라에서 멀지 않다고 칭찬하십니다.</span>
+            바리새인들이 세금 문제로 예수님과 논쟁을 벌이려다 예수님의 논리에 완전히 손을 들자, 이번에는 서기관 중 한 사람이 예수님께 <strong>서기관다운 질문</strong>을 합니다(막 12:28). 서기관의 질문에 예수님께서는 한 치의 머뭇거림도 없이 그 자리에서 정답을 말씀하십니다.<br><br>
+            이때 서기관은 예수님의 대답에 진지하게 임하며 <strong>예수님의 가르침에 동의하고 그 말씀을 되새깁니다.</strong> 그는 다른 산헤드린 공회원들과 달리 하나님의 말씀을 진심으로 믿고 따르려 했던 <strong>정말 괜찮은 소수의 사람</strong>이었습니다(막 12:32~34). 그는 사무엘상과 이사야의 말씀을 정확하게 알고 있었습니다. 그래서 당시 산헤드린 공회의 잘못된 종교 기득권에 합류하지 않고 <strong>하나님의 말씀에 바로 선 사람으로 성경에 기록되는 영광</strong>을 누리게 된 것입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 베드로, 야고보, 요한, 안드레는 예수님께 세상 끝의 징조에 대해 질문합니다.</span>
+            예수님께서 산헤드린 공회원들의 자랑이자 자부심인 <strong>예루살렘 성전 건물이 무너지게 될 것</strong>을 예고하십니다(막 13:1~2). 예루살렘 성전의 멸망은 예루살렘과 예루살렘 성전에 만연해 있는 죄악 때문이었습니다. 예루살렘 성전이라 할지라도 그곳에서 죄악이 도를 넘어서면 <strong>하나님께서 심판하신다</strong>는 것을 예수님께서 말씀하신 것입니다.<br><br>
+            예수님께서 성전까지도 멸망할 것이라는 말씀을 하시자, 베드로, 야고보, 요한, 안드레, 이렇게 <strong>두 집안 형제들인 네 명의 제자</strong>가 세상 끝 날의 징조는 무엇인지를 예수님께 질문합니다. 그러자 예수님께서 제자들에게 답변하십니다(막 13:3~8).<br><br>
+            앞으로 제자들이 복음을 전파할 때 <strong>공회에 잡히고, 회당에서 매질을 당하고, 세상 권력자들과 임금들 앞에 서서 재판을 받게 될 것</strong>이라고 말씀하십니다. 그러나 <strong>성령께서 그때마다 대처할 말을 주시고 함께하실 것</strong>이라고 말씀하시며 미리 염려하지 말라고 격려해 주십니다(막 13:9~11).<br><br>
+            예수님의 말씀대로 이후에 제자들은 산헤드린 공회 <strong>2차 재판 때 협박을 받게 되고</strong>, <strong>3차 재판 때에는 채찍을 받게 됩니다</strong>(행 4:1~22; 5:27~41).
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 마가복음 11~13장 '마지막 일주일'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 마가복음 11장 -->
+        <div class="chapter-title">마가복음 11장 (1~33절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그들이 예루살렘에 가까이 와서 감람 산 벳바게와 베다니에 이르렀을 때에 예수께서 제자 중 둘을 보내시며</div>
+        <div class="verse"><span class="verse-num">2</span> 이르시되 너희는 맞은편 마을로 가라 그리로 들어가면 곧 아직 아무도 타 보지 않은 나귀 새끼가 매여 있는 것을 보리니 풀어 끌고 오라</div>
+        <div class="verse"><span class="verse-num">3</span> 만일 누가 너희에게 왜 이렇게 하느냐 묻거든 주가 쓰시겠다 하라 그리하면 즉시 이리로 보내리라 하시니</div>
+        <div class="verse"><span class="verse-num">4</span> 제자들이 가서 본즉 나귀 새끼가 문 앞 거리에 매여 있는지라 그것을 푸니</div>
+        <div class="verse"><span class="verse-num">5</span> 거기 서 있는 사람 중 어떤 이들이 이르되 나귀 새끼를 풀어 무엇 하려느냐 하매</div>
+        <div class="verse"><span class="verse-num">6</span> 제자들이 예수께서 이르신 대로 말한대 이에 허락하는지라</div>
+        <div class="verse"><span class="verse-num">7</span> 나귀 새끼를 예수께로 끌고 와서 자기들의 겉옷을 그 위에 얹어 놓으매 예수께서 타시니</div>
+        <div class="verse"><span class="verse-num">8</span> 많은 사람들은 자기들의 겉옷을, 또 다른 이들은 들에서 벤 나뭇가지를 길에 펴며</div>
+        <div class="verse"><span class="verse-num">9</span> 앞에서 가고 뒤에서 따르는 자들이 소리 지르되 호산나 찬송하리로다 주의 이름으로 오시는 이여</div>
+        <div class="verse"><span class="verse-num">10</span> 찬송하리로다 오는 우리 조상 다윗의 나라여 가장 높은 곳에서 호산나 하더라</div>
+        <div class="verse"><span class="verse-num">11</span> 예수께서 예루살렘에 이르러 성전에 들어가사 모든 것을 둘러 보시고 때가 이미 저물매 열두 제자를 데리시고 베다니에 나가시니라</div>
+        <div class="verse"><span class="verse-num">12</span> 이튿날 그들이 베다니에서 나왔을 때에 예수께서 시장하신지라</div>
+        <div class="verse"><span class="verse-num">13</span> 멀리서 잎사귀 있는 한 무화과나무를 보시고 혹 그 나무에 무엇이 있을까 하여 가셨더니 가서 보신즉 잎사귀 외에 아무 것도 없더라 이는 무화과의 때가 아님이라</div>
+        <div class="verse"><span class="verse-num">14</span> 예수께서 나무에게 말씀하여 이르시되 이제부터 영원토록 사람이 네게서 열매를 따 먹지 못하리라 하시니 제자들이 이를 듣더라</div>
+        <div class="verse"><span class="verse-num">15</span> 그들이 예루살렘에 들어가니라 예수께서 성전에 들어가사 성전 안에서 매매하는 자들을 내쫓으시며 돈 바꾸는 자들의 상과 비둘기 파는 자들의 의자를 둘러 엎으시며</div>
+        <div class="verse"><span class="verse-num">16</span> 아무나 물건을 가지고 성전 안으로 지나다님을 허락하지 아니하시고</div>
+        <div class="verse"><span class="verse-num">17</span> 이에 가르쳐 이르시되 기록된 바 내 집은 만민이 기도하는 집이라 칭함을 받으리라고 하지 아니하였느냐 너희는 강도의 소굴을 만들었도다 하시매</div>
+        <div class="verse"><span class="verse-num">18</span> 대제사장들과 서기관들이 듣고 예수를 어떻게 죽일까 하고 꾀하니 이는 무리가 다 그의 교훈을 놀랍게 여기므로 그를 두려워함일러라</div>
+        <div class="verse"><span class="verse-num">19</span> 그리고 날이 저물매 그들이 성 밖으로 나가더라</div>
+        <div class="verse"><span class="verse-num">20</span> 그들이 아침에 지나갈 때에 무화과나무가 뿌리째 마른 것을 보고</div>
+        <div class="verse"><span class="verse-num">21</span> 베드로가 생각이 나서 여짜오되 랍비여 보소서 저주하신 무화과나무가 말랐나이다</div>
+        <div class="verse"><span class="verse-num">22</span> 예수께서 그들에게 대답하여 이르시되 하나님을 믿으라</div>
+        <div class="verse"><span class="verse-num">23</span> 내가 진실로 너희에게 이르노니 누구든지 이 산더러 들리어 바다에 던져지라 하며 그 말하는 것이 이루어질 줄 믿고 마음에 의심하지 아니하면 그대로 되리라</div>
+        <div class="verse"><span class="verse-num">24</span> 그러므로 내가 너희에게 말하노니 무엇이든지 기도하고 구하는 것은 받은 줄로 믿으라 그리하면 너희에게 그대로 되리라</div>
+        <div class="verse"><span class="verse-num">25</span> 서서 기도할 때에 아무에게나 혐의가 있거든 용서하라 그리하여야 하늘에 계신 너희 아버지께서도 너희 허물을 사하여 주시리라 하시니라</div>
+        <div class="verse"><span class="verse-num">26</span> (없음)</div>
+        <div class="verse"><span class="verse-num">27</span> 그들이 다시 예루살렘에 들어가니라 예수께서 성전에서 거니실 때에 대제사장들과 서기관들과 장로들이 나아와</div>
+        <div class="verse"><span class="verse-num">28</span> 이르되 무슨 권위로 이런 일을 하느냐 누가 이런 일 할 권위를 주었느냐</div>
+        <div class="verse"><span class="verse-num">29</span> 예수께서 이르시되 나도 한 말을 너희에게 물으리니 대답하라 그리하면 나도 무슨 권위로 이런 일을 하는지 이르리라</div>
+        <div class="verse"><span class="verse-num">30</span> 요한의 세례가 하늘로부터냐 사람으로부터냐 내게 대답하라</div>
+        <div class="verse"><span class="verse-num">31</span> 그들이 서로 의논하여 이르되 만일 하늘로부터라 하면 어찌하여 그를 믿지 아니하였느냐 할 것이니</div>
+        <div class="verse"><span class="verse-num">32</span> 그러면 사람으로부터라 할까 하였으나 모든 사람이 요한을 참 선지자로 여기므로 그들이 백성을 두려워하는지라</div>
+        <div class="verse"><span class="verse-num">33</span> 이에 예수께 대답하여 이르되 우리가 알지 못하노라 하니 예수께서 이르시되 나도 무슨 권위로 이런 일을 하는지 너희에게 이르지 아니하리라 하시니라</div>
+
+        <!-- 마가복음 12장 -->
+        <div class="chapter-title">마가복음 12장 (1~44절)</div>
+        <div class="verse"><span class="verse-num">1</span> 예수께서 비유로 그들에게 말씀하시되 한 사람이 포도원을 만들어 산울타리로 두르고 즙 짜는 틀을 만들고 망대를 지어서 농부들에게 세로 주고 타국에 갔더니</div>
+        <div class="verse"><span class="verse-num">2</span> 때가 이르매 농부들에게 포도원 소출 얼마를 받으려고 한 종을 보내니</div>
+        <div class="verse"><span class="verse-num">3</span> 그들이 종을 잡아 심히 때리고 거저 보내었거늘</div>
+        <div class="verse"><span class="verse-num">4</span> 다시 다른 종을 보내니 그의 머리에 상처를 내고 능욕하였거늘</div>
+        <div class="verse"><span class="verse-num">5</span> 또 다른 종을 보내니 그들이 그를 죽이고 또 그 외 많은 종들도 더러는 때리고 더러는 죽인지라</div>
+        <div class="verse"><span class="verse-num">6</span> 이제 한 사람이 남았으니 곧 그가 사랑하는 아들이라 최후로 이를 보내며 이르되 내 아들은 존대하리라 하였더니</div>
+        <div class="verse"><span class="verse-num">7</span> 그 농부들이 서로 말하되 이는 상속자니 자 죽이자 그러면 그 유산이 우리 것이 되리라 하고</div>
+        <div class="verse"><span class="verse-num">8</span> 이에 잡아 죽여 포도원 밖에 내던졌느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 포도원 주인이 어떻게 하겠느냐 와서 그 농부들을 진멸하고 포도원을 다른 사람들에게 주리라</div>
+        <div class="verse"><span class="verse-num">10</span> 너희가 성경에 건축자들이 버린 돌이 모퉁이의 머릿돌이 되었나니</div>
+        <div class="verse"><span class="verse-num">11</span> 이것은 주로 말미암아 된 것이요 우리 눈에 놀랍도다 함을 읽어 보지도 못하였느냐 하시니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그들이 예수의 이 비유가 자기들을 가리켜 말씀하심인 줄 알고 잡고자 하되 무리를 두려워하여 예수를 두고 가니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그들이 예수의 말씀을 책잡으려 하여 바리새인과 헤롯당 중에서 사람을 보내매</div>
+        <div class="verse"><span class="verse-num">14</span> 와서 이르되 선생님이여 우리가 아노니 당신은 참되시고 아무도 꺼리는 일이 없으시니 이는 사람을 외모로 보지 않고 오직 진리로써 하나님의 도를 가르치심이니이다 가이사에게 세금을 바치는 것이 옳으니이까 옳지 아니하니이까</div>
+        <div class="verse"><span class="verse-num">15</span> 우리가 바치리이까 말리이까 한대 예수께서 그 외식함을 아시고 이르시되 어찌하여 나를 시험하느냐 데나리온 하나를 가져다가 내게 보이라 하시니</div>
+        <div class="verse"><span class="verse-num">16</span> 가져왔거늘 예수께서 이르시되 이 형상과 이 글이 누구의 것이냐 이르되 가이사의 것이니이다</div>
+        <div class="verse"><span class="verse-num">17</span> 이에 예수께서 이르시되 가이사의 것은 가이사에게, 하나님의 것은 하나님께 바치라 하시니 그들이 예수께 대하여 매우 놀랍게 여기더라</div>
+        <div class="verse"><span class="verse-num">18</span> 부활이 없다 하는 사두개인들이 예수께 와서 물어 이르되</div>
+        <div class="verse"><span class="verse-num">19</span> 선생님이여 모세가 우리에게 써 주기를 어떤 사람의 형이 자식이 없이 아내를 두고 죽으면 그 동생이 그 아내를 취하여 형을 위하여 상속자를 세울지니라 하였나이다</div>
+        <div class="verse"><span class="verse-num">20</span> 칠 형제가 있었는데 맏이가 아내를 취하였다가 상속자가 없이 죽고</div>
+        <div class="verse"><span class="verse-num">21</span> 둘째도 그 여자를 취하였다가 상속자가 없이 죽고 셋째도 그렇게 하여</div>
+        <div class="verse"><span class="verse-num">22</span> 일곱이 다 상속자가 없었고 최후에 여자도 죽었나이다</div>
+        <div class="verse"><span class="verse-num">23</span> 일곱 사람이 다 그를 아내로 취하였으니 부활 때 곧 그들이 살아날 때에 그 중의 누구의 아내가 되리이까</div>
+        <div class="verse"><span class="verse-num">24</span> 예수께서 이르시되 너희가 성경도 하나님의 능력도 알지 못하므로 오해함이 아니냐</div>
+        <div class="verse"><span class="verse-num">25</span> 사람이 죽은 자 가운데서 살아날 때에는 장가도 아니 가고 시집도 아니 가고 하늘에 있는 천사들과 같으니라</div>
+        <div class="verse"><span class="verse-num">26</span> 죽은 자가 살아난다는 것을 말할진대 너희가 모세의 책 중 가시나무 떨기에 관한 글에 하나님께서 모세에게 이르시되 나는 아브라함의 하나님이요 이삭의 하나님이요 야곱의 하나님이로라 하신 말씀을 읽어보지 못하였느냐</div>
+        <div class="verse"><span class="verse-num">27</span> 하나님은 죽은 자의 하나님이 아니요 산 자의 하나님이시라 너희가 크게 오해하였도다 하시니라</div>
+        <div class="verse"><span class="verse-num">28</span> 서기관 중 한 사람이 그들이 변론하는 것을 듣고 예수께서 잘 대답하신 줄을 알고 나아와 묻되 모든 계명 중에 첫째가 무엇이니이까</div>
+        <div class="verse"><span class="verse-num">29</span> 예수께서 대답하시되 첫째는 이것이니 이스라엘아 들으라 주 곧 우리 하나님은 유일한 주시라</div>
+        <div class="verse"><span class="verse-num">30</span> 네 마음을 다하고 목숨을 다하고 뜻을 다하고 힘을 다하여 주 너의 하나님을 사랑하라 하신 것이요</div>
+        <div class="verse"><span class="verse-num">31</span> 둘째는 이것이니 네 이웃을 네 자신과 같이 사랑하라 하신 것이라 이보다 더 큰 계명이 없느니라</div>
+        <div class="verse"><span class="verse-num">32</span> 서기관이 이르되 선생님이여 옳소이다 하나님은 한 분이시요 그 외에 다른 이가 없다 하신 말씀이 참이니이다</div>
+        <div class="verse"><span class="verse-num">33</span> 또 마음을 다하고 지혜를 다하고 힘을 다하여 하나님을 사랑하는 것과 또 이웃을 자기 자신과 같이 사랑하는 것이 전체로 드리는 모든 번제물과 기타 제물보다 나으니이다</div>
+        <div class="verse"><span class="verse-num">34</span> 예수께서 그가 지혜 있게 대답함을 보시고 이르시되 네가 하나님의 나라에서 멀지 않도다 하시니 그 후에 감히 묻는 자가 없더라</div>
+        <div class="verse"><span class="verse-num">35</span> 예수께서 성전에서 가르치실새 대답하여 이르시되 어찌하여 서기관들이 그리스도를 다윗의 자손이라 하느냐</div>
+        <div class="verse"><span class="verse-num">36</span> 다윗이 성령에 감동되어 친히 말하되 주께서 내 주께 이르시되 내가 네 원수를 네 발 아래에 둘 때까지 내 우편에 앉았으라 하셨도다 하였느니라</div>
+        <div class="verse"><span class="verse-num">37</span> 다윗이 그리스도를 주라 하였은즉 어찌 그의 자손이 되겠느냐 하시니 많은 사람들이 즐겁게 듣더라</div>
+        <div class="verse"><span class="verse-num">38</span> 예수께서 가르치실 때에 이르시되 긴 옷을 입고 다니는 것과 시장에서 문안 받는 것과</div>
+        <div class="verse"><span class="verse-num">39</span> 회당의 높은 자리와 잔치의 윗자리를 원하는 서기관들을 삼가라</div>
+        <div class="verse"><span class="verse-num">40</span> 그들은 과부의 가산을 삼키며 외식으로 길게 기도하는 자니 그 받는 판결이 더욱 중하리라 하시니라</div>
+        <div class="verse"><span class="verse-num">41</span> 예수께서 헌금함을 대하여 앉으사 무리가 어떻게 헌금함에 돈 넣는가를 보실새 여러 부자는 많이 넣는데</div>
+        <div class="verse"><span class="verse-num">42</span> 한 가난한 과부는 와서 두 렙돈 곧 한 고드란트를 넣는지라</div>
+        <div class="verse"><span class="verse-num">43</span> 예수께서 제자들을 불러다가 이르시되 내가 진실로 너희에게 이르노니 이 가난한 과부는 헌금함에 넣는 모든 사람보다 많이 넣었도다</div>
+        <div class="verse"><span class="verse-num">44</span> 그들은 다 그 풍족한 중에서 넣었거니와 이 과부는 그 가난한 중에서 자기의 모든 소유 곧 생활비 전부를 넣었느니라 하시니라</div>
+
+        <!-- 마가복음 13장 -->
+        <div class="chapter-title">마가복음 13장 (1~37절)</div>
+        <div class="verse"><span class="verse-num">1</span> 예수께서 성전에서 나가실 때에 제자 중 하나가 이르되 선생님이여 보소서 이 돌들이 어떠하며 이 건물들이 어떠하니이까</div>
+        <div class="verse"><span class="verse-num">2</span> 예수께서 이르시되 네가 이 큰 건물들을 보느냐 돌 하나도 돌 위에 남지 않고 다 무너뜨려지리라 하시니라</div>
+        <div class="verse"><span class="verse-num">3</span> 예수께서 감람 산에서 성전을 마주 대하여 앉으셨을 때에 베드로와 야고보와 요한과 안드레가 조용히 묻되</div>
+        <div class="verse"><span class="verse-num">4</span> 우리에게 이르소서 어느 때에 이런 일이 있겠사오며 이 모든 일이 이루어지려 할 때에 무슨 징조가 있사오리이까</div>
+        <div class="verse"><span class="verse-num">5</span> 예수께서 이르시되 너희가 사람의 미혹을 받지 않도록 주의하라</div>
+        <div class="verse"><span class="verse-num">6</span> 많은 사람이 내 이름으로 와서 이르되 내가 그라 하여 많은 사람을 미혹하리라</div>
+        <div class="verse"><span class="verse-num">7</span> 난리와 난리의 소문을 들을 때에 두려워하지 말라 이런 일이 있어야 하되 아직 끝은 아니니라</div>
+        <div class="verse"><span class="verse-num">8</span> 민족이 민족을, 나라가 나라를 대적하여 일어나겠고 곳곳에 지진이 있으며 기근이 있으리니 이는 재난의 시작이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 너희는 스스로 조심하라 사람들이 너희를 공회에 넘겨 주겠고 너희를 회당에서 매질하겠으며 나로 말미암아 너희가 권력자들과 임금들 앞에 서리니 이는 그들에게 증거가 되려 함이라</div>
+        <div class="verse"><span class="verse-num">10</span> 또 복음이 먼저 만국에 전파되어야 할 것이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 사람들이 너희를 끌어다가 넘겨 줄 때에 무슨 말을 할까 미리 염려하지 말고 무엇이든지 그 때에 너희에게 주시는 그 말을 하라 말하는 이는 너희가 아니요 성령이시니라</div>
+        <div class="verse"><span class="verse-num">12</span> 형제가 형제를, 아버지가 자식을 죽는 데에 내주며 자식들이 부모를 대적하여 죽게 하리라</div>
+        <div class="verse"><span class="verse-num">13</span> 또 너희가 내 이름으로 말미암아 모든 사람에게 미움을 받을 것이나 끝까지 견디는 자는 구원을 받으리라</div>
+        <div class="verse"><span class="verse-num">14</span> 멸망의 가증한 것이 서지 못할 곳에 선 것을 보거든 (읽는 자는 깨달을진저) 그 때에 유대에 있는 자들은 산으로 도망할지어다</div>
+        <div class="verse"><span class="verse-num">15</span> 지붕 위에 있는 자는 내려가지도 말고 집에 있는 무엇을 가지러 들어가지도 말며</div>
+        <div class="verse"><span class="verse-num">16</span> 밭에 있는 자는 겉옷을 가지러 뒤로 돌이키지 말지어다</div>
+        <div class="verse"><span class="verse-num">17</span> 그 날에는 아이 밴 자들과 젖먹이는 자들에게 화가 있으리로다</div>
+        <div class="verse"><span class="verse-num">18</span> 이 일이 겨울에 일어나지 않도록 기도하라</div>
+        <div class="verse"><span class="verse-num">19</span> 이는 그 날들이 환난의 날이 되겠음이라 하나님께서 창조하신 시초부터 지금까지 이런 환난이 없었고 후에도 없으리라</div>
+        <div class="verse"><span class="verse-num">20</span> 만일 주께서 그 날들을 감하지 아니하셨더라면 모든 육체가 구원을 얻지 못할 것이거늘 자기가 택하신 자들을 위하여 그 날들을 감하셨느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 그 때에 어떤 사람이 너희에게 말하되 보라 그리스도가 여기 있다 보라 저기 있다 하여도 믿지 말라</div>
+        <div class="verse"><span class="verse-num">22</span> 거짓 그리스도들과 거짓 선지자들이 일어나서 이적과 기사를 행하여 할 수만 있으면 택하신 자들을 미혹하려 하리라</div>
+        <div class="verse"><span class="verse-num">23</span> 너희는 삼가라 내가 모든 일을 너희에게 미리 말하였노라</div>
+        <div class="verse"><span class="verse-num">24</span> 그 때에 그 환난 후 해가 어두워지며 달이 빛을 내지 아니하며</div>
+        <div class="verse"><span class="verse-num">25</span> 별들이 하늘에서 떨어지며 하늘에 있는 권능들이 흔들리리라</div>
+        <div class="verse"><span class="verse-num">26</span> 그 때에 인자가 구름을 타고 큰 권능과 영광으로 오는 것을 사람들이 보리라</div>
+        <div class="verse"><span class="verse-num">27</span> 또 그 때에 그가 천사들을 보내어 자기가 택하신 자들을 땅 끝으로부터 하늘 끝까지 사방에서 모으리라</div>
+        <div class="verse"><span class="verse-num">28</span> 무화과나무의 비유를 배우라 그 가지가 연하여지고 잎사귀를 내면 여름이 가까운 줄 아나니</div>
+        <div class="verse"><span class="verse-num">29</span> 이와 같이 너희가 이런 일이 일어나는 것을 보거든 인자가 가까이 곧 문 앞에 이른 줄 알라</div>
+        <div class="verse"><span class="verse-num">30</span> 내가 진실로 너희에게 말하노니 이 세대가 지나가기 전에 이 일이 다 일어나리라</div>
+        <div class="verse"><span class="verse-num">31</span> 천지는 없어지겠으나 내 말은 없어지지 아니하리라</div>
+        <div class="verse"><span class="verse-num">32</span> 그러나 그 날과 그 때는 아무도 모르나니 하늘에 있는 천사들도, 아들도 모르고 아버지만 아시느니라</div>
+        <div class="verse"><span class="verse-num">33</span> 주의하라 깨어 있으라 그 때가 언제인지 알지 못함이라</div>
+        <div class="verse"><span class="verse-num">34</span> 가령 사람이 집을 떠나 타국으로 갈 때에 그 종들에게 권한을 주어 각각 사무를 맡기며 문지기에게 깨어 있으라 명함과 같으니</div>
+        <div class="verse"><span class="verse-num">35</span> 그러므로 깨어 있으라 집 주인이 언제 올는지 혹 저물 때일는지, 밤중일는지, 닭 울 때일는지, 새벽일는지 너희가 알지 못함이라</div>
+        <div class="verse"><span class="verse-num">36</span> 그가 홀연히 와서 너희가 자는 것을 보지 않도록 하라</div>
+        <div class="verse"><span class="verse-num">37</span> 깨어 있으라 내가 너희에게 하는 이 말은 모든 사람에게 하는 말이니라 하시니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

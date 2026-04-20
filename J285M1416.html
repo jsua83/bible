@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 285</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 285</h1>
+        <p class="sub-title">찬송가 461장 십자가를 질 수 있나</p>
+        <p class="sub-title">마태복음 14~16장 — 예수님의 치유 사역</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 461장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1JKtvzqxrPYT3Xh8Qwoc6kE6pYUfNQyrH" alt="찬송가 461장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 마태복음 14~16장<br>'예수님의 치유 사역'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서는 창조 이래 지속적으로 인생들에게 치유를 행하셨습니다.</span>
+            하나님께서는 우리 인간들의 고통과 아픔에 함께 아파하시며, <strong>병들어 고통당하는 인간들의 치유와 회복에 늘 관심을 두셨습니다.</strong> 하나님의 인간 치유의 시작은 아담에서부터 시작되었고 레위기에서 꽃을 피웠습니다. 때문에 레위기는 하나님의 사랑과 치유를 담은 <strong>'레위 복음서'</strong>라 할 수 있습니다.<br><br>
+            마태복음은 예수님께서 많은 병자를 치유해 주시며 그들을 회복시켜 주신 이야기를 우리에게 증언해 줌으로써 <strong>'하나님이 사랑이시다'</strong>라는 사실을 깨닫게 해 줍니다.<br><br>
+            마태는 세례 요한의 죽음과 그의 죽음을 아파하는 당시 불쌍한 백성들, 그리고 이를 보듬으시는 예수님에 대해 기록합니다. 세례 요한이 죽은 후 예수님의 사역 이야기가 널리 퍼지면서 결국 <strong>예수님의 사역 소식이 세례 요한을 죽인 헤롯 안티파스에게까지 전해집니다</strong>(마 14:1~2).<br><br>
+            예수님께서는 헤롯과의 충돌을 피하고 또한 전도여행에서 돌아온 제자들을 만나기 위해 배를 타고 그곳을 떠나십니다. 그러자 수많은 사람이 걸어서 예수님을 따라갑니다. <strong>예수님께서는 예수님을 따르는 큰 무리를 보시고 그들을 불쌍히 여기십니다.</strong> 그리고 그들 가운데 병자들을 보시고 고쳐 주십니다(마 14:13~14). 이어서 <strong>오병이어의 기적을 베풀어 무리를 먹이십니다</strong>(마 14:15~21).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 예루살렘에 있는 산헤드린 공회는 바리새인과 서기관들을 갈릴리로 파견해 예수님과 논쟁을 벌이게 합니다.</span>
+            예수님에 대한 소문이 유대 전역으로 퍼져가자 헤롯 안티파스는 물론 <strong>예루살렘에 있는 산헤드린 공회의 경계가 시작됩니다.</strong> 그 이전까지는 주로 서기관들과 바리새인들이 개인적으로 예수님께 시비를 거는 정도였는데, 이제는 <strong>예루살렘으로부터 갈릴리까지 파견 나온 산헤드린 공회원들이 예수님에 대해 조사를 시작한 것</strong>입니다.<br><br>
+            예루살렘에서 갈릴리까지 파견 나온 산헤드린 공회원들은 <strong>'장로들의 전통에 관해'</strong> 예수님과 논쟁을 시작합니다(마 15:1~9).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 예수님께서는 병자들을 치유하시며 긍휼의 마음, 예수님의 신성, 그리고 예수님의 손을 모두 사용하셨습니다.</span>
+            예수님께서는 병자들을 치유하시는 데 있어 다음 세 가지를 모두 사용하셨습니다.<br><br>
+            <strong>첫째, '예수님의 긍휼'의 마음입니다.</strong><br>
+            이를 통해 예수님께서는 인생들을 회복시키고 치유하셨습니다.<br><br>
+            <strong>둘째, '예수님의 신성'입니다.</strong><br>
+            하나님의 능력으로 병자들을 치유하셨습니다.<br><br>
+            <strong>셋째, '예수님의 손'으로 병자들을 치유하셨습니다.</strong><br>
+            한번은 예수님께서 이방 지역인 두로와 시돈으로 가셨을 때, 그곳에서 한 가나안 여인의 믿음을 칭찬하셨습니다. 그때 그 여인의 딸은 <strong>어머니의 믿음으로 고침을 받았습니다.</strong><br><br>
+            예수님께서는 가나안 여인의 딸을 고쳐 주신 후에도 계속해서 <strong>많은 병자를 고치십니다</strong>(마 15:21~31).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 바리새인들과 사두개인들은 서로 다른 부류였는데 예수님과 맞설 때에는 공동전선을 펼칩니다.</span>
+            바리새인들과 사두개인들은 원래 서로 함께하지 않는 각각의 두 부류였습니다.<br><br>
+            <strong>사두개인들의 특징</strong><br>
+            <strong>첫째,</strong> 경제적 상류층입니다.<br>
+            <strong>둘째,</strong> 부활이 없다고 믿습니다.<br>
+            <strong>셋째,</strong> 오직 모세오경만 경전으로 여깁니다.<br>
+            <strong>넷째,</strong> 오직 예루살렘 성전 중심주의자들입니다.<br>
+            <strong>다섯째,</strong> 예수님을 십자가에 못 박은 주도 세력입니다.<br><br>
+            <strong>바리새인들의 특징</strong><br>
+            <strong>첫째,</strong> 경제적 중산층입니다.<br>
+            <strong>둘째,</strong> 부활, 천사, 영이 있다고 믿습니다.<br>
+            <strong>셋째,</strong> 구약 39권을 경전으로 여깁니다.<br>
+            <strong>넷째,</strong> 오직 자기 '의'를 내세우는 자들입니다.<br>
+            <strong>다섯째,</strong> 예수님을 십자가에 못 박은 주도 세력입니다.<br><br>
+            이 두 부류의 <strong>공통점은 위선자들이라는 것</strong>입니다. 그 위선을 가지고 바리새인들과 사두개인들은 예수님과 맞설 때에는 뜻을 함께했습니다. 이는 이후 마태복음 26장에서 자세히 살펴볼 것입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 예수님께서는 베드로의 신앙고백 이후 공개적으로 십자가 사역을 말씀하십니다.</span>
+            베드로의 신앙고백을 들으시고 예수님께서 말씀하십니다.<br><br>
+            <strong>"주는 그리스도시요 살아 계신 하나님의 아들이시니이다"</strong> (마 16:16)<br>
+            <strong>"이 반석 위에 내 교회를 세우리니"</strong> (마 16:18)<br><br>
+            이 말씀은 베드로의 <strong>'신앙고백' 위에 교회를 세우신다</strong>는 말씀입니다. 베드로의 신앙고백을 들으신 예수님께서는 예수님의 수난을 예고하십니다. 앞서 몇 차례 수난을 예고하셨지만, <strong>이때부터 공개적으로 예수님의 수난을 예고하기 시작하십니다</strong>(마 16:21).<br><br>
+            예수님의 수난 예고를 들은 베드로가 수난을 만류하자 예수님께서 베드로를 책망하십니다. 이는 예수님께서 광야에서 사탄이 시험할 때 하셨던 말씀과 동일한 말씀으로 베드로를 책망하신 것입니다(마 4:10; 16:22~23). <strong>베드로에게 예수님을 넘어지게 하는 걸림돌이 되지 말 것을 경고하신 것</strong>입니다.<br><br>
+            그리고 예수님의 제자들은 <strong>자기 십자가를 지고 예수님을 따르는 사람</strong>임을 다시 말씀해 주십니다(마 10:38~39; 16:24).
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 마태복음 14~16장 '예수님의 치유 사역'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 마태복음 14장 -->
+        <div class="chapter-title">마태복음 14장 (1~36절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 그 때에 분봉 왕 헤롯이 예수의 소문을 듣고</div>
+        <div class="verse"><span class="verse-num">2</span> 그 신하들에게 이르되 이는 세례 요한이라 그가 죽은 자 가운데서 살아났으니 그러므로 이런 능력이 그 속에서 역사하는도다 하더라</div>
+        <div class="verse"><span class="verse-num">3</span> 전에 헤롯이 그 동생 빌립의 아내 헤로디아의 일로 요한을 잡아 결박하여 옥에 가두었으니</div>
+        <div class="verse"><span class="verse-num">4</span> 이는 요한이 헤롯에게 말하되 당신이 그 여자를 차지한 것이 옳지 않다 하였음이라</div>
+        <div class="verse"><span class="verse-num">5</span> 헤롯이 요한을 죽이려 하되 무리가 그를 선지자로 여기므로 그들을 두려워하더니</div>
+        <div class="verse"><span class="verse-num">6</span> 마침 헤롯의 생일이 되어 헤로디아의 딸이 연석 가운데서 춤을 추어 헤롯을 기쁘게 하니</div>
+        <div class="verse"><span class="verse-num">7</span> 헤롯이 맹세로 그에게 무엇이든지 달라는 대로 주겠다고 약속하거늘</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 제 어머니의 시킴을 듣고 이르되 세례 요한의 머리를 소반에 얹어 여기서 내게 주소서 하니</div>
+        <div class="verse"><span class="verse-num">9</span> 왕이 근심하나 자기가 맹세한 것과 그 함께 앉은 사람들 때문에 주라 명하고</div>
+        <div class="verse"><span class="verse-num">10</span> 사람을 보내어 옥에서 요한의 목을 베어</div>
+        <div class="verse"><span class="verse-num">11</span> 그 머리를 소반에 얹어서 그 소녀에게 주니 그가 자기 어머니에게로 가져가니라</div>
+        <div class="verse"><span class="verse-num">12</span> 요한의 제자들이 와서 시체를 가져다가 장사하고 가서 예수께 아뢰니라</div>
+        <div class="verse"><span class="verse-num">13</span> 예수께서 들으시고 배를 타고 떠나사 따로 빈 들에 가시니 무리가 듣고 여러 고을로부터 걸어서 따라간지라</div>
+        <div class="verse"><span class="verse-num">14</span> 예수께서 나오사 큰 무리를 보시고 불쌍히 여기사 그 중에 있는 병자를 고쳐 주시니라</div>
+        <div class="verse"><span class="verse-num">15</span> 저녁이 되매 제자들이 나아와 이르되 이 곳은 빈 들이요 때도 이미 저물었으니 무리를 보내어 마을에 들어가 먹을 것을 사 먹게 하소서</div>
+        <div class="verse"><span class="verse-num">16</span> 예수께서 이르시되 갈 것 없다 너희가 먹을 것을 주라</div>
+        <div class="verse"><span class="verse-num">17</span> 제자들이 이르되 여기 우리에게 있는 것은 떡 다섯 개와 물고기 두 마리뿐이니이다</div>
+        <div class="verse"><span class="verse-num">18</span> 이르시되 그것을 내게 가져오라 하시고</div>
+        <div class="verse"><span class="verse-num">19</span> 무리를 명하여 잔디 위에 앉히시고 떡 다섯 개와 물고기 두 마리를 가지사 하늘을 우러러 축사하시고 떡을 떼어 제자들에게 주시매 제자들이 무리에게 주니</div>
+        <div class="verse"><span class="verse-num">20</span> 다 배불리 먹고 남은 조각을 열두 바구니에 차게 거두었으며</div>
+        <div class="verse"><span class="verse-num">21</span> 먹은 사람은 여자와 어린이 외에 오천 명이나 되었더라</div>
+        <div class="verse"><span class="verse-num">22</span> 예수께서 즉시 제자들을 재촉하사 자기가 무리를 보내는 동안에 배를 타고 앞서 건너편으로 가게 하시고</div>
+        <div class="verse"><span class="verse-num">23</span> 무리를 보내신 후에 기도하러 따로 산에 올라가시니라 저물매 거기 혼자 계시더니</div>
+        <div class="verse"><span class="verse-num">24</span> 배가 이미 육지에서 수 리나 떠나서 바람이 거스르므로 물결로 말미암아 고난을 당하더라</div>
+        <div class="verse"><span class="verse-num">25</span> 밤 사경에 예수께서 바다 위로 걸어서 제자들에게 오시니</div>
+        <div class="verse"><span class="verse-num">26</span> 제자들이 그가 바다 위로 걸어오심을 보고 놀라 유령이라 하며 무서워하여 소리 지르거늘</div>
+        <div class="verse"><span class="verse-num">27</span> 예수께서 즉시 이르시되 안심하라 나니 두려워하지 말라</div>
+        <div class="verse"><span class="verse-num">28</span> 베드로가 대답하여 이르되 주여 만일 주님이시거든 나를 명하사 물 위로 오라 하소서 하니</div>
+        <div class="verse"><span class="verse-num">29</span> 오라 하시니 베드로가 배에서 내려 물 위로 걸어서 예수께로 가되</div>
+        <div class="verse"><span class="verse-num">30</span> 바람을 보고 무서워 빠져 가는지라 소리 질러 이르되 주여 나를 구원하소서 하니</div>
+        <div class="verse"><span class="verse-num">31</span> 예수께서 즉시 손 내밀어 그를 붙잡으시며 이르시되 믿음이 작은 자여 왜 의심하였느냐 하시고</div>
+        <div class="verse"><span class="verse-num">32</span> 배에 함께 오르매 바람이 그치는지라</div>
+        <div class="verse"><span class="verse-num">33</span> 배에 있는 사람들이 예수께 절하며 이르되 진실로 하나님의 아들이로소이다 하더라</div>
+        <div class="verse"><span class="verse-num">34</span> 그들이 건너가 게네사렛 땅에 이르니</div>
+        <div class="verse"><span class="verse-num">35</span> 그 곳 사람들이 예수이신 줄을 알고 그 근방에 두루 통지하여 모든 병든 자를 예수께 데리고 와서</div>
+        <div class="verse"><span class="verse-num">36</span> 다만 예수의 옷자락에라도 손을 대게 하시기를 간구하니 손을 대는 자는 다 나음을 얻으니라</div>
+
+        <!-- 마태복음 15장 -->
+        <div class="chapter-title">마태복음 15장 (1~39절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 때에 바리새인과 서기관들이 예루살렘으로부터 예수께 나아와 이르되</div>
+        <div class="verse"><span class="verse-num">2</span> 당신의 제자들이 어찌하여 장로들의 전통을 범하나이까 떡 먹을 때에 손을 씻지 아니하나이다</div>
+        <div class="verse"><span class="verse-num">3</span> 대답하여 이르시되 너희는 어찌하여 너희의 전통으로 하나님의 계명을 범하느냐</div>
+        <div class="verse"><span class="verse-num">4</span> 하나님이 이르셨으되 네 부모를 공경하라 하시고 또 아버지나 어머니를 비방하는 자는 반드시 죽임을 당하리라 하셨거늘</div>
+        <div class="verse"><span class="verse-num">5</span> 너희는 이르되 누구든지 아버지에게나 어머니에게 말하기를 내가 드려 유익하게 할 것이 하나님께 드림이 되었다고 하기만 하면</div>
+        <div class="verse"><span class="verse-num">6</span> 그 부모를 공경할 것이 없다 하여 너희의 전통으로 하나님의 말씀을 폐하는도다</div>
+        <div class="verse"><span class="verse-num">7</span> 외식하는 자들아 이사야가 너희에 관하여 잘 예언하였도다 일렀으되</div>
+        <div class="verse"><span class="verse-num">8</span> 이 백성이 입술로는 나를 공경하되 마음은 내게서 멀도다</div>
+        <div class="verse"><span class="verse-num">9</span> 사람의 계명으로 교훈을 삼아 가르치니 나를 헛되이 경배하는도다 하였느니라 하시고</div>
+        <div class="verse"><span class="verse-num">10</span> 무리를 불러 이르시되 듣고 깨달으라</div>
+        <div class="verse"><span class="verse-num">11</span> 입으로 들어가는 것이 사람을 더럽게 하는 것이 아니라 입에서 나오는 그것이 사람을 더럽게 하는 것이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 이에 제자들이 나아와 이르되 바리새인들이 이 말씀을 듣고 걸림이 된 줄 아시나이까</div>
+        <div class="verse"><span class="verse-num">13</span> 예수께서 대답하여 이르시되 심은 것마다 내 하늘 아버지께서 심으시지 않은 것은 뽑힐 것이니</div>
+        <div class="verse"><span class="verse-num">14</span> 그냥 두라 그들은 맹인이 되어 맹인을 인도하는 자로다 만일 맹인이 맹인을 인도하면 둘이 다 구덩이에 빠지리라 하시니</div>
+        <div class="verse"><span class="verse-num">15</span> 베드로가 대답하여 이르되 이 비유를 우리에게 설명하여 주옵소서</div>
+        <div class="verse"><span class="verse-num">16</span> 예수께서 이르시되 너희도 아직까지 깨달음이 없느냐</div>
+        <div class="verse"><span class="verse-num">17</span> 입으로 들어가는 모든 것은 배로 들어가서 뒤로 내버려지는 줄 알지 못하느냐</div>
+        <div class="verse"><span class="verse-num">18</span> 입에서 나오는 것들은 마음에서 나오나니 이것이야말로 사람을 더럽게 하느니라</div>
+        <div class="verse"><span class="verse-num">19</span> 마음에서 나오는 것은 악한 생각과 살인과 간음과 음란과 도둑질과 거짓 증언과 비방이니</div>
+        <div class="verse"><span class="verse-num">20</span> 이런 것들이 사람을 더럽게 하는 것이요 씻지 않은 손으로 먹는 것은 사람을 더럽게 하지 못하느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 예수께서 거기서 나가사 두로와 시돈 지방으로 들어가시니</div>
+        <div class="verse"><span class="verse-num">22</span> 가나안 여자 하나가 그 지경에서 나와서 소리 질러 이르되 주 다윗의 자손이여 나를 불쌍히 여기소서 내 딸이 흉악하게 귀신 들렸나이다 하되</div>
+        <div class="verse"><span class="verse-num">23</span> 예수는 한 말씀도 대답하지 아니하시니 제자들이 와서 청하여 말하되 그 여자가 우리 뒤에서 소리를 지르오니 그를 보내소서</div>
+        <div class="verse"><span class="verse-num">24</span> 예수께서 대답하여 이르시되 나는 이스라엘 집의 잃어버린 양 외에는 다른 데로 보내심을 받지 아니하였노라 하시니</div>
+        <div class="verse"><span class="verse-num">25</span> 여자가 와서 예수께 절하며 이르되 주여 저를 도우소서</div>
+        <div class="verse"><span class="verse-num">26</span> 대답하여 이르시되 자녀의 떡을 취하여 개들에게 던짐이 마땅하지 아니하니라</div>
+        <div class="verse"><span class="verse-num">27</span> 여자가 이르되 주여 옳소이다마는 개들도 제 주인의 상에서 떨어지는 부스러기를 먹나이다 하니</div>
+        <div class="verse"><span class="verse-num">28</span> 이에 예수께서 대답하여 이르시되 여자여 네 믿음이 크도다 네 소원대로 되리라 하시니 그 때로부터 그의 딸이 나으니라</div>
+        <div class="verse"><span class="verse-num">29</span> 예수께서 거기서 떠나사 갈릴리 호숫가에 이르러 산에 올라가 거기 앉으시니</div>
+        <div class="verse"><span class="verse-num">30</span> 큰 무리가 다리 저는 사람과 장애인과 맹인과 말 못하는 사람과 기타 여럿을 데리고 와서 예수의 발 앞에 앉히매 고쳐 주시니</div>
+        <div class="verse"><span class="verse-num">31</span> 말 못하는 사람이 말하고 장애인이 온전하게 되고 다리 저는 사람이 걸으며 맹인이 보는 것을 무리가 보고 놀랍게 여겨 이스라엘의 하나님께 영광을 돌리니라</div>
+        <div class="verse"><span class="verse-num">32</span> 예수께서 제자들을 불러 이르시되 내가 무리를 불쌍히 여기노라 그들이 나와 함께 있은 지 이미 사흘이매 먹을 것이 없도다 길에서 기진할까 하여 굶겨 보내지 못하겠노라</div>
+        <div class="verse"><span class="verse-num">33</span> 제자들이 이르되 광야에 있어 우리가 어디서 이런 무리가 배부를 만큼 떡을 얻으리이까</div>
+        <div class="verse"><span class="verse-num">34</span> 예수께서 이르시되 너희에게 떡이 몇 개나 있느냐 이르되 일곱 개와 작은 생선 두어 마리가 있나이다 하거늘</div>
+        <div class="verse"><span class="verse-num">35</span> 예수께서 무리에게 명하사 땅에 앉게 하시고</div>
+        <div class="verse"><span class="verse-num">36</span> 떡 일곱 개와 그 생선을 가지사 축사하시고 떼어 제자들에게 주시니 제자들이 무리에게 주매</div>
+        <div class="verse"><span class="verse-num">37</span> 다 배불리 먹고 남은 조각을 일곱 광주리에 차게 거두었으며</div>
+        <div class="verse"><span class="verse-num">38</span> 먹은 자는 여자와 어린이 외에 사천 명이었더라</div>
+        <div class="verse"><span class="verse-num">39</span> 예수께서 무리를 흩어 보내시고 배에 오르사 마가단 지경으로 가시니라</div>
+
+        <!-- 마태복음 16장 -->
+        <div class="chapter-title">마태복음 16장 (1~28절)</div>
+        <div class="verse"><span class="verse-num">1</span> 바리새인과 사두개인들이 와서 예수를 시험하여 하늘로부터 오는 표적 보이기를 청하니</div>
+        <div class="verse"><span class="verse-num">2</span> 예수께서 대답하여 이르시되 너희가 저녁에 하늘이 붉으면 날이 좋겠다 하고</div>
+        <div class="verse"><span class="verse-num">3</span> 아침에 하늘이 붉고 흐리면 오늘은 날이 궂겠다 하나니 너희가 날씨는 분별할 줄 알면서 시대의 표적은 분별할 수 없느냐</div>
+        <div class="verse"><span class="verse-num">4</span> 악하고 음란한 세대가 표적을 구하나 요나의 표적 밖에는 보여 줄 표적이 없느니라 하시고 그들을 떠나 가시니라</div>
+        <div class="verse"><span class="verse-num">5</span> 제자들이 건너편으로 갈새 떡 가져가기를 잊었더니</div>
+        <div class="verse"><span class="verse-num">6</span> 예수께서 이르시되 삼가 바리새인과 사두개인들의 누룩을 주의하라 하시니</div>
+        <div class="verse"><span class="verse-num">7</span> 제자들이 서로 논의하여 이르되 우리가 떡을 가져오지 아니하였도다 하거늘</div>
+        <div class="verse"><span class="verse-num">8</span> 예수께서 아시고 이르시되 믿음이 작은 자들아 어찌 떡이 없으므로 서로 논의하느냐</div>
+        <div class="verse"><span class="verse-num">9</span> 너희가 아직도 깨닫지 못하느냐 떡 다섯 개로 오천 명을 먹이고 주운 것이 몇 바구니며</div>
+        <div class="verse"><span class="verse-num">10</span> 떡 일곱 개로 사천 명을 먹이고 주운 것이 몇 광주리였는지를 기억하지 못하느냐</div>
+        <div class="verse"><span class="verse-num">11</span> 어찌 내 말한 것이 떡에 관함이 아닌 줄을 깨닫지 못하느냐 오직 바리새인과 사두개인들의 누룩을 주의하라 하시니</div>
+        <div class="verse"><span class="verse-num">12</span> 그제서야 제자들이 떡의 누룩이 아니요 바리새인과 사두개인들의 교훈을 삼가라고 말씀하신 줄을 깨달으니라</div>
+        <div class="verse"><span class="verse-num">13</span> 예수께서 빌립보 가이사랴 지방에 이르러 제자들에게 물어 이르시되 사람들이 인자를 누구라 하느냐</div>
+        <div class="verse"><span class="verse-num">14</span> 이르되 더러는 세례 요한, 더러는 엘리야, 어떤 이는 예레미야나 선지자 중의 하나라 하나이다</div>
+        <div class="verse"><span class="verse-num">15</span> 이르시되 너희는 나를 누구라 하느냐</div>
+        <div class="verse"><span class="verse-num">16</span> 시몬 베드로가 대답하여 이르되 주는 그리스도시요 살아 계신 하나님의 아들이시니이다</div>
+        <div class="verse"><span class="verse-num">17</span> 예수께서 대답하여 이르시되 바요나 시몬아 네가 복이 있도다 이를 네게 알게 한 이는 혈육이 아니요 하늘에 계신 내 아버지시니라</div>
+        <div class="verse"><span class="verse-num">18</span> 또 내가 네게 이르노니 너는 베드로라 내가 이 반석 위에 내 교회를 세우리니 음부의 권세가 이기지 못하리라</div>
+        <div class="verse"><span class="verse-num">19</span> 내가 천국 열쇠를 네게 주리니 네가 땅에서 무엇이든지 매면 하늘에서도 매일 것이요 네가 땅에서 무엇이든지 풀면 하늘에서도 풀리리라 하시고</div>
+        <div class="verse"><span class="verse-num">20</span> 이에 제자들에게 경고하사 자기가 그리스도인 것을 아무에게도 이르지 말라 하시니라</div>
+        <div class="verse"><span class="verse-num">21</span> 이 때로부터 예수 그리스도께서 자기가 예루살렘에 올라가 장로들과 대제사장들과 서기관들에게 많은 고난을 받고 죽임을 당하고 제삼일에 살아나야 할 것을 제자들에게 비로소 나타내시니</div>
+        <div class="verse"><span class="verse-num">22</span> 베드로가 예수를 붙들고 항변하여 이르되 주여 그리 마옵소서 이 일이 결코 주께 미치지 아니하리이다</div>
+        <div class="verse"><span class="verse-num">23</span> 예수께서 돌이키시며 베드로에게 이르시되 사탄아 내 뒤로 물러 가라 너는 나를 넘어지게 하는 자로다 네가 하나님의 일을 생각하지 아니하고 도리어 사람의 일을 생각하는도다 하시고</div>
+        <div class="verse"><span class="verse-num">24</span> 이에 예수께서 제자들에게 이르시되 누구든지 나를 따라오려거든 자기를 부인하고 자기 십자가를 지고 나를 따를 것이니라</div>
+        <div class="verse"><span class="verse-num">25</span> 누구든지 제 목숨을 구원하고자 하면 잃을 것이요 누구든지 나를 위하여 제 목숨을 잃으면 찾으리라</div>
+        <div class="verse"><span class="verse-num">26</span> 사람이 만일 온 천하를 얻고도 제 목숨을 잃으면 무엇이 유익하리요 사람이 무엇을 주고 제 목숨과 바꾸겠느냐</div>
+        <div class="verse"><span class="verse-num">27</span> 인자가 아버지의 영광으로 그 천사들과 함께 오리니 그 때에 각 사람이 행한 대로 갚으리라</div>
+        <div class="verse"><span class="verse-num">28</span> 진실로 너희에게 이르노니 여기 서 있는 사람 중에 죽기 전에 인자가 그 왕권을 가지고 오는 것을 볼 자들도 있느니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
