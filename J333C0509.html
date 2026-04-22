@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 333</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 333</h1>
+        <p class="sub-title">찬송가 488장 이 몸의 소망 무언가</p>
+        <p class="sub-title">고린도후서 5장~9장 — 마음을 넓히라</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 488장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1dQSuP0dl8TtUWniahAyKmFTqmWyt1w2Q" alt="찬송가 488장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 고린도후서 5장~9장<br>'마음을 넓히라'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 바울은 자신이 오직 주의 복음만 전할 수 있는 이유는 영원한 생명과 최후 심판을 믿기 때문이라고 말합니다.</span>
+            바울은 고린도 성도들에게 <strong>우리의 육신은 현재의 삶인 장막 집이고 하늘에 있는 영원한 집이 우리의 영원한 처소</strong>라고 가르칩니다. 그러므로 바울은 육신의 장막을 입고 이 땅에 사는 것보다 차라리 <strong>몸을 떠나 주님과 함께 있기를 원한다</strong>고 말합니다. 이 말은 지금은 비록 육신의 장막에 머물러 있을지라도 <strong>하늘의 영원한 집을 소망하며 살아가고 있다</strong>는 것입니다. 그래서 바울은 이렇게 고백합니다.
+            <div class="quote">
+                <strong>"우리는 몸으로 있든지 떠나든지 주를 기쁘시게 하는 자가 되기를 힘쓰노라"</strong> (고후 5:9)
+            </div>
+            또한 자신이 오직 주의 복음만을 전할 수 있는 또 다른 이유는 <strong>최후의 심판을 믿기 때문</strong>이라고 말합니다(고후 5:10). 바울은 세상 끝 날에 있을 하나님의 심판을 믿기에 어떤 상황도 견디며 <strong>주를 기쁘시게 하기 위해 복음을 전합니다</strong>(빌 1:20).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 피스메이커 사도인 바울은 고린도 성도들에게 마음을 넓히라고 권면합니다.</span>
+            바울은 당시 고린도 성도들에게 사도직을 의심받았지만 자신은 <strong>진정한 사도로서 온갖 핍박과 고난 속에서 복음을 전하고 있음</strong>을 역설적으로 표현합니다. 화목하게 하는, 즉 자신이 <strong>'피스메이커(peacemaker) 사도'</strong>라고 말한 바울은 고린도 성도들에게 화목에 대해 권면합니다(고후 6:11~18).
+            <div class="quote">
+                <strong>첫째,</strong> 마음을 넓히라고 권면합니다.<br>
+                <strong>둘째,</strong> 너희는 살아 계신 하나님의 성전으로, 믿지 않는 자와 멍에를 함께 메지 말라고 권면합니다.<br>
+                <strong>셋째,</strong> 하나님의 자녀로 성결한 삶을 살라고 권면합니다.
+            </div>
+            바울은 고린도 성도들의 정체성을 <strong>'하나님의 자녀'</strong>라고 정의해 주면서 하나님의 자녀로 <strong>구별된 삶, 그리고 정결한 삶</strong>을 살라고 권면합니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 디도를 통해 전해 들은 고린도 교회의 소식은 바울에게 큰 위로와 기쁨이 됩니다.</span>
+            바울 전도팀은 마게도냐에서 많은 고난을 당했습니다. 그런데 그 어려움 가운데 <strong>디도로부터 고린도 성도들의 회개 소식을 듣고 크게 기뻐하며 감사를 전합니다</strong>(고후 7:5~7). 바울은 고린도 성도들이 자신을 사모하고 반성하며 방해자들로부터 보호하기 위해 애쓴다는 소식과, 디도가 안전하게 돌아온 것을 기뻐합니다.<br><br>
+            바울이 고린도 교회에 써 보낸 첫 번째 편지는 고린도전서였습니다. 그런데 고린도 성도들이 고린도전서를 받아보고 오히려 오해하자 바울이 <strong>두 번째 편지로 고린도후서 10장~13장을 써 보냈습니다.</strong> 고린도 성도들이 바울의 두 번째 편지를 받고 나서 바울에 대한 모든 오해를 풀고 디도를 통해 그들의 마음을 전달한 것입니다.<br><br>
+            사실 바울은 두 번째 편지를 보내고 근심했었습니다. 그런데 다행히 <strong>두 번째 편지로 인해 고린도 성도들이 깊이 반성하며 회개했다는 소식을 듣고 바울은 큰 위로와 위안을 받습니다</strong>(고후 7:8~16).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 바울은 고린도 교회가 가난한 예루살렘 교회를 돕는 일은 신령한 일만큼이나 중요하다고 가르칩니다.</span>
+            바울은 고린도 성도들에게 고린도전서에서 강조했던 <strong>가난한 예루살렘 교회를 돕는 연보에 대해 재차 강조하며</strong> 구제헌금에 적극 참여할 것을 독려합니다(고후 9:1~5). 고린도 성도들은 바울이 겉으로는 자비량 사역을 하면서 뒤로는 연보를 챙긴다고 오해했었습니다(고후 12:17~18). 그럼에도 불구하고 바울이 <strong>가난한 예루살렘 교회 섬기는 일을 포기할 수 없었기에</strong> 고린도 성도들에게 연보를 다시금 강조한 것입니다.<br><br>
+            바울은 마게도냐 교회와 고린도 교회에서 구제헌금을 모아 가난한 예루살렘 교회를 돕는 것은 <strong>성도들을 균등하게 하려 함</strong>이라고 밝힙니다(고후 8:14). 또한 <strong>가난한 성도들을 섬기기 위해 구제헌금을 하는 일은 신령한 일만큼이나 중요하다</strong>고 가르칩니다. '구제하는 일'은 이미 하나님께서 중요하게 명령하신 일이었습니다(레 23:22; 신 15:11). 바울은 구제헌금 모을 것을 독려하며 <strong>마게도냐 교회가 극심한 가난 속에서 보여준 구제헌금의 모범</strong>을 전합니다(고후 8:1~5).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 바울은 예루살렘 교회를 돕기 위한 세 명의 구제헌금 위원들을 고린도 교회에 보냅니다.</span>
+            바울은 <strong>구제헌금 위원 세 명</strong>을 고린도 교회에 파송합니다(고후 8:16~23).
+            <div class="quote">
+                <strong>첫 번째 위원 — 디도</strong> : 사도 바울의 추천을 받고 스스로 자원한 사람입니다.<br>
+                <strong>두 번째 위원</strong> : 모든 교회에서 칭찬받는 사람으로 공식적인 절차에 따라 선정된 사람입니다.<br>
+                <strong>세 번째 위원</strong> : 여러 차례 확인하여 선택한 한 형제로 고린도 교회를 사모하는 사람입니다.
+            </div>
+            특히 <strong>디도에 대해서는 사도 바울이 직접 보증합니다.</strong> 또한 바울은 다시 한번 고린도 성도들에게 구제헌금에 대해 간절히 부탁합니다(고후 8:24). 그리고 이렇게 말합니다.
+            <div class="quote">
+                <strong>연보를 준비하는 사람에게 하나님의 복이 크게 임할 것입니다.</strong> (고후 9:8~9; 시 112:9 인용)
+            </div>
+            바울은 연보에 대한 이야기를 마치며 <strong>고린도 교회의 실천을 믿으며 감사합니다</strong>(고후 9:15).
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 고린도후서 5장~9장 '마음을 넓히라'를 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 고린도후서 5장 -->
+        <div class="chapter-title">고린도후서 5장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 만일 땅에 있는 우리의 장막 집이 무너지면 하나님께서 지으신 집 곧 손으로 지은 것이 아니요 하늘에 있는 영원한 집이 우리에게 있는 줄 아느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 참으로 우리가 여기 있어 탄식하며 하늘로부터 오는 우리 처소로 덧입기를 간절히 사모하노라</div>
+        <div class="verse"><span class="verse-num">3</span> 이렇게 입음은 우리가 벗은 자들로 발견되지 않으려 함이라</div>
+        <div class="verse"><span class="verse-num">4</span> 참으로 이 장막에 있는 우리가 짐진 것 같이 탄식하는 것은 벗고자 함이 아니요 오히려 덧입고자 함이니 죽을 것이 생명에 삼킨 바 되게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">5</span> 곧 이것을 우리에게 이루게 하시고 보증으로 성령을 우리에게 주신 이는 하나님이시니라</div>
+        <div class="verse"><span class="verse-num">6</span> 그러므로 우리가 항상 담대하여 몸으로 있을 때에는 주와 따로 있는 줄을 아노니</div>
+        <div class="verse"><span class="verse-num">7</span> 이는 우리가 믿음으로 행하고 보는 것으로 행하지 아니함이로라</div>
+        <div class="verse"><span class="verse-num">8</span> 우리가 담대하여 원하는 바는 차라리 몸을 떠나 주와 함께 있는 그것이라</div>
+        <div class="verse"><span class="verse-num">9</span> 그런즉 우리는 몸으로 있든지 떠나든지 주를 기쁘시게 하는 자가 되기를 힘쓰노라</div>
+        <div class="verse"><span class="verse-num">10</span> 이는 우리가 다 반드시 그리스도의 심판대 앞에 나타나게 되어 각각 선악간에 그 몸으로 행한 것을 따라 받으려 함이라</div>
+        <div class="verse"><span class="verse-num">11</span> 우리는 주의 두려우심을 알므로 사람들을 권면하거니와 우리가 하나님 앞에 알리어졌으니 또 너희의 양심에도 알리어지기를 바라노라</div>
+        <div class="verse"><span class="verse-num">12</span> 우리가 다시 너희에게 자천하는 것이 아니요 오직 우리로 말미암아 자랑할 기회를 너희에게 주어 마음으로 하지 않고 외모로 자랑하는 자들에게 대답하게 하려 하는 것이라</div>
+        <div class="verse"><span class="verse-num">13</span> 우리가 만일 미쳤어도 하나님을 위한 것이요 정신이 온전하여도 너희를 위한 것이니</div>
+        <div class="verse"><span class="verse-num">14</span> 그리스도의 사랑이 우리를 강권하시는도다 우리가 생각하건대 한 사람이 모든 사람을 대신하여 죽었은즉 모든 사람이 죽은 것이라</div>
+        <div class="verse"><span class="verse-num">15</span> 그가 모든 사람을 대신하여 죽으심은 살아 있는 자들로 하여금 다시는 그들 자신을 위하여 살지 않고 오직 그들을 대신하여 죽었다가 다시 살아나신 이를 위하여 살게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">16</span> 그러므로 우리가 이제부터는 어떤 사람도 육신을 따라 알지 아니하노라 비록 우리가 그리스도도 육신을 따라 알았으나 이제부터는 그같이 알지 아니하노라</div>
+        <div class="verse"><span class="verse-num">17</span> 그런즉 누구든지 그리스도 안에 있으면 새로운 피조물이라 이전 것은 지나갔으니 보라 새 것이 되었도다</div>
+        <div class="verse"><span class="verse-num">18</span> 모든 것이 하나님께로서 났으며 그가 그리스도로 말미암아 우리를 자기와 화목하게 하시고 또 우리에게 화목하게 하는 직분을 주셨으니</div>
+        <div class="verse"><span class="verse-num">19</span> 곧 하나님께서 그리스도 안에 계시사 세상을 자기와 화목하게 하시며 그들의 죄를 그들에게 돌리지 아니하시고 화목하게 하는 말씀을 우리에게 부탁하셨느니라</div>
+        <div class="verse"><span class="verse-num">20</span> 그러므로 우리가 그리스도를 대신하여 사신이 되어 하나님이 우리를 통하여 너희를 권면하시는 것 같이 그리스도를 대신하여 간청하노니 너희는 하나님과 화목하라</div>
+        <div class="verse"><span class="verse-num">21</span> 하나님이 죄를 알지도 못하신 이를 우리를 대신하여 죄로 삼으신 것은 우리로 하여금 그 안에서 하나님의 의가 되게 하려 하심이라</div>
+
+        <!-- 고린도후서 6장 -->
+        <div class="chapter-title">고린도후서 6장 (1~18절)</div>
+        <div class="verse"><span class="verse-num">1</span> 우리가 하나님과 함께 일하는 자로서 너희를 권하노니 하나님의 은혜를 헛되이 받지 말라</div>
+        <div class="verse"><span class="verse-num">2</span> 이르시되 내가 은혜 베풀 때에 너에게 듣고 구원의 날에 너를 도왔다 하셨으니 보라 지금은 은혜 받을 만한 때요 보라 지금은 구원의 날이로다</div>
+        <div class="verse"><span class="verse-num">3</span> 우리가 이 직분이 비방을 받지 않게 하려고 무엇에든지 아무에게도 거리끼지 않게 하고</div>
+        <div class="verse"><span class="verse-num">4</span> 오직 모든 일에 하나님의 일꾼으로 자천하여 많이 견디는 것과 환난과 궁핍과 고난과</div>
+        <div class="verse"><span class="verse-num">5</span> 매 맞음과 갇힘과 난동과 수고로움과 자지 못함과 먹지 못함 가운데서도</div>
+        <div class="verse"><span class="verse-num">6</span> 깨끗함과 지식과 오래 참음과 자비함과 성령의 감화와 거짓이 없는 사랑과</div>
+        <div class="verse"><span class="verse-num">7</span> 진리의 말씀과 하나님의 능력으로 의의 무기를 좌우에 가지고</div>
+        <div class="verse"><span class="verse-num">8</span> 영광과 욕됨으로 그러했으며 악한 이름과 아름다운 이름으로 그러했느니라 우리는 속이는 자 같으나 참되고</div>
+        <div class="verse"><span class="verse-num">9</span> 무명한 자 같으나 유명한 자요 죽은 자 같으나 보라 우리가 살아 있고 징계를 받는 자 같으나 죽임을 당하지 아니하고</div>
+        <div class="verse"><span class="verse-num">10</span> 근심하는 자 같으나 항상 기뻐하고 가난한 자 같으나 많은 사람을 부요하게 하고 아무 것도 없는 자 같으나 모든 것을 가진 자로다</div>
+        <div class="verse"><span class="verse-num">11</span> 고린도인들이여 너희를 향하여 우리의 입이 열리고 우리의 마음이 넓어졌으니</div>
+        <div class="verse"><span class="verse-num">12</span> 너희가 우리 안에서 좁아진 것이 아니라 오직 너희 심정에서 좁아진 것이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 자녀에게 말하듯 하노니 보답하는 것으로 너희도 마음을 넓히라</div>
+        <div class="verse"><span class="verse-num">14</span> 너희는 믿지 않는 자와 멍에를 함께 메지 말라 의와 불법이 어찌 함께 하며 빛과 어둠이 어찌 사귀며</div>
+        <div class="verse"><span class="verse-num">15</span> 그리스도와 벨리알이 어찌 조화되며 믿는 자와 믿지 않는 자가 어찌 상관하며</div>
+        <div class="verse"><span class="verse-num">16</span> 하나님의 성전과 우상이 어찌 일치가 되리요 우리는 살아 계신 하나님의 성전이라 이와 같이 하나님께서 이르시되 내가 그들 가운데 거하며 두루 행하여 나는 그들의 하나님이 되고 그들은 나의 백성이 되리라</div>
+        <div class="verse"><span class="verse-num">17</span> 그러므로 너희는 그들 중에서 나와서 따로 있고 부정한 것을 만지지 말라 내가 너희를 영접하여</div>
+        <div class="verse"><span class="verse-num">18</span> 너희에게 아버지가 되고 너희는 내게 자녀가 되리라 전능하신 주의 말씀이니라 하셨느니라</div>
+
+        <!-- 고린도후서 7장 -->
+        <div class="chapter-title">고린도후서 7장 (1~16절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그런즉 사랑하는 자들아 이 약속을 가진 우리는 하나님을 두려워하는 가운데서 거룩함을 온전히 이루어 육과 영의 온갖 더러운 것에서 자신을 깨끗하게 하자</div>
+        <div class="verse"><span class="verse-num">2</span> 마음으로 우리를 영접하라 우리는 아무에게도 불의를 행하지 않고 아무에게도 해롭게 하지 않고 아무에게서도 속여 빼앗은 일이 없노라</div>
+        <div class="verse"><span class="verse-num">3</span> 내가 이 말을 하는 것은 너희를 정죄하려고 하는 것이 아니라 내가 이전에 말하였거니와 너희가 우리 마음에 있어 함께 죽고 함께 살게 하고자 함이라</div>
+        <div class="verse"><span class="verse-num">4</span> 나는 너희를 향하여 담대한 것도 많고 너희를 위하여 자랑하는 것도 많으니 내가 우리의 모든 환난 가운데서도 위로가 가득하고 기쁨이 넘치는도다</div>
+        <div class="verse"><span class="verse-num">5</span> 우리가 마게도냐에 이르렀을 때에도 우리 육체가 편하지 못하였고 사방으로 환난을 당하여 밖으로는 다툼이요 안으로는 두려움이었노라</div>
+        <div class="verse"><span class="verse-num">6</span> 그러나 낙심한 자들을 위로하시는 하나님이 디도가 옴으로 우리를 위로하셨으니</div>
+        <div class="verse"><span class="verse-num">7</span> 그가 온 것뿐 아니요 오직 그가 너희에게서 받은 그 위로로 위로하고 너희의 사모함과 애통함과 나를 위하여 열심 있는 것을 우리에게 보고함으로 나를 더욱 기쁘게 하였느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 그러므로 내가 편지로 너희를 근심하게 한 것을 후회하였으나 지금은 후회하지 아니함은 그 편지가 너희로 잠시만 근심하게 한 줄을 앎이라</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 지금 기뻐함은 너희로 근심하게 한 까닭이 아니요 도리어 너희가 근심함으로 회개함에 이른 까닭이라 너희가 하나님의 뜻대로 근심하게 된 것은 우리에게서 아무 해도 받지 않게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">10</span> 하나님의 뜻대로 하는 근심은 후회할 것이 없는 구원에 이르게 하는 회개를 이루는 것이요 세상 근심은 사망을 이루는 것이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 보라 하나님의 뜻대로 하게 된 이 근심이 너희로 얼마나 간절하게 하며 얼마나 변증하게 하며 얼마나 분하게 하며 얼마나 두렵게 하며 얼마나 사모하게 하며 얼마나 열심 있게 하며 얼마나 벌하게 하였는가 너희가 그 일에 대하여 일체 너희 자신의 깨끗함을 나타내었느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그런즉 내가 너희에게 쓴 것은 그 불의를 행한 자를 위한 것도 아니요 그 불의를 당한 자를 위한 것도 아니요 오직 우리를 위한 너희의 간절함이 하나님 앞에서 너희에게 나타나게 하려 함이로라</div>
+        <div class="verse"><span class="verse-num">13</span> 이로 말미암아 우리가 위로를 받았고 우리가 받은 위로 위에 디도의 기쁨으로 우리가 더욱 많이 기뻐함은 그의 마음이 너희 무리로 말미암아 안심함을 얻었음이라</div>
+        <div class="verse"><span class="verse-num">14</span> 내가 그에게 너희를 위하여 자랑한 것이 있더라도 부끄럽지 아니하니 우리가 너희에게 이른 말이 다 참된 것 같이 디도 앞에서 우리가 자랑한 것도 참되게 되었도다</div>
+        <div class="verse"><span class="verse-num">15</span> 그가 너희 모든 사람들이 두려움과 떪으로 자기를 영접하여 순종한 것을 생각하고 너희를 향하여 그의 심정이 더욱 깊었으니</div>
+        <div class="verse"><span class="verse-num">16</span> 내가 범사에 너희를 신뢰하게 된 것을 기뻐하노라</div>
+
+        <!-- 고린도후서 8장 -->
+        <div class="chapter-title">고린도후서 8장 (1~24절)</div>
+        <div class="verse"><span class="verse-num">1</span> 형제들아 하나님께서 마게도냐 교회들에게 주신 은혜를 우리가 너희에게 알리노니</div>
+        <div class="verse"><span class="verse-num">2</span> 환난의 많은 시련 가운데서 그들의 넘치는 기쁨과 극심한 가난이 그들의 풍성한 연보를 넘치도록 하게 하였느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 내가 증언하노니 그들이 힘대로 할 뿐 아니라 힘에 지나도록 자원하여</div>
+        <div class="verse"><span class="verse-num">4</span> 이 은혜와 성도 섬기는 일에 참여함에 대하여 우리에게 간절히 구하니</div>
+        <div class="verse"><span class="verse-num">5</span> 우리가 바라던 것뿐 아니라 그들이 먼저 자신을 주께 드리고 또 하나님의 뜻을 따라 우리에게 주었도다</div>
+        <div class="verse"><span class="verse-num">6</span> 그러므로 우리가 디도를 권하여 그가 이미 너희 가운데서 시작하였은즉 이 은혜를 그대로 성취하게 하라 하였노라</div>
+        <div class="verse"><span class="verse-num">7</span> 오직 너희는 믿음과 말과 지식과 모든 간절함과 우리를 사랑하는 이 모든 일에 풍성한 것 같이 이 은혜에도 풍성하게 할지니라</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 명령으로 하는 말이 아니요 오직 다른 이들의 간절함을 가지고 너희의 사랑의 진실함을 증명하고자 함이로라</div>
+        <div class="verse"><span class="verse-num">9</span> 우리 주 예수 그리스도의 은혜를 너희가 알거니와 부요하신 이로서 너희를 위하여 가난하게 되심은 그의 가난함으로 말미암아 너희를 부요하게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">10</span> 이 일에 관하여 나의 뜻을 알리노니 이 일은 너희에게 유익함이라 너희가 일 년 전에 행하기를 먼저 시작할 뿐 아니라 원하기도 하였은즉</div>
+        <div class="verse"><span class="verse-num">11</span> 이제는 하던 일을 성취할지니 마음에 원하던 것과 같이 완성하되 있는 대로 하라</div>
+        <div class="verse"><span class="verse-num">12</span> 할 마음만 있으면 있는 대로 받으실 터이요 없는 것은 받지 아니하시리라</div>
+        <div class="verse"><span class="verse-num">13</span> 이는 다른 사람들은 평안하게 하고 너희는 곤고하게 하려는 것이 아니요 균등하게 하려 함이니</div>
+        <div class="verse"><span class="verse-num">14</span> 이제 너희의 넉넉한 것으로 그들의 부족한 것을 보충함은 후에 그들의 넉넉한 것으로 너희의 부족한 것을 보충하여 균등하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">15</span> 기록된 것 같이 많이 거둔 자도 남지 아니하였고 적게 거둔 자도 모자라지 아니하였느니라</div>
+        <div class="verse"><span class="verse-num">16</span> 너희를 위하여 같은 간절함을 디도의 마음에도 주시는 하나님께 감사하노라</div>
+        <div class="verse"><span class="verse-num">17</span> 그가 권함을 받고 더욱 간절함으로 자원하여 너희에게 나아갔고</div>
+        <div class="verse"><span class="verse-num">18</span> 또 그와 함께 그 형제를 보내었으니 이 사람은 복음으로써 모든 교회에서 칭찬을 받는 자요</div>
+        <div class="verse"><span class="verse-num">19</span> 이뿐 아니라 그는 동일한 주의 영광과 우리의 원을 나타내기 위하여 여러 교회의 택함을 받아 우리가 맡은 은혜의 일로 우리와 동행하는 자라</div>
+        <div class="verse"><span class="verse-num">20</span> 이것을 조심함은 우리가 맡은 이 거액의 연보에 대하여 아무도 우리를 비방하지 못하게 하려 함이니</div>
+        <div class="verse"><span class="verse-num">21</span> 이는 우리가 주 앞에서뿐 아니라 사람 앞에서도 선한 일에 조심하려 함이라</div>
+        <div class="verse"><span class="verse-num">22</span> 또 그들과 함께 우리의 한 형제를 보내었노니 우리는 그가 여러 가지 일에 간절한 것을 여러 번 확인하였거니와 이제 그가 너희를 크게 믿으므로 더욱 간절하니라</div>
+        <div class="verse"><span class="verse-num">23</span> 디도로 말하면 나의 동료요 너희를 위한 나의 동역자요 우리 형제들로 말하면 여러 교회의 사자들이요 그리스도의 영광이니라</div>
+        <div class="verse"><span class="verse-num">24</span> 그러므로 너희는 여러 교회 앞에서 너희의 사랑과 너희에 대한 우리 자랑의 증거를 그들에게 보이라</div>
+
+        <!-- 고린도후서 9장 -->
+        <div class="chapter-title">고린도후서 9장 (1~15절)</div>
+        <div class="verse"><span class="verse-num">1</span> 성도를 섬기는 일에 대하여는 내가 너희에게 쓸 필요가 없나니</div>
+        <div class="verse"><span class="verse-num">2</span> 이는 내가 너희의 원함을 앎이라 내가 너희를 위하여 마게도냐인들에게 아가야에서는 일 년 전부터 준비하였다는 것을 자랑하였는데 과연 너희의 열심이 퍽 많은 사람들을 분발하게 하였느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 그런데 이 형제들을 보낸 것은 이 일에 너희를 위한 우리의 자랑이 헛되지 않고 내가 말한 것 같이 준비하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">4</span> 혹 마게도냐인들이 나와 함께 가서 너희가 준비하지 아니한 것을 보면 너희는 고사하고 우리가 이 믿던 것에 부끄러움을 당할까 두려워하노라</div>
+        <div class="verse"><span class="verse-num">5</span> 그러므로 내가 이 형제들로 먼저 너희에게 가서 너희가 전에 약속한 연보를 미리 준비하게 하도록 권면하는 것이 필요한 줄 생각하였노니 이렇게 준비하여야 참 연보답고 억지가 아니니라</div>
+        <div class="verse"><span class="verse-num">6</span> 이것이 곧 적게 심는 자는 적게 거두고 많이 심는 자는 많이 거둔다 하는 말이로다</div>
+        <div class="verse"><span class="verse-num">7</span> 각각 그 마음에 정한 대로 할 것이요 인색함으로나 억지로 하지 말지니 하나님은 즐겨 내는 자를 사랑하시느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 하나님이 능히 모든 은혜를 너희에게 넘치게 하시나니 이는 너희로 모든 일에 항상 모든 것이 넉넉하여 모든 착한 일을 넘치게 하게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">9</span> 기록된 바 그가 흩어 가난한 자들에게 주었으니 그의 의가 영원토록 있느니라 함과 같으니라</div>
+        <div class="verse"><span class="verse-num">10</span> 심는 자에게 씨와 먹을 양식을 주시는 이가 너희 심을 것을 주사 풍성하게 하시고 너희 의의 열매를 더하게 하시리니</div>
+        <div class="verse"><span class="verse-num">11</span> 너희가 모든 일에 넉넉하여 너그럽게 연보를 함은 그들이 우리로 말미암아 하나님께 감사하게 하는 것이라</div>
+        <div class="verse"><span class="verse-num">12</span> 이 봉사의 직무가 성도들의 부족한 것을 보충할 뿐 아니라 사람들이 하나님께 드리는 많은 감사로 말미암아 넘쳤느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 이 직무로 증거를 삼아 너희가 그리스도의 복음을 진실히 믿고 복종하는 것과 그들과 모든 사람을 섬기는 너희의 후한 연보로 말미암아 하나님께 영광을 돌리고</div>
+        <div class="verse"><span class="verse-num">14</span> 또 그들이 너희를 위하여 간구하며 하나님이 너희에게 주신 지극한 은혜로 말미암아 너희를 사모하느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 말할 수 없는 그의 은사로 말미암아 하나님께 감사하노라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

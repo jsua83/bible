@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 343</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 343</h1>
+        <p class="sub-title">찬송가 210장 시온성과 같은 교회</p>
+        <p class="sub-title">에베소서 1장~3장 — 교회, 그리스도의 몸</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 210장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1mo5HFcT_CU2AJOmrVyPOppvvkDVbL4KL" alt="찬송가 210장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 에베소서 1장~3장<br>'교회, 그리스도의 몸'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 성경 66권이 한 권이듯이, 바울의 옥중서신 4권도 한 권입니다.</span>
+            바울이 로마에서 황제 재판을 기다리며 직접 만날 수 없는 사람들에게 써 보낸 <strong>'옥중서신' 네 권은 한 권</strong>이라 할 수 있습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 에베소서와 골로새서는 바울이 전하는 <strong>'복음의 이론편'</strong>이라 할 수 있습니다.<br>
+                <strong>둘째,</strong> 빌립보서와 빌레몬서는 바울이 전하는 <strong>'복음의 실천편'</strong>이라 할 수 있습니다.<br>
+                <strong>셋째,</strong> 에베소서와 골로새서는 통(通)으로 보면 <strong>'교회란 무엇인가?'와 '예수님은 누구이신가?'</strong>, 즉 '교회론'과 '기독론'을 기록한 한 권의 책이라 할 수 있습니다.<br>
+                <strong>넷째,</strong> 에베소서와 빌립보서는 통으로 보면 그리스도인들이 주의 몸 된 교회에서 <strong>어떻게 기쁜 삶을 살 수 있는지</strong>를 다룬 '교회론'과 '사랑의 편지'로 한 권의 책이라 할 수 있습니다.<br>
+                <strong>다섯째,</strong> 골로새서와 빌레몬서는 통으로 보면 주의 몸 된 교회에서 <strong>그리스도인들은 서로 형제라는 것</strong>을 가르쳐 준 '기독론'과 '기적의 편지'로 한 권의 책이라 할 수 있습니다.
+            </div>
+            그러므로 <strong>옥중서신 네 권은 하나로 묶어서 읽을 수 있습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 바울은 구원을 베푸신 성부, 성자, 성령 하나님께 찬양을 올립니다.</span>
+            두기고에 의해 에베소 교회에 전달된 에베소서는 바울의 인사말에 이어 곧바로 <strong>우리의 구원을 위해 창세전에 택하시고 예정하신 성부, 성자, 성령 하나님의 은혜</strong>에 대한 감사와 찬양으로 이어집니다(엡 1:1~6).
+            <div class="quote">
+                <strong>성부 하나님께서는</strong> 하나님의 아들이신 예수 그리스도를 우리에게 값없이 보내셔서 우리를 구원받게 하시고 그 은혜와 영광을 찬송하게 하십니다.<br>
+                <strong>성자 예수님께서는</strong> 죄 사함의 은혜를 베풀어 주셨습니다.<br>
+                <strong>성령님께서는</strong> 구원을 인치시고 보증해 주셨습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 바울은 '교회란 그리스도의 몸'이라고 정의합니다.</span>
+            바울은 이렇게 정의합니다(엡 1:20~22).
+            <div class="quote">
+                <strong>"교회란 그리스도의 몸으로, 만물 안에서 만물을 충만하게 하시는 이의 충만함이다"</strong>
+            </div>
+            또한 하나님께서 예수 그리스도를 통하여 우리에게 <strong>구속의 은혜, 즉 죄 사함을 주셨다</strong>고 선언합니다. 그리고 우리의 죄를 용서해 주신 하나님께서 우리에게 <strong>하나님의 비밀을 알려주신다</strong>고 선포합니다.<br><br>
+            그 비밀의 내용은 이것입니다. <strong>'교회'란 하나님의 놀라운 비밀을 깨달은 그리스도인들의 공동체로서, 그 안에는 하나님께서 만드신 모든 만물을 진리의 능력으로 충만하게 하는 능력이 있다는 것</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 바울은 예수 십자가 이후 우리 몸이 하나님의 성전이라고 가르칩니다.</span>
+            교회의 역사는 다음과 같습니다.
+            <div class="quote">
+                <strong>두 돌판</strong> → 언약궤 → 성막(여호와의 이름을 두려고 택하신 곳) → 성전 → 성육신(탄생) → <strong>십자가로 단번에 드린 제사</strong> → 부활과 승천, 하나님의 우편에 좌정하심 → 성령을 보내심 → 내 안에 성령이 오심 → <strong>"너희 몸이 성전"</strong>
+            </div>
+            죄인이었던 인간들이 구원받게 된 가장 획기적인 사건은 <strong>예수 그리스도의 십자가</strong>입니다. 예수 그리스께서 십자가로 율법을 폐하시고 <strong>인간과 인간을 화평하게 하시고, 하나님과 인간을 화목하게 하셨습니다.</strong> 그러므로 누구나 성령의 역사를 통해 십자가로, 하나님 앞으로 나아가게 됩니다.
+            <div class="quote">
+                <strong>이를 통해 마침내 '우리 몸이 성전'이 됩니다.</strong> (엡 2:11~22)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 바울은 '모든 민족'을 위한 하나님의 구원 계획은 아브라함 훨씬 이전부터 예수 안에서 예정된 하나님의 뜻이라고 말합니다.</span>
+            바울은 에베소 성도들에게 <strong>하나님의 비밀</strong>을 가르쳐 줍니다(엡 3:5~6). 예전에는 하나님 속에 감추어져 있던 비밀이었으나, 지금은 <strong>예수 그리스도를 통해 온 세상에 알려진 하나님의 비밀</strong>입니다. 이는 곧 <strong>하나님의 은혜의 경륜을 좇아 하나님께서 우리를 구원하시는 은혜의 복음</strong>입니다.<br><br>
+            바울은 에베소 성도들의 마음에도 <strong>하나님의 충만함이 충만하기를 바라며 중보기도를 합니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 에베소서 1장~3장 '교회, 그리스도의 몸'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 에베소서 1장 -->
+        <div class="chapter-title">에베소서 1장 (1~23절)</div>
+        <div class="verse"><span class="verse-num">1</span> 하나님의 뜻으로 말미암아 그리스도 예수의 사도 된 바울은 에베소에 있는 성도들과 그리스도 예수 안에 있는 신실한 자들에게 편지하노니</div>
+        <div class="verse"><span class="verse-num">2</span> 하나님 우리 아버지와 주 예수 그리스도로부터 은혜와 평강이 너희에게 있을지어다</div>
+        <div class="verse"><span class="verse-num">3</span> 찬송하리로다 하나님 곧 우리 주 예수 그리스도의 아버지께서 그리스도 안에서 하늘에 속한 모든 신령한 복을 우리에게 주시되</div>
+        <div class="verse"><span class="verse-num">4</span> 곧 창세 전에 그리스도 안에서 우리를 택하사 우리로 사랑 안에서 그 앞에 거룩하고 흠이 없게 하시려고</div>
+        <div class="verse"><span class="verse-num">5</span> 그 기쁘신 뜻대로 우리를 예정하사 예수 그리스도로 말미암아 자기의 아들들이 되게 하셨으니</div>
+        <div class="verse"><span class="verse-num">6</span> 이는 그가 사랑하시는 자 안에서 우리에게 거저 주시는 바 그의 은혜의 영광을 찬송하게 하려는 것이라</div>
+        <div class="verse"><span class="verse-num">7</span> 우리는 그리스도 안에서 그의 은혜의 풍성함을 따라 그의 피로 말미암아 속량 곧 죄 사함을 받았느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 이는 그가 모든 지혜와 총명을 우리에게 넘치게 하사</div>
+        <div class="verse"><span class="verse-num">9</span> 그 뜻의 비밀을 우리에게 알리신 것이요 그의 기뻐하심을 따라 그리스도 안에서 때가 찬 경륜을 위하여 예정하신 것이니</div>
+        <div class="verse"><span class="verse-num">10</span> 하늘에 있는 것이나 땅에 있는 것이 다 그리스도 안에서 통일되게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">11</span> 모든 일을 그의 뜻의 결정대로 일하시는 이의 계획을 따라 우리가 예정을 입어 그 안에서 기업이 되었으니</div>
+        <div class="verse"><span class="verse-num">12</span> 이는 우리가 그리스도 안에서 전부터 바라던 그의 영광의 찬송이 되게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">13</span> 그 안에서 너희도 진리의 말씀 곧 너희의 구원의 복음을 듣고 그 안에서 또한 믿어 약속의 성령으로 인치심을 받았으니</div>
+        <div class="verse"><span class="verse-num">14</span> 이는 우리 기업의 보증이 되사 그 얻으신 것을 속량하시고 그의 영광을 찬송하게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">15</span> 이로 말미암아 주 예수 안에서 너희 믿음과 모든 성도를 향한 사랑을 나도 듣고</div>
+        <div class="verse"><span class="verse-num">16</span> 내가 기도할 때에 기억하며 너희로 말미암아 감사하기를 그치지 아니하고</div>
+        <div class="verse"><span class="verse-num">17</span> 우리 주 예수 그리스도의 하나님, 영광의 아버지께서 지혜와 계시의 영을 너희에게 주사 하나님을 알게 하시고</div>
+        <div class="verse"><span class="verse-num">18</span> 너희 마음의 눈을 밝히사 그의 부르심의 소망이 무엇이며 성도 안에서 그 기업의 영광의 풍성함이 무엇이며</div>
+        <div class="verse"><span class="verse-num">19</span> 그의 힘의 위력으로 역사하심을 따라 믿는 우리에게 베푸신 능력의 지극히 크심이 어떠한 것을 너희로 알게 하시기를 구하노라</div>
+        <div class="verse"><span class="verse-num">20</span> 그의 능력이 그리스도 안에서 역사하사 죽은 자들 가운데서 다시 살리시고 하늘에서 자기의 오른편에 앉히사</div>
+        <div class="verse"><span class="verse-num">21</span> 모든 통치와 권세와 능력과 주권과 이 세상뿐 아니라 오는 세상에 일컫는 모든 이름 위에 뛰어나게 하시고</div>
+        <div class="verse"><span class="verse-num">22</span> 또 만물을 그의 발 아래에 복종하게 하시고 그를 만물 위에 교회의 머리로 삼으셨느니라</div>
+        <div class="verse"><span class="verse-num">23</span> 교회는 그의 몸이니 만물 안에서 만물을 충만하게 하시는 이의 충만함이니라</div>
+
+        <!-- 에베소서 2장 -->
+        <div class="chapter-title">에베소서 2장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그는 허물과 죄로 죽었던 너희를 살리셨도다</div>
+        <div class="verse"><span class="verse-num">2</span> 그 때에 너희는 그 가운데서 행하여 이 세상 풍조를 따르고 공중의 권세 잡은 자를 따랐으니 곧 지금 불순종의 아들들 가운데서 역사하는 영이라</div>
+        <div class="verse"><span class="verse-num">3</span> 전에는 우리도 다 그 가운데서 우리 육체의 욕심을 따라 지내며 육체와 마음의 원하는 것을 하여 다른 이들과 같이 본질상 진노의 자녀이었더니</div>
+        <div class="verse"><span class="verse-num">4</span> 긍휼이 풍성하신 하나님이 우리를 사랑하신 그 큰 사랑을 인하여</div>
+        <div class="verse"><span class="verse-num">5</span> 허물로 죽은 우리를 그리스도와 함께 살리셨고 (너희는 은혜로 구원을 받은 것이라)</div>
+        <div class="verse"><span class="verse-num">6</span> 또 함께 일으키사 그리스도 예수 안에서 함께 하늘에 앉히시니</div>
+        <div class="verse"><span class="verse-num">7</span> 이는 그리스도 예수 안에서 우리에게 자비하심으로써 그 은혜의 지극히 풍성함을 오는 여러 세대에 나타내려 하심이라</div>
+        <div class="verse"><span class="verse-num">8</span> 너희는 그 은혜에 의하여 믿음으로 말미암아 구원을 받았으니 이것은 너희에게서 난 것이 아니요 하나님의 선물이라</div>
+        <div class="verse"><span class="verse-num">9</span> 행위에서 난 것이 아니니 이는 누구든지 자랑하지 못하게 함이라</div>
+        <div class="verse"><span class="verse-num">10</span> 우리는 그가 만드신 바라 그리스도 예수 안에서 선한 일을 위하여 지으심을 받은 자니 이 일은 하나님이 전에 예비하사 우리로 그 가운데서 행하게 하려 하심이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 그러므로 생각하라 너희는 그 때에 육체로는 이방인이요 손으로 육체에 행한 할례를 받은 무리라 칭하는 자들로부터 할례를 받지 않은 무리라 칭함을 받는 자들이라</div>
+        <div class="verse"><span class="verse-num">12</span> 그 때에 너희는 그리스도 밖에 있었고 이스라엘 나라 밖의 사람이라 약속의 언약들에 대하여는 외인이요 세상에서 소망이 없고 하나님도 없는 자이더니</div>
+        <div class="verse"><span class="verse-num">13</span> 이제는 전에 멀리 있던 너희가 그리스도 예수 안에서 그리스도의 피로 가까워졌느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 그는 우리의 화평이신지라 둘로 하나를 만드사 원수 된 것 곧 중간에 막힌 담을 자기 육체로 허시고</div>
+        <div class="verse"><span class="verse-num">15</span> 법조문으로 된 계명의 율법을 폐하셨으니 이는 이 둘로 자기 안에서 한 새 사람을 지어 화평하게 하시고</div>
+        <div class="verse"><span class="verse-num">16</span> 또 십자가로 이 둘을 한 몸으로 하나님과 화목하게 하려 하심이라 원수 된 것을 십자가로 소멸하시고</div>
+        <div class="verse"><span class="verse-num">17</span> 또 오셔서 먼 데 있는 너희에게 평안을 전하시고 가까운 데 있는 자들에게 평안을 전하셨으니</div>
+        <div class="verse"><span class="verse-num">18</span> 이는 그로 말미암아 우리 둘이 한 성령 안에서 아버지께 나아감을 얻게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">19</span> 그러므로 이제부터 너희는 외인도 아니요 나그네도 아니요 오직 성도들과 동일한 시민이요 하나님의 권속이라</div>
+        <div class="verse"><span class="verse-num">20</span> 너희는 사도들과 선지자들의 터 위에 세우심을 입은 자라 그리스도 예수께서 친히 모퉁잇돌이 되셨느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 그의 안에서 건물마다 서로 연결하여 주 안에서 성전이 되어 가고</div>
+        <div class="verse"><span class="verse-num">22</span> 너희도 성령 안에서 하나님이 거하실 처소가 되기 위하여 그리스도 예수 안에서 함께 지어져 가느니라</div>
+
+        <!-- 에베소서 3장 -->
+        <div class="chapter-title">에베소서 3장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이러므로 그리스도 예수의 일로 너희 이방인을 위하여 갇힌 자 된 나 바울이 말하거니와</div>
+        <div class="verse"><span class="verse-num">2</span> 너희를 위하여 내게 주신 하나님의 그 은혜의 경륜을 너희가 들었을 터이라</div>
+        <div class="verse"><span class="verse-num">3</span> 곧 계시로 내게 비밀을 알게 하신 것은 내가 먼저 간단히 기록함과 같으니</div>
+        <div class="verse"><span class="verse-num">4</span> 그것을 읽으면 내가 그리스도의 비밀을 깨달은 것을 너희가 알 수 있으리라</div>
+        <div class="verse"><span class="verse-num">5</span> 이제 그의 거룩한 사도들과 선지자들에게 성령으로 나타내신 것 같이 다른 세대에서는 사람의 아들들에게 알리지 아니하셨으니</div>
+        <div class="verse"><span class="verse-num">6</span> 이는 이방인들이 복음으로 말미암아 그리스도 예수 안에서 함께 상속자가 되고 함께 지체가 되고 함께 약속에 참여하는 자가 됨이라</div>
+        <div class="verse"><span class="verse-num">7</span> 이 복음을 위하여 그의 능력이 역사하시는 대로 내게 주신 하나님의 은혜의 선물을 따라 내가 일꾼이 되었노라</div>
+        <div class="verse"><span class="verse-num">8</span> 모든 성도 중에 지극히 작은 자보다 더 작은 나에게 이 은혜를 주신 것은 측량할 수 없는 그리스도의 풍성함을 이방인에게 전하게 하시고</div>
+        <div class="verse"><span class="verse-num">9</span> 영원부터 만물을 창조하신 하나님 속에 감추어졌던 비밀의 경륜이 어떠한 것을 드러내게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">10</span> 이는 이제 교회로 말미암아 하늘에 있는 통치자들과 권세들에게 하나님의 각종 지혜를 알게 하려 하심이니</div>
+        <div class="verse"><span class="verse-num">11</span> 곧 영원부터 우리 주 그리스도 예수 안에서 예정하신 뜻대로 하신 것이라</div>
+        <div class="verse"><span class="verse-num">12</span> 우리가 그 안에서 그를 믿음으로 말미암아 담대함과 확신을 가지고 하나님께 나아감을 얻느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그러므로 너희에게 구하노니 너희를 위한 나의 여러 환난에 대하여 낙심하지 말라 이는 너희의 영광이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 이러므로 내가 하늘과 땅에 있는 각 족속에게</div>
+        <div class="verse"><span class="verse-num">15</span> 이름을 주신 아버지 앞에 무릎을 꿇고 비노니</div>
+        <div class="verse"><span class="verse-num">16</span> 그의 영광의 풍성함을 따라 그의 성령으로 말미암아 너희 속사람을 능력으로 강건하게 하시오며</div>
+        <div class="verse"><span class="verse-num">17</span> 믿음으로 말미암아 그리스도께서 너희 마음에 계시게 하시옵고 너희가 사랑 가운데서 뿌리가 박히고 터가 굳어져서</div>
+        <div class="verse"><span class="verse-num">18</span> 능히 모든 성도와 함께 지식에 넘치는 그리스도의 사랑을 알고</div>
+        <div class="verse"><span class="verse-num">19</span> 그 너비와 길이와 높이와 깊이가 어떠함을 깨달아 하나님의 모든 충만하신 것으로 너희에게 충만하게 하시기를 구하노라</div>
+        <div class="verse"><span class="verse-num">20</span> 우리 가운데서 역사하시는 능력대로 우리가 구하거나 생각하는 모든 것에 더 넘치도록 능히 하실 이에게</div>
+        <div class="verse"><span class="verse-num">21</span> 교회 안에서와 그리스도 예수 안에서 영광이 대대로 영원무궁하기를 원하노라 아멘</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 342</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 342</h1>
+        <p class="sub-title">찬송가 405장 주의 친절한 팔에 안기세</p>
+        <p class="sub-title">사도행전 27장~28장 — 죄수 바울의 로마 도착</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 405장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1rtk1NONggoK463mnqHNoJpmgL-qzfzlv" alt="찬송가 405장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사도행전 27장~28장<br>'죄수 바울의 로마 도착'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 바울은 로마 시민권을 세 번 사용합니다.</span>
+            바울은 자신의 <strong>로마 시민권을 이용해 황제 재판을 청구함으로</strong> 산헤드린 공회의 위협으로부터 벗어나 가이사랴를 떠나 로마로 가게 됩니다. 만약 이때 바울이 로마 시민권자가 아니었다면 암살단에게 죽임을 당했거나 산헤드린 공회에 의해 스데반처럼 예루살렘에서 돌 처형을 당했을 것입니다.<br><br>
+            바울이 로마 시민권을 사용한 일은 사도행전에 <strong>세 번 기록</strong>되어 있습니다.
+            <div class="quote">
+                <strong>첫 번째,</strong> 빌립보에서 매를 맞고 옥에 갇힌 후 간수와 함께 안전하고자 할 때에 사용했습니다(행 16:37~38).<br>
+                <strong>두 번째,</strong> 예루살렘에서 로마 군대의 천부장에게 채찍질을 당하기 전에 사용했습니다(행 22:24~25).<br>
+                <strong>세 번째,</strong> 가이사랴에서 6차 산헤드린 공회 재판을 피하며 로마 황제에게 재판을 청구할 때 사용했습니다(행 25:9~11).
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 바울과 함께 죄수 이송선을 탄 누가는 가이사랴에서 로마까지의 폭풍 치는 항해를 자세히 기록합니다.</span>
+            바울은 죄수 이송선을 타고 가이사랴를 출발해 로마로 가게 됩니다(행 27:1~2). 죄수 이송선에는 <strong>바울과 누가, 아리스다고</strong> 등이 함께 승선했습니다.<br><br>
+            배가 드디어 가이사랴를 출발해 로마로 가기 위한 중간 도착지인 <strong>그레데 섬의 미항에 도착합니다.</strong> 그레데 섬의 미항에서 바울은 절기상 항해가 위험할 것 같으니 이곳에서 <strong>겨울을 지내고 갈 것을 건의합니다.</strong> 그러나 백부장 율리오는 바울의 말보다 배의 선장과 선주의 의견을 따라 무리하게 배를 출발시킵니다.<br><br>
+            바울의 말대로 항해는 얼마 가지 못해 <strong>유라굴로 광풍을 만나 큰 어려움에 맞닥뜨립니다.</strong> 이는 바울과 함께 죄수 이송선을 탄 누가의 기록입니다.
+            <div class="quote">
+                <strong>"가우다라는 작은 섬 아래로 지나 간신히 거루를 잡아 끌어 올리고 줄을 가지고 선체를 둘러 감고 스르디스에 걸릴까 두려워하여 연장을 내리고 그냥 쫓겨가더니"</strong> (행 27:16~17)
+            </div>
+            이처럼 누가는 폭풍 치는 항해 한복판에서 경험한 사실을 <strong>섬세한 표현으로 실감 나게 기록해 놓았습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 로마 백부장 고넬료는 베드로의 말을 들었고, 로마 백부장 율리오는 바울의 말을 들었습니다.</span>
+            죄수 이송선이 파선될 위험 상황에서 바울은 그 배에 타고 있는 모든 사람에게, 특히 중요 책임자인 <strong>백부장 율리오에게 하나님의 말씀을 전하며 그들을 위로하고 격려합니다</strong>(행 27:23~26).<br><br>
+            그리고 <strong>백부장 율리오가 바울의 말을 신뢰한 덕분에</strong> 바울의 말대로 배는 잃지만,
+            <div class="quote">
+                <strong>배 안에 있던 276명은 한 사람도 빠짐없이 모두 구조됩니다.</strong> (행 27:30~44)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 바울의 로마서를 읽은 로마의 많은 그리스도인이 사도 바울의 로마 도착을 환영합니다.</span>
+            마침내 <strong>로마에 도착한 바울이 로마 교회의 성도들을 만나게 됩니다</strong>(행 28:15). 바울이 고린도에서 써 보낸 로마서를 읽고 바울을 알게 된 로마 성도들이 로마로 바울이 오고 있다는 소식을 듣고, <strong>로마에서 수십 킬로미터 떨어져 있는 압비오 광장, 트레이스타베르네까지 마중을 나갑니다.</strong>
+            <div class="quote">
+                <strong>그들을 보고 바울이 큰 용기를 얻습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : '사도행전 30년'은 '복음 전도'와 '여러 재판'에 관한 기록입니다.</span>
+            누가의 <strong>'사도행전 30년'</strong>에는 예루살렘에서 땅끝까지 하나님 나라 복음 전도를 위한 전도인들의 전도 기록과 함께, 다음과 같은 재판 기록이 실려 있습니다.
+            <div class="quote">
+                <strong>1차~5차 산헤드린 공회 재판</strong><br>
+                <strong>예루살렘 공의회 판결</strong><br>
+                <strong>로마 총독 재판</strong>
+            </div>
+            이 모든 기록은 <strong>예루살렘에서 시작된 복음이 마침내 땅끝 로마에까지 이르게 된 하나님의 놀라운 섭리의 역사</strong>입니다.
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 사도행전 27장~28장 '죄수 바울의 로마 도착'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 사도행전 27장 -->
+        <div class="chapter-title">사도행전 27장 (1~44절)</div>
+        <div class="verse"><span class="verse-num">1</span> 우리가 배를 타고 이달리야에 가기로 작정되매 바울과 다른 죄수 몇 사람을 아구스도대의 백부장 율리오란 사람에게 맡기니</div>
+        <div class="verse"><span class="verse-num">2</span> 아시아 해변 각처로 가려 하는 아드라뭇데노 배에 우리가 올라 항해할새 마게도냐의 데살로니가 사람 아리스다고도 함께 하니라</div>
+        <div class="verse"><span class="verse-num">3</span> 이튿날 시돈에 대니 율리오가 바울을 친절히 대하여 친구들에게 가서 대접 받기를 허락하더니</div>
+        <div class="verse"><span class="verse-num">4</span> 또 거기서 우리가 떠나가다가 맞바람을 피하여 구브로 해안을 의지하고 항해하여</div>
+        <div class="verse"><span class="verse-num">5</span> 길리기아와 밤빌리아 바다를 건너 루기아의 무라 시에 이르러</div>
+        <div class="verse"><span class="verse-num">6</span> 거기서 백부장이 이달리야로 가려 하는 알렉산드리아 배를 만나 우리를 오르게 하니</div>
+        <div class="verse"><span class="verse-num">7</span> 배가 더디 가 여러 날 만에 간신히 니도 맞은편에 이르러 풍세가 더 허락하지 아니하므로 살모네 앞을 지나 그레데 해안을 바람막이로 항해하여</div>
+        <div class="verse"><span class="verse-num">8</span> 간신히 그 연안을 지나 미항이라는 곳에 이르니 라새아 시에서 가깝더라</div>
+        <div class="verse"><span class="verse-num">9</span> 여러 날이 걸려 금식하는 절기가 이미 지났으므로 항해하기가 위태한지라 바울이 그들을 권하여</div>
+        <div class="verse"><span class="verse-num">10</span> 말하되 여러분이여 내가 보니 이번 항해가 하물과 배만 아니라 우리 생명에도 타격과 많은 손해를 끼치리라 하되</div>
+        <div class="verse"><span class="verse-num">11</span> 백부장이 선장과 선주의 말을 바울의 말보다 더 믿더라</div>
+        <div class="verse"><span class="verse-num">12</span> 그 항구가 겨울을 지내기에 불편하므로 거기서 떠나 아무쪼록 뵈닉스에 가서 겨울을 지내자 하는 자가 더 많으니 뵈닉스는 그레데 항구라 한쪽은 서남을, 한쪽은 서북을 향하였더라</div>
+        <div class="verse"><span class="verse-num">13</span> 남풍이 순하게 불매 그들이 뜻을 이룬 줄 알고 닻을 감아 그레데 해변을 끼고 항해하더니</div>
+        <div class="verse"><span class="verse-num">14</span> 얼마 안 되어 섬 가운데로부터 유라굴로라는 광풍이 크게 일어나니</div>
+        <div class="verse"><span class="verse-num">15</span> 배가 밀려 바람을 맞추어 갈 수 없어 가는 대로 두고 쫓겨가다가</div>
+        <div class="verse"><span class="verse-num">16</span> 가우다라는 작은 섬 아래로 지나 간신히 거루를 잡아</div>
+        <div class="verse"><span class="verse-num">17</span> 끌어 올리고 줄을 가지고 선체를 둘러 감고 스르디스에 걸릴까 두려워하여 연장을 내리고 그냥 쫓겨가더니</div>
+        <div class="verse"><span class="verse-num">18</span> 우리가 풍랑으로 심히 애쓰다가 이튿날 사공들이 짐을 바다에 풀어 버리고</div>
+        <div class="verse"><span class="verse-num">19</span> 사흘째 되는 날에 배의 기구를 그들의 손으로 내버리니라</div>
+        <div class="verse"><span class="verse-num">20</span> 여러 날 동안 해도 별도 보이지 아니하고 큰 풍랑이 그대로 있으매 구원의 여망마저 없어졌더라</div>
+        <div class="verse"><span class="verse-num">21</span> 여러 사람이 오래 먹지 못하였으매 바울이 가운데 서서 말하되 여러분이여 내 말을 듣고 그레데에서 떠나지 아니하여 이 타격과 손상을 면하였더라면 좋을 뻔하였느니라</div>
+        <div class="verse"><span class="verse-num">22</span> 내가 너희를 권하노니 이제는 안심하라 너희 중 아무도 생명에는 아무런 손상이 없겠고 오직 배뿐이리라</div>
+        <div class="verse"><span class="verse-num">23</span> 내가 속한 바 곧 내가 섬기는 하나님의 사자가 어제 밤에 내 곁에 서서 말하되</div>
+        <div class="verse"><span class="verse-num">24</span> 바울아 두려워하지 말라 네가 가이사 앞에 서야 하겠고 또 하나님께서 너와 함께 항해하는 자를 다 네게 주셨다 하였으니</div>
+        <div class="verse"><span class="verse-num">25</span> 그러므로 여러분이여 안심하라 나는 내게 말씀하신 그대로 되리라고 하나님을 믿노라</div>
+        <div class="verse"><span class="verse-num">26</span> 그런즉 우리가 반드시 한 섬에 걸리리라 하더라</div>
+        <div class="verse"><span class="verse-num">27</span> 열나흘째 되는 날 밤에 우리가 아드리아 바다에서 이리 저리 쫓겨가다가 자정쯤 되어 사공들이 어느 육지에 가까워지는 줄을 짐작하고</div>
+        <div class="verse"><span class="verse-num">28</span> 물을 재어 보니 스무 길이 되고 조금 가다가 다시 재니 열다섯 길이라</div>
+        <div class="verse"><span class="verse-num">29</span> 암초에 걸릴까 하여 고물로 닻 넷을 내리고 날이 새기를 고대하니라</div>
+        <div class="verse"><span class="verse-num">30</span> 사공들이 도망하고자 하여 이물에서 닻을 내리는 체하고 거룻배를 바다에 내려 놓거늘</div>
+        <div class="verse"><span class="verse-num">31</span> 바울이 백부장과 군인들에게 이르되 이 사람들이 배에 있지 아니하면 너희가 구원을 얻지 못하리라 하니</div>
+        <div class="verse"><span class="verse-num">32</span> 이에 군인들이 거룻줄을 끊어 떼어 버리니라</div>
+        <div class="verse"><span class="verse-num">33</span> 날이 새어 가매 바울이 여러 사람에게 음식 먹기를 권하여 이르되 너희가 기다리고 기다리며 먹지 못하고 주린 지가 오늘까지 열나흘인즉</div>
+        <div class="verse"><span class="verse-num">34</span> 음식 먹기를 권하노니 이것이 너희의 구원을 위하는 것이요 너희 중 머리카락 하나도 잃을 자가 없으리라 하고</div>
+        <div class="verse"><span class="verse-num">35</span> 떡을 가져다가 모든 사람 앞에서 하나님께 축사하고 떼어 먹기를 시작하매</div>
+        <div class="verse"><span class="verse-num">36</span> 그들도 다 안심하고 받아 먹으니</div>
+        <div class="verse"><span class="verse-num">37</span> 배에 있는 우리의 수는 전부 이백칠십육 명이더라</div>
+        <div class="verse"><span class="verse-num">38</span> 배부르게 먹고 밀을 바다에 버려 배를 가볍게 하였더니</div>
+        <div class="verse"><span class="verse-num">39</span> 날이 새매 어느 땅인지 알지 못하나 경사진 해안으로 된 항만이 눈에 띄거늘 배를 거기에 들여다 댈 수 있는가 의논한 후</div>
+        <div class="verse"><span class="verse-num">40</span> 닻을 끊어 바다에 버리는 동시에 키를 풀어 늦추고 돛을 달고 바람에 맞추어 해안을 향하여 들어가다가</div>
+        <div class="verse"><span class="verse-num">41</span> 두 물이 합하여 흐르는 곳을 만나 배를 걸매 이물은 부딪쳐 움직일 수 없이 붙고 고물은 큰 물결에 깨어져 가니</div>
+        <div class="verse"><span class="verse-num">42</span> 군인들은 죄수가 헤엄쳐서 도망할까 하여 그들을 죽이는 것이 좋다 하였으나</div>
+        <div class="verse"><span class="verse-num">43</span> 백부장이 바울을 구원하려 하여 그들의 뜻을 막고 헤엄칠 줄 아는 사람들을 명하여 물에 뛰어내려 먼저 육지에 나가게 하고</div>
+        <div class="verse"><span class="verse-num">44</span> 그 남은 사람들은 널조각 혹은 배 물건에 의지하여 나가게 하니 마침내 사람들이 다 상륙하여 구조되니라</div>
+
+        <!-- 사도행전 28장 -->
+        <div class="chapter-title">사도행전 28장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 우리가 구조된 후에 안즉 그 섬은 멜리데라 하더라</div>
+        <div class="verse"><span class="verse-num">2</span> 비가 오고 날이 차매 원주민들이 우리에게 특별한 동정을 하여 불을 피워 우리를 다 영접하더라</div>
+        <div class="verse"><span class="verse-num">3</span> 바울이 나무 한 묶음을 거두어 불에 넣으니 뜨거움으로 말미암아 독사가 나와 그 손을 물고 있는지라</div>
+        <div class="verse"><span class="verse-num">4</span> 원주민들이 이 짐승이 그 손에 매달려 있음을 보고 서로 말하되 진실로 이 사람은 살인한 자로다 바다에서는 구조를 받았으나 공의가 그를 살지 못하게 함이로다 하더니</div>
+        <div class="verse"><span class="verse-num">5</span> 바울이 그 짐승을 불에 떨어 버리매 조금도 상함이 없더라</div>
+        <div class="verse"><span class="verse-num">6</span> 그들은 그가 붓든지 혹은 갑자기 쓰러져 죽을 줄로 기다렸다가 오래 기다려도 그에게 아무 이상이 없음을 보고 돌이켜 생각하여 말하되 그를 신이라 하더라</div>
+        <div class="verse"><span class="verse-num">7</span> 이 섬에서 가장 높은 사람 보블리오라 하는 이가 그 근처에 토지가 있는지라 그가 우리를 영접하여 사흘이나 친절히 머물게 하더니</div>
+        <div class="verse"><span class="verse-num">8</span> 보블리오의 부친이 열병과 이질에 걸려 누워 있거늘 바울이 들어가서 기도하고 그에게 안수하여 낫게 하매</div>
+        <div class="verse"><span class="verse-num">9</span> 이러므로 섬 가운데 다른 병든 사람들이 와서 고침을 받고</div>
+        <div class="verse"><span class="verse-num">10</span> 후한 예로 우리를 대접하고 떠날 때에 우리 쓸 것을 배에 실었더라</div>
+        <div class="verse"><span class="verse-num">11</span> 석 달 후에 우리가 그 섬에서 겨울을 난 알렉산드리아 배를 타고 떠나니 그 배의 머리 장식은 디오스구로라</div>
+        <div class="verse"><span class="verse-num">12</span> 수라구사에 대고 사흘을 있다가</div>
+        <div class="verse"><span class="verse-num">13</span> 거기서 둘러가서 레기온에 이르러 하루를 지낸 후 남풍이 일어나므로 이튿날 보디올에 이르러</div>
+        <div class="verse"><span class="verse-num">14</span> 거기서 형제들을 만나 그들의 청함을 받아 이레를 함께 머무니라 그래서 우리는 이와 같이 로마로 가니라</div>
+        <div class="verse"><span class="verse-num">15</span> 그 곳 형제들이 우리 소식을 듣고 압비오 광장과 트레이스 타베르네까지 맞으러 오니 바울이 그들을 보고 하나님께 감사하고 담대한 마음을 얻으니라</div>
+        <div class="verse"><span class="verse-num">16</span> 우리가 로마에 들어가니 바울에게는 자기를 지키는 한 군인과 함께 따로 있게 허락하더라</div>
+        <div class="verse"><span class="verse-num">17</span> 사흘 후에 바울이 유대인 중 높은 사람들을 청하여 그들이 모인 후에 이르되 여러분 형제들아 내가 이스라엘 백성이나 우리 조상의 관습을 배척한 일이 없는데 예루살렘에서 로마인의 손에 죄수로 내준 바 되었으니</div>
+        <div class="verse"><span class="verse-num">18</span> 로마인은 나를 심문하여 죽일 죄목이 없으므로 석방하려 하였으나</div>
+        <div class="verse"><span class="verse-num">19</span> 유대인들이 반대하기로 내가 마지 못하여 가이사에게 상소함이요 내 민족을 고발하려는 것이 아니니라</div>
+        <div class="verse"><span class="verse-num">20</span> 이러므로 너희를 보고 함께 이야기하려고 청하였으니 이스라엘의 소망으로 말미암아 내가 이 쇠사슬에 매인 바 되었노라</div>
+        <div class="verse"><span class="verse-num">21</span> 그들이 이르되 우리가 유대에서 네게 대한 편지도 받은 일이 없고 또 형제 중 누가 와서 네게 대하여 좋지 못한 것을 전하든지 이야기한 일도 없느니라</div>
+        <div class="verse"><span class="verse-num">22</span> 이에 우리가 너의 사상이 어떠한가 듣고자 하니 이 파에 대하여는 어디서든지 반대를 받는 줄 알기 때문이라 하더라</div>
+        <div class="verse"><span class="verse-num">23</span> 그들이 날짜를 정하고 그가 유숙하는 집에 많이 오니 바울이 아침부터 저녁까지 강론하여 하나님의 나라를 증언하고 모세의 율법과 선지자의 말을 가지고 예수에 대하여 권하더라</div>
+        <div class="verse"><span class="verse-num">24</span> 그 말을 믿는 사람도 있고 믿지 아니하는 사람도 있어</div>
+        <div class="verse"><span class="verse-num">25</span> 서로 맞지 아니하여 흩어질 때에 바울이 한 말로 이르되 성령이 선지자 이사야를 통하여 너희 조상들에게 말씀하신 것이 옳도다</div>
+        <div class="verse"><span class="verse-num">26</span> 일렀으되 이 백성에게 가서 말하기를 너희가 듣기는 들어도 도무지 깨닫지 못하며 보기는 보아도 도무지 알지 못하는도다</div>
+        <div class="verse"><span class="verse-num">27</span> 이 백성들의 마음이 우둔하여져서 그 귀로는 둔하게 듣고 그 눈은 감았으니 이는 눈으로 보고 귀로 듣고 마음으로 깨달아 돌아오면 내가 고쳐 줄까 함이라 하였으니</div>
+        <div class="verse"><span class="verse-num">28</span> 그런즉 하나님의 이 구원이 이방인에게로 보내어진 줄 알라 그들은 그것을 들으리라 하더라</div>
+        <div class="verse"><span class="verse-num">29</span> (없음)</div>
+        <div class="verse"><span class="verse-num">30</span> 바울이 온 이태를 자기 셋집에 머물면서 자기에게 오는 사람을 다 영접하고</div>
+        <div class="verse"><span class="verse-num">31</span> 하나님의 나라를 전파하며 주 예수 그리스도에 관한 모든 것을 담대하게 거침없이 가르치더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
