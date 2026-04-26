@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 345</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 345</h1>
+        <p class="sub-title">찬송가 94장 주 예수보다 더 귀한 것은 없네</p>
+        <p class="sub-title">빌립보서 1장~4장 — 예수로 충분하다</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 94장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/12VjWuEl3I4ZxAtkB2rOvZWBQM5BaYXSF" alt="찬송가 94장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 빌립보서 1장~4장<br>'예수로 충분하다'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 로마 감옥에 갇혀 있는 바울이 빌립보 성도들에게 주 안에서 항상 기뻐하라고 편지를 보냅니다.</span>
+            바울의 모든 편지처럼 빌립보서 또한 회람 편지로, 빌립보에 사는 모든 성도를 향한 인사로 시작됩니다. 바울은 인사에 이어 <strong>빌립보 교회를 향한 감사를 전합니다</strong>(빌 1:1~5). 바울이 빌립보 교회에 진심 어린 감사를 표현한 것은 <strong>빌립보 교회가 처음부터 지금까지 지속적으로 바울의 사역을 돕고 있기 때문</strong>입니다. 그래서 자신이 빌립보 성도들을 진심으로 사랑하는데 하나님께서 이 일의 증인이시라고 말합니다(빌 1:8).<br><br>
+            바울은 빌립보 교회로 인해 항상 기뻐하며 간구했습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 예수님의 복음이 전파되는 것이 기뻤습니다(빌 1:5).<br>
+                <strong>둘째,</strong> 에바브로디도가 건강을 회복해서 기뻤습니다(빌 2:27~28).<br>
+                <strong>셋째,</strong> 빌립보 교회 성도들이 정성을 다해 연보해 주어 기뻤습니다(빌 4:15).<br>
+                <strong>넷째,</strong> 빌립보 교회가 하나님과 이웃을 생각하고 있는 것이 기뻤습니다(빌 1:11).
+            </div>
+            바울은 빌립보 교회가 가진 사랑에 더하여 지식과 총명이 풍성하기를, 세상 끝 날까지 선을 분별하고 진실하여 허물없기를, <strong>의의 열매가 가득하여 하나님께 영광과 찬송을 돌리기를 기도합니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 바울은 빌립보 성도들에게 예수님의 온유하고 겸손한 마음을 배워 자기를 낮추라고 권면합니다.</span>
+            바울은 빌립보 교회의 목회자인 에바브로디도를 통하여 빌립보 교회의 몇몇 문제점에 대해 듣고 이에 대해 권면합니다. 당시 빌립보 교회에는 <strong>다른 사람들보다 높아지려는 목적으로 주의 일을 하는 성도들</strong>이 있었습니다. 그래서 바울은 빌립보 성도들에게 <strong>다툼과 허영으로 주의 일을 행하지 말고 예수님의 마음을 품고 겸손한 마음으로 하라</strong>고 권면합니다.<br><br>
+            바울은 그리스도 안에서 사는 삶이 어떤 삶인지 말합니다(빌 2:1~4).
+            <div class="quote">
+                <strong>그리스도 안에서 사는 삶</strong>은 권면하는 삶, 사랑의 위로가 있는 삶, 성령의 교제가 있는 삶, 긍휼과 자비가 있는 삶입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 감옥에 갇혀 있는 바울은 자신에게 꼭 필요한 에바브로디도를 곁에 두고 싶으나 빌립보 교회로 다시 보내겠다고 말합니다.</span>
+            바울은 당시 로마에서 황제 재판을 기다리며 가택 연금 상태로 갇혀 있었습니다. 그때 바울 곁에 누가와 디모데가 함께 있었습니다. 그런데 바울은 자신의 곁에 반드시 필요했던 <strong>디모데를 빌립보 교회로 보내겠다</strong>고 말합니다.<br><br>
+            디모데를 빌립보 교회로 보내려는 이유는 다음과 같습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 아픈 에바브로디도로 인해 걱정하고 있는 빌립보 교회를 위로하기 위함이었습니다.<br>
+                <strong>둘째,</strong> 디모데만큼 바울의 사정을 잘 아는 사람이 없기 때문에 디모데가 빌립보 교회에 가서 바울의 사정과 형편을 알리기 위함이었습니다.
+            </div>
+            이어서 바울은 기적적으로 병이 나은 <strong>에바브로디도를 빌립보 교회로 다시 보내겠다</strong>고 말합니다(빌 2:26~27). 빌립보 교회의 목회자인 에바브로디도는 빌립보 교회 성도들이 모은 헌금을 바울에게 전달하고자 로마에 왔다가 병이 들어 거의 죽을 위기에 처했었습니다. 이 일은 빌립보 성도들과 바울을 모두 크게 근심하게 한 일이었습니다.<br><br>
+            그런데 <strong>하나님께서 에바브로디도의 병을 고쳐 주셨습니다.</strong> 이에 바울이 크게 기뻐하며 서둘러 에바브로디도를 다시 빌립보 교회로 돌려보냅니다. 그때 바울이 에바브로디도 편에 빌립보서를 써서 들려보낸 것입니다.
+            <div class="quote">
+                <strong>바울은 갇혀 있는 자신보다 먼저 빌립보 성도들을 생각해 에바브로디도를 빌립보 교회로 보냈습니다. 이것이 성도들을 사랑으로 돌보는 예수님을 닮은 전도자 바울의 마음입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 바울은 빌립보 성도들에게 그리스도 예수를 아는 지식으로 충분하다는 것을 가르칩니다.</span>
+            바울은 빌립보 성도들에게 예수님의 십자가 죽으심과 부활로 인해 자신도 <strong>부활의 소망을 가졌다</strong>고 담대하게 선언합니다. 그러므로 빌립보 성도들에게 함께 <strong>'푯대를 향하여 달려가자'</strong>고 말합니다(빌 3:13~14).<br><br>
+            바울은 우리의 진정한 시민권은 <strong>하늘에 있음</strong>을 선언합니다. 그러므로 땅의 일을 생각하는 자들을 본받지 말고 바울 자신을 본받으라는 간절한 마음을 전합니다(빌 3:17~21).<br><br>
+            바울이 이렇게 자신 있고 당당하게 자신을 본받으라고 말한 것은, 바울이 세상에서 가장 소중한 지식을 알고 그 지식을 따르고 있기 때문입니다. 그 소중한 지식은 바로 <strong>'예수 그리스도를 아는 지식'</strong>입니다.
+            <div class="quote">
+                <strong>"세상의 모든 지식은 '예수 그리스도를 아는 지식'에 비하면 배설물에 지나지 않는 것이다"</strong> (빌 3:7~9)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 사도 바울의 기쁜 마음이 빌립보 교회에 더욱 큰 기쁨으로 전달됩니다.</span>
+            바울은 사랑하는 빌립보 성도들에게 이렇게 권면합니다(빌 4:1~9).
+            <div class="quote">
+                <strong>첫째,</strong> 주 안에서 한마음을 품으라고 권면합니다.<br>
+                <strong>둘째,</strong> 항상 기뻐하라고 권면합니다.<br>
+                <strong>셋째,</strong> 관용하라고 권면합니다.<br>
+                <strong>넷째,</strong> 하나님께 기도하라고 권면합니다.<br>
+                <strong>다섯째,</strong> 많은 덕을 행하라고 권면합니다.<br>
+                <strong>여섯째,</strong> 그동안의 가르침을 상기하고 지켜 행하라고 권면합니다.
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 빌립보서 1장~4장 '예수로 충분하다'를 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 빌립보서 1장 -->
+        <div class="chapter-title">빌립보서 1장 (1~30절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그리스도 예수의 종 바울과 디모데는 그리스도 예수 안에서 빌립보에 사는 모든 성도와 또한 감독들과 집사들에게 편지하노니</div>
+        <div class="verse"><span class="verse-num">2</span> 하나님 우리 아버지와 주 예수 그리스도로부터 은혜와 평강이 너희에게 있을지어다</div>
+        <div class="verse"><span class="verse-num">3</span> 내가 너희를 생각할 때마다 나의 하나님께 감사하며</div>
+        <div class="verse"><span class="verse-num">4</span> 간구할 때마다 너희 무리를 위하여 기쁨으로 항상 간구함은</div>
+        <div class="verse"><span class="verse-num">5</span> 너희가 첫날부터 이제까지 복음을 위한 일에 참여하고 있기 때문이라</div>
+        <div class="verse"><span class="verse-num">6</span> 너희 안에서 착한 일을 시작하신 이가 그리스도 예수의 날까지 이루실 줄을 우리는 확신하노라</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 너희 무리를 위하여 이와 같이 생각하는 것이 마땅하니 이는 너희가 내 마음에 있음이며 나의 매임과 복음을 변명함과 확정함에 너희가 다 나와 함께 은혜에 참여한 자가 됨이라</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 예수 그리스의 심장으로 너희 무리를 얼마나 사모하는지 하나님이 내 증인이시니라</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 기도하노라 너희 사랑을 지식과 모든 총명으로 점점 더 풍성하게 하사</div>
+        <div class="verse"><span class="verse-num">10</span> 너희로 지극히 선한 것을 분별하며 또 진실하여 허물 없이 그리스도의 날까지 이르고</div>
+        <div class="verse"><span class="verse-num">11</span> 예수 그리스도로 말미암아 의의 열매가 가득하여 하나님의 영광과 찬송이 되기를 원하노라</div>
+        <div class="verse"><span class="verse-num">12</span> 형제들아 내가 당한 일이 도리어 복음 전파에 진전이 된 줄을 너희가 알기를 원하노라</div>
+        <div class="verse"><span class="verse-num">13</span> 이러므로 나의 매임이 그리스도 안에서 모든 시위대 안과 그 밖의 모든 사람에게 나타났으니</div>
+        <div class="verse"><span class="verse-num">14</span> 형제 중 다수가 나의 매임으로 말미암아 주 안에서 신뢰함으로 겁 없이 하나님의 말씀을 더욱 담대히 전하게 되었느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 어떤 이들은 투기와 분쟁으로, 어떤 이들은 착한 뜻으로 그리스도를 전파하나니</div>
+        <div class="verse"><span class="verse-num">16</span> 이들은 내가 복음을 변증하기 위하여 세우심을 받은 줄 알고 사랑으로 하나</div>
+        <div class="verse"><span class="verse-num">17</span> 그들은 나의 매임에 괴로움을 더하게 할 줄로 생각하여 순수하지 못하게 다툼으로 그리스도를 전파하느니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그러면 무엇이냐 겉치레로 하나 참으로 하나 무슨 방도로 하든지 전파되는 것은 그리스도니 이로써 나는 기뻐하고 또한 기뻐하리라</div>
+        <div class="verse"><span class="verse-num">19</span> 이것이 너희의 간구와 예수 그리스도의 성령의 도우심으로 나를 구원에 이르게 할 줄 아는 고로</div>
+        <div class="verse"><span class="verse-num">20</span> 나의 간절한 기대와 소망을 따라 아무 일에든지 부끄러워하지 아니하고 지금도 전과 같이 온전히 담대하여 살든지 죽든지 내 몸에서 그리스도가 존귀하게 되게 하려 하나니</div>
+        <div class="verse"><span class="verse-num">21</span> 이는 내게 사는 것이 그리스도니 죽는 것도 유익함이라</div>
+        <div class="verse"><span class="verse-num">22</span> 그러나 만일 육신으로 사는 이것이 내 일의 열매일진대 무엇을 택해야 할는지 나는 알지 못하노라</div>
+        <div class="verse"><span class="verse-num">23</span> 내가 그 둘 사이에 끼었으니 차라리 세상을 떠나서 그리스도와 함께 있는 것이 훨씬 더 좋은 일이라 그렇게 하고 싶으나</div>
+        <div class="verse"><span class="verse-num">24</span> 내가 육신으로 있는 것이 너희를 위하여 더 유익하리라</div>
+        <div class="verse"><span class="verse-num">25</span> 내가 살 것과 너희 믿음의 진보와 기쁨을 위하여 너희 무리와 함께 거할 이것을 확실히 아노니</div>
+        <div class="verse"><span class="verse-num">26</span> 내가 다시 너희와 같이 있음으로 그리스도 예수 안에서 너희 자랑이 나로 말미암아 풍성하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">27</span> 오직 너희는 그리스도의 복음에 합당하게 생활하라 이는 내가 너희에게 가 보나 떠나 있으나 너희가 한마음으로 서서 한 뜻으로 복음의 신앙을 위하여 협력하는 것과</div>
+        <div class="verse"><span class="verse-num">28</span> 무슨 일에든지 대적하는 자들 때문에 두려워하지 아니하는 이 일을 듣고자 함이라 이것이 그들에게는 멸망의 증거요 너희에게는 구원의 증거니 이는 하나님께로부터 난 것이라</div>
+        <div class="verse"><span class="verse-num">29</span> 그리스도를 위하여 너희에게 은혜를 주신 것은 다만 그를 믿을 뿐 아니라 또한 그를 위하여 고난도 받게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">30</span> 너희에게도 그와 같은 싸움이 있으니 너희가 내 안에서 본 바요 이제도 내 안에서 듣는 바니라</div>
+
+        <!-- 빌립보서 2장 -->
+        <div class="chapter-title">빌립보서 2장 (1~30절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그러므로 그리스도 안에 무슨 권면이나 사랑의 무슨 위로나 성령의 무슨 교제나 긍휼이나 자비가 있거든</div>
+        <div class="verse"><span class="verse-num">2</span> 마음을 같이하여 같은 사랑을 가지고 뜻을 합하며 한마음을 품어</div>
+        <div class="verse"><span class="verse-num">3</span> 아무 일에든지 다툼이나 허영으로 하지 말고 오직 겸손한 마음으로 각각 자기보다 남을 낫게 여기고</div>
+        <div class="verse"><span class="verse-num">4</span> 각각 자기 일을 돌볼뿐더러 또한 각각 다른 사람들의 일을 돌보아 나의 기쁨을 충만하게 하라</div>
+        <div class="verse"><span class="verse-num">5</span> 너희 안에 이 마음을 품으라 곧 그리스도 예수의 마음이니</div>
+        <div class="verse"><span class="verse-num">6</span> 그는 근본 하나님의 본체시나 하나님과 동등됨을 취할 것으로 여기지 아니하시고</div>
+        <div class="verse"><span class="verse-num">7</span> 오히려 자기를 비워 종의 형체를 가지사 사람들과 같이 되셨고</div>
+        <div class="verse"><span class="verse-num">8</span> 사람의 모양으로 나타나사 자기를 낮추시고 죽기까지 복종하셨으니 곧 십자가에 죽으심이라</div>
+        <div class="verse"><span class="verse-num">9</span> 이러므로 하나님이 그를 지극히 높여 모든 이름 위에 뛰어난 이름을 주사</div>
+        <div class="verse"><span class="verse-num">10</span> 하늘에 있는 자들과 땅에 있는 자들과 땅 아래에 있는 자들로 모든 무릎을 예수의 이름에 꿇게 하시고</div>
+        <div class="verse"><span class="verse-num">11</span> 모든 입으로 예수 그리스도를 주라 시인하여 하나님 아버지께 영광을 돌리게 하셨느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그러므로 나의 사랑하는 자들아 너희가 나 있을 때뿐 아니라 더욱 지금 나 없을 때에도 항상 복종하여 두렵고 떨림으로 너희 구원을 이루라</div>
+        <div class="verse"><span class="verse-num">13</span> 너희 안에서 행하시는 이는 하나님이시니 자기의 기쁘신 뜻을 위하여 너희에게 소원을 두고 행하게 하시나니</div>
+        <div class="verse"><span class="verse-num">14</span> 모든 일을 원망과 시비가 없이 하라</div>
+        <div class="verse"><span class="verse-num">15</span> 이는 너희가 흠이 없고 순전하여 어그러지고 거스르는 세대 가운데서 하나님의 흠 없는 자녀로 세상에서 그들 가운데 빛들로 나타내며</div>
+        <div class="verse"><span class="verse-num">16</span> 생명의 말씀을 밝혀 나의 달음질이 헛되지 아니하고 수고도 헛되지 아니함으로 그리스도의 날에 내가 자랑할 것이 있게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">17</span> 만일 너희 믿음의 제물과 섬김 위에 내가 나를 전제로 드릴지라도 나는 기뻐하고 너희 무리와 함께 기뻐하리니</div>
+        <div class="verse"><span class="verse-num">18</span> 이와 같이 너희도 기뻐하고 나와 함께 기뻐하라</div>
+        <div class="verse"><span class="verse-num">19</span> 내가 디모데를 속히 너희에게 보내기를 주 안에서 바람은 너희의 사정을 앎으로 안위를 받으려 함이니</div>
+        <div class="verse"><span class="verse-num">20</span> 이는 뜻을 같이하여 너희 사정을 진실히 생각할 자가 이밖에 내게 없음이라</div>
+        <div class="verse"><span class="verse-num">21</span> 그들이 다 자기 일을 구하고 그리스도 예수의 일을 구하지 아니하되</div>
+        <div class="verse"><span class="verse-num">22</span> 디모데의 연단을 너희가 아나니 자식이 아버지에게 함같이 나와 함께 복음을 위하여 수고하였느니라</div>
+        <div class="verse"><span class="verse-num">23</span> 그러므로 내가 내 일이 어떻게 될지를 보아서 곧 이 사람을 보내기를 바라고</div>
+        <div class="verse"><span class="verse-num">24</span> 나도 속히 가게 될 것을 주 안에서 확신하노라</div>
+        <div class="verse"><span class="verse-num">25</span> 그러나 에바브로디도를 너희에게 보내는 것이 필요한 줄로 생각하노니 그는 나의 형제요 함께 수고하고 함께 군사 된 자요 너희 사자로 내가 쓸 것을 돕는 자라</div>
+        <div class="verse"><span class="verse-num">26</span> 그가 너희 무리를 간절히 사모하고 자기가 병든 것을 너희가 들은 줄을 알고 심히 근심한지라</div>
+        <div class="verse"><span class="verse-num">27</span> 그가 병들어 죽게 되었으나 하나님이 그를 긍휼히 여기셨고 그뿐 아니라 또 나를 긍휼히 여기사 내 근심 위에 근심을 면하게 하셨느니라</div>
+        <div class="verse"><span class="verse-num">28</span> 그러므로 내가 더욱 급히 그를 보낸 것은 너희로 그를 다시 보고 기뻐하게 하며 내 근심도 덜려 함이니라</div>
+        <div class="verse"><span class="verse-num">29</span> 이러므로 너희가 주 안에서 모든 기쁨으로 그를 영접하고 또 이와 같은 자들을 존귀히 여기라</div>
+        <div class="verse"><span class="verse-num">30</span> 그가 그리스도의 일을 위하여 죽기에 이르러도 자기 목숨을 돌보지 아니한 것은 나를 섬기는 너희의 일에 부족함을 채우려 함이니라</div>
+
+        <!-- 빌립보서 3장 -->
+        <div class="chapter-title">빌립보서 3장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 끝으로 나의 형제들아 주 안에서 기뻐하라 너희에게 같은 말을 쓰는 것이 내게는 수고로움이 없고 너희에게는 안전하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 개들을 삼가고 행악하는 자들을 삼가고 몸을 상해하는 일을 삼가라</div>
+        <div class="verse"><span class="verse-num">3</span> 하나님의 성령으로 봉사하며 그리스도 예수로 자랑하고 육체를 신뢰하지 아니하는 우리가 곧 할례파라</div>
+        <div class="verse"><span class="verse-num">4</span> 그러나 나도 육체를 신뢰할 만하며 만일 누구든지 다른 이가 육체를 신뢰할 것이 있는 줄로 생각하면 나는 더욱 그러하리니</div>
+        <div class="verse"><span class="verse-num">5</span> 나는 팔일 만에 할례를 받고 이스라엘 족속이요 베냐민 지파요 히브리인 중의 히브리인이요 율법으로는 바리새인이요</div>
+        <div class="verse"><span class="verse-num">6</span> 열심으로는 교회를 박해하고 율법의 의로는 흠이 없는 자라</div>
+        <div class="verse"><span class="verse-num">7</span> 그러나 무엇이든지 내게 유익하던 것을 내가 그리스도를 위하여 다 해로 여길뿐더러</div>
+        <div class="verse"><span class="verse-num">8</span> 또한 모든 것을 해로 여김은 내 주 그리스도 예수를 아는 지식이 가장 고상하기 때문이라 내가 그를 위하여 모든 것을 잃어버리고 배설물로 여김은 그리스도를 얻고</div>
+        <div class="verse"><span class="verse-num">9</span> 그 안에서 발견되려 함이니 내가 가진 의는 율법에서 난 것이 아니요 오직 그리스도를 믿음으로 말미암은 것이니 곧 믿음으로 하나님께로부터 난 의라</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 그리스도와 그 부활의 권능과 그 고난에 참여함을 알고자 하여 그의 죽으심을 본받아</div>
+        <div class="verse"><span class="verse-num">11</span> 어떻게 해서든지 죽은 자 가운데서 부활에 이르려 하노니</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 이미 얻었다 함도 아니요 온전히 이루었다 함도 아니라 오직 내가 그리스도 예수께 잡힌 바 된 그것을 잡으려고 달려가노라</div>
+        <div class="verse"><span class="verse-num">13</span> 형제들아 나는 아직 내가 잡은 줄로 여기지 아니하고 오직 한 일 즉 뒤에 있는 것은 잊어버리고 앞에 있는 것을 잡으려고</div>
+        <div class="verse"><span class="verse-num">14</span> 푯대를 향하여 그리스도 예수 안에서 하나님이 위에서 부르신 부름의 상을 위하여 달려가노라</div>
+        <div class="verse"><span class="verse-num">15</span> 그러므로 누구든지 우리 온전히 이룬 자들은 이렇게 생각할지니 만일 어떤 일에 너희가 달리 생각하면 하나님이 이것도 너희에게 나타내시리라</div>
+        <div class="verse"><span class="verse-num">16</span> 오직 우리가 어디까지 이르렀든지 그대로 행할 것이라</div>
+        <div class="verse"><span class="verse-num">17</span> 형제들아 너희는 함께 나를 본받으라 그리고 너희가 우리를 본받은 것처럼 그와 같이 행하는 자들을 눈여겨 보라</div>
+        <div class="verse"><span class="verse-num">18</span> 내가 여러 번 너희에게 말하였거니와 이제도 눈물을 흘리며 말하노니 여러 사람들이 그리스도의 십자가의 원수로 행하느니라</div>
+        <div class="verse"><span class="verse-num">19</span> 그들의 마침은 멸망이요 그들의 신은 배요 그 영광은 그들의 부끄러움에 있고 땅의 일을 생각하는 자라</div>
+        <div class="verse"><span class="verse-num">20</span> 그러나 우리의 시민권은 하늘에 있는지라 거기로부터 구원하는 자 곧 주 예수 그리스도를 기다리노니</div>
+        <div class="verse"><span class="verse-num">21</span> 그는 만물을 자기에게 복종하게 하실 수 있는 자의 역사로 우리의 낮은 몸을 자기 영광의 몸의 형체와 같이 변하게 하시리라</div>
+
+        <!-- 빌립보서 4장 -->
+        <div class="chapter-title">빌립보서 4장 (1~23절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그러므로 나의 사랑하고 사모하는 형제들, 나의 기쁨이요 면류관인 사랑하는 자들아 이와 같이 주 안에 서라</div>
+        <div class="verse"><span class="verse-num">2</span> 내가 유오디아를 권하고 순두게를 권하노니 주 안에서 같은 마음을 품으라</div>
+        <div class="verse"><span class="verse-num">3</span> 또 참으로 나와 멍에를 같이한 네게 구하노니 복음에 나와 함께 힘쓰던 저 여인들을 돕고 또한 글레멘드와 그 외에 나의 동역자들을 도우라 그 이름들이 생명책에 있느니라</div>
+        <div class="verse"><span class="verse-num">4</span> 주 안에서 항상 기뻐하라 내가 다시 말하노니 기뻐하라</div>
+        <div class="verse"><span class="verse-num">5</span> 너희 관용을 모든 사람에게 알게 하라 주께서 가까우시니라</div>
+        <div class="verse"><span class="verse-num">6</span> 아무 것도 염려하지 말고 다만 모든 일에 기도와 간구로, 너희 구할 것을 감사함으로 하나님께 아뢰라</div>
+        <div class="verse"><span class="verse-num">7</span> 그리하면 모든 지각에 뛰어난 하나님의 평강이 그리스도 예수 안에서 너희 마음과 생각을 지키시리라</div>
+        <div class="verse"><span class="verse-num">8</span> 끝으로 형제들아 무엇에든지 참되며 무엇에든지 경건하며 무엇에든지 옳으며 무엇에든지 정결하며 무엇에든지 사랑 받을 만하며 무엇에든지 칭찬 받을 만하며 무슨 덕이 있든지 무슨 기림이 있든지 이것들을 생각하라</div>
+        <div class="verse"><span class="verse-num">9</span> 너희는 내게 배우고 받고 듣고 본 바를 행하라 그리하면 평강의 하나님이 너희와 함께 계시리라</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 주 안에서 크게 기뻐함은 너희가 나를 생각하던 것이 이제 다시 싹이 남이니 너희가 또한 이를 위하여 생각은 하였으나 기회가 없었느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 궁핍하므로 말하는 것이 아니니라 어떠한 형편에든지 나는 자족하기를 배웠노니</div>
+        <div class="verse"><span class="verse-num">12</span> 나는 비천에 처할 줄도 알고 풍부에 처할 줄도 알아 모든 일 곧 배부름과 배고픔과 풍부와 궁핍에도 처할 줄 아는 일체의 비결을 배웠노라</div>
+        <div class="verse"><span class="verse-num">13</span> 내게 능력 주시는 자 안에서 내가 모든 것을 할 수 있느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 그러나 너희가 내 괴로움에 함께 참여하였으니 잘하였도다</div>
+        <div class="verse"><span class="verse-num">15</span> 빌립보 사람들아 너희도 알거니와 복음의 시초에 내가 마게도냐를 떠날 때에 주고 받는 내 일에 참여한 교회가 너희 외에 아무도 없었느니라</div>
+        <div class="verse"><span class="verse-num">16</span> 데살로니가에 있을 때에도 너희가 한 번뿐 아니라 두 번이나 나의 쓸 것을 보내었도다</div>
+        <div class="verse"><span class="verse-num">17</span> 내가 선물을 구함이 아니요 오직 너희에게 유익하도록 풍성한 열매를 구함이라</div>
+        <div class="verse"><span class="verse-num">18</span> 내게는 모든 것이 있고 또 풍부한지라 에바브로디도 편에 너희가 준 것을 받으므로 내가 풍족하니 이는 받으실 만한 향기로운 제물이요 하나님을 기쁘시게 한 것이라</div>
+        <div class="verse"><span class="verse-num">19</span> 나의 하나님이 그리스도 예수 안에서 영광 가운데 그 풍성한 대로 너희 모든 쓸 것을 채우시리라</div>
+        <div class="verse"><span class="verse-num">20</span> 하나님 곧 우리 아버지께 세세 무궁하도록 영광을 돌릴지어다 아멘</div>
+        <div class="verse"><span class="verse-num">21</span> 그리스도 예수 안에 있는 성도에게 각각 문안하라 나와 함께 있는 형제들이 너희에게 문안하고</div>
+        <div class="verse"><span class="verse-num">22</span> 모든 성도들이 너희에게 문안하되 특히 가이사의 집 사람들 중 몇이니라</div>
+        <div class="verse"><span class="verse-num">23</span> 주 예수 그리스도의 은혜가 너희 심령에 있을지어다</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

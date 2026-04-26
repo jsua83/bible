@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 346</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 346</h1>
+        <p class="sub-title">찬송가 288장 예수를 나의 구주 삼고</p>
+        <p class="sub-title">골로새서 1장~4장 — 하나님의 비밀, 예수</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 288장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1Ko3DvEkvkhIAC9AmlUd4bqEFPyrdTw_U" alt="찬송가 288장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 골로새서 1장~4장<br>'하나님의 비밀, 예수'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 사도 바울의 골로새서와 빌레몬서는 마치 동전의 양면과 같습니다.</span>
+            바울은 골로새 교회에 있는 아킵보와 빌레몬에게 골로새서와 빌레몬서, <strong>두 통의 편지를 두기고를 통해 동시에 보냅니다.</strong> 바울이 골로새 교회에 두 편지를 동시에 보낸 이유는 그 내용이 <strong>마치 동전의 양면과 같기 때문</strong>입니다.
+            <div class="quote">
+                <strong>골로새서</strong>는 '기독론' 곧 예수님은 누구이신지를 다룬 편지입니다.<br>
+                <strong>빌레몬서</strong>는 예수님 안에서 그리스도인이 서로 형제임을 가르치는 골로새서의 기반 위에, 제국의 노예가 하나님 나라의 형제가 되는 <strong>'기적' 이야기</strong>를 다루고 있습니다.
+            </div>
+            그러므로 골로새서와 빌레몬서, <strong>두 권의 책은 한 권의 내용과도 같습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 바울은 하나님의 비밀인 예수 그리스도 안에 모든 보화가 감추어져 있다고 증언합니다.</span>
+            바울은 골로새 성도들에게 골로새 교회에 침투해 있는 <strong>헛된 철학 사상들을 경계할 것</strong>을 가르치면서 예수님이 어떤 분이신지를 가르칩니다. 성경에서 '예수님이 누구이신가'에 대한 주제는 대표적으로 요한복음, 골로새서, 히브리서를 통해 나타나 있습니다.<br><br>
+            바울은 골로새서를 통해 예수 그리스도를 다음과 같이 소개합니다.
+            <div class="quote">
+                <strong>첫째,</strong> 예수 그리스도는 모든 것들 중에서 가장 뛰어나신 분입니다(골 1:13~17).<br>
+                <strong>둘째,</strong> 예수 그리스도는 교회의 머리가 되시는 분입니다(골 1:18~20).<br>
+                <strong>셋째,</strong> 예수 그리스도는 하나님의 비밀입니다(골 2:2~3).
+            </div>
+            그러므로 골로새서에 기록된 예수 그리스도는 이런 분이십니다.
+            <div class="quote">
+                보이지 아니하는 <strong>하나님의 형상</strong>(1:15) / 모든 피조물보다 <strong>먼저 나신 분</strong>(1:15)<br>
+                몸 된 교회의 <strong>머리가 되심</strong>(1:18) / 비밀의 영광 곧 <strong>영광의 소망</strong>(1:27)<br>
+                <strong>하나님의 비밀</strong>(2:2) / 모든 통치자와 권세의 <strong>머리가 되심</strong>(2:10)<br>
+                <strong>우리의 생명</strong>(3:4) / <strong>만유의 주</strong>(3:11)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 바울은 골로새 성도들에게 예수 그리스도를 진심으로 알고 깨달아 어떤 것에도 흔들리지 말라고 권면합니다.</span>
+            바울은 아직 직접 대면하지 못한 골로새 성도들에게 자신의 사랑과 관심을 표합니다. 그리고 골로새 교회에게 <strong>예수 그리스도와 하나님의 비밀을 깨달아 어떤 것에도 흔들리지 말라</strong>고 권면합니다(골 2:1~5).<br><br>
+            하나님께서는 예수 그리스도 안에 모든 것을 다 담으셨습니다. 그러므로 바울은 <strong>'예수 그리스도를 아는 지식'</strong>으로 하나님께서 주신 모든 지혜와 보화를 다 알 수 있으므로, 이 사실을 깨달으면 <strong>어떤 사상이나 어떤 이단에게도 속지 않을 것</strong>이라고 가르쳐 줍니다.<br><br>
+            다시 말해 바울의 골로새 교회에 대한 권면은 이것입니다(골 2:6~7).
+            <div class="quote">
+                <strong>첫째,</strong> '그리스도 안에서 행하라.'<br>
+                <strong>둘째,</strong> '믿음으로 굳게 서라.'<br>
+                <strong>셋째,</strong> '감사하라.'
+            </div>
+            우리의 모든 삶은 그리스도와 함께 연결되어 이루어져야 합니다. 그래서 바울이 말한 <strong>"그 안에는, 그 안에서"</strong>(골 2:3, 6, 9, 10, 11)라는 표현은 참으로 적절합니다.
+            <div class="quote">
+                <strong>예수 그리스도 안에서 살면 그 어떤 것도 성도들을 가로막을 수 없습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 바울은 새사람을 입은 골로새 성도들을 향해 위의 것을 찾으라고 권면합니다.</span>
+            바울은 새사람을 입은 골로새 성도들에게 사랑을 담아 권면합니다(골 3:1~17).
+            <div class="quote">
+                <strong>첫째,</strong> 위의 것을 생각하라고 권면합니다.<br>
+                <strong>둘째,</strong> 버려야 할 것들을 버리라고 권면합니다.<br>
+                — <strong>옛사람의 마음</strong>: 음란, 부정, 사욕, 정욕, 탐심, 우상숭배<br>
+                — <strong>옛사람의 행동</strong>: 분함, 노여움, 악의, 비방, 부끄러운 말, 거짓말, 그리고 차별<br>
+                <strong>셋째,</strong> 새사람이 가져야 할 <strong>긍휼, 자비, 겸손, 온유, 오래 참음</strong>으로 옷 입고 서로 용서하며 사랑하고 그리스도의 평강을 가지라고 권면합니다.
+            </div>
+            그리고 <strong>하나님을 찬양하며 감사하라</strong>고 당부합니다. 이어서 바울은 골로새 성도들에게 새사람이 이루는 가정에 대해 권면합니다(골 3:18~4:1). 이는 에베소서 5장과 6장에서 살펴본 권면과 같습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 바울은 골로새 교회에 두기고와 오네시모를 특별히 소개합니다.</span>
+            바울이 골로새서의 전달자로 두기고를 보낸 이유는 <strong>로마에 갇혀 있는 바울의 사정을 전하기 위함</strong>이며, 골로새 성도들의 마음을 위로하기 위함입니다. 그리고 <strong>빌레몬과 오네시모의 새로운 관계를 위해서</strong>입니다.<br><br>
+            이어서 바울은 골로새 성도들에게 자신의 동역자들이 전하는 문안을 전합니다(골 4:10~14). 당시 바울이 로마 감옥에 갇혀 있었음에도 불구하고 주변 사람들의 문안을 골로새 교회에 전해줄 만큼 <strong>바울은 늘 동역자들과 함께했습니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 골로새서 1장~4장 '하나님의 비밀, 예수'를 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 골로새서 1장 -->
+        <div class="chapter-title">골로새서 1장 (1~29절)</div>
+        <div class="verse"><span class="verse-num">1</span> 하나님의 뜻으로 말미암아 그리스도 예수의 사도 된 바울과 형제 디모데는</div>
+        <div class="verse"><span class="verse-num">2</span> 골로새에 있는 성도들 곧 그리스도 안에서 신실한 형제들에게 편지하노니 우리 아버지 하나님으로부터 은혜와 평강이 너희에게 있을지어다</div>
+        <div class="verse"><span class="verse-num">3</span> 우리가 너희를 위하여 기도할 때마다 하나님 곧 우리 주 예수 그리스의 아버지께 감사하노라</div>
+        <div class="verse"><span class="verse-num">4</span> 이는 그리스도 예수 안에 너희의 믿음과 모든 성도에 대한 사랑을 들었음이요</div>
+        <div class="verse"><span class="verse-num">5</span> 너희를 위하여 하늘에 쌓아 둔 소망으로 말미암음이니 곧 너희가 전에 복음 진리의 말씀을 들은 것이라</div>
+        <div class="verse"><span class="verse-num">6</span> 이 복음이 이미 너희에게 이르매 너희가 듣고 참으로 하나님의 은혜를 깨달은 날부터 너희 중에서와 같이 또한 온 천하에서도 열매를 맺어 자라는도다</div>
+        <div class="verse"><span class="verse-num">7</span> 이와 같이 우리와 함께 종 된 사랑하는 에바브라에게 너희가 배웠나니 그는 너희를 위한 그리스도의 신실한 일꾼이요</div>
+        <div class="verse"><span class="verse-num">8</span> 성령 안에서 너희 사랑을 우리에게 알린 자니라</div>
+        <div class="verse"><span class="verse-num">9</span> 이로써 우리도 듣던 날부터 너희를 위하여 기도하기를 그치지 아니하고 구하노니 너희로 하여금 모든 신령한 지혜와 총명에 하나님의 뜻을 아는 것으로 채우게 하시고</div>
+        <div class="verse"><span class="verse-num">10</span> 주께 합당하게 행하여 범사에 기쁘시게 하고 모든 선한 일에 열매를 맺게 하시며 하나님을 아는 것에 자라게 하시고</div>
+        <div class="verse"><span class="verse-num">11</span> 그의 영광의 힘을 따라 모든 능력으로 능하게 하시며 기쁨으로 모든 견딤과 오래 참음에 이르게 하시고</div>
+        <div class="verse"><span class="verse-num">12</span> 우리로 하여금 빛 가운데서 성도의 기업의 부분을 얻기에 합당하게 하신 아버지께 감사하게 하시기를 원하노라</div>
+        <div class="verse"><span class="verse-num">13</span> 그가 우리를 흑암의 권세에서 건져내사 그의 사랑의 아들의 나라로 옮기셨으니</div>
+        <div class="verse"><span class="verse-num">14</span> 그 아들 안에서 우리가 속량 곧 죄 사함을 얻었도다</div>
+        <div class="verse"><span class="verse-num">15</span> 그는 보이지 아니하는 하나님의 형상이시요 모든 피조물보다 먼저 나신 이시니</div>
+        <div class="verse"><span class="verse-num">16</span> 만물이 그에게서 창조되되 하늘과 땅에서 보이는 것들과 보이지 않는 것들과 혹은 왕권들이나 주권들이나 통치자들이나 권세들이나 만물이 다 그로 말미암고 그를 위하여 창조되었고</div>
+        <div class="verse"><span class="verse-num">17</span> 또한 그가 만물보다 먼저 계시고 만물이 그 안에 함께 섰느니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그는 몸인 교회의 머리시라 그가 근본이시요 죽은 자들 가운데서 먼저 나신 이시니 이는 친히 만물의 으뜸이 되려 하심이요</div>
+        <div class="verse"><span class="verse-num">19</span> 아버지께서는 모든 충만으로 예수 안에 거하게 하시고</div>
+        <div class="verse"><span class="verse-num">20</span> 그의 십자가의 피로 화평을 이루사 만물 곧 땅에 있는 것들이나 하늘에 있는 것들이 그로 말미암아 자기와 화목하게 되기를 기뻐하심이라</div>
+        <div class="verse"><span class="verse-num">21</span> 전에 악한 행실로 멀리 떠나 마음으로 원수가 되었던 너희를</div>
+        <div class="verse"><span class="verse-num">22</span> 이제는 그의 육체의 죽음으로 말미암아 화목하게 하사 너희를 거룩하고 흠 없고 책망할 것이 없는 자로 그 앞에 세우고자 하셨으니</div>
+        <div class="verse"><span class="verse-num">23</span> 만일 너희가 믿음에 거하고 터 위에 굳게 서서 너희 들은 바 복음의 소망에서 흔들리지 아니하면 그리하리라 이 복음은 천하 만민에게 전파된 바요 나 바울은 이 복음의 일꾼이 되었노라</div>
+        <div class="verse"><span class="verse-num">24</span> 나는 이제 너희를 위하여 받는 괴로움을 기뻐하고 그리스도의 남은 고난을 그의 몸된 교회를 위하여 내 육체에 채우노라</div>
+        <div class="verse"><span class="verse-num">25</span> 내가 교회의 일꾼 된 것은 하나님이 너희를 위하여 내게 주신 직분을 따라 하나님의 말씀을 이루려 함이니라</div>
+        <div class="verse"><span class="verse-num">26</span> 이 비밀은 만세와 만대로부터 감추어졌던 것인데 이제는 그의 성도들에게 나타났고</div>
+        <div class="verse"><span class="verse-num">27</span> 하나님이 그들로 하여금 이 비밀의 영광이 이방인 가운데 얼마나 풍성한지를 알게 하려 하심이라 이 비밀은 너희 안에 계신 그리스도시니 곧 영광의 소망이니라</div>
+        <div class="verse"><span class="verse-num">28</span> 우리가 그를 전파하여 각 사람을 권하고 모든 지혜로 각 사람을 가르침은 각 사람을 그리스도 안에서 완전한 자로 세우려 함이니</div>
+        <div class="verse"><span class="verse-num">29</span> 이를 위하여 나도 내 속에서 능력으로 역사하시는 이의 역사를 따라 힘을 다하여 수고하노라</div>
+
+        <!-- 골로새서 2장 -->
+        <div class="chapter-title">골로새서 2장 (1~23절)</div>
+        <div class="verse"><span class="verse-num">1</span> 내가 너희와 라오디게아에 있는 자들과 무릇 내 육신의 얼굴을 보지 못한 자들을 위하여 얼마나 힘쓰는지를 너희가 알기를 원하노니</div>
+        <div class="verse"><span class="verse-num">2</span> 이는 그들로 마음에 위안을 받고 사랑 안에서 연합하여 확실한 이해의 모든 풍성함과 하나님의 비밀인 그리스도를 깨닫게 하려 함이니</div>
+        <div class="verse"><span class="verse-num">3</span> 그 안에는 지혜와 지식의 모든 보화가 감추어져 있느니라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 이것을 말함은 아무도 교묘한 말로 너희를 속이지 못하게 하려 함이니</div>
+        <div class="verse"><span class="verse-num">5</span> 이는 내가 육신으로는 떠나 있으나 심령으로는 너희와 함께 있어 너희가 질서 있게 행함과 그리스도를 믿는 너희 믿음이 굳건한 것을 기쁘게 봄이라</div>
+        <div class="verse"><span class="verse-num">6</span> 그러므로 너희가 그리스도 예수를 주로 받았으니 그 안에서 행하되</div>
+        <div class="verse"><span class="verse-num">7</span> 그 안에 뿌리를 박으며 세움을 받아 교훈을 받은 대로 믿음에 굳게 서서 감사함을 넘치게 하라</div>
+        <div class="verse"><span class="verse-num">8</span> 누가 철학과 헛된 속임수로 너희를 사로잡을까 주의하라 이것은 사람의 전통과 세상의 초등학문을 따름이요 그리스도를 따름이 아니니라</div>
+        <div class="verse"><span class="verse-num">9</span> 그 안에는 신성의 모든 충만이 육체로 거하시고</div>
+        <div class="verse"><span class="verse-num">10</span> 너희도 그 안에서 충만하여졌으니 그는 모든 통치자와 권세의 머리시라</div>
+        <div class="verse"><span class="verse-num">11</span> 또 그 안에서 너희가 손으로 하지 아니한 할례를 받았으니 곧 육의 몸을 벗는 것이요 그리스도의 할례니라</div>
+        <div class="verse"><span class="verse-num">12</span> 너희가 세례로 그리스도와 함께 장사되고 또 죽은 자들 가운데서 그를 일으키신 하나님의 역사를 믿음으로 말미암아 그 안에서 함께 일으키심을 받았느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 또 범죄와 육체의 무할례로 죽었던 너희를 하나님이 그와 함께 살리시고 우리의 모든 죄를 사하시고</div>
+        <div class="verse"><span class="verse-num">14</span> 우리를 거스르고 불리하게 하는 법조문으로 쓴 증서를 지우시고 제하여 버리사 십자가에 못 박으시고</div>
+        <div class="verse"><span class="verse-num">15</span> 통치자들과 권세들을 무력화하여 드러내어 구경거리로 삼으시고 십자가로 그들을 이기셨느니라</div>
+        <div class="verse"><span class="verse-num">16</span> 그러므로 먹고 마시는 것과 절기나 초하루나 안식일을 이유로 누구든지 너희를 비판하지 못하게 하라</div>
+        <div class="verse"><span class="verse-num">17</span> 이것들은 장래 일의 그림자이나 몸은 그리스도의 것이니라</div>
+        <div class="verse"><span class="verse-num">18</span> 아무도 꾸며낸 겸손과 천사 숭배를 이유로 너희를 정죄하지 못하게 하라 그가 그 본 것에 의지하여 그 육신의 생각을 따라 헛되이 과장하고</div>
+        <div class="verse"><span class="verse-num">19</span> 머리를 붙들지 아니하는지라 온 몸이 머리로 말미암아 마디와 힘줄로 공급함을 받고 연합하여 하나님이 자라게 하시므로 자라느니라</div>
+        <div class="verse"><span class="verse-num">20</span> 너희가 세상의 초등학문에서 그리스도와 함께 죽었거든 어찌하여 세상에 사는 것과 같이 규례에 순종하느냐</div>
+        <div class="verse"><span class="verse-num">21</span> (곧 붙잡지도 말고 맛보지도 말고 만지지도 말라 하는 것이니</div>
+        <div class="verse"><span class="verse-num">22</span> 이 모든 것은 한때 쓰이고는 없어지리라) 사람의 명령과 가르침을 따르느냐</div>
+        <div class="verse"><span class="verse-num">23</span> 이런 것들은 자의적 숭배와 겸손과 몸을 괴롭게 하는 데는 지혜 있는 모양이나 오직 육체 따르는 것을 금하는 데는 조금도 유익이 없느니라</div>
+
+        <!-- 골로새서 3장 -->
+        <div class="chapter-title">골로새서 3장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그러므로 너희가 그리스도와 함께 다시 살리심을 받았으면 위의 것을 찾으라 거기는 그리스도께서 하나님 우편에 앉아 계시느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 위의 것을 생각하고 땅의 것을 생각하지 말라</div>
+        <div class="verse"><span class="verse-num">3</span> 이는 너희가 죽었고 너희 생명이 그리스도와 함께 하나님 안에 감추어졌음이라</div>
+        <div class="verse"><span class="verse-num">4</span> 우리 생명이신 그리스도께서 나타나실 그 때에 너희도 그와 함께 영광 중에 나타나리라</div>
+        <div class="verse"><span class="verse-num">5</span> 그러므로 땅에 있는 지체를 죽이라 곧 음란과 부정과 사욕과 악한 정욕과 탐심이니 탐심은 우상 숭배니라</div>
+        <div class="verse"><span class="verse-num">6</span> 이것들로 말미암아 하나님의 진노가 임하느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 너희도 전에 그 가운데 살 때에는 그 가운데서 행하였으나</div>
+        <div class="verse"><span class="verse-num">8</span> 이제는 너희가 이 모든 것을 벗어 버리라 곧 분함과 노여움과 악의와 비방과 너희 입의 부끄러운 말이라</div>
+        <div class="verse"><span class="verse-num">9</span> 너희가 서로 거짓말을 하지 말라 옛 사람과 그 행위를 벗어 버리고</div>
+        <div class="verse"><span class="verse-num">10</span> 새 사람을 입었으니 이는 자기를 창조하신 이의 형상을 따라 지식에까지 새롭게 하심을 입은 자니라</div>
+        <div class="verse"><span class="verse-num">11</span> 거기에는 헬라인이나 유대인이나 할례파나 무할례파나 야만인이나 스구디아인이나 종이나 자유인이 차별이 있을 수 없나니 오직 그리스도는 만유시요 만유 안에 계시니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그러므로 너희는 하나님이 택하사 거룩하고 사랑 받는 자처럼 긍휼과 자비와 겸손과 온유와 오래 참음을 옷 입고</div>
+        <div class="verse"><span class="verse-num">13</span> 누가 누구에게 불만이 있거든 서로 용납하여 피차 용서하되 주께서 너희를 용서하신 것 같이 너희도 그리하고</div>
+        <div class="verse"><span class="verse-num">14</span> 이 모든 것 위에 사랑을 더하라 이는 온전하게 매는 띠니라</div>
+        <div class="verse"><span class="verse-num">15</span> 그리스도의 평강이 너희 마음을 주장하게 하라 너희는 평강을 위하여 한 몸으로 부르심을 받았나니 너희는 또한 감사하는 자가 되라</div>
+        <div class="verse"><span class="verse-num">16</span> 그리스도의 말씀이 너희 속에 풍성히 거하여 모든 지혜로 피차 가르치며 권면하고 시와 찬송과 신령한 노래를 부르며 감사하는 마음으로 하나님을 찬양하고</div>
+        <div class="verse"><span class="verse-num">17</span> 또 무엇을 하든지 말에나 일에나 다 주 예수의 이름으로 하고 그를 힘입어 하나님 아버지께 감사하라</div>
+        <div class="verse"><span class="verse-num">18</span> 아내들아 남편에게 복종하라 이는 주 안에서 마땅하니라</div>
+        <div class="verse"><span class="verse-num">19</span> 남편들아 아내를 사랑하며 괴롭게 하지 말라</div>
+        <div class="verse"><span class="verse-num">20</span> 자녀들아 모든 일에 부모에게 순종하라 이는 주 안에서 기쁘게 하는 것이니라</div>
+        <div class="verse"><span class="verse-num">21</span> 아비들아 너희 자녀를 노엽게 하지 말지니 낙심할까 함이라</div>
+        <div class="verse"><span class="verse-num">22</span> 종들아 모든 일에 육신의 상전들에게 순종하되 사람을 기쁘게 하는 자와 같이 눈가림만 하지 말고 오직 주를 두려워하여 성실한 마음으로 하라</div>
+        <div class="verse"><span class="verse-num">23</span> 무슨 일을 하든지 마음을 다하여 주께 하듯 하고 사람에게 하듯 하지 말라</div>
+        <div class="verse"><span class="verse-num">24</span> 이는 기업의 상을 주께 받을 줄 아나니 너희는 주 그리스도를 섬기느니라</div>
+        <div class="verse"><span class="verse-num">25</span> 불의를 행하는 자는 불의의 보응을 받으리니 주는 사람을 외모로 취하심이 없느니라</div>
+
+        <!-- 골로새서 4장 -->
+        <div class="chapter-title">골로새서 4장 (1~18절)</div>
+        <div class="verse"><span class="verse-num">1</span> 상전들아 의와 공평을 종들에게 베풀지니 너희에게도 하늘에 상전이 계심을 알지어다</div>
+        <div class="verse"><span class="verse-num">2</span> 기도를 계속하고 기도에 감사함으로 깨어 있으라</div>
+        <div class="verse"><span class="verse-num">3</span> 또한 우리를 위하여 기도하되 하나님이 전도할 문을 우리에게 열어 주사 그리스도의 비밀을 말하게 하시기를 구하라 내가 이 일 때문에 매임을 당하였노라</div>
+        <div class="verse"><span class="verse-num">4</span> 그리하면 내가 마땅히 할 말로써 이 비밀을 나타내리라</div>
+        <div class="verse"><span class="verse-num">5</span> 외인에게 대해서는 지혜로 행하여 세월을 아끼라</div>
+        <div class="verse"><span class="verse-num">6</span> 너희 말을 항상 은혜 가운데서 소금으로 맛을 냄과 같이 하라 그리하면 각 사람에게 마땅히 대답할 것을 알리라</div>
+        <div class="verse"><span class="verse-num">7</span> 두기고가 내 사정을 다 너희에게 알려 주리니 그는 사랑 받는 형제요 신실한 일꾼이요 주 안에서 함께 종이 된 자니라</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 그를 특별히 너희에게 보내는 것은 너희로 우리 사정을 알게 하고 너희 마음을 위로하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">9</span> 신실하고 사랑을 받는 형제 오네시모를 함께 보내노니 그는 너희에게서 온 사람이라 그들이 여기 일을 다 너희에게 알려 주리라</div>
+        <div class="verse"><span class="verse-num">10</span> 나와 함께 갇힌 아리스다고와 바나바의 생질 마가와 (이 마가에 대하여 너희가 명을 받았으매 그가 이르거든 영접하라)</div>
+        <div class="verse"><span class="verse-num">11</span> 유스도라 하는 예수도 너희에게 문안하느니라 그들은 할례파이나 이들만은 하나님의 나라를 위하여 함께 역사하는 자들이니 이런 사람들이 나의 위로가 되었느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그리스도 예수의 종인 너희에게서 온 에바브라가 너희에게 문안하느니라 그가 항상 너희를 위하여 애써 기도하여 너희로 하나님의 모든 뜻 가운데서 완전하고 확신 있게 서기를 구하나니</div>
+        <div class="verse"><span class="verse-num">13</span> 그가 너희와 라오디게아에 있는 자들과 히에라볼리에 있는 자들을 위하여 많이 수고하는 것을 내가 증언하노라</div>
+        <div class="verse"><span class="verse-num">14</span> 사랑을 받는 의사 누가와 또 데마가 너희에게 문안하느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 라오디게아에 있는 형제들과 눔바와 그 여자의 집에 있는 교회에 문안하고</div>
+        <div class="verse"><span class="verse-num">16</span> 이 편지를 너희에게서 읽은 후에 라오디게아인의 교회에서도 읽게 하고 또 라오디게아로부터 오는 편지를 너희도 읽으라</div>
+        <div class="verse"><span class="verse-num">17</span> 아킵보에게 이르기를 주 안에서 받은 직분을 삼가 이루라고 하라</div>
+        <div class="verse"><span class="verse-num">18</span> 나 바울은 친필로 문안하노니 내가 매인 것을 생각하라 은혜가 너희에게 있을지어다</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

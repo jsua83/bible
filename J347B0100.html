@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 347</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 347</h1>
+        <p class="sub-title">찬송가 407장 구주와 함께 나 죽었으니</p>
+        <p class="sub-title">빌레몬서 1장 — 제국을 넘어 하나님 나라로</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 407장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1b9GLq3cQ5fJnTWeMV5tT_LVyOMe-h_9h" alt="찬송가 407장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 빌레몬서 1장<br>'제국을 넘어 하나님 나라로'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 빌레몬서는 바울, 두기고, 오네시모, 빌레몬이 만든 꿈같은 하나님 나라 이야기입니다.</span>
+            빌레몬서는 <strong>'로마 제국'에서 만난 한 주인과 종의 관계를 '하나님 나라' 안에서 형제 관계로 회복하려는 바울의 노력의 산물</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 빌레몬서는 예수를 믿는 바울이 예수를 믿는 빌레몬에게 예수를 믿는 오네시모를 하나님 나라의 형제로 받아들이라고 쓴 편지입니다.</span>
+            예수를 믿는 바울과 예수를 믿는 빌레몬은 <strong>하나님 나라 안에서 형제</strong>입니다. 바울은 빌레몬에게 편지를 쓰면서 <strong>빌레몬이 이 엄청난 부탁을 들어줄 것을 확신합니다</strong>(몬 1:20~21).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 바울은 로마 제국에서 노예와 관련되었던 사건인 스파르타쿠스의 난과 세쿤두스의 난을 알고 있었을 것입니다.</span>
+            바울은 <strong>로마 제국의 노예 제도를 잘 알고 있으면서도</strong> 빌레몬에게 <strong>오네시모를 형제로 받아들이라</strong>고 권면한 것입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 행동하는 지식인 바울은 빌레몬에게 제국의 본질(노예)을 뛰어넘어 하나님 나라의 본질(형제)로 행동할 것을 권합니다.</span>
+            <div class="quote">
+                <strong>'형제'라는 단어를 놓치면 하나님 나라 이야기가 이어지지 않습니다.</strong>
+            </div>
+            '아들' 이야기가 전제되어야 '형제' 이야기가 나올 수 있습니다. <strong>맏아들 되신 예수님께서 대속하심으로 우리를 예수님의 형제로 삼아주셨습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 바울은 빌레몬에게 골로새서와 빌레몬서, 두 개의 편지를 한 번에 읽게 했습니다.</span>
+            바울은 로마 제국 하에서 <strong>'제국'이 아닌 하나님 나라를 선택하면서</strong>, 도망간 노예를 주 안에서 형제로 받아들이는 것이 <strong>하나님 나라를 실천하는 것</strong>이라 선언합니다.<br><br>
+            결국 골로새서와 빌레몬서를 동시에 읽은 빌레몬의 선택은
+            <div class="quote">
+                <strong>'제국'이 아닌 '하나님 나라'였습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 빌레몬서 1장 '제국을 넘어 하나님 나라로'를 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 빌레몬서 1장 -->
+        <div class="chapter-title">빌레몬서 1장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그리스도 예수를 위하여 갇힌 자 된 바울과 및 형제 디모데는 우리의 사랑을 받는 자요 동역자인 빌레몬과</div>
+        <div class="verse"><span class="verse-num">2</span> 자매 압비아와 우리와 함께 병사 된 아킵보와 네 집에 있는 교회에 편지하노니</div>
+        <div class="verse"><span class="verse-num">3</span> 하나님 우리 아버지와 주 예수 그리스도로부터 은혜와 평강이 너희에게 있을지어다</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 항상 내 하나님께 감사하고 기도할 때에 너를 말함은</div>
+        <div class="verse"><span class="verse-num">5</span> 주 예수와 및 모든 성도에 대한 네 사랑과 믿음이 있음을 들음이니</div>
+        <div class="verse"><span class="verse-num">6</span> 이로써 네 믿음의 교제가 우리 가운데 있는 선을 알게 하고 그리스도께 이르도록 역사하느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 형제여 성도들의 마음이 너로 말미암아 평안함을 얻었으니 내가 너의 사랑으로 많은 기쁨과 위로를 받았노라</div>
+        <div class="verse"><span class="verse-num">8</span> 이러므로 내가 그리스도 안에서 아주 담대하게 네게 마땅한 일로 명할 수도 있으나</div>
+        <div class="verse"><span class="verse-num">9</span> 도리어 사랑으로써 간구하노라 나이가 많은 나 바울은 지금 또 예수 그리스도를 위하여 갇힌 자 되어</div>
+        <div class="verse"><span class="verse-num">10</span> 갇힌 중에서 낳은 아들 오네시모를 위하여 네게 간구하노라</div>
+        <div class="verse"><span class="verse-num">11</span> 그가 전에는 네게 무익하였으나 이제는 나와 네게 유익하므로</div>
+        <div class="verse"><span class="verse-num">12</span> 네게 그를 돌려 보내노니 그는 내 심복이라</div>
+        <div class="verse"><span class="verse-num">13</span> 그를 내게 머물러 있게 하여 내 복음을 위하여 갇힌 중에서 네 대신 나를 섬기게 하고자 하나</div>
+        <div class="verse"><span class="verse-num">14</span> 다만 네 승낙이 없이는 내가 아무 것도 하기를 원하지 아니하노니 이는 너의 선한 일이 억지 같이 되지 아니하고 자의로 되게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">15</span> 아마 그가 잠시 떠나게 된 것은 너로 하여금 그를 영원히 두게 함이리니</div>
+        <div class="verse"><span class="verse-num">16</span> 이 후로는 종과 같이 대하지 아니하고 종 이상으로 곧 사랑 받는 형제로 둘 자라 내게 특별히 그러하거든 하물며 육신과 주 안에서 상관된 네게랴</div>
+        <div class="verse"><span class="verse-num">17</span> 그러므로 네가 나를 동역자로 알진대 그를 영접하기를 내게 하듯 하고</div>
+        <div class="verse"><span class="verse-num">18</span> 그가 만일 네게 불의를 하였거나 네게 빚진 것이 있으면 그것을 내 앞으로 계산하라</div>
+        <div class="verse"><span class="verse-num">19</span> 나 바울이 친필로 쓰노니 내가 갚으려니와 네가 이 외에 네 자신이 내게 빚진 것은 내가 말하지 아니하노라</div>
+        <div class="verse"><span class="verse-num">20</span> 오 형제여 나로 주 안에서 너로 말미암아 기쁨을 얻게 하고 내 마음이 그리스도 안에서 평안하게 하라</div>
+        <div class="verse"><span class="verse-num">21</span> 나는 네가 순종할 것을 확신하므로 네게 썼노니 네가 내가 말한 것보다 더 행할 줄을 아노라</div>
+        <div class="verse"><span class="verse-num">22</span> 오직 너는 나를 위하여 숙소를 마련하라 너희 기도로 내가 너희에게 나아갈 수 있기를 바라노라</div>
+        <div class="verse"><span class="verse-num">23</span> 그리스도 예수 안에서 나와 함께 갇힌 자 에바브라와</div>
+        <div class="verse"><span class="verse-num">24</span> 또한 나의 동역자 마가, 아리스다고, 데마, 누가가 문안하느니라</div>
+        <div class="verse"><span class="verse-num">25</span> 우리 주 예수 그리스도의 은혜가 너희 심령과 함께 있을지어다</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
