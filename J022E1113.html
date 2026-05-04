@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 022</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 022</h1>
+        <p class="sub-title">찬송가 229장 아무 흠도 없고</p>
+        <p class="sub-title">출애굽기 11~13장 — 유월절과 성찬식의 관계</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 229장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1v18C9IukXN6oeeS7RFCbhTHJVtp19IfO" alt="찬송가 229장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 출애굽기 11장~13장<br>'유월절과 성찬식의 관계'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 창세기 12장, 아브라함의 순종은 '신앙 가족 공동체'의 출발이며 출애굽기 12장, 히브리인들의 순종은 '신앙 민족 공동체'의 출발입니다.</span>
+            아브라함은 갈대아 우르에서 하나님께서 말씀하신 자손과 땅에 대한 약속을 믿고 순종하여 그 땅을 떠나 <strong>'보여줄 땅' 가나안에 도착했습니다.</strong> 그리고 아브라함은 가나안에서 <strong>'신앙 가족 공동체'를 출발시켰습니다.</strong><br><br>
+            400여 년이 지나, 아브라함의 후손들인 히브리인들은 모세를 통해 말씀하신 하나님의 말씀을 믿고 순종하여 히브리의 모든 가정에서 <strong>1년 된 어린 양을 잡아 유월절을 지켰습니다.</strong> 유월절 그 밤, 마침내 히브리 민족은 <strong>'신앙 민족 공동체'로 출발합니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 유월절 그날! '애굽 제국의 기반'은 무너지고 '제사장 나라의 기반'이 세워집니다.</span>
+            유월절 그날! 차례대로 일어났던 <strong>'다섯 가지 사건일지'</strong>입니다.
+            <div class="quote">
+                <strong>첫째,</strong> 애굽 왕 바로가 6개월째 계속되던 모세와의 9차 협상에서 테이블을 걷어차고 최후통첩으로 협상 결렬을 선언합니다.<br>
+                <strong>둘째,</strong> 모세가 마지막으로 경고합니다. 밤중에 바로의 장자부터 애굽의 모든 장자와 모든 가축의 처음 난 것까지 다 죽을 것이나 이스라엘 자손에게는 아무 일도 일어나지 않음을 경고한 것입니다.<br>
+                <strong>셋째,</strong> 모세는 즉시 히브리 각 가족대로 22,000여 마리의 흠 없는 1년 된 수컷 어린 양을 잡게 하고 그 피를 각 가정의 좌우 문설주와 인방에 바르게 합니다. 그리고 그 밤에 고기는 불에 구워 무교병과 쓴 나물과 함께 먹고 아침까지 문 밖에 나가지 않도록 말합니다.<br>
+                <strong>넷째,</strong> 하나님의 말씀대로 애굽 전역에 각 가정의 장자들과 가축의 초태생들이 다 죽습니다. 그러자 바로는 밤중에 모세와 아론을 급히 불러 이스라엘 자손들과 함께 애굽에서 떠나라고 합니다.<br>
+                <strong>다섯째,</strong> 히브리인들은 애굽 사람들에게 은과 금과 의복을 구하여 받아냅니다.
+            </div>
+            <div class="quote">
+                <strong>이렇게 유월절 그날, 애굽 제국의 기반은 무너지고 제사장 나라의 기반이 세워집니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 유월절, 이 날을 기념하라.</span>
+            유월절은 아브라함 이후, 구약 성경 전체에서 하나님께서 보여주신 <strong>최고의 '기적 중 기적'</strong>이었습니다. 유월절 그날에 <strong>'어린 양 한 마리'가 죽는 대신</strong> 히브리 각 가정의 장자들과 그 집에서 기르던 모든 가축의 초태생들이 살게 되었습니다.<br><br>
+            유월절은 Passover, 히브리어로 <strong>'페싸흐'</strong>입니다. 이는 <strong>'지나가다', '넘어가다'</strong>라는 뜻으로, 애굽 전역에 열 번째 재앙이 진행될 때에 피 묻은 이스라엘 집을 넘어감을 의미합니다.<br><br>
+            하나님께서는 이 유월절을 이후 <strong>1,500년 동안 기념하게 하십니다.</strong> 유월절을 기념하게 하신 이유는 네 가지입니다.
+            <div class="quote">
+                <strong>첫째,</strong> 아브라함의 후손들이 애굽에서 오랜 종살이의 사슬을 끊고 새로운 출발의 발걸음을 내디딘 날이기 때문입니다.<br>
+                <strong>둘째,</strong> 하나님의 은혜로 구원받은 이 날을 오래도록 기억해야 하기 때문입니다.<br>
+                <strong>셋째,</strong> 하나님께서 이 날을 이스라엘 역사의 원년으로 삼으신 날이기 때문입니다.<br>
+                <strong>넷째,</strong> 하나님께서 '출애굽의 하나님'으로 당신의 존재를 드러내시며 이스라엘을 '내 것'으로 삼으신 날이기 때문입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 애굽에서의 첫 번째 유월절로부터 1,500년이 지난 '마지막 유월절'에 '첫 번째 성찬식'이 시작됩니다.</span>
+            예수님께서 십자가를 지시기 전날 밤 제자들과 함께 <strong>1,500년 된 유월절 절기를 지키며 '떡과 포도주를 가지고 마지막 유월절의 첫 번째 성찬식'을 거행하셨습니다.</strong> 1,500년 유월절을 성찬식으로 바꾸실 수 있는 분은 <strong>오직 하나님의 아들 독생자 예수 그리스도뿐이십니다.</strong><br><br>
+            성찬식은 <strong>주의 죽으심을 주님 다시 오실 그날까지 항상 기념하고 땅끝까지 전하는 것</strong>입니다.<br><br>
+            '마지막 유월절'이 '첫 번째 성찬식'이 되면서 <strong>네 가지가 바뀝니다.</strong>
+            <div class="quote">
+                <strong>첫째,</strong> '유월절 어린 양'은 이후 세상 죄를 지고 가는 <strong>'하나님의 어린 양'</strong>이 됩니다.<br>
+                <strong>둘째,</strong> '출애굽 전날'은 <strong>'예수님의 십자가 지시기 전날'</strong>이 됩니다.<br>
+                <strong>셋째,</strong> '각 가정에서 가족들과 함께하는 절기'가 <strong>'정하신 집 다락방에서 제자들과 함께하는 기념'</strong>이 됩니다.<br>
+                <strong>넷째,</strong> '어린 양 고기와 무교병, 쓴 나물'은 <strong>'예수님의 몸과 피를 기념하는 떡과 포도주'</strong>가 됩니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 성경에 나타난 '복'은 모두 사명을 전제하고 있습니다.</span>
+            하나님께서 히브리 민족 각 가정의 장자들을 살려주신 것은 <strong>그들에게 은혜를 베푸신 것이고, 그들에게 사명을 주시고자 함</strong>이었습니다. 하나님께서 살려주신 히브리 민족 각 가정의 장자들은 <strong>'하나님의 소유'</strong>가 되었습니다.<br><br>
+            이후에 보면, 하나님께서 이스라엘 열두 지파의 장자들 대신 <strong>레위 지파를 '하나님의 소유'로 삼으시고 그들에게 제사장의 사명을 맡기시는 것</strong>을 볼 수 있습니다. 그러므로 이스라엘 열두 지파의 장자들은 그들을 대신하는 레위 지파 사람들에게 자신들의 장자의 몫을 주어야 합니다.
+            <div class="quote">
+                <strong>때문에 레위 지파는 '모든 민족을 위한 제사장 나라'를 위해 전적으로 헌신할 수 있게 됩니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 출애굽기 11~13장 '유월절과 성찬식의 관계'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 출애굽기 11장 -->
+        <div class="chapter-title">출애굽기 11장 (1~10절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 이르시기를 내가 이제 한 가지 재앙을 바로와 애굽에 내린 후에야 그가 너희를 여기서 내보내리라 그가 너희를 내보낼 때에는 여기서 반드시 다 쫓아내리니</div>
+        <div class="verse"><span class="verse-num">2</span> 백성에게 말하여 사람들에게 각기 이웃들에게 은금 패물을 구하게 하라 하시더니</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와께서 그 백성으로 애굽 사람의 은혜를 받게 하셨고 또 그 사람 모세는 애굽 땅에 있는 바로의 신하와 백성의 눈에 아주 위대하게 보였더라</div>
+        <div class="verse"><span class="verse-num">4</span> 모세가 바로에게 이르되 여호와께서 이와 같이 말씀하시기를 밤중에 내가 애굽 가운데로 들어가리니</div>
+        <div class="verse"><span class="verse-num">5</span> 애굽 땅에 있는 모든 처음 난 것은 왕위에 앉아 있는 바로의 장자로부터 맷돌 뒤에 있는 몸종의 장자와 모든 가축의 처음 난 것까지 죽으리니</div>
+        <div class="verse"><span class="verse-num">6</span> 애굽 온 땅에 전무후무한 큰 부르짖음이 있으리라</div>
+        <div class="verse"><span class="verse-num">7</span> 그러나 이스라엘 자손에게는 사람에게나 짐승에게나 개 한 마리도 그 혀를 움직이지 아니하리니 여호와께서 애굽 사람과 이스라엘 사이를 구별하는 줄을 너희가 알리라 하셨나니</div>
+        <div class="verse"><span class="verse-num">8</span> 왕의 이 모든 신하가 내게 내려와 내게 절하며 이르기를 너와 너를 따르는 온 백성은 나가라 한 후에야 내가 나가리라 하고 심히 노하여 바로에게서 나오니라</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와께서 모세에게 이르시기를 바로가 너희의 말을 듣지 아니하리라 그러므로 내가 애굽 땅에서 나의 기적을 더하리라 하셨고</div>
+        <div class="verse"><span class="verse-num">10</span> 모세와 아론이 이 모든 기적을 바로 앞에서 행하였으나 여호와께서 바로의 마음을 완악하게 하셨으므로 그가 이스라엘 자손을 그 나라에서 보내지 아니하였더라</div>
+
+        <!-- 출애굽기 12장 -->
+        <div class="chapter-title">출애굽기 12장 (1~51절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 애굽 땅에서 모세와 아론에게 일러 말씀하시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이 달을 너희에게 달의 시작 곧 해의 첫 달이 되게 하고</div>
+        <div class="verse"><span class="verse-num">3</span> 너희는 이스라엘 온 회중에게 말하여 이르라 이 달 열흘에 너희 각자가 어린 양을 취할지니 각 가족대로 그 식구를 위하여 어린 양을 취하되</div>
+        <div class="verse"><span class="verse-num">4</span> 그 어린 양에 대하여 식구가 너무 적으면 그 집의 이웃과 함께 사람 수를 따라서 하나를 취하며 각 사람이 먹을 수 있는 분량에 따라서 너희 어린 양을 계산할 것이며</div>
+        <div class="verse"><span class="verse-num">5</span> 너희 어린 양은 흠 없고 일 년 된 수컷으로 하되 양이나 염소 중에서 취하고</div>
+        <div class="verse"><span class="verse-num">6</span> 이 달 열나흗날까지 간직하였다가 해 질 때에 이스라엘 회중이 그 양을 잡고</div>
+        <div class="verse"><span class="verse-num">7</span> 그 피를 양을 먹을 집 좌우 문설주와 인방에 바르고</div>
+        <div class="verse"><span class="verse-num">8</span> 그 밤에 그 고기를 불에 구워 무교병과 쓴 나물과 아울러 먹되</div>
+        <div class="verse"><span class="verse-num">9</span> 날것으로나 물에 삶아서 먹지 말고 머리와 다리와 내장을 다 불에 구워 먹고</div>
+        <div class="verse"><span class="verse-num">10</span> 아침까지 남겨두지 말며 아침까지 남은 것은 곧 불사르라</div>
+        <div class="verse"><span class="verse-num">11</span> 너희는 그것을 이렇게 먹을지니 허리에 띠를 띠고 발에 신을 신고 손에 지팡이를 잡고 급히 먹으라 이것이 여호와의 유월절이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 그 밤에 애굽 땅에 두루 다니며 사람이나 짐승을 막론하고 애굽 땅에 있는 모든 처음 난 것을 다 치고 애굽의 모든 신을 내가 심판하리라 나는 여호와라</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 애굽 땅을 칠 때에 그 피가 너희가 사는 집에 있어서 너희를 위하여 표적이 될지라 내가 피를 볼 때에 너희를 넘어가리니 재앙이 너희에게 내려 멸하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">14</span> 너희는 이 날을 기념하여 여호와의 절기를 삼아 영원한 규례로 대대로 지킬지니라</div>
+        <div class="verse"><span class="verse-num">15</span> 너희는 이레 동안 무교병을 먹을지니 그 첫날에 누룩을 너희 집에서 제하라 무릇 첫날부터 일곱째 날까지 유교병을 먹는 자는 이스라엘에서 끊어지리라</div>
+        <div class="verse"><span class="verse-num">16</span> 너희에게 첫날에도 성회요 일곱째 날에도 성회가 되리니 너희는 이 두 날에는 아무 일도 하지 말고 각자의 먹을 것만 갖출 것이니라</div>
+        <div class="verse"><span class="verse-num">17</span> 너희는 무교절을 지키라 이 날에 내가 너희 군대를 애굽 땅에서 인도하여 내었음이니라 그러므로 너희가 영원한 규례로 삼아 대대로 이 날을 지킬지니라</div>
+        <div class="verse"><span class="verse-num">18</span> 첫째 달 그 달 열나흗날 저녁부터 이십일일 저녁까지 너희는 무교병을 먹을 것이요</div>
+        <div class="verse"><span class="verse-num">19</span> 이레 동안은 누룩이 너희 집에서 발견되지 아니하도록 하라 무릇 유교물을 먹는 자는 타국인이든지 본국에서 난 자든지를 막론하고 이스라엘 회중에서 끊어지리니</div>
+        <div class="verse"><span class="verse-num">20</span> 너희는 아무 유교물이든지 먹지 말고 너희 모든 유하는 곳에서 무교병을 먹을지니라</div>
+        <div class="verse"><span class="verse-num">21</span> 모세가 이스라엘 모든 장로를 불러서 그들에게 이르되 너희는 나가서 너희의 가족대로 어린 양을 택하여 유월절 양으로 잡고</div>
+        <div class="verse"><span class="verse-num">22</span> 우슬초 묶음을 가져다가 그릇에 담은 피에 적셔서 그 피를 문 인방과 좌우 설주에 뿌리고 아침까지 한 사람도 자기 집 문 밖에 나가지 말라</div>
+        <div class="verse"><span class="verse-num">23</span> 여호와께서 애굽 사람들에게 재앙을 내리려고 지나가실 때에 문 인방과 좌우 문설주의 피를 보시면 여호와께서 그 문을 넘으시고 멸하는 자에게 너희 집에 들어가서 너희를 치지 못하게 하실 것임이니라</div>
+        <div class="verse"><span class="verse-num">24</span> 너희는 이 일을 규례로 삼아 너희와 너희 자손이 영원히 지킬 것이니</div>
+        <div class="verse"><span class="verse-num">25</span> 너희는 여호와께서 허락하신 대로 너희에게 주시는 땅에 이를 때에 이 예식을 지킬 것이라</div>
+        <div class="verse"><span class="verse-num">26</span> 이 후에 너희의 자녀가 묻기를 이 예식이 무슨 뜻이냐 하거든</div>
+        <div class="verse"><span class="verse-num">27</span> 너희는 이르기를 이는 여호와의 유월절 제사라 여호와께서 애굽 사람에게 재앙을 내리실 때에 애굽에 있는 이스라엘 자손의 집을 넘으사 우리의 집을 구원하셨느니라 하라 하매 백성이 머리 숙여 경배하니라</div>
+        <div class="verse"><span class="verse-num">28</span> 이스라엘 자손이 물러가서 그대로 행하되 여호와께서 모세와 아론에게 명령하신 대로 행하니라</div>
+        <div class="verse"><span class="verse-num">29</span> 밤중에 여호와께서 애굽 땅에서 모든 처음 난 것 곧 왕위에 앉은 바로의 장자로부터 옥에 갇힌 사람의 장자까지와 가축의 처음 난 것을 다 치시매</div>
+        <div class="verse"><span class="verse-num">30</span> 그 밤에 바로와 그 모든 신하와 모든 애굽 사람이 일어나고 애굽에 큰 부르짖음이 있었으니 이는 그 나라에 죽임을 당하지 아니한 집이 하나도 없었음이었더라</div>
+        <div class="verse"><span class="verse-num">31</span> 밤에 바로가 모세와 아론을 불러서 이르되 너희와 이스라엘 자손은 일어나 내 백성 가운데에서 떠나 너희의 말대로 가서 여호와를 섬기며</div>
+        <div class="verse"><span class="verse-num">32</span> 너희가 말한 대로 너희 양과 너희 소도 몰아가고 나를 위하여 축복하라 하며</div>
+        <div class="verse"><span class="verse-num">33</span> 애굽 사람들은 말하기를 우리가 다 죽은 자가 되도다 하고 그 백성을 재촉하여 그 땅에서 속히 내보내려 하므로</div>
+        <div class="verse"><span class="verse-num">34</span> 그 백성이 발교되지 못한 반죽 담은 그릇을 옷에 싸서 어깨에 메니라</div>
+        <div class="verse"><span class="verse-num">35</span> 이스라엘 자손이 모세의 말대로 하여 애굽 사람에게 은금 패물과 의복을 구하매</div>
+        <div class="verse"><span class="verse-num">36</span> 여호와께서 애굽 사람들에게 이스라엘 백성에게 은혜를 입히게 하사 그들이 구하는 대로 주게 하시므로 그들이 애굽 사람의 물품을 취하였더라</div>
+        <div class="verse"><span class="verse-num">37</span> 이스라엘 자손이 라암셋을 떠나서 숙곳에 이르니 유아 외에 보행하는 장정이 육십만 가량이요</div>
+        <div class="verse"><span class="verse-num">38</span> 수많은 잡족과 양과 소와 심히 많은 가축이 그들과 함께 하였으며</div>
+        <div class="verse"><span class="verse-num">39</span> 그들이 애굽으로부터 가지고 나온 발교되지 못한 반죽으로 무교병을 구웠으니 이는 그들이 애굽에서 쫓겨나므로 지체할 수 없었음이며 아무 양식도 준비하지 못하였음이었더라</div>
+        <div class="verse"><span class="verse-num">40</span> 이스라엘 자손이 애굽에 거주한 지 사백삼십 년이라</div>
+        <div class="verse"><span class="verse-num">41</span> 사백삼십 년이 끝나는 그 날에 여호와의 군대가 다 애굽 땅에서 나왔은즉</div>
+        <div class="verse"><span class="verse-num">42</span> 이 밤은 그들을 애굽 땅에서 인도하여 내심으로 말미암아 여호와 앞에 지킬 것이니 이는 여호와의 밤이라 이스라엘 자손이 다 대대로 지킬 것이니라</div>
+        <div class="verse"><span class="verse-num">43</span> 여호와께서 모세와 아론에게 이르시되 유월절 규례는 이러하니라 이방 사람은 먹지 못할 것이나</div>
+        <div class="verse"><span class="verse-num">44</span> 각 사람이 돈으로 산 종은 할례를 받은 후에 먹을 것이며</div>
+        <div class="verse"><span class="verse-num">45</span> 거류인과 타국 품꾼은 먹지 못하리라</div>
+        <div class="verse"><span class="verse-num">46</span> 한 집에서 먹되 그 고기를 조금도 집 밖으로 내지 말고 뼈도 꺾지 말지며</div>
+        <div class="verse"><span class="verse-num">47</span> 이스라엘 회중이 다 이것을 지킬지니라</div>
+        <div class="verse"><span class="verse-num">48</span> 너희와 함께 거류하는 타국인이 여호와의 유월절을 지키고자 하거든 그 모든 남자는 할례를 받은 후에야 가까이 하여 지킬지니 곧 그는 본토인과 같이 될 것이나 할례 받지 못한 자는 먹지 못할 것이니라</div>
+        <div class="verse"><span class="verse-num">49</span> 본토인에게나 너희 중에 거류하는 이방인에게 이 법이 동일하니라 하셨으므로</div>
+        <div class="verse"><span class="verse-num">50</span> 온 이스라엘 자손이 이와 같이 행하되 여호와께서 모세와 아론에게 명령하신 대로 행하였으며</div>
+        <div class="verse"><span class="verse-num">51</span> 바로 그 날에 여호와께서 이스라엘 자손을 그 무리대로 애굽 땅에서 인도하여 내셨더라</div>
+
+        <!-- 출애굽기 13장 -->
+        <div class="chapter-title">출애굽기 13장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 일러 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손 중에서 사람이나 짐승을 막론하고 태에서 처음 난 모든 것은 다 거룩히 구별하여 내게 돌리라 이는 내 것이니라 하시니라</div>
+        <div class="verse"><span class="verse-num">3</span> 모세가 백성에게 이르되 너희는 애굽 곧 종 되었던 집에서 나온 그 날을 기념하여 유교병을 먹지 말라 여호와께서 그 손의 권능으로 너희를 그 곳에서 인도해 내셨음이니라</div>
+        <div class="verse"><span class="verse-num">4</span> 아빕월 이 날에 너희가 나왔으니</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와께서 너를 인도하여 가나안 사람과 헷 사람과 아모리 사람과 히위 사람과 여부스 사람의 땅 곧 네게 주시려고 네 조상들에게 맹세하신 바 젖과 꿀이 흐르는 땅에 이르게 하시거든 너는 이 달에 이 예식을 지켜</div>
+        <div class="verse"><span class="verse-num">6</span> 이레 동안 무교병을 먹고 일곱째 날에는 여호와께 절기를 지키라</div>
+        <div class="verse"><span class="verse-num">7</span> 이레 동안에는 무교병을 먹고 유교병을 네게 보이지 아니하게 하며 네 땅에서 누룩을 네게 보이지 아니하게 하라</div>
+        <div class="verse"><span class="verse-num">8</span> 너는 그 날에 네 아들에게 보여 이르기를 이 예식은 내가 애굽에서 나올 때에 여호와께서 나를 위하여 행하신 일로 말미암음이라 하고</div>
+        <div class="verse"><span class="verse-num">9</span> 이것으로 네 손의 기호와 네 미간의 표를 삼고 여호와의 율법이 네 입에 있게 하라 이는 여호와께서 강하신 손으로 너를 애굽에서 인도하여 내셨음이니</div>
+        <div class="verse"><span class="verse-num">10</span> 해마다 절기가 되면 이 규례를 지킬지니라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와께서 너와 네 조상에게 맹세하신 대로 너를 가나안 사람의 땅에 인도하시고 그 땅을 네게 주시거든</div>
+        <div class="verse"><span class="verse-num">12</span> 너는 태에서 처음 난 모든 것과 네게 있는 가축의 태에서 처음 난 것을 다 구별하여 여호와께 돌리라 수컷은 여호와의 것이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 나귀의 첫 새끼는 다 어린 양으로 대속할 것이요 그렇게 하지 아니하려면 그 목을 꺾을 것이며 네 아들 중 처음 난 모든 자는 대속할지니라</div>
+        <div class="verse"><span class="verse-num">14</span> 후일에 네 아들이 네게 묻기를 이것이 어찌 됨이냐 하거든 너는 그에게 이르기를 여호와께서 그 손의 권능으로 우리를 애굽에서 곧 종이 되었던 집에서 인도하여 내실새</div>
+        <div class="verse"><span class="verse-num">15</span> 그 때에 바로가 완악하여 우리를 보내지 아니하매 여호와께서 애굽 나라 가운데 처음 난 모든 것은 사람의 장자로부터 가축의 처음 난 것까지 다 죽이셨으므로 태에서 처음 난 모든 수컷들은 내가 여호와께 제사를 드려서 내 아들 중에 모든 처음 난 자를 다 대속하리니</div>
+        <div class="verse"><span class="verse-num">16</span> 이것이 네 손의 기호와 네 미간의 표가 되리라 이는 여호와께서 그 손의 권능으로 우리를 애굽에서 인도하여 내셨음이니라 할지니라</div>
+        <div class="verse"><span class="verse-num">17</span> 바로가 백성을 보낸 후에 블레셋 사람의 땅의 길은 가까울지라도 하나님이 그들을 그 길로 인도하지 아니하셨으니 이는 하나님이 말씀하시기를 이 백성이 전쟁을 하게 되면 마음을 돌이켜 애굽으로 돌아갈까 하셨음이라</div>
+        <div class="verse"><span class="verse-num">18</span> 그러므로 하나님이 홍해의 광야 길로 돌려 백성을 인도하시매 이스라엘 자손이 애굽 땅에서 대열을 지어 나올 때에</div>
+        <div class="verse"><span class="verse-num">19</span> 모세가 요셉의 유골을 가졌으니 이는 요셉이 이스라엘 자손으로 단단히 맹세하게 하여 이르기를 하나님이 반드시 너희를 찾아오시리니 너희는 내 유골을 여기서 가지고 나가라 하였음이더라</div>
+        <div class="verse"><span class="verse-num">20</span> 그들이 숙곳을 떠나서 광야 끝 에담에 장막을 치니</div>
+        <div class="verse"><span class="verse-num">21</span> 여호와께서 그들 앞에서 가시며 낮에는 구름 기둥으로 그들의 길을 인도하시고 밤에는 불 기둥을 그들에게 비추사 낮이나 밤이나 진행하게 하시니</div>
+        <div class="verse"><span class="verse-num">22</span> 낮에는 구름 기둥, 밤에는 불 기둥이 백성 앞에서 떠나지 아니하니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

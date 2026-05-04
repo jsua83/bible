@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 007</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 007</h1>
+        <p class="sub-title">찬송가 340장 어지러운 세상 중에</p>
+        <p class="sub-title">창세기 18~21장 — 아브라함, 복의 통로 / 회개할 기회</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 340장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1-XB2CVSF6_EvNWvbUljm9Fk0kWWlQ3_S" alt="찬송가 340장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 창세기 18장~21장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 아브라함 '개인'과 그의 '가정'을 택하신 이유는 의와 공도의 '나라'를 세우시기 위함이었습니다.</span>
+            하나님께서 아브라함을 선택하신 이유는 <strong>아브라함을 통해 의와 공도의 '나라'를 세우고자 하심</strong>이었습니다(창 18:19). 그리고 하나님의 계획인 '의와 공도의 나라'를 위해 <strong>이삭은 태어난 지 8일째 되던 날 할례를 통해 믿음을 학습받기 시작했습니다.</strong> 이삭은 아버지 아브라함의 충분한 사랑을 받으며 자랐습니다. 그리고 아버지로부터 하나님께 올려드리는 제사, 번제를 잘 배웠습니다.<br><br>
+            그렇게 이삭은 청소년이 되기까지 하나님의 계획에 따라 <strong>'모리아산 번제 시험'을 치를 수 있는 자로 준비되고 있었습니다.</strong>
+            <div class="quote">
+                <strong>신실하신 하나님께서는 '하나님의 때에 하나님의 사람을 통해서, 하나님의 일'을 하십니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님께서는 인생들에게 회개할 기회를 주시기 위해 심판을 유보하고 싶어 하십니다.</span>
+            소돔과 고모라의 멸망을 아브라함보다 <strong>더 막고 싶으셨던 분은 하나님</strong>이십니다. 소돔과 고모라 성 안에서 의인을 찾으면 멸하지 않겠다고 한 번, 두 번, 세 번 거듭 말씀하시는 하나님의 대답 속에서, <strong>할 수만 있다면 심판을 유보하고 싶어 하시는 하나님의 마음</strong>을 충분히 짐작할 수 있습니다(창 18:16~33). 이는 그들에게까지도 <strong>회개할 기회를 주시고자 함</strong>입니다.<br><br>
+            아브라함은 소돔과 고모라를 구하기 위해 하나님께 기도하며 하나님을 '주'라 부릅니다. 여기에서 '주'는 주권자, 통치자라는 뜻으로, <strong>아브라함이 하나님의 주권을 철저히 인정하고 있음</strong>을 보여줍니다. 그리고 아브라함은 하나님 앞에서 자신을 <strong>'티끌이나 재'와 같다</strong>고 낮춥니다(창 18:27). '티끌'은 히브리어로 '아팔 와에펠'인데, 이는 자신의 존재 가치를 철저히 부정하는 <strong>최대의 겸손</strong>을 나타내는 것입니다.<br><br>
+            그러나 하나님과 아브라함의 거듭되는 안타까운 대화에도 불구하고, 결국 소돔과 고모라는 공의의 하나님으로부터 그들의 죄에 대해 처벌을 받게 됩니다. <strong>소돔과 고모라가 멸망할 때, 하나님께서는 아브라함을 생각하사 소돔에 살던 롯과 그 가족을 구해 주십니다.</strong><br><br>
+            이때 <strong>롯 가족이 내린 세 가지 어리석은 선택</strong>이 성경에 기록되어 있습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 롯의 어리석은 선택입니다. 롯은 아버지 같은 아브라함이 양보하며 땅을 먼저 선택하라고 했을 때에, 여호와의 동산 같고 애굽 땅과 같이 보였던 소돔과 고모라를 선택했습니다.<br>
+                <strong>둘째,</strong> 롯의 아내의 어리석은 선택입니다. 롯의 아내는 소돔과 고모라가 멸망할 때 재물에 대한 욕심 때문에 뒤를 돌아보는 선택을 함으로 소금 기둥이 되었습니다.<br>
+                <strong>셋째,</strong> 롯의 두 딸들의 어리석은 선택입니다. 롯의 두 딸들은 소돔과 고모라의 방식을 따라 자손을 보는 어리석은 선택을 했습니다. 이후 큰 딸의 아들은 모압의 조상이 되고, 작은 딸의 아들은 암몬 자손의 조상이 됩니다(창 19:36~38).
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 아브라함의 실수를 하나님께서는 뒷걸음쳐 들어가 덮어 주십니다.</span>
+            아브라함이 <strong>같은 실수를 두 번이나 반복했습니다.</strong> 아브라함이 가나안에 정착해 사는 동안 흉년이 들자, 한 번은 애굽으로, 또 한 번은 블레셋으로 잠시 살기 위해 내려간 적이 있었습니다. 그때마다 아브라함의 가장 큰 걱정은 아름다운 아내 사라였습니다. 그래서 아브라함이 자기 아내를 누이라고 말했던 것입니다.<br><br>
+            아브라함은 애굽 왕 바로와 블레셋의 그랄 왕 아비멜렉에게 <strong>"나의 누이"</strong>라고 말하고 말았습니다. 그런데 사라를 누이라고 속인 것은 더 큰 문제를 일으켰습니다.
+            <div class="quote">
+                <strong>"이곳에서는 하나님을 두려워함이 없으니 내 아내로 말미암아 사람들이 나를 죽일까 생각하였음이요"</strong> (창 20:11)
+            </div>
+            문제가 너무 커지자 <strong>하나님께서 직접 개입하셔서 아브라함의 실수를 뒷걸음쳐 들어가 덮어 주십니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님과 아브라함 가정의 웃음, 그가 바로 이삭입니다.</span>
+            아브라함과 사라의 길고 긴 기다림 끝에 드디어 그 가정이 <strong>이삭이라는 열매</strong>를 얻게 되었습니다. 사라는 처음에 "아들이 있을 것이다"라는 천사의 말을 듣고 속으로 웃었습니다. 그런데 1년 후 정말 사라는 품에 아들을 안고는 <strong>진정한 웃음</strong>을 짓습니다. 그래서 이삭의 이름 뜻이 <strong>"웃음"</strong>입니다.<br><br>
+            하나님께서는 특별히 이삭의 이름과 예수님의 이름을 친히 지어 주셨습니다. 그리고 이삭과 예수님을 정하신 때에 초자연적인 방법으로 이 땅에 태어나게 하셨습니다. 이는 이삭과 예수님을 향한 <strong>하나님의 특별한 뜻과 계획이 있으셨기 때문</strong>입니다.
+            <div class="quote">
+                <strong>그것은 '모리아산 번제'와 '갈보리산 번제'라는 놀라운 하나님의 미래 계획입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하갈에게도 광야 샘물을 보게 하십니다.</span>
+            아브라함 가정에서 이삭이 태어난 일은 정말 기쁘고 감사한 일이었습니다. 그런데 이삭이 태어나기 전에 하갈을 통해 태어난 이스마엘이 문제였습니다. 때문에 하나님께서 이삭의 생명은 귀히 여기시고 이스마엘의 생명은 경히 여기시는지 의문을 가질 수도 있습니다.<br><br>
+            그러나 결코 그렇지 않습니다. <strong>하나님께서는 모든 생명을 하나같이 다 소중히 여기십니다.</strong> 다만 '모든 민족'을 향한 특별한 <strong>'복의 통로'로서의 사명이 이삭에게 있었을 뿐</strong>입니다.<br><br>
+            하나님께서는 이스마엘을 위해 간절하게 우는 하갈에게 <strong>광야에서 샘물을 볼 수 있도록 눈을 밝게 해주십니다.</strong> 그리고 이스마엘에게도 큰 민족을 이루게 하겠다는 약속을 주십니다(창 21:17~19).
+            <div class="quote">
+                <strong>창세기 25장에 나오는 이스마엘의 족보를 통해 하나님께서 이스마엘에게 하신 약속도 신실하게 지키셨다는 사실을 확인할 수 있습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 창세기 18~21장 '아브라함, 복의 통로 / 회개할 기회'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 창세기 18장 -->
+        <div class="chapter-title">창세기 18장 (1~33절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 마므레의 상수리나무들이 있는 곳에서 아브라함에게 나타나시니라 날이 뜨거울 때에 그가 장막 문에 앉아 있다가</div>
+        <div class="verse"><span class="verse-num">2</span> 눈을 들어 본즉 사람 셋이 맞은편에 서 있는지라 그가 그들을 보자 곧 장막 문에서 달려나가 영접하며 몸을 땅에 굽혀</div>
+        <div class="verse"><span class="verse-num">3</span> 이르되 내 주여 내가 주께 은혜를 입었사오면 원하건대 종을 떠나 지나가지 마시옵고</div>
+        <div class="verse"><span class="verse-num">4</span> 물을 조금 가져오게 하사 당신들의 발을 씻으시고 나무 아래에서 쉬소서</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 떡을 조금 가져오리니 당신들의 마음을 상쾌하게 하신 후에 지나가소서 당신들이 종에게 오셨음이니이다 그들이 이르되 네 말대로 그리하라</div>
+        <div class="verse"><span class="verse-num">6</span> 아브라함이 급히 장막으로 가서 사라에게 이르되 속히 고운 가루 세 스아를 가져다가 반죽하여 떡을 만들라 하고</div>
+        <div class="verse"><span class="verse-num">7</span> 아브라함이 또 가축 떼 있는 곳으로 달려가서 기름지고 좋은 송아지를 잡아 하인에게 주니 그가 급히 요리한지라</div>
+        <div class="verse"><span class="verse-num">8</span> 아브라함이 엉긴 젖과 우유와 하인이 요리한 송아지를 가져다가 그들 앞에 차려 놓고 나무 아래에 모셔 서매 그들이 먹으니라</div>
+        <div class="verse"><span class="verse-num">9</span> 그들이 아브라함에게 이르되 네 아내 사라가 어디 있느냐 대답하되 장막에 있나이다</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 이르시되 내년 이맘때 내가 반드시 네게로 돌아오리니 네 아내 사라에게 아들이 있으리라 하시니 사라가 그 뒤 장막 문에서 들었더라</div>
+        <div class="verse"><span class="verse-num">11</span> 아브라함과 사라는 나이가 많아 늙었고 사라에게는 여성의 생리가 끊어졌는지라</div>
+        <div class="verse"><span class="verse-num">12</span> 사라가 속으로 웃고 이르되 내가 노쇠하였고 내 주인도 늙었으니 내게 무슨 즐거움이 있으리요</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와께서 아브라함에게 이르시되 사라가 왜 웃으며 이르기를 내가 늙었거늘 어떻게 아들을 낳으리요 하느냐</div>
+        <div class="verse"><span class="verse-num">14</span> 여호와께 능하지 못한 일이 있겠느냐 기한이 이를 때에 내가 네게로 돌아오리니 사라에게 아들이 있으리라</div>
+        <div class="verse"><span class="verse-num">15</span> 사라가 두려워서 부인하여 이르되 내가 웃지 아니하였나이다 이르시되 아니라 네가 웃었느니라</div>
+        <div class="verse"><span class="verse-num">16</span> 그 사람들이 거기서 일어나서 소돔으로 향하고 아브라함은 그들을 전송하러 함께 나가니라</div>
+        <div class="verse"><span class="verse-num">17</span> 여호와께서 이르시되 내가 하려는 것을 아브라함에게 숨기겠느냐</div>
+        <div class="verse"><span class="verse-num">18</span> 아브라함은 강대한 나라가 되고 천하 만민은 그로 말미암아 복을 받게 될 것이 아니냐</div>
+        <div class="verse"><span class="verse-num">19</span> 내가 그로 그 자식과 권속에게 명하여 여호와의 도를 지켜 의와 공도를 행하게 하려고 그를 택하였나니 이는 나 여호와가 아브라함에게 대하여 말한 일을 이루려 함이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와께서 또 이르시되 소돔과 고모라에 대한 부르짖음이 크고 그 죄악이 심히 무거우니</div>
+        <div class="verse"><span class="verse-num">21</span> 내가 이제 내려가서 그 모든 행한 것이 과연 내게 들린 부르짖음과 같은지 그렇지 않은지 내가 보고 알려 하노라</div>
+        <div class="verse"><span class="verse-num">22</span> 그 사람들이 거기서 떠나 소돔으로 향하여 가고 아브라함은 여호와 앞에 그대로 섰더니</div>
+        <div class="verse"><span class="verse-num">23</span> 아브라함이 가까이 나아가 이르되 주께서 의인을 악인과 함께 멸하려 하시나이까</div>
+        <div class="verse"><span class="verse-num">24</span> 그 성 중에 의인 오십 명이 있을지라도 주께서 그 곳을 멸하시고 그 오십 의인을 위하여 용서하지 아니하시리이까</div>
+        <div class="verse"><span class="verse-num">25</span> 주께서 이같이 하사 의인을 악인과 함께 죽이심은 부당하오며 의인과 악인을 같이 하심도 부당하니이다 세상을 심판하시는 이가 정의를 행하실 것이 아니니이까</div>
+        <div class="verse"><span class="verse-num">26</span> 여호와께서 이르시되 내가 만일 소돔 성읍 가운데에서 의인 오십 명을 찾으면 그들을 위하여 온 지역을 용서하리라</div>
+        <div class="verse"><span class="verse-num">27</span> 아브라함이 대답하여 이르되 나는 티끌이나 재와 같사오나 감히 주께 아뢰나이다</div>
+        <div class="verse"><span class="verse-num">28</span> 오십 의인 중에 오 명이 부족하다면 그 오 명이 부족함으로 말미암아 온 성읍을 멸하시리이까 이르시되 내가 거기서 사십오 명을 찾으면 멸하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">29</span> 아브라함이 또 아뢰어 이르되 거기서 사십 명을 찾으시면 어찌 하려 하시나이까 이르시되 사십 명으로 말미암아 멸하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">30</span> 아브라함이 이르되 내 주여 노하지 마시옵고 말씀하게 하옵소서 거기서 삼십 명을 찾으시면 어찌 하려 하시나이까 이르시되 내가 거기서 삼십 명을 찾으면 그리하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">31</span> 아브라함이 또 이르되 내가 감히 내 주께 아뢰나이다 거기서 이십 명을 찾으시면 어찌 하려 하시나이까 이르시되 내가 이십 명으로 말미암아 그리하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">32</span> 아브라함이 또 이르되 주는 노하지 마옵소서 내가 이번만 더 아뢰리이다 거기서 십 명을 찾으시면 어찌 하려 하시나이까 이르시되 내가 십 명으로 말미암아 멸하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">33</span> 여호와께서 아브라함과 말씀을 마치시고 가시니 아브라함도 자기 곳으로 돌아갔더라</div>
+
+        <!-- 창세기 19장 -->
+        <div class="chapter-title">창세기 19장 (1~38절)</div>
+        <div class="verse"><span class="verse-num">1</span> 저녁 때에 그 두 천사가 소돔에 이르니 마침 롯이 소돔 성문에 앉아 있다가 그들을 보고 일어나 영접하고 땅에 엎드려 절하며</div>
+        <div class="verse"><span class="verse-num">2</span> 이르되 내 주여 돌이켜 종의 집으로 들어와 발을 씻고 주무시고 일찍이 일어나 갈 길을 가소서 그들이 이르되 아니라 우리가 거리에서 밤을 새우리라</div>
+        <div class="verse"><span class="verse-num">3</span> 롯이 간청하매 그제서야 돌이켜 그 집으로 들어오는지라 롯이 그들을 위하여 식탁을 베풀고 무교병을 구우니 그들이 먹으니라</div>
+        <div class="verse"><span class="verse-num">4</span> 그들이 눕기 전에 그 성 사람 곧 소돔 백성들이 노소를 막론하고 원근에서 다 모여 그 집을 에워싸고</div>
+        <div class="verse"><span class="verse-num">5</span> 롯을 부르고 그에게 이르되 오늘 밤에 네게 온 사람들이 어디 있느냐 이끌어 내라 우리가 그들을 상관하리라</div>
+        <div class="verse"><span class="verse-num">6</span> 롯이 문 밖의 무리에게로 나가서 뒤로 문을 닫고</div>
+        <div class="verse"><span class="verse-num">7</span> 이르되 청하노니 내 형제들아 이런 악을 행하지 말라</div>
+        <div class="verse"><span class="verse-num">8</span> 내게 남자를 가까이 하지 아니한 두 딸이 있노라 청하건대 내가 그들을 너희에게로 이끌어 내리니 너희 눈에 좋을 대로 그들에게 행하고 이 사람들은 내 집에 들어왔은즉 이 사람들에게는 아무 일도 저지르지 말라</div>
+        <div class="verse"><span class="verse-num">9</span> 그들이 이르되 너는 물러나라 또 이르되 이 자가 들어와서 거류하면서 우리의 법관이 되려 하는도다 이제 우리가 그들보다 너를 더 해하리라 하고 롯을 밀치며 가까이 가서 그 문을 부수려고 하는지라</div>
+        <div class="verse"><span class="verse-num">10</span> 그 사람들이 손을 내밀어 롯을 집으로 끌어들이고 문을 닫고</div>
+        <div class="verse"><span class="verse-num">11</span> 문 밖의 무리를 대소를 막론하고 그 눈을 어둡게 하니 그들이 문을 찾느라고 헤매었더라</div>
+        <div class="verse"><span class="verse-num">12</span> 그 사람들이 롯에게 이르되 이 외에 네게 속한 자가 또 있느냐 네 사위나 자녀나 성 중에 네게 속한 자들을 다 성 밖으로 이끌어 내라</div>
+        <div class="verse"><span class="verse-num">13</span> 그들에 대한 부르짖음이 여호와 앞에 크므로 여호와께서 이 곳을 멸하시려고 우리를 보내셨나니 우리가 멸하리라</div>
+        <div class="verse"><span class="verse-num">14</span> 롯이 나가서 그 딸들과 결혼할 사위들에게 말하여 이르기를 여호와께서 이 성을 멸하실 터이니 너희는 일어나 이 곳에서 떠나라 하되 그의 사위들은 농담으로 여겼더라</div>
+        <div class="verse"><span class="verse-num">15</span> 동틀 때에 천사가 롯을 재촉하여 이르되 일어나 여기 있는 네 아내와 두 딸을 이끌어 내라 이 성의 죄악 중에 함께 멸망할까 하노라</div>
+        <div class="verse"><span class="verse-num">16</span> 그러나 롯이 지체하매 그 사람들이 롯의 손과 그 아내의 손과 두 딸의 손을 잡아 인도하여 성 밖에 두니 여호와께서 그에게 자비를 더하심이었더라</div>
+        <div class="verse"><span class="verse-num">17</span> 그 사람들이 그들을 밖으로 이끌어 낸 후에 이르되 도망하여 생명을 보존하라 돌아보거나 들에 머물지 말고 산으로 도망하여 멸망함을 면하라</div>
+        <div class="verse"><span class="verse-num">18</span> 롯이 그들에게 이르되 내 주여 그리 마옵소서</div>
+        <div class="verse"><span class="verse-num">19</span> 주의 종이 주께 은혜를 입었고 주께서 큰 인자를 내게 베푸사 내 생명을 구원하시오나 내가 도망하여 산에까지 갈 수 없나이다 두렵건대 재앙을 만나 죽을까 하나이다</div>
+        <div class="verse"><span class="verse-num">20</span> 보소서 저 성읍은 도망하기에 가깝고 작기도 하오니 나를 그 곳으로 도망하게 하소서 이는 작은 성읍이 아니니이까 내 생명이 보존되리이다</div>
+        <div class="verse"><span class="verse-num">21</span> 그가 그에게 이르되 내가 이 일에도 네 소원을 들었은즉 네가 말하는 그 성읍을 멸하지 아니하리니</div>
+        <div class="verse"><span class="verse-num">22</span> 그리로 속히 도망하라 네가 거기 이르기까지는 내가 아무 일도 행할 수 없노라 하였더라 그러므로 그 성읍 이름을 소알이라 불렀더라</div>
+        <div class="verse"><span class="verse-num">23</span> 롯이 소알에 들어갈 때에 해가 돋았더라</div>
+        <div class="verse"><span class="verse-num">24</span> 여호와께서 하늘 곧 여호와께로부터 유황과 불을 소돔과 고모라에 비같이 내리사</div>
+        <div class="verse"><span class="verse-num">25</span> 그 성들과 온 들과 성에 거주하는 모든 백성과 땅에 난 것을 다 엎어 멸하셨더라</div>
+        <div class="verse"><span class="verse-num">26</span> 롯의 아내는 뒤를 돌아보았으므로 소금 기둥이 되었더라</div>
+        <div class="verse"><span class="verse-num">27</span> 아브라함이 그 아침에 일찍이 일어나 여호와 앞에 서 있던 곳에 이르러</div>
+        <div class="verse"><span class="verse-num">28</span> 소돔과 고모라와 그 온 지역을 향하여 눈을 들어 연기가 옹기 가마의 연기같이 치솟음을 보았더라</div>
+        <div class="verse"><span class="verse-num">29</span> 하나님이 그 지역의 성을 멸하실 때 곧 롯이 거주하는 성을 엎으실 때에 하나님이 아브라함을 생각하사 롯을 그 엎으시는 중에서 내보내셨더라</div>
+        <div class="verse"><span class="verse-num">30</span> 롯이 소알에 거주하기를 두려워하여 두 딸과 함께 소알에서 나와 산에 올라가 거주하되 그 두 딸과 함께 굴에 거주하였더니</div>
+        <div class="verse"><span class="verse-num">31</span> 큰 딸이 작은 딸에게 이르되 우리 아버지는 늙으셨고 온 세상의 도리를 따라 우리의 배필 될 사람이 이 땅에는 없으니</div>
+        <div class="verse"><span class="verse-num">32</span> 우리가 우리 아버지에게 술을 마시게 하고 동침하여 우리 아버지로 말미암아 후손을 이어가자 하고</div>
+        <div class="verse"><span class="verse-num">33</span> 그 밤에 그들이 아버지에게 술을 마시게 하고 큰 딸이 들어가서 그 아버지와 동침하니라 그러나 그 아버지는 그 딸이 눕고 일어나는 것을 깨닫지 못하였더라</div>
+        <div class="verse"><span class="verse-num">34</span> 이튿날 큰 딸이 작은 딸에게 이르되 어제 밤에는 내가 우리 아버지와 동침하였으니 오늘 밤에도 우리가 아버지에게 술을 마시게 하고 네가 들어가 동침하고 우리가 아버지로 말미암아 후손을 이어가자 하고</div>
+        <div class="verse"><span class="verse-num">35</span> 그 밤에도 그들이 아버지에게 술을 마시게 하고 작은 딸이 일어나 아버지와 동침하니라 그러나 아버지는 그 딸이 눕고 일어나는 것을 깨닫지 못하였더라</div>
+        <div class="verse"><span class="verse-num">36</span> 롯의 두 딸이 아버지로 말미암아 임신하고</div>
+        <div class="verse"><span class="verse-num">37</span> 큰 딸은 아들을 낳아 이름을 모압이라 하였으니 오늘날 모압의 조상이요</div>
+        <div class="verse"><span class="verse-num">38</span> 작은 딸도 아들을 낳아 이름을 벤암미라 하였으니 오늘날 암몬 자손의 조상이었더라</div>
+
+        <!-- 창세기 20장 -->
+        <div class="chapter-title">창세기 20장 (1~18절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아브라함이 거기서 네게브 땅으로 옮겨가 가데스와 술 사이 그랄에 거류하며</div>
+        <div class="verse"><span class="verse-num">2</span> 그의 아내 사라를 자기 누이라 하였으므로 그랄 왕 아비멜렉이 사람을 보내어 사라를 데려갔더니</div>
+        <div class="verse"><span class="verse-num">3</span> 그 밤에 하나님이 아비멜렉에게 현몽하시고 그에게 이르시되 네가 데려간 이 여인으로 말미암아 네가 죽으리니 그는 남편이 있는 여자임이라</div>
+        <div class="verse"><span class="verse-num">4</span> 아비멜렉이 그 여인을 가까이 하지 아니하였으므로 그가 대답하되 주여 주께서 의로운 백성도 멸하시나이까</div>
+        <div class="verse"><span class="verse-num">5</span> 그가 나에게 이는 내 누이라고 하지 아니하였나이까 그 여인도 그는 내 오라비라 하였사오니 나는 온전한 마음과 깨끗한 손으로 이렇게 하였나이다</div>
+        <div class="verse"><span class="verse-num">6</span> 하나님이 꿈에 또 그에게 이르시되 네가 온전한 마음으로 이렇게 한 줄을 나도 알았으므로 너를 막아 내게 범죄하지 아니하게 하였나니 여인에게 가까이 하지 못하게 함이 이 때문이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 이제 그 사람의 아내를 돌려보내라 그는 선지자라 그가 너를 위하여 기도하리니 네가 살려니와 네가 돌려보내지 아니하면 너와 네게 속한 자가 다 반드시 죽을 줄 알지니라</div>
+        <div class="verse"><span class="verse-num">8</span> 아비멜렉이 그 날 아침에 일찍이 일어나 모든 종들을 불러 그 모든 일을 말하여 들려 주니 그들이 심히 두려워하였더라</div>
+        <div class="verse"><span class="verse-num">9</span> 아비멜렉이 아브라함을 불러서 그에게 이르되 네가 어찌하여 우리에게 이렇게 하느냐 내가 무슨 죄를 네게 범하였기에 네가 나와 내 나라가 큰 죄에 빠질 뻔하게 하였느냐 네가 합당하지 아니한 일을 내게 행하였도다 하고</div>
+        <div class="verse"><span class="verse-num">10</span> 아비멜렉이 또 아브라함에게 이르되 네가 무슨 뜻으로 이렇게 하였느냐</div>
+        <div class="verse"><span class="verse-num">11</span> 아브라함이 이르되 이 곳에서는 하나님을 두려워함이 없으니 내 아내로 말미암아 사람들이 나를 죽일까 생각하였음이요</div>
+        <div class="verse"><span class="verse-num">12</span> 또 그는 정말로 나의 이복 누이로서 내 아내가 되었음이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 하나님이 나를 내 아버지의 집을 떠나 두루 다니게 하실 때에 내가 아내에게 말하기를 이 후로 우리의 가는 곳마다 그대는 나를 그대의 오라비라 하라 이것이 그대가 내게 베풀 은혜라 하였었노라</div>
+        <div class="verse"><span class="verse-num">14</span> 아비멜렉이 양과 소와 종들을 이끌어 아브라함에게 주고 그의 아내 사라도 그에게 돌려보내고</div>
+        <div class="verse"><span class="verse-num">15</span> 아브라함에게 이르되 내 땅이 네 앞에 있으니 네가 보기에 좋은 대로 거주하라 하고</div>
+        <div class="verse"><span class="verse-num">16</span> 사라에게 이르되 내가 은 천 개를 네 오라비에게 주어서 그것으로 너와 함께 한 여러 사람 앞에서 네 수치를 가리게 하였노니 네 일이 다 해결되었느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 아브라함이 하나님께 기도하매 하나님이 아비멜렉과 그의 아내와 여종을 치료하사 출산하게 하셨으니</div>
+        <div class="verse"><span class="verse-num">18</span> 여호와께서 이왕에 아브라함의 아내 사라의 일로 아비멜렉의 집의 모든 태를 닫으셨음이더라</div>
+
+        <!-- 창세기 21장 -->
+        <div class="chapter-title">창세기 21장 (1~34절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 말씀하신 대로 사라를 돌보셨고 여호와께서 말씀하신 대로 사라에게 행하셨으므로</div>
+        <div class="verse"><span class="verse-num">2</span> 사라가 임신하고 하나님이 말씀하신 시기가 되어 노년의 아브라함에게 아들을 낳으니</div>
+        <div class="verse"><span class="verse-num">3</span> 아브라함이 그에게 태어난 아들 곧 사라가 자기에게 낳은 아들을 이름하여 이삭이라 하였고</div>
+        <div class="verse"><span class="verse-num">4</span> 그 아들 이삭이 난 지 팔 일 만에 그가 하나님이 명령하신 대로 할례를 행하였더라</div>
+        <div class="verse"><span class="verse-num">5</span> 아브라함이 그의 아들 이삭이 그에게 태어날 때에 백 세라</div>
+        <div class="verse"><span class="verse-num">6</span> 사라가 이르되 하나님이 나를 웃게 하시니 듣는 자가 다 나와 함께 웃으리로다</div>
+        <div class="verse"><span class="verse-num">7</span> 또 이르되 사라가 자식들을 젖먹이겠다고 누가 아브라함에게 말하였으리요마는 아브라함의 노경에 내가 아들을 낳았도다 하니라</div>
+        <div class="verse"><span class="verse-num">8</span> 아이가 자라매 젖을 떼고 이삭이 젖을 떼는 날에 아브라함이 큰 잔치를 베풀었더라</div>
+        <div class="verse"><span class="verse-num">9</span> 사라가 본즉 아브라함의 아들 애굽 여인 하갈의 아들이 이삭을 놀리는지라</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 아브라함에게 이르되 이 여종과 그 아들을 내쫓으라 이 종의 아들은 내 아들 이삭과 함께 기업을 얻지 못하리라 하므로</div>
+        <div class="verse"><span class="verse-num">11</span> 아브라함이 그의 아들로 말미암아 그 일이 매우 근심이 되었더니</div>
+        <div class="verse"><span class="verse-num">12</span> 하나님이 아브라함에게 이르시되 네 아이나 네 여종으로 말미암아 근심하지 말고 사라가 네게 이른 말을 다 들으라 이삭에게서 나는 자라야 네 씨라 부를 것임이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그러나 여종의 아들도 네 씨니 내가 그로 한 민족을 이루게 하리라 하신지라</div>
+        <div class="verse"><span class="verse-num">14</span> 아브라함이 아침에 일찍이 일어나 떡과 물 한 가죽부대를 가져다가 하갈의 어깨에 메워 주고 그 아이를 데리고 가게 하니 하갈이 나가서 브엘세바 광야에서 방황하더니</div>
+        <div class="verse"><span class="verse-num">15</span> 가죽부대의 물이 떨어진지라 그 자식을 관목덤불 아래에 두고</div>
+        <div class="verse"><span class="verse-num">16</span> 이르되 아이가 죽는 것을 차마 보지 못하겠다 하고 화살 한 바탕 거리 떨어져 마주 앉아 바라보며 소리 내어 우니</div>
+        <div class="verse"><span class="verse-num">17</span> 하나님이 그 어린 아이의 소리를 들으셨으므로 하나님의 사자가 하늘에서부터 하갈을 불러 이르시되 하갈아 무슨 일이냐 두려워하지 말라 하나님이 저기 있는 아이의 소리를 들으셨나니</div>
+        <div class="verse"><span class="verse-num">18</span> 일어나 아이를 일으켜 네 손으로 붙들라 그가 큰 민족을 이루게 하리라 하시니라</div>
+        <div class="verse"><span class="verse-num">19</span> 하나님이 하갈의 눈을 밝히셨으므로 샘물을 보고 가서 가죽부대에 물을 채워다가 그 아이에게 마시게 하였더라</div>
+        <div class="verse"><span class="verse-num">20</span> 하나님이 그 아이와 함께 계시매 그가 장성하여 광야에서 거주하며 활 쏘는 자가 되었더니</div>
+        <div class="verse"><span class="verse-num">21</span> 그가 바란 광야에 거주할 때에 그의 어머니가 그를 위하여 애굽 땅에서 아내를 얻어 주었더라</div>
+        <div class="verse"><span class="verse-num">22</span> 그 때에 아비멜렉과 그 군대 장관 비골이 아브라함에게 말하여 이르되 네가 무슨 일을 하든지 하나님이 너와 함께 계시도다</div>
+        <div class="verse"><span class="verse-num">23</span> 그런즉 너는 나와 내 아들과 내 손자에게 거짓되이 행하지 아니하기를 이제 여기서 하나님을 가리켜 내게 맹세하라 내가 네게 후대한 대로 너도 나와 네가 머무는 이 땅에 행할 것이니라</div>
+        <div class="verse"><span class="verse-num">24</span> 아브라함이 이르되 내가 맹세하리라 하고</div>
+        <div class="verse"><span class="verse-num">25</span> 아비멜렉의 종들이 아브라함의 우물을 빼앗은 일에 관하여 아브라함이 아비멜렉을 책망하매</div>
+        <div class="verse"><span class="verse-num">26</span> 아비멜렉이 이르되 누가 그리하였는지 내가 알지 못하노라 너도 내게 알리지 아니하였고 나도 듣지 못하였더니 오늘에야 들었노라</div>
+        <div class="verse"><span class="verse-num">27</span> 아브라함이 양과 소를 가져다가 아비멜렉에게 주고 두 사람이 서로 언약을 세우니라</div>
+        <div class="verse"><span class="verse-num">28</span> 아브라함이 일곱 암양 새끼를 따로 놓으니</div>
+        <div class="verse"><span class="verse-num">29</span> 아비멜렉이 아브라함에게 이르되 이 일곱 암양 새끼를 따로 놓음은 어찜이냐</div>
+        <div class="verse"><span class="verse-num">30</span> 아브라함이 이르되 너는 내 손에서 이 암양 새끼 일곱을 받아 내가 이 우물 판 증거를 삼으라 하고</div>
+        <div class="verse"><span class="verse-num">31</span> 두 사람이 거기서 서로 맹세하였으므로 그 곳을 브엘세바라 이름하였더라</div>
+        <div class="verse"><span class="verse-num">32</span> 그들이 브엘세바에서 언약을 세우매 아비멜렉과 그 군대 장관 비골은 떠나 블레셋 사람의 땅으로 돌아갔고</div>
+        <div class="verse"><span class="verse-num">33</span> 아브라함은 브엘세바에 에셀 나무를 심고 거기서 영원하신 하나님 여호와의 이름을 불렀으며</div>
+        <div class="verse"><span class="verse-num">34</span> 그가 블레셋 사람의 땅에서 여러 날을 지냈더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

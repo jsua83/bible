@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 032</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 032</h1>
+        <p class="sub-title">찬송가 208장 내 주의 나라와</p>
+        <p class="sub-title">출애굽기 39~40장 — 손으로 지은 성막 / 대장정 끝에 성막의 완성</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 208장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1lcRDOMMrtfZlYyRyqmZJmdHWJSalFU5l" alt="찬송가 208장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 출애굽기 39장~40장<br>'손으로 지은 성막 / 대장정 끝에 성막의 완성'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 손으로 지은 성막, 약 6개월 만에 완성됩니다.</span>
+            출애굽한 지 1년 만에, 그리고 시내 광야에서 성막 제작을 시작한 지 <strong>약 6개월 만에 성막 건축이 모두 완성됩니다</strong>(출 39:32). 성막 제작이 완성된 것은 하나님께서 주신 설계도와 그 설계도를 한 치의 오차도 없이 전달한 모세, 그리고 그 설계도대로 혼신의 힘을 다해 제작에 임한 브살렐, 오홀리압, 이다말, 또 마음이 지혜로운 사람들의 협력과, 마지막으로 <strong>온 이스라엘 백성이 자원하는 마음으로 드린 예물</strong>, 이 모든 것이 합쳐진 아름다운 결과였습니다.<br><br>
+            하나님께서는 애굽에서의 첫 번째 유월절 때에 이렇게 말씀하셨습니다.
+            <div class="quote">
+                <strong>"이 달을 너희에게 달의 시작, 곧 해의 첫 달이 되게 하고"</strong> (출 12:2)
+            </div>
+            그래서 그 첫 번째 유월절을 시작으로 <strong>1년 만인 둘째 해 첫째 달에 완료된 것</strong>입니다.
+            <div class="quote">
+                <strong>시내산에서 손으로 지은 성막은 이후 손으로 지은 예루살렘 성전으로, 그리고 마침내 손으로 짓지 아니한 성소인 예수님의 십자가로 이어집니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님의 반복은 강조입니다. "여호와께서 명령하신 대로 다 행하였더라."</span>
+            하나님께서는 창세기 1장에서 <strong>"보시기에 좋았더라"</strong>라는 말씀을 일곱 번이나 반복하시며 얼마나 좋으셨는지를 강조하셨습니다. 출애굽기 39장과 40장에는 <strong>"명령하신 대로"가 18번 등장합니다.</strong> 이 말씀은 정말 들어도 들어도 가슴 설레게 합니다.<br><br>
+            예수님에 관한 복된 소식인 사복음서에서는 <strong>"기록된 바, 기록되었으되, 기록하였고"가 40여 회나 등장</strong>하는데, 이는 구약 성경 39권의 모든 기록을 말합니다.
+            <div class="quote">
+                <strong>하나님께서 반복하며 강조하신 말씀이 무엇인지 집중하여 언제, 어디서든, 어떻게 해서든, 백 번이고 천 번이고 끝까지 반복하며 순종하는 사람이 바로 하나님의 사람입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 모세의 확인 "굿(Good)!"과 함께 이스라엘 백성들의 환호성이 터집니다.</span>
+            이스라엘 백성들은 부끄러웠던 금송아지 사건을 뒤로 하고 다시 하나님 앞에 바로 서서 <strong>최선을 다해 성막 제작에 힘을 모았습니다.</strong> 모세가 하나하나 꼼꼼하게 점검하는 동안 이스라엘 백성들, 특히 브살렐과 오홀리압, 그리고 이다말의 손에는 <strong>땀이 흥건하게 되었을 것</strong>입니다.<br><br>
+            마침내 <strong>모세가 "굿(Good! 모두 잘 됐어!)"이라고 말하는 그 순간!</strong> 온 백성이 서로 얼싸안고 환호성을 터뜨렸을 것입니다. 모세가 온 이스라엘 백성들을 축복합니다(출 39:42~43).
+            <div class="quote">
+                <strong>하늘의 하나님께서도 기쁨을 이기지 못하셨을 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 제사를 위한 세 가지 준비 중 하나, 성막이 완성됩니다.</span>
+            하나님께 올려드리는 제사가 아니면 하나님과 인간들 사이에 있는 담, 곧 <strong>인간들의 죄로 인해 막힌 담은 어찌할 방도가 없습니다.</strong> 하나님께서 제사를 통해 <strong>사죄의 통로를 열어주신 것</strong>입니다. 하나님께서는 그 놀라운 용서의 길을 <strong>5가지 제사로 주셨습니다.</strong><br><br>
+            5대 제사는 반드시 세 가지 방법으로 드려야 했습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 하나님의 이름을 두려고 택하신 곳에서<br>
+                <strong>둘째,</strong> 제사장의 도움을 받아<br>
+                <strong>셋째,</strong> 재물을 가지고 나아가야 했습니다.
+            </div>
+            그러므로 <strong>성막이 완성되었다는 것은 하나님의 이름을 두려고 택하신 곳이 완성되었다</strong>는 것입니다. 이곳에서 제사를 통해 하나님을 만나면 이스라엘 백성들은 하나님께 죄를 용서받고 이웃 간의 나눔이 생기며 <strong>모든 민족과 평화를 누릴 수 있는 명실상부한 제사장 나라 거룩한 시민이 됩니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 여호와의 영광이 성막에 충만합니다.</span>
+            이스라엘 백성들이 시내산에서 처음 하나님과 제사장 나라 거룩한 시민 언약을 체결할 때에는 하나님이 너무 두려웠습니다. 그래서 그들은 하나님께서 모세에게 말씀하시고 자신들은 모세를 통해 듣게 해달라고 말했습니다.<br><br>
+            그런데 성막을 세운 후부터 <strong>구름이 회막에 덮이고 여호와의 영광이 성막에 충만해집니다.</strong> 낮에는 여호와의 구름이 성막 위에 있고, 밤에는 불이 그 구름 가운데 있어 이스라엘 백성들이 눈으로 볼 수 있도록 하셨습니다(출 40:38).
+            <div class="quote">
+                <strong>그들은 그들의 눈으로 여호와의 영광을 밤낮으로 체험합니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 출애굽기 39~40장 '손으로 지은 성막 / 대장정 끝에 성막의 완성'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 출애굽기 39장 -->
+        <div class="chapter-title">출애굽기 39장 (1~43절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그들은 여호와께서 모세에게 명령하신 대로 청색 자색 홍색 실로 성소에서 섬길 때 입을 정교한 옷을 만들고 또 아론을 위해 거룩한 옷을 만들었더라</div>
+        <div class="verse"><span class="verse-num">2</span> 그는 또 금 실과 청색 자색 홍색 실과 가늘게 꼰 베 실로 에봇을 만들었으되</div>
+        <div class="verse"><span class="verse-num">3</span> 금을 얇게 쳐서 오려서 실을 만들어 청색 자색 홍색 실과 가는 베 실에 섞어 정교하게 짜고</div>
+        <div class="verse"><span class="verse-num">4</span> 에봇에는 어깨받이를 만들어 그 두 끝에 달아 서로 연결되게 하고</div>
+        <div class="verse"><span class="verse-num">5</span> 에봇 위에 에봇을 매는 띠를 에봇과 같은 모양으로 금 실과 청색 자색 홍색 실과 가늘게 꼰 베 실로 에봇에 붙여 짰으니 여호와께서 모세에게 명령하신 대로 하였더라</div>
+        <div class="verse"><span class="verse-num">6</span> 그들은 또 호마노를 깎아 금 테에 물려 도장을 새김 같이 이스라엘의 아들들의 이름을 그것에 새겨</div>
+        <div class="verse"><span class="verse-num">7</span> 에봇 어깨받이에 달아 이스라엘의 아들들을 기념하는 보석을 삼았으니 여호와께서 모세에게 명령하신 대로 하였더라</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 또 흉패를 정교하게 짜되 에봇과 같은 모양으로 금 실과 청색 자색 홍색 실과 가늘게 꼰 베 실로 하였으니</div>
+        <div class="verse"><span class="verse-num">9</span> 그것의 길이가 한 뼘, 너비가 한 뼘으로 네 모가 반듯하고 두 겹이며</div>
+        <div class="verse"><span class="verse-num">10</span> 그것에 네 줄 보석을 물렸으니 곧 홍보석 황옥 녹주옥이 첫 줄이요</div>
+        <div class="verse"><span class="verse-num">11</span> 둘째 줄은 석류석 남보석 홍마노요</div>
+        <div class="verse"><span class="verse-num">12</span> 셋째 줄은 호박 백마노 자수정이요</div>
+        <div class="verse"><span class="verse-num">13</span> 넷째 줄은 녹보석 호마노 벽옥이라 다 금 테에 물렸으니</div>
+        <div class="verse"><span class="verse-num">14</span> 이 보석들은 이스라엘의 아들들의 이름 곧 그들의 이름대로 열둘이라 도장을 새김 같이 그 열두 지파의 각 이름을 새겼으며</div>
+        <div class="verse"><span class="verse-num">15</span> 그들이 또 순금으로 노끈처럼 사슬을 땋아 흉패에 붙이고</div>
+        <div class="verse"><span class="verse-num">16</span> 또 금 테 둘과 금 고리 둘을 만들어 그 두 고리를 흉패 두 끝에 달고</div>
+        <div class="verse"><span class="verse-num">17</span> 그 땋은 두 금 사슬을 흉패 끝 두 고리에 꿰매었으며</div>
+        <div class="verse"><span class="verse-num">18</span> 그 땋은 두 사슬의 다른 두 끝을 에봇 앞 두 어깨받이의 금 테에 매고</div>
+        <div class="verse"><span class="verse-num">19</span> 또 금 고리 둘을 만들어 흉패 두 끝에 달았으니 곧 그 에봇을 마주한 안쪽 가장자리에 달았으며</div>
+        <div class="verse"><span class="verse-num">20</span> 또 금 고리 둘을 만들어 에봇 앞 두 어깨받이 아래 매는 자리 가까운 쪽 곧 정교하게 짠 에봇 띠 위쪽에 달고</div>
+        <div class="verse"><span class="verse-num">21</span> 청색 끈으로 흉패 고리와 에봇 고리에 꿰어 흉패로 정교하게 짠 에봇 띠 위에 붙여서 에봇에서 벗어지지 않게 하였으니 여호와께서 모세에게 명령하신 대로 하였더라</div>
+        <div class="verse"><span class="verse-num">22</span> 그가 에봇 받침 긴 옷을 전부 청색으로 짜서 만들되</div>
+        <div class="verse"><span class="verse-num">23</span> 그 옷의 두 어깨 사이에 구멍을 내고 갑옷 깃 같이 그 구멍 주위에 깃을 짜서 찢어지지 않게 하고</div>
+        <div class="verse"><span class="verse-num">24</span> 청색 자색 홍색 실과 가는 베 실로 그 옷 가장자리에 석류를 수 놓고</div>
+        <div class="verse"><span class="verse-num">25</span> 순금으로 방울을 만들어 그 옷 가장자리로 돌아가며 석류 사이사이에 달되</div>
+        <div class="verse"><span class="verse-num">26</span> 방울과 석류를 서로 간격을 두고 번갈아 그 옷 가장자리로 돌아가며 달았으니 여호와께서 모세에게 명령하신 대로 하였더라</div>
+        <div class="verse"><span class="verse-num">27</span> 그들이 또 직조한 가는 베로 아론과 그의 아들들을 위하여 속옷을 짓고</div>
+        <div class="verse"><span class="verse-num">28</span> 세마포로 두건을 짓고 세마포로 빛난 관을 만들고 가는 베 실로 짜서 세마포 속바지들을 만들고</div>
+        <div class="verse"><span class="verse-num">29</span> 가는 베 실과 청색 자색 홍색 실로 수 놓아 띠를 만들었으니 여호와께서 모세에게 명령하신 대로 하였더라</div>
+        <div class="verse"><span class="verse-num">30</span> 그들이 또 순금으로 거룩한 패를 만들고 도장을 새김 같이 그 위에 '여호와께 성결'이라 새기고</div>
+        <div class="verse"><span class="verse-num">31</span> 그 패를 청색 끈으로 관 전면에 달았으니 여호와께서 모세에게 명령하신 대로 하였더라</div>
+        <div class="verse"><span class="verse-num">32</span> 이스라엘 자손이 이와 같이 성막 곧 회막의 모든 역사를 마치되 여호와께서 모세에게 명령하신 대로 다 행하고</div>
+        <div class="verse"><span class="verse-num">33</span> 그들이 성막을 모세에게로 가져왔으니 곧 막과 그 모든 기구와 그 갈고리들과 그 널판들과 그 띠들과 그 기둥들과 그 받침들과</div>
+        <div class="verse"><span class="verse-num">34</span> 붉은 물을 들인 숫양의 가죽 덮개와 해달의 가죽 덮개와 가리는 휘장과</div>
+        <div class="verse"><span class="verse-num">35</span> 증거궤와 그 채들과 속죄소와</div>
+        <div class="verse"><span class="verse-num">36</span> 상과 그 모든 기구와 진설병과</div>
+        <div class="verse"><span class="verse-num">37</span> 순금 등잔대와 그 잔 곧 벌여놓는 등잔대와 그 모든 기구와 등유와</div>
+        <div class="verse"><span class="verse-num">38</span> 금 제단과 관유와 향기로운 향과 장막 휘장 문과</div>
+        <div class="verse"><span class="verse-num">39</span> 놋 제단과 그 놋 그물과 그 채들과 그 모든 기구와 물두멍과 그 받침과</div>
+        <div class="verse"><span class="verse-num">40</span> 뜰의 포장들과 그 기둥들과 그 받침들과 뜰 문의 휘장과 그 줄들과 그 말뚝들과 성막 곧 회막에서 사용할 모든 기구와</div>
+        <div class="verse"><span class="verse-num">41</span> 성소에서 섬기기 위한 정교한 옷 곧 제사 직분을 행할 때에 입는 제사장 아론의 거룩한 옷과 그의 아들들의 옷이라</div>
+        <div class="verse"><span class="verse-num">42</span> 여호와께서 모세에게 명령하신 대로 이스라엘 자손이 모든 역사를 마치매</div>
+        <div class="verse"><span class="verse-num">43</span> 모세가 그 마친 모든 것을 본즉 여호와께서 명령하신 대로 되었으므로 모세가 그들에게 축복하였더라</div>
+
+        <!-- 출애굽기 40장 -->
+        <div class="chapter-title">출애굽기 40장 (1~38절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 너는 첫째 달 초하루에 성막 곧 회막을 세우고</div>
+        <div class="verse"><span class="verse-num">3</span> 또 증거궤를 들여놓고 또 휘장으로 그 궤를 가리고</div>
+        <div class="verse"><span class="verse-num">4</span> 또 상을 들여놓고 그 위에 물품을 진설하고 등잔대를 들여놓아 불을 켜고</div>
+        <div class="verse"><span class="verse-num">5</span> 또 금 향단을 증거궤 앞에 두고 성막 문에 휘장을 달고</div>
+        <div class="verse"><span class="verse-num">6</span> 또 번제단을 회막의 성막 문 앞에 놓고</div>
+        <div class="verse"><span class="verse-num">7</span> 또 물두멍을 회막과 제단 사이에 놓고 그 속에 물을 담고</div>
+        <div class="verse"><span class="verse-num">8</span> 또 뜰 주위에 포장을 치고 뜰 문에 휘장을 달고</div>
+        <div class="verse"><span class="verse-num">9</span> 또 관유를 가져다가 성막과 그 안에 있는 모든 것에 발라 그것과 그 모든 기구를 거룩하게 하라 그것이 거룩하리라</div>
+        <div class="verse"><span class="verse-num">10</span> 너는 또 번제단과 그 모든 기구에 발라 그 안을 거룩하게 하라 그 제단이 지극히 거룩하리라</div>
+        <div class="verse"><span class="verse-num">11</span> 너는 또 물두멍과 그 받침에 발라 거룩하게 하고</div>
+        <div class="verse"><span class="verse-num">12</span> 너는 또 아론과 그 아들들을 회막 문으로 데려다가 물로 씻기고</div>
+        <div class="verse"><span class="verse-num">13</span> 아론에게 거룩한 옷을 입히고 그에게 기름을 부어 거룩하게 하여 그가 내게 제사장의 직분을 행하게 하라</div>
+        <div class="verse"><span class="verse-num">14</span> 너는 또 그 아들들을 데려다가 그들에게 겉옷을 입히고</div>
+        <div class="verse"><span class="verse-num">15</span> 그 아버지에게 기름을 부음 같이 그들에게도 부어서 그들이 내게 제사장의 직분을 행하게 하라 그들이 기름 부음을 받았은즉 대대로 영영히 제사장이 되리라 하시매</div>
+        <div class="verse"><span class="verse-num">16</span> 모세가 그같이 행하되 곧 여호와께서 자기에게 명령하신 대로 다 행하였더라</div>
+        <div class="verse"><span class="verse-num">17</span> 둘째 해 첫째 달 곧 그 달 초하루에 성막을 세우니라</div>
+        <div class="verse"><span class="verse-num">18</span> 모세가 성막 세우되 그 받침들을 놓고 그 널판들을 세우고 그 띠를 띠우고 그 기둥들을 세우고</div>
+        <div class="verse"><span class="verse-num">19</span> 또 성막 위에 막을 펴고 그 위에 덮개를 덮으니 여호와께서 모세에게 명령하신 대로 되니라</div>
+        <div class="verse"><span class="verse-num">20</span> 그는 또 증거판을 궤 속에 넣고 채를 궤에 꿰고 속죄소를 궤 위에 두고</div>
+        <div class="verse"><span class="verse-num">21</span> 또 그 궤를 성막에 들여놓고 가리개 휘장을 늘어뜨려 그 증거궤를 가리니 여호와께서 모세에게 명령하신 대로 되니라</div>
+        <div class="verse"><span class="verse-num">22</span> 그는 또 회막 안 곧 성막 북쪽으로 휘장 밖에 상을 놓고</div>
+        <div class="verse"><span class="verse-num">23</span> 또 여호와 앞 그 상 위에 떡을 진설하니 여호와께서 모세에게 명령하신 대로 되니라</div>
+        <div class="verse"><span class="verse-num">24</span> 그는 또 회막 안 곧 성막 남쪽에 등잔대를 놓아 상과 마주하게 하고</div>
+        <div class="verse"><span class="verse-num">25</span> 또 여호와 앞에 등잔대에 불을 켜니 여호와께서 모세에게 명령하신 대로 되니라</div>
+        <div class="verse"><span class="verse-num">26</span> 그가 또 금 향단을 회막 안 휘장 앞에 두고</div>
+        <div class="verse"><span class="verse-num">27</span> 그 위에 향기로운 향을 사르니 여호와께서 모세에게 명령하신 대로 되니라</div>
+        <div class="verse"><span class="verse-num">28</span> 그는 또 성막 문에 휘장을 달고</div>
+        <div class="verse"><span class="verse-num">29</span> 또 회막의 성막 문 앞에 번제단을 두고 번제와 소제를 그 위에 드리니 여호와께서 모세에게 명령하신 대로 되니라</div>
+        <div class="verse"><span class="verse-num">30</span> 그는 또 물두멍을 회막과 제단 사이에 두고 거기 씻을 물을 담으니라</div>
+        <div class="verse"><span class="verse-num">31</span> 모세와 아론과 그 아들들이 거기서 수족을 씻되</div>
+        <div class="verse"><span class="verse-num">32</span> 그들이 회막에 들어갈 때와 제단에 가까이 갈 때에 씻었으니 여호와께서 모세에게 명령하신 대로 되니라</div>
+        <div class="verse"><span class="verse-num">33</span> 그는 또 성막과 제단 주위 뜰에 포장을 치고 뜰 문에 휘장을 다니라 모세가 이같이 역사를 마치니</div>
+        <div class="verse"><span class="verse-num">34</span> 구름이 회막에 덮이고 여호와의 영광이 성막에 충만하매</div>
+        <div class="verse"><span class="verse-num">35</span> 모세가 회막에 들어갈 수 없었으니 이는 구름이 회막 위에 덮이고 여호와의 영광이 성막에 충만함이었으며</div>
+        <div class="verse"><span class="verse-num">36</span> 구름이 성막 위에서 떠오를 때에는 이스라엘 자손이 그 모든 행진하는 길에 앞으로 나아갔고</div>
+        <div class="verse"><span class="verse-num">37</span> 구름이 떠오르지 않을 때에는 떠오르는 날까지 나아가지 아니하였으며</div>
+        <div class="verse"><span class="verse-num">38</span> 낮에는 여호와의 구름이 성막 위에 있고 밤에는 불이 그 구름 가운데에 있음을 이스라엘의 온 족속이 그 모든 행진하는 길에서 그들의 눈으로 보았더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 021</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 021</h1>
+        <p class="sub-title">찬송가 21장 다 찬양하여라</p>
+        <p class="sub-title">출애굽기 8~10장 — 모세와 바로의 9차 협상 / 어리석음으로 협상 결렬</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 21장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1jcYZUeC_ppIDxL1u8uJ0mEoaMav5n7vv" alt="찬송가 21장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 출애굽기 8장~10장<br>'모세와 바로의 9차 협상 / 어리석음으로 협상 결렬'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 6개월 동안 하나님의 백성들과 애굽 백성들은 각자의 자리에서 하나님을 알게 됩니다.</span>
+            하나님께서는 모세를 통해 앞으로 '제사장 나라 거룩한 시민'으로 하나님과 동역할 히브리 백성들에게는 <strong>'하나님의 백성'</strong>이라고 말씀하십니다. 그리고 바로에게는 애굽 백성들을 <strong>'너의 백성'</strong>이라고 구분해서 말씀하십니다(출 8:1~4). 이는 하나님께서 애굽 백성들을 차별하시는 것이 아니라 <strong>하나님을 알지 못하는 바로와 애굽 백성들에게 살아계신 하나님을 알려주시기 위함</strong>이었습니다.<br><br>
+            결국 6개월 만에 애굽에서 하나님의 백성들과 애굽 백성들은 각각의 자리에서 하나님을 체험하게 됩니다. 모세 협상의 동력으로 사용하신 <strong>열 가지 재앙, 곧 하나님의 기적</strong>은 다음과 같습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 나일강이 피로 변한 재앙<br>
+                <strong>둘째,</strong> 개구리 재앙<br>
+                <strong>셋째,</strong> 이 재앙<br>
+                <strong>넷째,</strong> 파리 재앙<br>
+                <strong>다섯째,</strong> 가축의 죽음 — 이때부터 재산 손해가 시작됩니다.<br>
+                <strong>여섯째,</strong> 악성 종기 재앙 — 직접적으로 몸의 괴로움이 시작된 것입니다.<br>
+                <strong>일곱째,</strong> 우박 재앙 — 밖에 있던 사람과 짐승은 물론 밭에 모든 채소와 들의 모든 나무가 상함으로 농사지은 것을 거둘 수 없게 됩니다.<br>
+                <strong>여덟째,</strong> 메뚜기 재앙 — 우박 재앙 때 살아남았던 밀과 보리까지 모두 상하게 되므로 먹을 양식이 없어지게 됩니다.<br>
+                <strong>아홉째,</strong> 흑암 재앙 — 흑암이 애굽 온 땅을 덮어 움직일 수 없게 됩니다.<br>
+                <strong>열째,</strong> 장자의 죽음 — 결국 모든 애굽 가정의 장자들이 죽는 재앙을 맞게 됩니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 6개월 동안 바로는 세 번이나 고센 땅 상황을 확인합니다.</span>
+            하나님께서 모세를 통해 행하신 6개월 동안의 재앙은 역사상 볼 수 없었던 일이었습니다. <strong>'내 백성이 거주하는 고센 땅을 구별'</strong>하심으로 하나님을 알게 하겠다고 말씀하셨습니다(출 8:20~23). '구별'은 환난을 받지 않았다는 소극적인 측면보다 <strong>사명을 위해 택함을 받았다는 적극적인 측면</strong>으로 이해되어야 합니다.<br><br>
+            이렇게 땅이 구별되어 애굽에만 나타나던 재앙으로 인해 바로는 사람들을 보내어 고센 땅 상황을 확인합니다.
+            <div class="quote">
+                <strong>첫 번째 확인</strong> — 다섯 번째 재앙인 가축 죽음의 재앙 이후였습니다.<br>
+                <strong>두 번째 확인</strong> — 일곱 번째 재앙인 우박 재앙이 내린 후였습니다.<br>
+                <strong>세 번째 확인</strong> — 아마 열 번째 장자의 죽음 이후였을 것입니다.
+            </div>
+            바로는 열 번째 재앙인 장자의 죽음을 맞닥뜨리면서 <strong>그 밤에 급히 모세와 아론을 부릅니다.</strong> 바로가 만일 고센 땅 히브리 민족 장자들도 죽은 것을 확인했다면 이들을 내보낼 리가 없었을 것입니다.
+            <div class="quote">
+                <strong>바로는 두 손, 두 발 다 들고 출애굽을 허락할 수밖에 없었던 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 바로는 자기 요술사들의 충고도, 자기 신하들의 충고도 다 거절합니다.</span>
+            바로는 모세와 아론을 불러 <strong>눈앞에 보이는 당장의 재앙만 사라지면 될 줄 알고</strong> 모세의 요구를 수용하겠다고 말합니다. 하지만 재앙이 사라지고 조금만 숨 쉴 기회가 주어지면 바로는 <strong>'바로' 말을 바꿉니다.</strong>
+            <div class="quote">
+                <strong>첫 번째</strong> — 개구리 재앙과 파리 재앙 후에 말을 바꿉니다.<br>
+                <strong>두 번째</strong> — 일곱 번째 우박 재앙 후에 말을 바꿉니다.<br>
+                <strong>세 번째</strong> — 여덟 번째 메뚜기 재앙 후에 또다시 말을 바꿉니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님의 선언 — "세계가 다 내게 속하였다!"</span>
+            바로가 말을 바꾸는 동안 하나님께서는 <strong>'중대한 선언'</strong>을 하십니다. 하나님께서 모세를 통해 바로에게 하신 선언입니다.
+            <div class="quote">
+                <strong>"세상이 여호와께 속한 줄을 왕이 알리이다"</strong> (출 9:29)
+            </div>
+            온 세상이 바로의 소유가 아니라 <strong>하나님의 소유</strong>라는 것을 알리고 싶으셨던 것입니다. 모세가 바로를 처음 만나 '3일 길 출애굽 광야 제사'를 드려야 한다고 말했을 때 바로는 <strong>'나는 하나님을 모른다'</strong>는 이유로 모세의 요구를 묵살했습니다.<br><br>
+            그런데 6개월 만에 바로는 모세와 아론을 불러 이렇게 말합니다.
+            <div class="quote">
+                <strong>"이번은 내가 범죄하였노라. 여호와는 의로우시고 나와 나의 백성은 악하도다"</strong> (출 9:27)
+            </div>
+            그야말로 <strong>천양지차의 모습</strong>이 아닐 수 없습니다. 하나님께서는 바로에게까지도 말씀하십니다.
+            <div class="quote">
+                <strong>"네가 어느 때까지 내 앞에 겸비하지 아니하겠느냐"</strong> (출 10:3)
+            </div>
+            하나님께서는 바로에게까지도 <strong>순종과 겸손</strong>을 바라셨습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 아직도 바로는 이 시점에서 지난날의 역사 기록들이나 들춰내는 잔꾀를 부리고 있습니다.</span>
+            바로는 연이은 재앙에도 일단 <strong>장정만 데리고 나가서 여호와를 섬기라</strong>고 말합니다(출 10:10~11). 그런데 이것은 과거 요셉의 아버지 야곱의 장례로부터 아이디어를 가져온 것이었습니다. 야곱의 장례 때에 어린아이들과 양 떼와 소 떼는 고센 땅에 남겨두고 어른들만 가나안 막벨라굴까지 갔던 <strong>그 기록을 바로가 들고 나온 것</strong>입니다.<br><br>
+            아직도 바로는 지난날의 역사 기록이나 들춰내 이 위기 상황을 모면하기 위해 <strong>잔꾀를 부리고 있었던 것</strong>입니다. 9차 협상에 이르러서 바로가 어린아이들까지는 데리고 나가라고 하지만, 모세는 <strong>번제물이 될 가축 없이는 안 됨</strong>을 분명히 밝힙니다.<br><br>
+            그러자 바로가 6개월 동안 이어왔던 <strong>협상 테이블을 걷어찹니다.</strong>
+            <div class="quote">
+                <strong>바로가 '협상 결렬'을 선언한 것입니다.</strong> (출 10:28~29)
+            </div>
+            바로는 이 <strong>'협상 결렬 최후통첩'</strong>으로 자기의 장자를 살릴 수 있는 <strong>마지막 기회를 스스로 걷어차 버립니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 출애굽기 8~10장 '모세와 바로의 9차 협상 / 어리석음으로 협상 결렬'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 출애굽기 8장 -->
+        <div class="chapter-title">출애굽기 8장 (1~32절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 이르시되 너는 바로에게 가서 그에게 이르기를 여호와의 말씀에 내 백성을 보내라 그들이 나를 섬길 것이니라</div>
+        <div class="verse"><span class="verse-num">2</span> 네가 만일 보내기를 거절하면 내가 개구리로 너의 온 땅을 치리라</div>
+        <div class="verse"><span class="verse-num">3</span> 개구리가 나일 강에서 무수히 생기고 올라와서 네 궁과 네 침실과 네 침상 위와 네 신하의 집과 네 백성과 네 화덕과 네 떡 반죽 그릇에 들어갈 것이며</div>
+        <div class="verse"><span class="verse-num">4</span> 개구리가 너와 네 백성과 네 모든 신하에게 기어오르리라 하셨다 하라</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와께서 모세에게 이르시되 아론에게 명령하기를 네 지팡이를 잡고 네 팔을 강들과 운하들과 못 위에 펴서 개구리들이 애굽 땅에 올라오게 하라 할지니라</div>
+        <div class="verse"><span class="verse-num">6</span> 아론이 애굽 물들 위에 그의 손을 내밀매 개구리가 올라와서 애굽 땅에 덮이니</div>
+        <div class="verse"><span class="verse-num">7</span> 요술사들도 자기 요술대로 그와 같이 행하여 개구리가 애굽 땅에 올라오게 하였더라</div>
+        <div class="verse"><span class="verse-num">8</span> 바로가 모세와 아론을 불러 이르되 여호와께 구하여 나와 내 백성에게서 개구리를 떠나게 하라 내가 이 백성을 보내리니 그들이 여호와께 제사를 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 모세가 바로에게 이르되 내가 왕과 왕의 신하와 왕의 백성을 위하여 이 개구리를 왕과 왕궁에서 끊어 나일 강에만 있도록 언제 간구하는 것이 좋을는지 내게 분부하소서</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 이르되 내일이니라 모세가 이르되 왕의 말씀대로 하여 왕에게 우리 하나님 여호와와 같은 이가 없는 줄을 알게 하리니</div>
+        <div class="verse"><span class="verse-num">11</span> 개구리가 왕과 왕궁과 왕의 신하와 왕의 백성을 떠나서 나일 강에만 있으리이다 하고</div>
+        <div class="verse"><span class="verse-num">12</span> 모세와 아론이 바로를 떠나 나가서 바로에게 내리신 개구리에 대하여 모세가 여호와께 간구하매</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와께서 모세의 말대로 하시니 개구리가 집과 마당과 밭에서부터 나와서 죽은지라</div>
+        <div class="verse"><span class="verse-num">14</span> 사람들이 모아 무더기로 쌓으니 땅에서 악취가 나더라</div>
+        <div class="verse"><span class="verse-num">15</span> 그러나 바로가 숨을 쉴 수 있게 됨을 보았을 때에 그의 마음을 완강하게 하여 그들의 말을 듣지 아니하였으니 여호와께서 말씀하신 것과 같더라</div>
+        <div class="verse"><span class="verse-num">16</span> 여호와께서 모세에게 이르시되 아론에게 명령하기를 네 지팡이를 들어 땅의 티끌을 치라 하라 그것이 애굽 온 땅에서 이가 되리라</div>
+        <div class="verse"><span class="verse-num">17</span> 그들이 그대로 행할새 아론이 지팡이를 잡고 손을 들어 땅의 티끌을 치매 애굽 온 땅의 티끌이 다 이가 되어 사람과 가축에게 오르니</div>
+        <div class="verse"><span class="verse-num">18</span> 요술사들도 자기 요술로 그같이 행하여 이를 생기게 하려 하였으나 못 하였고 이가 사람과 가축에게 생긴지라</div>
+        <div class="verse"><span class="verse-num">19</span> 요술사가 바로에게 말하되 이는 하나님의 권능이니이다 하였으나 바로의 마음이 완악하게 되어 그들의 말을 듣지 아니하였으니 여호와의 말씀과 같더라</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와께서 모세에게 이르시되 아침에 일찍이 일어나 바로 앞에 서라 그가 물 있는 곳으로 나오리니 그에게 이르기를 여호와께서 이와 같이 말씀하시기를 내 백성을 보내라 그러면 그들이 나를 섬길 것이니라</div>
+        <div class="verse"><span class="verse-num">21</span> 네가 만일 내 백성을 보내지 아니하면 내가 너와 네 신하와 네 백성과 네 집들에 파리 떼를 보내리니 애굽 사람의 집집에 파리 떼가 가득할 것이며 그들이 사는 땅에도 그러하리라</div>
+        <div class="verse"><span class="verse-num">22</span> 그 날에 나는 내 백성이 거주하는 고센 땅을 구별하여 그 곳에는 파리가 없게 하리니 이로 말미암아 이 땅에서 내가 여호와인 줄을 네가 알게 될 것이라</div>
+        <div class="verse"><span class="verse-num">23</span> 내가 내 백성과 네 백성 사이를 구별하리니 내일 이 표징이 있으리라 하셨다 하라 하시고</div>
+        <div class="verse"><span class="verse-num">24</span> 여호와께서 그와 같이 하시니 무수한 파리가 바로의 궁과 그의 신하의 집과 애굽 온 땅에 이르니 파리로 말미암아 그 땅이 황폐하였더라</div>
+        <div class="verse"><span class="verse-num">25</span> 바로가 모세와 아론을 불러 이르되 너희는 가서 이 땅에서 너희 하나님께 제사를 드리라</div>
+        <div class="verse"><span class="verse-num">26</span> 모세가 이르되 그리함은 부당하니이다 우리가 우리 하나님 여호와께 제사를 드리는 것은 애굽 사람이 싫어하는 바인즉 우리가 만일 애굽 사람의 목전에서 제사를 드리면 그들이 그것을 미워하여 우리를 돌로 치지 아니하리이까</div>
+        <div class="verse"><span class="verse-num">27</span> 우리가 사흘길쯤 광야로 들어가서 우리 하나님 여호와께 제사를 드리되 우리에게 명령하시는 대로 하려 하나이다</div>
+        <div class="verse"><span class="verse-num">28</span> 바로가 이르되 내가 너희를 보내리니 너희가 너희의 하나님 여호와께 광야에서 제사를 드릴 것이나 너무 멀리 가지는 말라 그런즉 너희는 나를 위하여 간구하라</div>
+        <div class="verse"><span class="verse-num">29</span> 모세가 이르되 내가 왕을 떠나가서 여호와께 간구하리니 내일이면 파리 떼가 바로와 바로의 신하와 바로의 백성을 떠나려니와 바로는 이 백성을 보내어 여호와께 제사를 드리는 일에 다시 거짓을 행하지 마소서 하고</div>
+        <div class="verse"><span class="verse-num">30</span> 모세가 바로를 떠나 나와서 여호와께 간구하니</div>
+        <div class="verse"><span class="verse-num">31</span> 여호와께서 모세의 말대로 하시니 그 파리 떼가 바로와 그의 신하와 그의 백성에게서 떠나니 하나도 남지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">32</span> 그러나 바로가 이 때에도 그의 마음을 완강하게 하여 그 백성을 보내지 아니하였더라</div>
+
+        <!-- 출애굽기 9장 -->
+        <div class="chapter-title">출애굽기 9장 (1~35절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 이르시되 바로에게 들어가서 그에게 이르라 히브리 사람의 하나님 여호와께서 말씀하시기를 내 백성을 보내라 그들이 나를 섬길 것이니라</div>
+        <div class="verse"><span class="verse-num">2</span> 네가 만일 보내기를 거절하고 억지로 잡아두면</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와의 손이 들에 있는 네 가축 곧 말과 나귀와 낙타와 소와 양에게 더하리니 심한 돌림병이 있을 것이며</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와가 이스라엘의 가축과 애굽의 가축을 구별하리니 이스라엘 자손에게 속한 것은 하나도 죽지 아니하리라 하셨다 하라 하시고</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와께서 기한을 정하여 이르시되 여호와가 내일 이 땅에서 이 일을 행하리라 하시더니</div>
+        <div class="verse"><span class="verse-num">6</span> 이튿날에 여호와께서 이 일을 행하시니 애굽의 모든 가축은 죽었으나 이스라엘 자손의 가축은 하나도 죽지 아니한지라</div>
+        <div class="verse"><span class="verse-num">7</span> 바로가 사람을 보내어 본즉 이스라엘의 가축은 하나도 죽지 아니하였더라 그러나 바로의 마음이 완강하여 백성을 보내지 아니하니라</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와께서 모세와 아론에게 이르시되 너희는 화덕의 재 두 움큼을 가지고 모세가 바로의 목전에서 하늘을 향하여 날리라</div>
+        <div class="verse"><span class="verse-num">9</span> 그 재가 애굽 온 땅의 티끌이 되어 애굽 온 땅의 사람과 짐승에게 붙어서 악성 종기가 생기리라</div>
+        <div class="verse"><span class="verse-num">10</span> 그들이 화덕의 재를 가지고 바로 앞에 서서 모세가 하늘을 향하여 날리니 사람과 짐승에게 붙어 악성 종기가 생기고</div>
+        <div class="verse"><span class="verse-num">11</span> 요술사들도 악성 종기로 말미암아 모세 앞에 서지 못하니 악성 종기가 요술사들로부터 애굽 모든 사람에게 생겼음이라</div>
+        <div class="verse"><span class="verse-num">12</span> 그러나 여호와께서 바로의 마음을 완악하게 하셨으므로 그들의 말을 듣지 아니하였으니 여호와께서 모세에게 말씀하심과 같더라</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와께서 모세에게 이르시되 아침에 일찍이 일어나 바로 앞에 서서 그에게 이르기를 히브리 사람의 하나님 여호와의 말씀에 내 백성을 보내라 그들이 나를 섬길 것이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 내가 이번에는 모든 재앙을 너와 네 신하와 네 백성에게 내려 온 천하에 나와 같은 자가 없음을 네가 알게 하리라</div>
+        <div class="verse"><span class="verse-num">15</span> 내가 손을 펴서 돌림병으로 너와 네 백성을 쳤더라면 네가 세상에서 끊어졌을 것이나</div>
+        <div class="verse"><span class="verse-num">16</span> 내가 너를 세웠음은 나의 능력을 네게 보이고 내 이름이 온 천하에 전파되게 하려 하였음이니라</div>
+        <div class="verse"><span class="verse-num">17</span> 네가 여전히 내 백성 앞에 교만하여 그들을 보내지 아니하느냐</div>
+        <div class="verse"><span class="verse-num">18</span> 내일 이맘때면 내가 무거운 우박을 내리리니 애굽 나라가 세워진 그 날로부터 지금까지 그와 같은 일이 없었더라</div>
+        <div class="verse"><span class="verse-num">19</span> 이제 사람을 보내어 네 가축과 네 들에 있는 것을 다 모으라 사람이나 짐승이나 무릇 들에 있어서 집에 돌아오지 않는 것들에게는 우박이 그 위에 내리리니 그것들이 죽으리라 하셨다 하라 하시니라</div>
+        <div class="verse"><span class="verse-num">20</span> 바로의 신하 중에 여호와의 말씀을 두려워하는 자들은 그 종들과 가축을 집으로 피하여 들였으나</div>
+        <div class="verse"><span class="verse-num">21</span> 여호와의 말씀을 마음에 두지 아니하는 사람은 그의 종들과 가축을 들에 그대로 두었더라</div>
+        <div class="verse"><span class="verse-num">22</span> 여호와께서 모세에게 이르시되 너는 하늘을 향하여 손을 들어 애굽 전국에 우박이 애굽 땅의 사람과 짐승과 밭의 모든 채소에 내리게 하라</div>
+        <div class="verse"><span class="verse-num">23</span> 모세가 하늘을 향하여 지팡이를 들매 여호와께서 우렛소리와 우박을 보내시고 불을 내려 땅에 달리게 하시니라 여호와께서 우박을 애굽 땅에 내리시매</div>
+        <div class="verse"><span class="verse-num">24</span> 우박이 내림과 불덩이가 우박에 섞여 내림이 심히 맹렬하니 나라가 생긴 그 때로부터 애굽 온 땅에는 그와 같은 일이 없었더라</div>
+        <div class="verse"><span class="verse-num">25</span> 우박이 애굽 온 땅에서 사람과 짐승을 막론하고 밭에 있는 모든 것을 쳤으며 우박이 또 밭의 모든 채소를 치고 들의 모든 나무를 꺾었으되</div>
+        <div class="verse"><span class="verse-num">26</span> 이스라엘 자손들이 있는 그 곳 고센 땅에는 우박이 없었더라</div>
+        <div class="verse"><span class="verse-num">27</span> 바로가 사람을 보내어 모세와 아론을 불러 그들에게 이르되 이번은 내가 범죄하였노라 여호와는 의로우시고 나와 나의 백성은 악하도다</div>
+        <div class="verse"><span class="verse-num">28</span> 여호와께 구하여 이 우렛소리와 우박을 그만 그치게 하라 내가 너희를 보내리니 너희가 다시는 머물지 아니하리라</div>
+        <div class="verse"><span class="verse-num">29</span> 모세가 그에게 이르되 내가 성에서 나가서 곧 내 손을 여호와를 향하여 펴리니 그리하면 우렛소리가 그치고 우박이 다시 있지 아니할지라 세상이 여호와께 속한 줄을 왕이 알리이다</div>
+        <div class="verse"><span class="verse-num">30</span> 그러나 왕과 왕의 신하들이 여호와 하나님을 아직도 두려워하지 아니할 줄을 내가 아나이다</div>
+        <div class="verse"><span class="verse-num">31</span> 그 때에 보리는 이삭이 나왔고 삼은 꽃이 피었으므로 삼과 보리가 상하였으나</div>
+        <div class="verse"><span class="verse-num">32</span> 그러나 밀과 쌀보리는 자라지 아니한 고로 상하지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">33</span> 모세가 바로를 떠나 성에서 나가 여호와를 향하여 손을 펴매 우렛소리와 우박이 그치고 비가 땅에 내리지 아니하니라</div>
+        <div class="verse"><span class="verse-num">34</span> 바로가 비와 우박과 우렛소리가 그친 것을 보고 다시 범죄하여 마음을 완악하게 하니 그와 그의 신하가 꼭 같더라</div>
+        <div class="verse"><span class="verse-num">35</span> 바로의 마음이 완악하여 이스라엘 자손을 내보내지 아니하였으니 여호와께서 모세에게 말씀하심과 같더라</div>
+
+        <!-- 출애굽기 10장 -->
+        <div class="chapter-title">출애굽기 10장 (1~29절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 이르시되 바로에게로 들어가라 내가 그의 마음과 그의 신하들의 마음을 완강하게 함은 나의 표징을 그들 중에 보이기 위함이며</div>
+        <div class="verse"><span class="verse-num">2</span> 네게 내가 애굽에서 행한 일들 곧 내가 그들 가운데에서 행한 표징을 네 아들과 네 자손의 귀에 전하기 위함이라 너희는 내가 여호와인 줄을 알리라</div>
+        <div class="verse"><span class="verse-num">3</span> 모세와 아론이 바로에게 들어가서 그에게 이르되 히브리 사람의 하나님 여호와께서 말씀하시기를 네가 어느 때까지 내 앞에 겸비하지 아니하겠느냐 내 백성을 보내라 그들이 나를 섬길 것이라</div>
+        <div class="verse"><span class="verse-num">4</span> 네가 만일 내 백성 보내기를 거절하면 내일 내가 메뚜기를 네 경내에 들어가게 하리니</div>
+        <div class="verse"><span class="verse-num">5</span> 메뚜기가 지면을 덮어서 사람이 땅을 볼 수 없을 것이라 메뚜기가 네게 남은 그것 곧 우박을 면하고 남은 것을 먹으며 너희를 위하여 들에서 자라나는 모든 나무를 먹을 것이며</div>
+        <div class="verse"><span class="verse-num">6</span> 또 네 집들과 네 모든 신하의 집들과 모든 애굽 사람의 집들에 가득하리니 이는 네 아버지와 네 조상이 이 땅에 있었던 그 날로부터 오늘까지 보지 못하였던 것이리라 하셨다 하고 돌이켜 바로에게서 나오니</div>
+        <div class="verse"><span class="verse-num">7</span> 바로의 신하들이 그에게 말하되 어느 때까지 이 사람이 우리의 함정이 되리이까 그 사람들을 보내어 그들의 하나님 여호와를 섬기게 하소서 왕은 아직도 애굽이 망한 줄을 알지 못하시나이까 하고</div>
+        <div class="verse"><span class="verse-num">8</span> 모세와 아론을 바로에게로 다시 데려오니 바로가 그들에게 이르되 가서 너희의 하나님 여호와를 섬기라 갈 자는 누구 누구냐</div>
+        <div class="verse"><span class="verse-num">9</span> 모세가 이르되 우리가 여호와 앞에 절기를 지킬 것인즉 우리가 남녀 노소와 양과 소를 데리고 가겠나이다</div>
+        <div class="verse"><span class="verse-num">10</span> 바로가 그들에게 이르되 내가 너희와 너희의 어린 아이들을 보내면 여호와가 너희와 함께 함과 같으니라 보라 그것이 너희에게는 나쁜 것이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 그렇게 하지 말고 너희 장정만 가서 여호와를 섬기라 이것이 너희가 구하는 바니라 이에 그들이 바로 앞에서 쫓겨나니라</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와께서 모세에게 이르시되 애굽 땅 위에 네 손을 내밀어 메뚜기를 애굽 땅에 올라오게 하여 우박에 상하지 아니한 밭의 모든 채소를 먹게 하라</div>
+        <div class="verse"><span class="verse-num">13</span> 모세가 애굽 땅 위에 그 지팡이를 들매 여호와께서 동풍을 일으켜 온 낮과 온 밤에 불게 하시니 아침이 되매 동풍이 메뚜기를 불어 들인지라</div>
+        <div class="verse"><span class="verse-num">14</span> 메뚜기가 애굽 온 땅에 이르러 그 사방에 내리매 그 피해가 심하니 이런 메뚜기는 전에도 없었고 후에도 없을 것이라</div>
+        <div class="verse"><span class="verse-num">15</span> 메뚜기가 온 땅을 덮어 땅이 어둡게 되었으며 메뚜기가 우박에 상하지 아니한 밭의 채소와 나무 열매를 다 먹었으므로 애굽 온 땅에서 나무나 밭의 채소나 푸른 것은 남지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">16</span> 바로가 모세와 아론을 급히 불러 이르되 내가 너희의 하나님 여호와와 너희에게 죄를 지었으니</div>
+        <div class="verse"><span class="verse-num">17</span> 바라건대 이번만 나의 죄를 용서하고 너희의 하나님 여호와께 구하여 이 죽음만은 내게서 떠나게 하라</div>
+        <div class="verse"><span class="verse-num">18</span> 그가 바로에게서 나가서 여호와께 구하매</div>
+        <div class="verse"><span class="verse-num">19</span> 여호와께서 돌이켜 강렬한 서풍을 불게 하사 메뚜기를 홍해에 몰아넣으시니 애굽 온 땅에 메뚜기가 하나도 남지 아니하니라</div>
+        <div class="verse"><span class="verse-num">20</span> 그러나 여호와께서 바로의 마음을 완악하게 하셨으므로 이스라엘 자손을 보내지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">21</span> 여호와께서 모세에게 이르시되 하늘을 향하여 네 손을 내밀어 애굽 땅 위에 흑암이 있게 하라 곧 더듬을 만한 흑암이리라</div>
+        <div class="verse"><span class="verse-num">22</span> 모세가 하늘을 향하여 손을 내밀매 캄캄한 흑암이 삼 일 동안 애굽 온 땅에 있어서</div>
+        <div class="verse"><span class="verse-num">23</span> 그 동안은 사람들이 서로 볼 수 없으며 자기 처소에서 일어나는 자가 없으되 온 이스라엘 자손들이 거주하는 곳에는 빛이 있었더라</div>
+        <div class="verse"><span class="verse-num">24</span> 바로가 모세를 불러서 이르되 너희는 가서 여호와를 섬기되 너희의 양과 소는 머물러 두고 너희 어린 것들은 너희와 함께 갈지니라</div>
+        <div class="verse"><span class="verse-num">25</span> 모세가 이르되 왕이라도 우리 하나님 여호와께 드릴 제사와 번제물을 우리에게 주어야 하겠고</div>
+        <div class="verse"><span class="verse-num">26</span> 우리의 가축도 우리와 함께 가고 한 마리도 남길 수 없으니 이는 우리가 그 중에서 가져다가 우리 하나님 여호와를 섬길 것임이며 또 우리가 거기에 이르기까지는 어떤 것으로 여호와를 섬길는지 알지 못함이니이다 하나</div>
+        <div class="verse"><span class="verse-num">27</span> 여호와께서 바로의 마음을 완악하게 하셨으므로 그들 보내기를 기뻐하지 아니하고</div>
+        <div class="verse"><span class="verse-num">28</span> 바로가 모세에게 이르되 너는 나를 떠나가고 스스로 삼가 다시 내 얼굴을 보지 말라 네가 내 얼굴을 보는 날에는 죽으리라</div>
+        <div class="verse"><span class="verse-num">29</span> 모세가 이르되 당신이 말씀하신 대로 내가 다시는 당신의 얼굴을 보지 아니하리이다</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

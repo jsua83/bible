@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 029</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 029</h1>
+        <p class="sub-title">찬송가 292장 주 없이 살 수 없네</p>
+        <p class="sub-title">출애굽기 30~31장 — 기도의 향을 사르다 / 안식일, 가장 큰 프레임</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 292장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1HeZ2wzfx713YXQAXaXj-w81K7WtkQT6E" alt="찬송가 292장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 출애굽기 30장~31장<br>'기도의 향을 사르다 / 안식일, 가장 큰 프레임'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 대제사장의 중요한 일과는 아침과 저녁으로 '향'을 사르는 것입니다.</span>
+            대제사장은 아침과 저녁으로 <strong>'향'을 살라야 합니다</strong>(출 30:7~9). 대제사장이 향을 살라야 하는 곳은 지성소 휘장 앞, 성소 가운데 분향할 제단입니다. 또한 대제사장은 <strong>1년에 한 차례씩 향단 뿔을 위하여 속죄제를 드려야 합니다.</strong> 그것도 대대로 속죄해야만 했습니다.<br><br>
+            이후에 보면 아론의 두 아들 <strong>나답과 아비후가 하늘로부터 불이 내려와 죽게 됩니다.</strong> 나답과 아비후가 <strong>다른 불을 가져다가 여호와 앞에 분향했기 때문</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 모든 사람은 생명의 속전을 바쳐야 합니다.</span>
+            하나님께서는 생명의 속전에 대한 법을 주십니다(출 30:11~16). 모든 사람은 죄를 사하시며 생명을 잇게 하시는 하나님께 <strong>생명에 대한 속전을 반드시 바쳐야 했습니다.</strong> 부자나 가난한 사람 모두 똑같이, 즉 이스라엘에 속한 <strong>모든 20세 이상 된 남자들은 누구나 반 세겔의 속전을 바쳐야 했습니다.</strong> 그리고 속전 반 세겔은 회막 봉사에 사용되었습니다.
+            <div class="quote">
+                <strong>속전과 같이 신약 시대에는 성전세라는 명목으로 유대 20세 이상의 모든 남자는 반 세겔을 내게 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 천지창조와 예수 십자가는 하나님께서 홀로! 그러나 방주와 성막과 성전은 인간과 함께 힘을 합하여 만드십니다.</span>
+            하나님께서는 온 우주 만물을 말씀으로 <strong>홀로 만드셨습니다.</strong> 그리고 우리 예수님께서는 공생애 3년은 제자들과 함께 하셨지만 <strong>십자가는 홀로 지셨습니다.</strong><br><br>
+            그런데 노아의 방주는 <strong>하나님의 설계도와 노아 가족의 시공이 만든 합작품</strong>이었습니다. 이번 성막 또한 노아의 방주처럼 하나님께서 설계도를 주시고 <strong>온 이스라엘 백성이 힘을 합하여 성막을 만들 것입니다.</strong>
+            <div class="quote">
+                <strong>하나님께서는 인생들과 함께하시는 일을 기뻐하십니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 출애굽의 지도자는 모세와 아론이었고, 성막 건축의 지도자는 브살렐과 오홀리압입니다.</span>
+            출애굽의 지도자는 모세와 아론이었습니다. 이제 시내 광야에서 하나님께서 주신 설계도대로 성막을 만드는 과정에 <strong>가장 적합한 또 다른 지도자</strong>가 필요했습니다. 그들은 바로 <strong>브살렐과 오홀리압</strong>입니다(출 31:1~11).<br><br>
+            성막을 만드는 과정에서 브살렐과 오홀리압이 지도자로 선택된 이유는 <strong>그들이 지혜로운 마음의 소유자들이었기 때문</strong>입니다. 브살렐과 오홀리압의 지혜로운 마음은 두 가지로 표현됩니다.
+            <div class="quote">
+                <strong>하나는,</strong> 그들이 연구할 줄 아는 사람들이라는 것입니다.<br><br>
+                <strong>또 하나는,</strong> 그들이 성막 만드는 모든 과정을 끝낸 후 <strong>자신들이 만든 성막을 다시는 만지지 않았다</strong>는 것입니다. 지혜로운 브살렐과 오홀리압은 그들의 손으로 성막 만드는 전 과정에서 일을 했지만, 이후 성막을 만지는 것은 물론 <strong>어떤 모조품도 만들지 않았습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 안식일 — 하나님의 창조 디자인의 가장 큰 프레임은 6일 동안 일하고 7일에는 반드시 쉬는 것입니다.</span>
+            창조주 하나님께서는 피조물인 우리 인간들에게 <strong>하나님의 안식일을 지키라</strong>고 명령하십니다.
+            <div class="quote">
+                <strong>우리가 안식일을 지키는 것은 하나님과 우리 사이에 있는 대대의 표징이기 때문입니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 출애굽기 30~31장 '기도의 향을 사르다 / 안식일, 가장 큰 프레임'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 출애굽기 30장 -->
+        <div class="chapter-title">출애굽기 30장 (1~38절)</div>
+        <div class="verse"><span class="verse-num">1</span> 너는 분향할 제단을 만들지니 곧 조각목으로 만들되</div>
+        <div class="verse"><span class="verse-num">2</span> 길이가 한 규빗, 너비가 한 규빗으로 네모가 반듯하게 하고 높이는 두 규빗으로 하며 그 뿔을 그것과 이어지게 하고</div>
+        <div class="verse"><span class="verse-num">3</span> 제단 상면과 전후 좌우 면과 뿔을 순금으로 싸고 주위에 금 테를 두를지며</div>
+        <div class="verse"><span class="verse-num">4</span> 금 테 아래 양쪽에 금 고리 둘을 만들되 곧 그 양쪽에 만들지니 이는 제단을 메는 채를 꿸 곳이며</div>
+        <div class="verse"><span class="verse-num">5</span> 그 채를 조각목으로 만들고 금으로 싸고</div>
+        <div class="verse"><span class="verse-num">6</span> 그 제단을 증거궤 위 속죄소 맞은편 곧 증거궤 앞에 있는 휘장 밖에 두라 그 속죄소는 내가 너와 만날 곳이며</div>
+        <div class="verse"><span class="verse-num">7</span> 아론이 아침마다 그 위에 향기로운 향을 사르되 등불을 손질할 때에 사를지며</div>
+        <div class="verse"><span class="verse-num">8</span> 또 저녁 때 등불을 켤 때에 사를지니 이 향은 너희가 대대로 여호와 앞에 끊지 못할지며</div>
+        <div class="verse"><span class="verse-num">9</span> 너희는 그 위에 다른 향을 사르지 말며 번제나 소제를 드리지 말며 전제의 술을 붓지 말며</div>
+        <div class="verse"><span class="verse-num">10</span> 아론이 일 년에 한 번씩 이 향단 뿔을 위하여 속죄하되 속죄제의 피로 일 년에 한 번씩 대대로 속죄할지니라 이 제단은 여호와께 지극히 거룩하니라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">12</span> 네가 이스라엘 자손의 수효를 조사할 때에 조사 받은 각 사람은 그들을 계수할 때에 자기의 생명의 속전을 여호와께 드릴지니 이는 그들을 계수할 때에 그들 중에 질병이 없게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">13</span> 무릇 계수 중에 드는 자마다 성소의 세겔로 반 세겔을 낼지니 한 세겔은 이십 게라라 그 반 세겔을 여호와께 드릴지며</div>
+        <div class="verse"><span class="verse-num">14</span> 계수 중에 드는 모든 자 곧 스무 살 이상 된 자가 여호와께 드리되</div>
+        <div class="verse"><span class="verse-num">15</span> 너희의 생명을 대속하기 위하여 여호와께 드릴 때에 부자라고 반 세겔에서 더 내지 말고 가난한 자라고 덜 내지 말지며</div>
+        <div class="verse"><span class="verse-num">16</span> 너는 이스라엘 자손에게서 속전을 취하여 회막 봉사에 쓰라 이것이 여호와 앞에서 이스라엘 자손의 기념이 되어서 너희의 생명을 대속하리라</div>
+        <div class="verse"><span class="verse-num">17</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">18</span> 너는 물두멍을 놋으로 만들고 그 받침도 놋으로 만들어 씻게 하되 그것을 회막과 제단 사이에 두고 그 속에 물을 담으라</div>
+        <div class="verse"><span class="verse-num">19</span> 아론과 그의 아들들이 그 두멍에서 수족을 씻되</div>
+        <div class="verse"><span class="verse-num">20</span> 그들이 회막에 들어갈 때에 물로 씻어 죽기를 면할 것이요 제단에 가까이 가서 그 직분을 행하여 여호와 앞에 화제를 사를 때에도 그리 할지니라</div>
+        <div class="verse"><span class="verse-num">21</span> 이와 같이 그들이 그 수족을 씻어 죽기를 면할지니 이는 그와 그의 자손이 대대로 영원히 지킬 규례니라</div>
+        <div class="verse"><span class="verse-num">22</span> 여호와께서 모세에게 또 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">23</span> 너는 상등 향품을 가지되 액체 몰약 오백 세겔과 그 반수의 향기로운 육계 이백오십 세겔과 향기로운 창포 이백오십 세겔과</div>
+        <div class="verse"><span class="verse-num">24</span> 계피 오백 세겔을 성소의 세겔로 하고 감람 기름 한 힌을 가지고</div>
+        <div class="verse"><span class="verse-num">25</span> 그것으로 거룩한 관유를 만들되 향을 제조하는 법대로 향기름을 만들지니 그것이 거룩한 관유가 될지라</div>
+        <div class="verse"><span class="verse-num">26</span> 너는 그것을 회막과 증거궤에 바르고</div>
+        <div class="verse"><span class="verse-num">27</span> 상과 그 모든 기구이며 등잔대와 그 기구이며 분향단과</div>
+        <div class="verse"><span class="verse-num">28</span> 및 번제단과 그 모든 기구와 물두멍과 그 받침에 발라</div>
+        <div class="verse"><span class="verse-num">29</span> 그것들을 지극히 거룩한 것으로 구별하라 이것에 접촉하는 것은 모두 거룩하리라</div>
+        <div class="verse"><span class="verse-num">30</span> 너는 아론과 그의 아들들에게 기름을 발라 그들을 거룩하게 하고 그들이 내게 제사장 직분을 행하게 하고</div>
+        <div class="verse"><span class="verse-num">31</span> 이스라엘 자손에게 말하여 이르기를 이것은 너희 대대로 내게 거룩한 관유니</div>
+        <div class="verse"><span class="verse-num">32</span> 사람의 몸에 붓지 말며 이 방법대로 이와 같은 것을 만들지 말라 이는 거룩하니 너희는 거룩히 여기라</div>
+        <div class="verse"><span class="verse-num">33</span> 이와 같은 것을 만드는 모든 자와 이것을 타인에게 붓는 모든 자는 그 백성 중에서 끊어지리라 하라</div>
+        <div class="verse"><span class="verse-num">34</span> 여호와께서 모세에게 이르시되 너는 소합향과 나감향과 풍자향의 향품을 가져다가 그 향품을 유향에 섞되 각기 같은 분량으로 하고</div>
+        <div class="verse"><span class="verse-num">35</span> 그것으로 향을 만들되 향 만드는 법대로 만들고 그것에 소금을 쳐서 성결하게 하고</div>
+        <div class="verse"><span class="verse-num">36</span> 그 향 얼마를 곱게 찧어 내가 너와 만날 회막 안 증거궤 앞에 두라 이 향은 너희에게 지극히 거룩하니라</div>
+        <div class="verse"><span class="verse-num">37</span> 네가 여호와를 위하여 만들 향은 거룩한 것이니 너희를 위하여는 그 방법대로 만들지 말라</div>
+        <div class="verse"><span class="verse-num">38</span> 냄새를 맡으려고 이같은 것을 만드는 모든 자는 그 백성 중에서 끊어지리라</div>
+
+        <!-- 출애굽기 31장 -->
+        <div class="chapter-title">출애굽기 31장 (1~18절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 내가 유다 지파 훌의 손자요 우리의 아들인 브살렐을 지명하여 부르고</div>
+        <div class="verse"><span class="verse-num">3</span> 하나님의 영을 그에게 충만하게 하여 지혜와 총명과 지식과 여러 가지 재주로</div>
+        <div class="verse"><span class="verse-num">4</span> 정교한 일을 연구하여 금과 은과 놋으로 만들게 하며</div>
+        <div class="verse"><span class="verse-num">5</span> 보석을 깎아 물리며 여러 가지 기술로 나무를 새겨 만들게 하리라</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 또 단 지파 아히사막의 아들 오홀리압을 세워 그와 함께 하게 하며 지혜로운 마음이 있는 모든 자에게 내가 지혜를 주어 그들이 내가 네게 명령한 것을 다 만들게 할지니</div>
+        <div class="verse"><span class="verse-num">7</span> 곧 회막과 증거궤와 그 위의 속죄소와 회막의 모든 기구와</div>
+        <div class="verse"><span class="verse-num">8</span> 상과 그 기구와 순금 등잔대와 그 모든 기구와 분향단과</div>
+        <div class="verse"><span class="verse-num">9</span> 번제단과 그 모든 기구와 물두멍과 그 받침과</div>
+        <div class="verse"><span class="verse-num">10</span> 제사직을 행할 때에 입는 정교하게 짠 의복 곧 제사장 아론의 성의와 그의 아들들의 옷과</div>
+        <div class="verse"><span class="verse-num">11</span> 관유와 성소의 향기로운 향이라 무릇 내가 네게 명령한 대로 그들이 만들지니라</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">13</span> 너는 이스라엘 자손에게 말하여 이르기를 너희는 나의 안식일을 지키라 이는 나와 너희 사이에 너희 대대의 표징이니 나는 너희를 거룩하게 하는 여호와인 줄 너희가 알게 함이라</div>
+        <div class="verse"><span class="verse-num">14</span> 너희는 안식일을 지킬지니 이는 너희에게 거룩한 날이 됨이니라 그 날을 더럽히는 자는 모두 죽일지며 그 날에 일하는 자는 모두 그 백성 중에서 그 생명이 끊어지리라</div>
+        <div class="verse"><span class="verse-num">15</span> 엿새 동안은 일할 것이나 일곱째 날은 큰 안식일이니 여호와께 거룩한 것이라 안식일에 일하는 자는 누구든지 반드시 죽일지니라</div>
+        <div class="verse"><span class="verse-num">16</span> 이같이 이스라엘 자손이 안식일을 지켜서 그것으로 대대로 영원한 언약을 삼을 것이니</div>
+        <div class="verse"><span class="verse-num">17</span> 이는 나와 이스라엘 자손 사이에 영원한 표징이며 나 여호와가 엿새 동안에 천지를 창조하고 일곱째 날에 일을 마치고 쉬었음이니라 하라</div>
+        <div class="verse"><span class="verse-num">18</span> 여호와께서 시내 산 위에서 모세에게 이르시기를 마치신 때에 증거판 둘을 모세에게 주시니 이는 돌판이요 하나님이 친히 쓰신 것이더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

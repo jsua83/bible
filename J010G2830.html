@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 010</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 010</h1>
+        <p class="sub-title">찬송가 384장 나의 갈 길 다 가도록</p>
+        <p class="sub-title">창세기 28~30장 — 빈털터리 야곱, 십일조 약속</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 384장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/132Lk3g6DWW0uOKbU0KYTC0Qjz5TzN_LG" alt="찬송가 384장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 창세기 28장~30장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 가나안에서 출생한 야곱은 가나안을 '두 번'이나 떠납니다.</span>
+            야곱이 가나안을 떠날 때마다 <strong>하나님께서 꿈으로 야곱을 찾아오십니다.</strong><br><br>
+            <strong>첫 번째</strong>는 형 에서를 피해 북쪽 하란으로 도망가던 길에 벧엘에서, 돌을 베개 삼고 자면서 야곱이 꿈을 꿉니다. 꿈에 하나님께서 말씀하십니다.
+            <div class="quote">
+                <strong>"나는 여호와니 너의 조부 아브라함의 하나님이요, 이삭의 하나님이라. 네가 누워 있는 땅을 내가 너와 네 자손에게 주리니"</strong> (창 28:13)
+            </div>
+            야곱과 그의 자손에게 가나안 땅을 주겠다고 약속하시며 고향으로 무사히 돌아올 수 있도록 하겠다는 약속도 주십니다.<br><br>
+            <strong>두 번째</strong>는 오랜 세월이 지난 후, 흉년을 피해 가나안을 떠나 하란과는 정반대 방향, 즉 남쪽 애굽으로 떠날 때 브엘세바에서 또 꿈을 꿉니다. 약속의 땅 가나안에 돌아와 살던 야곱이 노년에 또다시 가나안을 떠나야 했던 것입니다. 이때 하나님께서 브엘세바에서 야곱의 꿈으로 찾아오셨습니다.
+            <div class="quote">
+                <strong>"나는 하나님이라. 네 아버지의 하나님이니 애굽으로 내려가기를 두려워하지 말라. 내가 거기서 너로 큰 민족을 이루게 하리라"</strong> (창 46:3)
+            </div>
+            그러면서 야곱에게 용기와 확신을 주십니다.
+            <div class="quote">
+                <strong>"내가 너와 함께 애굽으로 내려가겠고, 반드시 너를 인도하여 다시 올라올 것이며 요셉이 그의 손으로 네 눈을 감기리라"</strong> (창 46:4)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 빈털터리 야곱이 하나님께 십일조를 약속합니다.</span>
+            야곱은 당장 먹을 음식과 입을 옷까지도 걱정해야 하는 <strong>빈털터리 신세</strong>로 길거리에서 노숙하며 돌을 베개 삼아 잠을 자야 했습니다. 그 험악한 형편 속으로 하나님께서 꿈을 통해 야곱을 찾아오십니다. 하나님께서는 야곱에게 <strong>땅과 자손의 복을 주시며 야곱이 어디를 가든지 지켜 주겠다</strong>고 말씀하십니다. 더 놀라운 사실은 <strong>다시 가나안으로 돌아오게 하겠다</strong>는 약속을 말씀하신 것입니다(창 28:13~15).<br><br>
+            그러자 야곱은 그다음 날 아침에 일찍 일어나 베개로 삼았던 돌로 기둥을 세우고 거기에 기름을 붓고 그곳 이름을 <strong>'벧엘'</strong>이라 짓습니다. 야곱은 벧엘에서 하나님의 말씀을 듣고 자신이 다시 평안하게 가나안으로 돌아오게 된다면, 자신이 기둥으로 세운 돌베개는 하나님의 집이 되게 하겠고, <strong>하나님께서 자신에게 주신 모든 것에서 십일조를 바치겠다</strong>고 서원합니다(창 28:20~22).<br><br>
+            야곱의 십일조 서원은 야곱의 할아버지 아브라함이 롯 구출 전쟁 후 살렘 왕 멜기세덱에게 바쳤던 십일조에서 배운 것입니다.
+            <div class="quote">
+                <strong>하나님께서는 벧엘에서 빈털터리 야곱의 십일조 서원을 받으셨습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 하란에서 태어난 야곱의 열두 아들은 400년 후 애굽에서 열두 지파가 됩니다.</span>
+            아브라함에서 이삭으로, 이삭에서 야곱으로 힘겹게 이어지던 자손의 복이 <strong>야곱 때에 이르러 열두 명의 아들로 풍성해졌습니다.</strong> 그러나 풍성해진 가족들 사이에서 야곱의 사랑은 아내 라헬에게 더 각별했습니다. 그 라헬에 대한 사랑은 아들 요셉에게까지 이어집니다. <strong>요셉에 대한 야곱의 사랑은 지독한 편애가 되어 가족 간의 갈등을 빚게 됩니다.</strong><br><br>
+            이후 이 형제 갈등은 창세기 후반 이야기로 이어지고, 긴 세월이 흐른 뒤 남쪽 애굽에서 열두 형제는 요셉의 주도하에 화해하게 됩니다.
+            <div class="quote">
+                <strong>이렇게 하란에서 태어난 이들은 가나안에서 잠시 머물다가 애굽으로 내려가서 열두 지파의 뿌리가 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 흥정의 달인 야곱, 도리어 흥정에 속습니다.</span>
+            야곱은 형 에서와 팥죽을 가지고 흥정하여 장자의 명분을 얻는 일에 성공했습니다. 그러나 그 일로 인해 <strong>야곱은 결국 도망자가 되고 말았습니다.</strong><br><br>
+            야곱은 하란에서 외삼촌 라반과 두 번 흥정했습니다.
+            <div class="quote">
+                <strong>첫 번째 흥정</strong> — 라헬을 아내로 맞이하기 위해 7년간 일하겠다는 것입니다. 그런데 야곱은 외삼촌에게 속아 결국 14년을 일하게 됩니다.<br>
+                <strong>두 번째 흥정</strong> — 일한 품삯입니다. 라반이 품삯을 열 번이나 속인 탓에 야곱은 이 흥정에 또 속습니다.
+            </div>
+            야곱은 자식을 얻는 과정에서도 흥정했습니다. 라헬과의 흥정으로 빌하를, 레아와의 흥정으로 실바를 아내로 맞이했습니다. 그리고 야곱의 두 아내 라헬과 레아는 합환채를 갖고 서로 흥정했습니다.
+            <div class="quote">
+                <strong>이러한 야곱의 흥정은 도리어 흥정에 속고 가정 갈등의 원인이 되기도 했습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 야곱은 하란에서 가나안으로 가져갈 수 있는 재산만 모읍니다.</span>
+            야곱은 6년에 걸쳐 재산을 모아 번창합니다. 야곱은 눈 붙일 겨를도 없이 일하며 재산을 모았는데, <strong>모두 가나안으로 가져갈 만한 것만 모은 것입니다.</strong> 왜냐하면 야곱은 하란에서 평생 살 뜻이 전혀 없었고, <strong>반드시 가나안으로 돌아가겠다</strong>는 생각이었기 때문입니다.
+            <div class="quote">
+                <em>"양 떼와 노비와 낙타와 나귀가 많았더라"</em> (창 30:43)
+            </div>
+            빈털터리로 시작했던 야곱의 재산은 그야말로 매우 번창하여 이렇게 기록할 정도였습니다. <strong>야곱은 하란에서 20년 동안 목축업을 전공했습니다.</strong> 이 기반 위에 이후 야곱의 자손들이 애굽으로 내려가서 모세 때까지 목축업으로 큰 성과를 냅니다.<br><br>
+            특히 수백 년이 지난 후 출애굽 때, 벽돌 굽는 고된 노동 속에서도 <strong>약 2만 3천 히브리 가정에서 1년 된 어린 양을 유월절 양으로 모두 잡을 수 있을 만큼 목축업으로 흥왕했습니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 창세기 28~30장 '빈털터리 야곱, 십일조 약속'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 창세기 28장 -->
+        <div class="chapter-title">창세기 28장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이삭이 야곱을 불러 그에게 축복하고 또 당부하여 이르되 너는 가나안 사람의 딸들 중에서 아내를 맞이하지 말고</div>
+        <div class="verse"><span class="verse-num">2</span> 일어나 밧단아람으로 가서 네 외조부 브두엘의 집에 이르러 거기서 네 외삼촌 라반의 딸 중에서 아내를 맞이하라</div>
+        <div class="verse"><span class="verse-num">3</span> 전능하신 하나님이 네게 복을 주시어 네가 생육하고 번성하게 하여 네가 여러 족속을 이루게 하시고</div>
+        <div class="verse"><span class="verse-num">4</span> 아브라함에게 허락하신 복을 네게 주시되 너와 너와 함께 네 자손에게도 주사 하나님이 아브라함에게 주신 땅 곧 네가 거류하는 땅을 네가 차지하게 하시기를 원하노라</div>
+        <div class="verse"><span class="verse-num">5</span> 이에 이삭이 야곱을 보내매 그가 밧단아람으로 가서 라반에게 이르렀으니 라반은 아람 사람 브두엘의 아들이요 야곱과 에서의 어머니 리브가의 오라비더라</div>
+        <div class="verse"><span class="verse-num">6</span> 에서가 본즉 이삭이 야곱에게 축복하고 그를 밧단아람으로 보내어 거기서 아내를 맞이하게 하였고 또 그에게 축복하고 명하기를 너는 가나안 사람의 딸들 중에서 아내를 맞이하지 말라 하였고</div>
+        <div class="verse"><span class="verse-num">7</span> 또 야곱이 부모의 명을 따라 밧단아람으로 갔으며</div>
+        <div class="verse"><span class="verse-num">8</span> 에서가 또 본즉 가나안 사람의 딸들이 그의 아버지 이삭을 기쁘게 하지 못하는지라</div>
+        <div class="verse"><span class="verse-num">9</span> 이에 에서가 이스마엘에게 가서 그 본처들 외에 아브라함의 아들 이스마엘의 딸이요 느바욧의 누이인 마할랏을 아내로 맞이하였더라</div>
+        <div class="verse"><span class="verse-num">10</span> 야곱이 브엘세바에서 떠나 하란으로 향하여 가더니</div>
+        <div class="verse"><span class="verse-num">11</span> 한 곳에 이르러는 해가 진지라 거기서 유숙하려고 그 곳의 한 돌을 가져다가 베개로 삼고 거기 누워 자더니</div>
+        <div class="verse"><span class="verse-num">12</span> 꿈에 본즉 사닥다리가 땅 위에 서 있는데 그 꼭대기가 하늘에 닿았고 또 본즉 하나님의 사자들이 그 위에서 오르락내리락 하고</div>
+        <div class="verse"><span class="verse-num">13</span> 또 본즉 여호와께서 그 위에 서서 이르시되 나는 여호와니 너의 조부 아브라함의 하나님이요 이삭의 하나님이라 네가 누워 있는 땅을 내가 너와 네 자손에게 주리니</div>
+        <div class="verse"><span class="verse-num">14</span> 네 자손이 땅의 티끌 같이 되어 네가 서쪽과 동쪽과 북쪽과 남쪽으로 퍼져나갈지며 땅의 모든 족속이 너와 네 자손으로 말미암아 복을 받으리라</div>
+        <div class="verse"><span class="verse-num">15</span> 내가 너와 함께 있어 네가 어디로 가든지 너를 지키며 너를 이끌어 이 땅으로 돌아오게 할지라 내가 네게 허락한 것을 다 이루기까지 너를 떠나지 아니하리라 하신지라</div>
+        <div class="verse"><span class="verse-num">16</span> 야곱이 잠이 깨어 이르되 여호와께서 과연 여기 계시거늘 내가 알지 못하였도다</div>
+        <div class="verse"><span class="verse-num">17</span> 이에 두려워하여 이르되 두렵도다 이 곳이여 이것은 다름 아닌 하나님의 집이요 이는 하늘의 문이로다 하고</div>
+        <div class="verse"><span class="verse-num">18</span> 야곱이 아침에 일찍이 일어나 베개로 삼았던 돌을 가져다가 기둥으로 세우고 그 위에 기름을 붓고</div>
+        <div class="verse"><span class="verse-num">19</span> 그 곳 이름을 벧엘이라 하였더라 이 성의 옛 이름은 루스더라</div>
+        <div class="verse"><span class="verse-num">20</span> 야곱이 서원하여 이르되 하나님이 나와 함께 계셔서 내가 가는 이 길에서 나를 지키시고 먹을 떡과 입을 옷을 주시어</div>
+        <div class="verse"><span class="verse-num">21</span> 내가 평안히 아버지 집으로 돌아가게 하시오면 여호와께서 나의 하나님이 되실 것이요</div>
+        <div class="verse"><span class="verse-num">22</span> 내가 기둥으로 세운 이 돌이 하나님의 집이 될 것이요 하나님께서 내게 주신 모든 것에서 십분의 일을 내가 반드시 하나님께 드리겠나이다 하였더라</div>
+
+        <!-- 창세기 29장 -->
+        <div class="chapter-title">창세기 29장 (1~35절)</div>
+        <div class="verse"><span class="verse-num">1</span> 야곱이 길을 떠나 동방 사람의 땅에 이르러</div>
+        <div class="verse"><span class="verse-num">2</span> 본즉 들에 우물이 있고 그 곁에 양 세 떼가 누워 있으니 이는 목자들이 그 우물에서 양 떼에게 물을 먹임이라 큰 돌로 우물 아귀를 덮었다가</div>
+        <div class="verse"><span class="verse-num">3</span> 모든 떼가 모이면 그들이 우물 아귀에서 돌을 옮기고 그 양 떼에게 물을 먹이고는 우물 아귀 그 자리에 다시 그 돌을 덮더라</div>
+        <div class="verse"><span class="verse-num">4</span> 야곱이 그들에게 이르되 내 형제여 어디서 왔느냐 그들이 이르되 하란에서 왔노라</div>
+        <div class="verse"><span class="verse-num">5</span> 야곱이 그들에게 이르되 너희가 나홀의 손자 라반을 아느냐 그들이 이르되 아노라</div>
+        <div class="verse"><span class="verse-num">6</span> 야곱이 그들에게 이르되 그가 평안하냐 이르되 평안하니라 그의 딸 라헬이 지금 양을 몰고 오느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 야곱이 이르되 해가 아직 높은즉 가축 모일 때가 아니니 양에게 물을 먹이고 가서 풀을 뜯게 하라</div>
+        <div class="verse"><span class="verse-num">8</span> 그들이 이르되 우리가 그리하지 못하겠노라 떼가 다 모이고 목자들이 우물 아귀에서 돌을 옮겨야 우리가 양에게 물을 먹이느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 야곱이 그들과 말하는 동안에 라헬이 그의 아버지의 양과 함께 오니 그가 그의 양들을 치고 있었기 때문이더라</div>
+        <div class="verse"><span class="verse-num">10</span> 야곱이 그의 외삼촌 라반의 딸 라헬과 그의 외삼촌의 양을 보고 나아가 우물 아귀에서 돌을 옮기고 외삼촌 라반의 양 떼에게 물을 먹이고</div>
+        <div class="verse"><span class="verse-num">11</span> 그가 라헬에게 입맞추고 소리 내어 울며</div>
+        <div class="verse"><span class="verse-num">12</span> 그에게 자기가 그의 아버지의 생질이요 리브가의 아들 됨을 말하였더니 라헬이 달려가서 그 아버지에게 알리매</div>
+        <div class="verse"><span class="verse-num">13</span> 라반이 그의 생질 야곱의 소식을 듣고 달려와서 그를 영접하여 안고 입맞추며 자기 집으로 인도하여 들이니 야곱이 자기의 모든 일을 라반에게 말하매</div>
+        <div class="verse"><span class="verse-num">14</span> 라반이 이르되 너는 참으로 내 혈육이로다 하였더라 야곱이 한 달을 그와 함께 거주하더니</div>
+        <div class="verse"><span class="verse-num">15</span> 라반이 야곱에게 이르되 네가 비록 내 생질이나 어찌 그저 내 일을 하겠느냐 네 품삯을 어떻게 할지 내게 말하라</div>
+        <div class="verse"><span class="verse-num">16</span> 라반에게 두 딸이 있으니 언니의 이름은 레아요 아우의 이름은 라헬이라</div>
+        <div class="verse"><span class="verse-num">17</span> 레아는 시력이 약하고 라헬은 곱고 아리따우니</div>
+        <div class="verse"><span class="verse-num">18</span> 야곱이 라헬을 더 사랑하므로 대답하되 내가 외삼촌의 작은 딸 라헬을 위하여 외삼촌에게 칠 년을 섬기리이다</div>
+        <div class="verse"><span class="verse-num">19</span> 라반이 이르되 그를 네게 주는 것이 타인에게 주는 것보다 나으니 나와 함께 있으라</div>
+        <div class="verse"><span class="verse-num">20</span> 야곱이 라헬을 위하여 칠 년 동안 라반을 섬겼으나 그를 사랑하는 까닭에 칠 년을 며칠 같이 여겼더라</div>
+        <div class="verse"><span class="verse-num">21</span> 야곱이 라반에게 이르되 내 기한이 찼으니 내 아내를 내게 주소서 내가 그에게 들어가겠나이다</div>
+        <div class="verse"><span class="verse-num">22</span> 라반이 그 곳 사람을 다 모아 잔치하고</div>
+        <div class="verse"><span class="verse-num">23</span> 저녁에 그의 딸 레아를 야곱에게로 데려가매 야곱이 그에게로 들어가니라</div>
+        <div class="verse"><span class="verse-num">24</span> 라반이 또 그의 여종 실바를 그의 딸 레아에게 시녀로 주었더라</div>
+        <div class="verse"><span class="verse-num">25</span> 야곱이 아침에 보니 레아라 라반에게 이르되 외삼촌이 어찌하여 내게 이같이 행하셨나이까 내가 라헬을 위하여 외삼촌을 섬기지 아니하였나이까 외삼촌이 나를 속이심은 어찌됨이니이까</div>
+        <div class="verse"><span class="verse-num">26</span> 라반이 이르되 언니보다 아우를 먼저 주는 것은 우리 지방에서 하지 아니하는 바이라</div>
+        <div class="verse"><span class="verse-num">27</span> 이를 위하여 칠 일을 채우라 우리가 그도 네게 주리니 네가 또 나를 칠 년 동안 섬길지니라</div>
+        <div class="verse"><span class="verse-num">28</span> 야곱이 그대로 하여 그 칠 일을 채우매 라반이 딸 라헬도 그에게 아내로 주고</div>
+        <div class="verse"><span class="verse-num">29</span> 라반이 또 그의 여종 빌하를 그의 딸 라헬에게 주어 시녀가 되게 하매</div>
+        <div class="verse"><span class="verse-num">30</span> 야곱이 또한 라헬에게로 들어갔고 그가 레아보다 라헬을 더 사랑하여 다시 칠 년 동안 라반을 섬겼더라</div>
+        <div class="verse"><span class="verse-num">31</span> 여호와께서 레아가 사랑 받지 못함을 보시고 그의 태를 여셨으나 라헬은 자녀가 없었더라</div>
+        <div class="verse"><span class="verse-num">32</span> 레아가 임신하여 아들을 낳고 그 이름을 르우벤이라 하여 이르되 여호와께서 나의 괴로움을 돌보셨으니 이제는 내 남편이 나를 사랑하리로다 하였더라</div>
+        <div class="verse"><span class="verse-num">33</span> 그가 다시 임신하여 아들을 낳고 이르되 여호와께서 내가 사랑 받지 못함을 들으셨으므로 내게 이 아들도 주셨도다 하고 그의 이름을 시므온이라 하였으며</div>
+        <div class="verse"><span class="verse-num">34</span> 그가 또 임신하여 아들을 낳고 이르되 내가 그에게 세 아들을 낳았으니 내 남편이 지금부터 나와 연합하리로다 하고 그의 이름을 레위라 하였으며</div>
+        <div class="verse"><span class="verse-num">35</span> 그가 또 임신하여 아들을 낳고 이르되 내가 이제는 여호와를 찬송하리로다 하고 이로 말미암아 그가 그의 이름을 유다라 하였고 그의 출산이 멈추었더라</div>
+
+        <!-- 창세기 30장 -->
+        <div class="chapter-title">창세기 30장 (1~43절)</div>
+        <div class="verse"><span class="verse-num">1</span> 라헬이 자기가 야곱에게서 아들을 낳지 못함을 보고 그의 언니를 시기하여 야곱에게 이르되 내게 자식을 낳게 하라 그렇지 아니하면 내가 죽겠노라</div>
+        <div class="verse"><span class="verse-num">2</span> 야곱이 라헬에게 성을 내어 이르되 그대를 임신하지 못하게 하시는 이는 하나님이시니 내가 하나님을 대신하겠느냐</div>
+        <div class="verse"><span class="verse-num">3</span> 라헬이 이르되 내 여종 빌하에게로 들어가라 그가 아들을 낳아 내 무릎에 두리니 그러면 나도 그로 말미암아 자식을 얻겠노라 하고</div>
+        <div class="verse"><span class="verse-num">4</span> 그의 시녀 빌하를 남편에게 아내로 주매 야곱이 그에게로 들어갔더니</div>
+        <div class="verse"><span class="verse-num">5</span> 빌하가 임신하여 야곱에게 아들을 낳은지라</div>
+        <div class="verse"><span class="verse-num">6</span> 라헬이 이르되 하나님이 내 억울함을 푸시려고 내 호소를 들으사 내게 아들을 주셨다 하고 이로 말미암아 그의 이름을 단이라 하였으며</div>
+        <div class="verse"><span class="verse-num">7</span> 라헬의 시녀 빌하가 다시 임신하여 둘째 아들을 야곱에게 낳으매</div>
+        <div class="verse"><span class="verse-num">8</span> 라헬이 이르되 내가 언니와 크게 경쟁하여 이겼다 하고 그의 이름을 납달리라 하였더라</div>
+        <div class="verse"><span class="verse-num">9</span> 레아가 자기의 출산이 멈춤을 보고 그의 시녀 실바를 데려다가 야곱에게 주어 아내로 삼게 하였더니</div>
+        <div class="verse"><span class="verse-num">10</span> 레아의 시녀 실바가 야곱에게서 아들을 낳으매</div>
+        <div class="verse"><span class="verse-num">11</span> 레아가 이르되 복되도다 하고 그의 이름을 갓이라 하였으며</div>
+        <div class="verse"><span class="verse-num">12</span> 레아의 시녀 실바가 둘째 아들을 야곱에게 낳으매</div>
+        <div class="verse"><span class="verse-num">13</span> 레아가 이르되 기쁘도다 모든 딸들이 나를 기쁜 자라 하리로다 하고 그의 이름을 아셀이라 하였더라</div>
+        <div class="verse"><span class="verse-num">14</span> 밀 거둘 때 르우벤이 나가서 들에서 합환채를 얻어 그의 어머니 레아에게 드렸더니 라헬이 레아에게 이르되 언니의 아들의 합환채를 청구하노라</div>
+        <div class="verse"><span class="verse-num">15</span> 레아가 그에게 이르되 네가 내 남편을 빼앗은 것이 작은 일이냐 그런데 네가 내 아들의 합환채도 빼앗고자 하느냐 라헬이 이르되 그러면 언니의 아들의 합환채 대신에 오늘 밤에 내 남편이 언니와 동침하리라 하니라</div>
+        <div class="verse"><span class="verse-num">16</span> 저물 때에 야곱이 들에서 돌아오매 레아가 나와서 그를 영접하며 이르되 내게로 들어오라 내가 내 아들의 합환채로 당신을 샀노라 그 밤에 야곱이 그와 동침하였더라</div>
+        <div class="verse"><span class="verse-num">17</span> 하나님이 레아의 소원을 들으셨으므로 그가 임신하여 다섯째 아들을 야곱에게 낳은지라</div>
+        <div class="verse"><span class="verse-num">18</span> 레아가 이르되 내가 내 시녀를 내 남편에게 주었으므로 하나님이 내게 그 값을 주셨다 하고 그의 이름을 잇사갈이라 하였으며</div>
+        <div class="verse"><span class="verse-num">19</span> 레아가 다시 임신하여 여섯째 아들을 야곱에게 낳은지라</div>
+        <div class="verse"><span class="verse-num">20</span> 레아가 이르되 하나님이 내게 후한 선물을 주시도다 내가 남편에게 여섯 아들을 낳았으니 이제는 그가 나와 함께 살리라 하고 그의 이름을 스불론이라 하였으며</div>
+        <div class="verse"><span class="verse-num">21</span> 그 후에 그가 딸을 낳고 그의 이름을 디나라 하였더라</div>
+        <div class="verse"><span class="verse-num">22</span> 하나님이 라헬을 생각하신지라 하나님이 그의 소원을 들으시고 그의 태를 여셨으므로</div>
+        <div class="verse"><span class="verse-num">23</span> 그가 임신하여 아들을 낳고 이르되 하나님이 내 부끄러움을 씻으셨다 하고</div>
+        <div class="verse"><span class="verse-num">24</span> 그 이름을 요셉이라 하니 여호와는 다시 다른 아들을 내게 더하시기를 원하노라 하였더라</div>
+        <div class="verse"><span class="verse-num">25</span> 라헬이 요셉을 낳았했을 때에 야곱이 라반에게 이르되 나를 보내어 내 고향 나의 땅으로 가게 하시되</div>
+        <div class="verse"><span class="verse-num">26</span> 내가 외삼촌에게서 일하고 얻은 처자를 내게 주시어 나로 가게 하소서 내가 외삼촌에게 한 일은 외삼촌이 아시나이다</div>
+        <div class="verse"><span class="verse-num">27</span> 라반이 그에게 이르되 여호와께서 너로 말미암아 내게 복 주신 줄을 내가 깨달았노니 네가 나를 사랑스럽게 여기거든 그대로 있으라</div>
+        <div class="verse"><span class="verse-num">28</span> 또 이르되 네 품삯을 정하라 내가 그것을 주리라</div>
+        <div class="verse"><span class="verse-num">29</span> 야곱이 그에게 이르되 내가 어떻게 외삼촌을 섬겼는지, 어떻게 외삼촌의 가축을 쳤는지 외삼촌이 아시나이다</div>
+        <div class="verse"><span class="verse-num">30</span> 내가 오기 전에는 외삼촌의 소유가 적더니 번성하여 떼를 이루었으니 내 발이 이르는 곳마다 여호와께서 외삼촌에게 복을 주셨나이다 그러나 나는 언제나 내 집을 세우리이까</div>
+        <div class="verse"><span class="verse-num">31</span> 라반이 이르되 내가 무엇으로 네게 주랴 야곱이 이르되 외삼촌께서 내게 아무것도 주시지 않아도 나를 위하여 이 일을 행하시면 내가 다시 외삼촌의 양 떼를 먹이고 지키리이다</div>
+        <div class="verse"><span class="verse-num">32</span> 오늘 내가 외삼촌의 양 떼에 두루 다니며 그 양 중에 아롱진 것과 점 있는 것과 검은 것을 가려내며 또 염소 중에 점 있는 것과 아롱진 것을 가려내리니 이같은 것이 내 품삯이 되리이다</div>
+        <div class="verse"><span class="verse-num">33</span> 후일에 외삼촌께서 오셔서 내 품삯을 조사하실 때에 나의 의가 내 대답이 되리이다 내게 혹시 염소 중 아롱지지 아니한 것이나 점이 없는 것이나 양 중에 검지 아니한 것이 있거든 다 도둑질한 것으로 인정하소서</div>
+        <div class="verse"><span class="verse-num">34</span> 라반이 이르되 내가 네 말대로 하리라 하고</div>
+        <div class="verse"><span class="verse-num">35</span> 그 날에 그가 숫염소 중 얼룩무늬 있는 것과 점 있는 것을 가리고 암염소 중 흰 바탕에 아롱진 것과 점 있는 것을 가리고 양 중의 검은 것들을 가려 자기 아들들의 손에 맡기고</div>
+        <div class="verse"><span class="verse-num">36</span> 자기와 야곱의 사이를 사흘 길이 뜨게 하였고 야곱은 라반의 남은 양 떼를 치니라</div>
+        <div class="verse"><span class="verse-num">37</span> 야곱이 버드나무와 살구나무와 신풍나무의 푸른 가지를 가져다가 그것들의 껍질을 벗겨 흰 무늬를 내고</div>
+        <div class="verse"><span class="verse-num">38</span> 그 껍질 벗긴 가지를 양 떼가 와서 먹는 개천의 물 구유에 세워 양 떼를 향하게 하매 그 떼가 물을 먹으러 올 때에 새끼를 배니</div>
+        <div class="verse"><span class="verse-num">39</span> 가지 앞에서 새끼를 배므로 얼룩얼룩한 것과 점이 있고 아롱진 것을 낳은지라</div>
+        <div class="verse"><span class="verse-num">40</span> 야곱이 새끼 양을 구분하고 그 얼룩무늬와 검은 빛 있는 것을 라반의 양과 서로 마주보게 하며 자기 양을 따로 두어 라반의 양과 섞이지 않게 하며</div>
+        <div class="verse"><span class="verse-num">41</span> 튼튼한 양이 새끼 밸 때에는 야곱이 개천에다가 양 떼의 눈 앞에 그 가지를 두어 양이 그 가지 곁에서 새끼를 배게 하고</div>
+        <div class="verse"><span class="verse-num">42</span> 약한 양이면 그 가지를 두지 아니하니 그렇게 함으로 약한 것은 라반의 것이 되고 튼튼한 것은 야곱의 것이 된지라</div>
+        <div class="verse"><span class="verse-num">43</span> 이에 그 사람이 매우 번창하여 양 떼와 노비와 낙타와 나귀가 많았더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

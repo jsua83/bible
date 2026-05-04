@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 018</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 018</h1>
+        <p class="sub-title">찬송가 272장 고통의 멍에 벗으려고</p>
+        <p class="sub-title">출애굽기 1~2장 — 제국 체험 / 갈대상자를 탄 진짜 이유</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 272장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1Budj3QICHWEPzv8qRiQhfDNyhak2DH5K" alt="찬송가 272장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 출애굽기 1장~2장<br>'제국 체험 / 갈대상자를 탄 진짜 이유'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 창세기 12장에 '자손에 대한 하나님의 약속'은 출애굽기 1장에서 성취됩니다.</span>
+            70명으로 애굽 생활을 시작했던 야곱의 가족은 400여 년 만에 자그마치 <strong>장정만 60만 명</strong>이 되었습니다. 기하급수적으로 늘어가는 히브리 민족의 숫자는 <strong>애굽 사람들에게 두려움이 되었습니다</strong>(출 1:9~10). 그러자 애굽은 <strong>3단계에 걸쳐</strong> 이 문제를 해결하기 위해 노력합니다.
+            <div class="quote">
+                <strong>첫째,</strong> 히브리 산파들을 통해 간접 살인 명령을 내립니다.<br>
+                <strong>둘째,</strong> 이 일이 뜻대로 되지 않자 히브리 가정에서 아들이 태어나면 나일강에 던져 죽이는 일을 시행합니다.<br>
+                <strong>셋째,</strong> 히브리 민족을 무임금 유노동자 노예로 삼아 국책 사업에 동원합니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 애굽 제국 경험은 '제사장 나라'의 기초가 됩니다.</span>
+            하나님께서 아브라함의 후손들을 애굽에서 400여 년간 살게 하신 이유는 <strong>'제국'을 직접 경험하게 하시고자 함</strong>입니다. 민족적으로 제국을 경험한 그들이 출애굽하여 나라를 세울 때, <strong>제국이 아닌 제사장 나라를 세우도록</strong> 하나님께서 큰 그림을 그리셨던 것입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 모세가 갈대상자를 탄 이유는 네 가지입니다.</span>
+            <div class="quote">
+                <strong>첫째,</strong> 엄마가 태웠기 때문입니다. 모세의 아버지는 갈대상자를 만들고, 엄마는 태우고, 누나는 뒤따라가며 망을 보았습니다.<br>
+                <strong>둘째,</strong> 죽을 확률 99.9%임에도 불구하고 3개월 된 아이를 갈대상자에 태워 나일강에 보낸 이유는 그들이 <strong>민족은 이루었으나 나라를 가지지 못했기 때문</strong>입니다.<br>
+                <strong>셋째,</strong> 애굽의 '제국주의 정책' 때문입니다. 당시 애굽은 소극적 제국주의에서 적극적 제국주의로 나아가고 있었습니다. 때문에 원정 나간 애굽 군인들 대비 히브리 남자들의 <strong>인구 조절 정책</strong>을 시행한 것입니다.<br>
+                <strong>넷째,</strong> 하나님께서 출애굽 시기를 결정하셨기 때문입니다. <strong>모세 한 사람이 준비된다는 것은 곧 하나님께서 계획하신 출애굽의 준비가 시작되었다</strong>는 것입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 80년 동안 모세는 출애굽을 위해 세 가지를 준비했습니다.</span>
+            하나님께서는 모세를 출애굽의 지도자로 세우기 위해 <strong>세 가지 교육을 시키셨습니다.</strong>
+            <div class="quote">
+                <strong>첫째,</strong> 어머니 요게벳을 통해 <strong>신앙 교육</strong>을 시키셨습니다. 그래서 모세가 떨기나무 사건 전에 이미 하나님을 알고 있었던 것입니다.<br>
+                <strong>둘째,</strong> 40년 동안 애굽 왕자로서 배우는 <strong>제왕학을 통해 협상 교육</strong>을 시키셨습니다. 그래서 바로와 대면할 수 있었고, 아홉 번의 협상도 가능했던 것입니다.<br>
+                <strong>셋째,</strong> 40년 동안 미디안 광야로 <strong>사전 답사</strong>를 시키셨습니다. 그래서 모세는 출애굽 후 40년 동안 광야에서 양을 돌보듯 히브리 민족을 이끌 수 있었습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 히브리 출신으로 '애굽일보' 1면 톱 기사에 오른 사람은 요셉과 모세, 두 사람입니다.</span>
+            '애굽일보' 1면에 입애굽의 지도자 히브리 출신 요셉이 대서특필 되었을 것입니다.
+            <div class="quote">
+                <strong>"히브리 노예 요셉, 하루아침에 애굽 총리로 등극하다!"</strong>
+            </div>
+            400여 년이 지난 후 출애굽의 지도자 히브리 출신 모세도 '애굽일보' 1면에 대서특필 되었을 것입니다.
+            <div class="quote">
+                <strong>"촉망받던 애굽 왕자 모세, 지난밤에 망명!"</strong>
+            </div>
+            이렇게 모세는 '애굽일보' 1면 대서특필 사건을 남기면서 <strong>미디안 광야로 망명을 떠나야 했습니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 출애굽기 1~2장 '제국 체험 / 갈대상자를 탄 진짜 이유'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 출애굽기 1장 -->
+        <div class="chapter-title">출애굽기 1장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 야곱과 함께 각각 자기 가족을 데리고 애굽에 이른 이스라엘 아들들의 이름은 이러하니</div>
+        <div class="verse"><span class="verse-num">2</span> 르우벤과 시므온과 레위와 유다와</div>
+        <div class="verse"><span class="verse-num">3</span> 잇사갈과 스불론과 베냐민과</div>
+        <div class="verse"><span class="verse-num">4</span> 단과 납달리와 갓과 아셀이요</div>
+        <div class="verse"><span class="verse-num">5</span> 야곱의 허리에서 나온 사람이 모두 칠십이요 요셉은 애굽에 있었더라</div>
+        <div class="verse"><span class="verse-num">6</span> 요셉과 그의 모든 형제와 그 시대의 사람은 다 죽었고</div>
+        <div class="verse"><span class="verse-num">7</span> 이스라엘 자손은 생육하고 불어나 번성하고 매우 강하여 온 땅에 가득하게 되었더라</div>
+        <div class="verse"><span class="verse-num">8</span> 요셉을 알지 못하는 새 왕이 일어나 애굽을 다스리더니</div>
+        <div class="verse"><span class="verse-num">9</span> 그가 그 백성에게 이르되 이 백성 이스라엘 자손이 우리보다 많고 강하도다</div>
+        <div class="verse"><span class="verse-num">10</span> 자, 우리가 그들에게 대하여 지혜롭게 하자 두렵건대 그들이 더 많게 되면 전쟁이 일어날 때에 우리 대적과 합하여 우리와 싸우고 이 땅에서 나갈까 하노라 하고</div>
+        <div class="verse"><span class="verse-num">11</span> 감독들을 그들 위에 세우고 그들에게 무거운 짐을 지워 괴롭게 하여 그들에게 바로를 위하여 국고성 비돔과 라암셋을 건축하게 하니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그러나 학대를 받을수록 더욱 번성하여 퍼져나가니 애굽 사람이 이스라엘 자손으로 말미암아 근심하여</div>
+        <div class="verse"><span class="verse-num">13</span> 이스라엘 자손에게 일을 엄하게 시켜</div>
+        <div class="verse"><span class="verse-num">14</span> 어려운 노동으로 그들의 생활을 괴롭게 하니 곧 흙 이기기와 벽돌 굽기와 농사의 여러 가지 일이라 그 시키는 일이 모두 엄하였더라</div>
+        <div class="verse"><span class="verse-num">15</span> 애굽 왕이 히브리 산파 십브라라 하는 사람과 부아라 하는 사람에게 말하여</div>
+        <div class="verse"><span class="verse-num">16</span> 이르되 너희는 히브리 여인을 위하여 해산을 도울 때에 그 자리를 살펴서 아들이거든 그를 죽이고 딸이거든 살려두라</div>
+        <div class="verse"><span class="verse-num">17</span> 그러나 산파들이 하나님을 두려워하여 애굽 왕의 명령을 어기고 남자 아기들을 살린지라</div>
+        <div class="verse"><span class="verse-num">18</span> 애굽 왕이 산파를 불러 그들에게 이르되 너희가 어찌하여 이같이 남자 아기들을 살렸느냐</div>
+        <div class="verse"><span class="verse-num">19</span> 산파가 바로에게 대답하되 히브리 여인은 애굽 여인과 같지 아니하고 건장하여 산파가 그들에게 이르기 전에 해산하였더이다 하매</div>
+        <div class="verse"><span class="verse-num">20</span> 하나님이 그 산파들에게 은혜를 베푸시니 그 백성은 번성하고 매우 강해지니라</div>
+        <div class="verse"><span class="verse-num">21</span> 그 산파들은 하나님을 경외하였으므로 하나님이 그들의 집안을 흥왕하게 하신지라</div>
+        <div class="verse"><span class="verse-num">22</span> 그러므로 바로가 그의 모든 백성에게 명령하여 이르되 아들이 태어나거든 너희는 그를 나일 강에 던지고 딸이거든 살려두라 하였더라</div>
+
+        <!-- 출애굽기 2장 -->
+        <div class="chapter-title">출애굽기 2장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 레위 가족 중 한 사람이 가서 레위 여자에게 장가 들어</div>
+        <div class="verse"><span class="verse-num">2</span> 그 여자가 임신하여 아들을 낳으니 그가 잘 생긴 것을 보고 석 달 동안 그를 숨겼으나</div>
+        <div class="verse"><span class="verse-num">3</span> 더 숨길 수 없게 되매 그를 위하여 갈대 상자를 가져다가 역청과 나무 진을 칠하고 아기를 거기 담아 나일 강 가 갈대 사이에 두고</div>
+        <div class="verse"><span class="verse-num">4</span> 그의 누이가 어떻게 되는지를 알려고 멀리 섰더니</div>
+        <div class="verse"><span class="verse-num">5</span> 바로의 딸이 목욕하러 나일 강으로 내려오고 시녀들은 나일 강 가를 거닐 때에 그가 갈대 사이의 상자를 보고 시녀를 보내어 가져다가</div>
+        <div class="verse"><span class="verse-num">6</span> 열고 그 아기를 보니 아기가 우는지라 그가 그를 불쌍히 여겨 이르되 이는 히브리 사람의 아기로다</div>
+        <div class="verse"><span class="verse-num">7</span> 그의 누이가 바로의 딸에게 이르되 내가 가서 당신을 위하여 히브리 여인 중에서 유모를 불러다가 이 아기에게 젖을 먹이게 하리이까</div>
+        <div class="verse"><span class="verse-num">8</span> 바로의 딸이 그에게 이르되 가라 하매 그 소녀가 가서 그 아기의 어머니를 불러오니</div>
+        <div class="verse"><span class="verse-num">9</span> 바로의 딸이 그에게 이르되 이 아기를 데려다가 나를 위하여 젖을 먹이라 내가 그 삯을 주리라 여인이 아기를 데려다가 젖을 먹이더니</div>
+        <div class="verse"><span class="verse-num">10</span> 그 아기가 자라매 바로의 딸에게로 데려가니 그가 그의 아들이 되니라 그가 그의 이름을 모세라 하여 이르되 이는 내가 그를 물에서 건져내었음이라 하였더라</div>
+        <div class="verse"><span class="verse-num">11</span> 모세가 장성한 후에 한번은 자기 형제들에게 나가서 그들이 고되게 노동하는 것을 보더니 어떤 애굽 사람이 한 히브리 사람 곧 자기 형제를 치는 것을 본지라</div>
+        <div class="verse"><span class="verse-num">12</span> 좌우를 살펴 사람이 없음을 보고 그 애굽 사람을 쳐죽여 모래 속에 감추니라</div>
+        <div class="verse"><span class="verse-num">13</span> 이튿날 다시 나가니 두 히브리 사람이 서로 싸우는지라 그 잘못한 사람에게 이르되 네가 어찌하여 동포를 치느냐 하매</div>
+        <div class="verse"><span class="verse-num">14</span> 그가 이르되 누가 너를 우리를 다스리는 자와 재판관으로 삼았느냐 네가 애굽 사람을 죽인 것처럼 나도 죽이려느냐 모세가 두려워하여 이르되 일이 탄로되었도다</div>
+        <div class="verse"><span class="verse-num">15</span> 바로가 이 일을 듣고 모세를 죽이고자 하여 찾는지라 모세가 바로의 낯을 피하여 미디안 땅에 머물며 하루는 우물 곁에 앉았더라</div>
+        <div class="verse"><span class="verse-num">16</span> 미디안 제사장에게 일곱 딸이 있었더니 그들이 와서 물을 길어 구유에 채우고 그들의 아버지의 양 떼에게 먹이려 하는데</div>
+        <div class="verse"><span class="verse-num">17</span> 목자들이 와서 그들을 쫓는지라 모세가 일어나 그들을 도와 그 양 떼에게 먹이니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그들이 그들의 아버지 르우엘에게 이를 때에 아버지가 이르되 너희가 오늘은 어찌하여 이같이 속히 돌아오느냐</div>
+        <div class="verse"><span class="verse-num">19</span> 그들이 이르되 한 애굽 사람이 우리를 목자들의 손에서 건져내고 우리를 위하여 물을 길어 양 떼에게 먹였나이다</div>
+        <div class="verse"><span class="verse-num">20</span> 아버지가 딸들에게 이르되 그 사람이 어디에 있느냐 너희가 어찌하여 그 사람을 버려두고 왔느냐 그를 청하여 음식을 대접하라 하였더라</div>
+        <div class="verse"><span class="verse-num">21</span> 모세가 그와 동거하기를 기뻐하매 그가 그의 딸 십보라를 모세에게 주었더니</div>
+        <div class="verse"><span class="verse-num">22</span> 그가 아들을 낳으매 모세가 그의 이름을 게르솜이라 하여 이르되 내가 타국에서 나그네가 되었음이라 하였더라</div>
+        <div class="verse"><span class="verse-num">23</span> 여러 해 후에 애굽 왕은 죽었고 이스라엘 자손은 고된 노동으로 말미암아 탄식하며 부르짖으니 그 고된 노동으로 말미암아 부르짖는 소리가 하나님께 상달된지라</div>
+        <div class="verse"><span class="verse-num">24</span> 하나님이 그들의 고통 소리를 들으시고 하나님이 아브라함과 이삭과 야곱에게 세운 그의 언약을 기억하사</div>
+        <div class="verse"><span class="verse-num">25</span> 하나님이 이스라엘 자손을 돌보셨고 하나님이 그들을 기억하셨더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

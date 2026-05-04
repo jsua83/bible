@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 016</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 016</h1>
+        <p class="sub-title">찬송가 428장 내 영혼에 햇빛 비치니</p>
+        <p class="sub-title">창세기 45~47장 — 요셉의 눈물 / 요셉 가족을 국빈급으로 초대한 이유</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 428장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1lWBz7dGgVfsigRnTiEo8Uqt-8oMsc_2o" alt="찬송가 428장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 창세기 45장~47장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 70명이 입애굽에서 430년 만에 장정 60만 명이 출애굽합니다.</span>
+            <div class="quote">
+                <strong>입애굽의 지도자</strong> — 요셉을 비롯한 아버지 야곱, 그리고 야곱의 넷째 아들 유다입니다.<br>
+                <strong>출애굽의 지도자</strong> — 430년 후, 모세를 비롯해 모세의 형 아론과 누나 미리암입니다.
+            </div>
+            입애굽 때에는 <strong>하나님께서 7년 풍년에 이어 7년 흉년으로 나일강을 마르게 하셨습니다.</strong> 출애굽 때에는 <strong>하나님께서 애굽의 모든 장자를 죽게 하시고 홍해를 가르셨습니다.</strong>
+            <div class="quote">
+                <strong>이렇게 입애굽과 출애굽 이야기는 모두 하나님의 기적이 핵심 포인트입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 요셉의 울음은 다섯 번 이상 성경에 기록됩니다.</span>
+            <div class="quote">
+                <strong>첫 번째,</strong> 요셉은 도단에서 열 명의 형들에게 살려달라고 애원하며 울었습니다.<br>
+                <strong>두 번째,</strong> 요셉은 애굽에서 22년 만에 만난 열 명의 형들을 보고 웁니다.<br>
+                <strong>세 번째,</strong> 요셉은 22년 만에 만난 동생 베냐민을 보고 웁니다.<br>
+                <strong>네 번째,</strong> 요셉이 유다의 연설을 듣고 웁니다.
+            </div>
+            이때 요셉은 울먹이면서 <strong>세 가지를 말합니다.</strong>
+            <div class="quote">
+                <strong>첫째,</strong> 자신이 형들의 동생인 요셉이라는 사실을 밝힙니다.<br>
+                <strong>둘째,</strong> 두려워 떠는 형들에게 <strong>"근심하지 마소서"</strong>라고 말합니다.<br>
+                <strong>셋째,</strong> 아버지를 모시고 고센 땅에 와서 5년을 머물 것을 제안합니다.
+            </div>
+            <div class="quote">
+                <strong>다섯 번째,</strong> 요셉의 마지막 울음은 고센 땅에서 아버지 야곱을 만나 얼싸안고 운 울음이었습니다. <strong>가장 큰 기쁨의 눈물</strong>이었을 것입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 야곱의 가족들은 국빈급으로 애굽에 초대됩니다.</span>
+            뛰어난 정치력의 소유자 애굽 왕 바로는 요셉을 위해 <strong>그의 가족들을 모두 애굽으로 초청하고 애굽의 좋은 땅을 주겠다</strong>고 말합니다. 바로가 요셉의 가족들을 국빈급으로 초대한 공식 문건의 내용입니다(창 45:17~24).
+            <div class="quote">
+                <strong>첫째,</strong> '양식을 싣고 가서 요셉 형들의 가족과 요셉의 아버지를 그 수레에 모셔와라. 기구를 아끼지 말라. 그리고 애굽에 좋은 땅을 주겠다.'<br>
+                <strong>둘째,</strong> '요셉의 형들에게는 옷 한 벌씩, 요셉의 동생 베냐민에게는 옷 다섯 벌과 은 삼백을 준다.'<br>
+                <strong>셋째,</strong> '요셉의 아버지에게는 수나귀 열 필에 애굽의 아름다운 물품을 실어주고, 암나귀 열 필에는 길에서 먹을 곡식과 떡과 양식을 실어 보낸다.'
+            </div>
+            이는 요셉이 <strong>애굽의 바로와 왕궁, 신하들, 그리고 애굽 백성들에게 얼마나 큰 사랑과 존경을 받고 있었는지</strong> 보여주는 것입니다. 14년 동안은 요셉의 안위가 곧 <strong>애굽 국가의 운명과 다를 바 없기 때문</strong>입니다. 요셉의 컨디션이 좋고 건강해야 애굽은 계속해서 번영을 이룰 수 있었던 것입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 입애굽은 '민족 만들기' 꿈이며, 출애굽은 '나라 만들기' 꿈입니다.</span>
+            '요셉의 꿈'이나 '바로의 꿈'보다 정말 더 놀라운 꿈은 브엘세바에서의 <strong>'야곱의 꿈'</strong>입니다. 야곱의 꿈은 <strong>'모든 민족을 위한 한 민족' 탄생을 위한, 즉 하나님의 뜻을 이 땅에서 실현하게 하는 '민족 만들기' 프로젝트 꿈</strong>이었기 때문입니다.<br><br>
+            야곱은 22년 동안 죽은 줄로만 단 요셉이 애굽에서 총리가 되어 <strong>하나님의 뜻인 '7년 풍년과 7년 흉년' 프로젝트에 함께 동역하고 있다</strong>는 소식을 듣고 기뻤습니다. 그런데 야곱이 애굽으로 내려가는 일에 주저합니다. 약속의 땅 가나안을 떠나는 것이 야곱에게는 <strong>큰 두려움</strong>이었기 때문입니다.<br><br>
+            그러자 하나님께서 야곱의 꿈에 나타나셔서 입애굽을 통한 하나님의 뜻을 말씀하십니다(창 46:2~4). 아브라함의 후손들이 하늘의 뭇별처럼 많아져 큰 민족을 이루게 될 것이라는 하나님의 뜻은 <strong>단순히 5년 흉년 기간을 잘 보내기 위함이 아니었습니다. 민족을 만들기 위한 430년을 위해 애굽에서 살아야 하는 것</strong>이었습니다.
+            <div class="quote">
+                <strong>하나님의 뜻을 알게 되자 야곱은 주저하지 않고 애굽으로 내려갑니다. 그리고 요셉에게 하나님의 뜻을 전합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 입애굽의 지도자 요셉의 출애굽 준비 세 가지는 고센 땅, 목축업, 교육이었습니다.</span>
+            애굽에서의 생활이 5년이 아닌 <strong>430년이라는 '하나님의 뜻'</strong>을 아버지 야곱으로부터 전해 들은 요셉이, 입애굽의 책임자로서 <strong>출애굽의 청사진을 미리 그려놓았습니다</strong>(창 46:31~34).
+            <div class="quote">
+                <strong>첫 번째 준비 — '고센 땅'</strong><br>
+                애굽의 중심에서 벗어난 땅으로, 야곱의 가족들이 민족을 이루며 살아갈 터전을 마련한 것입니다.<br><br>
+                <strong>두 번째 준비 — '목축업'</strong><br>
+                요셉은 자기 자식들과 조카들을 애굽 사람들과 결혼시키지 않아야 아브라함 후손을 잇는 한 민족으로서의 하나님의 뜻이 실현될 수 있다고 생각했습니다. 그래서 애굽 사람들이 가증히 여기는 <strong>목축업을 선택함으로 처음부터 애굽 사람들과의 '혼맥'을 차단하여 혈통의 순수성을 지키고자 했습니다.</strong><br><br>
+                <strong>세 번째 준비 — '교육'</strong><br>
+                출애굽을 위한 가장 근본적인 준비로, 하나님의 뜻과 신앙을 다음 세대에 전승하기 위함이었습니다.
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 창세기 45~47장 '요셉의 눈물 / 요셉 가족을 국빈급으로 초대한 이유'를 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 창세기 45장 -->
+        <div class="chapter-title">창세기 45장 (1~28절)</div>
+        <div class="verse"><span class="verse-num">1</span> 요셉이 시종하는 자들 앞에서 그 정을 억제하지 못하여 소리 질러 모든 사람을 자기에게서 물러가라 하고 그 형제들에게 자기를 알리니 그 때에 그와 함께 한 다른 사람이 없었더라</div>
+        <div class="verse"><span class="verse-num">2</span> 요셉이 큰 소리로 우니 애굽 사람에게 들리며 바로의 궁중에 들리더라</div>
+        <div class="verse"><span class="verse-num">3</span> 요셉이 그 형들에게 이르되 나는 요셉이라 내 아버지께서 아직 살아 계시니이까 형들이 그 앞에서 놀라서 대답하지 못하더라</div>
+        <div class="verse"><span class="verse-num">4</span> 요셉이 형들에게 이르되 내게로 가까이 오소서 그들이 가까이 가니 이르되 나는 당신들의 아우 요셉이니 당신들이 애굽에 판 자라</div>
+        <div class="verse"><span class="verse-num">5</span> 당신들이 나를 이 곳에 팔았다고 해서 근심하지 마소서 한탄하지 마소서 하나님이 생명을 구원하시려고 나를 당신들보다 먼저 보내셨나이다</div>
+        <div class="verse"><span class="verse-num">6</span> 이 땅에 이 년 동안 흉년이 들었으나 아직 오 년은 밭갈이도 못하고 추수도 못할지라</div>
+        <div class="verse"><span class="verse-num">7</span> 하나님이 큰 구원으로 당신들의 생명을 보존하고 당신들의 후손을 세상에 두시려고 나를 당신들보다 먼저 보내셨나니</div>
+        <div class="verse"><span class="verse-num">8</span> 그런즉 나를 이리로 보낸 이는 당신들이 아니요 하나님이시라 하나님이 나를 바로에게 아버지로 삼으시고 그 온 집의 주로 삼으시며 애굽 온 땅의 통치자로 삼으셨나이다</div>
+        <div class="verse"><span class="verse-num">9</span> 당신들은 속히 아버지께로 올라가서 아뢰기를 아버지의 아들 요셉의 말에 하나님이 나를 애굽 전국의 주로 세우셨으니 지체 말고 내게로 내려오사</div>
+        <div class="verse"><span class="verse-num">10</span> 아버지의 아들들과 아버지의 손자들과 아버지의 양과 소와 모든 소유가 고센 땅에 머물며 나와 가깝게 하소서</div>
+        <div class="verse"><span class="verse-num">11</span> 흉년이 아직 다섯 해가 있으니 내가 거기서 아버지를 봉양하리이다 아버지와 아버지의 가족과 아버지께 속한 모든 사람에게 부족함이 없도록 하겠나이다 하더라고 전하소서</div>
+        <div class="verse"><span class="verse-num">12</span> 당신들의 눈과 내 아우 베냐민의 눈이 보는 바 당신들에게 이 말을 하는 것은 내 입이라</div>
+        <div class="verse"><span class="verse-num">13</span> 당신들은 내가 애굽에서 누리는 영화와 당신들이 본 모든 것을 다 내 아버지께 아뢰고 속히 모시고 내려오소서 하며</div>
+        <div class="verse"><span class="verse-num">14</span> 자기 아우 베냐민의 목을 안고 우니 베냐민도 요셉의 목을 안고 우니라</div>
+        <div class="verse"><span class="verse-num">15</span> 요셉이 또 형들과 입맞추며 안고 우니 형들이 그제서야 요셉과 말하니라</div>
+        <div class="verse"><span class="verse-num">16</span> 요셉의 형들이 왔다는 소문이 바로의 궁에 들리매 바로와 그의 신하들이 기뻐하고</div>
+        <div class="verse"><span class="verse-num">17</span> 바로는 요셉에게 이르되 네 형들에게 명령하기를 너희는 이렇게 하여 너희 양식을 싣고 가서 가나안 땅에 이르거든</div>
+        <div class="verse"><span class="verse-num">18</span> 너희 아버지와 너희 가족을 이끌고 내게로 오라 내가 너희에게 애굽의 좋은 땅을 주리니 너희가 나라의 기름진 것을 먹으리라</div>
+        <div class="verse"><span class="verse-num">19</span> 이제 명령을 받았으니 이렇게 하라 너희는 애굽 땅에서 수레를 가져다가 너희 자녀와 아내를 태우고 너희 아버지를 모셔 오라</div>
+        <div class="verse"><span class="verse-num">20</span> 또 너희의 기구를 아끼지 말라 온 애굽 땅의 좋은 것이 너희 것임이니라</div>
+        <div class="verse"><span class="verse-num">21</span> 이스라엘의 아들들이 그대로 할새 요셉이 바로의 명령대로 그들에게 수레를 주고 길 양식을 주며</div>
+        <div class="verse"><span class="verse-num">22</span> 또 그들에게 다 각기 옷 한 벌씩을 주되 베냐민에게는 은 삼백과 옷 다섯 벌을 주고</div>
+        <div class="verse"><span class="verse-num">23</span> 그가 또 이와 같이 그 아버지에게 보내되 수나귀 열 필에 애굽의 아름다운 물품을 실리고 암나귀 열 필에는 아버지에게 길에서 드릴 곡식과 떡과 양식을 실리고</div>
+        <div class="verse"><span class="verse-num">24</span> 이에 형들을 돌려보내며 그들에게 이르되 당신들은 길에서 다투지 말라 하였더라</div>
+        <div class="verse"><span class="verse-num">25</span> 그들이 애굽에서 올라와 가나안 땅으로 들어가서 아버지 야곱에게 이르러</div>
+        <div class="verse"><span class="verse-num">26</span> 알리어 이르되 요셉이 지금까지 살아 있어 애굽 땅 총리가 되었더이다 야곱이 그들의 말을 믿지 못하여 어리둥절 하더니</div>
+        <div class="verse"><span class="verse-num">27</span> 그들이 또 요셉이 자기들에게 부탁한 모든 말로 그에게 말하매 그들의 아버지 야곱은 요셉이 자기를 태우려고 보낸 수레를 보고서야 기운이 소생한지라</div>
+        <div class="verse"><span class="verse-num">28</span> 이스라엘이 이르되 족하도다 내 아들 요셉이 지금까지 살아 있으니 내가 죽기 전에 가서 그를 보리라 하니라</div>
+
+        <!-- 창세기 46장 -->
+        <div class="chapter-title">창세기 46장 (1~34절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘이 모든 소유를 이끌고 떠나 브엘세바에 이르러 그의 아버지 이삭의 하나님께 희생제사를 드리니</div>
+        <div class="verse"><span class="verse-num">2</span> 그 밤에 하나님이 이상 중에 이스라엘에게 나타나 이르시되 야곱아 야곱아 하시는지라 야곱이 이르되 내가 여기 있나이다 하매</div>
+        <div class="verse"><span class="verse-num">3</span> 하나님이 이르시되 나는 하나님이라 네 아버지의 하나님이니 애굽으로 내려가기를 두려워하지 말라 내가 거기서 너로 큰 민족을 이루게 하리라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 너와 함께 애굽으로 내려가겠고 반드시 너를 인도하여 다시 올라올 것이며 요셉이 그의 손으로 네 눈을 감기리라 하셨더라</div>
+        <div class="verse"><span class="verse-num">5</span> 야곱이 브엘세바에서 떠날새 이스라엘의 아들들이 바로가 그를 태우려고 보낸 수레에 자기들의 아버지 야곱과 자기들의 처자들을 태우고</div>
+        <div class="verse"><span class="verse-num">6</span> 그들의 가축과 가나안 땅에서 얻은 재물을 이끌었으며 야곱과 그의 자손들이 다함께 애굽으로 갔더라</div>
+        <div class="verse"><span class="verse-num">7</span> 이와 같이 야곱이 그 아들들과 손자들과 딸들과 손녀들 곧 그의 모든 자손을 데리고 애굽으로 갔더라</div>
+        <div class="verse"><span class="verse-num">8</span> 애굽으로 내려간 이스라엘 가족의 이름은 이러하니라 야곱과 그의 아들들 곧 야곱의 맏아들 르우벤과</div>
+        <div class="verse"><span class="verse-num">9</span> 르우벤의 아들 하녹과 발루와 헤스론과 갈미요</div>
+        <div class="verse"><span class="verse-num">10</span> 시므온의 아들은 여무엘과 야민과 오핫과 야긴과 스할과 가나안 여인의 아들 사울이요</div>
+        <div class="verse"><span class="verse-num">11</span> 레위의 아들은 게르손과 그핫과 므라리요</div>
+        <div class="verse"><span class="verse-num">12</span> 유다의 아들 곧 엘과 오난과 셀라와 베레스와 세라니 엘과 오난은 가나안 땅에서 죽었고 베레스의 아들은 헤스론과 하물이요</div>
+        <div class="verse"><span class="verse-num">13</span> 잇사갈의 아들은 돌라와 부와와 욥과 시므론이요</div>
+        <div class="verse"><span class="verse-num">14</span> 스불론의 아들은 세렛과 엘론과 얄르엘이니</div>
+        <div class="verse"><span class="verse-num">15</span> 이들은 레아가 밧단아람에서 야곱에게 난 자손들이라 그 딸 디나를 합하여 남자와 여자가 삼십삼 명이며</div>
+        <div class="verse"><span class="verse-num">16</span> 갓의 아들은 시뵨과 학기와 수니와 에스본과 에리와 아로디와 아렐리요</div>
+        <div class="verse"><span class="verse-num">17</span> 아셀의 아들은 임나와 이스와와 이스위와 브리아와 그들의 누이 세라며 또 브리아의 아들은 헤벨과 말기엘이니</div>
+        <div class="verse"><span class="verse-num">18</span> 이들은 라반이 그의 딸 레아에게 준 실바가 야곱에게 낳은 자손들이니 모두 십육 명이라</div>
+        <div class="verse"><span class="verse-num">19</span> 야곱의 아내 라헬의 아들 곧 요셉과 베냐민이요</div>
+        <div class="verse"><span class="verse-num">20</span> 애굽 땅에서 온의 제사장 보디베라의 딸 아스낫이 요셉에게 낳은 므낫세와 에브라임이요</div>
+        <div class="verse"><span class="verse-num">21</span> 베냐민의 아들 곧 벨라와 베겔과 아스벨과 게라와 나아만과 에히와 로스와 뭅빔과 훕빔과 아릇이니</div>
+        <div class="verse"><span class="verse-num">22</span> 이들은 라헬이 야곱에게 낳은 자손들이니 모두 십사 명이요</div>
+        <div class="verse"><span class="verse-num">23</span> 단의 아들 후심이요</div>
+        <div class="verse"><span class="verse-num">24</span> 납달리의 아들 곧 야스엘과 구니와 예셀과 실렘이라</div>
+        <div class="verse"><span class="verse-num">25</span> 이들은 라반이 그의 딸 라헬에게 준 빌하가 야곱에게 낳은 자손들이니 모두 칠 명이라</div>
+        <div class="verse"><span class="verse-num">26</span> 야곱과 함께 애굽에 들어간 자는 야곱의 며느리들 외에 육십육 명이니 이는 다 야곱의 몸에서 태어난 자이며</div>
+        <div class="verse"><span class="verse-num">27</span> 애굽에서 요셉이 낳은 아들은 두 명이니 야곱의 집 사람으로 애굽에 이른 자가 모두 칠십 명이었더라</div>
+        <div class="verse"><span class="verse-num">28</span> 야곱이 유다를 요셉에게 미리 보내어 자기를 고센으로 인도하게 하고 다 고센 땅에 이르니</div>
+        <div class="verse"><span class="verse-num">29</span> 요셉이 그의 수레를 갖추고 고센으로 올라가서 그의 아버지 이스라엘을 맞으며 그에게 보이고 그의 목을 어긋맞춰 안고 얼마 동안 울매</div>
+        <div class="verse"><span class="verse-num">30</span> 이스라엘이 요셉에게 이르되 네가 지금까지 살아 있고 내가 네 얼굴을 보았으니 지금 죽어도 족하도다</div>
+        <div class="verse"><span class="verse-num">31</span> 요셉이 그의 형들과 아버지의 가족에게 이르되 내가 올라가서 바로에게 아뢰어 이르기를 가나안 땅에 있던 내 형들과 내 아버지의 가족이 내게로 왔는데</div>
+        <div class="verse"><span class="verse-num">32</span> 그들은 목자들이라 목축하는 사람들이므로 그들의 양과 소와 모든 소유를 이끌고 왔나이다 하리니</div>
+        <div class="verse"><span class="verse-num">33</span> 바로가 당신들을 불러서 너희의 직업이 무엇이냐 묻거든</div>
+        <div class="verse"><span class="verse-num">34</span> 당신들은 이르기를 주의 종들은 어렸을 때부터 지금까지 목축하는 자들이온데 우리와 우리 선조가 다 그러하니이다 하소서 애굽 사람은 다 목축을 가증히 여기나니 당신들이 고센 땅에 살게 되리이다</div>
+
+        <!-- 창세기 47장 -->
+        <div class="chapter-title">창세기 47장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 요셉이 바로에게 가서 고하여 이르되 내 아버지와 내 형들과 그들의 양과 소와 모든 소유가 가나안 땅에서 와서 고센 땅에 있나이다 하고</div>
+        <div class="verse"><span class="verse-num">2</span> 그의 형들 중 다섯 명을 택하여 바로에게 보이니</div>
+        <div class="verse"><span class="verse-num">3</span> 바로가 요셉의 형들에게 묻되 너희 생업이 무엇이냐 그들이 바로에게 대답하되 종들은 목자이온데 우리와 선조가 다 그러하니이다 하고</div>
+        <div class="verse"><span class="verse-num">4</span> 그들이 또 바로에게 고하되 가나안 땅에 기근이 심하여 종들의 양 떼를 칠 곳이 없기로 종들이 이 곳에 거류하고자 왔사오니 원하건대 종들로 고센 땅에 살게 하소서</div>
+        <div class="verse"><span class="verse-num">5</span> 바로가 요셉에게 말하여 이르되 네 아버지와 형들이 네게 왔은즉</div>
+        <div class="verse"><span class="verse-num">6</span> 애굽 땅이 네 앞에 있으니 땅의 좋은 곳에 네 아버지와 네 형들이 거주하게 하되 그들이 고센 땅에 거주하고 그들 중에 능력 있는 자가 있거든 그들로 내 가축을 관리하게 하라</div>
+        <div class="verse"><span class="verse-num">7</span> 요셉이 자기 아버지 야곱을 인도하여 바로 앞에 서게 하니 야곱이 바로에게 축복하매</div>
+        <div class="verse"><span class="verse-num">8</span> 바로가 야곱에게 묻되 네 나이가 얼마냐</div>
+        <div class="verse"><span class="verse-num">9</span> 야곱이 바로에게 아뢰되 내 나그네 길의 세월이 백삼십 년이니이다 내 나이가 얼마 못 되니 우리 조상의 나그네 길의 연조에 미치지 못하나 험악한 세월을 보내었나이다 하고</div>
+        <div class="verse"><span class="verse-num">10</span> 야곱이 바로에게 축복하고 그 앞에서 나오니라</div>
+        <div class="verse"><span class="verse-num">11</span> 요셉이 바로의 명령대로 그의 아버지와 그의 형들에게 거주할 곳을 주되 애굽의 좋은 땅 라암셋을 그들에게 주어 소유로 삼게 하고</div>
+        <div class="verse"><span class="verse-num">12</span> 또 그의 아버지와 그의 형들과 그의 아버지의 온 집에 그 식구를 따라 먹을 것을 주어 봉양하였더라</div>
+        <div class="verse"><span class="verse-num">13</span> 기근이 더욱 심하여 사방에 먹을 것이 없고 애굽 땅과 가나안 땅이 기근으로 황폐하니</div>
+        <div class="verse"><span class="verse-num">14</span> 요셉이 곡식을 팔아 애굽 땅과 가나안 땅에 있는 돈을 모두 거두어들이고 그 돈을 바로의 궁으로 가져가니</div>
+        <div class="verse"><span class="verse-num">15</span> 애굽 땅과 가나안 땅에 돈이 떨어진지라 애굽 백성이 다 요셉에게 와서 이르되 돈이 떨어졌사오니 우리에게 먹을 거리를 주소서 어찌 주 앞에서 죽으리이까</div>
+        <div class="verse"><span class="verse-num">16</span> 요셉이 이르되 너희의 가축을 내라 돈이 떨어졌은즉 내가 너희의 가축과 바꾸어 주리라</div>
+        <div class="verse"><span class="verse-num">17</span> 그들이 그들의 가축을 요셉에게 끌어오는지라 요셉이 그 말과 양 떼와 소 떼와 나귀를 받고 그들에게 먹을 것을 주되 곧 그 모든 가축과 바꾸어서 그 해 동안에 먹을 것을 그들에게 주니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그 해가 다 가고 새 해가 되매 무리가 요셉에게 와서 그에게 말하되 우리가 주께 숨기지 아니하나이다 우리의 돈이 다하였고 우리의 가축 떼가 주께로 돌아갔사오니 주께 낼 것이 아무것도 남지 아니하고 우리의 몸과 토지뿐이라</div>
+        <div class="verse"><span class="verse-num">19</span> 우리가 어찌 우리의 토지와 함께 주의 목전에 죽으리이까 우리 몸과 우리 토지를 먹을 것을 주고 사소서 우리가 토지와 함께 바로의 종이 되리니 우리에게 종자를 주시면 우리가 살고 죽지 아니하며 토지도 황폐하게 되지 아니하리이다</div>
+        <div class="verse"><span class="verse-num">20</span> 그러므로 요셉이 애굽의 모든 토지를 다 사서 바로에게 바치니 애굽의 모든 사람들이 기근에 시달려 각기 토지를 팔았음이라 땅이 바로의 소유가 되니라</div>
+        <div class="verse"><span class="verse-num">21</span> 요셉이 애굽 땅 이 끝에서 저 끝까지의 백성을 성읍들에 옮겼으나</div>
+        <div class="verse"><span class="verse-num">22</span> 제사장들의 토지는 사지 아니하였으니 제사장들은 바로에게서 녹을 받음이라 바로가 주는 녹을 먹으므로 그들이 토지를 팔지 않음이었더라</div>
+        <div class="verse"><span class="verse-num">23</span> 요셉이 백성에게 이르되 오늘 내가 바로를 위하여 너희 몸과 너희 토지를 샀노라 여기 종자가 있으니 너희는 그 땅에 뿌리라</div>
+        <div class="verse"><span class="verse-num">24</span> 추수의 오분의 일을 바로에게 상납하고 오분의 사는 너희가 가져서 토지의 종자로도 삼고 너희의 양식으로도 삼고 너희 가족과 어린 아이의 양식으로도 삼으라</div>
+        <div class="verse"><span class="verse-num">25</span> 그들이 이르되 주께서 우리를 살리셨사오니 우리가 주께 은혜를 입고 바로의 종이 되겠나이다</div>
+        <div class="verse"><span class="verse-num">26</span> 요셉이 애굽 토지법을 세우매 그 오분의 일이 바로에게 상납되나 제사장의 토지는 바로의 소유가 되지 아니하여 오늘날까지 이르니라</div>
+        <div class="verse"><span class="verse-num">27</span> 이스라엘 족속이 애굽 고센 땅에 거주하며 거기서 생업을 얻어 생육하고 번성하였더라</div>
+        <div class="verse"><span class="verse-num">28</span> 야곱이 애굽 땅에 십칠 년을 거주하였으니 그의 나이가 백사십칠 세라</div>
+        <div class="verse"><span class="verse-num">29</span> 이스라엘이 죽을 날이 가까우매 그의 아들 요셉을 불러 그에게 이르되 이제 내가 네게 은혜를 입었거든 청하노니 네 손을 내 허벅지 아래에 넣고 인애와 성실함으로 내게 행하여 애굽에 나를 장사하지 아니하도록 하라</div>
+        <div class="verse"><span class="verse-num">30</span> 내가 조상들과 함께 눕거든 너는 나를 애굽에서 메어다가 조상의 묘지에 장사하라 요셉이 이르되 내가 아버지의 말씀대로 행하리이다</div>
+        <div class="verse"><span class="verse-num">31</span> 야곱이 또 이르되 내게 맹세하라 하매 그가 맹세하니 이스라엘이 침상 머리에서 하나님께 경배하니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

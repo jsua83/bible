@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 004</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 004</h1>
+        <p class="sub-title">찬송가 290장 우리는 주님을 늘 배반하나</p>
+        <p class="sub-title">창세기 10~11장 — 족보, 약속의 성취 / 족보를 읽는 방법 3가지</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 290장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1PKGszQ9itIHDP5wFOgv9kIupWM1_MtQ9" alt="찬송가 290장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 창세기 10장~11장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 노아, 홍수 가운데서도 살아남아 '족보'를 남깁니다.</span>
+            당시 홍수로 인해 노아의 가족 8명 외에 세상의 모든 사람이 다 죽었습니다. 그런데 창세기 9장 1절을 보면 하나님께서 홍수 후에 노아와 그 아들들에게 이렇게 복을 주십니다.
+            <div class="quote">
+                <strong>"생육하고 번성하며 땅에 충만하라"</strong>
+            </div>
+            노아는 이 약속을 받고 아담 이상으로 감동했을 것입니다. 그 결과로 마침내 노아의 가문은 족보를 기록할 정도로 생육하고 번성하게 되었습니다. <strong>정말 하나님께서 주신 약속대로 이루어진 것을 보게 됩니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 족보는 하나님의 약속의 성취입니다.</span>
+            성경에는 족보가 많이 나옵니다. <strong>족보를 재미있게 읽는 방법 세 가지</strong>를 제시해 봅니다.
+            <div class="quote">
+                <strong>첫째,</strong> 창세기 10장의 족보를 재미있게 읽으려면 먼저 창세기 9장 1절을 읽습니다.<br>
+                <strong>둘째,</strong> 하나님의 약속이 허공에 흩어지지 않고 역사 속에서 한 사람, 한 사람의 현실이 되었다는 것에 초점을 맞춥니다.<br>
+                <strong>셋째,</strong> 하나님의 눈길이 머무는 곳은 하늘의 별들보다 <strong>터에 무늬를 놓은 한 사람, 한 사람</strong>이라는 사실로 족보를 바라봅니다. 하나님께서는 성경 족보에 기록된 한 사람 한 사람을 모두 주목하셨습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 하나님의 뜻은 '가라(go)'입니다.</span>
+            바벨탑 사건에는 <strong>'세 가지 헛소리'</strong>가 들어 있습니다(창 11:4).
+            <div class="quote">
+                <strong>첫째,</strong> "탑 꼭대기를 하늘에 닿게 하자"<br>
+                <strong>둘째,</strong> "우리의 이름을 내자"<br>
+                <strong>셋째,</strong> "흩어짐을 면하자"
+            </div>
+            하나님께서는 하나님의 형상을 닮은 인간들이 온 지면 곳곳으로 퍼져서 <strong>하나님께서 베푸신 복과 은혜를 널리 알리며 살기를 원하셨습니다.</strong> 그런데 노아 이후 다시 많아진 사람들은 하나님의 뜻과는 반대로 흩어짐을 면하고자 했습니다. 하나님의 말씀에 불순종하고 교만하여 스스로 높아지려고 했습니다.<br><br>
+            하나님께서는 그들의 언어를 혼잡하게 하심으로 사람들을 온 지면으로 흩어지게 하셨습니다.
+            <div class="quote">
+                <strong>하나님의 뜻은 언제나 정해주신 방향 그곳으로 '가라'입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 노아의 큰아들 셈의 족보는 노아의 번제가 아브라함에게 학습되었다는 것을 충분히 짐작하게 합니다.</span>
+            노아의 큰아들 셈의 족보를 통해 <strong>하나님의 견고한 구원 계획</strong>을 봅니다. 바벨탑 사건 속에서 하나님께서는 새 시대를 위한 한 사람 <strong>아브라함을 준비하십니다.</strong><br><br>
+            하나님께서는 아브라함에게 고향 친척 아버지의 집을 떠나 보여줄 땅으로 가라고 명령하십니다(창 12:1). 그러자 아브라함이 하나님의 명령에 순종하여 갈대아 우르를 떠납니다. 그리고 아브라함은 <strong>삶의 장소를 옮길 때마다 하나님께 제단을 쌓고 번제를 드립니다.</strong>
+            <div class="quote">
+                <strong>이는 노아의 번제가 아브라함에게까지 학습되었다는 사실을 짐작하게 하는 대목입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 세계 공용어는 '오직 성경'입니다.</span>
+            하나님께서 하나님을 드러내신 계시의 책은 바로 <strong>'성경'</strong>입니다. 우리 피조물들은 오직 성경으로만 하나님의 계시, 즉 하나님의 뜻을 알 수 있습니다.
+            <div class="quote">
+                <strong>모든 그리스도인은 '성경'이라는 세계 공용어를 가지고 수많은 세계 언어들을 통하여 하나님의 큰 일, 즉 '예수 그리스도의 십자가 이야기'를 전해야 합니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 창세기 10~11장 '족보, 약속의 성취'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 창세기 10장 -->
+        <div class="chapter-title">창세기 10장 (1~32절)</div>
+        <div class="verse"><span class="verse-num">1</span> 노아의 아들 셈과 함과 야벳의 족보는 이러하니라 홍수 후에 그들이 아들들을 낳았으니</div>
+        <div class="verse"><span class="verse-num">2</span> 야벳의 아들은 고멜과 마곡과 마대와 야완과 두발과 메섹과 디라스요</div>
+        <div class="verse"><span class="verse-num">3</span> 고멜의 아들은 아스그나스와 리밧과 도갈마요</div>
+        <div class="verse"><span class="verse-num">4</span> 야완의 아들은 엘리사와 달시스와 깃딤과 도다님이라</div>
+        <div class="verse"><span class="verse-num">5</span> 이들로부터 여러 나라 백성으로 나뉘어서 각기 언어와 종족과 나라대로 바닷가의 땅에 머물렀더라</div>
+        <div class="verse"><span class="verse-num">6</span> 함의 아들은 구스와 미스라임과 붓과 가나안이요</div>
+        <div class="verse"><span class="verse-num">7</span> 구스의 아들은 스바와 하윌라와 삽다와 라아마와 삽드가요 라아마의 아들은 스바와 드단이며</div>
+        <div class="verse"><span class="verse-num">8</span> 구스가 또 니므롯을 낳았으니 그는 세상에 첫 용사라</div>
+        <div class="verse"><span class="verse-num">9</span> 그가 여호와 앞에서 용감한 사냥꾼이 되었으므로 속담에 이르기를 아무는 여호와 앞에 니므롯 같이 용감한 사냥꾼이로다 하더라</div>
+        <div class="verse"><span class="verse-num">10</span> 그의 나라는 시날 땅의 바벨과 에렉과 악갓과 갈레에서 시작되었으며</div>
+        <div class="verse"><span class="verse-num">11</span> 그가 그 땅에서 앗수르로 나아가 니느웨와 르호보딜과 갈라와</div>
+        <div class="verse"><span class="verse-num">12</span> 및 니느웨와 갈라 사이의 레센을 건설하였으니 이는 큰 성읍이라</div>
+        <div class="verse"><span class="verse-num">13</span> 미스라임은 루딤과 아나밈과 르하빔과 납두힘과</div>
+        <div class="verse"><span class="verse-num">14</span> 바드루심과 가슬루힘과 갑도림을 낳았더라 (가슬루힘에게서 블레셋이 나왔더라)</div>
+        <div class="verse"><span class="verse-num">15</span> 가나안은 장자 시돈과 헷을 낳고</div>
+        <div class="verse"><span class="verse-num">16</span> 또 여부스 족속과 아모리 족속과 기르가스 족속과</div>
+        <div class="verse"><span class="verse-num">17</span> 히위 족속과 알가 족속과 신 족속과</div>
+        <div class="verse"><span class="verse-num">18</span> 아르왓 족속과 스말 족속과 하맛 족속을 낳았더니 이 후로 가나안 자손의 족속이 흩어져 나아갔더라</div>
+        <div class="verse"><span class="verse-num">19</span> 가나안의 경계는 시돈에서부터 그랄을 지나 가사까지와 소돔과 고모라와 아드마와 스보임을 지나 라사까지였더라</div>
+        <div class="verse"><span class="verse-num">20</span> 이들은 함의 자손이라 각기 족속과 언어와 지방과 나라대로였더라</div>
+        <div class="verse"><span class="verse-num">21</span> 셈은 에벨 온 자손의 조상이요 야벳의 형이라 그에게도 자녀가 출생하였으니</div>
+        <div class="verse"><span class="verse-num">22</span> 셈의 아들은 엘람과 앗수르와 아르박삿과 룻과 아람이요</div>
+        <div class="verse"><span class="verse-num">23</span> 아람의 아들은 우스와 훌과 게델과 마스며</div>
+        <div class="verse"><span class="verse-num">24</span> 아르박삿은 셀라를 낳고 셀라는 에벨을 낳았으며</div>
+        <div class="verse"><span class="verse-num">25</span> 에벨은 두 아들을 낳고 하나의 이름을 벨렉이라 하였으니 그 때에 세상이 나뉘었음이요 벨렉의 아우의 이름은 욕단이며</div>
+        <div class="verse"><span class="verse-num">26</span> 욕단은 알모닷과 셀렙과 하살마웻과 예라와</div>
+        <div class="verse"><span class="verse-num">27</span> 하도람과 우살과 디글라와</div>
+        <div class="verse"><span class="verse-num">28</span> 오발과 아비마엘과 스바와</div>
+        <div class="verse"><span class="verse-num">29</span> 오빌과 하윌라와 요밥을 낳았으니 이들은 다 욕단의 아들이며</div>
+        <div class="verse"><span class="verse-num">30</span> 그들이 거주하는 곳은 메사에서부터 스발로 가는 길의 동쪽 산이었더라</div>
+        <div class="verse"><span class="verse-num">31</span> 이들은 셈의 자손이니 그 족속과 언어와 지방과 나라대로였더라</div>
+        <div class="verse"><span class="verse-num">32</span> 이들은 그 백성들의 족보에 따르면 노아 자손의 족속들이요 홍수 후에 이들에게서 그 땅의 백성들이 나뉘었더라</div>
+
+        <!-- 창세기 11장 -->
+        <div class="chapter-title">창세기 11장 (1~32절)</div>
+        <div class="verse"><span class="verse-num">1</span> 온 땅의 언어가 하나요 말이 하나였더라</div>
+        <div class="verse"><span class="verse-num">2</span> 이에 그들이 동방으로 옮기다가 시날 평지를 만나 거기 거류하며</div>
+        <div class="verse"><span class="verse-num">3</span> 서로 말하되 자, 벽돌을 만들어 견고히 굽자 하고 이에 벽돌로 돌을 대신하며 역청으로 진흙을 대신하고</div>
+        <div class="verse"><span class="verse-num">4</span> 또 말하되 자, 성읍과 탑을 건설하여 그 탑 꼭대기를 하늘에 닿게 하여 우리 이름을 내고 온 지면에 흩어짐을 면하자 하였더니</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와께서 사람들이 건설하는 그 성읍과 탑을 보려고 내려오셨더라</div>
+        <div class="verse"><span class="verse-num">6</span> 여호와께서 이르시되 이 무리가 한 족속이요 언어도 하나이므로 이같이 시작하였으니 이 후로는 그 하고자 하는 일을 막을 수 없으리로다</div>
+        <div class="verse"><span class="verse-num">7</span> 자, 우리가 내려가서 거기서 그들의 언어를 혼잡하게 하여 그들이 서로 알아듣지 못하게 하자 하시고</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와께서 거기서 그들을 온 지면에 흩으셨으므로 그들이 그 도시를 건설하기를 그쳤더라</div>
+        <div class="verse"><span class="verse-num">9</span> 그러므로 그 이름을 바벨이라 하니 이는 여호와께서 거기서 온 땅의 언어를 혼잡하게 하셨음이니라 여호와께서 거기서 그들을 온 지면에 흩으셨더라</div>
+        <div class="verse"><span class="verse-num">10</span> 셈의 족보는 이러하니라 셈은 백 세 곧 홍수 후 이 년에 아르박삿을 낳았고</div>
+        <div class="verse"><span class="verse-num">11</span> 아르박삿을 낳은 후에 오백 년을 지내며 자녀를 낳았으며</div>
+        <div class="verse"><span class="verse-num">12</span> 아르박삿은 삼십오 세에 셀라를 낳았고</div>
+        <div class="verse"><span class="verse-num">13</span> 셀라를 낳은 후에 사백삼 년을 지내며 자녀를 낳았으며</div>
+        <div class="verse"><span class="verse-num">14</span> 셀라는 삼십 세에 에벨을 낳았고</div>
+        <div class="verse"><span class="verse-num">15</span> 에벨을 낳은 후에 사백삼 년을 지내며 자녀를 낳았으며</div>
+        <div class="verse"><span class="verse-num">16</span> 에벨은 삼십사 세에 벨렉을 낳았고</div>
+        <div class="verse"><span class="verse-num">17</span> 벨렉을 낳은 후에 사백삼십 년을 지내며 자녀를 낳았으며</div>
+        <div class="verse"><span class="verse-num">18</span> 벨렉은 삼십 세에 르우를 낳았고</div>
+        <div class="verse"><span class="verse-num">19</span> 르우를 낳은 후에 이백구 년을 지내며 자녀를 낳았으며</div>
+        <div class="verse"><span class="verse-num">20</span> 르우는 삼십이 세에 스룩을 낳았고</div>
+        <div class="verse"><span class="verse-num">21</span> 스룩을 낳은 후에 이백칠 년을 지내며 자녀를 낳았으며</div>
+        <div class="verse"><span class="verse-num">22</span> 스룩은 삼십 세에 나홀을 낳았고</div>
+        <div class="verse"><span class="verse-num">23</span> 나홀을 낳은 후에 이백 년을 지내며 자녀를 낳았으며</div>
+        <div class="verse"><span class="verse-num">24</span> 나홀은 이십구 세에 데라를 낳았고</div>
+        <div class="verse"><span class="verse-num">25</span> 데라를 낳은 후에 백십구 년을 지내며 자녀를 낳았으며</div>
+        <div class="verse"><span class="verse-num">26</span> 데라는 칠십 세에 아브람과 나홀과 하란을 낳았더라</div>
+        <div class="verse"><span class="verse-num">27</span> 데라의 족보는 이러하니라 데라는 아브람과 나홀과 하란을 낳고 하란은 롯을 낳았으며</div>
+        <div class="verse"><span class="verse-num">28</span> 하란은 그 아비 데라보다 먼저 고향 갈대아인의 우르에서 죽었더라</div>
+        <div class="verse"><span class="verse-num">29</span> 아브람과 나홀이 장가 들었으니 아브람의 아내의 이름은 사래며 나홀의 아내의 이름은 밀가니 하란의 딸이요 하란은 밀가의 아버지이며 또 이스가의 아버지더라</div>
+        <div class="verse"><span class="verse-num">30</span> 사래는 임신하지 못하므로 자식이 없었더라</div>
+        <div class="verse"><span class="verse-num">31</span> 데라가 그 아들 아브람과 하란의 아들인 그의 손자 롯과 그의 며느 아브람의 아내 사래를 데리고 갈대아인의 우르를 떠나 가나안 땅으로 가고자 하더니 하란에 이르러 거기 거류하였으며</div>
+        <div class="verse"><span class="verse-num">32</span> 데라는 나이가 이백오 세가 되어 하란에서 죽었더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 001</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .special-intro {
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.9;
+            color: #166534;
+            font-size: 21px;
+            border-bottom: 1px solid #bbf7d0;
+            padding-bottom: 20px;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 001</h1>
+        <p class="sub-title">찬송가 68장 오 하나님 우리의 창조주시니</p>
+        <p class="sub-title">창세기 1~2장 — 좋아 토브 Good, 심히 좋아하신 하나님</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 68장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1O3PBNbjTUyLeZ1a40i3tbMtDhUUC29-k" alt="찬송가 68장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <div class="special-intro">
+            성경을 공부하는 인생은 승리합니다.<br>
+            누구나 성경을 공부하면 인생의 성공의 순간에 오직 하나님께 영광을 돌릴 수 있습니다.<br>
+            누구나 성경을 공부하면 인생의 실패의 순간에 하나님의 긍휼로 새롭게 시작할 수 있습니다.<br><br>
+            <strong>성경을 쉽고 재미있는 이야기로, 역사순 1년 일독의 목표로 역사순 성경통독을 시작하겠습니다.</strong>
+        </div>
+        
+        <h2 class="points-main-title">오늘의 굿 뉴스, 창세기 1장~2장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 창세기 1장~2장까지의 내용은 하나님께서 '시간과 공간과 인간'을 모두 디자인하셨다는 것입니다.</span>
+            이 세상의 모든 만물은 다 하나님의 소유입니다. 하나님께서는 인간을 만드시고 시간과 공간 속에서 <strong>생육하고 번성하라는 복</strong>을 주셨습니다. 창세기 1장에서 온 우주 만물을 창조하신 <strong>'창조주 하나님'</strong>께서는 요한계시록의 말씀대로 <strong>세상 끝 날에 다시 만물을 새롭게 하실 것</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 창세기 1장~2장까지의 내용은 '굿 뉴스 즉 복음'을 담고 있습니다.</span>
+            창세기 1장과 2장은 '태초에 하나님이 천지를 창조하심'으로 시작한 피조물의 세계, 즉 <strong>"콩 심은 데 콩 나고, 팥 심은 데 팥 난다"</strong>라는 인과율로 표현되는 창조 후의 피조물의 세계가 들어 있습니다.<br><br>
+            그리고 창조에 속하지 아니한, 즉 창세 전 예정과 섭리를 함께 담은 <strong>예수의 십자가를 통한 구원 이야기</strong>가 동시에 들어 있습니다. 이 모든 것이 다 <strong>'하나님의 선물'</strong>이고 <strong>'굿 뉴스'</strong>, 바로 <strong>'복음'</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 창세기 1장~2장까지의 내용은 하나님의 창조가 하나님의 소리, 즉 하나님의 음성으로 이루어졌다는 것입니다.</span>
+            세상의 빛은 하나님께서 <strong>"빛이 있으라"</strong>라고 말씀하시자 생겨난 것입니다. 다시 말해 하나님의 말씀인 성경은 문자로 기록된 것보다 <strong>소리가 먼저</strong>였다는 것입니다. 그래서 성경은 소리 내서 읽을 만한 유일한 책입니다.
+            <div class="quote">
+                <strong>우리의 믿음은 복된 소식, 복음의 기록인 성경을 들음에서 납니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님의 사람 욥은 창세기 1장~2장까지의 내용을 통해 자신이 피조물이라는 사실을 깨달았습니다.</span>
+            처음에는 욥을 위로하던 욥의 친구들이 시간이 지나면서 온갖 질문을 가지고 오히려 욥을 괴롭게 합니다. 그러자 욥이 하나님께 질문합니다. 하나님께서는 도리어 욥에게 <strong>질문으로 답을 하십니다.</strong><br><br>
+            하나님의 놀라운 질문에 욥은 이렇게 고백합니다.
+            <div class="quote">
+                <strong>"내가 스스로 거두어들이고 티끌과 재 가운데에서 회개하나이다"</strong> (욥 42:6)
+            </div>
+            욥은 자신이 창조주 하나님의 피조물이라는 사실을 깨닫습니다. 창세기를 통해 <strong>하나님의 사람 욥처럼 우리 모두가 하나님의 피조물이라는 사실을 깨닫게 됩니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 창세기 1장~2장까지의 내용에는 '하나님의 마음이 좋으셨다'라는 것이 처음으로 기록되어 있습니다.</span>
+            창세기 1장에서 하나님께서는 <strong>일곱 번이나 "보시기에 좋았다"(토브, 굿)</strong>라고 말씀하셨습니다. 그런데 창세기 1장과 2장의 창조 때 그렇게 좋아하셨던 하나님의 마음은 이후 이렇게 나타납니다.
+            <div class="quote">
+                <strong>노아 홍수 때</strong> — 한탄하시는 하나님의 마음<br>
+                <strong>호세아 선지자 때</strong> — 긍휼이 불붙는 하나님의 마음<br>
+                <strong>하나님의 아들 예수 그리스도</strong> — 온유하고 겸손한 마음으로 나타납니다.
+            </div>
+            <strong>이처럼 성경에는 하나님의 마음이 들어 있습니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 창세기 1~2장 '심히 좋아하시는 하나님'입니다.<br>
+        최초의 진정한 설계자이시며 디자이너이신 <strong>창조주 하나님께서 창조자의 설계도를 펴시며 좋아하십니다.</strong><br>
+        창세기 1장~2장, 성경을 쉽고 재미있는 이야기로 함께 소리내어 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 창세기 1장 -->
+        <div class="chapter-title">창세기 1장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 태초에 하나님이 천지를 창조하시니라</div>
+        <div class="verse"><span class="verse-num">2</span> 땅이 혼돈하고 공허하며 흑암이 깊음 위에 있고 하나님의 영은 수면 위에 운행하시니라</div>
+        <div class="verse"><span class="verse-num">3</span> 하나님이 이르시되 빛이 있으라 하시니 빛이 있었고</div>
+        <div class="verse"><span class="verse-num">4</span> 빛이 하나님이 보시기에 좋았더라 하나님이 빛과 어둠을 나누사</div>
+        <div class="verse"><span class="verse-num">5</span> 하나님이 빛을 낮이라 부르시고 어둠을 밤이라 부르시니라 저녁이 되고 아침이 되니 이는 첫째 날이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 하나님이 이르시되 물 가운데에 궁창이 있어 물과 물로 나뉘라 하시고</div>
+        <div class="verse"><span class="verse-num">7</span> 하나님이 궁창을 만드사 궁창 아래의 물과 궁창 위의 물로 나뉘게 하시니 그대로 되니라</div>
+        <div class="verse"><span class="verse-num">8</span> 하나님이 궁창을 하늘이라 부르시니라 저녁이 되고 아침이 되니 이는 둘째 날이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 하나님이 이르시되 천하의 물이 한 곳으로 모이고 뭍이 드러나라 하시니 그대로 되니라</div>
+        <div class="verse"><span class="verse-num">10</span> 하나님이 뭍을 땅이라 부르시고 모인 물을 바다라 부르시니 하나님이 보시기에 좋았더라</div>
+        <div class="verse"><span class="verse-num">11</span> 하나님이 이르시되 땅은 풀과 씨 맺는 채소와 각기 종류대로 씨 가진 열매 맺는 나무를 내라 하시니 그대로 되어</div>
+        <div class="verse"><span class="verse-num">12</span> 땅이 풀과 각기 종류대로 씨 맺는 채소와 각기 종류대로 씨 가진 열매 맺는 나무를 내니 하나님이 보시기에 좋았더라</div>
+        <div class="verse"><span class="verse-num">13</span> 저녁이 되고 아침이 되니 이는 셋째 날이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 하나님이 이르시되 하늘의 궁창에 광명체들이 있어 낮과 밤을 나뉘게 하고 그것들로 징조와 계절과 날과 해를 이루게 하라</div>
+        <div class="verse"><span class="verse-num">15</span> 또 광명체들이 하늘의 궁창에 있어 땅을 비추라 하시니 그대로 되니라</div>
+        <div class="verse"><span class="verse-num">16</span> 하나님이 두 큰 광명체를 만드사 큰 광명체로 낮을 주관하게 하시고 작은 광명체로 밤을 주관하게 하시며 또 별들을 만드시고</div>
+        <div class="verse"><span class="verse-num">17</span> 하나님이 그것들을 하늘의 궁창에 두어 땅을 비추게 하시며</div>
+        <div class="verse"><span class="verse-num">18</span> 낮과 밤을 주관하게 하시고 빛과 어둠을 나뉘게 하시니 하나님이 보시기에 좋았더라</div>
+        <div class="verse"><span class="verse-num">19</span> 저녁이 되고 아침이 되니 이는 넷째 날이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 하나님이 이르시되 물들은 생물을 번성하게 하라 땅 위 하늘의 궁창에는 새가 날으라 하시고</div>
+        <div class="verse"><span class="verse-num">21</span> 하나님이 큰 바다 짐승들과 물에서 번성하여 움직이는 모든 생물을 그 종류대로, 날개 있는 모든 새를 그 종류대로 창조하시니 하나님이 보시기에 좋았더라</div>
+        <div class="verse"><span class="verse-num">22</span> 하나님이 그들에게 복을 주시며 이르시되 생육하고 번성하여 여러 바닷물에 충만하라 새들도 땅에 번성하라 하시니라</div>
+        <div class="verse"><span class="verse-num">23</span> 저녁이 되고 아침이 되니 이는 다섯째 날이니라</div>
+        <div class="verse"><span class="verse-num">24</span> 하나님이 이르시되 땅은 생물을 그 종류대로 내되 가축과 기는 것과 땅의 짐승을 종류대로 내라 하시니 그대로 되니라</div>
+        <div class="verse"><span class="verse-num">25</span> 하나님이 땅의 짐승을 그 종류대로, 가축을 그 종류대로, 땅에 기는 모든 것을 그 종류대로 만드시니 하나님이 보시기에 좋았더라</div>
+        <div class="verse"><span class="verse-num">26</span> 하나님이 이르시되 우리의 형상을 따라 우리의 모양대로 우리가 사람을 만들고 그들로 바다의 물고기와 하늘의 새와 가축과 온 땅과 땅에 기는 모든 것을 다스리게 하자 하시고</div>
+        <div class="verse"><span class="verse-num">27</span> 하나님이 자기 형상 곧 하나님의 형상대로 사람을 창조하시되 남자와 여자를 창조하시고</div>
+        <div class="verse"><span class="verse-num">28</span> 하나님이 그들에게 복을 주시며 하나님이 그들에게 이르시되 생육하고 번성하여 땅에 충만하라, 땅을 정복하라, 바다의 물고기와 하늘의 새와 땅에 움직이는 모든 생물을 다스리라 하시니라</div>
+        <div class="verse"><span class="verse-num">29</span> 하나님이 이르시되 내가 온 지면의 씨 맺는 모든 채소와 씨 가진 열매 맺는 모든 나무를 너희에게 주노니 너희의 먹을 거리가 되리라</div>
+        <div class="verse"><span class="verse-num">30</span> 또 땅의 모든 짐승과 하늘의 모든 새와 생명이 있어 땅에 기는 모든 것에게는 내가 모든 푸른 풀을 먹을 거리로 주노라 하시니 그대로 되니라</div>
+        <div class="verse"><span class="verse-num">31</span> 하나님이 지으신 그 모든 것을 보시니 보시기에 심히 좋았더라 저녁이 되고 아침이 되니 이는 여섯째 날이니라</div>
+
+        <!-- 창세기 2장 -->
+        <div class="chapter-title">창세기 2장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 천지와 만물이 다 이루어지니라</div>
+        <div class="verse"><span class="verse-num">2</span> 하나님이 그가 하시던 일을 일곱째 날에 마치시니 그가 하시던 모든 일을 그치고 일곱째 날에 안식하시니라</div>
+        <div class="verse"><span class="verse-num">3</span> 하나님이 그 일곱째 날을 복되게 하사 거룩하게 하셨으니 이는 하나님이 그 창조하시며 만드시던 모든 일을 마치시고 그 날에 안식하셨음이니라</div>
+        <div class="verse"><span class="verse-num">4</span> 이것이 천지가 창조될 때에 하늘과 땅의 내력이니 여호와 하나님이 땅과 하늘을 만드시던 날에</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와 하나님이 땅에 비를 내리지 아니하셨고 땅을 갈 사람도 없었으므로 들에는 초목이 아직 없었고 밭에는 채소가 나지 아니하였으며</div>
+        <div class="verse"><span class="verse-num">6</span> 안개만 땅에서 올라와 온 지면을 적셨더라</div>
+        <div class="verse"><span class="verse-num">7</span> 여호와 하나님이 땅의 흙으로 사람을 지으시고 생기를 그 코에 불어넣으시니 사람이 생령이 되니라</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와 하나님이 동방의 에덴에 동산을 창설하시고 그 지으신 사람을 거기 두시니라</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와 하나님이 그 땅에서 보기에 아름답고 먹기에 좋은 나무가 나게 하시니 동산 가운데에는 생명 나무와 선악을 알게 하는 나무도 있더라</div>
+        <div class="verse"><span class="verse-num">10</span> 강이 에덴에서 흘러 나와 동산을 적시고 거기서부터 갈라져 네 근원이 되었으니</div>
+        <div class="verse"><span class="verse-num">11</span> 첫째의 이름은 비손이라 금이 있는 하윌라 온 땅을 둘렀으며</div>
+        <div class="verse"><span class="verse-num">12</span> 그 땅의 금은 순금이요 그 곳에는 베델리엄과 호마노도 있으며</div>
+        <div class="verse"><span class="verse-num">13</span> 둘째 강의 이름은 기혼이라 구스 온 땅을 둘렀고</div>
+        <div class="verse"><span class="verse-num">14</span> 셋째 강의 이름은 힛데겔이라 앗수르 동쪽으로 흘렀으며 넷째 강은 유브라데더라</div>
+        <div class="verse"><span class="verse-num">15</span> 여호와 하나님이 그 사람을 이끌어 에덴 동산에 두어 그것을 경작하며 지키게 하시고</div>
+        <div class="verse"><span class="verse-num">16</span> 여호와 하나님이 그 사람에게 명하여 이르시되 동산 각종 나무의 열매는 네가 임의로 먹되</div>
+        <div class="verse"><span class="verse-num">17</span> 선악을 알게 하는 나무의 열매는 먹지 말라 네가 먹는 날에는 반드시 죽으리라 하시니라</div>
+        <div class="verse"><span class="verse-num">18</span> 여호와 하나님이 이르시되 사람이 혼자 사는 것이 좋지 아니하니 내가 그를 위하여 돕는 배필을 지으리라 하시니라</div>
+        <div class="verse"><span class="verse-num">19</span> 여호와 하나님이 흙으로 각종 들짐승과 공중의 각종 새를 지으시고 아담이 무엇이라고 부르나 보시려고 그것들을 그에게로 이끌어 가시니 아담이 각 생물을 부르는 것이 곧 그 이름이 되었더라</div>
+        <div class="verse"><span class="verse-num">20</span> 아담이 모든 가축과 공중의 새와 들의 모든 짐승에게 이름을 주니라 아담이 돕는 배필이 없으므로</div>
+        <div class="verse"><span class="verse-num">21</span> 여호와 하나님이 아담을 깊이 잠들게 하시니 잠들매 그가 그 갈빗대 하나를 취하고 살로 대신 채우시고</div>
+        <div class="verse"><span class="verse-num">22</span> 여호와 하나님이 아담에게서 취하신 그 갈빗대로 여자를 만드시고 그를 아담에게로 이끌어 오시니</div>
+        <div class="verse"><span class="verse-num">23</span> 아담이 이르되 이는 내 뼈 중의 뼈요 살 중의 살이라 이것을 남자에게서 취하였은즉 여자라 부르리라 하니라</div>
+        <div class="verse"><span class="verse-num">24</span> 이러므로 남자가 부모를 떠나 그의 아내와 합하여 둘이 한 몸을 이룰지로다</div>
+        <div class="verse"><span class="verse-num">25</span> 아담과 그의 아내 두 사람이 벌거벗었으나 부끄러워하지 아니하니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

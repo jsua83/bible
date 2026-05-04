@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 026</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 026</h1>
+        <p class="sub-title">찬송가 595장 나 맡은 본분은</p>
+        <p class="sub-title">출애굽기 21~23장 — 거룩, 시장에 살아있다! / 세심하고 아름다운 법</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 595장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1y7iJ-0tHB8aY_BsyiYDBgCwhu35TDSi7" alt="찬송가 595장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 출애굽기 21장~23장<br>'거룩, 시장에 살아있다! / 세심하고 아름다운 법'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서 주신 율법은 '소의 받는 버릇까지도 파악'하여 보상 체계를 달리 정할 정도로 만드신 세심한 법입니다.</span>
+            하나님께서는 이스라엘 백성들에게 십계명을 비롯해 구체적인 시행 세칙들을 많이 주셨습니다. 이 모든 법은 한마디로 <strong>'거룩한 법'</strong>입니다. 하나님께서 주신 율법이 얼마나 세밀한지 <strong>소의 받는 버릇까지도 파악하며 보상 체계를 달리 정할 정도</strong>입니다.<br><br>
+            뿐만 아니라 하나님께서 주신 율법은 <strong>약자들을 보호하는 하나님의 마음과 눈길이 가장 가까이 할 수 있는 품위 있고 아름다운 법</strong>입니다.
+            <div class="quote">
+                "너는 이방 나그네를 압제하지 말며 그들을 학대하지 말라. 너희도 애굽 땅에서 나그네였음이라. 너는 과부나 고아를 해롭게 하지 말라" (출 22:21~22)
+            </div>
+            나그네의 설움을 어느 민족보다도 잘 알게 하신 이유가 여기에 있습니다.<br><br>
+            또 한 가지, 하나님께서 주신 율법 중에 이런 법이 있습니다.
+            <div class="quote">
+                "생명은 생명으로, 눈은 눈으로, 이는 이로, 손은 손으로, 발은 발로, 덴 것은 덴 것으로, 상하게 한 것은 상함으로, 때린 것은 때림으로 갚을지니라" (출 21:23~25)
+            </div>
+            이는 <strong>동형보복법이 아닙니다.</strong> 이는 동형예방법으로, <strong>내 몸을 아끼듯이 상대방도 귀하게 여기라</strong>는 하나님의 뜻입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 사람이 사람을 종이나 노예로 부리는 것은 악한 일입니다.</span>
+            하나님께서 주신 율법을 행하는 것은 '거룩'이며 <strong>'인간 됨'을 서로 누리는 것</strong>입니다. 특히 면제년에 관한 법이 그렇습니다. 하나님께서 주신 면제년 법은 누군가 피치 못할 사정으로 종이 된 사람이 있다면 <strong>6년이 지나 7년째가 될 때 반드시 그 사람이 '자유의 몸'이 되도록 하라는 법</strong>입니다. 더 나아가 그 사람이 종에서 벗어나 자유인이 될 때 <strong>빈손으로 내보내지 말고 후히 주라</strong>고 법으로 정해주셨습니다.<br><br>
+            이스라엘 백성들은 세계 어느 민족보다 '면제년 법'을 잘 이해했을 것입니다. <strong>애굽에서 종과 노예의 생활이 무엇인지 온몸으로 경험했기 때문</strong>입니다. 세상 모든 사람은 누구나 <strong>천하보다 소중한 하나님의 피조물</strong>입니다. 그러므로 사람이 사람을 강제로 종이나 노예로 부리는 것은 악한 일입니다.<br><br>
+            이후 역사에서 면제년 법과 관계하여 가장 중대한 사건이 예레미야 때에 다루어집니다. 남유다의 마지막 왕 시드기야 때에 면제년 법이 일시적으로 실행된 적이 있습니다(렘 34:8~9). 그런데 안타깝게도 이 계약에 참여한 시드기야 왕과 백성들이 얼마 가지 못해 자신들의 결정을 번복합니다. 그러자 하나님께서 예레미야를 통해 말씀하십니다.
+            <div class="quote">
+                "너희가 돌이켜 내 이름을 더럽히고 각기 놓아 그들의 마음대로 자유롭게 하였던 노비를 끌어다가 다시 너희에게 복종시켜 너희의 노비로 삼았도다. 내가 너희를 세계 여러 나라 가운데에 흩어지게 할 것이며" (렘 34:13~17)
+            </div>
+            결국 바벨론을 통해 예루살렘 성을 불사르게 하겠다고 선언하십니다(렘 34:22).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 하늘의 하나님께서 인간들의 재판을 항상 눈여겨보십니다.</span>
+            뇌물은 가난한 사람이 받는 것이 아닙니다. <strong>뇌물은 힘 있고 권력 있는 사람에게 주기 때문</strong>입니다. 그런데 공의의 하나님께서는 <strong>뇌물을 주지도 받지도 말라</strong>고 말씀하십니다. 특히 재판에서의 뇌물은 절대 주지도 받지도 말아야 합니다. 물론 가난한 사람의 송사라고 해서 <strong>정의를 굽게 해서도 안 됩니다.</strong><br><br>
+            성경에 기록된 정당한 재판의 예로 룻기의 <strong>'보아스 재판'</strong>을 들 수 있습니다. 성경에는 이러한 공정한 재판과는 반대로 악하고 불의한 뇌물 재판도 있습니다. 바로 이세벨이 개입한 <strong>'나봇의 포도원 재판'</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 안식일은 공동체가 숨을 쉬는 날입니다.</span>
+            하나님께서는 하나님의 형상을 닮은 사람들이나 심지어 소, 나귀와 같은 짐승들까지도 <strong>6일 동안은 열심히 일하되 안식일에는 모두 쉬라</strong>고 말씀하십니다(출 23:12~13). 안식일의 쉼은 제사장 나라에서 누구나 '제사'에 참여하게 하시기 위한 <strong>'하나님의 계획'</strong>입니다.<br><br>
+            그리고 안식일 법이 기본적으로 지켜져야 <strong>안식년과 희년의 법도 제대로 지켜질 수 있습니다.</strong>
+            <div class="quote">
+                <strong>안식일을 거룩하게 지켜 행하는 것은 '안식일의 주인'되시는 우리 예수님을 '예배'하는 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 매년 세 차례 여호와 앞에 '얼굴'을 보이라!</span>
+            하나님께서는 율법을 주시면서 안식일, 안식년, 희년의 절기를 지킬 것과 함께 세 절기를 지키라고 명령하십니다(출 23:14~19).
+            <div class="quote">
+                <strong>유월절(무교절) / 오순절(맥추절, 칠칠절) / 초막절(수장절, 장막절)</strong>
+            </div>
+            이는 하나님께서 <strong>1년에 세 차례 당신의 소유인 이스라엘 백성들과 만나고 싶으셨기 때문</strong>입니다. 또한 이를 통해 <strong>이스라엘 전체를 신앙 공동체로 보존하고자 하십니다.</strong><br><br>
+            하나님께서 주신 제사장 나라 율법은 우리 예수님께서 십자가 위에서 <strong>"다 이루었다"</strong>라고 말씀하시기 전까지, 즉 '제사장 나라'를 수렴하여 더 큰 <strong>'하나님 나라'를 이루시기까지 1,500년을 이어갑니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 출애굽기 21~23장 '거룩, 시장에 살아있다! / 세심하고 아름다운 법'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 출애굽기 21장 -->
+        <div class="chapter-title">출애굽기 21장 (1~36절)</div>
+        <div class="verse"><span class="verse-num">1</span> 네가 백성 앞에 세울 법규는 이러하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 네가 히브리 종을 사면 그는 여섯 해 동안 섬길 것이요 일곱째 해에는 몸값을 물지 않고 나가 자유인이 될 것이며</div>
+        <div class="verse"><span class="verse-num">3</span> 만일 그가 단신으로 왔으면 단신으로 나갈 것이요 장가 들었으면 그의 아내도 그와 함께 나가려니와</div>
+        <div class="verse"><span class="verse-num">4</span> 만일 상전이 그에게 아내를 주어 그의 아내가 아들이나 딸을 낳았으면 그의 아내와 그의 자식들은 상전에게 속할 것이요 그는 단신으로 나갈 것이로되</div>
+        <div class="verse"><span class="verse-num">5</span> 만일 종이 분명히 말하기를 내가 상전과 내 처자를 사랑하니 나가서 자유인이 되지 않겠노라 하면</div>
+        <div class="verse"><span class="verse-num">6</span> 상전이 그를 데리고 재판장에게로 갈 것이요 또 그를 문이나 문설주 앞으로 데리고 가서 그것에다가 송곳으로 그의 귀를 뚫을 것이라 그는 종신토록 그 상전을 섬기리라</div>
+        <div class="verse"><span class="verse-num">7</span> 사람이 자기의 딸을 여종으로 팔았으면 그는 남종 같이 나오지 못할지며</div>
+        <div class="verse"><span class="verse-num">8</span> 만일 상전이 그를 기뻐하지 아니하여 상관하지 아니하면 그를 속량하게 할 것이나 상전이 그 여자를 속인 것이 되었으니 외국인에게는 팔지 못할 것이요</div>
+        <div class="verse"><span class="verse-num">9</span> 만일 그를 자기 아들에게 주기로 하였으면 그를 딸 같이 대우할 것이요</div>
+        <div class="verse"><span class="verse-num">10</span> 만일 상전이 다른 여자에게 장가 들지라도 그 여자의 음식과 의복과 동침하는 것은 끊지 말 것이요</div>
+        <div class="verse"><span class="verse-num">11</span> 그가 이 세 가지를 시행하지 아니하면, 여자는 속전을 내지 않고 거저 나가게 할 것이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 사람을 쳐죽인 자는 반드시 죽일 것이나</div>
+        <div class="verse"><span class="verse-num">13</span> 만일 사람이 고의적으로 한 것이 아니라 나 하나님이 사람을 그의 손에 넘긴 것이면 내가 그를 위하여 한 곳을 정하리니 그 사람이 그리로 도망할 것이며</div>
+        <div class="verse"><span class="verse-num">14</span> 사람이 그의 이웃을 고의로 죽였으면 너는 그를 내 제단에서라도 잡아내려 죽일지니라</div>
+        <div class="verse"><span class="verse-num">15</span> 자기 아버지나 어머니를 치는 자는 반드시 죽일지니라</div>
+        <div class="verse"><span class="verse-num">16</span> 사람을 납치한 자가 그 사람을 팔았든지 자기 수하에 두었든지 그를 반드시 죽일지니라</div>
+        <div class="verse"><span class="verse-num">17</span> 자기의 아버지나 어머니를 저주하는 자는 반드시 죽일지니라</div>
+        <div class="verse"><span class="verse-num">18</span> 사람이 서로 싸우다가 하나가 돌이나 주먹으로 그의 상대방을 쳤으나 그가 죽지 않고 자리에 누웠다가</div>
+        <div class="verse"><span class="verse-num">19</span> 지팡이를 짚고 일어나 걸으면 그를 친 자가 형벌은 면하되 그간의 손해를 배상하고 그가 완치되게 할 것이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 사람이 매로 그 남종이나 여종을 쳐서 당장에 죽으면 반드시 형벌을 받으려니와</div>
+        <div class="verse"><span class="verse-num">21</span> 그가 하루나 이틀을 연명하면 형벌을 면하리니 그는 상전의 재산임이라</div>
+        <div class="verse"><span class="verse-num">22</span> 사람이 서로 싸우다가 임신한 여인을 쳐서 낙태하게 하였으나 다른 해가 없으면 그 남편의 청구대로 반드시 벌금을 내되 재판장의 판결을 따라 낼 것이니라</div>
+        <div class="verse"><span class="verse-num">23</span> 그러나 다른 해가 있으면 갚되 생명은 생명으로,</div>
+        <div class="verse"><span class="verse-num">24</span> 눈은 눈으로, 이는 이로, 손은 손으로, 발은 발로,</div>
+        <div class="verse"><span class="verse-num">25</span> 덴 것은 덴 것으로, 상하게 한 것은 상함으로, 때린 것은 때림으로 갚을지니라</div>
+        <div class="verse"><span class="verse-num">26</span> 사람이 그 남종의 한 눈이나 여종의 한 눈을 쳐서 상하게 하면 그 눈에 대한 보상으로 그를 놓아 줄 것이며</div>
+        <div class="verse"><span class="verse-num">27</span> 그 남종의 이나 여종의 이를 쳐서 빠뜨리면 그 이에 대한 보상으로 그를 놓아 줄지니라</div>
+        <div class="verse"><span class="verse-num">28</span> 소가 남자나 여자를 받아서 죽이면 그 소는 반드시 돌로 쳐서 죽일 것이요 그 고기는 먹지 말 것이며 임자는 형벌을 면하려니와</div>
+        <div class="verse"><span class="verse-num">29</span> 소가 본래 받는 버릇이 있고 그 임자는 그로 말미암아 경고를 받았으되 단속하지 아니하여 남녀를 막론하고 받아 죽이면 그 소는 돌로 쳐죽일 것이고 임자도 죽일 것이며</div>
+        <div class="verse"><span class="verse-num">30</span> 만일 그에게 속죄금을 부과하면 무릇 그 명령한 것을 생명의 대가로 낼 것이요</div>
+        <div class="verse"><span class="verse-num">31</span> 아들을 받든지 딸을 받든지 이 법규대로 그 임자에게 행할 것이며</div>
+        <div class="verse"><span class="verse-num">32</span> 소가 만일 남종이나 여종을 받으면 소 임자가 은 삼십 세겔을 그의 상전에게 줄 것이요 소는 돌로 쳐서 죽일지니라</div>
+        <div class="verse"><span class="verse-num">33</span> 사람이 구덩이를 열어두거나 구덩이를 파고 덮지 아니하므로 소나 나귀가 거기에 빠지면</div>
+        <div class="verse"><span class="verse-num">34</span> 그 구덩이 주인이 잘 보상하여 짐승의 임자에게 돈을 줄 것이요 죽은 것은 그가 차지할 것이니라</div>
+        <div class="verse"><span class="verse-num">35</span> 이 사람의 소가 저 사람의 소를 받아 죽이면 살아 있는 소를 팔아 그 값을 반으로 나누고 또한 죽은 것도 반으로 나누려니와</div>
+        <div class="verse"><span class="verse-num">36</span> 그 소가 본래 받는 버릇이 있는 줄을 알고도 그 임자가 단속하지 아니하였으면 그는 소로 소를 갚을 것이요 죽은 것은 그가 차지할지니라</div>
+
+        <!-- 출애굽기 22장 -->
+        <div class="chapter-title">출애굽기 22장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 사람이 소나 양을 도둑질하여 잡거나 팔면 그는 소 한 마리에 소 다섯 마리로 갚고 양 한 마리에 양 네 마리로 갚을지니라</div>
+        <div class="verse"><span class="verse-num">2</span> 도둑이 뚫고 들어오는 것을 보고 그를 쳐죽이면 피 흘린 죄가 없으나</div>
+        <div class="verse"><span class="verse-num">3</span> 해 돋은 후에는 피 흘린 죄가 있으리라 도둑은 반드시 배상할 것이나 배상할 것이 없으면 그 몸을 팔아 그 도둑질한 것을 배상할 것이요</div>
+        <div class="verse"><span class="verse-num">4</span> 도둑질한 것이 살아 그의 손에 있으면 소나 나귀나 양을 막론하고 갑절을 배상할지니라</div>
+        <div class="verse"><span class="verse-num">5</span> 사람이 밭에서나 포도원에서 짐승을 먹이다가 자기의 짐승을 놓아 남의 밭에서 먹게 하면 자기 밭의 가장 좋은 것과 자기 포도원의 가장 좋은 것으로 배상할지니라</div>
+        <div class="verse"><span class="verse-num">6</span> 불이 나서 가시나무에 댕겨 낟가리나 거두지 못한 곡식이나 밭을 태우면 불 놓은 자가 반드시 배상할지니라</div>
+        <div class="verse"><span class="verse-num">7</span> 사람이 돈이나 물품을 이웃에게 맡겨 지키게 하였다가 그 이웃 집에서 도둑을 맞았는데 그 도둑이 잡히면 갑절을 배상할 것이요</div>
+        <div class="verse"><span class="verse-num">8</span> 도둑이 잡히지 아니하면 그 집 주인이 재판장 앞에 가서 자기가 그 이웃의 물품에 손 댄 여부의 조사를 받을 것이며</div>
+        <div class="verse"><span class="verse-num">9</span> 어떤 잃은 물건 즉 소나 나귀나 양이나 의복이나 또는 다른 잃은 물건에 대하여 어떤 사람이 이르기를 이것이 그것이라 하면 양편이 재판장 앞에 나아갈 것이요 재판장이 죄 있다고 하는 자가 그 상대편에게 갑절을 배상할지니라</div>
+        <div class="verse"><span class="verse-num">10</span> 사람이 나귀나 소나 양이나 다른 짐승을 이웃에게 맡겨 지키게 하였다가 죽거나 상하거나 끌려가도 본 사람이 없으면</div>
+        <div class="verse"><span class="verse-num">11</span> 두 사람 사이에 맡은 자가 이웃의 것에 손을 대지 아니하였다고 여호와께 맹세할 것이요 그 임자는 그대로 믿을 것이며 그 사람은 배상하지 아니하려니와</div>
+        <div class="verse"><span class="verse-num">12</span> 만일 자기에게서 도둑 맞았으면 그 임자에게 배상할 것이며</div>
+        <div class="verse"><span class="verse-num">13</span> 만일 찢겼으면 그것을 가져다가 증언할 것이요 그 찢긴 것에 대하여 배상하지 아니할지니라</div>
+        <div class="verse"><span class="verse-num">14</span> 만일 이웃에게 빌려온 것이 그 임자가 함께 있지 아니할 때에 상하거나 죽으면 반드시 배상하려니와</div>
+        <div class="verse"><span class="verse-num">15</span> 그 임자가 그것과 함께 있었으면 배상하지 아니할지니라 만일 세 낸 것이면 세로 족하니라</div>
+        <div class="verse"><span class="verse-num">16</span> 사람이 약혼하지 아니한 처녀를 꾀어 동침하였으면 납폐금을 주고 아내로 삼을 것이요</div>
+        <div class="verse"><span class="verse-num">17</span> 만일 처녀의 아버지가 딸을 그에게 주기를 거절하면 그는 처녀에게 납폐금으로 돈을 낼지니라</div>
+        <div class="verse"><span class="verse-num">18</span> 너는 무당을 살려두지 말라</div>
+        <div class="verse"><span class="verse-num">19</span> 짐승과 행음하는 자는 반드시 죽일지니라</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와 외에 다른 신에게 제사를 드리는 자는 멸할지니라</div>
+        <div class="verse"><span class="verse-num">21</span> 너는 이방 나그네를 압제하지 말며 그들을 학대하지 말라 너희도 애굽 땅에서 나그네였음이라</div>
+        <div class="verse"><span class="verse-num">22</span> 너는 과부나 고아를 해롭게 하지 말라</div>
+        <div class="verse"><span class="verse-num">23</span> 네가 만일 그들을 해롭게 하므로 그들이 내게 부르짖으면 내가 반드시 그 부르짖음을 들으리라</div>
+        <div class="verse"><span class="verse-num">24</span> 나의 노가 맹렬하므로 내가 칼로 너희를 죽이리니 너희의 아내는 과부가 되고 너희 자녀는 고아가 되리라</div>
+        <div class="verse"><span class="verse-num">25</span> 네가 만일 너와 함께 한 내 백성 중에서 가난한 자에게 돈을 꾸어 주면 너는 그에게 채권자 같이 하지 말며 이자를 받지 말 것이며</div>
+        <div class="verse"><span class="verse-num">26</span> 네가 만일 이웃의 옷을 전당 잡거든 해가 지기 전에 그에게 돌려보내라</div>
+        <div class="verse"><span class="verse-num">27</span> 그것이 유일한 옷이라 그것이 그의 알몸을 가릴 옷인즉 그가 무엇을 입고 자겠느냐 그가 내게 부르짖으면 내가 들으리니 나는 자비로운 자임이니라</div>
+        <div class="verse"><span class="verse-num">28</span> 너는 재판장을 모독하지 말며 백성의 지도자를 저주하지 말지니라</div>
+        <div class="verse"><span class="verse-num">29</span> 너는 네가 추수한 것과 네가 짜낸 즙을 바치기를 더디하지 말지며 네 처음 난 아들들을 내게 줄지며</div>
+        <div class="verse"><span class="verse-num">30</span> 네 소와 양도 그와 같이 하되 이레 동안 어미와 함께 있게 하다가 여드레 만에 내게 줄지니라</div>
+        <div class="verse"><span class="verse-num">31</span> 너희는 내게 거룩한 사람이 될지니 들에서 짐승에게 찢긴 동물의 고기를 먹지 말고 그것을 개에게 던질지니라</div>
+
+        <!-- 출애굽기 23장 -->
+        <div class="chapter-title">출애굽기 23장 (1~33절)</div>
+        <div class="verse"><span class="verse-num">1</span> 너는 거짓된 풍설을 퍼뜨리지 말며 악인과 연합하여 위증하는 증인이 되지 말며</div>
+        <div class="verse"><span class="verse-num">2</span> 다수를 따라 악을 행하지 말며 송사에 다수를 따라 부당한 증언을 하지 말며</div>
+        <div class="verse"><span class="verse-num">3</span> 가난한 자의 송사라고 해서 편벽되이 두둔하지 말지니라</div>
+        <div class="verse"><span class="verse-num">4</span> 네가 만일 네 원수의 길 잃은 소나 나귀를 보거든 반드시 그 사람에게로 돌릴지며</div>
+        <div class="verse"><span class="verse-num">5</span> 네가 만일 너를 미워하는 자의 나귀가 짐을 싣고 엎드러짐을 보거든 그것을 버려두지 말고 그것을 도와 그 짐을 부릴지니라</div>
+        <div class="verse"><span class="verse-num">6</span> 너는 가난한 자의 송사라고 정의를 굽게 하지 말며</div>
+        <div class="verse"><span class="verse-num">7</span> 거짓 일을 멀리 하며 무죄한 자와 의로운 자를 죽이지 말라 나는 악인을 의롭다 하지 아니하겠노라</div>
+        <div class="verse"><span class="verse-num">8</span> 너는 뇌물을 받지 말라 뇌물은 밝은 자의 눈을 어둡게 하고 의로운 자의 말을 굽게 하느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 너는 이방 나그네를 압제하지 말라 너희가 애굽 땅에서 나그네 되었었은즉 나그네의 사정을 아느니라</div>
+        <div class="verse"><span class="verse-num">10</span> 너는 여섯 해 동안은 너의 땅에 파종하여 그 소산을 거두고</div>
+        <div class="verse"><span class="verse-num">11</span> 일곱째 해에는 갈지 말고 묵혀두어서 네 백성의 가난한 자들이 먹게 하라 그 남은 것은 들짐승이 먹으리라 네 포도원과 감람원도 그리할지니라</div>
+        <div class="verse"><span class="verse-num">12</span> 너는 엿새 동안에 네 일을 하고 일곱째 날에는 쉬라 네 소와 나귀가 쉴 것이며 네 여종의 자식과 나그네가 숨을 돌리리라</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 네게 이른 모든 일을 삼가 지키고 다른 신들의 이름은 부르지도 말며 네 입에서 들리게도 하지 말지니라</div>
+        <div class="verse"><span class="verse-num">14</span> 너는 매년 세 번 내게 절기를 지킬지니라</div>
+        <div class="verse"><span class="verse-num">15</span> 너는 무교병의 절기를 지키라 내가 네게 명령한 대로 아빕월의 정한 때에 이레 동안 무교병을 먹을지니 이는 그 달에 네가 애굽에서 나왔음이라 빈 손으로 내 앞에 나오지 말지니라</div>
+        <div class="verse"><span class="verse-num">16</span> 맥추절을 지키라 이는 네가 수고하여 밭에 뿌린 것의 첫 열매를 거둠이니라 수장절을 지키라 이는 네가 수고하여 이룬 것을 연말에 밭에서부터 거두어 저장함이니라</div>
+        <div class="verse"><span class="verse-num">17</span> 네 모든 남자는 매년 세 번씩 주 여호와께 보일지니라</div>
+        <div class="verse"><span class="verse-num">18</span> 너는 네 제물의 피를 유교병과 함께 드리지 말며 내 절기 제물의 기름을 아침까지 남겨두지 말지니라</div>
+        <div class="verse"><span class="verse-num">19</span> 네 토지에서 처음 거둔 열매의 가장 좋은 것을 가져다가 너의 하나님 여호와의 전에 드릴지니라 너는 염소 새끼를 그 어미의 젖으로 삶지 말지니라</div>
+        <div class="verse"><span class="verse-num">20</span> 내가 사자를 네 앞서 보내어 길에서 너를 보호하여 너를 내가 예비한 곳에 이르게 하리니</div>
+        <div class="verse"><span class="verse-num">21</span> 너희는 삼가 그의 목소리를 청종하고 그를 노엽게 하지 말라 그가 너희의 허물을 용서하지 아니할 것은 내 이름이 그에게 있음이니라</div>
+        <div class="verse"><span class="verse-num">22</span> 네가 그의 목소리를 잘 청종하고 내 모든 말대로 행하면 내가 네 원수에게 원수가 되고 네 대적에게 대적이 될지라</div>
+        <div class="verse"><span class="verse-num">23</span> 내 사자가 네 앞서 가서 너를 아모리 사람과 헷 사람과 브리스 사람과 가나안 사람과 히위 사람과 여부스 사람에게로 인도하고 나는 그들을 끊으리니</div>
+        <div class="verse"><span class="verse-num">24</span> 너는 그들의 신을 경배하지 말며 섬기지 말며 그들의 행위를 본받지 말고 그것들을 다 깨뜨리며 그들의 주상을 부수고</div>
+        <div class="verse"><span class="verse-num">25</span> 네 하나님 여호와를 섬기라 그리하면 여호와가 너희의 양식과 물에 복을 내리고 너희 중에서 병을 제하리니</div>
+        <div class="verse"><span class="verse-num">26</span> 네 나라에 낙태하는 자가 없고 임신하지 못하는 자가 없을 것이라 내가 너의 날 수를 채우리라</div>
+        <div class="verse"><span class="verse-num">27</span> 내가 내 위엄을 네 앞서 보내어 네가 이를 곳의 모든 백성을 물리치고 네 모든 원수들이 네게 등을 돌려 도망하게 할 것이며</div>
+        <div class="verse"><span class="verse-num">28</span> 내가 왕벌을 네 앞에 보내리니 그 벌이 히위 족속과 가나안 족속과 헷 족속을 네 앞에서 쫓아내리라</div>
+        <div class="verse"><span class="verse-num">29</span> 그러나 그 땅이 황폐하게 됨으로 들짐승이 번성하여 너희를 해할까 하여 일 년 안에는 그들을 네 앞에서 쫓아내지 아니하고</div>
+        <div class="verse"><span class="verse-num">30</span> 네가 번성하여 그 땅을 기업으로 얻을 때까지 내가 그들을 네 앞에서 조금씩 쫓아내리라</div>
+        <div class="verse"><span class="verse-num">31</span> 내가 네 경계를 홍해에서부터 블레셋 바다까지, 광야에서부터 강까지 정하고 그 땅의 주민을 네 손에 넘기리니 네가 그들을 네 앞에서 쫓아낼지라</div>
+        <div class="verse"><span class="verse-num">32</span> 너는 그들과 그들의 신들과 언약하지 말라</div>
+        <div class="verse"><span class="verse-num">33</span> 그들이 네 땅에 머무르지 못할 것은 그들이 너를 내게 범죄하게 할까 두려움이라 네가 그 신들을 섬기면 그것이 너의 올무가 되리라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

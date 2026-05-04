@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 023</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 023</h1>
+        <p class="sub-title">찬송가 64장 기뻐하며 경배하세</p>
+        <p class="sub-title">출애굽기 14~15장 — 홍해 영적 전략 5단계 / 과연, 막다른 골목?</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 64장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1aSiqAcZ-K9Y5Bj13ojWDlH4fN5W6VUe1" alt="찬송가 64장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 출애굽기 14장~15장<br>'홍해 영적 전략 5단계 / 과연, 막다른 골목?'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 입애굽은 나일강으로 시작되고, 출애굽은 홍해로 끝납니다.</span>
+            하나님께서는 입애굽의 지도자 요셉 때에 <strong>나일강의 풍요를 통해 7년간의 풍년을, 이후 7년은 나일강을 마르게 하심으로 흉년을 만드셨습니다.</strong> 400여 년이 지난 후에는 '제사장 나라'를 만들기 위해 아브라함 후손들로 하여금 <strong>애굽에서 '제국'을 경험하게 하셨습니다.</strong> 그리고 하나님께서는 <strong>홍해를 갈라지게 하시고 이스라엘 백성들을 건너가게 함으로 출애굽을 끝내십니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 애굽 군대가 이스라엘 백성을 뒤쫓아간 이유는 세 가지입니다.</span>
+            살아계신 하나님의 기적 앞에 백기 투항을 했던 바로의 마음이 변하여 <strong>대규모 애굽 군대를 이끌고 이스라엘 백성들을 다시 잡아들이겠다고 뒤쫓습니다</strong>(출 14:3~9).
+            <div class="quote">
+                <strong>첫째,</strong> 출애굽 방향이 막다른 골목이라고 생각한 바로의 <strong>'오판'</strong> 때문입니다.<br>
+                <strong>둘째,</strong> 바로와 애굽 사람들의 <strong>'복수심'</strong> 때문입니다. 애굽 장자들과 가축의 초태생들이 다 죽은 것은 그들의 제국 정책, 즉 영아 살해 명령과 같은 흉악한 죄에 대해 하나님께서 처벌하신 것입니다. 그런데 바로와 애굽 사람들은 회개는커녕 이스라엘 백성들 때문이라고 둘러대며 엉뚱한 화풀이를 하려고 했습니다.<br>
+                <strong>셋째,</strong> 바로가 <strong>히브리 노예들을 되찾고 싶었기 때문</strong>입니다. 120만 명의 무임금 유노동자 히브리 노예들은 애굽의 막대한 자산이었습니다. 바로는 무슨 대가를 치르더라도 그들을 다시 데려다가 일을 시키고 싶었던 것입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 온 이스라엘 백성이 광야로 들어간 것은 '오직 믿음' 때문이었습니다.</span>
+            바로는 모세가 방향을 잘못 잡아 이스라엘 백성들을 광야로 데려간 줄 알았습니다. 그러나 하나님께서는 처음부터 모세에게 <strong>'시내 광야를 거쳐 가나안으로 들어갈 것'이라는 청사진을 보여주셨습니다.</strong><br><br>
+            광야는 사람에게 필요한 물과 양식은 없고 사람들을 괴롭히는 전갈과 불 뱀이 사는 곳입니다. 하지만 모세는 하나님의 능력을 믿고 <strong>'시내 광야를 통과해서 가나안에 가기로 결정'했습니다.</strong> 그리고 이스라엘 백성들도 <strong>믿음으로 모세의 뒤를 따랐던 것</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 모세는 뒤쫓아오는 애굽 군대를 '홍해 영적 5단계 전쟁'으로 승리했습니다.</span>
+            모세는 약속의 땅 가나안으로 가기 위해 <strong>'홍해 건너 광야 통과하기'</strong>를 택했습니다. 그러자 두 가지 큰 문제가 발생했습니다.
+            <div class="quote">
+                <strong>첫 번째 문제</strong> — 바로의 군대가 뒤쫓아오는 것입니다.<br>
+                <strong>두 번째 문제</strong> — 이스라엘 백성들의 원망이었습니다.
+            </div>
+            모세는 이 난관을 <strong>'영적 전쟁'</strong>으로 해결합니다. 영성이란 하나님을 알고, 믿고, 순종하고, 체험하고, 하나님께 영광 돌리는 것입니다. 모세는 <strong>'홍해 영적 전쟁 5단계'</strong>에 다음과 같이 임했습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 모세는 하나님을 <strong>'더 알아가는 기회'</strong>로 임했습니다. 하나님께서 그들을 위해 홍해에서 직접 싸우신다는 것을 더 알게 한 것입니다.<br>
+                <strong>둘째,</strong> 모세는 하나님을 <strong>'더 믿을 기회'</strong>로 임했습니다. 두려워하지 말고, 도망하지 말고, 믿고, 가만히 지켜보는 것입니다.<br>
+                <strong>셋째,</strong> 모세는 하나님께 <strong>'더 순종할 기회'</strong>로 임했습니다. 모세가 애굽에서 지팡이를 나일강 위에 내미는 것보다 더 믿고 순종한 것입니다.<br>
+                <strong>넷째,</strong> 모세는 전쟁을 통해 하나님을 <strong>'더 체험'</strong>했습니다. 물 사이를 건너는 것은 놀라운 신앙 체험이 되었습니다.<br>
+                <strong>다섯째,</strong> 모세는 애굽과 홍해 전쟁을 이기고 난 후 <strong>'모든 영광을 하나님께'</strong> 올려드렸습니다.
+            </div>
+            이스라엘 백성들이 홍해를 마른 땅으로 건너고 애굽의 모든 병거와 군인들이 홍해에 수장된 이 사건은 <strong>고대 근동 전역으로 퍼져 나가게 됩니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 나라도, 전쟁도, 노래도 모두 성경에서 시작됩니다.</span>
+            성경에는 시간, 공간, 인간이 들어 있습니다. 모든 것이 들어 있는 성경에는 <strong>노래도 들어 있습니다.</strong> 모세의 노래, 미리암의 노래, 우리가 많이 부르는 다윗의 노래도 있습니다. 우리 예수님의 노래도 있습니다. 첫 번째 성찬식 후 예수님께서 제자들과 함께 찬양하십니다(마 26:30). 그리고 요한계시록에는 <strong>성도들의 새 노래</strong>도 있습니다.
+            <div class="quote">
+                <strong>이처럼 꿈도, 지혜도, 노래도, 용기도, 하나 됨도, 온유도, 겸손도 다 성경에서 시작됩니다. 그래서 성경 한 권이면 충분합니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 출애굽기 14~15장 '홍해 영적 전략 5단계 / 과연, 막다른 골목?'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 출애굽기 14장 -->
+        <div class="chapter-title">출애굽기 14장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손에게 명령하여 돌이켜 바다와 믹돌 사이의 비하히롯 앞 곧 바알스본 맞은편 바닷가에 장막을 치게 하라</div>
+        <div class="verse"><span class="verse-num">3</span> 바로가 이스라엘 자손에 대하여 말하기를 그들이 그 땅에서 멀리 떠나 광야에 갇힌 바 되었다 하리라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 바로의 마음을 완악하게 한즉 바로가 그들의 뒤를 따르리니 내가 그와 그의 온 군대로 말미암아 영광을 얻어 애굽 사람들이 나를 여호와인 줄 알게 하리라 하시매 무리가 그대로 행하니라</div>
+        <div class="verse"><span class="verse-num">5</span> 그 백성이 도망한 사실이 애굽 왕에게 알려지매 바로와 그의 신하들이 그 백성에 대하여 마음이 변하여 이르되 우리가 어찌 이같이 하여 이스라엘을 우리를 섬김에서 놓아 보내었는가 하고</div>
+        <div class="verse"><span class="verse-num">6</span> 바로가 곧 그의 병거를 갖추고 그의 백성을 데리고 갈새</div>
+        <div class="verse"><span class="verse-num">7</span> 선발된 병거 육백 대와 애굽의 모든 병거를 동원하니 지휘관들이 다 거느렸더라</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와께서 애굽 왕 바로의 마음을 완악하게 하셨으므로 그가 이스라엘 자손의 뒤를 따르니 이스라엘 자손이 담대히 나갔음이라</div>
+        <div class="verse"><span class="verse-num">9</span> 애굽 사람들과 바로의 말들, 병거들과 그 마병과 그 군대가 그들의 뒤를 따라 바알스본 맞은편 비하히롯 곁 해변 그들이 장막 친 데에 미치니라</div>
+        <div class="verse"><span class="verse-num">10</span> 바로가 가까이 올 때에 이스라엘 자손이 눈을 들어 본즉 애굽 사람들이 자기들 뒤에 이른지라 이스라엘 자손이 심히 두려워하여 여호와께 부르짖고</div>
+        <div class="verse"><span class="verse-num">11</span> 그들이 또 모세에게 이르되 애굽에 매장지가 없어서 당신이 우리를 이끌어 내어 이 광야에서 죽게 하느냐 어찌하여 당신이 우리를 애굽에서 이끌어 내어 우리에게 이같이 하느냐</div>
+        <div class="verse"><span class="verse-num">12</span> 우리가 애굽에서 당신에게 이른 말이 이것이 아니냐 이르기를 우리를 내버려 두라 우리가 애굽 사람을 섬길 것이라 하지 아니하더냐 애굽 사람을 섬기는 것이 광야에서 죽는 것보다 낫겠노라</div>
+        <div class="verse"><span class="verse-num">13</span> 모세가 백성에게 이르되 너희는 두려워하지 말고 가만히 서서 여호와께서 오늘 너희를 위하여 행하시는 구원을 보라 너희가 오늘 본 애굽 사람을 영원히 다시 보지 아니하리라</div>
+        <div class="verse"><span class="verse-num">14</span> 여호와께서 너희를 위하여 싸우시리니 너희는 가만히 있을지니라</div>
+        <div class="verse"><span class="verse-num">15</span> 여호와께서 모세에게 이르시되 너는 어찌하여 내게 부르짖느냐 이스라엘 자손에게 명령하여 앞으로 나아가게 하고</div>
+        <div class="verse"><span class="verse-num">16</span> 지팡이를 들고 손을 바다 위로 내밀어 그것이 갈라지게 하라 이스라엘 자손이 바다 가운데서 마른 땅으로 행하리라</div>
+        <div class="verse"><span class="verse-num">17</span> 내가 애굽 사람들의 마음을 완악하게 할 것인즉 그들이 그 뒤를 따라 들어갈 것이라 내가 바로와 그의 모든 군대와 그의 병거와 마병으로 말미암아 영광을 얻으리니</div>
+        <div class="verse"><span class="verse-num">18</span> 내가 바로와 그의 병거와 마병으로 말미암아 영광을 얻을 때에야 애굽 사람들이 나를 여호와인 줄 알리라 하시더니</div>
+        <div class="verse"><span class="verse-num">19</span> 이스라엘 진 앞에 가던 하나님의 사자가 그들의 뒤로 옮겨 가매 구름 기둥도 앞에서 그 뒤로 옮겨</div>
+        <div class="verse"><span class="verse-num">20</span> 애굽 진과 이스라엘 진 사이에 이르러 서니 저쪽에는 구름과 흑암이 있고 이쪽에는 밤이 밝으므로 밤새도록 저쪽이 이쪽에 가까이 못하였더라</div>
+        <div class="verse"><span class="verse-num">21</span> 모세가 바다 위로 손을 내밀매 여호와께서 큰 동풍이 밤새도록 바닷물을 물러가게 하시니 물이 갈라져 바다가 마른 땅이 된지라</div>
+        <div class="verse"><span class="verse-num">22</span> 이스라엘 자손이 바다 가운데를 육지로 걸어가고 물은 그들의 좌우에 벽이 되니</div>
+        <div class="verse"><span class="verse-num">23</span> 애굽 사람들과 바로의 말들, 병거들과 그 마병들이 다 그들의 뒤를 추격하여 바다 가운데로 들어오는지라</div>
+        <div class="verse"><span class="verse-num">24</span> 새벽에 여호와께서 불과 구름 기둥 가운데서 애굽 군대를 보시고 애굽 군대를 어지럽게 하시며</div>
+        <div class="verse"><span class="verse-num">25</span> 그들의 병거 바퀴를 벗겨서 달리기가 어렵게 하시니 애굽 사람들이 이르되 이스라엘 앞에서 우리가 도망하자 여호와가 그들을 위하여 싸워 애굽 사람들을 치는도다</div>
+        <div class="verse"><span class="verse-num">26</span> 여호와께서 모세에게 이르시되 네 손을 바다 위로 내밀어 물이 애굽 사람들과 그들의 병거들과 마병들 위에 다시 흐르게 하라 하시니</div>
+        <div class="verse"><span class="verse-num">27</span> 모세가 곧 손을 바다 위로 내밀매 새벽이 되어 바다의 힘이 회복된지라 애굽 사람들이 물을 거슬러 도망하나 여호와께서 애굽 사람들을 바다 가운데 엎으시니</div>
+        <div class="verse"><span class="verse-num">28</span> 물이 다시 흘러 병거들과 기병들을 덮되 그들의 뒤를 따라 바다에 들어간 바로의 군대를 다 덮으니 하나도 남지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">29</span> 그러나 이스라엘 자손은 바다 가운데를 육지로 행하였고 물이 좌우에 벽이 되었더라</div>
+        <div class="verse"><span class="verse-num">30</span> 그 날에 여호와께서 이같이 이스라엘을 애굽 사람의 손에서 구원하시매 이스라엘이 바닷가에서 애굽 사람들이 죽어 있는 것을 보았더라</div>
+        <div class="verse"><span class="verse-num">31</span> 이스라엘이 여호와께서 애굽 사람들에게 행하신 그 큰 능력을 보았으므로 백성이 여호와를 경외하며 여호와와 그의 종 모세를 믿었더라</div>
+
+        <!-- 출애굽기 15장 -->
+        <div class="chapter-title">출애굽기 15장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이 때에 모세와 이스라엘 자손이 이 노래로 여호와께 노래하니 일렀으되 내가 여호와를 찬송하리니 그는 높고 영화로우심이요 말과 그 탄 자를 바다에 던지셨음이로다</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와는 나의 힘이요 노래시며 나의 구원이시로다 그는 나의 하나님이시니 내가 그를 찬송할 것이요 내 아버지의 하나님이시니 내가 그를 높이리로다</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와는 용사시니 여호와는 그의 이름이시로다</div>
+        <div class="verse"><span class="verse-num">4</span> 그가 바로의 병거와 그의 군대를 바다에 던지시니 최고의 지휘관들이 홍해에 잠겼고</div>
+        <div class="verse"><span class="verse-num">5</span> 깊은 물이 그들을 덮으니 그들이 돌처럼 깊음 속에 가라앉았도다</div>
+        <div class="verse"><span class="verse-num">6</span> 여호와여 주의 오른손이 권능으로 영광을 나타내시니이다 여호와여 주의 오른손이 원수를 부수시니이다</div>
+        <div class="verse"><span class="verse-num">7</span> 주께서 주의 큰 위엄으로 주를 거스르는 자를 엎으시니이다 주께서 진노를 발하시니 그 진노가 그들을 지푸라기 같이 사르니이다</div>
+        <div class="verse"><span class="verse-num">8</span> 주의 콧김에 물이 쌓이되 파도가 언덕 같이 일어서고 큰 물이 바다 가운데 엉기니이다</div>
+        <div class="verse"><span class="verse-num">9</span> 원수가 말하기를 내가 뒤쫓아 따라잡아 탈취물을 나누리라, 내가 그들로 말미암아 내 욕망을 채우리라, 내가 내 칼을 빼리니 내 손이 그들을 멸하리라 하였으나</div>
+        <div class="verse"><span class="verse-num">10</span> 주께서 바람을 일으키시매 바다가 그들을 덮으니 그들이 거센 물에 납 같이 잠겼나이다</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와여 신 중에 주와 같은 자가 누구니이까 주와 같이 거룩함으로 영광스러우며 찬송할 만한 위엄이 있으며 기이한 일을 행하는 자가 누구니이까</div>
+        <div class="verse"><span class="verse-num">12</span> 주께서 오른손을 드신즉 땅이 그들을 삼켰나이다</div>
+        <div class="verse"><span class="verse-num">13</span> 주의 인자하심으로 주께서 구속하신 백성을 인도하시되 주의 힘으로 그들을 주의 거룩한 처소에 들어가게 하시나이다</div>
+        <div class="verse"><span class="verse-num">14</span> 여러 나라가 듣고 떨며 블레셋 주민이 두려움에 잡히며</div>
+        <div class="verse"><span class="verse-num">15</span> 에돔 두령들이 놀라고 모압 영웅이 떨림에 잡히며 가나안 주민이 다 낙담하나이다</div>
+        <div class="verse"><span class="verse-num">16</span> 놀람과 두려움이 그들에게 임하매 주의 팔이 크므로 그들이 돌 같이 침묵하였사오니 여호와여 주의 백성이 통과하기까지 곧 주께서 사신 백성이 통과하기까지였나이다</div>
+        <div class="verse"><span class="verse-num">17</span> 주께서 백성을 인도하사 그들을 주의 기업의 산에 심으시리이다 여호와여 이는 주의 처소를 삼으시려고 예비하신 것이라 주여 이것이 주의 손으로 세우신 성소로소이다</div>
+        <div class="verse"><span class="verse-num">18</span> 여호와께서 영원무궁 하도록 다스리시도다 하였더라</div>
+        <div class="verse"><span class="verse-num">19</span> 바로의 말과 병거와 마병이 함께 바다에 들어가매 여호와께서 바닷물을 그들 위에 되돌려 흐르게 하셨으나 이스라엘 자손은 바다 가운데서 마른 땅으로 지나간지라</div>
+        <div class="verse"><span class="verse-num">20</span> 아론의 누이 선지자 미리암이 손에 소고를 잡으매 모든 여인도 그를 따라 나오며 소고를 잡고 춤추니</div>
+        <div class="verse"><span class="verse-num">21</span> 미리암이 그들에게 화답하여 이르되 너희는 여호와를 찬송하라 그는 높고 영화로우심이요 말과 그 탄 자를 바다에 던지셨음이로다 하였더라</div>
+        <div class="verse"><span class="verse-num">22</span> 모세가 홍해에서 이스라엘을 인도하매 그들이 나와서 수르 광야로 들어가서 거기서 사흘길을 걸었으나 물을 얻지 못하고</div>
+        <div class="verse"><span class="verse-num">23</span> 마라에 이르렀더니 그 곳 물이 써서 마시지 못하겠으므로 그 이름을 마라라 하였더라</div>
+        <div class="verse"><span class="verse-num">24</span> 백성이 모세에게 원망하여 이르되 우리가 무엇을 마실까 하매</div>
+        <div class="verse"><span class="verse-num">25</span> 모세가 여호와께 부르짖었더니 여호와께서 그에게 한 나무를 가리키시니 그가 물에 던지니 물이 달게 되었더라 거기서 여호와께서 그들을 위하여 법도와 율례를 정하시고 그들을 시험하실새</div>
+        <div class="verse"><span class="verse-num">26</span> 이르시되 너희가 너희 하나님 나 여호와의 말을 들어 순종하고 내가 보기에 의를 행하며 내 계명에 귀를 기울이며 내 모든 규례를 지키면 내가 애굽 사람에게 내린 모든 질병 중 하나도 너희에게 내리지 아니하리니 나는 너희를 치료하는 여호와임이라</div>
+        <div class="verse"><span class="verse-num">27</span> 그들이 엘림에 이르니 거기에 물 샘 열둘과 종려나무 일흔 그루가 있는지라 거기서 그들이 그 물 곁에 장막을 치니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

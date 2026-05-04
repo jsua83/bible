@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 005</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 005</h1>
+        <p class="sub-title">찬송가 435장 나의 영원하신 기업</p>
+        <p class="sub-title">창세기 12~14장 — 한 사람의 순종, 하나님의 약속과 아브라함의 순종</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 435장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1sfKlaMD39AJctPZVAsjnWpu9Vk2tZt80" alt="찬송가 435장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 창세기 12장~14장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 성경은 한마디로 '아브라함과 다윗의 자손 예수 그리스도의 세계'입니다.</span>
+            창세기 1장~11장까지는 원역사, 즉 역사 이전의 역사(pre-history)입니다. 원역사는 때와 장소들을 정확하게 서술하지는 않습니다. <strong>그러나 창세기 12장부터는 역사적인 '역사'가 시작됩니다.</strong> 이는 하나님의 역사 이야기입니다.<br><br>
+            하나님의 역사를 기록한 성경에는 대략 2,000여 년의 시간, 1,500여 곳의 공간과 5,000여 명의 인간이 등장합니다. 창세기 12장에 등장한 아브라함은 성경에 기록된 5,000여 명의 인간 가운데 <strong>하나님께 순종한 대표적인 하나님의 사람</strong>입니다. 그리고 아브라함은 <strong>'믿음의 조상'</strong>입니다.<br><br>
+            아브라함에 대한 최고의 평가는 한마디로 이것입니다.
+            <div class="quote">
+                <strong>"아브라함과 다윗의 자손 예수 그리스도의 계보라"</strong> (마 1:1)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 아브라함은 하나님의 역사 속에서 '순종의 아이콘'이 되었습니다.</span>
+            순종의 아이콘 아브라함! 세상을 이기는 놀라운 힘, <strong>믿음은 순종으로 표현됩니다.</strong> 하나님을 믿는 아브라함이 하나님의 말씀에 순종하여 자기가 살던 곳을 떠나 하나님께서 보여줄 땅으로 떠났습니다. 아브라함의 순종을 통하여 <strong>하나님과 아브라함의 깊은 관계 맺기의 첫 단추가 잘 채워집니다.</strong>
+            <div class="quote">
+                <em>"아브라함이 여호와의 말씀을 따라갔고~"</em> (창 12:4)
+            </div>
+            <strong>'따라갔고'</strong>라는 동사 안에는 하나님의 말씀에 순종하여 짐을 꾸리고 발걸음을 옮기는 <strong>'아브라함의 땀'</strong>이 들어 있습니다. 성경을 통독하면서 우리는 땀 흘리는 '동사'들을 놓치지 말아야 합니다.
+            <div class="quote">
+                <strong>믿는 자의 땀 흘림은 시대를 움직이는 동력이기 때문입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 세계 최초 '아브라함의 야습'은 이후 기드온 야습의 '교본'이 됩니다.</span>
+            성경에는 창세기 14장에서부터 벌써 인간들의 전쟁사가 나옵니다. 사해 근방의 소돔을 비롯한 5개 도시 국가는 12년 동안이나 앗수르 4개 도시국가에 조공을 바치는 나라였습니다. 그런데 조공을 바치던 13년째 되던 해에 이들이 조공을 중단하자 곧바로 전쟁이 발발했습니다.<br><br>
+            앗수르 4개 도시국가는 유인과 매복 전술로 소돔과 고모라 등의 도시국가들을 완벽하게 제압했습니다. 이때 아브라함이 잡혀간 롯을 구하기 위해 <strong>평소 집에서 강하게 훈련시켰던 318명을 이끌고 전쟁에 가담하여 기습과 야습으로 전쟁의 승패를 바꾸어놓았습니다.</strong>
+            <div class="quote">
+                <strong>이후 사사 시대에 기드온이 미디안과의 전쟁에서 아브라함의 야습을 따라 합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 아브라함이 제사장 멜기세덱의 '전쟁 해석'에 동의합니다.</span>
+            전쟁에 승리한 아브라함은 하나님의 제사장 살렘 왕 멜기세덱을 만나 축복을 받습니다.
+            <div class="quote">
+                <strong>"너희 대적을 네 손에 붙이신 지극히 높으신 하나님을 찬송할지로다"</strong> (창 14:20)
+            </div>
+            축복을 받은 아브라함은 <strong>전리품의 십분의 일을 제사장에게 바칩니다.</strong> 이 사건은 시편과 히브리서에 표현된 대로 <strong>"멜기세덱의 서열에 따라 영원한 제사장"</strong>(시 110:4; 히 7:17)이 되시는 예수님과 연결됩니다. 그리고 아브라함의 이 전쟁은 이후 다윗에게 이렇게 아주 중요한 가르침이 되었습니다.
+            <div class="quote">
+                <strong>"전쟁은 여호와께 속한 것"</strong> (삼상 17:47)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 아브라함은 물질 처리 방식 세 가지를 가르쳐 주고 있습니다.</span>
+            <div class="quote">
+                <strong>첫째,</strong> 아브라함은 조카 롯과의 혈연관계에 있어서 이렇게 양보하며 살았습니다.<br>
+                <strong>"네가 좌하면 나는 우하고 네가 우하면 나는 좌하리라"</strong> (창 13:9)<br><br>
+                <strong>둘째,</strong> 아브라함은 하나님과의 관계에 있어서 수고의 분복으로 <strong>하나님께 최초의 십일조를 바쳤습니다.</strong> 십일조는 하나님께 감사를 표한 것이고, 멜기세덱의 제사장 직분을 인정한 것입니다.<br><br>
+                <strong>셋째,</strong> 아브라함은 이웃과의 관계에 있어서 소돔 왕에게 이렇게 말하며 자기가 수고한 것이 아닌 남의 것은 취하지 않았습니다.<br>
+                <strong>"네게 속한 것은 실 한 오라기나 들메끈 한 가닥도 내가 가지지 아니하리라"</strong> (창 14:23)<br>
+                이는 아브라함이 이웃과의 관계에서 얼마나 <strong>청렴했는지</strong>를 보여줍니다.
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 창세기 12~14장 '한 사람의 순종, 하나님의 약속과 아브라함의 순종'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 창세기 12장 -->
+        <div class="chapter-title">창세기 12장 (1~20절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 아브람에게 이르시되 너는 너의 고향과 친척과 아버지의 집을 떠나 내가 네게 보여 줄 땅으로 가라</div>
+        <div class="verse"><span class="verse-num">2</span> 내가 너로 큰 민족을 이루고 네게 복을 주어 네 이름을 창대하게 하리니 너는 복이 될지라</div>
+        <div class="verse"><span class="verse-num">3</span> 너를 축복하는 자에게는 내가 복을 내리고 너를 저주하는 자에게는 내가 저주하리니 땅의 모든 족속이 너로 말미암아 복을 얻을 것이라 하신지라</div>
+        <div class="verse"><span class="verse-num">4</span> 이에 아브람이 여호와의 말씀을 따라갔고 롯도 그와 함께 갔으며 아브람이 하란을 떠날 때에 칠십오 세였더라</div>
+        <div class="verse"><span class="verse-num">5</span> 아브람이 그의 아내 사래와 조카 롯과 하란에서 모은 모든 소유와 얻은 사람들을 이끌고 가나안 땅으로 가려고 떠나서 마침내 가나안 땅에 들어갔더라</div>
+        <div class="verse"><span class="verse-num">6</span> 아브람이 그 땅을 지나 세겜 땅 모레 상수리나무에 이르니 그 때에 가나안 사람이 그 땅에 거주하였더라</div>
+        <div class="verse"><span class="verse-num">7</span> 여호와께서 아브람에게 나타나 이르시되 내가 이 땅을 네 자손에게 주리라 하신지라 자기에게 나타나신 여호와께 그가 그 곳에서 제단을 쌓고</div>
+        <div class="verse"><span class="verse-num">8</span> 거기서 벧엘 동쪽 산으로 옮겨 장막을 치니 서쪽은 벧엘이요 동쪽은 아이라 그가 그 곳에서 여호와께 제단을 쌓고 여호와의 이름을 부르더니</div>
+        <div class="verse"><span class="verse-num">9</span> 점점 남방으로 옮겨갔더라</div>
+        <div class="verse"><span class="verse-num">10</span> 그 땅에 기근이 들었으므로 아브람이 애굽에 거류하려고 그리로 내려갔으니 이는 그 땅에 기근이 심하였음이라</div>
+        <div class="verse"><span class="verse-num">11</span> 그가 애굽에 가까이 이르렀을 때에 그의 아내 사래에게 말하되 내가 알기에 그대는 아리따운 여인이라</div>
+        <div class="verse"><span class="verse-num">12</span> 애굽 사람이 그대를 볼 때에 이르기를 이는 그의 아내라 하여 나는 죽이고 그대는 살리리니</div>
+        <div class="verse"><span class="verse-num">13</span> 원하건대 그대는 나의 누이라 하라 그러면 내가 그대로 말미암아 안전하고 내 목숨이 그대로 말미암아 보존되리라 하니라</div>
+        <div class="verse"><span class="verse-num">14</span> 아브람이 애굽에 이르렀을 때에 애굽 사람들이 그 여인이 심히 아리따움을 보았고</div>
+        <div class="verse"><span class="verse-num">15</span> 바로의 고관들도 그를 보고 바로 앞에서 칭찬하므로 그 여인을 바로의 궁으로 이끌어들인지라</div>
+        <div class="verse"><span class="verse-num">16</span> 이에 바로가 그로 말미암아 아브람을 후대하므로 아브람이 양과 소와 노비와 암수 나귀와 낙타를 얻었더라</div>
+        <div class="verse"><span class="verse-num">17</span> 여호와께서 아브람의 아내 사래의 일로 바로와 그 집에 큰 재앙을 내리신지라</div>
+        <div class="verse"><span class="verse-num">18</span> 바로가 아브람을 불러서 이르되 네가 어찌하여 나에게 이렇게 행하였느냐 네가 어찌하여 그를 네 아내라고 내게 말하지 아니하였느냐</div>
+        <div class="verse"><span class="verse-num">19</span> 네가 어찌 그를 누이라 하여 내가 그를 데려다가 아내를 삼게 하였느냐 네 아내가 여기 있으니 이제 데려가라 하고</div>
+        <div class="verse"><span class="verse-num">20</span> 바로가 사람들에게 그의 일을 명하매 그들이 그와 함께 그의 아내와 그의 모든 소유를 보내었더라</div>
+
+        <!-- 창세기 13장 -->
+        <div class="chapter-title">창세기 13장 (1~18절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아브람이 애굽에서 그와 그의 아내와 모든 소유와 롯과 함께 네게브로 올라가니</div>
+        <div class="verse"><span class="verse-num">2</span> 아브람에게 가축과 은과 금이 풍부하였더라</div>
+        <div class="verse"><span class="verse-num">3</span> 그가 네게브에서부터 길을 떠나 벧엘에 이르며 벧엘과 아이 사이 곧 전에 장막 쳤던 곳에 이르니</div>
+        <div class="verse"><span class="verse-num">4</span> 그가 처음으로 제단을 쌓은 곳이라 그가 거기서 여호와의 이름을 불렀더라</div>
+        <div class="verse"><span class="verse-num">5</span> 아브람의 일행 롯도 양과 소와 장막이 있으므로</div>
+        <div class="verse"><span class="verse-num">6</span> 그 땅이 그들이 동거하기에 넉넉하지 못하였으니 이는 그들의 소유가 많아서 동거할 수 없었음이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 그러므로 아브람의 가축의 목자와 롯의 가축의 목자가 서로 다투고 또 가나안 사람과 브리스 사람도 그 땅에 거주하였는지라</div>
+        <div class="verse"><span class="verse-num">8</span> 아브람이 롯에게 이르되 우리는 한 친족이라 나나 너나 내 목자나 네 목자나 서로 다투게 하지 말자</div>
+        <div class="verse"><span class="verse-num">9</span> 네 앞에 온 땅이 있지 아니하냐 나를 떠나가라 네가 좌하면 나는 우하고 네가 우하면 나는 좌하리라</div>
+        <div class="verse"><span class="verse-num">10</span> 이에 롯이 눈을 들어 요단 지역을 바라본즉 소알까지 온 땅에 물이 넉넉하니 여호와께서 소돔과 고모라를 멸하시기 전이었으므로 여호와의 동산 같고 애굽 땅과 같았더라</div>
+        <div class="verse"><span class="verse-num">11</span> 그러므로 롯이 요단 온 지역을 택하고 동으로 옮기니 그들이 서로 떠난지라</div>
+        <div class="verse"><span class="verse-num">12</span> 아브람은 가나안 땅에 거주하였고 롯은 그 지역의 도시들에 머무르며 그 장막을 옮겨 소돔까지 이르렀더라</div>
+        <div class="verse"><span class="verse-num">13</span> 소돔 사람은 여호와 앞에 악하며 큰 죄인이었더라</div>
+        <div class="verse"><span class="verse-num">14</span> 롯이 아브람을 떠난 후에 여호와께서 아브람에게 이르시되 너는 눈을 들어 너 있는 곳에서 북쪽과 남쪽 그리고 동쪽과 서쪽을 바라보라</div>
+        <div class="verse"><span class="verse-num">15</span> 보이는 땅을 내가 너와 네 자손에게 주리니 영원히 이르리라</div>
+        <div class="verse"><span class="verse-num">16</span> 내가 네 자손이 땅의 티끌 같게 하리니 사람이 땅의 티끌을 능히 셀 수 있을진대 네 자손도 세리라</div>
+        <div class="verse"><span class="verse-num">17</span> 너는 일어나 그 땅을 종과 횡으로 두루 다녀 보라 내가 그것을 네게 주리라</div>
+        <div class="verse"><span class="verse-num">18</span> 이에 아브람이 장막을 옮겨 헤브론에 있는 마므레 상수리 수풀에 이르러 거주하며 거기서 여호와를 위하여 제단을 쌓았더라</div>
+
+        <!-- 창세기 14장 -->
+        <div class="chapter-title">창세기 14장 (1~24절)</div>
+        <div class="verse"><span class="verse-num">1</span> 당시에 시날 왕 아므라벨과 엘라살 왕 아리옥과 엘람 왕 그돌라오멜과 고임 왕 디달이</div>
+        <div class="verse"><span class="verse-num">2</span> 소돔 왕 베라와 고모라 왕 비르사와 아드마 왕 시납과 스보임 왕 세메벨과 벨라 곧 소알 왕과 싸우니라</div>
+        <div class="verse"><span class="verse-num">3</span> 이들이 다 싯딤 골짜기 곧 지금의 염해에 모였더라</div>
+        <div class="verse"><span class="verse-num">4</span> 이들이 십이 년 동안 그돌라오멜을 섬기다가 제십삼년에 배반한지라</div>
+        <div class="verse"><span class="verse-num">5</span> 제십사년에 그돌라오멜과 그와 함께 한 왕들이 나와서 아스드롯 가르나임에서 르바 족속을, 함에서 수스 족속을, 사웨 기랴다임에서 엠 족속을 치고</div>
+        <div class="verse"><span class="verse-num">6</span> 호리 족속을 그 산 세일에서 쳐서 광야 근방 엘바란까지 이르렀으며</div>
+        <div class="verse"><span class="verse-num">7</span> 그들이 돌이켜 엔미스밧 곧 가데스에 이르러 아말렉 족속의 온 땅과 하사손다말에 사는 아모리 족속을 친지라</div>
+        <div class="verse"><span class="verse-num">8</span> 소돔 왕과 고모라 왕과 아드마 왕과 스보임 왕과 벨라 곧 소알 왕이 나와서 싯딤 골짜기에서 그들과 전쟁을 하기 위하여 진을 쳤더니</div>
+        <div class="verse"><span class="verse-num">9</span> 엘람 왕 그돌라오멜과 고임 왕 디달과 시날 왕 아므라벨과 엘라살 왕 아리옥 네 왕이 곧 그 다섯 왕과 맞서니라</div>
+        <div class="verse"><span class="verse-num">10</span> 싯딤 골짜기에는 역청 구덩이가 많은지라 소돔 왕과 고모라 왕이 달아날 때에 그들이 거기 빠지고 그 나머지는 산으로 도망하매</div>
+        <div class="verse"><span class="verse-num">11</span> 네 왕이 소돔과 고모라의 모든 재물과 양식을 빼앗아 가고</div>
+        <div class="verse"><span class="verse-num">12</span> 소돔에 거주하는 아브람의 조카 롯도 사로잡고 그 재물까지 노략하여 갔더라</div>
+        <div class="verse"><span class="verse-num">13</span> 도망한 자가 와서 히브리 사람 아브람에게 알리니 그 때에 아브람이 아모리 족속 마므레의 상수리 수풀 근처에 거주하였더라 마므레는 에스골의 형제요 또 아넬의 형제라 이들은 아브람과 동맹한 사람들이더라</div>
+        <div class="verse"><span class="verse-num">14</span> 아브람이 그의 조카가 사로잡혔음을 듣고 집에서 길리고 훈련된 자 삼백십팔 명을 거느리고 단까지 쫓아가서</div>
+        <div class="verse"><span class="verse-num">15</span> 그와 그의 가신들이 나뉘어 밤에 그들을 쳐부수고 다메섹 왼편 호바까지 쫓아가</div>
+        <div class="verse"><span class="verse-num">16</span> 모든 빼앗겼던 재물과 자기의 조카 롯과 그의 재물과 또 부녀와 친척을 다 찾아왔더라</div>
+        <div class="verse"><span class="verse-num">17</span> 아브람이 그돌라오멜과 그와 함께 한 왕들을 쳐부수고 돌아올 때에 소돔 왕이 사웨 골짜기 곧 왕의 골짜기로 나와 그를 영접하였고</div>
+        <div class="verse"><span class="verse-num">18</span> 살렘 왕 멜기세덱이 떡과 포도주를 가지고 나왔으니 그는 지극히 높으신 하나님의 제사장이었더라</div>
+        <div class="verse"><span class="verse-num">19</span> 그가 아브람에게 축복하여 이르되 천지의 주재이시요 지극히 높으신 하나님이여 아브람에게 복을 주옵소서</div>
+        <div class="verse"><span class="verse-num">20</span> 너희 대적을 네 손에 붙이신 지극히 높으신 하나님을 찬송할지로다 하매 아브람이 그 얻은 것에서 십분의 일을 멜기세덱에게 주었더라</div>
+        <div class="verse"><span class="verse-num">21</span> 소돔 왕이 아브람에게 이르되 사람은 내게 보내고 물품은 네가 가지라</div>
+        <div class="verse"><span class="verse-num">22</span> 아브람이 소돔 왕에게 이르되 천지의 주재이시요 지극히 높으신 하나님 여호와께 내가 손을 들어 맹세하노니</div>
+        <div class="verse"><span class="verse-num">23</span> 네 말이 내가 아브람으로 치부하게 하였다 할까 하여 네게 속한 것은 실 한 오라기나 들메끈 한 가닥도 내가 가지지 아니하리라</div>
+        <div class="verse"><span class="verse-num">24</span> 오직 젊은이들이 먹은 것과 나와 동행한 아넬과 에스골과 마므레의 분깃을 제할지니 그들이 그 분깃을 가질 것이니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

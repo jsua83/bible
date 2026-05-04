@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 013</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 013</h1>
+        <p class="sub-title">찬송가 490장 주여 지난밤 내 꿈에</p>
+        <p class="sub-title">창세기 37~38장 — 유다의 마음 / 22년 만에 해석된 사건</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 490장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1EFWorbHa1lK4CLfpsLw_AEEr3QJnyG3p" alt="찬송가 490장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 창세기 37장~38장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 야곱의 편애, 그 깊이만큼 다른 아들들은 아버지로부터 멀어집니다.</span>
+            야곱이 그토록 사랑하는 라헬이 죽자 야곱의 사랑은 요셉에게로, 그다음에는 베냐민으로 이어집니다. 이러한 <strong>야곱의 편애는 가정의 불화를 만드는 불씨</strong>가 되었습니다.<br><br>
+            야곱은 20년 만에 형 에서를 만나러 나가면서 자신의 편애를 극명하게 드러냈었습니다. 야곱은 형 에서와 만날 때 <strong>맨 마지막 안전선 안에 라헬과 라헬이 낳은 요셉을 세웠었습니다.</strong> 이때 레아와 레아가 낳은 야곱의 아들들, 빌하와 실바, 그리고 그녀들이 낳은 야곱의 아들들은 아버지 야곱에 대해 말 그대로 <strong>'절망'했을 것</strong>입니다.
+            <div class="quote">
+                <strong>결국 야곱의 편애는 야곱 가정의 갈등과 비극을 초래하게 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 옷으로 아버지를 속인 야곱이 옷으로 열 명의 아들들에게 속습니다.</span>
+            요셉이 애굽으로 팔려간 사건의 시작은 <strong>야곱의 편애</strong> 때문이었고, 요셉의 꿈은 거기에 기름을 부은 격이 되었습니다.<br><br>
+            과거에 야곱은 형 에서의 옷을 입고 아버지 이삭을 감쪽같이 속인 적이 있었습니다. 그런데 이제 <strong>야곱이 열 명의 아들들에게 옷으로 더 감쪽같이 속게 됩니다.</strong> 야곱은 요셉이 입었던 채색 옷에 묻은 피를 보고 요셉이 짐승에게 찢기고 먹힌 줄로 알고 오랫동안 애통해 합니다. 야곱의 아들들은 <strong>22년 동안 아버지 야곱에게 요셉을 판 것에 대해 끝내 아무 말도 하지 않았습니다.</strong><br><br>
+            혼자 채색 옷을 입으며 아버지 야곱의 편애를 한몸에 받았던 요셉이 애굽의 노예로 팔린 이 사건은 놀랍게도 <strong>22년 후에 해석됩니다.</strong> 그동안 해석되지 않았던 고난이 <strong>하나님의 큰 구원 계획의 한 단계</strong>였다는 것을 요셉이 깨닫게 된 것입니다(창 45:7).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 유다는 세 번에 걸쳐 형제 관계를 설계합니다.</span>
+            유다는 열두 명이나 되는 형제들 사이에서 크게 <strong>세 번 형제 관계를 설계</strong>했습니다.
+            <div class="quote">
+                <strong>첫 번째 설계</strong> — "요셉을 팔자"(창 37:27)입니다.<br>
+                <strong>두 번째 설계</strong> — 이후 아버지에게 자신을 담보로 베냐민을 자신에게 맡겨달라고 설득한 것입니다(창 43:9). 그러자 야곱은 진심 어린 유다의 제안을 받아들여 베냐민을 내어줍니다. 결국 유다의 이 설계로 열두 형제가 애굽에서 처음 모이게 됩니다.<br>
+                <strong>세 번째 설계</strong> — 베냐민 대신 애굽에 남아 종이 되겠다고 나선 것입니다. 유다의 이 선택이 <strong>요셉의 응어리진 마음과 아버지 야곱의 마음을 모두 녹였습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 유다는 죽은 두 아들을 가슴에 묻으며 아버지 야곱의 마음을 헤아립니다.</span>
+            창세기를 읽으면서 37장을 읽고 38장 없이 39장으로 넘어가도 이야기 흐름에는 큰 문제가 없습니다. 그러나 <strong>성경 전체 숲에서 볼 때 유다가 주인공인 창세기 38장은 매우 중요한 장</strong>입니다.<br><br>
+            아버지의 지독한 편애에 맞서 가출한 유다는 아브라함 가문이 지켜야 할 혈통의 순수성을 버리고 가나안 여인과 결혼해 아들 셋을 낳습니다. 그런데 유다의 세 아들 가운데 <strong>두 아들이 하나님 보시기에 악을 행함으로 죽임을 당합니다.</strong>
+            <div class="quote">
+                <strong>그렇게 두 아들을 가슴에 묻고 나서야 아버지 야곱의 울음이 유다의 귓전에 울려옵니다.</strong> 요셉이 짐승에 의해 죽은 줄 알고 밤새 울었던 아버지 야곱의 그 슬픈 울음이 말입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 다말은 유다를 크게 바꿔놓습니다.</span>
+            유다가 실질적으로 아버지 야곱에게로 돌아가게 된 계기는 <strong>유다의 며느리 다말</strong>이 만듭니다. 며느리 다말을 통해 유다는 손자라고 해야 할지 아들이라 해야 할지 모를 <strong>쌍둥이 베레스와 세라를 얻습니다</strong>(창 38:26~30).<br><br>
+            유다는 다말을 향해 <strong>"나보다 옳도다"</strong> 하며 자신의 잘못을 인정하고, 베레스와 세라를 데리고 아버지 야곱에게로 돌아갑니다. 유다는 자신의 모든 부끄러움을 안고 아버지에게 돌아가서 그때부터 <strong>실질적인 장자의 모든 역할을 맡습니다.</strong><br><br>
+            유다의 성숙은 결국 가정이 화해할 수 있는 계기를 만들었으며, 그는 이후 <strong>유다 지파를 세우고 다윗의 가문을 이룹니다.</strong>
+            <div class="quote">
+                <strong>그 가문에서 우리 예수님이 태어나시게 됩니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 창세기 37~38장 '유다의 마음 / 22년 만에 해석된 사건'을 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 창세기 37장 -->
+        <div class="chapter-title">창세기 37장 (1~36절)</div>
+        <div class="verse"><span class="verse-num">1</span> 야곱이 가나안 땅 곧 그의 아버지가 거류하던 땅에 거주하였으니</div>
+        <div class="verse"><span class="verse-num">2</span> 야곱의 족보는 이러하니라 요셉이 십칠 세의 소년으로서 그의 형들과 함께 양을 칠 때에 그의 아버지의 아내들 빌하와 실바의 아들들과 더불어 함께 있었더니 그가 그들의 잘못을 아버지에게 말하더라</div>
+        <div class="verse"><span class="verse-num">3</span> 요셉은 노년에 얻은 아들이므로 이스라엘이 여러 아들들보다 그를 더 사랑하므로 그를 위하여 채색옷을 지었더니</div>
+        <div class="verse"><span class="verse-num">4</span> 그의 형들이 아버지가 형들보다 그를 더 사랑함을 보고 그를 미워하여 그에게 편안하게 말할 수 없었더라</div>
+        <div class="verse"><span class="verse-num">5</span> 요셉이 꿈을 꾸고 자기 형들에게 말하매 그들이 그를 더욱 미워하였더라</div>
+        <div class="verse"><span class="verse-num">6</span> 요셉이 그들에게 이르되 청하건대 내가 꾼 꿈을 들으시오</div>
+        <div class="verse"><span class="verse-num">7</span> 우리가 밭에서 곡식 단을 묶더니 내 단은 일어서고 당신들의 단은 내 단을 둘러서서 절하더이다</div>
+        <div class="verse"><span class="verse-num">8</span> 그의 형들이 그에게 이르되 네가 참으로 우리의 왕이 되겠느냐 참으로 우리를 다스리게 되겠느냐 하고 그의 꿈과 그의 말로 말미암아 그를 더욱 미워하더니</div>
+        <div class="verse"><span class="verse-num">9</span> 요셉이 다시 꿈을 꾸고 그의 형들에게 말하여 이르되 내가 또 꿈을 꾼즉 해와 달과 열한 별이 내게 절하더이다 하니라</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 그의 꿈을 아버지와 형들에게 말하매 아버지가 그를 꾸짖고 그에게 이르되 네가 꾼 꿈이 무엇이냐 나와 네 어머니와 네 형들이 참으로 가서 땅에 엎드려 네게 절하겠느냐</div>
+        <div class="verse"><span class="verse-num">11</span> 그의 형들은 시기하되 그의 아버지는 그 말을 간직해 두었더라</div>
+        <div class="verse"><span class="verse-num">12</span> 그의 형들이 세겜에 가서 아버지의 양 떼를 칠 때에</div>
+        <div class="verse"><span class="verse-num">13</span> 이스라엘이 요셉에게 이르되 네 형들이 세겜에서 양을 치지 아니하느냐 너를 그들에게로 보내리라 요셉이 아버지에게 대답하되 내가 그리하겠나이다</div>
+        <div class="verse"><span class="verse-num">14</span> 이스라엘이 그에게 이르되 가서 네 형들과 양 떼가 다 잘 있는지를 보고 돌아와 내게 말하라 하고 그를 헤브론 골짜기에서 보내니 그가 세겜으로 가니라</div>
+        <div class="verse"><span class="verse-num">15</span> 어떤 사람이 그를 만난즉 그가 들에서 방황하는지라 그 사람이 그에게 물어 이르되 네가 무엇을 찾느냐</div>
+        <div class="verse"><span class="verse-num">16</span> 그가 이르되 내가 내 형들을 찾으오니 청하건대 그들이 양치는 곳을 내게 가르쳐 주소서</div>
+        <div class="verse"><span class="verse-num">17</span> 그 사람이 이르되 그들이 여기서 떠났느니라 내가 그들의 말을 들으니 도단으로 가자 하더라 하니라 요셉이 그의 형들의 뒤를 따라 가서 도단에서 그들을 만나니라</div>
+        <div class="verse"><span class="verse-num">18</span> 요셉이 그들에게 가까이 오기 전에 그들이 요셉을 멀리서 보고 죽이기를 꾀하여</div>
+        <div class="verse"><span class="verse-num">19</span> 서로 이르되 꿈 꾸는 자가 오는도다</div>
+        <div class="verse"><span class="verse-num">20</span> 자, 그를 죽여 한 구덩이에 던지고 우리가 말하기를 악한 짐승이 그를 잡아먹었다 하자 그의 꿈이 어떻게 되는지를 우리가 볼 것이니라 하는지라</div>
+        <div class="verse"><span class="verse-num">21</span> 르우벤이 듣고 요셉을 그들의 손에서 구원하려 하여 이르되 우리가 그의 생명은 해치지 말자</div>
+        <div class="verse"><span class="verse-num">22</span> 르우벤이 또 그들에게 이르되 피를 흘리지 말라 그를 광야 그 구덩이에 던지고 손을 그에게 대지 말라 하니 이는 그가 요셉을 그들의 손에서 구출하여 그의 아버지에게로 돌려보내려 함이었더라</div>
+        <div class="verse"><span class="verse-num">23</span> 요셉이 형들에게 이르매 그의 형들이 요셉의 옷 곧 그가 입은 채색옷을 벗기고</div>
+        <div class="verse"><span class="verse-num">24</span> 그를 잡아 구덩이에 던지니 그 구덩이는 빈 것이라 그 속에 물이 없었더라</div>
+        <div class="verse"><span class="verse-num">25</span> 그들이 앉아 음식을 먹다가 눈을 들어 본즉 한 무리의 이스마엘 사람들이 길르앗에서 오는데 그 낙타들에 향품과 유향과 몰약을 싣고 애굽으로 내려가는지라</div>
+        <div class="verse"><span class="verse-num">26</span> 유다가 자기 형제에게 이르되 우리가 우리 동생을 죽이고 그의 피를 덮어둔들 무엇이 유익할까</div>
+        <div class="verse"><span class="verse-num">27</span> 자 그를 이스마엘 사람들에게 팔고 그에게 우리 손을 대지 말자 그는 우리의 동생이요 우리의 혈육이니라 하매 그의 형제들이 청종하였더라</div>
+        <div class="verse"><span class="verse-num">28</span> 그 때에 미디안 사람 상인들이 지나가고 있는지라 형들이 요셉을 구덩이에서 끌어올리고 은 이십에 그를 이스마엘 사람들에게 팔매 그 상인들이 요셉을 데리고 애굽으로 갔더라</div>
+        <div class="verse"><span class="verse-num">29</span> 르우벤이 돌아와 구덩이에 이르러 본즉 거기 요셉이 없는지라 옷을 찢고</div>
+        <div class="verse"><span class="verse-num">30</span> 아우들에게로 되돌아와서 이르되 아이가 없도다 나는 어디로 갈까</div>
+        <div class="verse"><span class="verse-num">31</span> 그들이 요셉의 옷을 가져다가 숫염소를 죽여 그 옷을 피에 적시고</div>
+        <div class="verse"><span class="verse-num">32</span> 그의 채색옷을 보내어 그의 아버지에게로 가지고 가서 이르기를 우리가 이것을 발견하였으니 아버지 아들의 옷인가 보소서 하매</div>
+        <div class="verse"><span class="verse-num">33</span> 아버지가 그것을 알아보고 이르되 내 아들의 옷이라 악한 짐승이 그를 잡아 먹었도다 요셉이 분명히 찢겼도다 하고</div>
+        <div class="verse"><span class="verse-num">34</span> 자기 옷을 찢고 굵은 베로 허리를 묶고 오래도록 그의 아들을 위하여 애통하니</div>
+        <div class="verse"><span class="verse-num">35</span> 그의 모든 자녀가 위로하되 그가 그 위로를 받지 아니하여 이르되 내가 슬퍼하며 스올로 내려가 아들에게로 가리라 하고 그의 아버지가 그를 위하여 울었더라</div>
+        <div class="verse"><span class="verse-num">36</span> 그 미디안 사람들은 그를 애굽에서 바로의 신하 친위대장 보디발에게 팔았더라</div>
+
+        <!-- 창세기 38장 -->
+        <div class="chapter-title">창세기 38장 (1~30절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 후에 유다가 자기 형제들로부터 떠나 내려가서 아둘람 사람 히라와 가까이 하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 유다가 거기서 가나안 사람 수아라 하는 자의 딸을 보고 그를 데리고 동침하니</div>
+        <div class="verse"><span class="verse-num">3</span> 그가 임신하여 아들을 낳으매 유다가 그의 이름을 엘이라 하니라</div>
+        <div class="verse"><span class="verse-num">4</span> 그가 다시 임신하여 아들을 낳고 그의 이름을 오난이라 하고</div>
+        <div class="verse"><span class="verse-num">5</span> 그가 또 다시 아들을 낳고 그의 이름을 셀라라 하니라 그가 셀라를 낳을 때에 유다는 거십에 있었더라</div>
+        <div class="verse"><span class="verse-num">6</span> 유다가 장자 엘을 위하여 아내를 데려오니 그의 이름은 다말이더라</div>
+        <div class="verse"><span class="verse-num">7</span> 유다의 장자 엘이 여호와가 보시기에 악하므로 여호와께서 그를 죽이신지라</div>
+        <div class="verse"><span class="verse-num">8</span> 유다가 오난에게 이르되 네 형수에게로 들어가서 남편의 아우 된 본분을 행하여 네 형을 위하여 씨가 있게 하라</div>
+        <div class="verse"><span class="verse-num">9</span> 오난이 그 씨가 자기 것이 되지 않을 줄 알므로 형수에게 들어갔을 때에 그의 형에게 씨를 주지 아니하려고 땅에 설정하매</div>
+        <div class="verse"><span class="verse-num">10</span> 그 일이 여호와가 보시기에 악하므로 여호와께서 그도 죽이시니</div>
+        <div class="verse"><span class="verse-num">11</span> 유다가 그의 며느리 다말에게 이르되 수절하고 네 아버지 집에 있어 내 아들 셀라가 장성하기를 기다리라 하니 셀라도 그 형들 같이 죽을까 염려함이라 다말이 가서 그의 아버지 집에 있으니라</div>
+        <div class="verse"><span class="verse-num">12</span> 얼마 후에 유다의 아내 수아의 딸이 죽은지라 유다가 위로를 받은 후에 그의 친구 아둘람 사람 히라와 함께 딤나로 올라가서 자기의 양털 깎는 자에게 이르렀더니</div>
+        <div class="verse"><span class="verse-num">13</span> 어떤 사람이 다말에게 말하되 네 시아버지가 자기의 양털을 깎으려고 딤나에 올라왔다 한지라</div>
+        <div class="verse"><span class="verse-num">14</span> 그가 그 과부의 의복을 벗고 너울로 얼굴을 가리고 몸을 휩싸고 딤나 길 곁 에나임 문에 앉으니 이는 셀라가 장성함을 보았어도 자기를 그의 아내로 주지 않음으로 말미암음이라</div>
+        <div class="verse"><span class="verse-num">15</span> 그가 얼굴을 가리었으므로 유다가 그를 보고 창녀로 여겨</div>
+        <div class="verse"><span class="verse-num">16</span> 길 곁으로 그에게 나아가 이르되 청하건대 나로 네게 들어가게 하라 하니 그의 며느리인 줄을 알지 못하였음이라 그가 이르되 당신이 무엇을 주고 내게 들어오려느냐</div>
+        <div class="verse"><span class="verse-num">17</span> 유다가 이르되 내가 내 떼에서 염소 새끼를 주리라 그가 이르되 당신이 그것을 줄 때까지 담보물을 주겠느냐</div>
+        <div class="verse"><span class="verse-num">18</span> 유다가 이르되 무슨 담보물을 네게 주랴 그가 이르되 당신의 도장과 그 끈과 당신의 손에 있는 지팡이로 하라 유다가 그것들을 그에게 주고 그에게로 들어갔더니 그가 유다로 말미암아 임신하였더라</div>
+        <div class="verse"><span class="verse-num">19</span> 그가 일어나 떠나가서 그 너울을 벗고 과부의 의복을 도로 입으니라</div>
+        <div class="verse"><span class="verse-num">20</span> 유다가 그 친구 아둘람 사람의 손에 부탁하여 염소 새끼를 보내고 그 여인의 손에서 담보물을 찾으려 하였으나 그가 그 여인을 찾지 못한지라</div>
+        <div class="verse"><span class="verse-num">21</span> 그가 그 곳 사람에게 물어 이르되 길 곁 에나임에 있던 창녀가 어디 있느냐 그들이 이르되 여기는 창녀가 없느니라</div>
+        <div class="verse"><span class="verse-num">22</span> 그가 유다에게로 돌아와 이르되 내가 그를 찾지 못하였고 그 곳 사람도 이르기를 거기에는 창녀가 없다 하더이다 하더라</div>
+        <div class="verse"><span class="verse-num">23</span> 유다가 이르되 그로 그것을 가지게 두라 우리가 부끄러움을 당할까 하노라 내가 이 염소 새끼를 보냈으나 그대가 그를 찾지 못하였느니라</div>
+        <div class="verse"><span class="verse-num">24</span> 석 달쯤 후에 어떤 사람이 유다에게 일러 말하되 네 며느리 다말이 행음하였고 그 행음함으로 말미암아 임신하였느니라 유다가 이르되 그를 끌어내어 불사르라</div>
+        <div class="verse"><span class="verse-num">25</span> 여인이 끌려나갈 때에 사람을 보내어 시아버지에게 이르되 이 물건 임자로 말미암아 임신하였나이다 청하건대 보소서 이 도장과 그 끈과 지팡이가 누구의 것이니이까 한지라</div>
+        <div class="verse"><span class="verse-num">26</span> 유다가 그것들을 알아보고 이르되 그는 나보다 옳도다 내가 그를 내 아들 셀라에게 주지 아니하였음이로다 하고 다시는 그를 가까이 하지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">27</span> 해산할 때에 보니 쌍태라</div>
+        <div class="verse"><span class="verse-num">28</span> 해산할 때에 손이 나오는지라 산파가 이르되 이는 먼저 나온 자라 하고 홍색 실을 가져다가 그 손에 매었더니</div>
+        <div class="verse"><span class="verse-num">29</span> 그 손을 도로 들이며 그의 아우가 나오는지라 산파가 이르되 네가 어찌하여 터뜨리고 나오느냐 하였으므로 그 이름을 베레스라 불렀고</div>
+        <div class="verse"><span class="verse-num">30</span> 그의 형 곧 손에 홍색 실 있는 자가 뒤에 나오니 그의 이름을 세라라 불렀더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

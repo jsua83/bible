@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 012</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 012</h1>
+        <p class="sub-title">찬송가 220장 사랑하는 주님 앞에</p>
+        <p class="sub-title">창세기 34~36장 — 야곱, 이스라엘로 / 교육이 흔들리면</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 220장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1U48uiTa9_Zjbu_FMqWAXeuAq_iHwQ_Bl" alt="찬송가 220장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 창세기 34장~36장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 교육이 흔들리면 모든 것이 흔들리게 됩니다.</span>
+            야곱은 20년 전 벧엘에서 하나님께서 주신 약속을 잊고 세겜에서 밭을 사서 그곳에 정착하려고 했습니다. 그런데 세겜에서 사고가 발생하고 말았습니다(창 34장). 야곱의 둘째 아들 시므온과 셋째 아들 레위가 여동생 디나가 하몰의 아들 세겜에게 당한 수치에 대해 복수하겠다고 나선 것입니다. 할례를 이용해 세겜의 남자들을 다 죽이고 세겜 성을 노략했습니다.<br><br>
+            <strong>'할례'는 아브라함이 99세 때 실행한 '하나님과의 약속의 증표'</strong>였습니다. 그런데 야곱의 아들들이 그 할례를 가지고 말도 안 되는 끔찍한 일을 저지른 것입니다. <strong>야곱 가정은 할례에 대한 기본적인 교육조차 제대로 되어 있지 않았던 것입니다.</strong> 그러니 모든 것이 흔들릴 수밖에 없었습니다.<br><br>
+            결국 세겜에서의 일로 야곱은 그곳을 떠나야 했습니다. 언약 가문으로서의 명예가 실추되었을 뿐 아니라 세겜 사람들의 보복이 발생하면 야곱 가문의 존립 자체가 위태로워질 수 있었기 때문입니다. 야곱이 하란에서 20년 동안 눈 붙일 겨를도 없이 살아남느라 <strong>자식에 대한 신앙 교육에 소홀했던 것</strong>입니다.
+            <div class="quote">
+                <strong>교육이 흔들리면 결국 모든 것이 흔들리게 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 야곱, 가족이 시작된 지 20년 만에 벧엘에서 신앙의 기초를 세웁니다.</span>
+            세겜 사람들의 보복 가능성으로 인해 그 땅에 정착할 수 없게 된 그 시점에, 하나님께서 야곱에게 <strong>다시 벧엘로 올라가 제단을 쌓으라</strong>고 말씀하십니다(창 35:1). 야곱의 가정을 새롭게 세워주고자 부르신 것입니다.<br><br>
+            야곱이 지난 20년간 하란에서 사는 동안 하나님께서 벧엘에서 주셨던 약속을 잊고 살았던 것입니다.
+            <div class="quote">
+                <strong>"내가 너와 함께 있어 네가 어디로 가든지 너를 지키며 너를 이끌어 이 땅으로 돌아오게 할지라. 내가 네게 허락한 것을 다 이루기까지 너를 떠나지 아니하리라"</strong> (창 28:15)
+            </div>
+            하나님께서는 야곱이 위기에 처할 때마다 이 약속을 <strong>신실하게 지키고 계셨습니다.</strong> 야곱의 가족들이 소지하고 있던 이방의 신상들과 귀고리들을 다 세겜 땅에 묻습니다. 그리고 야곱이 드디어 20년 만에 벧엘로 올라갑니다. 몸을 정결하게 하고 의복을 갈아입은 후, 20년 전에 하나님의 약속을 들었던 바로 그곳 벧엘에서 돌 기둥을 세우고 그 위에 전제물을 붓고 또 그 위에 기름을 부었습니다.
+            <div class="quote">
+                <strong>이렇게 야곱은 가족이 시작된 지 20년 만에 벧엘에서 가족 구성원 모두에게 신앙의 기초를 놓습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 야곱은 라헬이 죽자 요셉과 베냐민으로 편애를 이어갑니다.</span>
+            벧엘에서 길을 떠나 에브랏으로 가는 길에 <strong>라헬이 베냐민을 낳다가 죽습니다.</strong> 라헬은 야곱이 7년을 하루와 같이 여기며 사랑하고 결혼한 아내였습니다. 그토록 사랑하던 아내 라헬이 죽자 <strong>야곱의 사랑은 '요셉 편애'로 바뀝니다.</strong> 이후 요셉이 죽었다고 생각한 22년 동안은 베냐민을 편애합니다.
+            <div class="quote">
+                <strong>야곱은 20년간 라헬을 사랑하고 22년간 베냐민을 편애했습니다. 야곱의 이 지독한 편애는 오랜 시간 후 놀랍게도 '흉년'이 고쳐줍니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 아브라함 가문의 3대째 '장례식장은 막벨라굴'이 됩니다.</span>
+            <div class="quote">
+                <strong>아브라함의 장례</strong> — 이스마엘과 이삭이 막벨라굴에서 함께 했습니다.<br>
+                <strong>이삭의 장례</strong> — 에서와 야곱이 막벨라굴에서 함께 합니다.<br>
+                <strong>야곱의 장례</strong> — 애굽에서 죽은 야곱의 장례는 열두 아들이 모두 막벨라굴에서 함께 합니다.
+            </div>
+            이렇게 <strong>아브라함 가문의 3대째 장례식장은 모두 막벨라굴</strong>이었습니다. 막벨라굴 장례식장은 큰 의미를 지니고 있습니다. 하나님을 향한 믿음을 자녀에게 교육함으로 <strong>신앙이 계승됨을 막벨라굴 장례식장을 통해 실현해 가기 때문</strong>입니다.<br><br>
+            이후 역사에서 보면 막벨라굴 장례식장은 이렇게 이어집니다.
+            <div class="quote">
+                <strong>첫째,</strong> 애굽에서 죽은 야곱의 장례식을 막벨라굴에서 행함으로써 출애굽의 기초가 되게 합니다(창 50:12~13).<br>
+                <strong>둘째,</strong> 가나안 점령 후 갈렙이 이 땅을 선택하여 삶의 근거지로 삼습니다(수 14:13~14).<br>
+                <strong>셋째,</strong> 900여 년 후, 다윗이 온 이스라엘의 왕으로 옹립될 때 막벨라굴이 있는 헤브론에서 기름 부음을 받습니다(삼하 5:1~5).
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 에돔의 족보는 에서를 향한 하나님의 약속의 성취입니다.</span>
+            창세기 36장의 에돔 족보는 <strong>에서를 향한 하나님의 예언의 성취</strong>입니다. 이는 하나님께서 아브라함에게 <strong>'하늘의 뭇별처럼 많은 자손'</strong>을 주시겠다는 약속(창 15:5)이 에서의 자손을 통해서도 성취되었다는 것을 의미합니다. 이후 하나님의 말씀대로 에서는 세일산에 거주하며 <strong>에돔 민족을 형성하게 됩니다.</strong><br><br>
+            창세기 36장에서 보듯 에서에게서 나온 족장들이 많습니다. 이들은 에서가 아버지 이삭에게 축복을 받을 때의 말씀처럼 야곱, 즉 이스라엘 민족과 <strong>형제 민족으로 잘 지내야 했습니다.</strong><br><br>
+            그런데 이후 오바댜에서 보면 에서의 후손을 책망하는 이야기가 나옵니다. 이스라엘 민족이 바벨론 제국에 멸망하고 예루살렘이 함락될 때 <strong>에돔이 이를 기뻐하며 바벨론 제국에 협조까지 했기 때문</strong>입니다.
+            <div class="quote">
+                <strong>형제의 환란을 즐거워했던 에돔을 향해 하나님께서는 오바댜 선지자를 통해 심판을 선언하십니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 창세기 34~36장 '야곱, 이스라엘로 / 교육이 흔들리면'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 창세기 34장 -->
+        <div class="chapter-title">창세기 34장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 레아가 야곱에게 낳은 딸 디나가 그 땅의 딸들을 보러 나갔더니</div>
+        <div class="verse"><span class="verse-num">2</span> 히위 족속 중 하몰의 아들 그 땅의 추장 세겜이 그를 보고 끌어들여 강간하여 욕되게 하고</div>
+        <div class="verse"><span class="verse-num">3</span> 그 마음이 깊이 야곱의 딸 디나에게 연연하며 그 소녀를 사랑하여 그의 마음을 말로 위로하고</div>
+        <div class="verse"><span class="verse-num">4</span> 그의 아버지 하몰에게 청하여 이르되 이 소녀를 내 아내로 얻게 하여 주소서 하였더라</div>
+        <div class="verse"><span class="verse-num">5</span> 야곱이 그 딸 디나를 그가 더럽혔다 함을 들었으나 자기의 아들들이 들에서 목축하므로 그들이 돌아오기까지 잠잠하였고</div>
+        <div class="verse"><span class="verse-num">6</span> 세겜의 아버지 하몰은 야곱에게 말하러 왔으며</div>
+        <div class="verse"><span class="verse-num">7</span> 야곱의 아들들은 들에서 이를 듣고 돌아와서 그들 모두가 근심하고 심히 노하였으니 이는 세겜이 야곱의 딸을 강간하여 이스라엘에게 부끄러운 일 곧 행하지 못할 일을 행하였음이더라</div>
+        <div class="verse"><span class="verse-num">8</span> 하몰이 그들에게 이르되 내 아들 세겜이 마음으로 너희 딸을 연연하여 하니 원하건대 그를 세겜에게 주어 아내로 삼게 하라</div>
+        <div class="verse"><span class="verse-num">9</span> 너희가 우리와 통혼하여 너희 딸을 우리에게 주며 우리 딸을 너희가 데려가고</div>
+        <div class="verse"><span class="verse-num">10</span> 너희가 우리와 함께 거주하되 땅이 너희 앞에 있으니 여기 머물러 매매하며 여기서 기업을 얻으라 하고</div>
+        <div class="verse"><span class="verse-num">11</span> 세겜도 디나의 아버지와 그의 남자 형제들에게 이르되 나로 너희에게 은혜를 입게 하라 너희가 내게 말하는 것은 내가 다 주리니</div>
+        <div class="verse"><span class="verse-num">12</span> 이 소녀만 내게 주어 아내가 되게 하라 아무리 큰 혼수와 예물을 청할지라도 너희가 내게 말한 대로 주리라</div>
+        <div class="verse"><span class="verse-num">13</span> 야곱의 아들들이 세겜과 그의 아버지 하몰에게 속여 대답하였으니 이는 세겜이 그 누이 디나를 더럽혔음이라</div>
+        <div class="verse"><span class="verse-num">14</span> 야곱의 아들들이 그들에게 말하되 우리는 그리하지 못하겠노라 할례 받지 아니한 사람에게 우리 누이를 줄 수 없노니 이는 우리의 수치가 됨이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 그런즉 이같이 하면 너희에게 허락하리라 만일 너희 중 남자가 다 할례를 받고 우리 같이 되면</div>
+        <div class="verse"><span class="verse-num">16</span> 우리 딸을 너희에게 주며 너희 딸을 우리가 데려오며 너희와 함께 거주하여 한 민족이 되려니와</div>
+        <div class="verse"><span class="verse-num">17</span> 너희가 만일 우리 말을 듣지 아니하고 할례를 받지 아니하면 우리는 곧 우리 딸을 데리고 가리라</div>
+        <div class="verse"><span class="verse-num">18</span> 그들의 말을 하몰과 그의 아들 세겜이 좋게 여기므로</div>
+        <div class="verse"><span class="verse-num">19</span> 이 소년이 그 일 행하기를 지체하지 아니하였으니 그가 야곱의 딸을 사랑함이며 그는 그의 아버지 집에서 가장 존귀하였더라</div>
+        <div class="verse"><span class="verse-num">20</span> 하몰과 그의 아들 세겜이 그들의 성읍 문에 이르러 그들의 성읍 사람들에게 말하여 이르되</div>
+        <div class="verse"><span class="verse-num">21</span> 이 사람들은 우리와 친목하고 이 땅은 넓어 그들을 용납할 만하니 그들이 여기서 거주하며 매매하게 하고 우리가 그들의 딸들을 아내로 데려오고 우리 딸들도 그들에게 주자</div>
+        <div class="verse"><span class="verse-num">22</span> 그러나 우리 중의 모든 남자가 그들이 할례를 받음 같이 할례를 받아야 그 사람들이 우리와 함께 거주하여 한 민족 되기를 허락할 것이라</div>
+        <div class="verse"><span class="verse-num">23</span> 그러면 그들의 가축과 재산과 그들의 모든 짐승이 우리의 소유가 되지 않겠느냐 다만 그들의 말대로 하자 그러면 그들이 우리와 함께 거주하리라</div>
+        <div class="verse"><span class="verse-num">24</span> 성문으로 출입하는 모든 자가 하몰과 그의 아들 세겜의 말을 듣고 성문으로 출입하는 그 모든 남자가 할례를 받으니라</div>
+        <div class="verse"><span class="verse-num">25</span> 제삼일에 아직 그들이 아파할 때에 야곱의 두 아들 디나의 오라버니 시므온과 레위가 각기 칼을 가지고 가서 몰래 그 성읍을 기습하여 그 모든 남자를 죽이고</div>
+        <div class="verse"><span class="verse-num">26</span> 칼로 하몰과 그의 아들 세겜을 죽이고 디나를 세겜의 집에서 데려오고</div>
+        <div class="verse"><span class="verse-num">27</span> 야곱의 여러 아들이 그 시체 있는 성읍으로 가서 노략하였으니 이는 그들이 그들의 누이를 더럽힌 까닭이라</div>
+        <div class="verse"><span class="verse-num">28</span> 그들이 양과 소와 나귀와 그 성읍에 있는 것과 들에 있는 것과</div>
+        <div class="verse"><span class="verse-num">29</span> 그들의 모든 재물을 빼앗으며 그들의 자녀와 그들의 아내들을 사로잡고 집 속의 물건을 다 노략한지라</div>
+        <div class="verse"><span class="verse-num">30</span> 야곱이 시므온과 레위에게 이르되 너희가 내게 화를 끼쳐 나로 하여금 이 땅의 주민 곧 가나안 족속과 브리스 족속에게 악취를 내게 하였도다 나는 수가 적은즉 그들이 모여 나를 치고 나를 죽이리니 그러면 나와 내 집이 멸망하리라</div>
+        <div class="verse"><span class="verse-num">31</span> 그들이 이르되 그가 우리 누이를 창녀 같이 대우함이 옳으니이까</div>
+
+        <!-- 창세기 35장 -->
+        <div class="chapter-title">창세기 35장 (1~29절)</div>
+        <div class="verse"><span class="verse-num">1</span> 하나님이 야곱에게 이르시되 일어나 벧엘로 올라가서 거기 거주하며 네가 네 형 에서의 낯을 피하여 도망하던 때에 네게 나타났던 하나님께 거기서 제단을 쌓으라 하신지라</div>
+        <div class="verse"><span class="verse-num">2</span> 야곱이 이에 자기 집안 사람과 자기와 함께 한 모든 자에게 이르되 너희 중에 있는 이방 신상들을 버리고 자신을 정결하게 하고 너희들의 의복을 바꾸어 입으라</div>
+        <div class="verse"><span class="verse-num">3</span> 우리가 일어나 벧엘로 올라가자 내 환난 날에 내게 응답하시며 내가 가는 길에서 나와 함께 하신 하나님께 내가 거기서 제단을 쌓으려 하노라 하매</div>
+        <div class="verse"><span class="verse-num">4</span> 그들이 자기 손에 있는 모든 이방 신상들과 자기 귀에 있는 귀고리들을 야곱에게 주는지라 야곱이 그것들을 세겜 근처 상수리나무 아래에 묻고</div>
+        <div class="verse"><span class="verse-num">5</span> 그들이 떠났으나 하나님이 그 사면 고을들로 크게 두려워하게 하셨으므로 야곱의 아들들을 추격하는 자가 없었더라</div>
+        <div class="verse"><span class="verse-num">6</span> 야곱과 그와 함께 한 모든 사람이 가나안 땅 루스 곧 벧엘에 이르고</div>
+        <div class="verse"><span class="verse-num">7</span> 그가 거기서 제단을 쌓고 그 곳을 엘벧엘이라 불렀으니 이는 그의 형의 낯을 피할 때에 하나님이 거기서 그에게 나타나셨음이더라</div>
+        <div class="verse"><span class="verse-num">8</span> 리브가의 유모 드보라가 죽으매 그를 벧엘 아래에 있는 상수리나무 밑에 장사하고 그 나무 이름을 알론바굿이라 불렀더라</div>
+        <div class="verse"><span class="verse-num">9</span> 야곱이 밧단아람에서 돌아오매 하나님이 다시 야곱에게 나타나사 그에게 복을 주시고</div>
+        <div class="verse"><span class="verse-num">10</span> 하나님이 그에게 이르시되 네 이름이 야곱이지마는 네 이름을 다시는 야곱이라 부르지 않겠고 이스라엘이 네 이름이 되리라 하시고 그가 그의 이름을 이스라엘이라 부르시고</div>
+        <div class="verse"><span class="verse-num">11</span> 하나님이 그에게 이르시되 나는 전능한 하나님이라 생육하며 번성하라 한 백성과 백성들의 총회가 네게서 나오고 왕들이 네 허리에서 나오리라</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 아브라함과 이삭에게 준 땅을 네게 주고 내가 네 후손에게도 그 땅을 주리라 하시고</div>
+        <div class="verse"><span class="verse-num">13</span> 하나님이 그와 말씀하시던 곳에서 그를 떠나 올라가시는지라</div>
+        <div class="verse"><span class="verse-num">14</span> 야곱이 하나님이 자기와 말씀하시던 곳에 기둥 곧 돌 기둥을 세우고 그 위에 전제물을 붓고 또 그 위에 기름을 붓고</div>
+        <div class="verse"><span class="verse-num">15</span> 하나님이 자기와 말씀하시던 곳의 이름을 벧엘이라 불렀더라</div>
+        <div class="verse"><span class="verse-num">16</span> 그들이 벧엘에서 길을 떠나 에브랏에 이르기까지 얼마간 거리를 둔 곳에서 라헬이 해산하게 되어 심히 고생하여</div>
+        <div class="verse"><span class="verse-num">17</span> 그가 난산할 즈음에 산파가 그에게 이르되 두려워하지 말라 지금 네가 또 득남하느니라 하매</div>
+        <div class="verse"><span class="verse-num">18</span> 그가 죽게 되어 그의 혼이 떠나려 할 때에 아들의 이름을 베노니라 불렀으나 그의 아버지는 그를 베냐민이라 불렀더라</div>
+        <div class="verse"><span class="verse-num">19</span> 라헬이 죽으매 에브랏 곧 베들레헴 길에 장사되었고</div>
+        <div class="verse"><span class="verse-num">20</span> 야곱이 라헬의 묘에 비를 세웠더니 지금까지 라헬의 묘비라 일컫더라</div>
+        <div class="verse"><span class="verse-num">21</span> 이스라엘이 다시 길을 떠나 에델 망대를 지나 장막을 쳤더라</div>
+        <div class="verse"><span class="verse-num">22</span> 이스라엘이 그 땅에 거주할 때에 르우벤이 가서 그 아버지의 첩 빌하와 동침하매 이스라엘이 이를 들었더라 야곱의 아들은 열둘이라</div>
+        <div class="verse"><span class="verse-num">23</span> 레아의 아들들은 야곱의 장자 르우벤과 그 다음 시므온과 레위와 유다와 잇사갈과 스불론이요</div>
+        <div class="verse"><span class="verse-num">24</span> 라헬의 아들들은 요셉과 베냐민이며</div>
+        <div class="verse"><span class="verse-num">25</span> 라헬의 여종 빌하의 아들들은 단과 납달리요</div>
+        <div class="verse"><span class="verse-num">26</span> 레아의 여종 실바의 아들들은 갓과 아셀이니 이들은 야곱의 아들들이요 밧단아람에서 그에게 낳은 자더라</div>
+        <div class="verse"><span class="verse-num">27</span> 야곱이 기럇아르바의 마므레로 가서 그의 아버지 이삭에게 이르렀으니 기럇아르바는 곧 아브라함과 이삭이 거류하던 헤브론이더라</div>
+        <div class="verse"><span class="verse-num">28</span> 이삭의 나이가 백팔십 세라</div>
+        <div class="verse"><span class="verse-num">29</span> 이삭이 나이가 많고 늙어 기운이 다하매 죽어 자기 열조에게로 돌아가니 그의 아들 에서와 야곱이 그를 장사하였더라</div>
+
+        <!-- 창세기 36장 -->
+        <div class="chapter-title">창세기 36장 (1~43절)</div>
+        <div class="verse"><span class="verse-num">1</span> 에서 곧 에돔의 족보는 이러하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 에서가 가나안 여인 중 헷 족속 엘론의 딸 아다와 히위 족속 시브온의 딸인 아나의 딸 오홀리바마를 자기 아내로 맞이하고</div>
+        <div class="verse"><span class="verse-num">3</span> 또 이스마엘의 딸 느바욧의 누이 바스맛을 맞이하였더니</div>
+        <div class="verse"><span class="verse-num">4</span> 아다는 엘리바스를 에서에게 낳았고 바스맛은 르우엘을 낳았고</div>
+        <div class="verse"><span class="verse-num">5</span> 오홀리바마는 여우스와 얄람과 고라를 낳았으니 이들은 에서의 아들들이요 가나안 땅에서 그에게 태어난 자들이더라</div>
+        <div class="verse"><span class="verse-num">6</span> 에서가 자기 아내들과 자기 자녀들과 자기 집의 모든 사람과 자기의 가축과 자기의 모든 짐승과 자기가 가나안 땅에서 모은 모든 재물을 이끌고 그의 동생 야곱을 떠나 다른 곳으로 갔으니</div>
+        <div class="verse"><span class="verse-num">7</span> 두 사람의 소유가 풍부하여 함께 거주할 수 없음이러라 그들이 거주하는 땅이 그들의 가축으로 말미암아 그들을 용납할 수 없었더라</div>
+        <div class="verse"><span class="verse-num">8</span> 이에 에서 곧 에돔이 세일 산에 거주하니라</div>
+        <div class="verse"><span class="verse-num">9</span> 세일 산에 있는 에돔 족속의 조상 에서의 족보는 이러하고</div>
+        <div class="verse"><span class="verse-num">10</span> 그 자손의 이름은 이러하니라 에서의 아내 아다의 아들은 엘리바스요 에서의 아내 바스맛의 아들은 르우엘이며</div>
+        <div class="verse"><span class="verse-num">11</span> 엘리바스의 아들들은 데만과 오말과 스보와 가담과 그나스요</div>
+        <div class="verse"><span class="verse-num">12</span> 에서의 아들 엘리바스의 첩 딤나는 아말렉을 엘리바스에게 낳았으니 이들은 에서의 아내 아다의 자손이며</div>
+        <div class="verse"><span class="verse-num">13</span> 르우엘의 아들들은 나핫과 세라와 삼마와 미사니 이들은 에서의 아내 바스맛의 자손이며</div>
+        <div class="verse"><span class="verse-num">14</span> 시브온의 손녀 아나의 딸 에서의 아내 오홀리바마의 아들들은 이러하니 그가 여우스와 얄람과 고라를 에서에게 낳았더라</div>
+        <div class="verse"><span class="verse-num">15</span> 에서 자손 중 족장은 이러하니라 에서의 장자 엘리바스의 자손으로는 데만 족장, 오말 족장, 스보 족장, 그나스 족장과</div>
+        <div class="verse"><span class="verse-num">16</span> 고라 족장, 가담 족장, 아말렉 족장이니 이들은 에돔 땅에 있는 엘리바스의 족장들이요 이들은 아다의 자손이며</div>
+        <div class="verse"><span class="verse-num">17</span> 에서의 아들 르우엘의 자손으로는 나핫 족장, 세라 족장, 삼마 족장, 미사 족장이니 이들은 에돔 땅에 있는 르우엘의 족장들이요 이들은 에서의 아내 바스맛의 자손이며</div>
+        <div class="verse"><span class="verse-num">18</span> 에서의 아내인 오홀리바마의 아들들은 여우스 족장, 얄람 족장, 고라 족장이니 이들은 아나의 딸이요 에서의 아내인 오홀리바마로 말미암아 나온 족장들이라</div>
+        <div class="verse"><span class="verse-num">19</span> 에서 곧 에돔의 자손으로서 족장 된 자들이 이러하였더라</div>
+        <div class="verse"><span class="verse-num">20</span> 그 땅의 주민 호리 족속 세일의 자손은 로단과 소발과 시브온과 아나와</div>
+        <div class="verse"><span class="verse-num">21</span> 디손과 에셀과 디산이니 이들은 에돔 땅에 있는 세일의 자손 중 호리 족속의 족장들이요</div>
+        <div class="verse"><span class="verse-num">22</span> 로단의 자녀는 호리와 헤맘과 로단의 누이 딤나요</div>
+        <div class="verse"><span class="verse-num">23</span> 소발의 자녀는 알완과 마나핫과 에발과 스보와 오남이요</div>
+        <div class="verse"><span class="verse-num">24</span> 시브온의 자녀는 아야와 아나며 이 아나는 그 아버지 시브온의 나귀를 칠 때에 광야에서 온천을 발견하였고</div>
+        <div class="verse"><span class="verse-num">25</span> 아나의 자녀는 디손과 오홀리바마니 오홀리바마는 아나의 딸이며</div>
+        <div class="verse"><span class="verse-num">26</span> 디손의 자녀는 헴단과 에스반과 이드란과 그란이요</div>
+        <div class="verse"><span class="verse-num">27</span> 에셀의 자녀는 빌한과 사아완과 아간이요</div>
+        <div class="verse"><span class="verse-num">28</span> 디산의 자녀는 우스와 아란이니</div>
+        <div class="verse"><span class="verse-num">29</span> 호리 족속의 족장들은 곧 로단 족장, 소발 족장, 시브온 족장, 아나 족장,</div>
+        <div class="verse"><span class="verse-num">30</span> 디손 족장, 에셀 족장, 디산 족장이라 이들은 그들의 족속들에 따라 세일 땅에 있는 호리 족속의 족장들이었더라</div>
+        <div class="verse"><span class="verse-num">31</span> 이스라엘 자손을 다스리는 왕이 있기 전에 에돔 땅을 다스리던 왕들은 이러하니라</div>
+        <div class="verse"><span class="verse-num">32</span> 브올의 아들 벨라가 에돔의 왕이 되었으니 그 도성의 이름은 딘하바며</div>
+        <div class="verse"><span class="verse-num">33</span> 벨라가 죽고 보스라 사람 세라의 아들 요밥이 그를 대신하여 왕이 되었고</div>
+        <div class="verse"><span class="verse-num">34</span> 요밥이 죽고 데만 족속의 땅의 후삼이 그를 대신하여 왕이 되었고</div>
+        <div class="verse"><span class="verse-num">35</span> 후삼이 죽고 브닷의 아들 곧 모압 들에서 미디안 족속을 친 하닷이 그를 대신하여 왕이 되었으니 그 도성 이름은 아윗이며</div>
+        <div class="verse"><span class="verse-num">36</span> 하닷이 죽고 마스레가의 삼라가 그를 대신하여 왕이 되었고</div>
+        <div class="verse"><span class="verse-num">37</span> 삼라가 죽고 유브라데 강변 르호봇의 사울이 그를 대신하여 왕이 되었고</div>
+        <div class="verse"><span class="verse-num">38</span> 사울이 죽고 악볼의 아들 바알하난이 그를 대신하여 왕이 되었고</div>
+        <div class="verse"><span class="verse-num">39</span> 악볼의 아들 바알하난이 죽고 하달이 그를 대신하여 왕이 되었으니 그 도성 이름은 바우며 그의 아내의 이름은 므헤다벨이니 마드렛의 딸이요 메사합의 손녀더라</div>
+        <div class="verse"><span class="verse-num">40</span> 에서에게서 나온 족장들의 이름은 그 종족과 거처와 이름을 따라 나누면 이러하니 딤나 족장, 알와 족장, 여뎃 족장,</div>
+        <div class="verse"><span class="verse-num">41</span> 오홀리바마 족장, 엘라 족장, 비논 족장,</div>
+        <div class="verse"><span class="verse-num">42</span> 그나스 족장, 데만 족장, 밉살 족장,</div>
+        <div class="verse"><span class="verse-num">43</span> 막디엘 족장, 이람 족장이라 이들은 그 구역과 거처를 따른 에돔 족장들이며 에돔 족속의 조상은 에서더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
