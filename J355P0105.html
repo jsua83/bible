@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 355</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 355</h1>
+        <p class="sub-title">찬송가 341장 십자가를 내가 지고</p>
+        <p class="sub-title">베드로전서 1~5장 — 하나님 나라의 성도</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 341장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://drive.google.com/thumbnail?id=1QHlmCipRrHltGk9rUa-ezZG3slM_iw9_&sz=w800" alt="찬송가 341장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 베드로전서 1~5장<br>'하나님 나라의 성도'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 베드로는 선지자들의 계시는 성령에 힘입어 전한 것으로 예수 그리스도에 대한 증거라고 말합니다.</span>
+            '공동서신 9권'은 당시 <strong>고난 가운데 있었던 성도들을 격려하기 위해</strong> 기록한 초기 교회 지도자들의 편지입니다. 베드로의 편지인 베드로전서와 베드로후서 또한 로마 제국하에서 기독교에 대한 박해가 갈수록 극심해지고 있을 때에 <strong>고난과 핍박을 견디고 있는 성도들을 격려하고 힘을 주기 위해 보낸 편지</strong>입니다.<br><br>
+            베드로전서와 베드로후서는 <strong>'고난'과 '소망'을 묶어서 이야기합니다.</strong> 고난 중에도 내일의 영광을 생각할 때 거기에서 '지혜'가 나옵니다. 그러므로 베드로는 <strong>고난 속에서 성숙해지고 영광 중에서 교만하지 않고 앞으로 발전될 가능성을 꿈꿔야 한다</strong>고 가르쳐줍니다.<br><br>
+            베드로는 '구원'에 대해 <strong>앞서 선지자들이 연구하고 살펴서 예수님의 고난과 영광을 미리 증언했다</strong>고 말합니다(벧전 1:10~12). 선지자들의 계시는 <strong>예수 그리스도에 대한 증거로 그리스도인들을 위한 것</strong>입니다.
+            <div class="quote">
+                <strong>그러므로 베드로는 예수 그리스도를 믿음으로 구원받은 성도들에게 모든 행실에 거룩한 자가 되며 하나님께 믿음과 소망을 두고 서로 뜨겁게 사랑하며 살라고 권면합니다.</strong> (벧전 1:13~22)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 베드로는 구약성경의 말씀을 인용해 하나님 나라의 백성이 된 '성도'가 무엇인지 가르쳐줍니다.</span>
+            계속되는 베드로의 권면입니다(벧전 2:1~8).
+            <div class="quote">
+                <strong>첫째,</strong> 구원에 이르기까지 성장하라고 말합니다.<br>
+                <strong>둘째,</strong> 산 돌이신 예수님과 연합하여 하나님 나라 백성이 되라고 말합니다.
+            </div>
+            베드로는 <strong>'산 돌이신 예수'</strong>를 구약성경 이사야와 시편을 인용하여 증거합니다(사 28:16; 시 118:22; 사 8:14). 이어서 베드로는 성도들에게 <strong>하나님 나라의 백성이 된 성도의 신분</strong>이 어떠한 모습인지 이사야와 출애굽기를 인용해 가르쳐줍니다(벧전 2:9~10).
+            <div class="quote">
+                <strong>첫째,</strong> '택하신 족속'입니다(사 43:20~21).<br>
+                <strong>둘째,</strong> '왕 같은 제사장이며 거룩한 나라'입니다(출 19:6).<br>
+                <strong>셋째,</strong> '하나님의 소유된 자들'입니다(출 19:5).
+            </div>
+            <div class="quote">
+                <strong>베드로는 하나님께서 이스라엘 백성들에게 내리신 '택하신 족속, 왕 같은 제사장, 거룩한 나라, 하나님의 소유가 된 백성'이라는 복을 예수님의 이름으로 인해 박해를 받고 있는 그리스도인들에게 돌리며 격려합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 베드로는 성도는 하나님 나라의 시민이며 이 땅에서는 외국인이며 나그네라고 가르쳐줍니다.</span>
+            베드로는 하나님 나라의 백성이 된 성도들의 사회적 관계와 역할, 그리고 가정에서의 역할에 대해 가르칩니다.
+            <div class="quote">
+                <strong>첫째,</strong> 성도들은 잠시 세상에 살아가는 거류민이며 나그네이므로 <strong>육체의 정욕을 제거하고 선한 일을 행하여</strong> 비방하는 자들로 하여금 하나님께 영광 돌리게 하라고 가르칩니다(벧전 2:11~12).<br>
+                <strong>둘째,</strong> 성도들은 위정자들에게 <strong>복음을 위하여 순종하라</strong>고 가르칩니다(벧전 2:13~17).<br>
+                <strong>셋째,</strong> '종'의 처지에 있는 성도들에게 순종을 권면합니다(벧전 2:18~20).<br>
+                <strong>넷째,</strong> 성도들 가운데 아내들에게 순종을 권면합니다(벧전 3:1~2).<br>
+                <strong>다섯째,</strong> 성도들 가운데 남편들에게 <strong>아내를 귀히 여길 것</strong>을 권면합니다(벧전 3:7).
+            </div>
+            계속해서 베드로는 고난 중에 있는 성도들을 향해 권면합니다(벧전 3:8~17). 한마음으로 서로 사랑하고, <strong>악을 악으로 갚지 말고 복을 빌라</strong>고 권면합니다. 그 위에 오히려 더욱 선을 행하고, <strong>더욱 복음을 전하라</strong>고 강조합니다.
+            <div class="quote">
+                <strong>베드로가 당시 고난 가운데 있는 성도들에게 이러한 권면을 한 이유는, 이 땅에 사는 동안은 성도들이 외국인이며 나그네라는 사실을 깨닫게 함으로 믿음으로 고난을 이겨내고 하나님 나라의 시민으로서 천국을 소망하게 하기 위함이었습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 베드로는 고난의 유익을 말하며 성도들이 행할 삶의 자세를 가르쳐줍니다.</span>
+            베드로는 성도들에게 <strong>고난은 옛사람을 버리고 새사람이 되게 한다</strong>는 고난의 유익을 말합니다(벧전 4:1~6). 이어서 성도들이 고난의 때에 행할 일에 대해 가르쳐줍니다(벧전 4:7~19).
+            <div class="quote">
+                <strong>첫째,</strong> "근신하여 기도하라."<br>
+                <strong>둘째,</strong> "뜨겁게 서로 사랑하라."<br>
+                <strong>셋째,</strong> "선한 청지기와 같이 서로 봉사하라."<br>
+                <strong>넷째,</strong> "고난에 참여함을 즐거워하고 기뻐하라."<br>
+                <strong>다섯째,</strong> "고난을 기꺼이 받으며 선을 행하고 창조주 하나님께 의탁하라."
+            </div>
+            <div class="quote">
+                <strong>고난은 심판이 임박함을 알리는 것이므로 참고 인내할 수 있습니다. 힘든 상황을 그리스도의 고난에 동참하는 것으로 여기며 인내하고 선한 행실을 하라고 권면합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 베드로는 교회 지도자들에게 양 무리의 본이 되라고 권면합니다.</span>
+            베드로는 고난 속에 있는 교회 공동체를 위해 권면합니다(벧전 5:1~11).
+            <div class="quote">
+                <strong>첫째,</strong> 장로들과 교회 지도자들에게는 <strong>'양 무리의 본이 되라'</strong>고 권면합니다.<br>
+                <strong>둘째,</strong> 교회 안에 젊은 자들에게는 <strong>'교회 지도자들에게 순종하고 성도들 간에는 서로 겸손하라'</strong>고 권면합니다.<br>
+                <strong>셋째,</strong> 교회 공동체에는 <strong>'염려하지 말고 근신하며 깨어 있으라'</strong>고 권면합니다.
+            </div>
+            베드로는 책임 있는 교회 지도자로서 사랑을 담아 <strong>고난과 박해 가운데 있는 성도들에게 아낌없는 권면의 말을 건넨 후</strong> 끝인사로 베드로전서를 마무리합니다(벧전 5:12~14).<br><br>
+            베드로는 <strong>실루아노와 함께 복음을 전하고 있다</strong>고 밝힙니다. '실루아노(실라)'는 예루살렘 교회의 지도자였고 바울의 2차 전도여행의 동행자였습니다. 이 당시에는 베드로와 함께 사역하며 베드로전서를 대필한 것으로 보입니다.<br><br>
+            그리고 끝인사에서 언급하고 있는 <strong>'바벨론에 있는 교회'</strong>는 당시 로마 제국의 박해 속에 있는 <strong>로마 교회를 일컫는 것으로 추정됩니다.</strong> 베드로가 그 당시 로마에서 실루아노, 마가 등과 함께 교회를 이끌며 복음을 전파했기 때문입니다.
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 베드로전서 1~5장 '하나님 나라의 성도'를 함께 살펴보았습니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 베드로전서 1장 -->
+        <div class="chapter-title">베드로전서 1장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 예수 그리스도의 사도 베드로는 본도, 갈라디아, 갑바도기아, 아시아와 비두니아에 흩어진 나그네</div>
+        <div class="verse"><span class="verse-num">2</span> 곧 하나님 아버지의 미리 아심을 따라 성령이 거룩하게 하심으로 순종함과 예수 그리스도의 피 뿌림을 얻기 위하여 택하심을 받은 자들에게 편지하노니 은혜와 평강이 너희에게 더욱 많을지어다</div>
+        <div class="verse"><span class="verse-num">3</span> 우리 주 예수 그리스도의 아버지 하나님을 찬송하리로다 그의 많으신 긍휼대로 예수 그리스도를 죽은 자 가운데서 부활하게 하심으로 말미암아 우리를 거듭나게 하사 산 소망이 있게 하시며</div>
+        <div class="verse"><span class="verse-num">4</span> 썩지 않고 더럽지 않고 쇠하지 아니하는 유업을 잇게 하시나니 곧 너희를 위하여 하늘에 간직하신 것이라</div>
+        <div class="verse"><span class="verse-num">5</span> 너희는 말세에 나타내기로 예비하신 구원을 얻기 위하여 믿음으로 말미암아 하나님의 능력으로 보호하심을 받았느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 그러므로 너희가 이제 여러 가지 시험으로 말미암아 잠깐 근심하게 되지 않을 수 없으나 오히려 크게 기뻐하는도다</div>
+        <div class="verse"><span class="verse-num">7</span> 너희 믿음의 확실함은 불로 연단하여도 없어질 금보다 더 귀하여 예수 그리스도께서 나타나실 때에 칭찬과 영광과 존귀를 얻게 할 것이니라</div>
+        <div class="verse"><span class="verse-num">8</span> 예수를 너희가 보지 못하였으나 사랑하는도다 이제도 보지 못하나 믿고 말할 수 없는 영광스러운 즐거움으로 기뻐하니</div>
+        <div class="verse"><span class="verse-num">9</span> 믿음의 결국 곧 영혼의 구원을 받음이라</div>
+        <div class="verse"><span class="verse-num">10</span> 이 구원에 대하여는 너희에게 임할 은혜를 예언하던 선지자들이 연구하고 부지런히 살펴서</div>
+        <div class="verse"><span class="verse-num">11</span> 자기 속에 계신 그리스도의 영이 그 받으실 고난과 후에 받으실 영광을 미리 증언하여 누구를 또는 어떠한 때를 지시하시는지 상고하니라</div>
+        <div class="verse"><span class="verse-num">12</span> 이 섬긴 바가 자기를 위한 것이 아니요 너희를 위한 것임이 계시로 알게 되었으니 이것은 하늘로부터 보내신 성령을 힘입어 복음을 전하는 자들로 이제 너희에게 알린 것이요 천사들도 살펴 보기를 원하는 것이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그러므로 너희 마음의 허리를 동이고 근신하여 예수 그리스도께서 나타나실 때에 너희에게 가져다 주실 은혜를 온전히 바랄지어다</div>
+        <div class="verse"><span class="verse-num">14</span> 너희가 순종하는 자식처럼 전에 알지 못할 때에 따르던 너희 사욕을 본받지 말고</div>
+        <div class="verse"><span class="verse-num">15</span> 오직 너희를 부르신 거룩한 이처럼 너희도 모든 행실에 거룩한 자가 되라</div>
+        <div class="verse"><span class="verse-num">16</span> 기록되었으되 내가 거룩하니 너희도 거룩할지어다 하셨느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 외모로 보시지 않고 각 사람의 행위대로 심판하시는 이를 너희가 아버지라 부른즉 너희가 나그네로 있을 때를 두려움으로 지내라</div>
+        <div class="verse"><span class="verse-num">18</span> 너희가 알거니와 너희 조상이 물려 준 헛된 행실에서 대속함을 받은 것은 은이나 금 같이 없어질 것으로 된 것이 아니요</div>
+        <div class="verse"><span class="verse-num">19</span> 오직 흠 없고 점 없는 어린 양 같은 그리스도의 보배로운 피로 된 것이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 그는 창세 전부터 미리 알린 바 되신 이나 이 말세에 너희를 위하여 나타내신 바 되었으니</div>
+        <div class="verse"><span class="verse-num">21</span> 너희는 그를 죽은 자 가운데서 살리시고 영광을 주신 하나님을 그리스도로 말미암아 믿는 자니 너희 믿음과 소망이 하나님께 있게 하셨느니라</div>
+        <div class="verse"><span class="verse-num">22</span> 너희가 진리를 순종함으로 너희 영혼을 깨끗하게 하여 거짓이 없이 형제를 사랑하기에 이르렀으니 마음으로 뜨겁게 서로 사랑하라</div>
+        <div class="verse"><span class="verse-num">23</span> 너희가 거듭난 것은 썩어질 씨로 된 것이 아니요 썩지 아니할 씨로 된 것이니 살아 있고 항상 있는 하나님의 말씀으로 되었느니라</div>
+        <div class="verse"><span class="verse-num">24</span> 그러므로 모든 육체는 풀과 같고 그 모든 영광은 풀의 꽃과 같으니 풀은 마르고 꽃은 떨어지되</div>
+        <div class="verse"><span class="verse-num">25</span> 오직 주의 말씀은 세세토록 있도다 하였으니 너희에게 전한 복음이 곧 이 말씀이니라</div>
+
+        <!-- 베드로전서 2장 -->
+        <div class="chapter-title">베드로전서 2장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그러므로 모든 악독과 모든 기만과 외식과 시기와 모든 비방하는 말을 버리고</div>
+        <div class="verse"><span class="verse-num">2</span> 갓난 아기들 같이 순전하고 신령한 젖을 사모하라 이는 그로 말미암아 너희로 구원에 이르도록 자라게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희가 주의 인자하심을 맛보았으면 그리하라</div>
+        <div class="verse"><span class="verse-num">4</span> 사람에게는 버린 바가 되었으나 하나님께는 택하심을 입은 보배로운 산 돌이신 예수께 나아가</div>
+        <div class="verse"><span class="verse-num">5</span> 너희도 산 돌 같이 신령한 집으로 세워지고 예수 그리스도로 말미암아 하나님이 기쁘게 받으실 신령한 제사를 드릴 거룩한 제사장이 될지니라</div>
+        <div class="verse"><span class="verse-num">6</span> 성경에 기록되었으되 보라 내가 택한 보배로운 모퉁잇돌을 시온에 두노니 그를 믿는 자는 부끄러움을 당하지 아니하리라 하였으니</div>
+        <div class="verse"><span class="verse-num">7</span> 그러므로 믿는 너희에게는 보배이나 믿지 아니하는 자에게는 건축자들이 버린 그 돌이 모퉁이의 머릿돌이 되고</div>
+        <div class="verse"><span class="verse-num">8</span> 또한 부딪치는 돌과 걸려 넘어지게 하는 바위가 되었다 하였느니라 그들이 말씀을 순종하지 아니하므로 넘어지나니 이는 그들을 이렇게 정하신 것이라</div>
+        <div class="verse"><span class="verse-num">9</span> 그러나 너희는 택하신 족속이요 왕 같은 제사장들이요 거룩한 나라요 그의 소유가 된 백성이니 이는 너희를 어두운 데서 불러 내어 그의 기이한 빛에 들어가게 하신 이의 아름다운 덕을 선포하게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">10</span> 너희가 전에는 백성이 아니더니 이제는 하나님의 백성이요 전에는 긍휼을 얻지 못하였더니 이제는 긍휼을 얻은 자니라</div>
+        <div class="verse"><span class="verse-num">11</span> 사랑하는 자들아 거류민과 나그네 같은 너희를 권하노니 영혼을 거슬러 싸우는 육체의 정욕을 제어하라</div>
+        <div class="verse"><span class="verse-num">12</span> 너희가 이방인 중에서 행실을 선하게 가져 너희를 악행한다고 비방하는 자들로 하여금 너희 선한 일을 보고 오시는 날에 하나님께 영광을 돌리게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">13</span> 인간의 모든 제도를 주를 위하여 순종하되 혹은 위에 있는 왕이나</div>
+        <div class="verse"><span class="verse-num">14</span> 혹은 그가 악행하는 자를 징벌하고 선행하는 자를 포상하기 위하여 보낸 총독에게 하라</div>
+        <div class="verse"><span class="verse-num">15</span> 곧 선행으로 어리석은 사람들의 무식한 말을 막으시는 것이라</div>
+        <div class="verse"><span class="verse-num">16</span> 너희는 자유가 있으나 그 자유로 악을 가리는 데 쓰지 말고 오직 하나님의 종과 같이 하라</div>
+        <div class="verse"><span class="verse-num">17</span> 뭇 사람을 공경하며 형제를 사랑하며 하나님을 두려워하며 왕을 존대하라</div>
+        <div class="verse"><span class="verse-num">18</span> 사환들아 범사에 두려워함으로 주인들에게 순종하되 선하고 관용하는 자들에게만 아니라 또한 까다로운 자들에게도 그리하라</div>
+        <div class="verse"><span class="verse-num">19</span> 부당하게 고난을 받아도 하나님을 생각함으로 슬픔을 참으면 이는 아름다우나</div>
+        <div class="verse"><span class="verse-num">20</span> 죄가 있어 매를 맞고 참으면 무슨 칭찬이 있으리요 그러나 선을 행함으로 고난을 받고 참으면 이는 하나님 앞에 아름다우니라</div>
+        <div class="verse"><span class="verse-num">21</span> 이를 위하여 너희가 부르심을 받았으니 그리스도도 너희를 위하여 고난을 받으사 너희에게 본을 끼쳐 그 자취를 따라오게 하려 하셨느니라</div>
+        <div class="verse"><span class="verse-num">22</span> 그는 죄를 범하지 아니하시고 그 입에 거짓도 없으시며</div>
+        <div class="verse"><span class="verse-num">23</span> 욕을 당하시되 맞대어 욕하지 아니하시고 고난을 당하시되 위협하지 아니하시고 오직 공의로 심판하시는 이에게 부탁하시며</div>
+        <div class="verse"><span class="verse-num">24</span> 친히 나무에 달려 그 몸으로 우리 죄를 담당하셨으니 이는 우리로 죄에 대하여 죽고 의에 대하여 살게 하려 하심이라 그가 채찍에 맞음으로 너희는 나음을 얻었나니</div>
+        <div class="verse"><span class="verse-num">25</span> 너희가 전에는 양과 같이 길을 잃었더니 이제는 너희 영혼의 목자와 감독 되신 이에게 돌아왔느니라</div>
+
+        <!-- 베드로전서 3장 -->
+        <div class="chapter-title">베드로전서 3장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아내들아 이와 같이 자기 남편에게 순종하라 이는 혹 말씀을 순종하지 않는 자라도 말로 말미암지 않고 그 아내의 행실로 말미암아 구원을 받게 하려 함이니</div>
+        <div class="verse"><span class="verse-num">2</span> 너희의 두려워하며 정결한 행실을 봄이라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희의 단장은 머리를 꾸미고 금을 차고 아름다운 옷을 입는 외모로 하지 말고</div>
+        <div class="verse"><span class="verse-num">4</span> 오직 마음에 숨은 사람을 온유하고 안정한 심령의 썩지 아니할 것으로 하라 이는 하나님 앞에 값진 것이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 전에 하나님께 소망을 두었던 거룩한 부녀들도 이와 같이 자기 남편에게 순종함으로 자기를 단장하였나니</div>
+        <div class="verse"><span class="verse-num">6</span> 사라가 아브라함을 주라 칭하여 순종한 것 같이 너희는 선을 행하고 아무 두려운 일에도 놀라지 아니하면 그의 딸이 된 것이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 남편들아 이와 같이 지식을 따라 너희 아내와 동거하고 그를 더 연약한 그릇이요 또 생명의 은혜를 함께 이어받을 자로 알아 귀히 여기라 이는 너희 기도가 막히지 아니하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">8</span> 마지막으로 말하노니 너희가 다 마음을 같이하여 동정하며 형제를 사랑하며 불쌍히 여기며 겸손하며</div>
+        <div class="verse"><span class="verse-num">9</span> 악을 악으로, 욕을 욕으로 갚지 말고 도리어 복을 빌라 이를 위하여 너희가 부르심을 받았으니 이는 복을 이어받게 하려 하심이라</div>
+        <div class="verse"><span class="verse-num">10</span> 그러므로 생명을 사랑하고 좋은 날 보기를 원하는 자는 혀를 금하여 악한 말을 그치며 그 입술로 거짓을 말하지 말고</div>
+        <div class="verse"><span class="verse-num">11</span> 악에서 떠나 선을 행하고 화평을 구하며 그것을 따르라</div>
+        <div class="verse"><span class="verse-num">12</span> 주의 눈은 의인을 향하시고 그의 귀는 의인의 간구에 기울이시되 주의 얼굴은 악행하는 자들을 대하시느니라 하였느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 또 너희가 열심으로 선을 행하면 누가 너희를 해하리요</div>
+        <div class="verse"><span class="verse-num">14</span> 그러나 의를 위하여 고난을 받으면 복 있는 자니 그들이 두려워하는 것을 두려워하지 말며 근심하지 말고</div>
+        <div class="verse"><span class="verse-num">15</span> 너희 마음에 그리스도를 주로 삼아 거룩하게하고 너희 속에 있는 소망에 관한 이유를 묻는 자에게는 대답할 것을 항상 준비하되 온유와 두려움으로 하고</div>
+        <div class="verse"><span class="verse-num">16</span> 선한 양심을 가지라 이는 그리스도 안에 있는 너희의 선행을 욕하는 자들로 그 비방하는 일에 부끄러움을 당하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">17</span> 선을 행함으로 고난 받는 것이 하나님의 뜻일진대 악을 행함으로 고난 받는 것보다 나으니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그리스도께서도 단번에 죄를 위하여 죽으사 의인으로서 불의한 자를 대신하셨으니 이는 우리를 하나님 앞으로 인도하려 하심이라 육체로는 죽임을 당하시고 영으로는 살리심을 받으셨으니</div>
+        <div class="verse"><span class="verse-num">19</span> 그가 또한 영으로 가서 옥에 있는 영들에게 선포하시니라</div>
+        <div class="verse"><span class="verse-num">20</span> 그들은 전에 노아의 날 방주를 준비할 동안 하나님이 오래 참고 기다리실 때에 복종하지 아니하던 자들이라 방주에서 물로 말미암아 구원을 얻은 자가 몇 명뿐이니 겨우 여덟 명이라</div>
+        <div class="verse"><span class="verse-num">21</span> 물은 예수 그리스도께서 부활하심으로 말미암아 이제 너희를 구원하는 표니 곧 세례라 이는 육체의 더러운 것을 제하여 버림이 아니요 하나님을 향한 선한 양심의 간구니라</div>
+        <div class="verse"><span class="verse-num">22</span> 그는 하늘에 오르사 하나님 우편에 계시니 천사들과 권세들과 능력들이 그에게 복종하느니라</div>
+
+        <!-- 베드로전서 4장 -->
+        <div class="chapter-title">베드로전서 4장 (1~19절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그리스도께서 이미 육체의 고난을 받으셨으니 너희도 같은 마음으로 갑옷을 삼으라 이는 육체의 고난을 받은 자는 죄를 그쳤음이니</div>
+        <div class="verse"><span class="verse-num">2</span> 그 후로는 다시 사람의 정욕을 따르지 않고 하나님의 뜻을 따라 육체의 남은 때를 살게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희가 음란과 정욕과 술취함과 방탕과 향락과 무법한 우상 숭배를 하여 이방인의 뜻을 따라 행한 것은 지나간 때로 족하도다</div>
+        <div class="verse"><span class="verse-num">4</span> 이러므로 너희가 그들과 함께 그런 극한 방탕에 달음질하지 아니하는 것을 그들이 이상히 여겨 비방하나</div>
+        <div class="verse"><span class="verse-num">5</span> 그들이 산 자와 죽은 자를 심판하기로 예비하신 이에게 사실대로 고하리라</div>
+        <div class="verse"><span class="verse-num">6</span> 이를 위하여 죽은 자들에게도 복음이 전파되었으니 이는 육체로는 사람으로 심판을 받으나 영으로는 하나님을 따라 살게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">7</span> 만물의 마지막이 가까이 왔으니 그러므로 너희는 정신을 차리고 근신하여 기도하라</div>
+        <div class="verse"><span class="verse-num">8</span> 무엇보다도 뜨겁게 서로 사랑할지니 사랑은 허다한 죄를 덮느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 서로 대접하기를 원망 없이 하고</div>
+        <div class="verse"><span class="verse-num">10</span> 각각 은사를 받은 대로 하나님의 여러 가지 은혜를 맡은 선한 청지기 같이 서로 봉사하라</div>
+        <div class="verse"><span class="verse-num">11</span> 만일 누가 말하려면 하나님의 말씀을 하는 것 같이 하고 누가 봉사하려면 하나님이 공급하시는 힘으로 하는 것 같이 하라 이는 범사에 예수 그리스도로 말미암아 하나님이 영광을 받으시게 하려 함이니 그에게 영광과 권능이 세세에 무궁하도록 있느니라 아멘</div>
+        <div class="verse"><span class="verse-num">12</span> 사랑하는 자들아 너희를 연단하려고 오는 불 시험을 이상한 일 당하는 것 같이 이상히 여기지 말고</div>
+        <div class="verse"><span class="verse-num">13</span> 오히려 너희가 그리스도의 고난에 참여하는 것으로 즐거워하라 이는 그의 영광을 나타내실 때에 너희로 즐거워하고 기뻐하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">14</span> 너희가 그리스도의 이름으로 치욕을 당하면 복 있는 자로다 영광의 영 곧 하나님의 영이 너희 위에 계심이라</div>
+        <div class="verse"><span class="verse-num">15</span> 너희 중에 누구든지 살인이나 도둑질이나 악행이나 남의 일을 간섭하는 자로 고난을 받지 말려니와</div>
+        <div class="verse"><span class="verse-num">16</span> 만일 그리스도인으로 고난을 받으면 부끄러워하지 말고 도리어 그 이름으로 하나님께 영광을 돌리라</div>
+        <div class="verse"><span class="verse-num">17</span> 하나님의 집에서 심판을 시작할 때가 되었나니 만일 우리에게 먼저 하면 하나님의 복음을 순종하지 아니하는 자들의 그 마지막은 어떠하며</div>
+        <div class="verse"><span class="verse-num">18</span> 또 의인이 겨우 구원을 받으면 경건하지 아니한 자와 죄인은 어디에 서리요</div>
+        <div class="verse"><span class="verse-num">19</span> 그러므로 하나님의 뜻대로 고난을 받는 자들은 또한 선을 행하는 가운데에 그 영혼을 미쁘신 창조주께 의탁할지어다</div>
+
+        <!-- 베드로전서 5장 -->
+        <div class="chapter-title">베드로전서 5장 (1~14절)</div>
+        <div class="verse"><span class="verse-num">1</span> 너희 중 장로들에게 권하노니 나는 함께 장로 된 자요 그리스도의 고난의 증인이요 나타날 영광에 참여할 자니라</div>
+        <div class="verse"><span class="verse-num">2</span> 너희 중에 있는 하나님의 양 무리를 치되 억지로 하지 말고 하나님의 뜻을 따라 자원함으로 하며 더러운 이득을 위하여 하지 말고 기꺼이 하며</div>
+        <div class="verse"><span class="verse-num">3</span> 맡은 자들에게 주장하는 자세를 하지 말고 양 무리의 본이 되라</div>
+        <div class="verse"><span class="verse-num">4</span> 그리하면 목자장이 나타나실 때에 시들지 아니하는 영광의 관을 얻으리라</div>
+        <div class="verse"><span class="verse-num">5</span> 젊은 자들아 이와 같이 장로들에게 순종하고 다 서로 겸손으로 허리를 동이라 하나님은 교만한 자를 대적하시되 겸손한 자들에게는 은혜를 주시느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 그러므로 하나님의 능하신 손 아래에서 겸손하라 때가 되면 너희를 높이시리라</div>
+        <div class="verse"><span class="verse-num">7</span> 너희 염려를 다 주께 맡기라 이는 그가 너희를 돌보심이라</div>
+        <div class="verse"><span class="verse-num">8</span> 근신하라 깨어라 너희 대적 마귀가 우는 사자 같이 두루 다니며 삼킬 자를 찾나니</div>
+        <div class="verse"><span class="verse-num">9</span> 너희는 믿음을 굳건하게 하여 그를 대적하라 이는 세상에 있는 너희 형제들도 동일한 고난을 당하는 줄을 앎이라</div>
+        <div class="verse"><span class="verse-num">10</span> 모든 은혜의 하나님 곧 그리스도 안에서 너희를 부르사 자기의 영원한 영광에 들어가게 하신 이가 잠깐 고난을 당한 너희를 친히 온전하게 하시며 굳건하게 하시며 강하게 하시며 터를 견고하게 하시리라</div>
+        <div class="verse"><span class="verse-num">11</span> 권능이 세세무궁하도록 그에게 있을지어다 아멘</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 신실한 형제로 아는 실루아노로 말미암아 너희에게 간단히 써서 권하고 이것이 하나님의 참된 은혜임을 증언하노니 너희는 이 은혜에 굳게 서라</div>
+        <div class="verse"><span class="verse-num">13</span> 택하심을 함께 받은 바벨론에 있는 교회가 너희에게 문안하고 내 아들 마가도 그리하느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 너희는 사랑의 입맞춤으로 서로 문안하라 그리스도 안에 있는 너희 모든 이에게 평강이 있을지어다</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
