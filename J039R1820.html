@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 039</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 039</h1>
+        <p class="sub-title">찬송가 423장 먹보다도 더 검은</p>
+        <p class="sub-title">레위기 18~20장 — 밭모퉁이 법 / 레위기, 하나님의 러브레터</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 423장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/10czWLdFx43pDOVuy-IJYWFGuROkutXB9" alt="찬송가 423장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 레위기 18장~20장<br>'밭모퉁이 법 / 레위기, 하나님의 러브레터'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 풀 한 포기 나지 않는 광야에서 미리 가나안 그들의 밭에서 지켜야 할 법을 주십니다.</span>
+            현재 이스라엘 백성들은 1년 가까이 <strong>농사 지을 수 없는 시내 광야 한가운데</strong>서 살고 있습니다. 그럼에도 불구하고 하나님께서는 금송아지 사건 후 이스라엘 백성들에게 <strong>앞으로 가나안 그들의 밭에서 지켜야 할 법을 미리 주십니다.</strong>
+            <div class="quote">
+                <strong>"네 토지 소산에 처음 익은 것을 가져다가 네 하나님 여호와의 전에 드릴지며"</strong> (출 34:26)
+            </div>
+            이는 하나님께서 당신의 소유 이스라엘 백성들을 <strong>반드시 젖과 꿀이 흐르는 가나안 땅으로 인도해 주시겠다는 약속의 말씀</strong>이었습니다.
+            <div class="quote">
+                <strong>"너희가 너희의 땅에서 곡식을 거둘 때 너는 밭 모퉁이까지 다 거두지 말고, 네 떨어진 이삭도 줍지 말며, 네 포도원의 열매를 다 따지 말며, 네 포도원에 떨어진 열매도 줍지 말고 가난한 사람과 거류민을 위하여 버려두라. 나는 너희의 하나님 여호와이니라"</strong> (레 19:9~10)
+            </div>
+            출애굽 후 여전히 시내 광야에 머물고 있는 이스라엘 백성들에게 <strong>하나님의 이 말씀은 정말 꿈같은 말씀</strong>이 아닐 수 없습니다. 하나님께서는 풀 한 포기 나지 않는 광야 한가운데에서 앞으로 <strong>가장 품위 있게 살 가나안 땅, 그들의 밭에서 행할 밭모퉁이 법을 주신 것</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 보아스, 제사장 나라 밭모퉁이 법을 지켜 예수님의 족보에 오릅니다.</span>
+            하나님께서 레위기를 통해 주신 밭모퉁이 법을 <strong>베들레헴의 보아스가 그의 밭에서 실천하며 살았습니다.</strong> 룻기에서 보아스는 이방인 룻을 위하여 <strong>네 가지 배려</strong>를 아끼지 않았습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 룻에게 다른 밭으로 가지 말라고 합니다(룻 2:8).<br><br>
+                <strong>둘째,</strong> 자기 밭의 일꾼들에게 룻을 건드리지 말라고 합니다(룻 2:9).<br><br>
+                <strong>셋째,</strong> 룻에게 볶은 곡식을 주어 배불리 먹도록 합니다(룻 2:14).<br><br>
+                <strong>넷째,</strong> 자기 밭의 일꾼들에게 룻을 위하여 곡식 다발에서 조금씩 뽑아 버려서 그에게 줍게 하라고 합니다(룻 2:16).
+            </div>
+            사사 시대, 즉 자기 소견에 옳은 대로 살던 시대에 보아스는 <strong>제사장 나라 법으로 이방인 룻을 제사자의 자리에 세웁니다.</strong> 결국 보아스는 마태복음 1장에 기록된 <strong>예수님의 족보에 그의 이름이 오릅니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 이방인 룻, 이방인 페르시아 아닥사스다 왕이 보아도 제사장 나라의 법은 멋있고 아름다웠습니다.</span>
+            제사장 나라 거룩한 시민인 보아스의 배려를 받은 이방인 룻이 감동했습니다.
+            <div class="quote">
+                <strong>"당신이 이 하녀를 위로하시고 마음을 기쁘게 하는 말씀을 하셨나이다"</strong> (룻 2:13)
+            </div>
+            보아스는 낯선 타국 땅에서 온 이방인 룻과 과부가 되어 고향을 다시 찾은 나오미가 <strong>제사장 나라 법의 혜택을 받으며 살아갈 수 있게 해주었습니다.</strong><br><br>
+            또한 이방인인 페르시아의 아닥사스다 왕이 인정하고 존중한 <strong>제사장 나라의 재판에 관한 법이 레위기에 기록되어 있습니다.</strong>
+            <div class="quote">
+                <strong>"너희는 재판할 때나 길이나 무게나 양을 잴 때 불의를 행하지 말고 공평한 저울과 공평한 추와 공평한 에바와 공평한 힌을 사용하라. 나는 너희를 인도하여 애굽 땅에서 나오게 한 너희의 하나님 여호와이니라"</strong> (레 19:35~36)
+            </div>
+            페르시아 아닥사스다 왕은 에스라에게 <strong>"하나님의 율법을 아는 자를 법관과 재판관으로 삼으라"</strong>는 명령을 내리며 이스라엘의 월등한 제사장 나라 법을 인정하고 존중했습니다(스 7:25~26).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 소극적 방어로는 가나안 풍속을 이길 수 없습니다.</span>
+            하나님께서는 이스라엘 백성들이 돌아가서 살게 될 <strong>가나안 땅의 악한 풍속과 문화에 대해 미리 경고의 말씀을 주십니다.</strong>
+            <div class="quote">
+                <strong>"너희 전에 있던 그 땅 주민이 이 모든 가증한 일을 행하였고, 그 땅도 더러워졌느니라. 너희도 더럽히면 그 땅이 너희가 있기 전 주민을 토함같이 너희를 토할까 하노라"</strong> (레 18:27~28)
+            </div>
+            가나안 족속의 우상숭배는 <strong>자신의 자녀를 불살라 몰렉에게 제사할 정도로 악한, 죄악의 절정</strong>이었습니다. 이스라엘 백성들이 시내 광야에서 하나님의 이 경고의 말씀을 들었음에도 이후 이스라엘은 <strong>하나님께서 경고하신 모든 죄를 저지릅니다.</strong> 그래서 그들은 결국 하나님의 징계를 피할 수 없게 됩니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 거룩은 이웃을 향한 구체적이고 적극적인 실천입니다.</span>
+            <strong>하나님의 거룩은 이웃 사랑이며 공의로운 사회를 세우는 법입니다.</strong> 그러므로 레위기는 최고의 시민운동 교재입니다.
+            <div class="quote">
+                <strong>재판에서</strong> — 하나님께서는 이스라엘 백성들에게 재판할 때 한쪽으로 치우치지 말고 <strong>정도를 걸으라</strong>고 말씀하시며 재판의 기준을 정해주십니다(레 19:15).<br><br>
+                <strong>마음에서</strong> — 모든 범죄의 시작은 마음입니다. 마음으로 누구를 미워하지 말아야 합니다. 그러나 잘못은 바로잡고 죄에 대해서는 철저히 해야 합니다.<br>
+                <strong>"너는 네 형제를 마음으로 미워하지 말며 네 이웃을 반드시 견책하라"</strong> (레 19:17)<br><br>
+                <strong>삶 속에서</strong> — 이웃 사랑이 삶 속에 구체적으로 드러나야 합니다.<br>
+                <strong>"네 이웃 사랑하기를 네 자신과 같이 사랑하라. 나는 여호와이니라"</strong> (레 19:18)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 레위기 18~20장 '밭모퉁이 법 / 레위기, 하나님의 러브레터'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 레위기 18장 -->
+        <div class="chapter-title">레위기 18장 (1~30절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 너는 이스라엘 자손에게 말하여 이르라 나는 여호와 너희의 하나님이니라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희는 너희가 거주하던 애굽 땅의 풍속을 따르지 말며 내가 너희를 인도할 가나안 땅의 풍속과 규례도 행하지 말고</div>
+        <div class="verse"><span class="verse-num">4</span> 너희는 내 법도를 따르며 내 규례를 지켜 그대로 행하라 나는 너희의 하나님 여호와이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 너희는 내 규례와 법도를 지키라 사람이 이를 행하면 그로 말미암아 살리라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 각 사람은 자기의 살붙이를 가까이 하여 그의 하체를 범하지 말라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 네 어머니의 하체는 곧 네 아버지의 하체이니 너는 범하지 말라 그는 네 어머니인즉 너는 그의 하체를 범하지 말지니라</div>
+        <div class="verse"><span class="verse-num">8</span> 너는 네 아버지의 아내의 하체를 범하지 말라 이는 네 아버지의 하체니라</div>
+        <div class="verse"><span class="verse-num">9</span> 너는 네 자매 곧 네 아버지의 딸이나 네 어머니의 딸이나 집에서나 다른 곳에서 출생하였음을 막론하고 그들의 하체를 범하지 말지니라</div>
+        <div class="verse"><span class="verse-num">10</span> 네 손녀나 네 외손녀의 하체를 범하지 말라 이는 네 하체니라</div>
+        <div class="verse"><span class="verse-num">11</span> 네 아버지의 아내가 네 아버지에게 낳은 딸은 네 누이니 너는 그의 하체를 범하지 말지니라</div>
+        <div class="verse"><span class="verse-num">12</span> 너는 네 고모의 하체를 범하지 말라 그는 네 아버지의 살붙이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 너는 네 이모의 하체를 범하지 말라 그는 네 어머니의 살붙이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 너는 네 아버지 형제의 아내를 가까이 하여 그의 하체를 범하지 말라 그는 네 숙모니라</div>
+        <div class="verse"><span class="verse-num">15</span> 너는 네 며느리의 하체를 범하지 말라 그는 네 아들의 아내이니 그의 하체를 범하지 말지니라</div>
+        <div class="verse"><span class="verse-num">16</span> 너는 네 형제의 아내의 하체를 범하지 말라 이는 네 형제의 하체니라</div>
+        <div class="verse"><span class="verse-num">17</span> 너는 여인과 그 여인의 딸의 하체를 아울러 범하지 말며 또 그 여인의 손녀나 외손녀를 아울러 데려다가 그의 하체를 범하지 말라 그들은 그의 살붙이이니 이는 악행이니라</div>
+        <div class="verse"><span class="verse-num">18</span> 너는 아내가 생존할 동안에 그의 자매를 데려다가 그의 하체를 범하여 그로 질투하게 하지 말지니라</div>
+        <div class="verse"><span class="verse-num">19</span> 너는 여인이 월경으로 불결한 동안에 그에게 가까이 하여 그의 하체를 범하지 말지니라</div>
+        <div class="verse"><span class="verse-num">20</span> 너는 네 이웃의 아내와 동침하여 설정하므로 그 여자와 함께 자기를 더럽히지 말지니라</div>
+        <div class="verse"><span class="verse-num">21</span> 너는 결단코 자녀를 몰렉에게 주어 불로 통과하게 함으로 네 하나님의 이름을 욕되게 하지 말라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">22</span> 너는 여자와 동침함 같이 남자와 동침하지 말라 이는 가증한 일이니라</div>
+        <div class="verse"><span class="verse-num">23</span> 너는 짐승과 교합하여 자기를 더럽히지 말며 여자는 짐승 앞에 서서 그것과 교접하지 말라 이는 문란한 일이니라</div>
+        <div class="verse"><span class="verse-num">24</span> 너희는 이 모든 일로 스스로 더럽히지 말라 내가 너희 앞에서 쫓아내는 족속들이 이 모든 일로 말미암아 더러워졌고</div>
+        <div class="verse"><span class="verse-num">25</span> 그 땅도 더러워졌으므로 내가 그 악으로 말미암아 벌하고 그 땅도 스스로 그 주민을 토하여 내느니라</div>
+        <div class="verse"><span class="verse-num">26</span> 그러므로 너희 곧 너희의 동족이나 혹은 너희 중에 거류하는 거류민이나 내 규례와 내 법도를 지키고 이런 가증한 일의 하나라도 행하지 말라</div>
+        <div class="verse"><span class="verse-num">27</span> 너희 전에 있던 그 땅 주민이 이 모든 가증한 일을 행하였고 그 땅도 더러워졌느니라</div>
+        <div class="verse"><span class="verse-num">28</span> 너희도 더럽히면 그 땅이 너희가 있기 전 주민을 토함 같이 너희를 토할까 하노라</div>
+        <div class="verse"><span class="verse-num">29</span> 이 가증한 모든 일을 행하는 자는 그 백성 중에서 끊어지리라</div>
+        <div class="verse"><span class="verse-num">30</span> 그러므로 너희는 내 명령을 지키고 너희가 들어가기 전에 행하던 가증한 풍속을 하나라도 따름으로 스스로 더럽히지 말라 나는 너희의 하나님 여호와이니라</div>
+
+        <!-- 레위기 19장 -->
+        <div class="chapter-title">레위기 19장 (1~37절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 너는 이스라엘 자손의 온 회중에게 말하여 이르라 너희는 거룩하라 이는 나 여호와 너희 하나님이 거룩함이니라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희 각 사람은 부모를 경외하고 나의 안식일을 지키라 나는 너희의 하나님 여호와이니라</div>
+        <div class="verse"><span class="verse-num">4</span> 너희는 헛된 것들에게로 향하지 말며 너희를 위하여 신상들을 부어 만들지 말라 나는 너희의 하나님 여호와이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 너희는 화목제물을 여호와께 드릴 때에 기쁘게 받으시도록 드리고</div>
+        <div class="verse"><span class="verse-num">6</span> 그 제물은 드리는 날과 이튿날에 먹고 셋째 날까지 남았거든 불사르라</div>
+        <div class="verse"><span class="verse-num">7</span> 셋째 날에 조금이라도 먹으면 가증한 것이 되어 기쁘게 받으심이 되지 못하고</div>
+        <div class="verse"><span class="verse-num">8</span> 그것을 먹는 자는 여호와의 성물을 더럽힘으로 말미암아 죄를 담당하리니 그가 그의 백성 중에서 끊어지리라</div>
+        <div class="verse"><span class="verse-num">9</span> 너희가 너희의 땅에서 곡식을 거둘 때에 너는 밭 모퉁이까지 다 거두지 말고 네 떨어진 이삭도 줍지 말며</div>
+        <div class="verse"><span class="verse-num">10</span> 네 포도원의 열매를 다 따지 말며 네 포도원에 떨어진 열매도 줍지 말고 가난한 사람과 거류민을 위하여 버려두라 나는 너희의 하나님 여호와이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 너희는 도둑질하지 말며 속이지 말며 서로 거짓말하지 말며</div>
+        <div class="verse"><span class="verse-num">12</span> 너희는 내 이름으로 거짓 맹세함으로 네 하나님의 이름을 욕되게 하지 말라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 너는 네 이웃을 억압하지 말며 착취하지 말며 품꾼의 삯을 아침까지 밤새도록 네게 두지 말며</div>
+        <div class="verse"><span class="verse-num">14</span> 너는 귀먹은 자를 저주하지 말며 맹인 앞에 장애물을 놓지 말고 네 하나님을 경외하라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 너희는 재판할 때에 불의를 행하지 말며 가난한 자의 편을 들지 말며 세력 있는 자라고 두둔하지 말고 공의로 사람을 재판할지며</div>
+        <div class="verse"><span class="verse-num">16</span> 너는 네 백성 중에 돌아다니며 사람을 비방하지 말며 네 이웃의 피를 흘려 이익을 도모하지 말라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">17</span> 너는 네 형제를 마음으로 미워하지 말며 네 이웃을 반드시 견책하라 그러면 네가 그에 대하여 죄를 담당하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">18</span> 원수를 갚지 말며 동포를 원망하지 말며 네 이웃 사랑하기를 네 자신과 같이 사랑하라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">19</span> 너희는 내 규례를 지킬지어다 네 가축을 다른 종류와 교미시키지 말며 네 밭에 두 종자를 섞어 뿌리지 말며 두 재료로 직조한 옷을 입지 말지며</div>
+        <div class="verse"><span class="verse-num">20</span> 만일 어떤 사람이 다른 사람과 정혼한 여종 곧 아직 속량되거나 해방되지 못한 여인과 동침하여 설정하면 그것은 책망을 받을 일이니라 그러나 그들은 죽임을 당하지는 아니하리니 그 여인이 해방되지 못하였기 때문이니라</div>
+        <div class="verse"><span class="verse-num">21</span> 그 남자는 그 속건제물 곧 속건제 숫양을 회막 문 여호와께로 끌고 올 것이요</div>
+        <div class="verse"><span class="verse-num">22</span> 제사장은 그가 범한 죄를 위하여 그 속건제의 숫양으로 여호와 앞에 속죄할 것이요 그리하면 그가 범한 죄를 사함 받으리라</div>
+        <div class="verse"><span class="verse-num">23</span> 너희가 그 땅에 들어가 각종 과목을 심거든 그 열매는 아직 할례 받지 못한 것으로 여기되 곧 삼 년 동안 너희는 그것을 할례 받지 못한 것으로 여겨 먹지 말 것이요</div>
+        <div class="verse"><span class="verse-num">24</span> 넷째 해에는 그 모든 과실이 거룩하니 여호와께 드려 찬송할 것이며</div>
+        <div class="verse"><span class="verse-num">25</span> 다섯째 해에는 그 열매를 먹을지니 그리하면 너희에게 그 소산이 풍성하리라 나는 너희의 하나님 여호와이니라</div>
+        <div class="verse"><span class="verse-num">26</span> 너희는 무엇이든지 피째 먹지 말며 점을 치지 말며 술법을 행하지 말며</div>
+        <div class="verse"><span class="verse-num">27</span> 머리 가를 둥글게 깎지 말며 수염 끝을 손상하지 말며</div>
+        <div class="verse"><span class="verse-num">28</span> 죽은 자 때문에 너희의 살에 문신을 하지 말며 무늬를 놓지 말라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">29</span> 네 딸을 더럽혀 창녀가 되게 하지 말라 음행이 전국에 퍼져 죄악이 가득할까 하노라</div>
+        <div class="verse"><span class="verse-num">30</span> 내 안식일을 지키고 내 성소를 귀히 여기라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">31</span> 너희는 신접한 자와 박수를 믿지 말며 그들을 추종하여 스스로 더럽히지 말라 나는 너희 하나님 여호와이니라</div>
+        <div class="verse"><span class="verse-num">32</span> 너는 센 머리 앞에서 일어서고 노인의 얼굴을 공경하며 네 하나님을 경외하라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">33</span> 거류민이 너희의 땅에 거류하여 함께 있거든 너희는 그를 학대하지 말고</div>
+        <div class="verse"><span class="verse-num">34</span> 너희와 함께 있는 거류민을 너희 중에서 낳은 자 같이 여기며 자기 같이 사랑하라 너희도 애굽 땅에서 거류민이 되었었느니라 나는 너희의 하나님 여호와이니라</div>
+        <div class="verse"><span class="verse-num">35</span> 너희는 재판할 때나 길이나 무게나 양을 잴 때 불의를 행하지 말고</div>
+        <div class="verse"><span class="verse-num">36</span> 공평한 저울과 공평한 추와 공평한 에바와 공평한 힌을 사용하라 나는 너희를 인도하여 애굽 땅에서 나오게 한 너희의 하나님 여호와이니라</div>
+        <div class="verse"><span class="verse-num">37</span> 너희는 내 모든 규례와 내 모든 법도를 지켜 행하라 나는 여호와이니라</div>
+
+        <!-- 레위기 20장 -->
+        <div class="chapter-title">레위기 20장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 너는 이스라엘 자손에게 또 이르라 그가 이스라엘 자손이든지 이스라엘에 거류하는 거류민이든지 그의 자식을 몰렉에게 주면 반드시 죽이되 그 지방 사람이 돌로 칠 것이요</div>
+        <div class="verse"><span class="verse-num">3</span> 나도 그 사람에게 진노하여 그를 그의 백성 중에서 끊으리니 이는 그가 그의 자식을 몰렉에게 주어서 내 성소를 더럽히고 내 성호를 욕되게 하였음이라</div>
+        <div class="verse"><span class="verse-num">4</span> 그가 그의 자식을 몰렉에게 주는 것을 그 지방 사람이 못 본 체하고 그를 죽이지 아니하면</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 그 사람과 그의 권속에게 진노하여 그와 그를 본받아 몰렉을 음란하게 섬기는 모든 사람을 그들의 백성 중에서 끊으리라</div>
+        <div class="verse"><span class="verse-num">6</span> 접신한 자와 박수무당을 음란하게 따르는 자에게는 내가 진노하여 그를 그의 백성 중에서 끊으리니</div>
+        <div class="verse"><span class="verse-num">7</span> 너희는 스스로 깨끗하게 하여 거룩할지어다 나는 너희의 하나님 여호와이니라</div>
+        <div class="verse"><span class="verse-num">8</span> 너희는 내 규례를 지켜 행하라 나는 너희를 거룩하게 하는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 만일 누구든지 자기의 아버지나 어머니를 저주하는 자는 반드시 죽일지니 그가 자기의 아버지나 어머니를 저주하였은즉 그의 피가 자기에게로 돌아가리라</div>
+        <div class="verse"><span class="verse-num">10</span> 누구든지 남의 아내와 간음하는 자 곧 그의 이웃의 아내와 간음하는 자는 그 간부와 음부를 반드시 죽일지니라</div>
+        <div class="verse"><span class="verse-num">11</span> 누구든지 그의 아버지의 아내와 동침하는 자는 그의 아버지의 하체를 범하였은즉 둘 다 반드시 죽일지니 그들의 피가 자기들에게로 돌아가리라</div>
+        <div class="verse"><span class="verse-num">12</span> 누구든지 그의 며느리와 동침하거든 둘 다 반드시 죽일지니 그들이 가증한 일을 행하였음이라 그들의 피가 자기들에게로 돌아가리라</div>
+        <div class="verse"><span class="verse-num">13</span> 누구든지 여인과 동침하듯 남자와 동침하면 둘 다 가증한 일을 행함인즉 반드시 죽일지니 자기의 피가 자기에게로 돌아가리라</div>
+        <div class="verse"><span class="verse-num">14</span> 누구든지 아내와 자기의 장모를 함께 데리고 살면 악행인즉 그와 그들을 함께 불사를지니 이는 너희 중에 악행이 없게 하려 함이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 남자가 짐승과 교합하면 반드시 죽이고 너희는 그 짐승도 죽일 것이며</div>
+        <div class="verse"><span class="verse-num">16</span> 여자가 짐승에게 가까이 하여 교합하면 너는 여자와 짐승을 죽이되 그들을 반드시 죽일지니 그들의 피가 자기들에게로 돌아가리라</div>
+        <div class="verse"><span class="verse-num">17</span> 누구든지 그의 자매 곧 그의 아버지의 딸이나 그의 어머니의 딸을 데려다가 그 여자의 하체를 보고 여자는 그 남자의 하체를 보면 부끄러운 일이라 그들의 민족 앞에서 그들이 끊어질지니 그가 자기의 자매의 하체를 범하였은즉 그가 그의 죄를 담당하리라</div>
+        <div class="verse"><span class="verse-num">18</span> 누구든지 월경 중의 여인과 동침하여 그의 하체를 범하면 남자는 그 여인의 근원을 드러냈고 여인은 자기의 피 근원을 드러내었음인즉 둘 다 백성 중에서 끊어지리라</div>
+        <div class="verse"><span class="verse-num">19</span> 네 이모나 고모의 하체를 범하지 말지니 이는 살붙이의 하체인즉 그들이 그들의 죄를 담당하리라</div>
+        <div class="verse"><span class="verse-num">20</span> 누구든지 그의 숙모와 동침하면 그의 숙부의 하체를 범함이니 그들은 그들의 죄를 담당하여 자식이 없이 죽으리라</div>
+        <div class="verse"><span class="verse-num">21</span> 누구든지 그의 형제의 아내를 데리고 살면 더러운 일이라 그가 그의 형제의 하체를 범함이니 그들에게 자식이 없으리라</div>
+        <div class="verse"><span class="verse-num">22</span> 너희는 나의 모든 규례와 법도를 지켜 행하라 그리하여야 내가 너희를 인도하여 거주하게 하는 땅이 너희를 토하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">23</span> 너희는 내가 너희 앞에서 쫓아내는 족속의 풍속을 따르지 말라 그들이 이 모든 일을 행하므로 내가 그들을 가증히 여기노라</div>
+        <div class="verse"><span class="verse-num">24</span> 내가 전에 너희에게 이르기를 너희가 그들의 땅을 기업으로 받을 것이라 내가 그 땅 곧 젖과 꿀이 흐르는 땅을 너희에게 주어 유업을 삼게 하리라 하였노라 나는 너희를 만민 중에서 구별한 너희의 하나님 여호와이니라</div>
+        <div class="verse"><span class="verse-num">25</span> 너희는 짐승이 정하고 부정함과 새가 정하고 부정함을 구별하고 내가 너희를 위하여 부정한 것으로 구별한 짐승이나 새나 땅에 기는 것들로 너희의 몸을 더럽히지 말라</div>
+        <div class="verse"><span class="verse-num">26</span> 너희는 나에게 거룩할지어다 이는 나 여호와가 거룩하고 내가 또 너희를 나의 소유로 삼으려고 너희를 만민 중에서 구별하였음이니라</div>
+        <div class="verse"><span class="verse-num">27</span> 남자나 여자가 접신하거나 박수무당이 되거든 반드시 죽일지니 곧 돌로 그를 치라 그들의 피가 자기들에게로 돌아가리라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

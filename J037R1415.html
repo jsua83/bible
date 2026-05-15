@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 037</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 037</h1>
+        <p class="sub-title">찬송가 302장 내 주 하나님 넓고 큰 은혜는</p>
+        <p class="sub-title">레위기 14~15장 — 힘이 미치지 못하면</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 302장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/13OTaZglaRnxxifeF-GnqDK9G3CXDCBkt" alt="찬송가 302장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 레위기 14장~15장<br>'힘이 미치지 못하면'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 예수님, 제사장 나라의 나병 환자 법을 지키셨습니다.</span>
+            구약의 레위기 14장은 <strong>신약의 마태복음 8장으로 이어집니다.</strong> 레위기 14장은 나병 환자가 완치되었을 때 그를 다시 사회로 복귀하게 하는 <strong>정결 예식의 장</strong>입니다.<br><br>
+            예수님께서는 공생애 3년 동안 수많은 환자를 고쳐주셨습니다. 그들에게 늘 <strong>"아무에게도 말하지 말라"</strong>라고 말씀하셨습니다. 그런데 나병 환자를 고쳐주셨을 때에는 사람들에게는 말하지 말되 <strong>반드시 제사장에게로 가서 보이라</strong>고 말씀하셨습니다.
+            <div class="quote">
+                <strong>"예수께서 손을 내밀어 그에게 대시며 이르시되 내가 원하노니 깨끗함을 받으라 하시니 즉시 그의 나병이 깨끗하여진지라. 예수께서 이르시되 삼가 아무에게도 이르지 말고 다만 가서 제사장에게 네 몸을 보이고 모세가 명한 예물을 드려 그들에게 입증하라 하시니라"</strong> (마 8:3~4)
+            </div>
+            <div class="quote">
+                <strong>이렇게 예수님께서는 십자가 위에서 "다 이루었다"라고 말씀하시기 전까지 제사장 나라의 율법과 선지자들의 말을 다 지키시고 완전하게 하셨습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 레위기 14장의 복음을 들은 사람들이 많습니다.</span>
+            나병 환자가 회복되어 다시 이스라엘 공동체로 복귀할 수 있는 절차가 적힌 레위기 14장은 <strong>두말할 나위 없이 귀중한 복음</strong>입니다. 나병 환자들은 영원한 격리의 대상이 아니라 <strong>언제든 깨끗이 회복되는 날 다시금 끌어안아야 할 대상</strong>이기 때문입니다.<br><br>
+            성경에는 고침을 받은 나병 환자들이 많이 등장합니다.
+            <div class="quote">
+                <strong>첫째,</strong> 하나님께서는 모세에게 나병을 경험하게 하셨습니다(출 4:6~7).<br>
+                <strong>둘째,</strong> 모세의 기도를 통해 나병을 고침 받은 미리암입니다(민 12:10~13).<br>
+                <strong>셋째,</strong> 엘리사를 통해 고침 받은 아람의 나아만 장군입니다(왕하 5:14).<br>
+                <strong>넷째,</strong> 예수님께서 고쳐주신 한 나병 환자입니다(마 8:3).<br>
+                <strong>다섯째,</strong> 예수님께서 고쳐주신 10명의 나병 환자입니다(눅 17:12~14).
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : '힘이 미치지 못하면', 이 짧은 구절 안에 하나님의 사랑이 흠뻑 묻어납니다.</span>
+            하나님께서는 사회적 약자들이 공동체로 복귀하는 길을 가로막는 <strong>어떠한 장애물도 없게 해 주십니다.</strong> 하나님께 제사를 드리고는 싶은데 예물을 드릴 힘이 없는 사람들이 있습니다. 그런 경우를 위해 <strong>'그 힘이 미치는 대로'</strong>라는 항목을 명시해 주셨습니다. 그래서 회복된 나병 환자들도 자신의 형편에 맞게 기쁨으로 하나님께 제사를 드릴 수 있었습니다.
+            <div class="quote">
+                <strong>"만일 그가 가난하여 그 힘이 미치지 못하면 그는 흔들어 자기를 속죄할 속건제를 위하여 어린 숫양 한 마리와 소제를 위하여 고운 가루 10분의 1 에바의 기름 섞은 것과 기름 한 록을 취하고, 그의 힘이 미치는 대로 산비둘기 둘이나 집비둘기 새끼 둘을 가져다가 하나는 속죄제물로, 하나는 번제물로 삼아 여덟째 날에 그 결례를 위하여 그것들을 회막 문 여호와 앞 제사장에게로 가져갈 것이요"</strong> (레 14:21~23)
+            </div>
+            <div class="quote">
+                <strong>이렇게 하나님께서는 힘이 미치지 못할 경우에도 제사를 드리며 정결 예식을 치를 수 있도록 꼼꼼하게 정해 주셨습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 누구를 위하여 절차가 이렇게 복잡합니까? 하나님을 위함입니까? 아니면 인간을 위함입니까?</span>
+            레위기 14장에는 <strong>집에 나병 색점이 발생했을 때에 관한 규례들</strong>이 있습니다. 제사장은 이 규례대로 의심이 되는 집을 하나하나 진찰해야 합니다. 모두 <strong>9가지 항목으로 상당히 복잡합니다</strong>(레 14:36~53). 제사장이 그 집을 <strong>정결하다고 선언하면</strong> 그제야 들어가 살 수 있습니다.
+            <div class="quote">
+                <strong>이 모든 것은 하나님을 위함이 아니오, 우리 인간들을 위한 사랑과 배려입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 레위기를 포함한 모든 성경은 언제나 굿 뉴스입니다.</span>
+            사복음서에서 예수님께서 말씀하신 많은 부분이 <strong>레위기와 연결되어 있습니다.</strong> 그러므로 레위기를 통해야 사복음서를 잘 이해할 수 있습니다.
+            <div class="quote">
+                <strong>"내가 율법이나 선지자를 폐하러 온 줄로 생각하지 말라. 폐하러 온 것이 아니오 완전하게 하려 함이라. 진실로 너희에게 이르노니 천지가 없어지기 전에는 율법의 일점일획도 결코 없어지지 아니하고 다 이루리라"</strong> (마 5:17~18)
+            </div>
+            레위기와 마태복음이 이렇게 연결됩니다.
+            <div class="quote">
+                <strong>레위기</strong> "상처에는 상처로, 눈에는 눈으로, 이에는 이로 갚을지라" (레 24:20)<br>
+                <strong>마태복음</strong> "또 눈은 눈으로 이는 이로 갚으라 하였다는 것을 너희가 들었으나 나는 너희에게 이르노니 악한 자를 대적하지 말라" (마 5:38~39)
+            </div>
+            <div class="quote">
+                <strong>레위기</strong> "네 이웃 사랑하기를 네 자신과 같이 사랑하라" (레 19:18)<br>
+                <strong>마태복음</strong> "또 네 이웃을 사랑하고 네 원수를 미워하라 하였다는 것을 너희가 들었으나 나는 너희에게 이르노니 너희 원수를 사랑하며 너희를 박해하는 자를 위하여 기도하라" (마 5:43~44)
+            </div>
+            <div class="quote">
+                <strong>이와 같이 사복음서에서 예수님께서 말씀하신 많은 부분이 레위기와 연결되어 있습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 레위기 14~15장 '힘이 미치지 못하면'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 레위기 14장 -->
+        <div class="chapter-title">레위기 14장 (1~57절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 나병 환자가 정결하게 되는 날의 규례는 이러하니 곧 그 사람을 제사장에게로 데려갈 것이요</div>
+        <div class="verse"><span class="verse-num">3</span> 제사장은 진영에서 나가 진찰할지니 그 환자에게 있던 나병 환부가 나았으면</div>
+        <div class="verse"><span class="verse-num">4</span> 제사장은 그 정결함을 받을 자를 위하여 명령하여 살아 있는 정결한 새 두 마리와 백향목과 홍색 실과 우슬초를 가져오게 하고</div>
+        <div class="verse"><span class="verse-num">5</span> 제사장은 또 명령하여 그 새 하나는 흐르는 물 위 질그릇 안에서 잡게 하고</div>
+        <div class="verse"><span class="verse-num">6</span> 다른 새는 산 채로 가져다가 백향목과 홍색 실과 우슬초와 함께 가져다가 흐르는 물 위에서 잡은 새의 피를 찍어</div>
+        <div class="verse"><span class="verse-num">7</span> 나병에서 정결함을 받을 자에게 일곱 번 뿌려 정하다 하고 그 살아 있는 새는 들에 놓을지며</div>
+        <div class="verse"><span class="verse-num">8</span> 정결함을 받는 자는 그의 옷을 빨고 모든 털을 밀고 물로 몸을 씻을 것이라 그리하면 정하리니 그 후에 진영에 들어올 것이나 자기 장막 밖에 이레를 머물 것이요</div>
+        <div class="verse"><span class="verse-num">9</span> 일곱째 날에 그는 모든 털을 밀되 머리털과 수염과 눈썹을 다 밀고 그의 옷을 빨고 몸을 물에 씻을 것이라 그리하면 정하리라</div>
+        <div class="verse"><span class="verse-num">10</span> 여덟째 날에 그는 흠 없는 어린 숫양 두 마리와 일 년 된 흠 없는 어린 암양 한 마리와 또 고운 가루 십분의 삼 에바에 기름 섞은 소제물과 기름 한 록을 취할 것이요</div>
+        <div class="verse"><span class="verse-num">11</span> 정결하게 하는 제사장은 정결함을 받을 자와 그 물건들을 회막 문 여호와 앞에 두고</div>
+        <div class="verse"><span class="verse-num">12</span> 어린 숫양 한 마리를 가져다가 기름 한 록과 아울러 속건제로 드리되 여호와 앞에 흔들어 요제를 삼고</div>
+        <div class="verse"><span class="verse-num">13</span> 그 어린 숫양은 거룩한 장소 곧 속죄제와 번제물 잡는 곳에서 잡을 것이며 속건제물은 속죄제물과 마찬가지로 제사장에게 돌릴지니 이는 지극히 거룩한 것이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 제사장은 그 속건제물의 피를 취하여 정결함을 받을 자의 오른쪽 귓부리와 오른쪽 엄지 손가락과 오른쪽 엄지 발가락에 바를 것이요</div>
+        <div class="verse"><span class="verse-num">15</span> 제사장은 또 그 한 록의 기름을 취하여 자기 왼쪽 손바닥에 따르고</div>
+        <div class="verse"><span class="verse-num">16</span> 오른쪽 손가락으로 왼쪽 손의 기름을 찍어 그 손가락으로 그것을 여호와 앞에 일곱 번 뿌릴 것이요</div>
+        <div class="verse"><span class="verse-num">17</span> 손에 남은 기름은 제사장이 정결함을 받을 자의 오른쪽 귓부리와 오른쪽 엄지 손가락과 오른쪽 엄지 발가락 곧 속건제물의 피 위에 바를 것이며</div>
+        <div class="verse"><span class="verse-num">18</span> 아직도 그 손에 남은 기름은 제사장이 그 정결함을 받는 자의 머리에 바르고 제사장은 여호와 앞에서 그를 위하여 속죄하고</div>
+        <div class="verse"><span class="verse-num">19</span> 또 제사장은 속죄제를 드려 그 부정함으로 말미암아 정결함을 받을 자를 위하여 속죄하고 그 후에 번제물을 잡을 것이요</div>
+        <div class="verse"><span class="verse-num">20</span> 제사장은 그 번제와 소제를 제단에 드려 그를 위하여 속죄할 것이라 그리하면 그가 정결하리라</div>
+        <div class="verse"><span class="verse-num">21</span> 만일 그가 가난하여 그의 힘이 미치지 못하면 그는 흔들어 자기를 속죄할 속건제를 위하여 어린 숫양 한 마리와 소제를 위하여 고운 가루 십분의 일 에바에 기름 섞은 것과 기름 한 록을 취하고</div>
+        <div class="verse"><span class="verse-num">22</span> 그의 힘이 미치는 대로 산비둘기 둘이나 집비둘기 새끼 둘을 가져다가 하나는 속죄제물로, 하나는 번제물로 삼아</div>
+        <div class="verse"><span class="verse-num">23</span> 여덟째 날에 그 결례를 위하여 그것들을 회막 문 여호와 앞 제사장에게로 가져갈 것이요</div>
+        <div class="verse"><span class="verse-num">24</span> 제사장은 속건제의 어린 양과 기름 한 록을 가져다가 여호와 앞에 흔들어 요제를 삼고</div>
+        <div class="verse"><span class="verse-num">25</span> 속건제의 어린 양을 잡아서 제사장은 그 속건제물의 피를 가져다가 정결함을 받을 자의 오른쪽 귓부리와 오른쪽 엄지 손가락과 오른쪽 엄지 발가락에 바를 것이요</div>
+        <div class="verse"><span class="verse-num">26</span> 제사장은 그 기름을 자기 왼쪽 손바닥에 따르고</div>
+        <div class="verse"><span class="verse-num">27</span> 오른쪽 손가락으로 왼쪽 손의 기름을 조금 찍어 여호와 앞에 일곱 번 뿌릴 것이요</div>
+        <div class="verse"><span class="verse-num">28</span> 그 손의 기름은 제사장이 정결함을 받을 자의 오른쪽 귓부리와 오른쪽 엄지 손가락과 오른쪽 엄지 발가락 곧 속건제물의 피를 바른 곳에 바를 것이며</div>
+        <div class="verse"><span class="verse-num">29</span> 또 그 손에 남은 기름은 제사장이 그 정결함을 받는 자의 머리에 발라 여호와 앞에서 그를 위하여 속죄할 것이며</div>
+        <div class="verse"><span class="verse-num">30</span> 그는 힘이 미치는 대로 산비둘기 한 마리나 집비둘기 새끼 한 마리를 드리되</div>
+        <div class="verse"><span class="verse-num">31</span> 곧 그의 힘이 미치는 대로 한 마리는 속죄제로, 한 마리는 소제와 함께 번제로 드릴 것이요 제사장은 정결함을 받을 자를 위하여 여호와 앞에 속죄할지니</div>
+        <div class="verse"><span class="verse-num">32</span> 나병 환자로서 그 정결예식에 그의 힘이 미치지 못한 자의 규례가 그러하니라</div>
+        <div class="verse"><span class="verse-num">33</span> 여호와께서 모세와 아론에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">34</span> 내가 네게 기업으로 주는 가나안 땅에 너희가 이를 때에 너희 기업의 땅에서 어떤 집에 나병 색점을 발생하게 하거든</div>
+        <div class="verse"><span class="verse-num">35</span> 그 집 주인은 제사장에게 가서 말하여 알리기를 무슨 색점이 집에 생겼다 할 것이요</div>
+        <div class="verse"><span class="verse-num">36</span> 제사장은 그 색점을 살펴보러 가기 전에 그 집안에 있는 모든 것이 부정을 면하게 하기 위하여 그 집을 비우도록 명령한 후에 들어가서 그 집을 볼지니</div>
+        <div class="verse"><span class="verse-num">37</span> 그 색점을 볼 때에 그 집 벽에 푸르거나 붉은 무늬의 색점이 있어 벽보다 우묵하면</div>
+        <div class="verse"><span class="verse-num">38</span> 제사장은 그 집 문으로 나와 그 집을 이레 동안 폐쇄하였다가</div>
+        <div class="verse"><span class="verse-num">39</span> 이레 만에 또 가서 살펴볼 것이요 그 색점이 벽에 퍼졌으면</div>
+        <div class="verse"><span class="verse-num">40</span> 그는 명령하여 색점 있는 돌을 빼내어 성 밖 부정한 곳에 버리게 하고</div>
+        <div class="verse"><span class="verse-num">41</span> 또 집 안 사방을 긁게 하고 그 긁은 흙을 성 밖 부정한 곳에 쏟아버리게 할 것이요</div>
+        <div class="verse"><span class="verse-num">42</span> 그들은 다른 돌로 그 돌을 대신하며 다른 흙으로 집에 바를지니라</div>
+        <div class="verse"><span class="verse-num">43</span> 돌을 빼내며 집을 긁고 고쳐 바른 후에 색점이 집에 재발하면</div>
+        <div class="verse"><span class="verse-num">44</span> 제사장은 또 가서 살펴볼 것이요 그 색점이 만일 집에 퍼졌으면 악성 나병인즉 이는 부정하니</div>
+        <div class="verse"><span class="verse-num">45</span> 그는 그 집을 헐고 돌과 그 재목과 그 집의 모든 흙을 성 밖 부정한 곳으로 내어 갈 것이며</div>
+        <div class="verse"><span class="verse-num">46</span> 그 집을 폐쇄한 날 동안에 들어가는 자는 저녁까지 부정할 것이요</div>
+        <div class="verse"><span class="verse-num">47</span> 그 집에서 자는 자는 그의 옷을 빨 것이요 그 집에서 먹는 자도 그의 옷을 빨 것이니라</div>
+        <div class="verse"><span class="verse-num">48</span> 그 집을 고쳐 바른 후에 제사장이 들어가 살펴보아서 색점이 집에 퍼지지 아니하였으면 이는 색점이 나은 것이니 제사장은 그 집을 정하다 하고</div>
+        <div class="verse"><span class="verse-num">49</span> 그는 그 집을 정결하게 하기 위하여 새 두 마리와 백향목과 홍색 실과 우슬초를 가져다가</div>
+        <div class="verse"><span class="verse-num">50</span> 그 새 하나를 흐르는 물 위 질그릇 안에서 잡고</div>
+        <div class="verse"><span class="verse-num">51</span> 백향목과 우슬초와 홍색 실과 살아 있는 새를 가져다가 잡은 새의 피와 흐르는 물을 찍어 그 집에 일곱 번 뿌릴 것이요</div>
+        <div class="verse"><span class="verse-num">52</span> 그는 새의 피와 흐르는 물과 살아 있는 새와 백향목과 우슬초와 홍색 실로 집을 정결하게 하고</div>
+        <div class="verse"><span class="verse-num">53</span> 그 살아 있는 새는 성 밖 들에 놓아 주고 그 집을 위하여 속죄할 것이라 그러면 정결하리라</div>
+        <div class="verse"><span class="verse-num">54</span> 이는 각종 나병 환부에 대한 규례니 곧 옴과</div>
+        <div class="verse"><span class="verse-num">55</span> 의복과 가옥의 나병과</div>
+        <div class="verse"><span class="verse-num">56</span> 돋는 것과 뾰루지와 색점이</div>
+        <div class="verse"><span class="verse-num">57</span> 어느 때는 부정하고 어느 때는 정함을 가르치는 것이니 나병의 규례가 이러하니라</div>
+
+        <!-- 레위기 15장 -->
+        <div class="chapter-title">레위기 15장 (1~33절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세와 아론에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손에게 말하여 이르라 누구든지 그의 몸에 유출병이 있으면 그 유출병으로 말미암아 부정한 자라</div>
+        <div class="verse"><span class="verse-num">3</span> 그의 유출병으로 말미암아 부정함이 이러하니 곧 그의 몸에서 흘러 나오든지 그의 몸에서 흘러 나오는 것이 막혔든지 부정한즉</div>
+        <div class="verse"><span class="verse-num">4</span> 유출병 있는 자가 눕는 침상은 다 부정하고 그가 앉았던 자리도 다 부정하니</div>
+        <div class="verse"><span class="verse-num">5</span> 그의 침상에 접촉하는 자는 그의 옷을 빨고 물로 몸을 씻을 것이며 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">6</span> 유출병이 있는 자가 앉았던 자리에 앉는 자는 그의 옷을 빨고 물로 씻을 것이요 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">7</span> 유출병이 있는 자의 몸에 접촉하는 자는 그의 옷을 빨고 물로 몸을 씻을 것이며 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">8</span> 유출병이 있는 자가 정한 자에게 침을 뱉으면 정한 자는 그의 옷을 빨고 물로 몸을 씻을 것이며 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 유출병이 있는 자가 탔던 안장은 다 부정하며</div>
+        <div class="verse"><span class="verse-num">10</span> 그의 몸 아래에 닿았던 것에 접촉한 자는 다 저녁까지 부정하며 그런 것을 옮기는 자는 그의 옷을 빨고 물로 몸을 씻을 것이며 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">11</span> 유출병이 있는 자가 물로 그의 손을 씻지 아니하고 아무든지 만지면 그 자는 그의 옷을 빨고 물로 몸을 씻을 것이며 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">12</span> 유출병이 있는 자가 만진 질그릇은 깨뜨리고 나무 그릇은 다 물로 씻을지니라</div>
+        <div class="verse"><span class="verse-num">13</span> 유출병이 있는 자는 그의 유출이 깨끗해지거든 그가 정결하게 되기 위하여 이레를 센 후에 옷을 빨고 흐르는 물에 그의 몸을 씻을 것이라 그러면 그가 정하리니</div>
+        <div class="verse"><span class="verse-num">14</span> 여덟째 날에 산비둘기 두 마리나 집비둘기 새끼 두 마리를 자기를 위하여 가져다가 회막 문 여호와 앞으로 가서 제사장에게 줄 것이요</div>
+        <div class="verse"><span class="verse-num">15</span> 제사장은 그 한 마리는 속죄제로, 다른 한 마리는 번제로 드려 그의 유출병으로 말미암아 여호와 앞에서 속죄할지니라</div>
+        <div class="verse"><span class="verse-num">16</span> 설정한 자는 전신을 물로 씻을 것이며 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">17</span> 정수가 묻은 모든 옷과 가죽은 물에 빨 것이며 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">18</span> 남녀가 동침하여 설정하였거든 둘 다 물로 몸을 씻을 것이며 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">19</span> 어떤 여인이 유출을 하되 그의 몸에 그의 유출이 피이면 이레 동안 불결하니 그를 만지는 자마다 저녁까지 부정할 것이요</div>
+        <div class="verse"><span class="verse-num">20</span> 그가 불결할 동안에는 그가 누웠던 자리도 다 부정하며 그가 앉았던 자리도 다 부정한즉</div>
+        <div class="verse"><span class="verse-num">21</span> 그의 침상을 만지는 자는 다 그의 옷을 빨고 물로 몸을 씻을 것이요 저녁까지 부정할 것이며</div>
+        <div class="verse"><span class="verse-num">22</span> 그가 앉은 자리를 만지는 자도 다 그들의 옷을 빨고 물로 몸을 씻을 것이요 저녁까지 부정할 것이며</div>
+        <div class="verse"><span class="verse-num">23</span> 그의 침상 위에나 그가 앉은 자리 위에 있는 것을 만지는 모든 자도 저녁까지 부정할 것이며</div>
+        <div class="verse"><span class="verse-num">24</span> 누구든지 이 여인과 동침하여 그의 불결함에 전염되면 이레 동안 부정할 것이라 그가 눕는 침상은 다 부정하니라</div>
+        <div class="verse"><span class="verse-num">25</span> 만일 여인의 피의 유출이 그의 불결기가 아닌데도 여러 날이 간다든지 그 유출이 그의 불결기를 지나도 계속되면 그 부정을 유출하는 모든 날 동안은 그 불결한 때와 같이 부정한즉</div>
+        <div class="verse"><span class="verse-num">26</span> 그의 유출이 있는 모든 날 동안에 그가 눕는 침상은 그에게 불결한 때의 침상과 같고 그가 앉는 모든 자리도 부정함이 불결한 때의 부정과 같으니</div>
+        <div class="verse"><span class="verse-num">27</span> 그것들을 만지는 자는 다 부정한즉 그의 옷을 빨고 물로 몸을 씻을 것이며 저녁까지 부정할 것이요</div>
+        <div class="verse"><span class="verse-num">28</span> 그의 유출이 그치면 이레를 센 후에야 정하리니</div>
+        <div class="verse"><span class="verse-num">29</span> 그는 여덟째 날에 산비둘기 두 마리나 집비둘기 새끼 두 마리를 자기를 위하여 가져다가 회막 문 앞 제사장에게로 가져갈 것이요</div>
+        <div class="verse"><span class="verse-num">30</span> 제사장은 그 한 마리는 속죄제로, 다른 한 마리는 번제로 드려 유출로 부정한 여인을 위하여 여호와 앞에서 속죄할지니라</div>
+        <div class="verse"><span class="verse-num">31</span> 너희는 이와 같이 이스라엘 자손이 그들의 부정에서 떠나게 하여 그들 가운데에 있는 내 성막을 그들이 더럽히고 그들이 부정한 중에서 죽지 않도록 할지니라</div>
+        <div class="verse"><span class="verse-num">32</span> 이 규례는 유출병이 있는 자와 설정함으로 부정하게 된 자와</div>
+        <div class="verse"><span class="verse-num">33</span> 불결기의 앓는 여인과 유출병이 있는 남녀와 그리고 불결한 여인과 동침한 자에 대한 것이니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
