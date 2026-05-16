@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 045</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 045</h1>
+        <p class="sub-title">찬송가 420장 너 성결키 위해</p>
+        <p class="sub-title">민수기 5~6장 — 나실인, 대제사장급 헌신</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 420장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/13Fx9EcyWO0_xC3DvnE7vNClsDXVqxvWb" alt="찬송가 420장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 민수기 5장~6장<br>'나실인, 대제사장급 헌신'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서는 건강한 사회를 위하여 건강한 가정을 이루기를 원하십니다.</span>
+            성경은 개인, 가정, 나라를 모두 담고 있습니다. <strong>성경을 통해 개인이 부흥하고 가정이 부흥하고 하나님 나라가 부흥해야 합니다.</strong> 하나님께서는 민수기 5장을 통해 하나님의 사람들이 속한 가정들이 <strong>어떻게 신앙 공동체로 정결한 삶을 살아야 하는지 가르쳐 주고 계십니다.</strong> 건강한 사회는 <strong>건강한 가정들의 연합체</strong>이기 때문입니다.<br><br>
+            하나님께서는 이스라엘의 가정을 반듯하게 세우기 위해 <strong>부부간의 신뢰를 이루는 길, 신뢰가 무너졌을 때 다시 회복할 수 있는 길, 회복이 어려울 때 처리하는 방법</strong> 등을 알려주시며 이스라엘 공동체를 거룩하게 만들고자 하십니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 나실인 헌신은 대제사장급의 헌신입니다.</span>
+            레위인이 아니더라도 누구든지 자원하여 하나님을 섬기기로 한다면 <strong>하나님께서는 레위인 그 이상으로 기쁘게 그의 섬김을 받겠다</strong>고 말씀하십니다. 이에 시간의 주인 되시는 하나님께서는 <strong>남녀 누구나 일정 시간을 정해 하나님을 섬길 수 있도록 나실인 법을 주십니다</strong>(민 6:1~21).<br><br>
+            나실인으로 서원하는 기간 동안 지킬 조건이 있습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 포도나무에서 난 소산은 먹지 말 것<br><br>
+                <strong>둘째,</strong> 독주 금지<br><br>
+                <strong>셋째,</strong> 머리에 삭도를 대지 말 것<br><br>
+                <strong>넷째,</strong> 시체를 가까이하지 말 것 — 제사장은 부모 형제의 시신을 만질 수 있습니다. 그러나 대제사장은 어떤 경우에도 부모의 시신조차 만지면 안 됩니다. <strong>나실인으로 헌신하는 자는 정한 기간 동안에는 대제사장처럼 부모의 시신조차 만지면 안 됩니다.</strong> 만약 이 규정을 어겼을 경우에는 지난 시간이 모두 무효가 됩니다.
+            </div>
+            <div class="quote">
+                <strong>그러므로 하나님께서 원하시는 나실인 헌신은 대제사장급의 헌신인 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 나실인 서원에는 본인의 서원, 부모의 서원, 하나님의 부르심이 있습니다.</span>
+            하나님께서 일정 기간 하나님께 헌신할 수 있는 기회로 열어주신 나실인 법은 <strong>세 가지 방법</strong>으로 행해집니다.
+            <div class="quote">
+                <strong>첫 번째 — 본인의 서원</strong><br><br>
+                <strong>두 번째 — 부모의 서원</strong> : 이 케이스에 해당되는 나실인은 <strong>한나의 아들 사무엘</strong>입니다.<br><br>
+                <strong>세 번째 — 하나님의 부르심</strong> : 여기에 해당되는 케이스는 <strong>삼손과 세례 요한</strong>입니다.
+            </div>
+            <div class="quote">
+                <strong>하나님께서 나실인 법을 주신 이유는 많은 사람이 자원하여 하나님의 일에 기쁘게 참여하기를 기대하시기 때문입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 제사장의 중요한 업무 중 하나는 이스라엘 자손을 축복하는 것입니다.</span>
+            복은 하나님의 창고에 들어 있고, <strong>복 주시는 분은 오직 하나님뿐이십니다.</strong> 제사장들의 중요한 일 중 하나는 이스라엘 백성을 위해 복을 빌어주는 것입니다(민 6:22~27). 하나님께서는 아브라함이 <strong>모든 민족을 위한 복의 통로</strong>가 되게 하셨습니다. 아브라함 이후 500여 년 만에 하나님께서 이제 <strong>제사장의 손을 들어 이스라엘 백성들을 축복하게 하십니다.</strong>
+            <div class="quote">
+                <strong>"아론이 백성을 향하여 손을 들어 축복함으로 속죄제와 번제와 화목제를 마치고 내려오니라"</strong> (레 9:22)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 보아스와 바울의 인사법은 민수기에서 시작됩니다.</span>
+            <div class="quote">
+                <strong>"마침 보아스가 베들레헴에서부터 와서 베는 자들에게 이르되 여호와께서 너희와 함께하시기를 원하노라 하니 그들이 대답하되 여호와께서 당신에게 복 주시기를 원하나이다 하니라"</strong> (룻 2:4)
+            </div>
+            보아스와 그의 밭에서 일하는 사람들이 <strong>민수기에서 하나님께서 제사장들을 통해 이스라엘 백성들을 축복하라고 하신 그 말씀대로 인사하고 있습니다.</strong><br><br>
+            바울은 그의 서신마다 <strong>은혜와 평강의 인사를 빠뜨리지 않습니다.</strong> 바울 또한 민수기를 통해 알려주신 하나님의 말씀대로 살아가는 성도들에게 축복합니다.
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 민수기 5~6장 '나실인, 대제사장급 헌신'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 민수기 5장 -->
+        <div class="chapter-title">민수기 5장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손에게 명령하여 모든 나병 환자와 유출증이 있는 자와 주검으로 부정하게 된 자를 다 진영 밖으로 내보내되</div>
+        <div class="verse"><span class="verse-num">3</span> 남녀를 막론하고 다 진영 밖으로 내보내어 그들이 진영을 더럽히게 하지 말라 내가 그 진영 가운데에 거하느니라 하시매</div>
+        <div class="verse"><span class="verse-num">4</span> 이스라엘 자손이 그같이 행하여 그들을 진영 밖으로 내보냈으니 곧 여호와께서 모세에게 이르신 대로 이스라엘 자손이 행하였더라</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">6</span> 이스라엘 자손에게 이르라 남자나 여자나 사람들이 범하는 죄를 범하여 여호와께 거역함으로 죄를 지으면</div>
+        <div class="verse"><span class="verse-num">7</span> 그 지은 죄를 자복하고 그 죄 값을 온전히 갚되 오분의 일을 더하여 그가 죄를 지었던 그 사람에게 돌려줄 것이요</div>
+        <div class="verse"><span class="verse-num">8</span> 만일 죄 값을 받을 만한 친척이 없으면 그 죄 값을 여호와께 드려 제사장에게로 돌릴 것이니 이는 그를 위하여 속죄할 속죄의 숫양과 함께 돌릴 것이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 이스라엘 자손이 거제로 제사장에게 가져오는 모든 성물은 그의 것이 될 것이라</div>
+        <div class="verse"><span class="verse-num">10</span> 각 사람이 구별한 물건은 그의 것이 되나니 누구든지 제사장에게 주는 것은 그의 것이 되느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">12</span> 이스라엘 자손에게 말하여 그들에게 이르라 만일 어떤 사람의 아내가 탈선하여 남편에게 신의를 저버렸고</div>
+        <div class="verse"><span class="verse-num">13</span> 한 남자가 그 여자와 동침하였으나 그의 남편의 눈에 숨겨 드러나지 아니하였고 그 여자의 더러워진 일에 증인도 없고 그가 잡히지도 아니하였어도</div>
+        <div class="verse"><span class="verse-num">14</span> 그 남편이 의심이 생겨 그 아내를 의심하였는데 그의 아내가 더럽혀졌거나 또는 그 남편이 의심이 생겨 그 아내를 의심하였으나 그 아내가 더럽혀지지 아니하였든지</div>
+        <div class="verse"><span class="verse-num">15</span> 그의 아내를 데리고 제사장에게로 가서 그를 위하여 보리 가루 십분의 일 에바를 헌물로 드리되 그것에 기름도 붓지 말고 유향도 두지 말라 이는 의심의 소제요 죄악을 기억나게 하는 기억의 소제라</div>
+        <div class="verse"><span class="verse-num">16</span> 제사장은 그 여인을 가까이 오게 하여 여호와 앞에 세우고</div>
+        <div class="verse"><span class="verse-num">17</span> 토기에 거룩한 물을 담고 성막 바닥의 티끌을 취하여 물에 넣고</div>
+        <div class="verse"><span class="verse-num">18</span> 여인을 여호와 앞에 세우고 그의 머리를 풀게 하고 기억나게 하는 소제물 곧 의심의 소제물을 그의 두 손에 두고 제사장은 저주가 되게 할 쓴 물을 자기 손에 들고</div>
+        <div class="verse"><span class="verse-num">19</span> 여인에게 맹세하게 하여 그에게 이르기를 네가 네 남편을 두고 탈선하여 다른 남자와 동침하여 더럽힌 일이 없으면 저주가 되게 하는 이 쓴 물의 해독을 면하리라</div>
+        <div class="verse"><span class="verse-num">20</span> 그러나 네가 네 남편을 두고 탈선하여 몸을 더럽혀서 네 남편 아닌 사람과 동침하였으면</div>
+        <div class="verse"><span class="verse-num">21</span> (제사장이 그 여인에게 저주의 맹세를 하게 하고 그 여인에게 말할지니라) 여호와께서 네 넓적다리가 마르고 네 배가 부어서 네가 네 백성 중에 저줏거리, 맹셋거리가 되게 하실지라</div>
+        <div class="verse"><span class="verse-num">22</span> 이 저주가 되게 하는 이 물이 네 창자에 들어가서 네 배를 붓게 하고 네 넓적다리를 마르게 하리라 할 것이요 여인은 아멘 아멘 할지니라</div>
+        <div class="verse"><span class="verse-num">23</span> 제사장이 저주의 말을 두루마리에 써서 그 글자를 그 쓴 물에 빨아 넣고</div>
+        <div class="verse"><span class="verse-num">24</span> 여인에게 그 저주가 되게 하는 쓴 물을 마시게 할지니 그 저주가 되게 하는 물이 그의 속에 들어 가서 쓰리라</div>
+        <div class="verse"><span class="verse-num">25</span> 제사장이 먼저 그 여인의 손에서 의심의 소제물을 취하여 그 소제물을 여호와 앞에 흔들고 제단으로 가지고 가서</div>
+        <div class="verse"><span class="verse-num">26</span> 제사장은 그 소제물 중에서 한 움큼을 취하여 그 여자에게 기억나게 하는 소제물로 제단 위에 불사르고 그 후에 여인에게 그 물을 마시게 할지라</div>
+        <div class="verse"><span class="verse-num">27</span> 그 물을 마시게 한 후에 만일 여인이 몸을 더럽혀서 그 남편에게 범죄하였으면 그 저주가 되게 하는 물이 그의 속에 들어가서 쓰게 되어 그의 배가 부으며 그의 넓적다리가 마르리니 그 여인이 그 백성 중에서 저줏거리가 될 것이니라</div>
+        <div class="verse"><span class="verse-num">28</span> 그러나 여인이 더럽힌 일이 없고 정결하면 해를 받지 않고 임신하리라</div>
+        <div class="verse"><span class="verse-num">29</span> 이는 의심의 법이니 아내가 그의 남편을 두고 탈선하여 더럽힌 때나</div>
+        <div class="verse"><span class="verse-num">30</span> 또는 그 남편이 의심이 생겨서 자기의 아내를 의심할 때에 여인을 여호와 앞에 두고 제사장이 이 법대로 행할 것이라</div>
+        <div class="verse"><span class="verse-num">31</span> 남편은 무죄할 것이요 여인은 죄가 있으면 당하리라</div>
+
+        <!-- 민수기 6장 -->
+        <div class="chapter-title">민수기 6장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손에게 전하여 그들에게 이르라 남자나 여자가 특별한 서원 곧 나실인의 서원을 하고 자기 몸을 구별하여 여호와께 드리려고 하면</div>
+        <div class="verse"><span class="verse-num">3</span> 포도주와 독주를 멀리하며 포도주로 된 초나 독주로 된 초를 마시지 말며 포도즙도 마시지 말며 생포도나 건포도도 먹지 말지니</div>
+        <div class="verse"><span class="verse-num">4</span> 자기 몸을 구별하는 모든 날 동안에는 포도나무 소산은 씨나 껍질이라도 먹지 말지며</div>
+        <div class="verse"><span class="verse-num">5</span> 그 서원을 하고 구별하는 모든 날 동안은 삭도를 절대로 그의 머리에 대지 말 것이라 자기 몸을 구별하여 여호와께 드리는 날이 차기까지 그는 거룩한즉 그의 머리털을 길게 자라게 할 것이며</div>
+        <div class="verse"><span class="verse-num">6</span> 자기의 몸을 구별하여 여호와께 드리는 모든 날 동안은 시체를 가까이 하지 말 것이요</div>
+        <div class="verse"><span class="verse-num">7</span> 그의 부모 형제 자매가 죽은 때에라도 그로 말미암아 몸을 더럽히지 말 것이니 이는 자기의 몸을 구별하여 하나님께 드리는 표가 그의 머리에 있음이라</div>
+        <div class="verse"><span class="verse-num">8</span> 자기의 몸을 구별하는 모든 날 동안 그는 여호와께 거룩한 자니라</div>
+        <div class="verse"><span class="verse-num">9</span> 누가 갑자기 그 곁에서 죽어서 스스로 구별한 자의 머리를 더럽히면 그의 몸을 정결하게 하는 날에 머리를 밀 것이니 곧 일곱째 날에 밀 것이며</div>
+        <div class="verse"><span class="verse-num">10</span> 여덟째 날에 산비둘기 두 마리나 집비둘기 새끼 두 마리를 가지고 회막 문에 와서 제사장에게 줄 것이요</div>
+        <div class="verse"><span class="verse-num">11</span> 제사장은 그 하나를 속죄제물로, 하나를 번제물로 드려서 그의 시체로 말미암아 얻은 죄를 속하고 또 그는 그 날에 그의 머리를 성결하게 할 것이며</div>
+        <div class="verse"><span class="verse-num">12</span> 자기 몸을 구별하여 여호와께 드릴 날을 새로 정하고 일 년 된 숫양을 가져다가 속건제물로 드릴지니라 자기의 몸을 구별한 때에 그의 몸을 더럽혔은즉 지나간 기간은 무효니라</div>
+        <div class="verse"><span class="verse-num">13</span> 나실인의 법은 이러하니라 자기의 몸을 구별한 날이 차면 그 사람을 회막 문으로 데리고 갈 것이요</div>
+        <div class="verse"><span class="verse-num">14</span> 그는 여호와께 헌물을 드리되 번제물로 일 년 된 흠 없는 숫양 한 마리와 속죄제물로 일 년 된 흠 없는 어린 암양 한 마리와 화목제물로 흠 없는 숫양 한 마리와</div>
+        <div class="verse"><span class="verse-num">15</span> 무교병 한 광주리와 고운 가루에 기름 섞은 과자들과 기름 바른 무교전병들과 그 소제물과 전제물을 드릴 것이요</div>
+        <div class="verse"><span class="verse-num">16</span> 제사장은 그것들을 여호와 앞에 가져다가 속죄제와 번제를 드리고</div>
+        <div class="verse"><span class="verse-num">17</span> 화목제물로 숫양에 무교병 한 광주리를 아울러 여호와께 드리고 그 소제와 전제를 드릴 것이요</div>
+        <div class="verse"><span class="verse-num">18</span> 자기의 몸을 구별한 나실인은 회막 문에서 자기의 머리털을 밀고 그것을 화목제물 밑에 있는 불에 둘지며</div>
+        <div class="verse"><span class="verse-num">19</span> 자기의 몸을 구별한 나실인이 그의 머리 털을 민 후에 제사장이 삶은 숫양의 어깨와 광주리 가운데 무교병 하나와 무교전병 하나를 취하여 나실인의 두 손에 두고</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와 앞에 요제로 흔들 것이며 그것과 흔든 가슴과 받들어올린 넓적다리는 성물이라 다 제사장에게 돌릴 것이니라 그 후에는 나실인이 포도주를 마실 수 있느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 이는 곧 서원한 나실인이 자기의 몸을 구별한 일로 말미암아 여호와께 헌물을 드림과 행할 법이며 이외에도 힘이 미치는 대로 하려니와 그가 서원한 대로 자기의 몸을 구별하는 법을 따라 할 것이니라</div>
+        <div class="verse"><span class="verse-num">22</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">23</span> 아론과 그의 아들들에게 말하여 이르기를 너희는 이스라엘 자손을 위하여 이렇게 축복하여 이르되</div>
+        <div class="verse"><span class="verse-num">24</span> 여호와는 네게 복을 주시고 너를 지키시기를 원하며</div>
+        <div class="verse"><span class="verse-num">25</span> 여호와는 그의 얼굴을 네게 비추사 은혜 베푸시기를 원하며</div>
+        <div class="verse"><span class="verse-num">26</span> 여호와는 그 얼굴을 네게로 향하여 드사 평강 주시기를 원하노라 할지니라 하라</div>
+        <div class="verse"><span class="verse-num">27</span> 그들은 이같이 내 이름으로 이스라엘 자손에게 축복할지니 내가 그들에게 복을 주리라
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

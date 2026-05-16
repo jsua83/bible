@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 046</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 046</h1>
+        <p class="sub-title">찬송가 425장 주님의 뜻을 이루소서</p>
+        <p class="sub-title">민수기 7~8장 — 화려한 작업복은 없지만!</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 425장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1uhY318_rrfUC4nEJ5k_0GubJ-9ziSHe9" alt="찬송가 425장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 민수기 7장~8장<br>'화려한 작업복은 없지만!'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 12일 동안 이스라엘 12지파의 봉헌 예물 축제가 열립니다.</span>
+            이스라엘 백성들의 1차 인구 조사 후 각 지파의 진영이 성막을 중심으로 세워집니다. 이렇게 모든 진영이 갖추어진 후, <strong>거룩히 구별한 날에 열두 지파의 지휘관들이 하나님께 헌물을 바치기 시작합니다</strong>(민 7장).<br><br>
+            열두 지파의 지휘관들이 드린 헌물은 지휘관 두 명이 수레 한 대씩 해서 <strong>덮개 있는 수레가 여섯 대,</strong> 그리고 지휘관 한 명이 소 한 마리씩 해서 <strong>열두 마리</strong>였습니다. 열두 지파 가운데 <strong>유다 지파의 지휘관이 가장 먼저</strong> 나아와 하나님께 헌물을 드립니다. 성막에서 헌물을 드리는 열두 지파의 순서는 성막이 행진할 때 선두가 되는 동편 유다 지파부터 <strong>민수기 2장에 나오는 진영 순서대로</strong>입니다.<br><br>
+            유다 지파의 지휘관을 필두로 <strong>12일 동안 각 지파의 지휘관이 매일 하나님께 헌물을 바칩니다.</strong> 열두 지파는 각 지파별로 숫자가 다름에도 불구하고 <strong>똑같은 내용으로 봉헌 예물을 드립니다.</strong> 이는 마치 성막 건축 때 20세 이상 된 남자들 누구나 똑같이 드린 속전과 같습니다.
+            <div class="quote">
+                <strong>열두 지파가 드리는 기쁨을 똑같이 맛보는 놀라운 장면입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 이스라엘 12지파가 움직이는 성막 500년을 향한 봉헌 예배를 드립니다.</span>
+            레위인들에게 주어진 헌물은 다음과 같습니다.
+            <div class="quote">
+                <strong>게르손 자손</strong> — 수레 2대, 소 4마리<br><br>
+                <strong>므라리 자손</strong> — 수레 4대, 소 8마리 (므라리 자손이 보다 무거운 성물을 운반하기 때문입니다.)<br><br>
+                <strong>고핫 자손</strong> — 소와 수레를 제공하지 않습니다. (성막 기구들을 어깨에 메어 운반하기 때문입니다.)
+            </div>
+            약 6개월 동안 만든 성막을 중심으로 이제 온 이스라엘이 행진하며 나아갈 것입니다. 이들은 <strong>움직이는 성막 500년 시대를 이끌게 됩니다.</strong> 성막이 움직일 때 <strong>세 가지 방법</strong>으로 움직이는 것이 법입니다.
+            <div class="quote">
+                <strong>게르손 자손과 므라리 자손</strong>은 그들의 직임대로 성막 기구들을 <strong>소가 끄는 수레에 실어 운반</strong>합니다.<br><br>
+                <strong>고핫 자손</strong>은 아론 자손 제사장들이 성소 안 기구들을 각색 보자기에 싸서 준 것을 <strong>어깨에 메어 옮겨야</strong> 하는 것이 법입니다.
+            </div>
+            이후 다윗이 언약궤를 예루살렘으로 옮겨오면서 고핫 자손에 관한 규례를 잘 알지 못하고 <strong>블레셋 방식을 사용했다가 나곤의 타작마당에서 웃사가 죽는 일이 발생합니다.</strong>
+            <div class="quote">
+                <strong>이처럼 하나님의 말씀은 어느 것 하나 허투루 보아서는 안 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 이스라엘 자손이 손을 들어 레위인들에게 안수합니다.</span>
+            12일 동안 진행된 이스라엘 열두 지파 지휘관들의 헌물 드리는 기간이 모두 끝이 납니다. 그러자 이제는 레위 지파가 모두 성막 앞으로 나오고, <strong>이스라엘 열두 지파의 모든 사람이 레위 지파에게 안수를 합니다.</strong> 그리고 대제사장 아론이 요제로 마무리합니다.
+            <div class="quote">
+                <strong>이는 레위인들이 하나님께 봉사하는 자들임을 다시 한번 확인하는 것입니다.</strong>
+            </div>
+            앞서 살핀 대로 열두 지파 사람들 은 <strong>20세에서 60세까지 현역</strong>입니다. 그런데 <strong>레위 지파는 열두 지파보다 10년을 더 준비하여 30세부터 일하고 50세에 은퇴</strong>를 합니다. 레위 지파가 30세부터 50세까지만 현역으로 일하는 이유는 <strong>레위인들의 일이 그만큼 고되고 조심스러운 전문직이기 때문</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 고핫 자손은 성물을 어깨에 메되 잠시라도 성소에 들어가 보아서는 안 됩니다.</span>
+            레위 지파 가운데에서도 고핫 자손은 게르손 자손과 므라리 자손과 달리 수레도 사용하지 않고 <strong>그들의 어깨에 언약궤를 메어 옮기는 특별한 업무를 맡은 자들</strong>입니다.<br><br>
+            그런데 더 중요한 것은 고핫 자손은 언약궤를 성소 안에 안치한 후에는 <strong>절대 언약궤를 보아서는 안 됩니다.</strong> 만일 그들이 언약궤를 보면 <strong>죽을 것이라는 하나님의 경고</strong>를 들었기 때문입니다.<br><br>
+            이렇게 언약궤를 어깨에 메어 옮기는 막중한 책임을 맡은 고핫 자손은 인구 조사를 통해 <strong>2,750명으로 계수되었습니다.</strong> 이스라엘 모든 백성은 하나님 앞에 구별되고 거룩한 삶을 살아야 하지만 <strong>특히 2,750명의 고핫 자손은 제사장 나라의 핵심 공직자로 더욱 조심해야 합니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 성소에 가까이 오라. 그러나 반드시 조심하라.</span>
+            하나님께서 이스라엘 백성들에게 성막을 제작하게 하신 이유는 <strong>누구든지 하나님의 이름을 두려고 택하신 곳에 와서, 다섯 가지 제사를 통해 용서받을 수 있는 길을 열어주시기 위함</strong>입니다. 그렇다고 성소에 <strong>아무렇게나 나와서는 안 됩니다.</strong> 하나님께서 제시하신 방법은 <strong>조심히 오라</strong>는 것입니다.<br><br>
+            하나님께서 레위인들로 하여금 회막에서 풀타임으로 일하게 하신 이유는 <strong>이스라엘 열두 지파의 사람들이 성소로 나올 때 혹여 조심하지 않아 재앙을 받을까 걱정하시기 때문</strong>입니다. 레위인들은 이스라엘 백성들이 하나님 앞에 올바른 제사를 드릴 수 있도록 돕는 <strong>레위기의 전문 지식을 가진 자들</strong>입니다.
+            <div class="quote">
+                <strong>제사는 누구든지 드릴 수 있지만 동시에 조심해서 하나님 앞에 나와야 하는 것입니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 민수기 7~8장 '화려한 작업복은 없지만!'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 민수기 7장 -->
+        <div class="chapter-title">민수기 7장 (1~89절)</div>
+        <div class="verse"><span class="verse-num">1</span> 모세가 장막 세우기를 끝내고 그것에 기름을 발라 거룩히 구별하고 또 그 모든 기구와 제단과 그 모든 기물에 기름을 발라 거룩히 구별한 날에</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 지휘관들 곧 그들의 조상의 가문의 우두머리들이요 그 지파의 지휘관으로서 그 계수함을 받은 자의 감독된 자들이 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">3</span> 그들이 여호와께 드린 헌물은 덮개 있는 수레 여섯 대와 소 열두 마리이니 지휘관 두 사람에 수레가 하나씩이요 지휘관 한 사람에 소가 한 마리씩이라 그것들을 장막 앞에 드린지라</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">5</span> 그것을 그들에게서 받아 레위인에게 주어 각기 직임대로 회막 봉사에 쓰게 할지니라</div>
+        <div class="verse"><span class="verse-num">6</span> 모세가 수레와 소를 받아 레위인에게 주었으니</div>
+        <div class="verse"><span class="verse-num">7</span> 곧 게르손 자손들에게는 그들의 직임대로 수레 둘과 소 네 마리를 주었고</div>
+        <div class="verse"><span class="verse-num">8</span> 므라리 자손들에게는 그들의 직임대로 수레 넷과 소 여덟 마리를 주고 제사장 아론의 아들 이다말에게 감독하게 하였으나</div>
+        <div class="verse"><span class="verse-num">9</span> 고핫 자손에게는 주지 아니하였으니 그들의 성소의 직임은 그 어깨로 메는 일을 하는 까닭이었더라</div>
+        <div class="verse"><span class="verse-num">10</span> 제단에 기름을 바르던 날에 지휘관들이 제단의 봉헌을 위하여 헌물을 가져다가 그 헌물을 제단 앞에 드리니라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와께서 모세에게 이르시기를 지휘관들은 하루 한 사람씩 제단의 봉헌물을 드릴지니라 하셨더라</div>
+        <div class="verse"><span class="verse-num">12</span> 첫째 날에 헌물을 드린 자는 유다 지파 암미나답의 아들 나손이라</div>
+        <div class="verse"><span class="verse-num">13</span> 그의 헌물은 성소의 세겔로 백삼십 세겔 무게의 은반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">14</span> 또 열 세겔 무게의 금 그릇 하나라 그것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">15</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">16</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">17</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 암미나답의 아들 나손의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">18</span> 둘째 날에는 잇사갈의 지휘관 수알의 아들 느다넬이 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">19</span> 그가 드린 헌물도 성소의 세겔로 백삼십 세겔 무게의 은반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">20</span> 또 열 세겔 무게의 금 그릇 하나라 그것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">21</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">22</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">23</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일년 된 어린 숫양 다섯 마리라 이는 수알의 아들 느다넬의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">24</span> 셋째 날에는 스불론 자손의 지휘관 헬론의 아들 엘리압이 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">25</span> 그의 헌물도 성소의 세겔로 백삼십 세겔 무게의 은반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">26</span> 또 열 세겔 무게의 금 그릇 하나라 이것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">27</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">28</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">29</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 헬론의 아들 엘리압의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">30</span> 넷째 날에는 르우벤 자손의 지휘관 스데울의 아들 엘리술이 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">31</span> 그의 헌물도 성소의 세겔로 백삼십 세겔 무게의 은 쟁반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">32</span> 또 열 세겔 무게의 금 그릇 하나라 이것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">33</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">34</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">35</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 스데울의 아들 엘리술의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">36</span> 다섯째 날에는 시므온 자손의 지휘관 수리삿대의 아들 슬루미엘이 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">37</span> 그 헌물도 성소의 세겔로 백삼십 세겔 무게의 은 쟁반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">38</span> 또 열 세겔 무게의 금 그릇 하나라 이것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">39</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">40</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">41</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 수리삿대의 아들 슬루미엘의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">42</span> 여섯째 날에는 갓 자손의 지휘관 드우엘의 아들 엘리아삽이 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">43</span> 그의 헌물도 성소의 세겔로 백삼십 세겔 무게의 은 쟁반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">44</span> 또 열 세겔 무게의 금 그릇 하나라 이것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">45</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">46</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">47</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 드우엘의 아들 엘리아삽의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">48</span> 일곱째 날에는 에브라임 자손의 지휘관 암미훗의 아들 엘리사마가 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">49</span> 그의 헌물도 성소의 세겔로 백삼십 세겔 무게의 은 쟁반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">50</span> 또 열 세겔 무게의 금 그릇 하나라 이것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">51</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">52</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">53</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 암미훗의 아들 엘리사마의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">54</span> 여덟째 날에는 므낫세 자손의 지휘관 브다술의 아들 가말리엘이 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">55</span> 그 헌물도 성소의 세겔로 백삼십 세겔 무게의 은 쟁반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">56</span> 또 열 세겔 무게의 금 그릇 하나라 이것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">57</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">58</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">59</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 브다술의 아들 가말리엘의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">60</span> 아홉째 날에는 베냐민 자손의 지휘관 기드오니의 아들 아비단이 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">61</span> 그의 헌물도 성소의 세겔로 백삼십 세겔 무게의 은 쟁반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">62</span> 또 열 세겔 무게의 금 그릇 하나라 이것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">63</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">64</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">65</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 기드오니의 아들 아비단의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">66</span> 열째 날에는 단 자손의 지휘관 암미삿대의 아들 아히에셀이 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">67</span> 그의 헌물도 성소의 세겔로 백삼십 세겔 무게의 은 쟁반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">68</span> 또 열 세겔 무게의 금 그릇 하나라 이것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">69</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">70</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">71</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 암미삿대의 아들 아히에셀의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">72</span> 열한째 날에는 아셀 자손의 지휘관 오그란의 아들 바기엘이 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">73</span> 그의 헌물도 성소의 세겔로 백삼십 세겔 무게의 은 쟁반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">74</span> 또 열 세겔 무게의 금 그릇 하나라 이것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">75</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">76</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">77</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 오그란의 아들 바기엘의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">78</span> 열두째 날에는 납달리 자손의 지휘관 에난의 아들 아히라가 헌물을 드렸으니</div>
+        <div class="verse"><span class="verse-num">79</span> 그의 헌물도 성소의 세겔로 백삼십 세겔 무게의 은 쟁반 하나와 칠십 세겔 무게의 은 바리 하나라 이 두 그릇에는 소제물로 기름 섞은 고운 가루를 채웠고</div>
+        <div class="verse"><span class="verse-num">80</span> 또 열 세겔 무게의 금 그릇 하나라 이것에는 향을 채웠고</div>
+        <div class="verse"><span class="verse-num">81</span> 또 번제물로 수송아지 한 마리와 숫양 한 마리와 일 년 된 어린 숫양 한 마리이며</div>
+        <div class="verse"><span class="verse-num">82</span> 속죄제물로 숫염소 한 마리이며</div>
+        <div class="verse"><span class="verse-num">83</span> 화목제물로 소 두 마리와 숫양 다섯 마리와 숫염소 다섯 마리와 일 년 된 어린 숫양 다섯 마리라 이는 에난의 아들 아히라의 헌물이었더라</div>
+        <div class="verse"><span class="verse-num">84</span> 이는 곧 제단에 기름 바르던 날에 이스라엘 지휘관들이 드린 바 제단의 봉헌물이라 은 쟁반이 열둘이요 은 바리가 열둘이요 금 그릇이 열둘이니</div>
+        <div class="verse"><span class="verse-num">85</span> 은 쟁반은 각각 백삼십 세겔 무게요 은 바리는 각각 칠십 세겔 무게라 성소의 세겔로 모든 기구의 은이 모두 이천사백 세겔이요</div>
+        <div class="verse"><span class="verse-num">86</span> 또 향을 채운 금 그릇이 열둘이니 성소의 세겔로 각각 열 세겔 무게라 그 그릇의 금이 모두 백이십 세겔이요</div>
+        <div class="verse"><span class="verse-num">87</span> 또 번제물로 수송아지가 열두 마리요 숫양이 열두 마리요 일 년 된 어린 숫양이 열두 마리요 그 소제물이며 속죄제물로 숫염소가 열두 마리이며</div>
+        <div class="verse"><span class="verse-num">88</span> 화목제물로 수소가 스물네 마리요 숫양이 육십 마리요 숫염소가 육십 마리요 일 년 된 어린 숫양이 육십 마리라 이는 제단에 기름 바른 후에 드린 바 제단의 봉헌물이었더라</div>
+        <div class="verse"><span class="verse-num">89</span> 모세가 회막에 들어가서 여호와께 말하려 할 때에 증거궤 위 속죄소 위의 두 그룹 사이에서 자기에게 말씀하시는 목소리를 들었으니 여호와께서 그에게 말씀하심이었더라</div>
+
+        <!-- 민수기 8장 -->
+        <div class="chapter-title">민수기 8장 (1~26절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 또 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 아론에게 말하여 이르라 등불을 켤 때에는 일곱 등잔을 등잔대 앞으로 비추게 할지니라 하시매</div>
+        <div class="verse"><span class="verse-num">3</span> 아론이 그리하여 등불을 등잔대 앞으로 비추도록 켰으니 여호와께서 모세에게 명령하심과 같았더라</div>
+        <div class="verse"><span class="verse-num">4</span> 이 등잔대의 제작법은 이러하니 곧 금을 쳐서 만든 것인데 밑판에서 그 꽃까지 쳐서 만든 것이라 모세가 여호와께서 자기에게 보이신 양식을 따라 이 등잔대를 만들었더라</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">6</span> 이스라엘 자손 중에서 레위인을 데려다가 정결하게 하라</div>
+        <div class="verse"><span class="verse-num">7</span> 너는 이같이 하여 그들을 정결하게 하되 곧 속죄의 물을 그들에게 뿌리고 그들에게 그들의 전신을 삭도로 밀게 하고 그 의복을 빨게 하여 몸을 정결하게 하고</div>
+        <div class="verse"><span class="verse-num">8</span> 또 그들에게 수송아지 한 마리를 번제물로, 기름 섞은 고운 가루를 그 소제물로 가져오게 하고 그 외에 너는 또 수송아지 한 마리를 속죄제물로 가져오고</div>
+        <div class="verse"><span class="verse-num">9</span> 레위인을 회막 앞에 나오게 하고 이스라엘 자손의 온 회중을 모으고</div>
+        <div class="verse"><span class="verse-num">10</span> 레위인을 여호와 앞에 나오게 하고 이스라엘 자손이 그들에게 안수하게 한 후에</div>
+        <div class="verse"><span class="verse-num">11</span> 아론이 이스라엘 자손을 위하여 레위인을 흔들어 바치는 제물로 여호와 앞에 드릴지니 이는 그들에게 여호와께 봉사하게 하기 위함이라</div>
+        <div class="verse"><span class="verse-num">12</span> 레위인으로 수송아지들의 머리에 안수하게 하고 네가 그 하나는 속죄제물로, 하나는 번제물로 여호와께 드려 레위인을 속죄하고</div>
+        <div class="verse"><span class="verse-num">13</span> 레위인을 아론과 그의 아들들 앞에 세워 여호와께 요제로 드릴지니라</div>
+        <div class="verse"><span class="verse-num">14</span> 너는 이같이 이스라엘 자손 중에서 레위인을 구별하라 그리하면 그들이 내게 속할 것이라</div>
+        <div class="verse"><span class="verse-num">15</span> 네가 그들을 정결하게 하여 요제로 드린 후에 그들이 회막에 들어가서 봉사할 것이니라</div>
+        <div class="verse"><span class="verse-num">16</span> 그들은 이스라엘 자손 중에서 내게 온전히 드린 바 된 자라 이스라엘 자손 중 모든 초태생 곧 모든 처음 태어난 자 대신 내가 그들을 취하였나니</div>
+        <div class="verse"><span class="verse-num">17</span> 이스라엘 자손 중에 처음 태어난 것은 사람이든지 짐승이든지 다 내게 속하였음은 내가 애굽 땅에서 모든 처음 태어난 자를 치던 날에 그들을 내게 구별하였음이라</div>
+        <div class="verse"><span class="verse-num">18</span> 이러므로 내가 이스라엘 자손 중 모든 처음 태어난 자 대신 레위인을 취하였느니라</div>
+        <div class="verse"><span class="verse-num">19</span> 내가 이스라엘 자손 중에서 레위인을 취하여 그들을 아론과 그의 아들들에게 주어 그들로 회막에서 이스라엘 자손을 대신하여 봉사하게 하며 또 이스라엘 자손을 위하여 속죄하게 하였나니 이는 이스라엘 자손이 성소에 가까이 할 때에 그들 중에 재앙이 없게 하려 하였음이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 모세와 아론과 이스라엘 자손의 온 회중이 여호와께서 레위인에 대하여 모세에게 명령하신 것을 다 따라 레위인에게 행하였으되 곧 이스라엘 자손이 그와 같이 그들에게 행하였더라</div>
+        <div class="verse"><span class="verse-num">21</span> 레위인이 이에 죄에서 스스로 깨끗하게 하고 그들의 옷을 빨매 아론이 그들을 여호와 앞에 요제로 드리고 그가 또 그들을 위하여 속죄하여 정결하게 한</div>
+        <div class="verse"><span class="verse-num">22</span> 후에 레위인이 회막에 들어가서 아론과 그의 아들들 앞에서 봉사하니라 여호와께서 레위인의 일에 대하여 모세에게 명령하게 하신 것을 따라 그와 같이 그들에게 행하였더라</div>
+        <div class="verse"><span class="verse-num">23</span> 여호와께서 또 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">24</span> 레위인은 이같이 할지니 곧 이십오 세 이상으로는 회막에 들어가서 복무하고 봉사할 것이요</div>
+        <div class="verse"><span class="verse-num">25</span> 오십 세부터는 그 일을 쉬어 봉사하지 아니할 것이나</div>
+        <div class="verse"><span class="verse-num">26</span> 그의 형제와 함께 회막에서 돕는 직무를 지킬 것이요 일하지 아니할 것이라 너는 레위인의 직무에 대하여 이같이 할지니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

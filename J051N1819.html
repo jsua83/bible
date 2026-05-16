@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 051</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 051</h1>
+        <p class="sub-title">찬송가 575장 주님께 귀한 것 드려</p>
+        <p class="sub-title">민수기 18~19장 — 소금 언약</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 575장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/13vcwKBhUcVFACAlW16nEL_jWue2NgbEk" alt="찬송가 575장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 민수기 18장~19장<br>'소금 언약'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 제사장 나라의 '제사장 세우기' 다섯 가지 에피소드입니다.</span>
+            하나님께서 제사장 직임을 나라의 법으로 세우기 위해 얼마나 노력하셨는지 <strong>다음 다섯 가지를 통해 알 수 있습니다.</strong>
+            <div class="quote">
+                <strong>첫 번째,</strong> 제사장의 복식법입니다.<br>
+                <strong>두 번째,</strong> 첫 대제사장 아론의 첫 제사 때 불을 내려주십니다.<br>
+                <strong>세 번째,</strong> 아론의 두 아들 나답과 아비후의 죽음을 슬퍼하지 못하게 하십니다.<br>
+                <strong>네 번째,</strong> 250대 1의 향로 대결로 반란을 일으켰던 250명을 죽이십니다.<br>
+                <strong>다섯 번째,</strong> 12개의 지팡이 대결을 하게 하십니다.
+            </div>
+            이를 통해 알 수 있는 것은 <strong>제사장 나라의 제사장직을 세팅하는 일이 쉽지 않았다</strong>는 것과, 그럼에도 불구하고 <strong>'제사장직'이 자리를 잡아야 '제사장 나라'가 시작될 수 있다</strong>는 분명한 사실입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 모세는 '제사장직'을 세우기 위해 엎드리고 또 엎드리는 수고를 아끼지 않았습니다.</span>
+            모세가 그토록 제사장 나라 셋업을 위해 애쓴 이유는 <strong>제사장 나라의 제사장과 제사를 통한 '하나님의 용서의 능력'을 알았기 때문</strong>입니다. 모세가 엎드리고 또 엎드리며 제사장 나라 제도를 수립하기 위해 애쓴 이유는 <strong>모세가 진정한 '하나님의 종'이기 때문</strong>입니다.
+            <div class="quote">
+                <strong>하나님께서는 '하나님의 종' 모세를 통해 제사장 나라를 수립하심으로 장차 올 '좋은 일의 그림자'를 만드십니다.</strong> (히 10:1)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 레위인은 제사장에게 주신 하나님의 선물입니다.</span>
+            레위 지파 가운데 아론 자손이 맡은 일은 <strong>'제사장의 일'</strong>이며 고핫, 게르손, 므라리 자손은 <strong>제사장을 돕는 막중한 사명</strong>을 감당합니다. 만약 제사장에게만 성소의 업무를 모두 맡긴다면 함부로 회막에 가까이하는 외인을 막는 일, 죽이는 일까지 <strong>제사장들만으로는 결코 다 수행하지 못할 것</strong>입니다. 때문에 하나님께서는 레위인들에게 성막 봉사의 일을 분담하게 하신 것입니다.
+            <div class="quote">
+                <strong>그러므로 제사장과 레위인들은 서로를 향한 선물입니다. 바늘과 실, 동전의 양면과 같이 서로에게 꼭 필요한 사람들입니다. 하나님의 일에는 결코 높고 낮음이 없습니다. 다만 각자 맡은 소임이 다를 뿐입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 레위인도 십일조의 십일조를 드려야 합니다.</span>
+            제사장 나라 법에 따라 이스라엘 열두 지파 모든 백성은 <strong>십일조를 내야 합니다.</strong> 하나님께서 레위인들에게 열두 지파의 십일조를 주심으로 <strong>레위인들의 분깃이 되어주셨습니다.</strong> 이스라엘 열두 지파의 사람들이 하나님께 바치는 십일조의 쓰임은 이렇습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 레위인의 생계<br>
+                <strong>둘째,</strong> 성막 관리<br>
+                <strong>셋째,</strong> 구제
+            </div>
+            이스라엘 열두 지파가 바친 십일조로 살아가는 레위인 또한 하나님께 십일조를 드려야 합니다.
+            <div class="quote">
+                <strong>즉 레위인들은 십일조의 십일조를 하나님께 드리는 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 예방은 문제를 작게 만듭니다.</span>
+            하나님께서는 <strong>'부정한 것' 자체를 문제 삼으시기보다는 부정하게 된 경우 일어날 질병의 감염을 염려하시고</strong> 부정한 자가 정결하게 되기 위해서 필요한 기간과 절차를 엄격하게 주십니다(민 19:11~22). 또한 하나님께서는 <strong>자주 씻을 수 없는 광야 생활에서 공동체의 보건을 위해 예방할 수 있는 절차</strong>를 주십니다.
+            <div class="quote">
+                <strong>예방은 문제를 작게 만듭니다.</strong>
+            </div>
+            성경에서 '부정하다'는 말을 언급하는 것은 <strong>깨끗하지 못한 것을 예방하여 생육하고 번성하는 복을 주시기 위함</strong>입니다.
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 민수기 18~19장 '소금 언약'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 민수기 18장 -->
+        <div class="chapter-title">민수기 18장 (1~32절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 아론에게 이르시되 너와 네 아들들과 네 조상의 가문은 성소에 대한 죄를 함께 담당할 것이요 너와 네 아들들은 너희의 제사장 직분에 대한 죄를 함께 담당할 것이니라</div>
+        <div class="verse"><span class="verse-num">2</span> 너는 네 형제 레위 지파 곧 네 조상의 지파를 데려다가 너와 함께 있게 하여 너와 네 아들들이 증거의 장막 앞에 있을 때 그들이 너를 돕게 하라</div>
+        <div class="verse"><span class="verse-num">3</span> 레위인은 네 직무와 장막의 모든 직무를 지키려니와 성소의 기구와 제단에는 가까이 하지 못하리니 두렵건대 그들과 너희가 죽을까 하노라</div>
+        <div class="verse"><span class="verse-num">4</span> 레위인은 너와 합동하여 장막의 모든 일과 회막의 직무를 다할 것이요 다른 사람은 너희에게 가까이 하지 못할 것이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 이와 같이 너희는 성소의 직무와 제단의 직무를 다하라 그리하면 여호와의 진노가 다시는 이스라엘 자손에게 미치지 아니하리라</div>
+        <div class="verse"><span class="verse-num">6</span> 보라 내가 이스라엘 자손 중에서 너희의 형제 레위인을 택하여 내게 돌리고 너희에게 선물로 주어 회막의 일을 하게 하였나니</div>
+        <div class="verse"><span class="verse-num">7</span> 너와 네 아들들은 제단과 휘장 안의 모든 일에 대하여 제사장의 직분을 지켜 섬기라 내가 제사장의 직분을 너희에게 선물로 주었은즉 거기 가까이 하는 외인은 죽임을 당할지니라</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와께서 또 아론에게 이르시되 보라 내가 내 거제물 곧 이스라엘 자손이 거룩하게 한 모든 헌물을 네가 주관하게 하고 네가 기름 부음을 받았음으로 말미암아 그것을 너와 네 아들들에게 영구한 몫의 음식으로 주노라</div>
+        <div class="verse"><span class="verse-num">9</span> 지성물 중에 불사르지 아니한 것은 네 것이라 그들이 내게 드리는 모든 헌물의 모든 소제와 속죄제와 속건제물은 다 지극히 거룩한즉 너와 네 아들들에게 돌리리니</div>
+        <div class="verse"><span class="verse-num">10</span> 지극히 거룩하게 여김으로 먹으라 이는 네게 성물인즉 남자들이 다 먹을지니라</div>
+        <div class="verse"><span class="verse-num">11</span> 네게 돌릴 것은 이것이니 곧 이스라엘 자손이 드리는 거제물과 모든 요제물이라 내가 그것을 너와 네 자녀에게 영구한 몫의 음식으로 주었은즉 네 집의 정결한 자마다 먹을 것이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그들이 여호와께 드리는 첫 소산 곧 제일 좋은 기름과 제일 좋은 포도주와 곡식을 네게 주었은즉</div>
+        <div class="verse"><span class="verse-num">13</span> 그들이 여호와께 드리는 그 땅의 처음 익은 모든 열매는 네 것이니 네 집에서 정결한 자마다 먹을 것이라</div>
+        <div class="verse"><span class="verse-num">14</span> 이스라엘 중에서 특별히 드린 모든 것은 네 것이 되리라</div>
+        <div class="verse"><span class="verse-num">15</span> 여호와께 드리는 모든 생물의 처음 나는 것은 사람이나 짐승이나 다 네 것이로되 처음 태어난 사람은 반드시 대속할 것이요 처음 태어난 부정한 짐승도 대속할 것이며</div>
+        <div class="verse"><span class="verse-num">16</span> 그 사람을 대속할 때에는 난 지 한 달 이후에 네가 정한 대로 성소의 세겔을 따라 은 다섯 세겔로 대속하라 한 세겔은 이십 게라이니라</div>
+        <div class="verse"><span class="verse-num">17</span> 오직 처음 태어난 소나 처음 태어난 양이나 처음 태어난 염소는 대속하지 말지니 그것들은 거룩한즉 그 피는 제단에 뿌리고 그 기름은 불살라 여호와께 향기로운 화제로 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">18</span> 그 고기는 네게 돌릴지니 흔든 가슴과 오른쪽 넓적다리 같이 네게 돌릴 것이니라</div>
+        <div class="verse"><span class="verse-num">19</span> 이스라엘 자손이 여호와께 거제로 드리는 모든 성물은 내가 영구한 몫의 음식으로 너와 네 자녀에게 주노니 이는 여호와 앞에 너와 네 후손에게 영원한 소금 언약이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와께서 또 아론에게 이르시되 너는 이스라엘 자손의 땅에 기업도 없겠고 그들 중에 아무 분깃도 없을 것이나 내가 이스라엘 자손 중에 네 분깃이요 네 기업이니라</div>
+        <div class="verse"><span class="verse-num">21</span> 내가 이스라엘의 십일조를 레위 자손에게 기업으로 다 주어서 그들이 하는 일 곧 회막에서 하는 일을 갚나니</div>
+        <div class="verse"><span class="verse-num">22</span> 이 후로는 이스라엘 자손이 회막에 가까이 하지 말 것이라 죄값으로 죽을까 하노라</div>
+        <div class="verse"><span class="verse-num">23</span> 그러나 레위인은 회막에서 봉사하며 자기들의 죄를 담당할 것이요 이스라엘 자손 중에는 기업이 없을 것이니 이는 너희 대대에 영원한 율례라</div>
+        <div class="verse"><span class="verse-num">24</span> 이스라엘 자손이 여호와께 거제로 드리는 십일조를 레위인에게 기업으로 주었으므로 내가 그들에 대하여 말하기를 이스라엘 자손 중에 기업이 없을 것이라 하였노라</div>
+        <div class="verse"><span class="verse-num">25</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">26</span> 너는 레위인에게 말하여 그에게 이르라 내가 이스라엘 자손에게 받아 너희에게 기업으로 준 십일조를 너희가 그들에게서 받을 때에 그 십일조의 십일조를 거제로 여호와께 드릴 것이라</div>
+        <div class="verse"><span class="verse-num">27</span> 내가 너희의 거제물을 타작 마당에서 드리는 곡물과 포도즙 틀에서 드리는 즙 같이 여기리니</div>
+        <div class="verse"><span class="verse-num">28</span> 너희는 이스라엘 자손에게서 받는 모든 것의 십일조 중에서 여호와께 거제로 드리고 여호와께 드린 그 거제물은 제사장 아론에게로 돌리되</div>
+        <div class="verse"><span class="verse-num">29</span> 너희가 받은 모든 헌물 중에서 너희는 그 아름다운 것 곧 거룩하게 한 부분을 가져다가 여호와께 거제로 드릴지니라</div>
+        <div class="verse"><span class="verse-num">30</span> 이러므로 너는 그들에게 이르라 너희가 그 중에서 아름다운 것을 가져다가 드리고 남은 것은 너희 레위인에게는 타작 마당의 소출과 포도즙 틀의 소출 같이 되리니</div>
+        <div class="verse"><span class="verse-num">31</span> 너희와 너희의 권속이 어디서든지 이것을 먹을 수 있음은 이는 회막에서 일한 너희의 보수임이니라</div>
+        <div class="verse"><span class="verse-num">32</span> 너희가 그 중 아름다운 것을 받들어 드린즉 이로 말미암아 죄를 담당하지 아니할 것이라 너희는 이스라엘 자손의 성물을 더럽히지 말라 그리하여야 죽지 아니하리라</div>
+
+        <!-- 민수기 19장 -->
+        <div class="chapter-title">민수기 19장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세와 아론에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와께서 명령하시는 법의 율례를 이제 이르노니 이스라엘 자손에게 일러서 온전하여 흠이 없고 아직 멍에 메지 아니한 붉은 암송아지를 네게로 끌어오게 하고</div>
+        <div class="verse"><span class="verse-num">3</span> 너는 그것을 제사장 엘르아살에게 줄 것이요 그는 그것을 진영 밖으로 끌어내어서 자기 목전에서 잡게 할 것이며</div>
+        <div class="verse"><span class="verse-num">4</span> 제사장 엘르아살은 손가락에 그 피를 찍고 그 피를 회막 앞을 향하여 일곱 번 뿌리고</div>
+        <div class="verse"><span class="verse-num">5</span> 그 암소를 자기 목전에서 불사르게 하되 그 가죽과 고기와 피와 똥을 불사르게 하고</div>
+        <div class="verse"><span class="verse-num">6</span> 동시에 제사장은 백향목과 우슬초와 홍색 실을 가져다가 암송아지를 사르는 불 가운데에 던질 것이며</div>
+        <div class="verse"><span class="verse-num">7</span> 제사장은 자기의 옷을 빨고 물로 몸을 씻은 후에 진영에 들어갈 것이라 그는 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">8</span> 송아지를 불사른 자도 자기의 옷을 물로 빨고 물로 그 몸을 씻을 것이라 그도 저녁까지 부정하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 이에 정결한 자가 암송아지의 재를 거두어 진영 밖 정한 곳에 둘지니 이것은 이스라엘 자손 회중을 위하여 간직하였다가 부정을 씻는 물을 위해 간직할지니 그것은 속죄제니라</div>
+        <div class="verse"><span class="verse-num">10</span> 암송아지의 재를 거둔 자도 자기의 옷을 빨 것이며 저녁까지 부정하리라 이는 이스라엘 자손과 그중에 거류하는 외인에게 영원한 율례니라</div>
+        <div class="verse"><span class="verse-num">11</span> 사람의 시체를 만진 자는 이레 동안 부정하리니</div>
+        <div class="verse"><span class="verse-num">12</span> 그는 셋째 날과 일곱째 날에 잿물로 자신을 정결하게 할 것이라 그리하면 정하려니와 셋째 날과 일곱째 날에 자신을 정결하게 하지 아니하면 그냥 부정하니</div>
+        <div class="verse"><span class="verse-num">13</span> 누구든지 죽은 사람의 시체를 만지고 자신을 정결하게 하지 아니하는 자는 여호와의 성막을 더럽힘이라 그가 이스라엘에서 끊어질 것은 정결하게 하는 물을 그에게 뿌리지 아니하므로 깨끗하게 되지 못하고 그 부정함이 그대로 있음이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 장막에서 사람이 죽을 때의 법은 이러하니 누구든지 그 장막에 들어가는 자와 그 장막에 있는 자가 이레 동안 부정할 것이며</div>
+        <div class="verse"><span class="verse-num">15</span> 뚜껑을 열어 놓고 덮지 아니한 그릇은 모두 부정하니라</div>
+        <div class="verse"><span class="verse-num">16</span> 누구든지 들에서 칼에 죽은 자나 시체나 사람의 뼈나 무덤을 만졌으면 이레 동안 부정하리니</div>
+        <div class="verse"><span class="verse-num">17</span> 그 부정한 자를 위하여 죄를 깨끗하게 하려고 불사른 재를 가져다가 흐르는 물과 함께 그릇에 담고</div>
+        <div class="verse"><span class="verse-num">18</span> 정결한 자가 우슬초를 가져다가 그 물을 찍어 장막과 그 모든 기구와 거기 있는 사람들에게 뿌리고 또 뼈나 죽임을 당한 자나 시체나 무덤을 만진 자에게 뿌리되</div>
+        <div class="verse"><span class="verse-num">19</span> 그 정결한 자가 셋째 날과 일곱째 날에 그 부정한 자에게 뿌려서 일곱째 날에 그를 정결하게 할 것이며 그는 자기 옷을 빨고 물로 몸을 씻을 것이라 저녁이면 정결하리라</div>
+        <div class="verse"><span class="verse-num">20</span> 사람이 부정하고도 자신을 정결하게 하지 아니하면 여호와의 성소를 더럽힘이니 그러므로 회중 가운데에서 끊어질 것이니라 그는 정결하게 하는 물로 뿌림을 받지 아니하였은즉 부정하니라</div>
+        <div class="verse"><span class="verse-num">21</span> 이는 그들의 영구한 율례니라 정결하게 하는 물을 뿌린 자는 자기의 옷을 빨 것이며 정결하게 하는 물을 만지는 자는 저녁까지 부정할 것이며</div>
+        <div class="verse"><span class="verse-num">22</span> 부정한 자가 만진 것은 무엇이든지 부정할 것이며 그것을 만지는 자도 저녁까지 부정하리라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

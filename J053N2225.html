@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 053</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 053</h1>
+        <p class="sub-title">찬송가 258장 샘물과 같은 보혈은</p>
+        <p class="sub-title">민수기 22~25장 — 레반트 국가들의 긴장 / 하나님의 뜻 앞에서 순종과 거절, 어떤 선택을 하고 계십니까?</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 258장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1-uTA5SvY64ZTT932VMH_HcpUtHUNdVqB" alt="찬송가 258장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 민수기 22장~25장<br>'레반트 국가들의 긴장 / 하나님의 뜻 앞에서 순종과 거절, 어떤 선택을 하고 계십니까?'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 출애굽 40년 만에 고대 근동의 여러 나라가 이스라엘 군대를 두려워하고, 떨며, 긴장합니다.</span>
+            모세는 만나세대들과 함께 <strong>요단 동편 지역, 즉 아모리 왕과 바산 왕이 통치하는 지역을 먼저 점령함으로</strong> 앞으로의 여호수아의 전쟁을 미리 준비해 놓습니다. 모세가 만나세대들과 함께 요단 동편 지역을 순식간에 점령하자 <strong>레반트 지역의 모든 나라가 이스라엘 군대를 두려워합니다.</strong><br><br>
+            이는 40여 년 전, 가데스 바네아에서 가나안 정탐 사건 때 드린 <strong>모세의 기도가 현실이 되었음</strong>을 보여준 것입니다. 당시 모세는 이스라엘 백성들을 위해 중보 기도하면서 이미 <strong>'주의 명성을 들은 여러 나라'</strong>를 언급했었습니다.<br><br>
+            그러나 출애굽 세대의 불순종으로 지난 40여 년 동안은 여러 민족에게 무시받는 정도밖에 안 되었습니다. 하지만 만나세대의 순종으로 이제 <strong>여러 나라가 이스라엘을 보면서 하나님의 백성이라는 명성 때문에 두려워 떨고 있습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 아말렉족과 모압족이 보여준 비겁한 행동은 비슷합니다.</span>
+            40여 년 전, 오랜 노예 생활 끝에 출애굽한 이스라엘이 홍해를 건넜을 때 <strong>아말렉 족들은 진영에서 뒤처진 이스라엘의 노약자들을 공격해 그들의 물건을 탈취했습니다</strong>(신 25:17~18). 당시 아말렉 족속들이 조금만 성숙한 민족이었다면 국제구호단체가 되어 이스라엘 백성들을 도와주어야 했습니다.<br><br>
+            아말렉 족들의 악행에 대해 <strong>하나님께서는 두 번에 걸쳐 처벌하셨습니다.</strong>
+            <div class="quote">
+                <strong>첫 번째,</strong> 여호수아가 아말렉과 싸워 이기게 하셨습니다(출 17:13).<br>
+                <strong>두 번째,</strong> 사울 왕 때에 아말렉과 싸워 이기게 하셨습니다(삼상 15:8).
+            </div>
+            그런데 이번에는 <strong>모압 왕 발락이 이스라엘에게 비겁한 행동을 합니다.</strong> 이스라엘을 두렵게 여긴 모압 왕이 <strong>'저주'라는 비겁한 술수를 쓴 것</strong>입니다(민 22:4~6).
+            <div class="quote">
+                <strong>하나님께서 아브라함의 후손인 이스라엘을 제사장 나라 거룩한 시민으로 삼으신 이유는 바로 이러한 나라들을 포함해 '모든 민족'의 수준을 결국 높이기 위함이셨습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 에돔과 모압은 그들의 자주 국방의 수고가 아닌 '하나님의 오래된 약속' 때문에 나라를 지킨 것입니다.</span>
+            에돔과 모압은 이스라엘의 가나안 정복 전쟁 중에도 <strong>땅을 빼앗기지 않고 그들의 나라를 끝까지 지킵니다.</strong> 그들이 자주 국방의 힘으로 나라를 지킨 것이 아닙니다. 사실 그때 이스라엘은 얼마든지 그들과 싸워 이길 수 있는 강한 군대였습니다. 그러나 이스라엘이 에돔과 싸우지 않고 길을 우회한 이유는 창세기에서 보았듯이 <strong>하나님께서 이미 에돔에게 주신 약속과 명령이 있었기 때문</strong>입니다. 모압과도 마찬가지입니다. <strong>하나님께서 일찍이 아브라함과 롯에게 주신 약속 때문</strong>입니다(창 19:37).
+            <div class="quote">
+                <strong>이처럼 에돔과 모압이 이스라엘 군대의 공격을 받지 않고 나라를 지킬 수 있는 것은 그들의 힘이나 술수나 수고 때문이 아닙니다. 이는 하나님의 제사장 나라 '세계의 경영 원칙' 때문입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 성경에 발락의 헛수고와 발람의 헛발질이 기록된 것은 '이유'가 있습니다.</span>
+            모압 왕 발락은 이스라엘에 대한 두려움이 밀려오자 끊임없이 생존 전략을 찾습니다. 모압 왕은 복채를 받고 예언해 주는 복술가 발람에게 <strong>이스라엘 백성들을 저주해 줄 것을 수차례에 걸쳐 간청합니다.</strong> 그러는 가운데 하나님께서 나귀의 입을 열게 하시는 사건도 일어났던 것입니다.<br><br>
+            발락 왕과 복술가 발람의 잔꾀는 한마디로 <strong>'완전한 헛수고'</strong>입니다. 예언하는 자리를 바꾸어 '달리' 본다고 해서 상황이 달라지는 것이 아니기 때문입니다. <strong>동서남북 모든 공간이 다 하나님의 소유이고 하나님의 창조 공간입니다.</strong> 연대를 정하시며 거주의 경계를 한정하시는 분은 오직 하나님이십니다(행 17:26).
+            <div class="quote">
+                <strong>"세계가 다 하나님께 속했다"</strong> (출 19:5)
+            </div>
+            이것이 하나님 세계 경영에서 가장 중요한 명제입니다. 이스라엘도 하나님의 세계 경영의 원칙에 어긋나면 반드시 처벌을 받습니다.
+            <div class="quote">
+                <strong>하나님께서는 만약 그들이 하나님을 떠나면 여러 민족 가운데 흩을 것이라고 미리 말씀해 주십니다.</strong> (신 4:24~27)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 비느하스는 시기를 받을 정도로 열심을 냅니다.</span>
+            모압 왕 발락은 '저주 방책'이 실패하자, 거짓 복술가 발람의 꾀를 받아들여 <strong>'모압 제사 초청 사건'을 만듭니다.</strong> 끊임없이 악한 꾀를 내는 발락과 발람의 꾐에 빠진 이스라엘 백성들 때문에 결국 <strong>하나님께서 진노하십니다.</strong> 싯딤 골짜기에서의 우상숭배와 음행 사건으로 <strong>이스라엘 백성들 24,000명을 죽게 하십니다.</strong><br><br>
+            이런 위기 상황에서 이스라엘 자손 한 사람이 미디안의 한 여인을 데리고 막사로 들어가는 것을 보고 <strong>대제사장 아론의 손자이자 엘르아살의 아들인 비느하스가 의로운 분노를 느껴 그들을 죽입니다.</strong> 하나님께서는 이 같은 비느하스의 용기 있는 행동에 대해 이렇게 평가하십니다.
+            <div class="quote">
+                <strong>"내 질투심으로 질투하여"</strong>
+            </div>
+            그리고 진노를 돌이키심으로 <strong>이스라엘이 진멸되지 않게 하십니다</strong>(민 25:6~15).<br><br>
+            비느하스의 열심을 통해 제사장 나라 <strong>첫 대제사장 아론 → 아론의 아들 엘르아살 → 엘르아살의 아들 비느하스</strong>로 이어지는 대제사장 가문의 '열심'이 식지 않고 더욱 뜨거워졌다는 것을 알 수 있습니다.
+            <div class="quote">
+                <strong>그래서 결국 이들 제사장 그룹이 이후 여리고성 정복 때에 무장한 이스라엘 군인들과 함께 선두에 서서 용감하게 여리고성을 돌 수 있는 것입니다.</strong> (수 6:8~9)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 민수기 22~25장 '레반트 국가들의 긴장 / 하나님의 뜻 앞에서 순종과 거절, 어떤 선택을 하고 계십니까?'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 민수기 22장 -->
+        <div class="chapter-title">민수기 22장 (1~41절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘 자손이 또 길을 떠나 모압 평지에 진을 쳤으니 요단 건너편 곧 여리고 맞은편이더라</div>
+        <div class="verse"><span class="verse-num">2</span> 십볼의 아들 발락이 이스라엘이 아모리인에게 행한 모든 일을 보았으므로</div>
+        <div class="verse"><span class="verse-num">3</span> 모압이 심히 두려워하였으니 이스라엘 백성이 많음으로 말미암아 모압이 이스라엘 자손 때문에 번민하더라</div>
+        <div class="verse"><span class="verse-num">4</span> 미디안 장로들에게 이르되 이제 이 무리가 소가 밭의 풀을 뜯어먹음 같이 우리 사방에 있는 것을 다 뜯어먹으리로다 하니 그 때에 십볼의 아들 발락이 모압 왕이었더라</div>
+        <div class="verse"><span class="verse-num">5</span> 그가 사신을 브올의 아들 발람의 고향인 강 가 브돌에 보내어 발람을 부르게 하여 이르되 보라 한 민족이 애굽에서 나왔는데 그들이 지면에 덮여서 우리 맞은편에 거주하였고</div>
+        <div class="verse"><span class="verse-num">6</span> 우리보다 강하니 청하건대 와서 나를 위하여 이 백성을 저주하라 내가 혹 그들을 쳐서 이겨 이 땅에서 몰아내리라 그대가 복을 비는 자는 복을 받고 저주하는 자는 저주를 받을 줄을 내가 앎이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 모압 장로들과 미디안 장로들이 손에 복채를 가지고 떠나 발람에게 이르러 발락의 말을 그에게 전하매</div>
+        <div class="verse"><span class="verse-num">8</span> 발람이 그들에게 이르되 이 밤에 여기서 유숙하라 여호와께서 내게 이르시는 대로 너희에게 대답하리라 모압 귀족들이 발람에게서 유숙하니라</div>
+        <div class="verse"><span class="verse-num">9</span> 하나님이 발람에게 임하여 말씀하시되 너와 함께 있는 이 사람들이 누구냐</div>
+        <div class="verse"><span class="verse-num">10</span> 발람이 하나님께 아뢰되 모압 왕 십볼의 아들 발락이 내게 보낸 자들이니이다 이르기를</div>
+        <div class="verse"><span class="verse-num">11</span> 보라 애굽에서 나온 민족이 지면에 덮였으니 이제 와서 나를 위하여 그들을 저주하라 내가 혹 그들을 쳐서 몰아낼 수 있으리라 하나이다</div>
+        <div class="verse"><span class="verse-num">12</span> 하나님이 발람에게 이르시되 너는 그들과 함께 가지도 말고 그 백성을 저주하지도 말라 그들은 복을 받은 자들이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 발람이 아침에 일어나서 발락의 귀족들에게 이르되 너희는 너희의 땅으로 돌아가라 여호와께서 내가 너희와 함께 가기를 허락하지 아니하시느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 모압 귀족들이 일어나 발락에게로 가서 전하되 발람이 우리와 함께 오기를 거절하더이다</div>
+        <div class="verse"><span class="verse-num">15</span> 발락이 다시 그들보다 더 높은 고관들을 더 많이 보내매</div>
+        <div class="verse"><span class="verse-num">16</span> 그들이 발람에게로 나아가서 그에게 이르되 십볼의 아들 발락의 말씀에 청하건대 아무것에도 거리끼지 말고 내게로 오라</div>
+        <div class="verse"><span class="verse-num">17</span> 내가 그대를 높여 크게 존귀하게 하고 그대가 내게 말하는 것은 무엇이든지 시행하리니 청하건대 와서 나를 위하여 이 백성을 저주하라 하시더이다</div>
+        <div class="verse"><span class="verse-num">18</span> 발람이 발락의 신하들에게 대답하여 이르되 발락이 그 집에 가득한 은금을 내게 줄지라도 내가 능히 여호와 내 하나님의 말씀을 어겨 덜하거나 더하지 못하겠노라</div>
+        <div class="verse"><span class="verse-num">19</span> 그런즉 이제 너희도 이 밤에 여기서 유숙하라 여호와께서 내게 무슨 말씀을 더하실는지 알아보리라</div>
+        <div class="verse"><span class="verse-num">20</span> 밤에 하나님이 발람에게 임하여 이르시되 그 사람들이 너를 부르러 왔거든 일어나 함께 가라 그러나 내가 네게 이르는 말만 준행할지니라</div>
+        <div class="verse"><span class="verse-num">21</span> 발람이 아침에 일어나서 자기 나귀에 안장을 지우고 모압 고관들과 함께 가니</div>
+        <div class="verse"><span class="verse-num">22</span> 그가 감으로 말미암아 하나님이 진노하시므로 여호와의 사자가 그를 막으려고 길에 서니라 발람은 자기 나귀를 탔고 그의 두 종은 그와 함께 있더니</div>
+        <div class="verse"><span class="verse-num">23</span> 나귀가 여호와의 사자가 칼을 빼어 손에 들고 길에 선 것을 보고 길에서 벗어나 밭으로 들어간지라 발람이 나귀를 길로 돌이키려고 채찍질하니</div>
+        <div class="verse"><span class="verse-num">24</span> 여호와의 사자는 포도원 사이 좁은 길에 섰고 좌우에는 담이 있더라</div>
+        <div class="verse"><span class="verse-num">25</span> 나귀가 여호와의 사자를 보고 몸을 담에 대고 발람의 발을 그 담에 짓누르매 발람이 다시 채찍질하니</div>
+        <div class="verse"><span class="verse-num">26</span> 여호와의 사자가 더 나아가서 좌우로 피할 데 없는 좁은 곳에 선지라</div>
+        <div class="verse"><span class="verse-num">27</span> 나귀가 여호와의 사자를 보고 발람 밑에 엎드리니 발람이 노하여 자기 지팡이로 나귀를 때리는지라</div>
+        <div class="verse"><span class="verse-num">28</span> 여호와께서 나귀 입을 여시니 발람에게 이르되 내가 당신에게 무엇을 하였기에 나를 이같이 세 번을 때리느냐</div>
+        <div class="verse"><span class="verse-num">29</span> 발람이 나귀에게 말하되 네가 나를 거역하기 때문이니 내 손에 칼이 있었더면 곧 너를 죽였으리라</div>
+        <div class="verse"><span class="verse-num">30</span> 나귀가 발람에게 이르되 나는 당신이 오늘까지 당신의 일생 동안 탄 나귀가 아니냐 내가 언제 당신에게 이같이 하는 버릇이 있었더냐 그가 말하되 없었느니라</div>
+        <div class="verse"><span class="verse-num">31</span> 그 때에 여호와께서 발람의 눈을 밝히시매 여호와의 사자가 손에 칼을 빼들고 길에 선 것을 그가 보고 머리를 숙이고 엎드리니</div>
+        <div class="verse"><span class="verse-num">32</span> 여호와의 사자가 그에게 이르되 너는 어찌하여 네 나귀를 이같이 세 번 때렸느냐 보라 내 앞에서 네 길이 사악하므로 내가 너를 막으려고 나왔더니</div>
+        <div class="verse"><span class="verse-num">33</span> 나귀가 나를 보고 이같이 세 번을 돌이켜 내 앞에서 피하였느니라 나귀가 만일 돌이켜 나를 피하지 아니하였더면 내가 벌써 너를 죽이고 나귀는 살렸으리라</div>
+        <div class="verse"><span class="verse-num">34</span> 발람이 여호와의 사자에게 말하되 내가 범죄하였나이다 당신이 나를 막으려고 길에 서신 줄을 내가 알지 못하였나이다 당신이 이를 기뻐하지 아니하시면 나는 돌아가겠나이다</div>
+        <div class="verse"><span class="verse-num">35</span> 여호와의 사자가 발람에게 이르되 그 사람들과 함께 가라 내가 네게 이르는 말만 말할지니라 발람이 발락의 고관들과 함께 가니라</div>
+        <div class="verse"><span class="verse-num">36</span> 발락은 발람이 온다 함을 듣고 모압 변경의 끝 아르논 가에 있는 성읍까지 가서 그를 영접하고</div>
+        <div class="verse"><span class="verse-num">37</span> 발락은 발람에게 이르되 내가 특별히 사람을 보내어 그대를 부르지 아니하였느냐 그대가 어찌 내게 오지 아니하였느냐 내가 어찌 그대를 높여 존귀하게 하지 못하겠느냐</div>
+        <div class="verse"><span class="verse-num">38</span> 발람이 발락에게 이르되 내가 오기는 하였으나 무엇을 말할 능력이 있으리이까 하나님이 내 입에 주시는 말씀 그것을 말할 뿐이니이다</div>
+        <div class="verse"><span class="verse-num">39</span> 발람이 발락과 동행하여 기럇후솟에 이르러서는</div>
+        <div class="verse"><span class="verse-num">40</span> 발락이 소와 양을 잡아 발람과 그와 함께 한 고관들을 대접하였더라</div>
+        <div class="verse"><span class="verse-num">41</span> 아침에 발락이 발람과 함께 하고 그를 인도하여 바알의 산당에 오르매 발람이 거기서 이스라엘 백성의 진 끝까지 보니라</div>
+
+        <!-- 민수기 23장 -->
+        <div class="chapter-title">민수기 23장 (1~30절)</div>
+        <div class="verse"><span class="verse-num">1</span> 발람이 발락에게 이르되 나를 위하여 여기 제단 일곱을 쌓고 거기 수송아지 일곱 마리와 숫양 일곱 마리를 준비하소서 하매</div>
+        <div class="verse"><span class="verse-num">2</span> 발락이 발람의 말대로 준비한 후에 발락과 발람이 제단에 수송아지와 숫양을 드리니라</div>
+        <div class="verse"><span class="verse-num">3</span> 발람이 발락에게 이르되 당신의 번제물 곁에 서소서 나는 저리로 가리이다 여호와께서 혹시 오셔서 나를 만나시리니 그가 내게 지시하시는 것은 다 당신에게 알리리이다 하고 언덕길로 가니</div>
+        <div class="verse"><span class="verse-num">4</span> 하나님이 발람에게 임하시는지라 발람이 아뢰되 내가 일곱 제단을 쌓고 각 제단에 수송아지와 숫양을 드렸나이다</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와께서 발람의 입에 말씀을 주시며 이르시되 발락에게 돌아가서 이렇게 말할지니라</div>
+        <div class="verse"><span class="verse-num">6</span> 그가 발락에게로 돌아간즉 발락과 모압의 모든 고관이 번제물 곁에 함께 섰더라</div>
+        <div class="verse"><span class="verse-num">7</span> 발람이 예언을 전하여 말하되 발락이 나를 아람에서, 모압 왕이 동쪽 산에서 데려다가 이르기를 와서 나를 위하여 야곱을 저주하라, 와서 이스라엘을 꾸짖으라 하도다</div>
+        <div class="verse"><span class="verse-num">8</span> 하나님이 저주하지 않으신 자를 내가 어찌 저주하며 여호와께서 꾸짖지 않으신 자를 내가 어찌 꾸짖으랴</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 바위 위에서 그들을 보며 작은 산에서 그들을 바라보니 이 백성은 홀로 살 것이라 그를 여러 민족 중의 하나로 여기지 않으리로다</div>
+        <div class="verse"><span class="verse-num">10</span> 야곱의 티끌을 누가 능히 세며 이스라엘 사분의 일을 누가 능히 셀고 나는 의인의 죽음을 죽기 원하며 나의 종말이 그와 같기를 바라노라 하매</div>
+        <div class="verse"><span class="verse-num">11</span> 발락이 발람에게 이르되 그대가 어찌 내게 이같이 행하느냐 나의 원수를 저주하라고 그대를 데려왔거늘 그대가 오히려 축복하였도다</div>
+        <div class="verse"><span class="verse-num">12</span> 발람이 대답하여 이르되 여호와께서 내 입에 주신 말씀을 내가 어찌 말하지 아니할 수 있으리이까</div>
+        <div class="verse"><span class="verse-num">13</span> 발락이 말하되 나와 함께 그들을 달리 볼 곳으로 가자 거기서는 그들을 다 보지 못하고 그들의 끝만 보리니 거기서 나를 위하여 그들을 저주하라 하고</div>
+        <div class="verse"><span class="verse-num">14</span> 소빔 들로 인도하여 비스가 꼭대기에 이르러 일곱 제단을 쌓고 각 제단에 수송아지와 숫양을 드리니</div>
+        <div class="verse"><span class="verse-num">15</span> 발람이 발락에게 이르되 내가 저기서 여호와를 만나뵐 동안에 여기 당신의 번제물 곁에 서소서 하니라</div>
+        <div class="verse"><span class="verse-num">16</span> 여호와께서 발람에게 임하사 그의 입에 말씀을 주시며 이르시되 발락에게로 돌아가서 이렇게 말할지니라</div>
+        <div class="verse"><span class="verse-num">17</span> 발람이 가서 본즉 발락이 번제물 곁에 섰고 모압 고관들이 함께 있더라 발락이 발람에게 이르되 여호와께서 무슨 말씀을 하시더냐</div>
+        <div class="verse"><span class="verse-num">18</span> 발람이 예언하여 이르기를 발락이여 일어나 들을지어다 십볼의 아들이여 내게 자세히 들으라</div>
+        <div class="verse"><span class="verse-num">19</span> 하나님은 사람이 아니시니 거짓말을 하지 않으시고 인생이 아니시니 후회가 없으시도다 어찌 그 말씀하신 바를 행하지 않으시며 하신 말씀을 실행하지 않으시랴</div>
+        <div class="verse"><span class="verse-num">20</span> 내가 축복할 것을 받았으니 그가 주신 복을 내가 돌이키지 않으리라</div>
+        <div class="verse"><span class="verse-num">21</span> 야곱의 허물을 보지 아니하시며 이스라엘의 반역을 보지 아니하시는도다 여호와 그들의 하나님이 그들과 함께 계시니 왕을 부르는 소리가 그 중에 있도다</div>
+        <div class="verse"><span class="verse-num">22</span> 하나님이 그들을 애굽에서 인도하여 내셨으니 그의 힘이 들소와 같도다</div>
+        <div class="verse"><span class="verse-num">23</span> 야곱을 해할 점술이 없고 이스라엘을 해할 복술이 없도다 이 때에 야곱과 이스라엘에 대하여 논할진대 하나님께서 행하신 일이 어찌 그리 크냐 하리로다</div>
+        <div class="verse"><span class="verse-num">24</span> 이 백성이 암사자 같이 일어나고 수사자 같이 일어나서 움킨 것을 먹으며 죽인 피를 마시기 전에는 눕지 아니하리로다 하매</div>
+        <div class="verse"><span class="verse-num">25</span> 발락이 발람에게 이르되 그들을 저주하지도 말고 축복하지도 말라</div>
+        <div class="verse"><span class="verse-num">26</span> 발람이 발락에게 대답하여 이르되 내가 당신에게 말하여 이르기를 여호와께서 말씀하신 것은 내가 그대로 하지 않을 수 없다고 하지 아니하더이까</div>
+        <div class="verse"><span class="verse-num">27</span> 발락이 발람에게 또 이르되 오라 내가 너를 다른 곳으로 인도하리니 네가 거기서 나를 위하여 그들을 저주하기를 하나님이 혹시 기뻐하시리라 하고</div>
+        <div class="verse"><span class="verse-num">28</span> 발락이 발람을 인도하여 광야가 내려다 보이는 브올 산 꼭대기에 이르니</div>
+        <div class="verse"><span class="verse-num">29</span> 발람이 발락에게 이르되 나를 위하여 여기 일곱 제단을 쌓고 거기 수송아지 일곱 마리와 숫양 일곱 마리를 준비하소서</div>
+        <div class="verse"><span class="verse-num">30</span> 발락이 발람의 말대로 행하여 각 제단에 수송아지와 숫양을 드리니라</div>
+
+        <!-- 민수기 24장 -->
+        <div class="chapter-title">민수기 24장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 발람이 자기가 이스라엘을 축복하는 것을 여호와께서 선히 여기심을 보고 전과 같이 점술을 쓰지 아니하고 그의 낯을 광야로 향하여</div>
+        <div class="verse"><span class="verse-num">2</span> 눈을 들어 이스라엘이 그 지파대로 천막 친 것을 보는데 그 때에 하나님의 영이 그 위에 임하신지라</div>
+        <div class="verse"><span class="verse-num">3</span> 그가 예언을 전하여 말하되 브올의 아들 발람이 말하며 눈을 감았던 자가 말하며</div>
+        <div class="verse"><span class="verse-num">4</span> 하나님의 말씀을 듣는 자, 전능자의 환상을 보는 자, 엎드려서 눈을 뜬 자가 말하기를</div>
+        <div class="verse"><span class="verse-num">5</span> 야곱이여 네 장막들이, 이스라엘이여 네 거처들이 어찌 그리 아름다운고</div>
+        <div class="verse"><span class="verse-num">6</span> 그 벌어짐이 골짜기 같고 강 가의 동산 같으며 여호와께서 심으신 침향목들 같고 물 가의 백향목들 같도다</div>
+        <div class="verse"><span class="verse-num">7</span> 그 물통에서는 물이 넘치겠고 그 씨는 많은 물 가에 있으리로다 그의 왕이 아각보다 높으니 그의 나라가 흥왕하리로다</div>
+        <div class="verse"><span class="verse-num">8</span> 하나님이 그를 애굽에서 인도하여 내셨으니 그 힘이 들소와 같도다 그의 적국을 삼키고 그들의 뼈를 꺾으며 화살로 쏘아 꿰뚫으리로다</div>
+        <div class="verse"><span class="verse-num">9</span> 꿇어 앉고 누움이 수사자와 같고 암사자와도 같으니 일으킬 자 누구이랴 너를 축복하는 자마다 복을 받을 것이요 너를 저주하는 자마다 저주를 받을지로다</div>
+        <div class="verse"><span class="verse-num">10</span> 발락이 발람에게 노하여 손뼉을 치며 말하되 내가 그대를 부른 것은 내 원수를 저주하라는 것이어늘 그대가 이같이 세 번 그들을 축복하였도다</div>
+        <div class="verse"><span class="verse-num">11</span> 그러므로 그대는 이제 그대의 곳으로 달아나라 내가 그대를 높여 심히 존귀하게 하기로 뜻하였더니 여호와께서 그대를 막아 존귀하지 못하게 하셨도다</div>
+        <div class="verse"><span class="verse-num">12</span> 발람이 발락에게 이르되 당신이 내게 보낸 사신들에게 내가 말하여 이르지 아니하였나이까</div>
+        <div class="verse"><span class="verse-num">13</span> 가령 발락이 그 집에 가득한 은금을 내게 줄지라도 나는 여호와의 말씀을 어기고 선악간에 내 마음대로 행하지 못하고 여호와께서 말씀하신 대로 말하리라 하지 아니하였나이까</div>
+        <div class="verse"><span class="verse-num">14</span> 이제 나는 내 백성에게로 돌아가거니와 들으소서 내가 이 백성이 후일에 당신의 백성에게 어떻게 할지를 당신에게 말하리이다 하고</div>
+        <div class="verse"><span class="verse-num">15</span> 예언하여 이르기를 브올의 아들 발람이 말하며 눈을 감았던 자가 말하며</div>
+        <div class="verse"><span class="verse-num">16</span> 하나님의 말씀을 듣는 자가 말하며 지극히 높으신 자의 지식을 아는 자, 전능자의 환상을 보는 자, 엎드려서 눈을 뜬 자가 말하기를</div>
+        <div class="verse"><span class="verse-num">17</span> 내가 그를 보아도 이 때의 일이 아니며 내가 그를 바라보아도 가까운 일이 아니로다 한 별이 야곱에게서 나오며 한 규가 이스라엘에게서 일어나서 모압을 이쪽에서 저쪽까지 쳐서 무찌르고 또 셋의 자식들을 다 멸하리로다</div>
+        <div class="verse"><span class="verse-num">18</span> 그의 원수 에돔은 그들의 유산이 되며 그의 원수 세일도 그들의 유산이 되고 그와 동시에 이스라엘은 용감히 행동하리로다</div>
+        <div class="verse"><span class="verse-num">19</span> 주권자가 야곱에게서 나서 남은 자들을 그 성읍에서 멸절하리로다 하고</div>
+        <div class="verse"><span class="verse-num">20</span> 또 아말렉을 바라보며 예언하여 이르기를 아말렉은 민족들의 으뜸이나 그의 종말은 멸망에 이르리로다 하고</div>
+        <div class="verse"><span class="verse-num">21</span> 또 겐 족속을 바라보며 예언하여 이르기를 네 거처가 견고하고 네 보금자리는 바위에 있도다</div>
+        <div class="verse"><span class="verse-num">22</span> 그러나 가인이 쇠약하리니 나중에는 앗수르의 포로가 되리로다 하고</div>
+        <div class="verse"><span class="verse-num">23</span> 또 예언하여 이르기를 슬프다 하나님이 이 일을 행하시리니 그 때에 살 자가 누구이랴</div>
+        <div class="verse"><span class="verse-num">24</span> 깃딤 해변에서 배들이 와서 앗수르를 학대하며 에벨을 괴롭힐 것이나 그도 멸망하리로다 하고</div>
+        <div class="verse"><span class="verse-num">25</span> 발람이 일어나 자기 곳으로 돌아가고 발락도 자기 길로 갔더라</div>
+
+        <!-- 민수기 25장 -->
+        <div class="chapter-title">민수기 25장 (1~18절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘이 싯딤에 머물러 있더니 그 백성이 모압 여자들과 음행하기를 시작하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 그 여자들이 자기 신들에게 제사할 때에 이스라엘 백성을 청하매 백성이 먹고 그들의 신들에게 절하므로</div>
+        <div class="verse"><span class="verse-num">3</span> 이스라엘이 바알브올에게 가담한지라 여호와께서 이스라엘에게 진노하시니라</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와께서 모세에게 이르시되 백성의 수령들을 잡아 태양을 향하여 여호와 앞에 목매어 달라 그리하면 여호와의 진노가 이스라엘에게서 떠나리라</div>
+        <div class="verse"><span class="verse-num">5</span> 모세가 이스라엘 재판관들에게 이르되 너희는 각각 바알브올에게 가담한 사람들을 죽이라 하니라</div>
+        <div class="verse"><span class="verse-num">6</span> 이스라엘 자손의 온 회중이 회막 문에서 울 때에 이스라엘 자손 한 사람이 모세와 온 회중의 눈앞에 미디안의 한 여인을 데리고 그의 형제에게로 온지라</div>
+        <div class="verse"><span class="verse-num">7</span> 제사장 아론의 손자 엘르아살의 아들 비느하스가 보고 회중 가운데에서 일어나 손에 창을 들고</div>
+        <div class="verse"><span class="verse-num">8</span> 그 이스라엘 남자를 따라 그의 막사에 들어가 이스라엘 남자와 그 여인의 배를 꿰뚫어서 두 사람을 죽이니 염병이 이스라엘 자손에게서 그쳤더라</div>
+        <div class="verse"><span class="verse-num">9</span> 그 염병으로 죽은 자가 이만 사천 명이었더라</div>
+        <div class="verse"><span class="verse-num">10</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">11</span> 제사장 아론의 손자 엘르아살의 아들 비느하스가 내 질투심으로 질투하여 이스라엘 자손 중에서 내 노를 돌이켜서 내 질투심으로 그들을 소멸하지 않게 하였도다</div>
+        <div class="verse"><span class="verse-num">12</span> 그러므로 말하라 내가 그에게 내 평화의 언약을 주리니</div>
+        <div class="verse"><span class="verse-num">13</span> 그와 그의 후손에게 영원한 제사장 직분의 언약이라 그가 그의 하나님을 위하여 질투하여 이스라엘 자손을 속죄하였음이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 죽임을 당한 이스라엘 남자 곧 미디안 여인과 함께 죽임을 당한 자의 이름은 시므리니 살루의 아들이요 시므온인의 조상의 가문 중 한 지도자이며</div>
+        <div class="verse"><span class="verse-num">15</span> 죽임을 당한 미디안 여인의 이름은 고스비이니 수르의 딸이라 수르는 미디안 백성의 한 조상의 가문의 수령이었더라</div>
+        <div class="verse"><span class="verse-num">16</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">17</span> 미디안인들을 대적하여 그들을 치라</div>
+        <div class="verse"><span class="verse-num">18</span> 이는 그들이 속임수로 너희를 대적하되 브올의 일과 미디안 지휘관의 딸 곧 브올의 일로 염병이 일어난 날에 죽임을 당한 그들의 자매 고스비의 사건으로 너희를 유혹하였음이니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

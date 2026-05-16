@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 044</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 044</h1>
+        <p class="sub-title">찬송가 450장 내 평생소원 이것뿐</p>
+        <p class="sub-title">민수기 3~4장 — 제사장 나라 회막, 공직자 8,580명!</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 450장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1Di9kjESRBzeGyh7j1-NRgmVVRc4HAt4r" alt="찬송가 450장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 민수기 3장~4장<br>'제사장 나라 회막, 공직자 8,580명!'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 민수기 인구 조사의 목적은 군대와 교육, 두 가지입니다.</span>
+            하나님께서 출애굽한 이스라엘 백성들의 인구 조사를 하게 하신 여러 이유 중 하나는 <strong>열두 지파의 20세 이상 싸움에 나갈 만한 남자들의 숫자를 통해 군대를 조직하시고자 함</strong>입니다. 이스라엘의 군대는 다른 나라들의 군대와 달리 <strong>하나님의 방법으로 싸우는 여호와의 군대</strong>입니다.<br><br>
+            이스라엘 군인들인 열두 지파의 싸움에 나갈 만한 20세 이상의 남자들은 모두 <strong>현역 군인이자 동시에 생업에 종사하는 평범한 사람들</strong>입니다. 그들은 전쟁에 대비해 매일 군사 훈련을 하며 일상을 보내는 사람들이 아니라, <strong>제사장 나라 거룩한 시민의 율법을 공부하는 사람들</strong>입니다.
+            <div class="quote">
+                <strong>이스라엘 군인들의 훈련은 하나님께서 주신 율법을 지켜 행하면 대적과 싸울 때 다섯이 백을 이긴다는 믿음을 학습하는 것입니다.</strong> 즉 하나님께서는 인구 조사를 통해 이스라엘의 군대를 조직함과 동시에 <strong>제사장 나라 교육을 더욱 강화하십니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 민수기 인구 조사는 출애굽 유월절에 그 근거를 둡니다.</span>
+            애굽에서의 첫 번째 유월절 때 하나님께서 <strong>이스라엘 열세 지파의 장자들을 모두 살려주셨습니다.</strong> 그래서 이때 살아난 이스라엘 장자들과 짐승의 초태생은 모두 <strong>하나님의 소유</strong>라고 선언하셨습니다.<br><br>
+            이후 하나님께서는 이스라엘 백성들을 1년 동안 시내 광야에 머물게 하시며 제사장 나라를 교육하신 후 두 가지 방식으로 인구 조사를 하게 하십니다.
+            <div class="quote">
+                <strong>첫째,</strong> 20세 이상 싸움에 나갈 만한 남자들의 숫자를 계수합니다.<br><br>
+                <strong>둘째,</strong> 이스라엘 장자들의 숫자와 레위 지파의 1개월 이상 된 남자들의 숫자를 계수합니다.
+            </div>
+            이렇게 해서 <strong>열두 지파 장자들 22,273명, 레위 지파의 1개월 이상 된 남자들 22,000명</strong>이 계수됩니다. 하나님께서는 레위 지파 사람들이 열두 지파 장자들보다 273명이 부족해 그만큼 일을 더해야 하니 <strong>273명에 대한 속전을 레위 지파에게 주어 그들의 수고에 보답하게 하십니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 제사장 나라의 공직자인 회막 공무원은 8,580명입니다.</span>
+            하나님께서 명령하신 레위 지파의 인구 조사 기준은 <strong>세 가지</strong>입니다(민 4:34~39).
+            <div class="quote">
+                <strong>첫째,</strong> 생후 1개월 이상 된 남자들<br><br>
+                <strong>둘째,</strong> 30세 이상 50세까지 남자들<br><br>
+                <strong>셋째,</strong> 고핫 자손, 게르손 자손, 므라리 자손으로 구분한 남자들 계수
+            </div>
+            레위인은 태어난 지 1개월만 되면 계수되고, <strong>30년을 준비하여 20년 일하고 현역에서 물러나는 50세 이후에는</strong> 현역 봉사자들을 도우며 30세 이전에 레위인들을 교육하는 일을 했을 것입니다.<br><br>
+            이러한 기준으로 레위 지파 사람들의 숫자를 다 계수했더니 1개월 이상 된 남자의 총수는 <strong>22,000명</strong>이었고, 30세에서 50세까지 성막에서 현역으로 일할 수 있는 사람의 수는 <strong>8,580명</strong>이었습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 8,580명의 제사장 나라 공직자들은 매일 동분서주합니다.</span>
+            레위 지파의 고핫 자손, 게르손 자손, 므라리 자손은 <strong>제사장을 도와 성막에서 풀타임으로 일을 합니다.</strong> 제사장이 5대 제사를 집례할 때, 나병을 진찰할 때, 서원제를 감정해줄 때, 매일 상번제를 드릴 때, 등잔불을 밝힐 때, 떡을 진설할 때 등 여러모로 제사장을 돕는 일을 합니다.<br><br>
+            뿐만 아니라 그들은 <strong>성막을 지켜야 합니다.</strong> 무단으로 성막을 침입하는 외부인은 죽이기까지 하며 지켜야 합니다.
+            <div class="quote">
+                <strong>이처럼 레위 지파 인구 조사를 통해 계수된 30세에서 50세까지의 8,580명은 제사장 나라 공직자로서 하나님께서 맡겨주신 막중한 사명을 잘 감당해야 합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 레위 지파는 농사를 지을 수도, 고기를 잡을 수도 없습니다.</span>
+            레위 지파는 다른 열두 지파보다 <strong>10년을 더 배우고 준비해서 30세부터 일하며 50세에 은퇴해야 합니다.</strong> 하나님께서 레위 지파의 현역 봉사 기간을 30세에서 50세까지로 정해주신 이유는 <strong>그들의 사명이 그만큼 막중하고 육체적으로 힘든 일이기 때문</strong>입니다.<br><br>
+            하나님께서는 레위 지파 사람들을 농사일이나 고기 잡는 일에서 제외시켜 주시고, <strong>오직 회막에서 제사장의 특권과 사명을 감당하며 일하게 하십니다.</strong> 가정에서 장자가 동생들에게 선한 영향력을 끼치듯, 레위 지파는 열두 지파 사람들에게 <strong>하나님의 율례와 규례와 법도를 열심히 가르쳐야 하는 책임</strong>을 감당해야 합니다.
+            <div class="quote">
+                <strong>다시 말해 레위 지파의 많은 업무 가운데 가장 중요한 일은 이스라엘 백성들에게 하나님을 알게 하는 것입니다.</strong>
+            </div>
+            그리고 하나님께서는 열두 지파에게는 땅을 분배해 각자 자신들의 땅에서 생업에 종사하며 살게 하시고, 그들이 레위 지파의 생계를 책임지도록 하여 <strong>공동체 전체가 제사장 나라의 법으로 충실하게 유지될 수 있도록 하십니다.</strong>
+            <div class="quote">
+                <strong>이것이 하나님께서 제사장 나라, 거룩한 시민 이스라엘에게 주신 법입니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 민수기 3~4장 '제사장 나라 회막, 공직자 8,580명!'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 민수기 3장 -->
+        <div class="chapter-title">민수기 3장 (1~51절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 시내 산에서 모세와 말씀하실 때에 아론과 모세가 낳은 자는 이러하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 아론의 아들들의 이름은 이러하니 장자는 나답이요 다음은 아비후와 엘르아살과 이다말이니</div>
+        <div class="verse"><span class="verse-num">3</span> 이는 아론의 아들들의 이름이며 그들은 기름 부음을 받고 거룩하게 구별되어 제사장 직분을 위임 받은 제사장들이라</div>
+        <div class="verse"><span class="verse-num">4</span> 나답과 아비후는 시내 광야에서 여호와 앞에 다른 불을 드리다가 여호와 앞에서 죽어 자식이 없었으며 엘르아살과 이다말이 그의 아버지 아론 앞에서 제사장의 직분을 행하였더라</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와께서 또 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">6</span> 레위 지파는 나아가 제사장 아론 앞에 서서 그에게 시종하게 하라</div>
+        <div class="verse"><span class="verse-num">7</span> 그들이 회막 앞에서 아론의 직무와 온 회중의 직무를 위하여 회막에서 시무하되</div>
+        <div class="verse"><span class="verse-num">8</span> 곧 회막의 모든 기구를 맡아 지키며 이스라엘 자손의 직무를 위하여 성막에서 시무할지니</div>
+        <div class="verse"><span class="verse-num">9</span> 너는 레위인을 아론과 그의 아들들에게 맡기라 그들은 이스라엘 자손 중에서 아론에게 온전히 맡겨진 자들이니라</div>
+        <div class="verse"><span class="verse-num">10</span> 너는 아론과 그의 아들들을 세워 제사장 직무를 행하게 하라 외인이 가까이 하면 죽임을 당할 것이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">12</span> 보라 내가 이스라엘 자손 중에서 레위인을 택하여 이스라엘 자손 중에 태를 열어 태어난 모든 자를 대신하게 하였은즉 레위인은 내 것이라</div>
+        <div class="verse"><span class="verse-num">13</span> 처음 태어난 자는 다 내 것임은 내가 애굽 땅에서 그 처음 태어난 자를 다 죽이던 날에 이스라엘의 처음 태어난 자는 사람이나 짐승을 다 거룩하게 구별하였음이니 그들은 내 것이 될 것임이니라 나는 여호와이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 여호와께서 시내 광야에서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">15</span> 레위 자손을 그들의 조상의 가문과 종족을 따라 계수하되 일 개월 이상된 남자를 다 계수하라</div>
+        <div class="verse"><span class="verse-num">16</span> 모세가 여호와의 말씀을 따라 그 명령하신 대로 계수하니라</div>
+        <div class="verse"><span class="verse-num">17</span> 레위의 아들들의 이름은 이러하니 게르손과 고핫과 므라리요</div>
+        <div class="verse"><span class="verse-num">18</span> 게르손의 아들들의 이름은 그들의 종족대로 이러하니 립니와 시므이요</div>
+        <div class="verse"><span class="verse-num">19</span> 고핫의 아들들은 그들의 종족대로 이러하니 아므람과 이스할과 헤브론과 웃시엘이요</div>
+        <div class="verse"><span class="verse-num">20</span> 므라리의 아들들은 그들의 종족대로 말리와 무시이니 이는 그의 종족대로 된 레위인의 조상의 가문들이니라</div>
+        <div class="verse"><span class="verse-num">21</span> 게르손에게서는 립니 종족과 시므이 종족이 났으니 이들이 곧 게르손의 조상의 가문들이라</div>
+        <div class="verse"><span class="verse-num">22</span> 계수된 자 곧 일 개월 이상 된 남자의 수효 합계는 칠천오백 명이며</div>
+        <div class="verse"><span class="verse-num">23</span> 게르손 종족들은 성막 뒤 곧 서쪽에 진을 칠 것이요</div>
+        <div class="verse"><span class="verse-num">24</span> 라엘의 아들 엘리아삽은 게르손 사람의 조상의 가문의 지휘관이 될 것이며</div>
+        <div class="verse"><span class="verse-num">25</span> 게르손 자손이 회막에서 맡을 일은 성막과 장막과 그 덮개와 회막 휘장 문과</div>
+        <div class="verse"><span class="verse-num">26</span> 뜰의 휘장과 및 성막과 제단 사방에 있는 뜰의 휘장 문과 그 모든 것에 쓰는 줄들이니라</div>
+        <div class="verse"><span class="verse-num">27</span> 고핫에게서는 아므람 종족과 이스할 종족과 헤브론 종족과 웃시엘 종족이 났으니 이들은 곧 고핫 종족들이라</div>
+        <div class="verse"><span class="verse-num">28</span> 계수된 자로서 출생 후 일 개월 이상 된 남자는 모두 팔천육백 명인데 성소를 맡을 것이며</div>
+        <div class="verse"><span class="verse-num">29</span> 고핫 자손의 종족들은 성막 남쪽에 진을 칠 것이요</div>
+        <div class="verse"><span class="verse-num">30</span> 웃시엘의 아들 엘리사반은 고핫 사람의 종족과 조상의 가문의 지휘관이 될 것이며</div>
+        <div class="verse"><span class="verse-num">31</span> 그들이 맡을 것은 증거궤와 상과 등잔대와 제단들과 성소에서 봉사하는 데 쓰는 기구들과 휘장과 그것에 쓰는 모든 것이며</div>
+        <div class="verse"><span class="verse-num">32</span> 제사장 아론의 아들 엘르아살은 레위인의 지휘관들의 어른이 되고 또 성소를 맡을 자를 통할할 것이니라</div>
+        <div class="verse"><span class="verse-num">33</span> 므라리에게서는 말리 종족과 무시 종족이 났으니 이들은 곧 므라리 종족들이라</div>
+        <div class="verse"><span class="verse-num">34</span> 그 계수된 자 곧 일 개월 이상 된 남자는 모두 육천이백 명이며</div>
+        <div class="verse"><span class="verse-num">35</span> 아비하일의 아들 수리엘은 므라리 종족과 조상의 가문의 지휘관이 될 것이요 이 종족은 성막 북쪽에 진을 칠 것이며</div>
+        <div class="verse"><span class="verse-num">36</span> 므라리 자손이 맡을 것은 성막의 널판과 그 띠와 그 기둥과 그 받침과 그 모든 기구와 그것에 쓰는 모든 것이며</div>
+        <div class="verse"><span class="verse-num">37</span> 뜰 사방 기둥과 그 받침과 그 말뚝과 그 줄들이니라</div>
+        <div class="verse"><span class="verse-num">38</span> 성막 앞 동쪽 곧 회막 앞 해 돋는 쪽에는 모세와 아론과 아론의 아들들이 진을 치고 이스라엘 자손의 직무를 위하여 성소의 직무를 수행할 것이며 외인이 가까이 하면 죽일지니라</div>
+        <div class="verse"><span class="verse-num">39</span> 모세와 아론이 여호와의 명령을 따라 레위인을 각 종족대로 계수한즉 일 개월 이상 된 남자는 모두 이만 이천 명이었더라</div>
+        <div class="verse"><span class="verse-num">40</span> 여호와께서 또 모세에게 이르시되 이스라엘 자손의 처음 태어난 남자를 일 개월 이상으로 다 계수하여 그 명수를 기록하라</div>
+        <div class="verse"><span class="verse-num">41</span> 나는 여호와라 이스라엘 자손 중 모든 처음 태어난 자 대신에 레위인을 내게 돌리고 또 이스라엘 자손의 가축 중 모든 처음 태어난 것 대신에 레위인의 가축을 내게 돌리라</div>
+        <div class="verse"><span class="verse-num">42</span> 모세가 여호와께서 자기에게 명령하신 대로 이스라엘 자손 중 모든 처음 태어난 자를 계수하니</div>
+        <div class="verse"><span class="verse-num">43</span> 일 개월 이상으로 계수된 처음 태어난 남자의 총계는 이만 이천이백칠십삼 명이었더라</div>
+        <div class="verse"><span class="verse-num">44</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">45</span> 이스라엘 자손 중 모든 처음 태어난 자 대신에 레위인을 취하고 또 그들의 가축 대신에 레위인의 가축을 취하라 레위인은 내 것이라 나는 여호와니라</div>
+        <div class="verse"><span class="verse-num">46</span> 이스라엘 자손의 처음 태어난 자가 레위인보다 이백칠십삼 명이 더 많은즉 속전으로</div>
+        <div class="verse"><span class="verse-num">47</span> 한 사람에 다섯 세겔씩 받되 성소의 세겔로 받으라 한 세겔은 이십 게라니라</div>
+        <div class="verse"><span class="verse-num">48</span> 그 더한 자의 속전을 아론과 그의 아들들에게 줄 것이니라</div>
+        <div class="verse"><span class="verse-num">49</span> 모세가 레위인으로 대속한 이외의 사람에게서 속전을 받았으니</div>
+        <div class="verse"><span class="verse-num">50</span> 곧 이스라엘 자손의 처음 태어난 자에게서 받은 돈이 성소의 세겔로 천삼백육십오 세겔이라</div>
+        <div class="verse"><span class="verse-num">51</span> 모세가 이 속전을 여호와의 말씀대로 아론과 그의 아들들에게 주었으니 여호와께서 모세에게 명령하심과 같았느니라</div>
+
+        <!-- 민수기 4장 -->
+        <div class="chapter-title">민수기 4장 (1~49절)</div>
+        <div class="verse"><span class="verse-num">1</span> 또 여호와께서 모세와 아론에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 레위 자손 중에서 고핫 자손을 그들의 종족과 조상의 가문에 따라 집계할지니</div>
+        <div class="verse"><span class="verse-num">3</span> 곧 삼십 세 이상으로 오십 세까지 회막의 일을 하기 위하여 그 역사에 참가할 만한 모든 자를 계수하라</div>
+        <div class="verse"><span class="verse-num">4</span> 고핫 자손이 회막 안의 지성물에 대하여 할 일은 이러하니라</div>
+        <div class="verse"><span class="verse-num">5</span> 진영이 전진할 때에 아론과 그의 아들들이 들어가서 칸 막는 휘장을 걷어 증거궤를 덮고</div>
+        <div class="verse"><span class="verse-num">6</span> 그 위를 해달의 가죽으로 덮고 그 위에 순청색 보자기를 덮은 후에 그 채를 꿰고</div>
+        <div class="verse"><span class="verse-num">7</span> 진설병의 상에 청색 보자기를 펴고 대접들과 숟가락들과 주발들과 붓는 잔들을 그 위에 두고 또 항상 진설하는 떡을 그 위에 두고</div>
+        <div class="verse"><span class="verse-num">8</span> 홍색 보자기를 그 위에 펴고 그것을 해달의 가죽 덮개로 덮은 후에 그 채를 꿰고</div>
+        <div class="verse"><span class="verse-num">9</span> 청색 보자기를 취하여 등잔대와 등잔들과 불 집게들과 불똥 그릇들과 그 쓰는 바 모든 기름 그릇을 덮고</div>
+        <div class="verse"><span class="verse-num">10</span> 등잔대와 그 모든 기구를 해달의 가죽 덮개 안에 넣어 메는 틀 위에 두고</div>
+        <div class="verse"><span class="verse-num">11</span> 금제단 위에 청색 보자기를 펴고 해달의 가죽 덮개로 덮고 그 채를 꿰고</div>
+        <div class="verse"><span class="verse-num">12</span> 성소에서 봉사하는 데에 쓰는 모든 기구를 취하여 청색 보자기에 싸서 해달의 가죽 덮개로 덮어 메는 틀 위에 두고</div>
+        <div class="verse"><span class="verse-num">13</span> 제단의 재를 버리고 그 제단 위에 자색 보자기를 펴고</div>
+        <div class="verse"><span class="verse-num">14</span> 봉사하는 데에 쓰는 모든 기구 곧 불 옮기는 그릇들과 고기 갈고리들과 부삽들과 대야들과 제단의 모든 기구를 두고 해달의 가죽 덮개를 그 위에 덮고 그 채를 꿸 것이며</div>
+        <div class="verse"><span class="verse-num">15</span> 진영을 떠날 때에 아론과 그의 아들들이 성소와 성소의 모든 기구 덮는 일을 마치거든 고핫 자손들이 와서 멜 것이니라 그러나 성물은 만지지 말라 그들이 죽으리라 회막 물건 중에서 이것들은 고핫 자손이 멜 것이며</div>
+        <div class="verse"><span class="verse-num">16</span> 제사장 아론의 아들 엘르아살이 맡을 것은 등유와 태우는 향과 항상 드리는 소제물과 관유이며 또 장막 전체와 그 중에 있는 모든 것과 성소와 그 모든 기구니라</div>
+        <div class="verse"><span class="verse-num">17</span> 여호와께서 또 모세와 아론에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">18</span> 너희는 고핫 족속의 지파를 레위인 중에서 끊어지게 하지 말지니</div>
+        <div class="verse"><span class="verse-num">19</span> 그들이 지성물에 접근할 때에 그들의 생명을 보존하고 죽지 않게 하기 위하여 이같이 하라 아론과 그의 아들들이 들어가서 각 사람에게 그가 할 일과 그가 멜 것을 지휘하게 할지니라</div>
+        <div class="verse"><span class="verse-num">20</span> 그들은 잠시라도 들어가서 성소를 보지 말라 그들이 죽으리라</div>
+        <div class="verse"><span class="verse-num">21</span> 여호와께서 또 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">22</span> 게르손 자손도 그 조상의 가문과 종족에 따라 계수하되</div>
+        <div class="verse"><span class="verse-num">23</span> 삼십 세 이상으로 오십 세까지 회막에서 복무하고 봉사할 모든 자를 계수하라</div>
+        <div class="verse"><span class="verse-num">24</span> 게르손 종족의 할 일과 멜 것은 이러하니</div>
+        <div class="verse"><span class="verse-num">25</span> 곧 그들이 성막의 휘장들과 회막과 그 덮개와 그 위의 해달의 가죽 덮개와 회막 휘장 문을 메며</div>
+        <div class="verse"><span class="verse-num">26</span> 뜰의 휘장과 성막과 제단 사방에 있는 뜰의 휘장 문과 그 줄들과 그것에 사용하는 모든 기구를 메며 이 모든 것을 이렇게 맡아 처리할 것이라</div>
+        <div class="verse"><span class="verse-num">27</span> 게르손 자손은 그들의 모든 일 곧 멜 것과 처리할 것을 아론과 그의 아들들의 명령대로 할 것이니 너희는 그들이 멜 짐을 그들에게 맡길 것이니라</div>
+        <div class="verse"><span class="verse-num">28</span> 게르손 자손의 종족들이 회막에서 할 일은 이러하며 그들의 직무는 제사장 아론의 아들 이다말이 감독할지니라</div>
+        <div class="verse"><span class="verse-num">29</span> 너는 므라리 자손도 그 조상의 가문과 종족에 따라 계수하되</div>
+        <div class="verse"><span class="verse-num">30</span> 삼십 세부터 오십 세까지 회막에서 복무하고 봉사할 모든 자를 계수하라</div>
+        <div class="verse"><span class="verse-num">31</span> 그들이 직무를 따라 회막에서 할 모든 일 곧 그 멜 것은 이러하니 곧 장막의 널판들과 그 띠들과 그 기둥들과 그 받침들과</div>
+        <div class="verse"><span class="verse-num">32</span> 뜰 둘레의 기둥들과 그 받침들과 그 말뚝들과 그 줄들과 그 모든 기구들과 그것에 쓰는 모든 것이라 너희는 그들이 맡아 멜 모든 기구의 품목을 지정하라</div>
+        <div class="verse"><span class="verse-num">33</span> 이는 제사장 아론의 아들 이다말의 수하에 있을 므라리 자손의 종족들이 그 모든 직무대로 회막에서 행할 일이니라</div>
+        <div class="verse"><span class="verse-num">34</span> 모세와 아론과 회중의 지도자들이 고핫 자손들을 그 종족과 조상의 가문에 따라 계수하니</div>
+        <div class="verse"><span class="verse-num">35</span> 삼십 세부터 오십 세까지 회막에서 복무하고 봉사할 모든 자</div>
+        <div class="verse"><span class="verse-num">36</span> 곧 그 종족대로 계수된 자가 이천칠백오십 명이니</div>
+        <div class="verse"><span class="verse-num">37</span> 이는 모세와 아론이 여호와께서 모세에게 명령하신 대로 회막에서 종사하는 고핫인의 모든 종족 중 계수된 자이니라</div>
+        <div class="verse"><span class="verse-num">38</span> 게르손 자손 중 그 종족과 조상의 가문을 따라 계수된 자는</div>
+        <div class="verse"><span class="verse-num">39</span> 삼십 세부터 오십 세까지 회막 봉사에 참여하여 일할 만한 모든 자라</div>
+        <div class="verse"><span class="verse-num">40</span> 그 종족과 조상의 가문을 따라 계수된 자는 이천육백삼십 명이니</div>
+        <div class="verse"><span class="verse-num">41</span> 이는 모세와 아론이 여호와의 명령대로 회막에서 종사하는 게르손 자손의 모든 종족 중 계수된 자니라</div>
+        <div class="verse"><span class="verse-num">42</span> 므라리 자손의 종족 중 그 종족과 조상의 가문을 따라 계수된 자는</div>
+        <div class="verse"><span class="verse-num">43</span> 삼십 세부터 오십 세까지 회막에서 복무하고 봉사할 모든 자라</div>
+        <div class="verse"><span class="verse-num">44</span> 그 종족을 따라 계수된 자는 삼천이백 명이니</div>
+        <div class="verse"><span class="verse-num">45</span> 이는 모세와 아론이 여호와께서 모세에게 명령하신 대로 므라리 자손들의 종족 중 계수된 자니라</div>
+        <div class="verse"><span class="verse-num">46</span> 모세와 아론과 이스라엘 지휘관들이 레위인을 그 종족과 조상의 가문에 따라 다 계수하니</div>
+        <div class="verse"><span class="verse-num">47</span> 삼십 세부터 오십 세까지 회막 봉사와 메는 일에 참여하여 일할 만한 모든 자</div>
+        <div class="verse"><span class="verse-num">48</span> 곧 그 계수된 자는 팔천오백팔십 명이라</div>
+        <div class="verse"><span class="verse-num">49</span> 그들이 할 일과 짐을 메는 일을 따라 모세에게 계수되었으되 여호와께서 모세에게 명령하신 대로 그들이 계수되었더라
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

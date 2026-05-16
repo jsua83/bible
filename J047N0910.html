@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 047</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 047</h1>
+        <p class="sub-title">찬송가 379장 내 갈 길 멀고 밤은 깊은데</p>
+        <p class="sub-title">민수기 9장~10:10절 — 시내산 캠프 1년 종료</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 379장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/14U0nKHATZ2l3WhEH5KpinvaCg1JvOlD7" alt="찬송가 379장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 민수기 9장~10:10절<br>'시내산 캠프 1년 종료'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 첫 번째 유월절은 급하게, 두 번째 유월절은 규례대로 지킵니다.</span>
+            1년 전 급하게 지킨 애굽에서의 첫 번째 유월절은 <strong>제사장 나라가 출발한 날</strong>입니다. 이후 출애굽한 지 1년 만에 제사장 나라 거룩한 시민으로 준비된 이스라엘 백성들이 <strong>시내 광야에서 두 번째 유월절을 규례대로 지킵니다</strong>(민 9:1~14).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 나의 가고 서는 것, 주님 뜻에 있으니!</span>
+            이스라엘 백성들은 시내산 언약이 체결되기 전에는 <strong>하나님께서 임하실 때 두려워 떨었습니다.</strong> 그런데 1년 만에 이들은 놀랍게 변화되어 <strong>하나님의 이름을 두려고 택하신 곳</strong>, 성막 위에 구름이 떠오르면 행진을 시작하고, 구름이 머물면 진을 치며 <strong>하나님과 동행하는 이스라엘</strong>이 됩니다.
+            <div class="quote">
+                <strong>주님 말씀하시면 가고, 주님 말씀하시면 서는 동행자들이 된 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 아론 자손이 은 나팔을 붑니다.</span>
+            이스라엘 백성들이 시내 광야에서 유월절을 지키자, 하나님께서는 그들에게 <strong>은 나팔 두 개를 만들게 하십니다.</strong> 그리고 두 개의 나팔을 <strong>아론의 자손인 제사장들이 불게 하십니다</strong>(민 10:1~10).
+            <div class="quote">
+                <strong>제사장들이 은 나팔을 불면 그 소리에 이스라엘 백성들이 움직입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 1년 만에 제사장 나라 그룹 리더십이 세워집니다.</span>
+            출애굽의 전 과정과 시내산에서 머물렀던 1년은 <strong>모세 한 사람의 리더십으로 이스라엘이 움직였습니다.</strong> 그런데 시내산 1년을 통해 제사장 나라가 출범되고 <strong>새로운 리더 그룹이 형성됩니다.</strong>
+            <div class="quote">
+                <strong>첫째,</strong> 제사장 그룹<br><br>
+                <strong>둘째,</strong> 회막 공직자 그룹인 레위인 8,580명<br><br>
+                <strong>셋째,</strong> 열두 지파의 대표로 인구 조사와 예물을 드렸던 지휘관 그룹 12명<br><br>
+                <strong>넷째,</strong> 장로 그룹 70명, 그리고 그 외 천부장, 백부장, 오십부장, 십부장 등이 이스라엘의 리더로 섬깁니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 시내산 캠프 1년이 종료됩니다.</span>
+            시내산 캠프 1년 동안 <strong>4단계로 제사장 나라 시스템이 완성됩니다.</strong>
+            <div class="quote">
+                <strong>1단계 — 언약 체결</strong><br><br>
+                <strong>2단계 — 성막 제작</strong><br><br>
+                <strong>3단계 — 제사장 취임</strong><br><br>
+                <strong>4단계 — 인구 조사</strong>
+            </div>
+            <div class="quote">
+                <strong>이스라엘은 누구나 제사 드릴 수 있는 제사장 나라가 되었습니다. 이제 약속의 땅 가나안으로 출발하면 됩니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 민수기 9장~10:10절 '시내산 캠프 1년 종료'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 민수기 9장 -->
+        <div class="chapter-title">민수기 9장 (1~23절)</div>
+        <div class="verse"><span class="verse-num">1</span> 애굽 땅에서 나온 다음 해 첫째 달에 여호와께서 시내 광야에서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손에게 유월절을 그 정한 기일에 지키게 하라</div>
+        <div class="verse"><span class="verse-num">3</span> 그 정한 기일 곧 이 달 열넷째 날 해 질 때에 너희는 그것을 지키되 그 모든 율례와 그 모든 규례대로 지킬지니라</div>
+        <div class="verse"><span class="verse-num">4</span> 모세가 이스라엘 자손에게 명령하여 유월절을 지키라 하매</div>
+        <div class="verse"><span class="verse-num">5</span> 그들이 첫째 달 열넷째 날 해 질 때에 시내 광야에서 유월절을 지켰으되 이스라엘 자손이 여호와께서 모세에게 명령하신 것을 다 따라 행하였더라</div>
+        <div class="verse"><span class="verse-num">6</span> 그 때에 사람의 시체로 말미암아 부정하게 되어서 유월절을 지킬 수 없는 사람들이 있었는데 그들이 그 날에 모세와 아론 앞에 이르러</div>
+        <div class="verse"><span class="verse-num">7</span> 그에게 이르되 우리가 사람의 시체로 말미암아 부정하게 되었거니와 우리를 금지하여 이스라엘 자손과 함께 정한 기일에 여호와께 헌물을 드리지 못하게 하심은 어찌함이니이까</div>
+        <div class="verse"><span class="verse-num">8</span> 모세가 그들에게 이르되 기다리라 여호와께서 너희에게 대하여 어떻게 명령하시는지 내가 들으리라</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">10</span> 이스라엘 자손에게 말하여 이르라 너희나 너희 후손 중에 시체로 말미암아 부정하게 되든지 먼 여행 중에 있다 할지라도 다 여호와 앞에 마땅히 유월절을 지키되</div>
+        <div class="verse"><span class="verse-num">11</span> 둘째 달 열넷째 날 해 질 때에 그것을 지켜서 어린 양에 무교병과 쓴 나물을 아울러 먹을 것이요</div>
+        <div class="verse"><span class="verse-num">12</span> 아침까지 그것을 조금도 남겨두지 말며 그 뼈를 하나도 꺾지 말아서 유월절 모든 율례대로 지킬 것이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그러나 사람이 정결하기도 하고 여행 중에도 있지 아니하면서 유월절을 지키지 아니하는 자는 그 백성 중에서 끊어지리니 이런 사람은 그 정한 기일에 여호와께 헌물을 드리지 아니하였은즉 그의 죄를 담당할지며</div>
+        <div class="verse"><span class="verse-num">14</span> 만일 타국인이 너희 중에 거류하여 여호와 앞에 유월절을 지키고자 하면 유월절 율례대로 그 규례를 따라서 행할지니 거류민에게나 본토인에게나 그 율례는 동일할 것이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 성막을 세운 날에 구름이 성막 곧 증거의 성막을 덮었고 저녁이 되면 성막 위에 불 모양 같은 것이 나타나서 아침까지 이르렀으되</div>
+        <div class="verse"><span class="verse-num">16</span> 항상 그러하여 낮에는 구름이 그것을 덮었고 밤이면 불 모양이 있었는데</div>
+        <div class="verse"><span class="verse-num">17</span> 구름이 성막에서 떠오르는 때에는 이스라엘 자손이 곧 행진하였고 구름이 머무는 곳에 이스라엘 자손이 진을 쳤으니</div>
+        <div class="verse"><span class="verse-num">18</span> 이스라엘 자손이 여호와의 명령을 따라 행진하였고 여호와의 명령을 따라 진을 쳤으며 구름이 성막 위에 머무는 동안에는 그들이 진영에 머물렀고</div>
+        <div class="verse"><span class="verse-num">19</span> 구름이 성막 위에 머무는 날이 오랠 때에는 이스라엘 자손이 여호와의 명령을 지켜 행진하지 아니하였으며</div>
+        <div class="verse"><span class="verse-num">20</span> 혹시 구름이 성막 위에 머무는 날이 적을 때에도 그들이 다만 여호와의 명령을 따라 진영에 머물고 여호와의 명령을 따라 행진하였으며</div>
+        <div class="verse"><span class="verse-num">21</span> 혹시 구름이 저녁부터 아침까지 있다가 아침에 그 구름이 떠오를 때에는 그들이 행진하였고 구름이 밤낮 있다가 떠오르면 곧 행진하였으며</div>
+        <div class="verse"><span class="verse-num">22</span> 이틀이든지 한 달이든지 일 년이든지 구름이 성막 위에 머물러 있을 동안에는 이스라엘 자손이 진영에 머물고 행진하지 아니하다가 떠오르면 행진하였으니</div>
+        <div class="verse"><span class="verse-num">23</span> 곧 그들이 여호와의 명령을 따라 진을 치며 여호와의 명령을 따라 행진하고 또 모세를 통하여 이르신 여호와의 명령을 따라 여호와의 직임을 지켰더라</div>
+
+        <!-- 민수기 10장 -->
+        <div class="chapter-title">민수기 10장 (1~10절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 은 나팔 둘을 만들되 두들겨 만들어서 그것으로 회중을 소집하며 진영을 출발하게 할 것이라</div>
+        <div class="verse"><span class="verse-num">3</span> 나팔 두 개를 불 때에는 온 회중이 회막 문 앞에 모여서 네게로 나아올 것이요</div>
+        <div class="verse"><span class="verse-num">4</span> 하나만 불 때에는 이스라엘의 천부장 된 지휘관들이 모여서 네게로 나아올 것이며</div>
+        <div class="verse"><span class="verse-num">5</span> 너희가 그것을 크게 불 때에는 동쪽 진영들이 행진할 것이며</div>
+        <div class="verse"><span class="verse-num">6</span> 두 번째로 크게 불 때에는 남쪽 진영들이 행진할 것이라 떠나려 할 때에는 나팔 소리를 크게 불 것이며</div>
+        <div class="verse"><span class="verse-num">7</span> 또 회중을 모을 때에도 나팔을 불 것이나 소리를 크게 내지 말며</div>
+        <div class="verse"><span class="verse-num">8</span> 그 나팔은 아론의 자손인 제사장들이 불지니 이는 너희 대대에 영원한 율례니라</div>
+        <div class="verse"><span class="verse-num">9</span> 또 너희 땅에서 너희가 자기를 압박하는 대적을 치러 나갈 때에는 나팔을 크게 불지니 그리하면 너희 하나님 여호와가 너희를 기억하고 너희를 너희의 대적에게서 구원하시리라</div>
+        <div class="verse"><span class="verse-num">10</span> 또 너희의 희락의 날과 너희가 정한 절기와 초하루에는 번제물을 드리고 화목제물을 드리며 나팔을 불라 그로 말미암아 너희의 하나님이 너희를 기억하시리라 나는 너희의 하나님 여호와니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

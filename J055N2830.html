@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 055</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 055</h1>
+        <p class="sub-title">찬송가 50장 네게 있는 모든 것을</p>
+        <p class="sub-title">민수기 28~30장 — 거룩한 절기와 제사 / 하나님께서 주신 3가지에 인간의 수고를 더해 얻게 된 첫 열매</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 50장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1cDUb1vtPQYF3OPTKd97-_br_RwVijME5" alt="찬송가 50장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 민수기 28장~30장<br>'거룩한 절기와 제사 / 하나님께서 주신 3가지에 인간의 수고를 더해 얻게 된 첫 열매'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서 40년 만에, 이번에는 '만나 세대'에게 명절을 말씀하십니다.</span>
+            애굽에서는 **'쉬지 말라'**고 이스라엘 백성들을 억압했습니다. 그러나 제사장 나라에서는 1년 단위로 명절을 많이 만들고 그 명절마다 **아무 노동도 하지 말고, 모든 사람이 다 쉬고, 기뻐하며 하나님을 만나라**는 것입니다.<br><br>
+            지난 40년 전, 이스라엘 백성들은 시내 광야에서 하나님과 제사장 나라 언약을 체결하고 십계명을 비롯한 제사장 나라 율법과 절기 규례들을 받았지만, 안타깝게도 **출애굽 세대는 하나님의 말씀을 믿지도, 따르지도 않았으며, 결국 하나님께서 주신 약속의 기쁨도 제대로 누리지 못했습니다.**<br><br>
+            하지만 40년이 지나 출애굽 당시 20세 미만이었던 출애굽 세대의 자녀들인 **'만나 세대'**들이 가나안에 들어갈 대상이 되어 2차 인구 조사와 싸움에 나갈 만한 수로 계수되어 **정말 모든 것을 책임질 수 있는 사람들이 되었습니다.** 바로 이 만나 세대들에게 2차 인구 조사가 끝나자마자 다시 **'명절'을 말씀하신 것**입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님의 말씀을 출애굽 세대들은 귀로 담았지만, 만나 세대들은 마음으로 담습니다.</span>
+            출애굽 세대는 가만히 서서 홍해가 갈라지는 것을 보고 그 홍해를 걸어서 건너는 **놀라운 사건을 체험했습니다.** 그런데 이 놀라운 신앙 체험이 아쉽게도 출애굽 세대의 **'마음' 깊숙한 곳으로 들어가지는 못했습니다.**<br><br>
+            그러나 만나 세대들은 직접 체험하지는 못했지만 **40년 동안 모세를 통해 '듣는 교육'을 받았습니다.** 이들은 애굽에서의 첫 번째 유월절 이야기로부터 홍해를 건넌 일, 그리고 시내 광야에서의 제사장 나라 언약 체결과 절기 규례들까지, **모든 이야기를 귀로 들으면서 교육받았습니다.**
+            <div class="quote">
+                **결국 만나 세대들은 직접적인 체험이 아님에도 하나님의 말씀을 들음으로 하나님의 모든 기적이 담긴 명절 절기들을 그들 마음에 다 담습니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 하나님의 명령 '아무 노동도 하지 말라'는 것은 어느 누구도 명절의 혜택에서 소외시키지 말라는 뜻입니다.</span>
+            하나님께서 우리 인생들에게 주신 명령은 이 땅에서 사는 동안 **'수고하라'**는 것입니다(창 3:17). 하나님의 또 다른 명령은 지정하신 명절에는 **'아무 노동도 하지 말라'**는 것입니다(출 20:10).
+            <div class="quote">
+                **이렇게 하나님께서 말씀하신 것은 제사장 나라 명절의 혜택에서 어느 누구도 소외시키지 말라는 뜻입니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 모든 것을 선물로 주신 하나님께서 인간의 작은 선물을 받으시고 크게 기뻐하십니다.</span>
+            **"칠칠절 처음 익은 열매를 드리는 날에~"**(민 28:26~27)라는 말씀 속에는 주기를 좋아하시는 하나님께서 **'먼저 세 가지를 주신다'**는 뜻이 들어 있습니다.
+            <div class="quote">
+                **첫째,** 하나님께서 전쟁에서 승리하게 해 주실 것입니다(레 25:38).<br>
+                **둘째,** 하나님께서는 제비 뽑은 숫자만큼 모두에게 땅을 주실 것입니다(민 26:54~55).<br>
+                **셋째,** 하나님께서 비와 바람을 보내 주실 것입니다(신 11:14).
+            </div>
+            앞으로 가나안에 들어가면 이렇게 **하나님께서 기쁨으로 먼저 주신 세 가지에 인간의 수고를 더해 얻게 된 '처음 익은 열매'를 하나님께 선물로 가져오라**고 말씀하십니다. 그러면 그다음에 익은 열매들로 **풍요를 누리게 하겠다**고 말씀하십니다(레 26:4~5).
+            <div class="quote">
+                **인간이 하나님께 기쁨으로 예물을 드리는 것은 하나님이 어떤 분이신지를 되새기며 하나님을 인정하는 행위입니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : '자발적 헌신'이 가장 품위 있는 헌신입니다.</span>
+            이스라엘 백성들은 애굽에서 **모든 것을 빼앗아가는 '제국'을 경험했습니다.** 그러나 하나님께서는 이제 제국이 아닌 제사장 나라를 살게 하시면서 **인간의 삶 가운데 가장 고상한 행위인 '자발적 헌신'**에 대해 말씀하십니다.<br><br>
+            하나님께서는 '누구든지' 나실인 헌신과 서원이 가능하도록 해 주십니다. **서원은 인간이 하나님께 드린 약속이요 맹세이기 때문에 반드시 지키는 것이 원칙**입니다. 그러나 여성들의 경우 당시 가부장적 사회에서 서원을 지키는 데에는 많은 장애 요인들이 있습니다. 그래서 **하나님께서는 여성들을 위해 서원의 예외 규정까지 주십니다.** 여성이 서원한 것을 **무효화할 수 있도록 안전장치를 만들어주신 것**입니다.
+            <div class="quote">
+                **하나님께 서원하기 위해 가족들이 함께 서원할 수 있다면 더욱 아름다운 서원이 되는 것입니다. 이는 약자를 위한 하나님의 또 다른 배려입니다.**
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 민수기 28~30장 '거룩한 절기와 제사 / 하나님께서 주신 3가지에 인간의 수고를 더해 얻게 된 첫 열매'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 민수기 28장 -->
+        <div class="chapter-title">민수기 28장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손에게 명령하여 그들에게 이르라 내 헌물, 내 음식인 화제물 내 향기로운 것은 너희가 그 정한 시기에 삼가 내게 바칠지니라</div>
+        <div class="verse"><span class="verse-num">3</span> 또 그들에게 이르라 너희가 여호와께 드릴 화제는 이러하니 일 년 되고 흠 없는 숫양을 매일 두 마리씩 상번제로 드리되</div>
+        <div class="verse"><span class="verse-num">4</span> 어린 양 한 마리는 아침에 드리고 어린 양 한 마리는 해 질 때에 드릴 것이요</div>
+        <div class="verse"><span class="verse-num">5</span> 또 고운 가루 십분의 일 에바에 빻아 낸 기름 사분의 일 힌을 섞어서 소제로 드릴 것이니</div>
+        <div class="verse"><span class="verse-num">6</span> 이는 시내 산에서 정한 상번제로서 여호와께 드리는 향기로운 화제며</div>
+        <div class="verse"><span class="verse-num">7</span> 또 그 전제는 어린 양 한 마리에 사분의 일 힌을 드리되 거룩한 곳에서 여호와께 독주의 전제를 부어 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">8</span> 해 질 때에는 두 번째 어린 양을 드리되 아침에 드린 소제와 전제와 같이 여호와께 향기로운 화제로 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 안식일에는 일 년 되고 흠 없는 숫양 두 마리와 고운 가루 십분의 이에 기름 섞은 소제와 그 전제를 드릴 것이니</div>
+        <div class="verse"><span class="verse-num">10</span> 이는 상번제와 그 전제 외에 매 안식일의 번제니라</div>
+        <div class="verse"><span class="verse-num">11</span> 초하루에는 수송아지 두 마리와 숫양 한 마리와 일 년 되고 흠 없는 숫양 일곱 마리로 여호와께 번제를 드리되</div>
+        <div class="verse"><span class="verse-num">12</span> 매 수송아지에는 고운 가루 십분의 삼에 기름 섞은 소제와 숫양 한 마리에 고운 가루 십분의 이에 기름 섞은 소제와</div>
+        <div class="verse"><span class="verse-num">13</span> 매 어린 양에는 고운 가루 십분의 일에 기름 섞은 소제를 향기로운 번제로 여호와께 화제를 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">14</span> 그 전제는 수송아지 한 마리에 포도주 반 힌이요 숫양 한 마리에 삼분의 일 힌이요 어린 양 한 마리에 사분의 일 힌이니 이는 일 년 중 매월 초하루의 번제며</div>
+        <div class="verse"><span class="verse-num">15</span> 또 상번제와 그 전제 외에 숫염소 한 마리를 속죄제로 여호와께 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">16</span> 첫째 달 열넷째 날은 여호와를 위하여 지킬 유월절이며</div>
+        <div class="verse"><span class="verse-num">17</span> 또 그 달 열다섯째 날부터는 명절이니 이레 동안 무교병을 먹을 것이며</div>
+        <div class="verse"><span class="verse-num">18</span> 그 첫날에는 성회로 모일 것이요 아무 일도 하지 말 것이며</div>
+        <div class="verse"><span class="verse-num">19</span> 수송아지 두 마리와 숫양 한 마리와 일 년 된 숫양 일곱 마리를 다 흠 없는 것으로 여호와께 화제를 드려 번제가 되게 할 것이며</div>
+        <div class="verse"><span class="verse-num">20</span> 그 소제로는 고운 가루에 기름을 섞어서 쓰되 수송아지 한 마리에는 십분의 삼이요 숫양 한 마리에는 십분의 이를 드리고</div>
+        <div class="verse"><span class="verse-num">21</span> 어린 양 일곱에는 어린 양 한 마리마다 십분의 일을 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">22</span> 또 너희를 속죄하기 위하여 숫염소 한 마리로 속죄제를 드리되</div>
+        <div class="verse"><span class="verse-num">23</span> 아침의 번제 곧 상번제 외에 그것들을 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">24</span> 너희는 이 순서대로 이레 동안 매일 여호와께 향기로운 화제의 음식을 드리되 상번제와 그 전제 외에 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">25</span> 일곱째 날에는 성회로 모일 것이요 아무 일도 하지 말 것이니라</div>
+        <div class="verse"><span class="verse-num">26</span> 칠칠절 처음 익은 열매를 드리는 날에 너희가 여호와께 새 소제를 드릴 때에도 성회로 모일 것이요 아무 일도 하지 말 것이며</div>
+        <div class="verse"><span class="verse-num">27</span> 수송아지 두 마리와 숫양 한 마리와 일 년 된 숫양 일곱 마리로 여호와께 향기로운 번제를 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">28</span> 그 소제로는 고운 가루에 기름을 섞어서 쓰되 수송아지 한 마리마다 십분의 삼이요 숫양 한 마리에는 십분의 이요</div>
+        <div class="verse"><span class="verse-num">29</span> 어린 양 일곱 마리에는 어린 양 한 마리마다 십분의 일을 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">30</span> 또 너희를 속죄하기 위하여 숫염소 한 마리를 드리되</div>
+        <div class="verse"><span class="verse-num">31</span> 너희는 다 흠 없는 것으로 상번제와 그 소제와 전제 외에 그것들을 드릴 것이니라</div>
+
+        <!-- 민수기 29장 -->
+        <div class="chapter-title">민수기 29장 (1~40절)</div>
+        <div class="verse"><span class="verse-num">1</span> 일곱째 달에 이르러는 그 달 초하루에 성회로 모이고 아무 노동도 하지 말라 이는 너희가 나팔을 불 날이니라</div>
+        <div class="verse"><span class="verse-num">2</span> 너희는 수송아지 한 마리와 숫양 한 마리와 일 년 되고 흠 없는 숫양 일곱 마리를 여호와께 향기로운 번제로 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">3</span> 그 소제로는 고운 가루에 기름을 섞어서 쓰되 수송아지에는 십분의 삼이요 숫양에는 십분의 이요</div>
+        <div class="verse"><span class="verse-num">4</span> 어린 양 일곱 마리에는 어린 양 한 마리마다 십분의 일을 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">5</span> 또 너희를 속죄하기 위하여 숫염소 한 마리로 속죄제를 드리되</div>
+        <div class="verse"><span class="verse-num">6</span> 그 달의 번제와 그 소제와 상번제와 그 소제와 그 전제 외에 그 규례를 따라 향기로운 냄새로 화제를 여호와께 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 일곱째 달 열흘 날에는 너희가 성회로 모일 것이요 너희의 심령을 괴롭게 하며 아무 일도 하지 말 것이니라</div>
+        <div class="verse"><span class="verse-num">8</span> 너희는 수송아지 한 마리와 숫양 한 마리와 일 년 된 숫양 일곱 마리를 다 흠 없는 것으로 여호와께 향기로운 번제를 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">9</span> 그 소제로는 고운 가루에 기름을 섞어서 쓰되 수송아지 한 마리에는 십분의 삼이요 숫양 한 마리에는 십분의 이요</div>
+        <div class="verse"><span class="verse-num">10</span> 어린 양 일곱 마리에는 어린 양 한 마리마다 십분의 일을 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">11</span> 속죄제와 상번제와 그 소제와 그 전제 외에 숫염소 한 마리를 속죄제로 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 일곱째 달 열다섯째 날에는 너희가 성회로 모일 것이요 아무 일도 하지 말 것이며 이레 동안 여호와 앞에 절기를 지킬 것이라</div>
+        <div class="verse"><span class="verse-num">13</span> 너희 번제로 여호와께 향기로운 화제를 드리되 수송아지 열세 마리와 숫양 두 마리와 일 년 된 숫양 열네 마리를 다 흠 없는 것으로 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">14</span> 그 소제로는 고운 가루에 기름을 섞어서 수송아지 열세 마리에는 각기 십분의 삼이요 숫양 두 마리에는 각기 십분의 이요</div>
+        <div class="verse"><span class="verse-num">15</span> 어린 양 열네 마리에는 각기 십분의 일을 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">16</span> 상번제와 그 소제와 그 전제 외에 숫염소 한 마리를 속죄제로 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">17</span> 둘째 날에는 수송아지 열두 마리와 숫양 두 마리와 일 년 되고 흠 없는 숫양 열네 마리를 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">18</span> 그 소제와 전제는 수송아지와 숫양과 어린 양의 수효를 따라서 규례대로 할 것이며</div>
+        <div class="verse"><span class="verse-num">19</span> 상번제와 그 소제와 그 전제 외에 숫염소 한 마리를 속죄제로 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 셋째 날에는 수송아지 열한 마리와 숫양 두 마리와 일 년 되고 흠 없는 숫양 열네 마리를 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">21</span> 그 소제와 전제는 수송아지와 숫양과 어린 양의 수효를 따라서 규례대로 할 것이며</div>
+        <div class="verse"><span class="verse-num">22</span> 상번제와 그 소제와 그 전제 외에 숫염소 한 마리를 속죄제로 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">23</span> 넷째 날에는 수송아지 열 마리와 숫양 두 마리와 일 년 되고 흠 없는 숫양 열네 마리를 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">24</span> 그 소제와 전제는 수송아지와 숫양과 어린 양의 수효를 따라 규례대로 할 것이며</div>
+        <div class="verse"><span class="verse-num">25</span> 상번제와 그 소제와 그 전제 외에 숫염소 한 마리를 속죄제로 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">26</span> 다섯째 날에는 수송아지 아홉 마리와 숫양 두 마리와 일 년 되고 흠 없는 숫양 열네 마리를 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">27</span> 그 소제와 전제는 수송아지와 숫양과 어린 양의 수효를 따라서 규례대로 할 것이며</div>
+        <div class="verse"><span class="verse-num">28</span> 상번제와 그 소제와 그 전제 외에 숫염소 한 마리를 속죄제로 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">29</span> 여섯째 날에는 수송아지 여덟 마리와 숫양 두 마리와 일 년 되고 흠 없는 숫양 열네 마리를 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">30</span> 그 소제와 전제는 수송아지와 숫양과 어린 양의 수효를 따라서 규례대로 할 것이며</div>
+        <div class="verse"><span class="verse-num">31</span> 상번제와 그 소제와 그 전제 외에 숫염소 한 마리를 속죄제로 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">32</span> 일곱째 날에는 수송아지 일곱 마리와 숫양 두 마리와 일 년 되고 흠 없는 숫양 열네 마리를 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">33</span> 그 소제와 전제는 수송아지와 숫양과 어린 양의 수효를 따라 규례대로 할 것이며</div>
+        <div class="verse"><span class="verse-num">34</span> 상번제와 그 소제와 그 전제 외에 숫염소 한 마리를 속죄제로 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">35</span> 여덟째 날에는 장엄한 대회로 모일 것이요 아무 일도 하지 말 것이며</div>
+        <div class="verse"><span class="verse-num">36</span> 번제로 여호와께 향기로운 화제를 드리되 수송아지 한 마리와 숫양 한 마리와 일 년 되고 흠 없는 숫양 일곱 마리를 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">37</span> 그 소제와 전제는 수송아지와 숫양과 어린 양의 수효를 따라 규례대로 할 것이며</div>
+        <div class="verse"><span class="verse-num">38</span> 상번제와 그 소제와 그 전제 외에 숫염소 한 마리를 속죄제로 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">39</span> 너희가 이 절기를 당하거든 여호와께 이같이 드릴지니 이는 너희의 서원제나 낙헌제로 드리는 번제, 소제, 전제, 화목제 외에 드릴 것이니라</div>
+        <div class="verse"><span class="verse-num">40</span> 모세가 여호와께서 모세에게 명령하신 모든 일을 이스라엘 자손에게 말하니라</div>
+
+        <!-- 민수기 30장 -->
+        <div class="chapter-title">민수기 30장 (1~16절)</div>
+        <div class="verse"><span class="verse-num">1</span> 모세가 이스라엘 자손 지파의 수령들에게 말하여 이르되 여호와의 명령이 이러하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 사람이 여호와께 서원하였거나 결심하고 서약하였으면 깨뜨리지 말고 그가 입으로 말한 대로 다 이행할 것이니라</div>
+        <div class="verse"><span class="verse-num">3</span> 또 여자가 만일 어려서 그 아버지 집에 있을 때에 여호와께 서원한 일이나 스스로 결심하려고 한 일이 있다고 하자</div>
+        <div class="verse"><span class="verse-num">4</span> 그의 아버지가 그의 서원이나 그가 결심한 서약을 듣고도 그에게 아무 말이 없으면 그의 모든 서원을 행할 것이요 그가 결심한 서약을 지킬 것이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 그러나 그의 아버지가 그것을 듣는 날에 허락하지 아니하면 그의 서원과 결심한 서약을 이루지 못할 것이니 그의 아버지가 허락하지 아니하였은즉 여호와께서 사하시리라</div>
+        <div class="verse"><span class="verse-num">6</span> 또 혹시 남편을 맞을 때에 서원이나 결심한 서약을 경솔하게 그의 입술로 말하였으면</div>
+        <div class="verse"><span class="verse-num">7</span> 그의 남편이 그것을 듣고 그 듣는 날에 그에게 아무 말이 없으면 그 서원을 이행할 것이요 그가 결심한 서약을 지킬 것이니라</div>
+        <div class="verse"><span class="verse-num">8</span> 그러나 그의 남편이 그것을 듣는 날에 허락하지 아니하면 그 서원과 결심하려고 경솔하게 입술로 말한 서약은 무효가 될 것이니 여호와께서 그 여자를 사하시리라</div>
+        <div class="verse"><span class="verse-num">9</span> 과부나 이혼 당한 여자의 서원이나 그가 결심한 모든 서약은 지킬 것이니라</div>
+        <div class="verse"><span class="verse-num">10</span> 부녀가 혹시 그의 남편의 집에서 서원을 하였다든지 결심하고 서약을 하였다 하자</div>
+        <div class="verse"><span class="verse-num">11</span> 그의 남편이 그것을 듣고도 아무 말이 없고 금하지 않으면 그 서원은 다 이행할 것이요 그가 결심한 서약은 다 지킬 것이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그러나 그의 남편이 그것을 듣는 날에 무효하게 하면 그 서원과 결심한 일에 대하여 입술로 말한 것을 아무것도 이루지 못하나니 그의 남편이 그것을 무효하게 하였은즉 여호와께서 그 부녀를 사하시느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 모든 서원과 마음을 자제하기로 한 모든 서약은 그의 남편이 그것을 지키게도 할 수 있고 무효하게도 할 수 있으니</div>
+        <div class="verse"><span class="verse-num">14</span> 그의 남편이 여러 날이 지나도록 말이 없으면 아내의 서원과 스스로 결심한 일을 지키게 하는 것이니 이는 그가 그것을 들을 때에 그의 아내에게 아무 말도 아니하였으므로 지키게 됨이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 그러나 그의 남편이 들은 지 얼마 후에 그것을 무효하게 하면 그가 아내의 죄를 담당할 것이니라</div>
+        <div class="verse"><span class="verse-num">16</span> 이는 여호와께서 모세에게 명령하신 규례니 남편이 아내에게, 아버지가 자기 집에 있는 어린 딸에 대한 것이니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

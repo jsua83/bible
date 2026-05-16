@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 056</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 056</h1>
+        <p class="sub-title">찬송가 549장 내 주여 뜻대로</p>
+        <p class="sub-title">민수기 31~32장 — 모세와 요단 동편 땅 / 르우벤 지파와 갓 지파의 요구에 모세는 화를 냅니다</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 549장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1txlTSLQXWXxrF6VROOUP-8IoGe8f7as6" alt="찬송가 549장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 민수기 31장~32장<br>'모세와 요단 동편 땅 / 르우벤 지파와 갓 지파의 요구에 모세는 화를 냅니다'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 만나 세대 12,000명! 그들이 주도한 첫 싸움에서 승리합니다.</span>
+            출애굽 이후 지금까지의 전쟁은 모두 **모세가 주도한 전쟁**이었습니다. 그런데 마지막 전쟁 명령을 받은 모세가 **미디안과의 전쟁은 대제사장 엘르아살의 아들 비느하스와 열두 지파에서 1,000명씩 뽑은 12,000명의 만나 세대들이 앞장서서 주도하게 합니다**(민 31:1~5).<br><br>
+            미디안과의 전쟁 명분은 **미디안의 거짓 복술가 발람이 꾀를 내어 모압 여인들을 동원하여 이스라엘을 범죄하게 한 것에 대한 처벌**입니다. 미디안과 싸울 전쟁 준비는 **성소의 기구와 신호 나팔, 그리고 12,000명이 손에 든 칼**입니다.<br><br>
+            이는 이후에 벌어질 **요단 서편의 여리고성 공성전을 비롯한 31번의 가나안 정복 전쟁을 위한 예행 연습**이 됩니다. 미디안과의 전쟁에서 사용된 전략과 전술은 **이후 사사 시대 때 기드온과 300명의 용사들이 미디안 군대를 대적할 때에도 사용됩니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 이스라엘 백성들이 요단 서편으로 건너가기 전, 전리품 분배 방식을 예행 연습시키십니다.</span>
+            이스라엘은 12,000명의 만나 세대들이 앞장서서 주도한 미디안과의 전쟁에서 **대승을 거둡니다.** 더욱 놀라운 일은 **전쟁에 참전한 12,000명이 모두 생존해서 돌아왔다는 것**입니다(민 31:48~49).<br><br>
+            이제 하나님께서는 만나 세대들에게 **전리품의 분배를 가르쳐 주십니다**(민 31:25~30). 하나님께서 정해주신 전리품의 분배 원칙은 **전쟁에 참가한 군인들과 이스라엘 공동체 모두, 그리고 레위인들에게 분배하는 것**입니다.
+            <div class="quote">
+                **전쟁보다 더 어려운 일이 '분배'입니다.**
+            </div>
+            하나님께서는 이스라엘에게 처음부터 분배에 대한 원칙을 세워주심으로 **제사장 나라의 품위를 갖도록 해 주십니다.** 전리품을 분배하는 일까지도 세심하게 가르쳐 주심으로 앞으로 있게 될 가나안 정복 전쟁에서 **제사장 나라 거룩한 시민 된 이스라엘 공동체가 분열되지 않도록 미리 그들을 교육하십니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 모세가 '두 지파'에게 화를 낸 이유는 두 가지입니다.</span>
+            이스라엘이 요단 동편 땅을 차지하자, 르우벤 지파와 갓 지파 사람들이 모세와 대제사장 엘르아살에게 찾아와 **먼저 요단 동편 땅을 분배해 달라고 요청합니다.** 르우벤 지파와 갓 지파는 다른 지파들에 비해 가축을 많이 소유하고 있기 때문에 **목축하기에 좋은 요단 동편 땅을 달라고 한 것**입니다.<br><br>
+            두 지파의 요청을 듣던 **온유한 모세가 화를 냅니다.** 그 이유는 두 가지 때문입니다.
+            <div class="quote">
+                **첫째,** 모두가 알고 있듯이 가나안 땅 분배 대원칙은 **계민수전과 제비뽑기**입니다. 오직 예외는 갈렙 한 사람뿐입니다.<br>
+                **둘째,** 먼저 땅을 분배받고 요단강을 건너지 않겠다는 것은 **다른 형제들을 크게 낙심하게 하는 일**입니다.
+            </div>
+            사실 모세는 슬로브핫의 딸들의 제안도 경청했던 **열린 귀와 열린 마음을 가진 사람**입니다. 그런데 이렇게 두 지파의 말을 중간에 자르고 화를 낸 것은 **이 사안이 그만큼 예민한 문제이기 때문**입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 두 지파는 화를 낸 모세에게 오히려 더 가까이 다가서서 말합니다.</span>
+            르우벤 지파와 갓 지파는 모세가 자신들의 입장을 다 듣기도 전에 공개적으로 화를 내는 상황에 비록 당황했지만 **모세를 충분히 이해합니다.** 그래서 그들은 오히려 모세에게 더 가까이 나아가 **그들의 형편과 각오를 더 진솔하게 말합니다.**<br><br>
+            우리 지파는 목축업에 용이한 요단 동편 땅이 필요하다고 말입니다. 그리고 모든 이스라엘이 각기 기업을 받기까지 **요단 동편으로 돌아가지 않고 무장하여 함께 싸울 것이라는 각오를 밝힙니다.**<br><br>
+            그러자 모세가 그들의 요구를 일단 승낙하면서 **'전쟁 선봉대'의 약속을 단단히 받아냅니다**(민 32:20~32).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 모세는 가나안 입성에 가장 현실적인 디딤돌을 만듭니다.</span>
+            모세는 가나안 정복 전쟁 선봉대를 서는 조건으로 **두 지파 반에게 더 큰 책임을 감당하게 하며 오히려 열두 지파 모두를 하나로 더 뭉치게 합니다.** 모세는 요단 서편 정복 전쟁을 앞두고 **40년 전 자신이 애굽에 들어갈 때보다 더 열심히, 더 철저히 만나 세대들을 준비시키며 마지막까지 최선을 다해 사명을 감당합니다.**<br><br>
+            이후 두 지파 반은 **그들의 약속대로 요단 서편 가나안 정복 전쟁을 다 마치고 여호수아에게 축복을 받은 후 요단 동편으로 돌아갑니다.**
+            <div class="quote">
+                **이는 모세가 광야 40년 동안, 그리고 요단 서편 가나안 정복 전쟁을 앞두고 그들을 얼마나 잘 교육시켰는지 알 수 있는 대목입니다.**
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 민수기 31~32장 '모세와 요단 동편 땅 / 르우벤 지파와 갓 지파의 요구에 모세는 화를 냅니다'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 민수기 31장 -->
+        <div class="chapter-title">민수기 31장 (1~54절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손의 원수를 미디안에게 갚으라 그 후에 네가 네 조상에게로 돌아가리라</div>
+        <div class="verse"><span class="verse-num">3</span> 모세가 백성에게 말하여 이르되 너와 함께 있는 사람들 가운데서 전쟁에 나갈 사람들을 무장시키고 미디안을 치러 보내어 여호와의 원수를 갚되</div>
+        <div class="verse"><span class="verse-num">4</span> 이스라엘 모든 지파에게 각 지파에서 천 명씩을 전쟁에 보낼지니라 하매</div>
+        <div class="verse"><span class="verse-num">5</span> 각 지파에서 천 명씩 이스라엘 백만 명 중에서 만 이천 명을 택하여 무장을 시킨지라</div>
+        <div class="verse"><span class="verse-num">6</span> 모세가 각 지파에 천 명씩 싸움에 보내되 제사장 엘르아살의 아들 비느하스에게 성소의 기구와 신호 나팔을 들려서 그들과 함께 전쟁에 보내매</div>
+        <div class="verse"><span class="verse-num">7</span> 그들이 여호와께서 모세에게 명령하신 대로 미디안을 쳐서 남자를 다 죽였고</div>
+        <div class="verse"><span class="verse-num">8</span> 그 죽인 자 외에 미디안의 다섯 왕을 죽였으니 미디안의 왕들은 에위와 레겜과 수르와 후르와 레바이며 또 브올의 아들 발람을 칼로 죽였더라</div>
+        <div class="verse"><span class="verse-num">9</span> 이스라엘 자손이 미디안의 부녀들과 그들의 아이들을 사로잡고 그들의 가축과 양 떼와 재물을 다 탈취하고</div>
+        <div class="verse"><span class="verse-num">10</span> 그들이 거처하는 성읍들과 촌락을 다 불사르고</div>
+        <div class="verse"><span class="verse-num">11</span> 탈취한 것, 노략한 것, 사람과 짐승을 다 빼앗으니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그들이 사로잡은 자와 노략한 것과 탈취한 것을 가지고 여리고 맞은편 요단 강 가 모압 평지의 진영에 이르러 모세와 제사장 엘르아살과 이스라엘 자손의 회중에게로 나아오니라</div>
+        <div class="verse"><span class="verse-num">13</span> 모세와 제사장 엘르아살과 회중의 지도자들이 다 진영 밖에 나가서 영접하다가</div>
+        <div class="verse"><span class="verse-num">14</span> 모세가 군대의 지휘관 곧 싸움에서 돌아온 천부장들과 백부장들에게 노하니라</div>
+        <div class="verse"><span class="verse-num">15</span> 모세가 그들에게 이르되 너희가 여자들을 다 살려두었느냐</div>
+        <div class="verse"><span class="verse-num">16</span> 보라 이들이 발람의 꾀를 따라 이스라엘 자손을 브올의 사건에서 여호와 앞에 범죄하게 하여 여호와의 회중 가운데에 염병이 일어나게 하였느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 그러므로 아이들 중에서 남자는 다 죽이고 남자와 동침하여 사내를 아는 여자도 다 죽이고</div>
+        <div class="verse"><span class="verse-num">18</span> 남자와 동침하지 아니하여 사내를 알지 못하는 여자들은 다 너희를 위하여 살려둘 것이니라</div>
+        <div class="verse"><span class="verse-num">19</span> 너희는 이레 동안 진영 밖에 주둔하라 누구든지 살인자나 죽임을 당한 사체를 만진 자는 셋째 날과 일곱째 날에 몸을 깨끗하게 하고 너희의 포로도 깨끗하게 할 것이며</div>
+        <div class="verse"><span class="verse-num">20</span> 모든 의복과 가죽으로 만든 모든 것과 염소털로 만든 모든 것과 나무로 만든 모든 것을 다 깨끗하게 할지니라</div>
+        <div class="verse"><span class="verse-num">21</span> 제사장 엘르아살이 싸움에 나갔던 군인들에게 이르되 이는 여호와께서 모세에게 명령하신 율법이니라</div>
+        <div class="verse"><span class="verse-num">22</span> 금, 은, 동, 철과 주석과 납 등의</div>
+        <div class="verse"><span class="verse-num">23</span> 불에 견딜 만한 모든 물건은 불을 지나게 하라 그리하면 깨끗하려니와 다만 정결하게 하는 물로 그것을 깨끗하게 할 것이며 불에 견디지 못할 모든 것은 물을 지나게 할 것이니라</div>
+        <div class="verse"><span class="verse-num">24</span> 너희는 일곱째 날에 옷을 빨아서 깨끗하게 한 후에 진영에 들어올지니라</div>
+        <div class="verse"><span class="verse-num">25</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">26</span> 너는 제사장 엘르아살과 회중의 수령들과 더불어 이 사로잡은 사람들과 짐승들을 계수하고</div>
+        <div class="verse"><span class="verse-num">27</span> 그 얻은 물건을 반분하여 그 절반은 전쟁에 나갔던 군인들에게 주고 절반은 회중에게 주고</div>
+        <div class="verse"><span class="verse-num">28</span> 전쟁에 나갔던 군인들은 사람이나 소나 나귀나 양 떼의 오백분의 일을 여호와께 드릴지니라</div>
+        <div class="verse"><span class="verse-num">29</span> 곧 이를 그들의 절반에서 가져다가 여호와의 거제로 제사장 엘르아살에게 주고</div>
+        <div class="verse"><span class="verse-num">30</span> 또 이스라엘 자손이 받은 절반에서는 사람이나 소나 나귀나 양 떼나 각종 짐승 오십분의 일을 가져다가 여호와의 성막을 맡은 레위인에게 주라</div>
+        <div class="verse"><span class="verse-num">31</span> 모세와 제사장 엘르아살이 여호와께서 모세에게 명령하신 대로 하니라</div>
+        <div class="verse"><span class="verse-num">32</span> 그 탈취물 곧 군인들의 다른 탈취물 외에 양이 육십칠만 오천 마리요</div>
+        <div class="verse"><span class="verse-num">33</span> 소가 칠만 이천 마리요</div>
+        <div class="verse"><span class="verse-num">34</span> 나귀가 육만 천 마리요</div>
+        <div class="verse"><span class="verse-num">35</span> 사람은 남자와 동침하지 아니하여서 사내를 알지 못하는 여자가 도합 삼만 이천 명이니</div>
+        <div class="verse"><span class="verse-num">36</span> 그 절반 곧 전쟁에 나갔던 자들의 소유가 양이 삼십삼만 칠천오백 마리라</div>
+        <div class="verse"><span class="verse-num">37</span> 여호와께 공물로 드린 양이 육백칠십오요</div>
+        <div class="verse"><span class="verse-num">38</span> 소가 삼만 육천 마리라 그 중에서 여호와께 공물로 드린 것이 칠십이 마리요</div>
+        <div class="verse"><span class="verse-num">39</span> 나귀가 삼만 오백 마리라 그 중에서 여호와께 공물로 드린 것이 육십일 마리요</div>
+        <div class="verse"><span class="verse-num">40</span> 사람이 만 육천 명이라 그 중에서 여호와께 공물로 드린 자가 삼십이 명이니</div>
+        <div class="verse"><span class="verse-num">41</span> 여호와께 거제의 공물로 드린 것을 모세가 제사장 엘르아살에게 주었으니 여호와께서 모세에게 명령하심과 같았더라</div>
+        <div class="verse"><span class="verse-num">42</span> 모세가 전쟁에 나갔던 자에게서 나누어 이스라엘 자손에게 준 절반</div>
+        <div class="verse"><span class="verse-num">43</span> 곧 회중이 받은 절반은 양이 삼십삼만 칠천오백 마리요</div>
+        <div class="verse"><span class="verse-num">44</span> 소가 삼만 육천 마리요</div>
+        <div class="verse"><span class="verse-num">45</span> 나귀가 삼만 오백 마리요</div>
+        <div class="verse"><span class="verse-num">46</span> 사람이 만 육천 명이라</div>
+        <div class="verse"><span class="verse-num">47</span> 이스라엘 자손의 그 절반에서 모세가 사람이나 짐승의 오십분의 일을 취하여 여호와의 장막을 맡은 레위인에게 주었으니 여호와께서 모세에게 명령하심과 같았더라</div>
+        <div class="verse"><span class="verse-num">48</span> 군대의 지휘관들 곧 천부장과 백부장들이 모세에게 나아와서</div>
+        <div class="verse"><span class="verse-num">49</span> 모세에게 말하되 당신의 종들이 이끈 군인을 계수한즉 우리 중 한 사람도 축나지 아니하였기로</div>
+        <div class="verse"><span class="verse-num">50</span> 우리 각 사람이 받은 바 금 패물 곧 발목 고리, 손목 고리, 인장 반지, 귀 고리, 목걸이들을 여호와께 헌금으로 우리의 생명을 위하여 여호와 앞에 속죄하려고 가져왔나이다</div>
+        <div class="verse"><span class="verse-num">51</span> 모세와 제사장 엘르아살이 그들에게서 그 금으로 만든 모든 패물을 취한즉</div>
+        <div class="verse"><span class="verse-num">52</span> 천부장과 백부장들이 여호와께 드린 거제의 금의 도합이 만 육천칠백오십 세겔이니</div>
+        <div class="verse"><span class="verse-num">53</span> 군인들이 각기 자기를 위하여 탈취한 것이니라</div>
+        <div class="verse"><span class="verse-num">54</span> 모세와 제사장 엘르아살이 천부장과 백부장들에게서 금을 취하여 회막에 드려 여호와 앞에서 이스라엘 자손의 기념을 삼았더라</div>
+
+        <!-- 민수기 32장 -->
+        <div class="chapter-title">민수기 32장 (1~42절)</div>
+        <div class="verse"><span class="verse-num">1</span> 르우벤 자손과 갓 자손은 심히 많은 가축 떼를 가졌더라 그들이 야셀 땅과 길르앗 땅을 본즉 그 곳은 목축할 만한 장소인지라</div>
+        <div class="verse"><span class="verse-num">2</span> 갓 자손과 르우벤 자손이 와서 모세와 제사장 엘르아살과 회중 지휘관들에게 말하여 이르되</div>
+        <div class="verse"><span class="verse-num">3</span> 아다롯과 디본과 야셀과 니므라와 헤스본과 엘르알레와 스밤과 느보와 브온</div>
+        <div class="verse"><span class="verse-num">4</span> 곧 여호와께서 이스라엘 회중 앞에서 쳐서 멸하신 땅은 목축할 만한 장소요 당신의 종들에게는 가축이 있나이다</div>
+        <div class="verse"><span class="verse-num">5</span> 또 이르되 우리가 만일 당신에게 은혜를 입었으면 이 땅을 당신의 종들에게 그들의 소유로 주시고 우리에게 요단 강을 건너지 않게 하소서</div>
+        <div class="verse"><span class="verse-num">6</span> 모세가 갓 자손과 르우벤 자손에게 이르되 너희 형제들은 싸우러 가거늘 너희는 여기 앉아 있고자 하느냐</div>
+        <div class="verse"><span class="verse-num">7</span> 너희가 어찌하여 이스라엘 자손에게 낙심하게 하여서 여호와께서 그들에게 주신 땅으로 건너갈 수 없게 하려 하느냐</div>
+        <div class="verse"><span class="verse-num">8</span> 너희 조상들도 내가 가데스바네아에서 그 땅을 보라고 보냈을 때에 그리 하였었나니</div>
+        <div class="verse"><span class="verse-num">9</span> 그들이 에스골 골짜기에 올라가서 그 땅을 보고 이스라엘 자손을 낙심하게 하여서 여호와께서 그들에게 주신 땅으로 갈 수 없게 하였었느니라</div>
+        <div class="verse"><span class="verse-num">10</span> 그 때에 여호와께서 진노하사 맹세하여 이르시되</div>
+        <div class="verse"><span class="verse-num">11</span> 애굽에서 나온 자들이 이십 세 이상으로는 한 사람도 내가 아브라함과 이삭과 야곱에게 맹세한 땅을 결코 보지 못하리니 이는 그들이 나를 온전히 따르지 아니하였음이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그러나 그나스 사람 여분네의 아들 갈렙과 눈의 아들 여호수아는 여호와를 온전히 따랐느니라 하시고</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와께서 이스라엘에게 진노하사 그들에게 사십 년 동안 광야에 방황하게 하셨으므로 여호와의 목전에 악을 행한 그 세대가 마침내는 다 끊어졌느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 보라 너희는 너희의 조상의 대를 이어 일어난 죄인의 무리로서 이스라엘을 향하신 여호와의 노를 더욱 심하게 하는도다</div>
+        <div class="verse"><span class="verse-num">15</span> 너희가 만일 돌이켜 여호와를 떠나면 여호와께서 다시 이 백성을 광야에 버리시리니 그리하면 너희가 이 모든 백성을 멸망시키리라</div>
+        <div class="verse"><span class="verse-num">16</span> 그들이 모세에게 가까이 나아와 이르되 우리가 이 곳에 우리 가축을 위하여 우리를 짓고 우리 어린 아이들을 위하여 성읍을 건축하고</div>
+        <div class="verse"><span class="verse-num">17</span> 이 땅의 원주민이 있으므로 우리 어린 아이들을 그 견고한 성읍에 거주하게 한 후에 우리는 무장하고 이스라엘 자손을 그 곳으로 인도하기까지 그들의 앞에서 가고</div>
+        <div class="verse"><span class="verse-num">18</span> 이스라엘 자손이 각기 기업을 받기까지 우리 집으로 돌아오지 아니하겠사오며</div>
+        <div class="verse"><span class="verse-num">19</span> 우리는 요단 이쪽 곧 동쪽에서 기업을 받았사오니 그들과 함께 요단 저쪽에서는 기업을 받지 아니하겠나이다</div>
+        <div class="verse"><span class="verse-num">20</span> 모세가 그들에게 이르되 너희가 만일 이 일을 행하여 무장하고 여호와 앞에서 가서 싸우되</div>
+        <div class="verse"><span class="verse-num">21</span> 너희가 다 무장하고 여호와 앞에서 요단을 건너가서 여호와께서 그의 원수를 자기 앞에서 쫓아내시고</div>
+        <div class="verse"><span class="verse-num">22</span> 그 땅이 여호와 앞에 복종하게 하시기까지 싸우면 여호와 앞에서나 이스라엘 앞에서나 무죄하여 돌아오겠고 이 땅은 여호와 앞에서 너희의 소유가 되리라마는</div>
+        <div class="verse"><span class="verse-num">23</span> 너희가 만일 그같이 아니하면 여호와께 범죄함이니 너희 죄가 반드시 너희를 찾아낼 줄 알라</div>
+        <div class="verse"><span class="verse-num">24</span> 너희는 어린 아이들을 위하여 성읍을 건축하고 양을 위하여 우리를 지으라 그리하고 너희의 입이 말한 대로 행하라</div>
+        <div class="verse"><span class="verse-num">25</span> 갓 자손과 르우벤 자손이 모세에게 대답하여 이르되 주의 종들인 우리는 우리 주의 명령대로 행할 것이라</div>
+        <div class="verse"><span class="verse-num">26</span> 우리의 어린 아이들과 아내와 양 떼와 모든 가축은 이곳 길르앗 성읍들에 두고</div>
+        <div class="verse"><span class="verse-num">27</span> 종들은 우리 주의 말씀대로 무장하고 여호와 앞에서 다 건너가서 싸우리이다</div>
+        <div class="verse"><span class="verse-num">28</span> 이에 모세가 그들에 대하여 제사장 엘르아살과 눈의 아들 여호수아와 이스라엘 자손 지파의 수령들에게 명령하니라</div>
+        <div class="verse"><span class="verse-num">29</span> 모세가 그들에게 이르되 갓 자손과 르우벤 자손이 만일 각각 무장하고 너희와 함께 요단을 건너가서 여호와 앞에서 싸워서 그 땅이 너희 앞에 항복하기에 이르면 길르앗 땅을 그들의 소유로 줄 것이니라</div>
+        <div class="verse"><span class="verse-num">30</span> 그러나 만일 그들이 너희와 함께 무장하고 건너지 아니하면 그들은 가나안 땅에서 너희와 함께 땅을 소유할 것이니라</div>
+        <div class="verse"><span class="verse-num">31</span> 갓 자손과 르우벤 자손이 대답하여 이르되 여호와께서 당신의 종들에게 명령하신 대로 우리가 행할 것이라</div>
+        <div class="verse"><span class="verse-num">32</span> 우리가 무장하고 여호와 앞에서 가나안 땅에 건너가서 요단 이쪽을 우리가 소유할 기업이 되게 하리이다</div>
+        <div class="verse"><span class="verse-num">33</span> 모세가 갓 자손과 르우벤 자손과 요셉의 아들 므낫세 반 지파에게 아모리인의 왕 시혼의 나라와 바산 왕 옥의 나라를 주되 곧 그 땅과 그 경내의 성읍들과 그 성읍들의 사방 땅을 그들에게 주매</div>
+        <div class="verse"><span class="verse-num">34</span> 갓 자손은 디본과 아다롯과 아로엘과</div>
+        <div class="verse"><span class="verse-num">35</span> 아다롯소반과 야셀과 욕브하와</div>
+        <div class="verse"><span class="verse-num">36</span> 벧니므라와 벧하란들의 견고한 성읍을 건축하였고 또 양을 위하여 우리를 지었으며</div>
+        <div class="verse"><span class="verse-num">37</span> 르우벤 자손은 헤스본과 엘르알레와 기랴다임과</div>
+        <div class="verse"><span class="verse-num">38</span> 느보와 바알므온들을 건축하고 그 이름을 바꾸었고 또 십마를 건축하고 건축한 성읍들에 새 이름을 주었고</div>
+        <div class="verse"><span class="verse-num">39</span> 므낫세의 아들 마길의 자손은 가서 길르앗을 쳐서 빼앗고 거기 있는 아모리인을 쫓아내매</div>
+        <div class="verse"><span class="verse-num">40</span> 모세가 길르앗을 므낫세의 아들 마길에게 주매 그가 거기 거주하였고</div>
+        <div class="verse"><span class="verse-num">41</span> 므낫세의 아들 야일은 가서 그 촌락들을 빼앗고 하봇야일이라 불렀으며</div>
+        <div class="verse"><span class="verse-num">42</span> 노바는 가서 그낫과 그 마을들을 빼앗고 자기 이름을 따라서 노바라 불렀더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
