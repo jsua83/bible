@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 061</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 061</h1>
+        <p class="sub-title">찬송가 420장 너 성결키 위해</p>
+        <p class="sub-title">신명기 7~9장 — 거룩한 문화 / 모세의 40일 금식과 예수님의 40일 금식의 연결고리?</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 420장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/13Fx9EcyWO0_xC3DvnE7vNClsDXVqxvWb" alt="찬송가 420장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 신명기 7장~9장<br>'거룩한 문화 / 모세의 40일 금식과 예수님의 40일 금식의 연결고리?'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 모세의 40일 금식과 예수님의 40일 금식은 '나라 이야기'로 서로 깊게 연결되어 있습니다.</span>
+            모세가 시내산 꼭대기에서 하나님께 십계명 두 돌판을 받는 동안 산 아래 시내 광야에서는 **이스라엘 백성들이 금송아지 우상을 만든 사건이 발생했습니다.** 그러자 모세는 십계명 두 돌판을 깨뜨리고 금송아지 우상을 부수어 백성들에게 마시게 한 후, 3,000여 명을 죽임으로 일단락을 짓고 또다시 시내산에 올라갔습니다. **모세가 다시 시내산에 올라가 40일을 하나님 앞에 엎드려 금식함으로 이 위기를 극복했습니다.**<br><br>
+            이후 예수님께서는 하나님 나라를 위한 공생애 3년을 앞두고 세례 요한에게 세례를 받으신 후, **광야로 나가셔서 40일 동안 금식하셨습니다.** 예수님께서는 40일 금식 후 사탄에게 시험받으시는 과정에서 **모세가 기록한 신명기로 사탄의 모든 시험을 이기셨습니다.**
+            <div class="quote">
+                **모세의 40일 금식은 제사장 나라를 다시 살리기 위함이었으며, 예수님의 40일 금식은 제사장 나라를 수렴한 하나님 나라를 완성하시기 위한 공생애 시작의 첫걸음이었습니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 광야 40년 동안 만나 세대들을 향한 하나님의 시험은 그들로 세 가지 답을 찾게 해주었습니다.</span>
+            광야 40년 동안, 하나님께서는 이스라엘 백성들을 낮추고 주리게 했다고 말씀하십니다(신 8:2~3). 이 말씀에는 만나 세대들을 향한 **세 가지 질문과 답**이 들어 있습니다.
+            <div class="quote">
+                **첫째,** 왜 그들을 낮추셨는가? 만나 세대들이 낮아져야 **모든 민족을 섬기는 큰 자**가 될 수 있습니다.<br>
+                **둘째,** 왜 그들을 주리게 하셨는가? 만나 세대들이 **하나님의 의에 목마르게** 하셨습니다.<br>
+                **셋째,** 왜 그들에게 만나를 먹게 하셨는가?<br>
+                **"사람이 떡으로만 사는 것이 아니오, 여호와의 입에서 나오는 모든 말씀으로 사는 줄을 네가 알게 하려 하심이라"** (신 8:3)
+            </div>
+            하나님께서는 만나 세대를 주리게 하신 후 시험하셨습니다. 이들은 얼마든지 배고픔을 해결하기 위해 **힘으로 주변 나라들인 모압, 암몬 등의 지역으로 가서 양식을 빼앗을 수 있었습니다.** 만약 그렇게 되면 제사장 나라의 사명 중에 하나인 **'모든 민족과의 평화'는 안중에도 없게 되는 것**입니다.
+            <div class="quote">
+                **하나님께서 인생들에게 절대적으로 필요한 음식보다 더 중요한 하나님 나라가 있다는 사실을 가르쳐 주신 것입니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 시험장에는 아무나 들여보내지 않습니다.</span>
+            시험장에는 시험 볼 준비가 된 사람이 들어갈 수 있습니다. **하나님께서도 시험을 보고 그 시험에 통과할 만한 사람을 시험장에 들여보내십니다.** 하나님께서 우리를 낮추시며 우리를 시험하시는 것은 **우리의 마음이 어떠한지, 그리고 우리가 하나님의 명령을 지키는지 지키지 않는지 아시고자 함**입니다.
+            <div class="quote">
+                **하나님의 뜻은 우리가 시험에 통과하여 마침내 복을 받아 하나님의 나라를 유업으로 상속받게 하려 하심입니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 만나 세대가 광야 생활 40년에서 잊지 말고 기억해야 할 곳은 출애굽 세대들이 하나님을 거역했던 다섯 곳입니다.</span>
+            하나님께서는 모세를 통해 만나 세대들에게 지난 광야 40년을 되돌아보며 **그들의 부모 세대인 출애굽 세대들이 하나님을 거역했던 다섯 곳을 늘 기억하라**고 말씀하십니다(신 9장).
+            <div class="quote">
+                **첫째,** 금송아지 우상을 만들어 3,000여 명이 죽은 **시내산**입니다(출 32:20~28).<br>
+                **둘째,** 원망하는 이스라엘 백성들을 불사르게 하셨다는 뜻의 **다베라**입니다(민 11:1).<br>
+                **셋째,** 백성이 모세와 다투어 붙여진 이름 **맛사**입니다(출 17:2~7).<br>
+                **넷째,** 탐욕의 무덤이 된 **기브롯 핫다아와**입니다(민 11:33~34).<br>
+                **다섯째,** 백성의 불신으로 광야 40년의 원인이 된 **가데스 바네아**입니다(민 32:8~9).
+            </div>
+            <div class="quote">
+                **모세는 만나 세대들에게 가나안에 가서도 이 광야 다섯 곳을 늘 기억하게 함으로 다시는 하나님의 마음을 아프시게 하지 말 것을 당부합니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 이스라엘이 제사장 나라로 택함을 받은 이유는 하나님의 사랑과 하나님의 맹세 때문입니다.</span>
+            이스라엘이 제사장 나라 거룩한 시민으로 택함을 받은 것은 **'그들의 공의' 때문이 아닙니다.** 이스라엘이 하나님과 제사장 나라 언약을 맺게 된 것은 전적인 **'하나님의 사랑'**입니다. 그리고 하나님께서 그들의 조상인 **아브라함과 이삭과 야곱과 맺은 언약 때문**(창 17:7~8)입니다.<br><br>
+            또한 가나안은 그들의 잘못으로 처벌받는 것입니다. 가나안은 오랫동안 우상을 숭배하며 죄악이 관영했습니다. 만약 이스라엘이 그 땅에 가서 사는 동안 제사장 나라의 사명을 제대로 감당하지 않으면 **가나안인과 마찬가지로 그 땅이 이스라엘도 토하게 될 것**이라는 것입니다.
+            <div class="quote">
+                **하나님께서 애굽에서 종 되었던 이스라엘을 선택하신 것은 하나님의 모든 민족을 향한 사랑 때문입니다. '모든 민족'을 위한 '한 민족'으로, 제사장 나라의 사명을 위해 이스라엘이 선택된 것입니다.**
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 신명기 7~9장 '거룩한 문화 / 모세의 40일 금식과 예수님의 40일 금식의 연결고리?'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 신명기 7장 -->
+        <div class="chapter-title">신명기 7장 (1~26절)</div>
+        <div class="verse"><span class="verse-num">1</span> 네 하나님 여호와께서 너를 인도하사 네가 가서 차지할 땅으로 들이시고 네 앞에서 여러 민족 헷 족속과 기르가스 족속과 아모리 족속과 가나안 족속과 브리스 족속과 히위 족속과 여부스 족속 곧 너보다 많고 힘이 센 일곱 족속을 쫓아내실 때에</div>
+        <div class="verse"><span class="verse-num">2</span> 네 하나님 여호와께서 그들을 네게 넘겨 네게 치게 하시리니 그 때에 너는 그들을 진멸할 것이라 그들과 어떤 언약도 하지 말 것이요 그들을 불쌍히 여기지도 말 것이며</div>
+        <div class="verse"><span class="verse-num">3</span> 또 그들과 혼인하지도 말지니 네 딸을 그들의 아들에게 주지 말 것이요 그들의 딸도 네 며느리로 삼지 말 것은</div>
+        <div class="verse"><span class="verse-num">4</span> 그가 네 아들을 유혹하여 그가 여호와를 떠나고 다른 신들을 섬기게 하므로 여호와께서 너희에게 진노하사 갑자기 너희를 멸하실 것임이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 오직 너희가 그들에게 행할 것은 이러하니 그들의 제단을 헐며 주상을 깨뜨리며 아세라 목상을 찍으며 조각한 우상들을 불사를 것이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 너는 여호와 네 하나님의 성민이라 네 하나님 여호와께서 지상 만민 중에서 너를 자기 기업의 백성으로 택하셨나니</div>
+        <div class="verse"><span class="verse-num">7</span> 여호와께서 너희를 기뻐하시고 너희를 택하심은 너희가 다른 민족보다 수효가 많기 때문이 아니니라 너희는 오히려 모든 민족 중에 가장 적으니라</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와께서 다만 너희를 사랑하심으로 말미암아, 또는 너희의 조상들에게 하신 맹세를 지키려 하심으로 말미암아 자기의 권능의 손으로 너희를 인도하여 내시되 너희를 그 종 되었던 집에서 애굽 왕 바로의 손에서 속량하셨나니</div>
+        <div class="verse"><span class="verse-num">9</span> 그런즉 너는 알라 오직 네 하나님 여호와는 하나님이시요 신실하신 하나님이시라 그를 사랑하고 그의 계명을 지키는 자에게는 천 대까지 그의 언약을 이행하시며 인애를 베푸시되</div>
+        <div class="verse"><span class="verse-num">10</span> 그를 미워하는 자에게는 당장에 보응하여 멸하시나니 여호와는 자기를 미워하는 자에게 지체하지 아니하시고 당장에 그에게 보응하시느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 그런즉 너는 오늘 내가 네게 명하는 명령과 규례와 법도를 지켜 행할지니라</div>
+        <div class="verse"><span class="verse-num">12</span> 너희가 이 모든 법도를 듣고 지켜 행하면 네 하나님 여호와께서 네 조상들에게 맹세하신 언약을 지켜 네게 인애를 베푸실 것이라</div>
+        <div class="verse"><span class="verse-num">13</span> 곧 너를 사랑하시고 복을 주사 너를 번성하게 하시되 네게 주리라고 네 조상들에게 맹세하신 땅에서 네 소생에게 은혜를 베푸시며 네 토지 소산과 곡식과 포도주와 기름을 풍성하게 하시고 네 소와 양을 번식하게 하시리니</div>
+        <div class="verse"><span class="verse-num">14</span> 네가 복을 받음이 만민보다 훨씬 더하여 너희 중의 남녀와 너희의 짐승의 암수에 생육하지 못함이 없을 것이며</div>
+        <div class="verse"><span class="verse-num">15</span> 여호와께서 또 모든 질병을 네게서 멀리 하사 너희가 아는 애굽의 악질에 걸리지 않게 하시고 너를 미워하는 모든 자에게 걸리게 하실 것이라</div>
+        <div class="verse"><span class="verse-num">16</span> 네 하나님 여호와께서 네게 넘겨주신 모든 민족을 네 눈이 긍휼히 여기지 말고 진멸하며 그들의 신을 섬기지 말라 그것이 네게 올무가 되리라</div>
+        <div class="verse"><span class="verse-num">17</span> 네가 혹시 심중에 이르기를 이 민족들이 나보다 많으니 내가 어찌 그를 쫓아낼 수 있으리요 하리라마는</div>
+        <div class="verse"><span class="verse-num">18</span> 그들을 두려워하지 말고 네 하나님 여호와께서 바로와 온 애굽에 행하신 것을 잘 기억하되</div>
+        <div class="verse"><span class="verse-num">19</span> 네 하나님 여호와께서 너를 인도하여 내실 때에 네가 본 큰 시험과 이적과 기사와 강한 손과 편 팔을 기억하라 네 하나님 여호와께서 네가 두려워하는 모든 민족에게 그와 같이 행하실 것이요</div>
+        <div class="verse"><span class="verse-num">20</span> 네 하나님 여호와께서 또 왕벌을 그들 중에 보내어 그들의 남은 자와 너를 피하여 숨은 자를 멸하시리니</div>
+        <div class="verse"><span class="verse-num">21</span> 너는 그들을 두려워하지 말라 너희의 하나님 여호와 곧 크고 두려운 하나님이 너희 중에 계심이니라</div>
+        <div class="verse"><span class="verse-num">22</span> 네 하나님 여호와께서 이 민족들을 네 앞에서 조금씩 쫓아내시리니 너는 그들을 급히 멸하지 말라 들짐승이 번성하여 너를 해할까 하노라</div>
+        <div class="verse"><span class="verse-num">23</span> 네 하나님 여호와께서 그들을 네게 넘기시고 그들을 크게 혼란하게 하여 마침내 진멸하시고</div>
+        <div class="verse"><span class="verse-num">24</span> 그들의 왕들을 네 손에 넘기시리니 너는 그들의 이름을 천하에서 제하여 버리라 너를 당할 자가 없이 네가 마침내 그들을 진멸하리라</div>
+        <div class="verse"><span class="verse-num">25</span> 너는 그들이 조각한 신상들을 불사르고 그것에 입힌 은이나 금을 탐내지 말며 취하지 말라 네가 그것으로 말미암아 올무에 걸릴까 하노니 이는 네 하나님 여호와께서 가증히 여기시는 것임이니라</div>
+        <div class="verse"><span class="verse-num">26</span> 너는 가증한 것을 네 집에 들이지 말라 너도 그것과 같이 진멸 당할까 하노라 너는 그것을 멀리하며 심히 미워하라 그것은 진멸 당할 것임이니라</div>
+
+        <!-- 신명기 8장 -->
+        <div class="chapter-title">신명기 8장 (1~20절)</div>
+        <div class="verse"><span class="verse-num">1</span> 내가 오늘 명하는 모든 명령을 너희는 지켜 행하라 그리하면 너희가 살고 번성하고 여호와께서 너희의 조상들에게 맹세하신 땅에 들어가서 그것을 차지하리라</div>
+        <div class="verse"><span class="verse-num">2</span> 네 하나님 여호와께서 이 사십 년 동안에 네게 광야 길을 걷게 하신 것을 기억하라 이는 너를 낮추시며 너를 시험하사 네 마음이 어떠한지 그 명령을 지키는지 지키지 않는지 알려 하심이라</div>
+        <div class="verse"><span class="verse-num">3</span> 너를 낮추시며 너를 주리게 하시며 또 너도 알지 못하며 네 조상들도 알지 못하던 만나를 네게 먹이신 것은 사람이 떡으로만 사는 것이 아니요 여호와의 입에서 나오는 모든 말씀으로 사는 줄을 네가 알게 하려 하심이니라</div>
+        <div class="verse"><span class="verse-num">4</span> 이 사십 년 동안에 네 의복이 해어지지 아니하였고 네 발이 부르트지 아니하였느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 너는 사람이 그 아들을 징계함 같이 네 하나님 여호와께서 너를 징계하시는 줄 마음에 생각하고</div>
+        <div class="verse"><span class="verse-num">6</span> 네 하나님 여호와의 명령을 지켜 그의 길을 따라가며 그를 경외할지니라</div>
+        <div class="verse"><span class="verse-num">7</span> 네 하나님 여호와께서 너를 아름다운 땅에 이르게 하시나니 그 곳은 골짜기든지 산지든지 시내와 분천과 샘이 흐르고</div>
+        <div class="verse"><span class="verse-num">8</span> 밀과 보리의 소산지요 포도와 무화과와 석류와 감람나무와 꿀의 소산지라</div>
+        <div class="verse"><span class="verse-num">9</span> 네가 먹을 것에 모자람이 없고 네게 아무 부족함이 없는 땅이며 그 땅의 돌은 철이요 산에서는 동을 캘 것이라</div>
+        <div class="verse"><span class="verse-num">10</span> 네가 먹어서 배부르고 네 하나님 여호와께서 옥토를 네게 주셨음으로 말미암아 그를 찬송하리라</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 오늘 네게 명하는 여호와의 명령과 법도와 규례를 지키지 아니하고 네 하나님 여호와를 잊어버리지 않도록 삼갈지어다</div>
+        <div class="verse"><span class="verse-num">12</span> 네가 먹어서 배부르고 아름다운 집을 짓고 거주하게 되며</div>
+        <div class="verse"><span class="verse-num">13</span> 또 네 소와 양이 번성하며 네 은금이 증식되며 네 소유가 다 풍부하게 될 때에</div>
+        <div class="verse"><span class="verse-num">14</span> 네 마음이 교만하여 네 하나님 여호와를 잊어버릴까 염려하노라 여호와는 너를 애굽 땅 종 되었던 집에서 이끌어 내시고</div>
+        <div class="verse"><span class="verse-num">15</span> 너를 인도하여 그 광대하고 위험한 광야 곧 불뱀과 전갈이 있고 물이 없는 간조한 땅을 지나게 하셨으며 또 너를 위하여 단단한 반석에서 물을 내셨으며</div>
+        <div class="verse"><span class="verse-num">16</span> 네 조상들도 알지 못하던 만나를 광야에서 네게 먹이셨나니 이는 다 너를 낮추시며 너를 시험하사 마침내 네게 복을 주려 하심이었느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 그러나 네가 마음에 이르기를 내 능력과 내 손의 힘으로 내가 이 재물을 얻었다 말할 것이라</div>
+        <div class="verse"><span class="verse-num">18</span> 네 하나님 여호와를 기억하라 그가 네게 재물 얻을 능력을 주셨음이라 이같이 하심은 네 조상들에게 맹세하신 언약을 오늘과 같이 이루려 하심이니라</div>
+        <div class="verse"><span class="verse-num">19</span> 네가 만일 네 하나님 여호와를 잊어버리고 다른 신들을 따라 그들을 섬기며 그들에게 절하면 내가 너희에게 증거하노니 너희가 반드시 멸망할 것이라</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와께서 너희 앞에서 멸망시키신 민족들 같이 너희도 멸망하리니 이는 너희가 너희의 하나님 여호와의 소리를 청종하지 아니함이니라</div>
+
+        <!-- 신명기 9장 -->
+        <div class="chapter-title">신명기 9장 (1~29절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘아 들으라 네가 오늘 요단을 건너 너보다 강대한 나라들로 들어가서 그것을 차지하리니 그 성읍들은 크고 성벽은 하늘에 닿았으며</div>
+        <div class="verse"><span class="verse-num">2</span> 크고 많은 백성은 네가 아는 아낙 자손이라 그에 대한 말을 네가 들었나니 이르기를 누가 아낙 자손을 능히 당하리요 하거니와</div>
+        <div class="verse"><span class="verse-num">3</span> 오늘 너는 알라 네 하나님 여호와께서 맹렬한 불과 같이 네 앞에 나아가신즉 여호와께서 그들을 멸하사 네 앞에 엎드러지게 하시리니 여호와께서 네게 말씀하신 것 같이 너는 그들을 쫓아내며 속히 멸할 것이라</div>
+        <div class="verse"><span class="verse-num">4</span> 네 하나님 여호와께서 그들을 네 앞에서 쫓아내신 후에 네가 심중에 이르기를 내 공의로움으로 말미암아 여호와께서 나를 이 땅으로 인도하여 들여서 그것을 차지하게 하셨다 하지 말라 이 민족들이 악함으로 말미암아 여호와께서 그들을 네 앞에서 쫓아내심이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 네가 가서 그 땅을 차지함은 네 공의로 말미암음도 아니며 네 마음이 정직함으로 말미암음도 아니요 이 민족들이 악함으로 말미암아 네 하나님 여호와께서 그들을 네 앞에서 쫓아내심이라 여호와께서 이같이 하심은 네 조상 아브라함과 이삭과 야곱에게 하신 맹세를 이루려 하심이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 그러므로 네가 알 것은 네 하나님 여호와께서 네게 이 아름다운 땅을 기업으로 주신 것이 네 공의로 말미암음이 아니니라 너는 목이 곧은 백성이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 너는 광야에서 네 하나님 여호와를 격노하게 하던 일을 잊지 말고 기억하라 네가 애굽 땅에서 나오던 날부터 이 곳에 이르기까지 늘 여호와를 거역하였으되</div>
+        <div class="verse"><span class="verse-num">8</span> 호렙 산에서 너희가 여호와를 격노하게 하였으므로 여호와께서 진노하사 너희를 멸하려 하셨느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 그 때에 내가 돌판들 곧 여호와께서 너희와 세우신 언약의 돌판들을 받으려고 산에 올라가서 사십 주 사십 야를 산에 머물며 떡도 먹지 아니하고 물도 마시지 아니하였더니</div>
+        <div class="verse"><span class="verse-num">10</span> 여호와께서 두 돌판을 내게 주셨나니 그 돌판의 글은 하나님이 손으로 기록하신 것이요 너희의 총회 날에 여호와께서 산상 불 가운데서 너희에게 이르신 모든 말씀이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 사십 주 사십 야를 지난 후에 여호와께서 내게 돌판 곧 언약의 두 돌판을 주시고</div>
+        <div class="verse"><span class="verse-num">12</span> 내게 이르시되 일어나 여기서 속히 내려가라 네가 애굽에서 인도하여 낸 네 백성이 스스로 부패하여 내가 그들에게 명령한 도를 속히 떠나 자기를 위하여 우상을 부어 만들었느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와께서 또 내게 말씀하여 이르시되 내가 이 백성을 보았노라 보라 이는 목이 곧은 백성이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 나를 막지 말라 내가 그들을 멸하여 그들의 이름을 천하에서 없애고 너를 그들보다 강대한 나라가 되게 하리라 하시기로</div>
+        <div class="verse"><span class="verse-num">15</span> 내가 돌이켜 산에서 내려오는데 산에는 불이 붙었고 언약의 두 돌판은 내 두 손에 있었느니라</div>
+        <div class="verse"><span class="verse-num">16</span> 내가 본즉 너희가 너희의 하나님 여호와께 범죄하여 자기를 위하여 송아지를 부어 만들어서 여호와께서 명령하신 도를 빨리 떠났기로</div>
+        <div class="verse"><span class="verse-num">17</span> 내가 그 두 돌판을 내 두 손으로 들어 던져 너희의 목전에서 깨뜨렸노라</div>
+        <div class="verse"><span class="verse-num">18</span> 그리고 내가 전과 같이 사십 주 사십 야를 여호와 앞에 엎드려서 떡도 먹지 아니하고 물도 마시지 아니하였으니 이는 너희가 여호와의 목전에 악을 행하여 그를 격노하게 하여 크게 죄를 지었음이라</div>
+        <div class="verse"><span class="verse-num">19</span> 여호와께서 심히 분노하사 너희를 멸하려 하셨으므로 내가 두려워하였노라 그러나 여호와께서 그 때에도 내 말을 들으셨고</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와께서 또 아론에게 진노하사 그를 멸하려 하셨으므로 내가 그 때에도 아론을 위하여 기도하고</div>
+        <div class="verse"><span class="verse-num">21</span> 너희의 죄 곧 너희가 만든 송아지를 가져다가 불살라 찧고 티끌 같이 가늘게 갈아 그 가루를 산에서 흘러내리는 시내에 뿌렸느니라</div>
+        <div class="verse"><span class="verse-num">22</span> 너희가 다베라와 맛사와 기브롯 핫다아와에서도 여호와를 격노하게 하였느니라</div>
+        <div class="verse"><span class="verse-num">23</span> 여호와께서 너희를 가데스 바네아에서 떠나게 하실 때에 이르시기를 너희는 올라가서 내가 너희에게 준 땅을 차지하라 하시되 너희가 너희의 하나님 여호와의 명령을 거역하여 믿지 아니하고 그 말씀을 듣지 아니하였나니</div>
+        <div class="verse"><span class="verse-num">24</span> 내가 너희를 알던 날부터 너희가 항상 여호와를 거역하여 왔느니라</div>
+        <div class="verse"><span class="verse-num">25</span> 그 때에 여호와께서 너희를 멸하겠다 하셨으므로 내가 여전히 사십 주 사십 야를 여호와 앞에 엎드리고</div>
+        <div class="verse"><span class="verse-num">26</span> 여호와께 간구하여 이르되 주 여호와여 주께서 큰 위엄으로 속량하시고 강한 손으로 애굽에서 인도하여 내신 주의 백성 곧 주의 기업을 멸하지 마옵소서</div>
+        <div class="verse"><span class="verse-num">27</span> 주의 종 아브라함과 이삭과 야곱을 생각하사 이 백성의 완악함과 악과 죄를 보지 마옵소서</div>
+        <div class="verse"><span class="verse-num">28</span> 주께서 우리를 인도하여 내신 그 땅 백성이 말하기를 여호와께서 그들에게 허락하신 땅으로 그들을 인도하여 들일 만한 능력도 없고 그들을 미워하기도 하사 광야에서 죽이려고 인도하여 내셨다 할까 두려워하나이다</div>
+        <div class="verse"><span class="verse-num">29</span> 그들은 주의 큰 능력과 펴신 팔로 인도하여 내신 주의 백성 곧 주의 기업이로소이다 하였노라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

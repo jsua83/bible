@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 065</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 065</h1>
+        <p class="sub-title">찬송가 191장 내가 매일 기쁘게</p>
+        <p class="sub-title">신명기 18~21장 — 겁내는 자, 집으로 가라</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 191장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1Z3mbmmij40XZqNMYd7FgnMRenH9wL2cU" alt="찬송가 191장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 신명기 18장~21장<br>'겁내는 자, 집으로 가라'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 제사장 나라는 선지자 모세로부터 선지자 세례 요한까지입니다.</span>
+            오직 유일하게 시장이 아닌 **하늘의 하나님으로부터 시작된 직업은 '선지자'**입니다. 선지자는 하나님의 말씀의 **'대언자', 즉 하나님의 대변인**입니다. 그리고 선지자는 이스라엘 백성들을 위한 **'중보자'**입니다.
+
+            하나님께서는 출애굽한 아브라함의 후손들과 제사장 나라 언약을 맺으신 이후 **본격적으로 하나님의 말씀을 대언하는 선지자들을 계속 보내주셨습니다.** 제사장 나라는 **선지자 모세로 시작해서 선지자 세례 요한으로 끝나는 나라**입니다.
+
+            <div class="quote">
+                **"모든 선지자와 율법이 예언한 것은 요한까지니"** (마 11:13)
+            </div>
+
+            이처럼 모세로부터 세례 요한까지 제사장 나라의 모든 선지자들은 **하나님의 말씀을 대언하는 '대언자'이자 하나님과 이스라엘 백성들 사이에서 '중보자'의 역할을 담당했습니다.** 성경에 나타나는 선지자 이야기는 모세로부터 세례 요한까지이고 **율법과 선지자의 완성은 우리 예수님에게서 이루어집니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 벌목하는 도중 도끼가 자루에서 빠져 옆을 죽게 한 경우 도피성으로 피해야 합니다.</span>
+            모세는 만나 세대들에게 다시 **도피성 이야기를 총정리해줍니다**(신 19:1~13). 모세는 요단 동편 땅 분배 때에 이미 요단 동편에 도피성 세 곳을 정해주었습니다. 이제 **요단을 건너가 요단 서편에서도 도피성 세 곳을 정해야 하기 때문에** 모세가 또다시 도피성을 강조하는 것입니다.
+
+            도피성은 **고의가 아닌 부지중에 사고로 사람을 죽였을 경우 도피하여 생명을 건지는 곳**입니다. 그러나 도피성에 고의적 살인자가 들어오면 **성읍 장로들이 판단하여 그를 처벌해야 합니다.**
+
+            <div class="quote">
+                **하나님께서 제사장 나라에 주신 이러한 율법의 조항들은 너무나도 합리적이고 이성적으로 억울한 사람이 없도록 철저하게 배려해주신 참으로 아름다운 법입니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 재판 때 위증하는 자는 '눈에는 눈으로 이에는 이로' 처벌받습니다.</span>
+            우리가 성경에서 오해하는 내용 가운데 하나가 **'눈에는 눈으로 이에는 이'**라는 말씀입니다. 이 율법의 조항은 **동형 보복을 목적으로 하는 것이 아니라 동형 예방을 목적으로 하는 법**입니다. 내 눈이 소중한 만큼 남의 눈도 소중히 여기고, 내 이가 소중한 만큼 남의 이도 소중히 여기라는 것입니다.
+
+            그런데 '눈에는 눈 이에는 이' 동형법으로 적용되는 사안은 **'위증의 죄'**일 때에 그렇습니다. 모든 재판에서 증인의 역할은 진실을 밝히는 데 매우 중요합니다. 때문에 **증인은 절대 위증해서는 안 됩니다.** 또한 제사장 나라의 율법은 **사형을 확정할 때 반드시 두 명 이상의 증인이 있어야 합니다.**
+
+            하나님께서는 전쟁도 하나님께 속해 있고 **재판도 하나님께 속해 있다**고 말씀하십니다. 하나님께서는 모든 재판이 반드시 공의로울 수 있도록 **제사장과 재판장이 재판의 내용을 자세히 살피라**고 말씀하십니다(신 19:16~19).
+
+            <div class="quote">
+                **하나님께서는 거짓 증인들을 경계하시며 그들에게는 반드시 '눈에는 눈으로 이에는 이로' 엄한 처벌을 내리라고 말씀하신 것입니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 마음에 겁내는 군인은 집으로 돌려보냅니다.</span>
+            겁내는 군인을 집으로 돌려보내는 이야기라고 하면 곧바로 **기드온과 300용사 이야기가 떠오릅니다**(삿 7:3). 그런데 이 이야기의 시작은 **모세와 만나 세대들**입니다(신 20:8).
+
+            전쟁에 임하는 군인은 **하나님께서 함께하심을 믿고 겁내거나 두려워하지 말아야 합니다.** 이스라엘 백성들은 출애굽할 때 홍해 길에서 하나님께서 직접 싸우신 것을 보았습니다.
+
+            <div class="quote">
+                **'여호와의 군대' 이스라엘 군인들이 전쟁에 임하는 자세는 하나님께서 함께하심을 믿는 것입니다.**
+            </div>
+
+            이스라엘은 군인들도 용감했지만 더 놀라운 사실은 **'제사장들'이 용감했다**는 것입니다. 이후 미디안과의 전쟁, 여리고성 전쟁에서도 제사장들은 어떤 무기도 손에 들지 않았음에도 **용감하게 선봉에 서서 전쟁을 치릅니다.** 반면 모세는 전쟁을 두려워하여 **형제들까지도 낙심하게 하는 자는 집으로 돌아가 전쟁에 참여하지 않도록 합니다.** 또한 여러 형편에 처한 자들은 율법의 규례에 따라 **전쟁 출전을 면제해줍니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 모세는 하나님의 눈길이 어느 곳을 향하고 있는지 섬세하게 말합니다.</span>
+            하나님의 관심은 **전쟁, 부지불식간의 살인, 공정한 재판과 같은 일뿐 아니라 삶의 디테일한 부분에까지 있습니다.** 공중 나는 새들까지도 거두시는 하나님께서는 **인간 삶의 작은 부분들까지 세심하게 챙기고 살펴주십니다.**
+
+            <div class="quote">
+                신원이 파악되지 않는 자의 죽음을 발견했을 때 **적용하는 규례**도 정해주시고(신 21:1~9), 두 아내를 둔 가정에서 일어날 수 있는 **문제에 대해서도 꼼꼼하게 일러주십니다**(신 21:15~17).
+            </div>
+
+            <div class="quote">
+                **하나님께서는 인생들이 이 세상을 사는 동안 어떻게 해서든지 작은 부분들까지도 서로 배려하며 품위 있게 살기를 바라십니다.**
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 신명기 18~21장 '겁내는 자, 집으로 가라'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 신명기 18장 -->
+        <div class="chapter-title">신명기 18장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 레위 사람 제사장과 레위의 온 지파는 이스라엘 중에 분깃도 없고 기업도 없을지니 그들은 여호와의 화제물과 그 기업을 먹을 것이라</div>
+        <div class="verse"><span class="verse-num">2</span> 그들이 그들의 형제 중에서 기업을 가지지 않을 것은 여호와께서 그들의 기업이 되심이니 그들에게 말씀하심 같으니라</div>
+        <div class="verse"><span class="verse-num">3</span> 제사장이 백성에게서 받을 몫은 이러하니 곧 그 드리는 제물의 소나 양이나 그 앞다리와 두 볼과 위라 이것을 제사장에게 줄 것이요</div>
+        <div class="verse"><span class="verse-num">4</span> 또 네가 처음 거둔 곡식과 포도주와 기름과 네가 처음 깎은 양털을 네가 그에게 줄 것이니</div>
+        <div class="verse"><span class="verse-num">5</span> 이는 네 하나님 여호와께서 네 모든 지파 중에서 그를 택하여 내시고 그와 그의 자손에게 항상 여호와의 이름으로 서서 섬기게 하셨음이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 이스라엘 온 땅 어떤 성읍에든지 거주하는 레위인이 간절한 소원이 있어 그가 사는 곳을 떠날지라도 여호와께서 택하신 곳에 이르면</div>
+        <div class="verse"><span class="verse-num">7</span> 여호와 앞에 선 그의 모든 형제 레위인과 같이 그의 하나님 여호와의 이름으로 섬길 수 있나니</div>
+        <div class="verse"><span class="verse-num">8</span> 그 사람의 몫은 그들과 같을 것이요 그가 조상의 것을 판 것은 별도의 소유이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 네 하나님 여호와께서 네게 주시는 땅에 들어가거든 너는 그 민족들의 가증한 행위를 본받지 말 것이니</div>
+        <div class="verse"><span class="verse-num">10</span> 그의 아들이나 딸을 불 가운데로 지나게 하는 자나 점쟁이나 길흉을 말하는 자나 요술하는 자나 무당이나</div>
+        <div class="verse"><span class="verse-num">11</span> 진언자나 신접자나 박수나 초혼자를 너희 가운데에 용납하지 말라</div>
+        <div class="verse"><span class="verse-num">12</span> 이런 일을 행하는 모든 자를 여호와께서 가증히 여기시나니 이런 가증한 일로 말미암아 네 하나님 여호와께서 그들을 네 앞에서 쫓아내시느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 너는 네 하나님 여호와 앞에서 완전하라</div>
+        <div class="verse"><span class="verse-num">14</span> 네가 쫓아낼 이 민족들은 길흉을 말하는 자나 점쟁이의 말을 듣거니와 네게는 네 하나님 여호와께서 이런 일을 용납하지 아니하시느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 네 하나님 여호와께서 너희 가운데 네 형제 중에서 너를 위하여 나와 같은 선지자 하나를 일으키시리니 너희는 그의 말을 들을지니라</div>
+        <div class="verse"><span class="verse-num">16</span> 이것이 곧 네가 총회의 날에 호렙 산에서 네 하나님 여호와께 구한 것이라 곧 네가 말하기를 내가 다시는 내 하나님 여호와의 음성을 듣지 않게 하시고 다시는 이 큰 불을 보지 않게 하소서 두렵건대 내가 죽을까 하나이다 하매</div>
+        <div class="verse"><span class="verse-num">17</span> 여호와께서 내게 이르시되 그들의 말이 옳도다</div>
+        <div class="verse"><span class="verse-num">18</span> 내가 그들의 형제 중에서 너와 같은 선지자 하나를 그들을 위하여 일으키고 내 말을 그 입에 두리니 내가 그에게 명령하는 것을 그가 무리에게 다 말하리라</div>
+        <div class="verse"><span class="verse-num">19</span> 누구든지 내 이름으로 전하는 내 말을 듣지 아니하는 자는 내게 벌을 받을 것이요</div>
+        <div class="verse"><span class="verse-num">20</span> 만일 어떤 선지자가 내가 전하라고 명령하지 아니한 말을 제 마음대로 내 이름으로 전하든지 다른 신들의 이름으로 말하면 그 선지자는 죽임을 당하리라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 네가 마음속으로 이르기를 그 말이 여호와께서 이르신 말씀인지 우리가 어떻게 알리요 하리라</div>
+        <div class="verse"><span class="verse-num">22</span> 만일 선지자가 있어 여호와의 이름으로 말한 일에 증험도 없고 성취함도 없으면 이는 여호와께서 말씀하신 것이 아니요 그 선지자가 제 마음대로 한 말이니 너는 그를 두려워하지 말지니라</div>
+
+        <!-- 신명기 19장 -->
+        <div class="chapter-title">신명기 19장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 네 하나님 여호와께서 이 여러 민족을 멸절하시고 네 하나님 여호와께서 그 땅을 네게 주시므로 네가 그것을 받고 그들의 성읍과 가옥에 거주할 때에</div>
+        <div class="verse"><span class="verse-num">2</span> 네 하나님 여호와께서 네게 기업으로 주신 땅 가운데에서 세 성읍을 너를 위하여 구별하고</div>
+        <div class="verse"><span class="verse-num">3</span> 네 하나님 여호와께서 네게 기업으로 주시는 땅 전체를 세 구역으로 나누어 길을 닦고 모든 살인자를 그 성읍으로 도피하게 하라</div>
+        <div class="verse"><span class="verse-num">4</span> 살인자가 그리로 도피하여 살 만한 경우는 이러하니 곧 누구든지 본래 원한이 없이 부지중에 그의 이웃을 죽인 일,</div>
+        <div class="verse"><span class="verse-num">5</span> 가령 사람이 그 이웃과 함께 벌목하러 삼림에 들어가서 손에 도끼를 들고 벌목하려고 찍을 때에 도끼가 자루에서 빠져 그의 이웃을 맞춰 그를 죽게 함과 같은 것이라 이런 사람은 그 성읍 중 하나로 도피하여 생명을 보존할 것이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 그 사람이 그에게 본래 원한이 없으니 죽이기에 합당하지 아니하나 두렵건대 그 피를 보복하는 자의 마음이 복수심에 불타서 살인자를 뒤쫓는데 그 가는 길이 멀면 그를 따라 잡아 죽일까 하노라</div>
+        <div class="verse"><span class="verse-num">7</span> 그러므로 내가 네게 명령하기를 세 성읍을 너를 위하여 구별하라 하노라</div>
+        <div class="verse"><span class="verse-num">8</span> 네 하나님 여호와께서 네 조상들에게 맹세하신 대로 네 지경을 넓혀 네 조상들에게 주리라고 말씀하신 땅을 다 네게 주실 때</div>
+        <div class="verse"><span class="verse-num">9</span> 또 너희가 오늘 내가 너희에게 명하는 이 모든 명령을 지켜 행하여 네 하나님 여호와를 사랑하고 항상 그의 길로 행할 때에는 이 셋 외에 세 성읍을 더하여</div>
+        <div class="verse"><span class="verse-num">10</span> 네 하나님 여호와께서 네게 기업으로 주시는 땅에서 무죄한 피를 흘리지 말라 이같이 하면 그의 피가 네게로 돌아가지 아니하리라</div>
+        <div class="verse"><span class="verse-num">11</span> 그러나 만일 어떤 사람이 그의 이웃을 미워하여 엎드려 그를 기다리다가 일어나 상처를 입혀 죽게 하고 이 한 성읍으로 도피하면</div>
+        <div class="verse"><span class="verse-num">12</span> 그 본 성읍 장로들이 사람을 보내어 그를 거기서 잡아다가 보복자의 손에 넘겨 죽이게 할 것이라</div>
+        <div class="verse"><span class="verse-num">13</span> 네 눈이 그를 긍휼히 여기지 말고 무죄한 피를 흘린 죄를 이스라엘에서 제하라 그리하면 네게 복이 있으리라</div>
+        <div class="verse"><span class="verse-num">14</span> 네 하나님 여호와께서 네게 주어 차지하게 하시는 땅 곧 네 소유가 된 기업의 땅에서 조상이 정한 네 이웃의 경계표를 옮기지 말지니라</div>
+        <div class="verse"><span class="verse-num">15</span> 사람의 모든 악에 관하여 또한 모든 죄에 관하여는 한 증인으로만 정할 것이 아니요 두 증인의 입으로나 또는 세 증인의 입으로 그 사건을 확정할 것이며</div>
+        <div class="verse"><span class="verse-num">16</span> 만일 위증하는 자가 있어 어떤 사람이 악을 행하였다고 말하면</div>
+        <div class="verse"><span class="verse-num">17</span> 그 논쟁하는 쌍방이 같이 하나님 앞에 나아가 그 당시의 제사장과 재판장 앞에 설 것이요</div>
+        <div class="verse"><span class="verse-num">18</span> 재판장은 자세히 조사하여 그 증인이 거짓 증거하여 그 형제를 거짓으로 모함한 것이 판명되면</div>
+        <div class="verse"><span class="verse-num">19</span> 그가 그의 형제에게 행하려고 꾀한 그대로 그에게 행하여 너희 중에서 악을 제하라</div>
+        <div class="verse"><span class="verse-num">20</span> 그리하면 그 남은 자들이 듣고 두려워하여 다시는 그런 악을 너희 중에서 행하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">21</span> 네 눈이 긍휼히 여기지 말라 생명에는 생명으로, 눈에는 눈으로, 이에는 이로, 손에는 손으로, 발에는 발로이니라</div>
+
+        <!-- 신명기 20장 -->
+        <div class="chapter-title">신명기 20장 (1~20절)</div>
+        <div class="verse"><span class="verse-num">1</span> 네가 나가서 적군과 싸우려 할 때에 말과 병거와 백성이 너보다 많음을 볼지라도 그들을 두려워하지 말라 애굽 땅에서 너를 인도하여 내신 네 하나님 여호와께서 너와 함께 하시느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 너희가 싸울 곳에 가까이 가면 제사장은 백성에게 나아가서 고하여 그들에게</div>
+        <div class="verse"><span class="verse-num">3</span> 말하여 이르기를 이스라엘아 들으라 너희가 오늘 너희의 대적과 싸우려고 나아왔으니 마음에 겁내지 말며 두려워하지 말며 떨지 말며 그들로 말미암아 놀라지 말라</div>
+        <div class="verse"><span class="verse-num">4</span> 너희 하나님 여호와는 너희와 함께 행하시며 너희를 위하여 너희 적군과 싸우시고 구원하실 것이라 할 것이며</div>
+        <div class="verse"><span class="verse-num">5</span> 책임자들은 백성에게 말하여 이르기를 새 집을 건축하고 낙성식을 행하지 못한 자가 있느냐 그는 집으로 돌아갈지니 전사하면 타인이 낙성식을 행할까 하노라</div>
+        <div class="verse"><span class="verse-num">6</span> 포도원을 만들고 그 과실을 먹지 못한 자가 있느냐 그는 집으로 돌아갈지니 전사하면 타인이 그 과실을 먹을까 하노라</div>
+        <div class="verse"><span class="verse-num">7</span> 여자와 약혼하고 그와 결혼하지 못한 자가 있느냐 그는 집으로 돌아갈지니 전사하면 타인이 그를 데려갈까 하노라 하고</div>
+        <div class="verse"><span class="verse-num">8</span> 책임자들은 또 백성에게 말하여 이르기를 두려워서 마음이 허약한 자가 있느냐 그는 집으로 돌아갈지니 그의 형제들의 마음도 그의 마음과 같이 낙심될까 하노라 하고</div>
+        <div class="verse"><span class="verse-num">9</span> 백성에게 이르기를 마친 후에 군대의 지휘관들을 세워 무리를 거느리게 할지니라</div>
+        <div class="verse"><span class="verse-num">10</span> 네가 어떤 성읍으로 나아가서 치려 할 때에는 그 성읍에 먼저 화평을 선언하라</div>
+        <div class="verse"><span class="verse-num">11</span> 그 성읍이 만일 화평하기로 회답하고 너를 향하여 성문을 열거든 그 모든 주민들에게 네게 조공을 바치고 너를 섬기게 할 것이요</div>
+        <div class="verse"><span class="verse-num">12</span> 만일 너와 화평하기를 거부하고 너를 대적하여 싸우려 하거든 너는 그 성읍을 에워쌀 것이며</div>
+        <div class="verse"><span class="verse-num">13</span> 네 하나님 여호와께서 그 성읍을 네 손에 넘기시거든 너는 칼날로 그 안의 남자를 다 쳐죽이고</div>
+        <div class="verse"><span class="verse-num">14</span> 너는 오직 여자들과 유아들과 가축들과 성읍 가운데에 있는 모든 것을 너를 위하여 탈취물로 삼을 것이며 너는 네 하나님 여호와께서 네게 주신 적군에게서 빼앗은 것을 먹을지니라</div>
+        <div class="verse"><span class="verse-num">15</span> 네가 네게서 멀리 떠난 성읍들 곧 이 민족들에게 속하지 아니한 성읍들에게는 이같이 행하려니와</div>
+        <div class="verse"><span class="verse-num">16</span> 오직 네 하나님 여호와께서 네게 기업으로 주시는 이 민족들의 성읍에서는 호흡 있는 자를 하나도 살리지 말지니</div>
+        <div class="verse"><span class="verse-num">17</span> 곧 헷 족속과 아모리 족속과 가나안 족속과 브리스 족속과 히위 족속과 여부스 족속을 네가 진멸하되 네 하나님 여호와께서 네게 명령하신 대로 하라</div>
+        <div class="verse"><span class="verse-num">18</span> 이는 그들이 그 신들에게 행하는 모든 가증한 일을 너희에게 가르쳐 본받게 하여 너희가 너희의 하나님 여호와께 범죄하게 할까 함이니라</div>
+        <div class="verse"><span class="verse-num">19</span> 너희가 어떤 성읍을 오랫동안 에워싸고 그 성읍을 쳐서 점령하려 할 때에도 도끼를 둘러 그 곳의 나무를 찍어내지 말라 이는 너희가 먹을 것이 될 것임이니 찍지 말라 들의 수목이 사람이냐 너희가 어찌 그것을 에워싸겠느냐</div>
+        <div class="verse"><span class="verse-num">20</span> 다만 과목이 아닌 수목은 찍어내어 너희와 싸우는 그 성읍을 치는 기구를 만들어 그 성읍을 함락시킬 때까지 쓸지니라</div>
+
+        <!-- 신명기 21장 -->
+        <div class="chapter-title">신명기 21장 (1~23절)</div>
+        <div class="verse"><span class="verse-num">1</span> 네 하나님 여호와께서 네게 주어 차지하게 하신 땅에서 피살된 시체가 들에 엎드러진 것을 발견하고 그 쳐죽인 자가 누구인지 알지 못하거든</div>
+        <div class="verse"><span class="verse-num">2</span> 너희의 장로들과 재판장들은 나가서 그 피살된 곳의 사방에 있는 성읍의 원근을 잴 것이요</div>
+        <div class="verse"><span class="verse-num">3</span> 그 피살된 곳에서 제일 가까운 성읍의 장로들이 그 성읍에서 아직 부리지 아니하고 멍에를 메지 아니한 암송아지를 취하여</div>
+        <div class="verse"><span class="verse-num">4</span> 그 성읍의 장로들이 물이 항상 흐르고 갈지도 않고 씨를 뿌린 일도 없는 골짜기로 그 송아지를 끌고 가서 그 골짜기에서 그 송아지의 목을 꺾을 것이요</div>
+        <div class="verse"><span class="verse-num">5</span> 레위 자손 제사장들도 그리로 갈지니 그들은 네 하나님 여호와께서 택하사 자기를 섬기게 하시며 또 여호와의 이름으로 축복하게 하신 자라 모든 소송과 모든 투쟁이 그들의 말대로 판결될 것이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 그 피살된 곳에서 제일 가까운 성읍의 모든 장로들은 그 골짜기에서 목을 꺾은 암송아지 위에 손을 씻으며</div>
+        <div class="verse"><span class="verse-num">7</span> 말하기를 우리의 손이 이 피를 흘리지 아니하였고 우리의 눈이 이것을 보지도 못하였나이다</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와여 주께서 속량하신 주의 백성 이스라엘을 사하시고 무죄한 피를 주의 백성 이스라엘 중에 머물러 두지 마옵소서 하면 그 피 흘린 죄가 사함을 받으리니</div>
+        <div class="verse"><span class="verse-num">9</span> 너는 이와 같이 여호와께서 보시기에 정직한 일을 행하여 무죄한 자의 피 흘린 죄를 너희 중에서 제할지니라</div>
+        <div class="verse"><span class="verse-num">10</span> 네가 나가서 적군과 싸울 때에 네 하나님 여호와께서 그들을 네 손에 넘기시므로 네가 그들을 사로잡은 후에</div>
+        <div class="verse"><span class="verse-num">11</span> 네가 만일 그 포로 중의 아리따운 여자를 보고 그에게 연연하여 아내를 삼고자 하거든</div>
+        <div class="verse"><span class="verse-num">12</span> 그를 네 집으로 데려갈 것이요 그는 그 머리를 밀고 손톱을 베고</div>
+        <div class="verse"><span class="verse-num">13</span> 또 포로의 의복을 벗고 네 집에 살며 그 부모를 위하여 한 달 동안 애곡한 후에 네가 그에게로 들어가서 그의 남편이 되고 그는 네 아내가 될 것이요</div>
+        <div class="verse"><span class="verse-num">14</span> 그 후에 네가 그를 기뻐하지 아니하거든 그의 마음대로 가게 하고 결코 돈을 받고 팔지 말지라 네가 그를 욕보였은즉 종으로 여기지 말지니라</div>
+        <div class="verse"><span class="verse-num">15</span> 어떤 사람이 두 아내를 두었는데 하나는 사랑을 받고 하나는 미움을 받다가 그 사랑을 받는 자와 미움을 받는 자가 둘 다 아들을 낳았다 하자 그 미움을 받는 자의 아들이 장자이면</div>
+        <div class="verse"><span class="verse-num">16</span> 자기의 소유를 그의 아들들에게 기업으로 나누는 날에 그 사랑을 받는 자의 아들을 장자로 삼아 참 장자 곧 미움을 받는 자의 아들보다 앞세우지 말고</div>
+        <div class="verse"><span class="verse-num">17</span> 반드시 그 미움을 받는 자의 아들을 장자로 인정하여 자기의 소유에서 그에게는 두 몫을 줄 것이니 그는 자기의 기력의 시작이라 장자의 권리가 그에게 있음이니라</div>
+        <div class="verse"><span class="verse-num">18</span> 사람에게 완악하고 패역한 아들이 있어 그의 아버지의 말이나 그 어머니의 말을 순종하지 아니하고 부모가 징계하여도 순종하지 아니하거든</div>
+        <div class="verse"><span class="verse-num">19</span> 그의 부모가 그를 끌고 성문에 이르러 그 성읍 장로들에게 나아가서</div>
+        <div class="verse"><span class="verse-num">20</span> 그 성읍 장로들에게 말하기를 우리의 이 자식은 완악하고 패역하여 우리 말을 듣지 아니하고 방탕하며 술에 잠긴 자라 하면</div>
+        <div class="verse"><span class="verse-num">21</span> 그 성읍의 모든 사람들이 그를 돌로 쳐죽일지니 이같이 네가 너희 중에서 악을 제하라 그리하면 온 이스라엘이 듣고 두려워하리라</div>
+        <div class="verse"><span class="verse-num">22</span> 사람이 만일 죽을 죄를 범하므로 네가 그를 죽여 나무 위에 달거든</div>
+        <div class="verse"><span class="verse-num">23</span> 그 시체를 나무 위에 밤새도록 두지 말고 그 날에 장사하여 네 하나님 여호와께서 네게 기업으로 주시는 땅을 더럽히지 말라 나무에 달린 자는 하나님께 저주를 받았음이니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

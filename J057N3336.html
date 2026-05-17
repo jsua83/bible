@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 057</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 057</h1>
+        <p class="sub-title">찬송가 433장 귀하신 주여 날 붙드사</p>
+        <p class="sub-title">민수기 33~36장 — 제사장 나라 공간 이야기 / 대제사장이 빨리 죽기를 바라고 있는 사람이 있습니다</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 433장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/18Lr96i59Nx_JjtSFfoAUmVWC9drqcUZI" alt="찬송가 433장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 민수기 33장~36장<br>'제사장 나라 공간 이야기 / 대제사장이 빨리 죽기를 바라고 있는 사람이 있습니다'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 제사장 나라 '공간(땅)'은 하나님께서 법으로 정해 주셨습니다.</span>
+            민수기 33장에는 대략 40곳의 지명이 나옵니다. 이스라엘 백성들이 지난 40년 동안 40곳 이상의 장소에서 진을 치고 진을 거두기를 반복했다는 기록은 <strong>장소 한 곳, 한 곳마다 그들의 땀 흘린 삶의 내용이 그대로 들어 있다는 뜻</strong>입니다. 그러므로 그 지명들은 <strong>그들의 역사이자 삶 그 자체</strong>입니다. 되돌아보면 그 모든 것이 하나님의 은혜요, 미래를 위한 준비였습니다.<br><br>
+            요단 동편은 이미 분배가 끝났기 때문에 하나님께서는 <strong>요단 서편 땅 분배의 총책임자로 여호수아와 대제사장 엘르아살을 정해주십니다.</strong> 그리고 지파별 제비뽑기 담당자로는 갈렙을 포함해 열 명을 정해 주십니다. 또한 하나님께서는 이스라엘의 <strong>동서남북 사방 경계를 말씀해 주십니다</strong>(민 34:1~12).<br><br>
+            500년 전, 이스라엘 백성들의 조상 아브라함에게 가나안은 <strong>'보여줄 땅'이었고, 믿음으로 보아온 '약속의 땅'</strong>이었습니다. 그런데 500년 만에 아브라함의 후손들인 이스라엘 백성들에게 가나안은 <strong>'사방 경계'가 정해진 구체적인 땅이 되면서 현실이 됩니다.</strong>
+            <div class="quote">
+                <strong>이제 가나안 땅은 들어가서 점령하고 공정하게 분배하고 정의롭게 살아갈 일만 남은 땅이 된 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 레위인들은 '제사장 나라 교육'을 위해 48개 성읍으로 흩어집니다.</span>
+            야곱이 셋째 아들 레위에게 남긴 축복은 이것이었습니다.
+            <div class="quote">
+                <strong>"내가 그들을 야곱 중에서 나누며 이스라엘 중에서 흩으리라"</strong> (창 49:7)
+            </div>
+            야곱의 축복은 가나안 땅에서 현실이 되어 <strong>레위 지파가 이스라엘 각 지파 속으로 흩어져 제사장 나라 공직을 수행하게 될 것</strong>입니다(민 35:1~8). 레위 지파 사람들은 각 지역의 지도자들입니다. 그러나 동시에 레위인들끼리 함께 모여 살지 못하기에 <strong>사회적 약자일 수 있습니다.</strong> 그래서 하나님께서는 따로 기업을 받지 못한 레위인들에게 <strong>48개의 성읍도 주시고 목초지도 주셔서 돌보십니다.</strong><br><br>
+            하나님께서 레위인들에게 주신 48개의 성읍은 <strong>열두 지파가 각 땅의 분량대로 분배해 준 것으로 가나안 전역에 분포되어 있습니다.</strong> 장자가 동생을 교육하는 것처럼 <strong>레위인들은 각 지파 속으로 흩어져 이스라엘이 제사장 나라로 살아갈 수 있도록 일할 것</strong>입니다.
+            <div class="quote">
+                <strong>"너는 삼가 네 땅에 거주하는 동안에 레위인을 저버리지 말지니라"</strong> (신 12:19)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 도피성 사람들은 대제사장의 죽음 소식만을 기다립니다.</span>
+            하나님께서는 열두 지파 사람들에게 땅을 분배해 주시고, 레위인들에게 <strong>6개 도피성을 포함하여 48개 성읍을 지정해 주십니다.</strong> 6개 도피성을 포함한 48개 성읍은 하나님께서 이스라엘 백성들에게 주신 <strong>두 가지 사회적 안전장치</strong>입니다.
+            <div class="quote">
+                <strong>48개의 성읍</strong> — 평생을 하나님의 일에 헌신해야 할 레위인들을 위해 하나님께서 마련해 주신 사회적 안전장치입니다.<br><br>
+                <strong>6개의 도피성</strong> — 부지중에 살인한 자가 도피성에서 그 생명을 건짐 받을 수 있는 사회적 안전장치입니다.
+            </div>
+            그렇다면 도피성으로 피신했던 자는 언제 다시 나갈 수 있을까요? <strong>현직 대제사장의 죽음이 공포되면 그는 자유할 수 있습니다</strong>(민 35:22~25). 만약 현직 대제사장이 아직 살아 있음에도 부지중에 살인한 자가 도피성에서 나가서 죽임을 당한다면 그때는 그를 구제할 방법이 없습니다.
+            <div class="quote">
+                <strong>도피성과 대제사장은 이렇게 밀접한 관계가 있습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 땅의 경계표를 이 지파에서 저 지파로 옮기면 안 됩니다.</span>
+            하나님께서는 이스라엘 백성들에게 가나안 땅을 분배받은 이후 <strong>경계표를 옮기지 말라</strong>고 말씀하십니다. 하나님께서는 이와 관련하여 <strong>세 가지 원칙</strong>을 정해 주십니다.
+            <div class="quote">
+                <strong>첫째,</strong> 땅 분배의 기본은 계민수전과 제비뽑기이며, 매 50년마다 희년 절기를 통해 <strong>원래의 자리로 돌아가게 합니다.</strong><br><br>
+                <strong>둘째,</strong> 슬로브핫의 딸 특별법으로 아들이 없을 경우 딸이 기업을 받습니다. 그런데 아들을 대신해 땅을 기업으로 받은 딸은 <strong>다른 지파 남자와 혼인을 해서는 안 됩니다.</strong> 그 지파 안에서 결혼해 그 지파에게 주신 땅을 보존해야 했기 때문입니다.<br><br>
+                <strong>셋째,</strong> 땅 분배 후 그 땅은 아들에게, 아들이 없으면 딸에게로, 아들과 딸 모두 없으면 <strong>가까운 친족 순으로 상속됩니다.</strong>
+            </div>
+            <div class="quote">
+                <strong>이상의 원칙에 따라 하나님께서는 땅의 경계표를 이 지파에서 저 지파로 옮기지 못하게 하심으로 이스라엘 각 지파에 생길 수 있는 부익부 빈익빈 현상을 근본적으로 막을 수 있게 하십니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 땅의 경계를 지키느냐, 넘느냐가 '제국과 제사장 나라'의 근본 차이입니다.</span>
+            다윗이 130만 명의 병력을 가지고도 <strong>메소포타미아나 나일강 지역으로 정복 전쟁을 나가지 않은 이유</strong>는 민수기 34장을 통해 하나님께서 주신 <strong>제사장 나라의 땅의 경계를 지키고자 하는 소망 때문</strong>이었습니다.<br><br>
+            B.C. 8세기 하나님께서는 북이스라엘이 200여 년 동안 제사장 나라 사명을 전혀 감당치 않자 <strong>앗수르를 통해 북이스라엘을 멸망시키셨습니다.</strong> 그런데 하나님의 도구로 쓰였던 앗수르 제국의 왕이 북이스라엘을 넘어 남유다 예루살렘까지 공격하러 와서 <strong>"자신의 총명으로 열국의 경계를 걷어치웠다"고 자만한 말을 했습니다.</strong> 그러므로 앗수르는 처벌을 받아 멸망하게 된 것입니다.<br><br>
+            이후 하나님께서 바벨론 왕 느부갓네살에게 예루살렘을 넘겨주신 이유는 <strong>남유다가 제사장 나라 거룩한 시민의 사명을 망각했기 때문</strong>입니다.
+            <div class="quote">
+                <strong>이렇게 가나안 안에서든 밖에서든, 땅의 모든 경계는 하나님께서 정하십니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 민수기 33~36장 '제사장 나라 공간 이야기 / 대제사장이 빨리 죽기를 바라고 있는 사람이 있습니다'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 민수기 33장 -->
+        <div class="chapter-title">민수기 33장 (1~56절)</div>
+        <div class="verse"><span class="verse-num">1</span> 모세와 아론의 인도로 대오를 갖추어 애굽을 떠난 이스라엘 자손들의 노정은 이러하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 모세가 여호와의 명령대로 그 노정을 따라 그들이 행진한 것을 기록하였으니 그들이 행진한 대로의 노정은 이러하니라</div>
+        <div class="verse"><span class="verse-num">3</span> 그들이 첫째 달 열다섯째 날에 라암셋을 떠났으니 곧 유월절 다음 날이라 이스라엘 자손이 애굽 모든 사람의 목전에서 큰 권능으로 나왔으니</div>
+        <div class="verse"><span class="verse-num">4</span> 애굽인은 여호와께서 그들 중에 치신 그 모든 장자를 장사하는 때라 여호와께서 그들의 신들에게도 벌을 주셨더라</div>
+        <div class="verse"><span class="verse-num">5</span> 이스라엘 자손이 라암셋을 떠나 숙곳에 진을 치고</div>
+        <div class="verse"><span class="verse-num">6</span> 숙곳을 떠나 광야 끝 에담에 진을 치고</div>
+        <div class="verse"><span class="verse-num">7</span> 에담을 떠나 바알스본 앞 비하히롯으로 돌아가서 믹돌 앞에 진을 치고</div>
+        <div class="verse"><span class="verse-num">8</span> 하히롯 앞을 떠나 광야를 바라보고 바다 가운데를 지나 에담 광야로 사흘 길을 가서 마라에 진을 치고</div>
+        <div class="verse"><span class="verse-num">9</span> 마라를 떠나 엘림에 이르니 엘림에는 샘물 열둘과 종려 칠십 그루가 있으므로 거기에 진을 치고</div>
+        <div class="verse"><span class="verse-num">10</span> 엘림을 떠나 홍해 가에 진을 치고</div>
+        <div class="verse"><span class="verse-num">11</span> 홍해 가를 떠나 신 광야에 진을 치고</div>
+        <div class="verse"><span class="verse-num">12</span> 신 광야를 떠나</div>
+        <div class="verse"><span class="verse-num">13</span> 돕가에 진을 치고 돕가를 떠나 알루스에 진을 치고</div>
+        <div class="verse"><span class="verse-num">14</span> 알루스를 떠나 르비딤에 진을 쳤는데 거기는 백성이 마실 물이 없었더라</div>
+        <div class="verse"><span class="verse-num">15</span> 르비딤을 떠나 시내 광야에 진을 치고</div>
+        <div class="verse"><span class="verse-num">16</span> 시내 광야를 떠나 기브롯핫다아와에 진을 치고</div>
+        <div class="verse"><span class="verse-num">17</span> 기브롯핫다아와를 떠나 하세롯에 진을 치고</div>
+        <div class="verse"><span class="verse-num">18</span> 하세롯을 떠나 릿마에 진을 치고</div>
+        <div class="verse"><span class="verse-num">19</span> 릿마를 떠나 림몬베레스에 진을 치고</div>
+        <div class="verse"><span class="verse-num">20</span> 림몬베레스를 떠나 립나에 진을 치고</div>
+        <div class="verse"><span class="verse-num">21</span> 립나를 떠나 릿사에 진을 치고</div>
+        <div class="verse"><span class="verse-num">22</span> 릿사를 떠나 그헬라다에 진을 치고</div>
+        <div class="verse"><span class="verse-num">23</span> 그헬라다를 떠나 세벨 산에 진을 치고</div>
+        <div class="verse"><span class="verse-num">24</span> 세벨 산을 떠나 하라다에 진을 치고</div>
+        <div class="verse"><span class="verse-num">25</span> 하라다를 떠나 막헬롯에 진을 치고</div>
+        <div class="verse"><span class="verse-num">26</span> 막헬롯을 떠나 다핫에 진을 치고</div>
+        <div class="verse"><span class="verse-num">27</span> 다핫을 떠나 데라에 진을 치고</div>
+        <div class="verse"><span class="verse-num">28</span> 데라를 떠나 밋가에 진을 치고</div>
+        <div class="verse"><span class="verse-num">29</span> 밋가를 떠나 하스모나에 진을 치고</div>
+        <div class="verse"><span class="verse-num">30</span> 하스모나를 떠나 모세롯에 진을 치고</div>
+        <div class="verse"><span class="verse-num">31</span> 모세롯을 떠나 브네야아간에 진을 치고</div>
+        <div class="verse"><span class="verse-num">32</span> 브네야아간을 떠나 홀하깃갓에 진을 치고</div>
+        <div class="verse"><span class="verse-num">33</span> 홀하깃갓을 떠나 욧바다에 진을 치고</div>
+        <div class="verse"><span class="verse-num">34</span> 욧바다를 떠나 아브로나에 진을 치고</div>
+        <div class="verse"><span class="verse-num">35</span> 아브로나를 떠나 에시온게벨에 진을 치고</div>
+        <div class="verse"><span class="verse-num">36</span> 에시온게벨을 떠나 신 광야 곧 가데스에 진을 치고</div>
+        <div class="verse"><span class="verse-num">37</span> 가데스를 떠나 에돔 땅 변경의 호르 산에 진을 쳤더라</div>
+        <div class="verse"><span class="verse-num">38</span> 이스라엘 자손이 애굽 땅에서 나온 지 사십 년째 오월 초하루에 제사장 아론이 여호와의 명령으로 호르 산에 올라가 거기서 죽었으니</div>
+        <div class="verse"><span class="verse-num">39</span> 아론이 호르 산에서 죽던 때의 나이는 백이십삼 세였더라</div>
+        <div class="verse"><span class="verse-num">40</span> 가나안 땅 남방에 살고 있는 가나안 사람 아랏 왕은 이스라엘 자손이 온다는 소식을 들었더라</div>
+        <div class="verse"><span class="verse-num">41</span> 그들이 호르 산을 떠나 살모나에 진을 치고</div>
+        <div class="verse"><span class="verse-num">42</span> 살모나를 떠나 부논에 진을 치고</div>
+        <div class="verse"><span class="verse-num">43</span> 부논을 떠나 오봇에 진을 치고</div>
+        <div class="verse"><span class="verse-num">44</span> 오봇을 떠나 모압 변경 이예아바림에 진을 치고</div>
+        <div class="verse"><span class="verse-num">45</span> 이임을 떠나 디본갓에 진을 치고</div>
+        <div class="verse"><span class="verse-num">46</span> 디본갓을 떠나 알몬디블라다임에 진을 치고</div>
+        <div class="verse"><span class="verse-num">47</span> 알몬디블라다임을 떠나 느보 앞 아바림 산에 진을 치고</div>
+        <div class="verse"><span class="verse-num">48</span> 아바림 산을 떠나 여리고 맞은편 요단 강 가 모압 평지에 진을 쳤으니</div>
+        <div class="verse"><span class="verse-num">49</span> 요단 강 가 모압 평지의 진영이 벧여시못에서부터 아벨싯딤에 이르렀더라</div>
+        <div class="verse"><span class="verse-num">50</span> 여리고 맞은편 요단 강 가 모압 평지에서 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">51</span> 이스라엘 자손에게 말하여 그들에게 이르라 너희가 요단 강을 건너 가나안 땅에 들어가거든</div>
+        <div class="verse"><span class="verse-num">52</span> 그 땅의 원주민을 너희 앞에서 다 몰아내고 그 새긴 석상과 부어 만든 우상을 다 깨뜨리며 산당을 다 헐고</div>
+        <div class="verse"><span class="verse-num">53</span> 그 땅을 점령하여 거기 거주하라 내가 그 땅을 너희 소유로 너희에게 주었음이라</div>
+        <div class="verse"><span class="verse-num">54</span> 너희의 종족을 따라 그 땅을 제비 뽑아 나눌 것이니 수가 많으면 많은 기업을 주고 적으면 적은 기업을 주되 각기 제비 뽑은 대로 그 소유가 될 것인즉 너희 조상의 지파를 따라 기업을 받을 것이니라</div>
+        <div class="verse"><span class="verse-num">55</span> 너희가 만일 그 땅의 원주민을 너희 앞에서 몰아내지 아니하면 너희가 남겨둔 자들이 너희의 눈에 가시와 너희의 옆구리에 찌르는 것이 되어 너희가 거주하는 땅에서 너희를 괴롭게 할 것이요</div>
+        <div class="verse"><span class="verse-num">56</span> 나는 그들에게 행하기로 생각한 것을 너희에게 행하리라</div>
+
+        <!-- 민수기 34장 -->
+        <div class="chapter-title">민수기 34장 (1~29절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 너는 이스라엘 자손에게 명령하여 그들에게 이르라 너희가 가나안 땅에 들어가는 때에 그 땅은 너희의 기업이 되리니 곧 가나안 사방 지경이라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희 남쪽은 에돔 곁에 접근한 신 광야니 너희의 남쪽 경계는 동쪽으로 염해 끝에서 시작하여</div>
+        <div class="verse"><span class="verse-num">4</span> 돌아서 아그랍빔 언덕 남쪽에 이르고 신을 지나 가데스바네아 남쪽에 이르고 또 하살아달을 지나 아스몬에 이르고</div>
+        <div class="verse"><span class="verse-num">5</span> 아스몬에서 돌아서 애굽 시내를 지나 바다까지 이르느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 서쪽 경계는 대해가 경계가 되나니 이는 너희의 서쪽 경계니라</div>
+        <div class="verse"><span class="verse-num">7</span> 북쪽 경계는 이러하니 대해에서부터 호르 산까지 그어라</div>
+        <div class="verse"><span class="verse-num">8</span> 호르 산에서 그어 하맛 어귀에 이르러 스닷에 이르고</div>
+        <div class="verse"><span class="verse-num">9</span> 그 경계가 또 시브론을 지나 하살에난에 이르나니 이는 너희의 북쪽 경계니라</div>
+        <div class="verse"><span class="verse-num">10</span> 너희의 동쪽 경계는 하살에난에서 그어 스밤에 이르고</div>
+        <div class="verse"><span class="verse-num">11</span> 그 경계가 또 스밤에서 리블라로 내려가서 아인 동쪽에 이르고 또 내려가서 긴네렛 동쪽 해변에 이르고</div>
+        <div class="verse"><span class="verse-num">12</span> 그 경계가 또 요단으로 내려가서 염해에 이르나니 너희 땅의 사방 경계가 이러하니라</div>
+        <div class="verse"><span class="verse-num">13</span> 모세가 이스라엘 자손에게 명령하여 이르되 이는 너희가 제비 뽑아 받을 땅이라 여호와께서 이것을 아홉 지파 반 쪽에게 주라고 명령하셨나니</div>
+        <div class="verse"><span class="verse-num">14</span> 이는 르우벤 자손의 지파와 갓 자손의 지파가 함께 그들의 조상의 가문에 따라 그들의 기업을 받을 것이며 므낫세의 반쪽도 기업을 받았음이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 이 두 지파와 그 반 지파는 여리고 맞은편 요단 건너편 곧 해 돋는 쪽에서 그들의 기업을 받으리라</div>
+        <div class="verse"><span class="verse-num">16</span> 여호와께서 또 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">17</span> 너희에게 땅을 기업으로 나눌 자의 이름은 이러하니 제사장 엘르아살과 눈의 아들 여호수아니라</div>
+        <div class="verse"><span class="verse-num">18</span> 너희는 또 기업의 땅을 나누기 위하여 각 지파에 한 지휘관씩 택하라</div>
+        <div class="verse"><span class="verse-num">19</span> 그 사람들의 이름은 이러하니 유다 지파에서는 여분네의 아들 갈렙이요</div>
+        <div class="verse"><span class="verse-num">20</span> 시므온 지파에서는 암미훗의 아들 스므엘이요</div>
+        <div class="verse"><span class="verse-num">21</span> 베냐민 지파에서는 기슬론의 아들 엘리닷이요</div>
+        <div class="verse"><span class="verse-num">22</span> 단 자손 지파에서는 지휘관 요글리의 아들 북기요</div>
+        <div class="verse"><span class="verse-num">23</span> 요셉 자손 중 므낫세 자손 지파에서는 지휘관 에봇의 아들 한니엘이요</div>
+        <div class="verse"><span class="verse-num">24</span> 에브라임 자손 지파에서는 지휘관 십단의 아들 그므엘이요</div>
+        <div class="verse"><span class="verse-num">25</span> 스불론 자손 지파에서는 지휘관 바르낙의 아들 엘리사반이요</div>
+        <div class="verse"><span class="verse-num">26</span> 잇사갈 자손 지파에서는 지휘관 앗산의 아들 발디엘이요</div>
+        <div class="verse"><span class="verse-num">27</span> 아셀 자손 지파에서는 지휘관 슬로미의 아들 아히훗이요</div>
+        <div class="verse"><span class="verse-num">28</span> 납달리 자손 지파에서는 지휘관 암미훗의 아들 브다헬이니라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">29</span> 이들이 여호와께서 명령하사 가나안 땅에서 이스라엘 자손에게 기업을 받게 하신 자들이니라</div>
+
+        <!-- 민수기 35장 -->
+        <div class="chapter-title">민수기 35장 (1~34절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 여리고 맞은편 요단 강 가 모압 평지에서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손에게 명령하여 그들이 받은 기업에서 레위인에게 거주할 성읍들을 주게 하고 너희는 또 그 성읍들을 두르고 있는 초장을 레위인에게 주어서</div>
+        <div class="verse"><span class="verse-num">3</span> 성읍은 그들의 거처가 되게 하고 초장은 그들의 재산인 가축과 짐승들을 둘 곳이 되게 할 것이라</div>
+        <div class="verse"><span class="verse-num">4</span> 너희가 레위인에게 줄 성읍들의 들은 성벽에서부터 밖으로 사방 천 규빗이라</div>
+        <div class="verse"><span class="verse-num">5</span> 성을 중앙에 두고 성 밖 동쪽으로 이천 규빗, 남쪽으로 이천 규빗, 서쪽으로 이천 규빗, 북쪽으로 이천 규빗을 측량할지니 이는 그들의 성읍의 들이며</div>
+        <div class="verse"><span class="verse-num">6</span> 너희가 레위인에게 줄 성읍은 살인자들이 피하게 할 도피성으로 여섯 성읍이요 그 외에 사십이 성읍이라</div>
+        <div class="verse"><span class="verse-num">7</span> 너희가 레위인에게 모두 사십팔 성읍을 주고 그 초장도 함께 주되</div>
+        <div class="verse"><span class="verse-num">8</span> 너희가 이스라엘 자손의 소유에서 레위인에게 너희가 성읍을 줄 때에 많이 받은 자에게서는 많이 떼어서 주고 적게 받은 자에게서는 적게 떼어 줄 것이라 각기 받은 기업을 따라서 그 성읍들을 레위인에게 줄지니라</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와께서 또 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">10</span> 이스라엘 자손에게 말하여 그들에게 이르라 너희가 요단 강을 건너 가나안 땅에 들어가거든</div>
+        <div class="verse"><span class="verse-num">11</span> 너희를 위하여 성읍을 도피성으로 정하여 부지중에 살인한 자가 그리로 피하게 하라</div>
+        <div class="verse"><span class="verse-num">12</span> 이는 너희가 복수할 자에게서 도피하는 성을 삼아 살인자가 회중 앞에 서서 판결을 받기까지 죽지 않게 하기 위함이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 너희가 줄 성읍 중에 여섯을 도피성이 되게 하되</div>
+        <div class="verse"><span class="verse-num">14</span> 세 성읍은 요단 이쪽에 두고 세 성읍은 가나안 땅에 두어 도피성이 되게 하라</div>
+        <div class="verse"><span class="verse-num">15</span> 이 여섯 성읍은 이스라엘 자손과 타국인과 이스라엘 중에 거류하는 자의 도피성이 되리니 부지중에 살인한 모든 자가 그리로 도피할 수 있으리라</div>
+        <div class="verse"><span class="verse-num">16</span> 만일 철 연장으로 사람을 쳐죽이면 그는 살인자니 그 살인자를 반드시 죽일 것이요</div>
+        <div class="verse"><span class="verse-num">17</span> 만일 사람을 죽일 만한 돌을 손에 들고 사람을 쳐죽이면 이는 살인한 자니 그 살인자는 반드시 죽일 것이요</div>
+        <div class="verse"><span class="verse-num">18</span> 만일 사람을 죽일 만한 나무 연장을 손에 들고 사람을 쳐죽이면 그는 살인한 자니 그 살인자는 반드시 죽일 것이니라</div>
+        <div class="verse"><span class="verse-num">19</span> 피를 보복하는 자는 그 살인한 자를 자신이 죽일 것이니 그를 만나면 죽일 것이요</div>
+        <div class="verse"><span class="verse-num">20</span> 만일 미워하는 까닭에 밀쳐 죽이거나 기회를 엿보아 무엇을 던져 죽이거나</div>
+        <div class="verse"><span class="verse-num">21</span> 악의를 가지고 손으로 쳐죽이면 그 친 자는 반드시 죽일 것이니 이는 살인하였음이라 피를 보복하는 자는 살인자를 만나면 죽일 것이니라</div>
+        <div class="verse"><span class="verse-num">22</span> 악의가 없이 우연히 사람을 밀치거나 기회를 엿봄이 없이 무엇을 던지거나</div>
+        <div class="verse"><span class="verse-num">23</span> 보지 못하고 사람을 죽일 만한 돌을 던져서 죽였을 때에 이는 악의도 없고 해하려 한 것도 아닌즉</div>
+        <div class="verse"><span class="verse-num">24</span> 회중이 친 자와 피를 보복하는 자 간에 이 규례대로 판결하여</div>
+        <div class="verse"><span class="verse-num">25</span> 피를 보복하는 자의 손에서 살인자를 건져내어 그가 피하였던 도피성으로 돌려보낼 것이요 그는 거룩한 기름 부음을 받은 대제사장이 죽기까지 거기 거주할 것이니라</div>
+        <div class="verse"><span class="verse-num">26</span> 그러나 살인자가 어느 때든지 그 피하였던 도피성 지경 밖에 나가면</div>
+        <div class="verse"><span class="verse-num">27</span> 피를 보복하는 자가 도피성 지경 밖에서 그 살인자를 만나 죽일지라도 피 흘린 죄가 없나니</div>
+        <div class="verse"><span class="verse-num">28</span> 이는 살인자가 대제사장이 죽기까지 그 도피성에 머물러야 할 것임이라 대제사장이 죽은 후에는 그 살인자가 자기 소유의 땅으로 돌아갈 수 있느니라</div>
+        <div class="verse"><span class="verse-num">29</span> 이는 너희의 대대로 거주하는 곳에서 판결하는 규례라</div>
+        <div class="verse"><span class="verse-num">30</span> 사람을 죽인 모든 자 곧 살인한 자는 증인들의 말을 따라서 죽일 것이나 한 증인의 증거만 따라서 죽이지 말 것이요</div>
+        <div class="verse"><span class="verse-num">31</span> 고의로 살인죄를 범한 살인자는 생명의 속전을 받지 말고 반드시 죽일 것이며</div>
+        <div class="verse"><span class="verse-num">32</span> 또 도피성에 피한 자는 대제사장이 죽기 전에는 속전을 받고 그의 땅으로 돌아가 거주하게 하지 말 것이니라</div>
+        <div class="verse"><span class="verse-num">33</span> 너희는 너희가 거주하는 땅을 더럽히지 말라 피는 땅을 더럽히나니 피 흘림을 받은 땅은 그 피를 흘리게 한 자의 피가 아니면 속함을 받을 수 없느니라</div>
+        <div class="verse"><span class="verse-num">34</span> 너희는 너희가 거주하는 땅 곧 내가 거주하는 땅을 더럽히지 말라 나 여호와는 이스라엘 자손 중에 있음이니라</div>
+
+        <!-- 민수기 36장 -->
+        <div class="chapter-title">민수기 36장 (1~13절)</div>
+        <div class="verse"><span class="verse-num">1</span> 요셉 자손의 종족 중 므낫세의 손자 마길의 아들 길르앗 자손 종족들의 수령들이 나아와 모세와 이스라엘 자손의 수령 된 지휘관들 앞에 말하여</div>
+        <div class="verse"><span class="verse-num">2</span> 이르되 여호와께서 우리 주에게 명령하사 이스라엘 자손에게 제비 뽑아 그 기업의 땅을 주게 하셨고 여호와께서 또 우리 주에게 명령하사 우리 형제 슬로브핫의 기업을 그의 딸들에게 주게 하셨은즉</div>
+        <div class="verse"><span class="verse-num">3</span> 그들이 만일 이스라엘 자손의 다른 지파들의 남자들의 아내가 되면 그들의 기업은 우리 조상의 기업에서 떨어져 나가고 그들이 속할 그 지파의 기업에 첨가되리니 그러면 우리가 제비 뽑은 기업에서 떨어져 나갈 것이요</div>
+        <div class="verse"><span class="verse-num">4</span> 이스라엘 자손의 희년을 당하여 그 기업이 그가 속한 지파에 첨가될 것이라 그런즉 그들의 기업은 우리 조상 지파의 기업에서 아주 삭감되리이다</div>
+        <div class="verse"><span class="verse-num">5</span> 모세가 여호와의 말씀으로 이스라엘 자손에게 명령하여 이르되 요셉 자손 지파의 말이 옳도다</div>
+        <div class="verse"><span class="verse-num">6</span> 슬로브핫의 딸들에게 대한 여호와의 명령이 이러하니라 이르시되 슬로브핫의 딸들은 마음대로 시집가려니와 오직 그 조상 지파의 종족에게로만 시집갈지니</div>
+        <div class="verse"><span class="verse-num">7</span> 그리하면 이스라엘 자손의 기업이 이 지파에서 저 지파로 옮기지 않고 이스라엘 자손이 다 각기 조상 지파의 기업을 지킬 것이니라 하셨나니</div>
+        <div class="verse"><span class="verse-num">8</span> 이스라엘 자손의 지파 중 그 기업을 이은 딸들은 모두 자기 조상 지파의 종족되는 사람의 아내가 될 것이라 그리하면 이스라엘 자손이 각기 조상의 기업을 보전하게 되어</div>
+        <div class="verse"><span class="verse-num">9</span> 그 기업이 이 지파에서 저 지파로 옮기게 하지 아니하고 이스라엘 자손 지파가 각각 자기 기업을 지키리라</div>
+        <div class="verse"><span class="verse-num">10</span> 슬로브핫의 딸들이 여호와께서 모세에게 명령하신 대로 행하니라</div>
+        <div class="verse"><span class="verse-num">11</span> 슬로브핫의 딸 말라와 디르사와 호글라와 밀가와 노아가 다 그들의 숙부의 아들들의 아내가 되니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그들이 요셉의 아들 므낫세 자손의 종족 사람의 아내가 되었으므로 그들의 종족 지파에 그들의 기업이 남아 있었더라</div>
+        <div class="verse"><span class="verse-num">13</span> 이는 여리고 맞은편 요단 가 모압 평지에서 여호와께서 모세를 통하여 이스라엘 자손에게 명령하신 계명과 규례니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 069</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 069</h1>
+        <p class="sub-title">찬송가 521장 구원으로 인도하는</p>
+        <p class="sub-title">신명기 31~32장 — 국민가요</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 521장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1IvViqpZzHyjhQA0UYdXshSdWWEmjP9TC" alt="찬송가 521장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 신명기 31장~32장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 유언은 비전으로 이어집니다.</span>
+            만나 세대들에게 혼신의 힘을 다해 마지막 당부를 하는 모세의 네 번째 역사 특강을 통해 우리는 **하나님의 사람들의 유언이 그들의 후손들에게 비전이 되는 것**을 보게 됩니다.<br><br>
+            성경 66권 전체, 즉 제사장 나라와 하나님 나라를 통으로 볼 때 **조상의 유언이 이후 그들의 후손들에게 비전이 되는 것**을 다음 이야기들로 볼 수 있습니다.
+            <div class="quote">
+                **첫째,** 야곱의 유언은 열두 지파가 되는 열두 아들의 축복이 되고 이후 **그들의 후손들에게 약속의 땅 가나안을 향한 비전**이 되었습니다(창 47:29~30).<br>
+                **둘째,** 요셉의 유언은 후손들에게 **약속의 땅 가나안을 향한 비전**이 되었습니다(창 50:25).<br>
+                **셋째,** 모세의 유언은 여호수아와 만나 세대들에게 **가나안에서의 삶의 비전**이 되었습니다(신 31:7).<br>
+                **넷째,** 다윗의 유언은 솔로몬에게 **제사장 나라 세움의 비전**이 되었습니다(왕상 2:1~3).<br>
+                **다섯째,** 솔로몬의 유언은 이스라엘 모든 청년에게 **창조주 하나님을 향하게 하는 비전**이 되었습니다(전 12:13~14).<br>
+                **여섯째,** 예수님의 유언은 모든 그리스도인에게 **세계 선교의 비전**이 되었습니다(행 1:8).<br>
+                **일곱째,** 바울의 유언은 디모데를 비롯한 복음 2세대들에게 **고난 가운데에도 의의 면류관을 소망하는 비전**이 되었습니다(딤후 4:6~8).
+            </div>
+            <div class="quote">
+                **이처럼 아브라함으로부터 시작된 '모든 민족'이 복을 받게 되는 하나님의 꿈과 비전은 야곱과 요셉과 모세와 다윗과 솔로몬의 유언을 통해, 그리고 우리 예수님과 사도 바울의 유언을 통해 오고 오는 세대에 놀라운 꿈과 비전이 됩니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 레위 지파의 제사장들과 이스라엘 장로들은 율법을 낭독하여 모든 이스라엘 백성에게 듣게 해야 합니다.</span>
+            모세는 역사 특강을 마무리하면서 **레위 지파의 제사장들과 이스라엘 장로들에게 아주 중요한 특별한 당부를 합니다**(신 31:9~13).<br><br>
+            레위 지파의 제사장들과 이스라엘의 장로들은 매 칠 년 끝 해 면제년의 초막절에 모든 이스라엘 백성이 하나님의 이름을 두려고 택하신 곳에 모일 때 **창세기, 출애굽기, 레위기, 민수기, 신명기 다섯 권의 책을 낭독하라는 것**입니다. 그래서 **모든 이스라엘 백성이 다 듣게 하라**고 말합니다.<br><br>
+            모세의 이 당부는 이후 이스라엘의 **율법 교육의 현장으로 이어지게 됩니다.** 그리고 모세의 당부는 **여호수아, 사무엘, 여호사밧, 요시야, 에스라 시대의 율법 교육의 현장을 통해 계승됩니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 120세 모세가 이스라엘의 국민가요를 만들어 선창합니다.</span>
+            모세는 모압 평지에서 두 달 동안 계속되었던 역사 특강을 끝맺으면서 **60만 만나 세대의 입에 노래를 담아줍니다.** 모세는 이스라엘 백성들에게 **하나님의 뜻을 기억하는 효과적인 방법으로 노래를 가르칩니다**(신 31:19~22).<br><br>
+            그동안 하나님께서 아브라함의 후손들을 어떻게 보호하시고 훈련시켜 주셨는지 노래합니다.
+            <div class="quote">
+                **"마치 독수리가 자기의 보금자리를 어지럽게 하며 자기의 새끼 위에 너풀거리며 그의 날개를 펴서 새끼를 받으며 그의 날개 위에 그것을 업는 것 같이"** (신 32:11)
+            </div>
+            <div class="quote">
+                **이것이 모세의 간증이요 모세의 찬송입니다. 120세의 모세가 이스라엘 백성들에게 가르친 노래는 이스라엘 백성들이 영원히 기억해야 할 '국민가요'였습니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 모세의 노래는 다윗의 노래, 예레미야의 노래로 이어집니다.</span>
+            모세가 이스라엘 백성들에게 가르쳐준 노래는 **하나님을 찬양하는 찬송**입니다. 하나님께서는 찬송의 이유를 이사야를 통해 우리에게 가르쳐주셨습니다.
+            <div class="quote">
+                **"이 백성은 내가 나를 위하여 지었나니 나를 찬송하게 하려 함이니라"** (사 43:21)
+            </div>
+            <div class="quote">
+                **하나님의 백성인 모세, 다윗, 예레미야 등은 하나님께서 그때마다 행하신 일들을 바라보며 하나님께 영광과 소망의 찬송을 노래했습니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 은혜를 깊이 새겨야 교만하지 않습니다.</span>
+            모세는 만나 세대들에게 **창조주 하나님이 '너희의 아버지'라고 가르쳐줍니다**(신 32:6). 하나님께서 최초의 사람 아담을 만드시고 그 코에 생기를 넣어주심으로 생명이 왔습니다. 모세는 만나 세대들에게 **하나님의 말씀을 지켜 행하는 것이 그들의 생명이라고 가르칩니다.**
+            <div class="quote">
+                **창조주 하나님을 기억하는 삶, 그분의 말씀에 순종하는 인생 — 그 인생이 바로 생명력 넘치는 인생이기 때문입니다.**
+            </div>
+            이어서 모세는 만나 세대들에게 **겸손을 다시금 강조합니다.** 사람이 자신의 수고와 노력으로 무엇인가를 이루었다고 생각하면 **그때부터 교만해지기 쉽습니다.** 모세는 이스라엘 백성들에게 가나안 땅에 들어가게 될 때 **교만하지 말아야 한다**고 계속해서 경고합니다. 그들이 차지하게 될 땅은 **하나님께서 그들에게 은혜로 주신 것이지 그들의 능력으로 얻은 것이 아니기 때문**입니다.
+            <div class="quote">
+                **마음속에 은혜를 깊이 새겨야 교만하지 않습니다.**
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 신명기 31~32장 '국민가요'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 신명기 31장 -->
+        <div class="chapter-title">신명기 31장 (1~30절)</div>
+        <div class="verse"><span class="verse-num">1</span> 또 모세가 가서 온 이스라엘에게 이 말씀을 전하여</div>
+        <div class="verse"><span class="verse-num">2</span> 그들에게 이르되 이제 내 나이 백이십 세라 내가 더 이상 출입하지 못하겠고 여호와께서도 내게 이르시기를 너는 이 요단을 건너지 못하리라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와께서 이미 말씀하신 것과 같이 네 하나님 여호와께서 너보다 먼저 건너가사 이 민족들을 네 앞에서 멸하시고 네가 그 땅을 차지하게 할 것이며 여호수아는 네 앞에서 건너갈지라</div>
+        <div class="verse"><span class="verse-num">4</span> 또한 여호와께서 이미 멸하신 아모리 왕 시혼과 옥과 및 그 땅에 행하신 것과 같이 그들에게도 행하실 것이라</div>
+        <div class="verse"><span class="verse-num">5</span> 또한 여호와께서 그들을 너희 앞에 넘기시리니 너희는 내가 너희에게 명한 모든 명령대로 그들에게 행할 것이라</div>
+        <div class="verse"><span class="verse-num">6</span> 너희는 강하고 담대하라 두려워하지 말라 그들 앞에서 떨지 말라 이는 네 하나님 여호와 그가 너와 함께 가시며 결코 너를 떠나지 아니하시며 버리지 아니하실 것임이라 하고</div>
+        <div class="verse"><span class="verse-num">7</span> 모세가 여호수아를 불러 온 이스라엘의 목전에서 그에게 이르되 너는 강하고 담대하라 너는 이 백성을 거느리고 여호와께서 그들의 조상에게 주리라고 맹세하신 땅에 들어가서 그들에게 그 땅을 차지하게 하라</div>
+        <div class="verse"><span class="verse-num">8</span> 그리하면 여호와 그가 네 앞에서 가시며 너와 함께 하사 너를 떠나지 아니하시며 버리지 아니하시리니 너는 두려워하지 말라 놀라지 말라</div>
+        <div class="verse"><span class="verse-num">9</span> 또 모세가 이 율법을 써서 여호와의 언약궤를 메는 레위 자손 제사장들과 이스라엘 모든 장로에게 주고</div>
+        <div class="verse"><span class="verse-num">10</span> 모세가 그들에게 명령하여 이르기를 매 칠 년 끝 해 곧 면제년의 초막절에</div>
+        <div class="verse"><span class="verse-num">11</span> 온 이스라엘이 네 하나님 여호와 앞 그가 택하신 곳에 모일 때에 이 율법을 낭독하여 온 이스라엘에게 듣게 할지니</div>
+        <div class="verse"><span class="verse-num">12</span> 곧 백성의 남녀와 어린이와 네 성읍 안에 거류하는 타국인을 모으고 그들에게 듣고 배우고 네 하나님 여호와를 경외하며 이 율법의 모든 말씀을 지켜 행하게 하고</div>
+        <div class="verse"><span class="verse-num">13</span> 또 너희가 요단을 건너가서 차지할 땅에 거주할 동안에 이 말씀을 알지 못하는 그들의 자녀에게 듣고 네 하나님 여호와 경외하기를 배우게 할지니라</div>
+        <div class="verse"><span class="verse-num">14</span> 여호와께서 모세에게 이르시되 네가 죽을 기한이 가까웠으니 여호수아를 불러서 함께 회막으로 나아오라 내가 그에게 명령을 내리리라 모세와 여호수아가 나아가서 회막에 서니</div>
+        <div class="verse"><span class="verse-num">15</span> 여호와께서 구름 기둥 가운데에서 장막에 나타나시고 구름 기둥은 장막 문 위에 머물러 있더라</div>
+        <div class="verse"><span class="verse-num">16</span> 또 여호와께서 모세에게 이르시되 너는 네 조상과 함께 누우려니와 이 백성은 그 땅으로 들어가 음란히 그 땅의 이방 신들을 따르며 일어날 것이요 나를 버리고 내가 그들과 맺은 언약을 어길 것이라</div>
+        <div class="verse"><span class="verse-num">17</span> 내가 그들에게 진노하여 그들을 버리며 내 얼굴을 숨겨 그들에게 보이지 않게 할 것인즉 그들이 삼킴을 당하여 허다한 재앙과 환난이 그들에게 임할 그 때에 그들이 말하기를 이 재앙이 우리에게 내림은 우리 하나님이 우리 가운데에 계시지 않은 까닭이 아니냐 할 것이라</div>
+        <div class="verse"><span class="verse-num">18</span> 또 그들이 돌이켜 다른 신들을 따르는 모든 악행으로 말미암아 내가 그 때에 반드시 내 얼굴을 숨기리라</div>
+        <div class="verse"><span class="verse-num">19</span> 그러므로 이제 너희는 이 노래를 써서 이스라엘 자손들에게 가르쳐 그들의 입으로 부르게 하여 이 노래로 나를 위하여 이스라엘 자손들에게 증거가 되게 하라</div>
+        <div class="verse"><span class="verse-num">20</span> 내가 그들의 조상들에게 맹세한 바 젖과 꿀이 흐르는 땅으로 그들을 인도하여 들인 후에 그들이 먹어 배부르고 살찌면 돌이켜 다른 신들을 섬기며 나를 멸시하여 내 언약을 어기리니</div>
+        <div class="verse"><span class="verse-num">21</span> 그들이 수많은 재앙과 환난을 당할 때에 그들의 자손이 부르기를 잊지 아니한 이 노래가 그들 앞에 증인처럼 되리라 나는 내가 맹세한 땅으로 그들을 인도하여 들이기 전 오늘 나는 그들이 생각하는 바를 아노라</div>
+        <div class="verse"><span class="verse-num">22</span> 그러므로 모세가 그 날 이 노래를 써서 이스라엘 자손들에게 가르쳤더라</div>
+        <div class="verse"><span class="verse-num">23</span> 여호와께서 또 눈의 아들 여호수아에게 명령하여 이르시되 너는 이스라엘 자손들을 인도하여 내가 그들에게 맹세한 땅으로 들어가게 하리니 강하고 담대하라 내가 너와 함께 하리라 하시니라</div>
+        <div class="verse"><span class="verse-num">24</span> 모세가 이 율법의 말씀을 다 책에 써서 마친 후에</div>
+        <div class="verse"><span class="verse-num">25</span> 모세가 여호와의 언약궤를 메는 레위 사람에게 명령하여 이르되</div>
+        <div class="verse"><span class="verse-num">26</span> 이 율법책을 가져다가 너희 하나님 여호와의 언약궤 곁에 두어 너희에게 증거가 되게 하라</div>
+        <div class="verse"><span class="verse-num">27</span> 내가 너희의 반역함과 목이 곧은 것을 아나니 오늘 내가 살아서 너희와 함께 있어도 너희가 여호와를 거역하였거든 하물며 내가 죽은 후의 일이랴</div>
+        <div class="verse"><span class="verse-num">28</span> 너희 지파 모든 장로와 관리들을 내 앞에 모으라 내가 이 말씀을 그들의 귀에 들려주고 그들에게 하늘과 땅을 증거로 삼으리라</div>
+        <div class="verse"><span class="verse-num">29</span> 내가 알거니와 내가 죽은 후에 너희가 스스로 부패하여 내가 너희에게 명령한 길을 떠나 여호와의 목전에 악을 행하여 너희의 손으로 하는 일로 그를 격노하게 하므로 너희가 후일에 재앙을 당하리라 하니라</div>
+        <div class="verse"><span class="verse-num">30</span> 그리고 모세가 이스라엘 총회에 이 노래의 말씀을 끝까지 읽어 들리니라</div>
+
+        <!-- 신명기 32장 -->
+        <div class="chapter-title">신명기 32장 (1~52절)</div>
+        <div class="verse"><span class="verse-num">1</span> 하늘이여 귀를 기울이라 내가 말하리라 땅은 내 입의 말을 들을지어다</div>
+        <div class="verse"><span class="verse-num">2</span> 내 교훈은 비처럼 내리고 내 말은 이슬처럼 맺히나니 연한 풀 위의 가는 비 같고 채소 위의 단비 같도다</div>
+        <div class="verse"><span class="verse-num">3</span> 내가 여호와의 이름을 전파하리니 너희는 우리 하나님께 위엄을 돌릴지어다</div>
+        <div class="verse"><span class="verse-num">4</span> 그는 반석이시니 그가 하신 일이 완전하고 그의 모든 길이 정의롭고 진실하고 거짓이 없으신 하나님이시니 공의로우시고 바르시도다</div>
+        <div class="verse"><span class="verse-num">5</span> 그들이 여호와를 향하여 악을 행하니 하나님의 자녀가 아니요 흠이 있고 삐뚤어진 세대로다</div>
+        <div class="verse"><span class="verse-num">6</span> 어리석고 지혜 없는 백성아 여호와께 이같이 보답하느냐 그는 네 아버지시요 너를 지으신 이가 아니시냐 그가 너를 만드시고 너를 세우셨도다</div>
+        <div class="verse"><span class="verse-num">7</span> 옛날을 기억하라 역대의 연대를 생각하라 네 아버지에게 물으라 그가 네게 설명할 것이요 네 어른들에게 물으라 그들이 네게 말하리로다</div>
+        <div class="verse"><span class="verse-num">8</span> 지극히 높으신 자가 민족들에게 기업을 주실 때에, 인종을 나누실 때에 이스라엘 자손의 수효대로 백성들의 경계를 정하셨도다</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와의 분깃은 자기 백성이라 야곱은 그가 택하신 기업이로다</div>
+        <div class="verse"><span class="verse-num">10</span> 여호와께서 그를 황무지에서, 짐승이 부르짖는 광야에서 만나시고 호위하시며 보호하시며 자기의 눈동자 같이 지키셨도다</div>
+        <div class="verse"><span class="verse-num">11</span> 마치 독수리가 자기의 보금자리를 어지럽게 하며 자기의 새끼 위에 너풀거리며 그의 날개를 펴서 새끼를 받으며 그의 날개 위에 그것을 업는 것 같이</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와께서 홀로 그를 인도하셨고 그와 함께 한 다른 신이 없었도다</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와께서 그가 땅의 높은 곳을 타고 다니게 하시며 밭의 소산을 먹게 하시며 반석에서 꿀을, 굳은 반석에서 기름을 빨게 하시며</div>
+        <div class="verse"><span class="verse-num">14</span> 소의 엉긴 젖과 양의 젖과 어린 양의 기름과 바산에서 난 숫양과 염소와 지극히 아름다운 밀을 먹이시며 또 포도즙의 붉은 술을 마시게 하셨도다</div>
+        <div class="verse"><span class="verse-num">15</span> 그런데 여수룬이 기름지매 발로 찼도다 네가 살찌고 비대하고 윤택하매 자기를 지으신 하나님을 버리고 자기를 구원하신 반석을 업신여겼도다</div>
+        <div class="verse"><span class="verse-num">16</span> 그들이 다른 신으로 그의 질투를 일으키며 가증한 것으로 그의 진노를 격발하였도다</div>
+        <div class="verse"><span class="verse-num">17</span> 그들은 하나님께 제사하지 아니하고 귀신들에게 하였으니 곧 그들이 알지 못하던 신들, 근래에 들어온 새로운 신들 너희의 조상들이 두려워하지 아니하던 것들이로다</div>
+        <div class="verse"><span class="verse-num">18</span> 너를 낳은 반석을 네가 상관하지 아니하고 너를 내신 하나님을 네가 잊었도다</div>
+        <div class="verse"><span class="verse-num">19</span> 그러므로 여호와께서 보시고 미워하셨으니 그 자녀가 그를 격노하게 한 까닭이로다</div>
+        <div class="verse"><span class="verse-num">20</span> 그가 말씀하시기를 내가 내 얼굴을 그들에게서 숨겨 그들의 종말이 어떠함을 보리니 그들은 심히 패역한 세대요 진실이 없는 자녀임이로다</div>
+        <div class="verse"><span class="verse-num">21</span> 그들이 하나님이 아닌 것으로 내 질투를 일으키며 허무한 것으로 내 진노를 일으켰으니 나도 백성이 아닌 자로 그들에게 시기가 나게 하며 어리석은 민족으로 그들의 분노를 일으키리로다</div>
+        <div class="verse"><span class="verse-num">22</span> 그러므로 내 분노의 불이 일어나서 스올의 깊은 곳까지 불사르며 땅과 그 소산을 삼키며 산들의 터도 불타게 하는도다</div>
+        <div class="verse"><span class="verse-num">23</span> 내가 재앙을 그들 위에 쌓으며 내 화살이 다할 때까지 그들을 쏘리로다</div>
+        <div class="verse"><span class="verse-num">24</span> 그들이 주리므로 쇠약하며 불 같은 더위와 독한 질병에 삼켜질 것이라 내가 들짐승의 이와 티끌에 기는 것의 독을 그들에게 보내리로다</div>
+        <div class="verse"><span class="verse-num">25</span> 밖으로는 칼에, 방 안에서는 놀람에 멸망하리니 젊은 남자도 처녀도 백발 노인과 함께 젖 먹는 아이까지 그러하리로다</div>
+        <div class="verse"><span class="verse-num">26</span> 내가 그들을 흩어서 사람들 사이에서 그들에 대한 기억이 끊어지게 하리라 하였으나</div>
+        <div class="verse"><span class="verse-num">27</span> 혹시 내가 원수를 자극하여 그들의 원수가 잘못 생각할까 걱정하였으니 원수들이 말하기를 우리의 수단이 높으며 여호와가 이 모든 것을 행함이 아니라 할까 염려함이라</div>
+        <div class="verse"><span class="verse-num">28</span> 그들은 모략이 없는 민족이라 그들 중에 분별력이 없도다</div>
+        <div class="verse"><span class="verse-num">29</span> 만일 그들이 지혜가 있어 이것을 깨달았으면 자기들의 종말을 분별하였으리라</div>
+        <div class="verse"><span class="verse-num">30</span> 그들의 반석이 그들을 팔지 아니하였고 여호와께서 그들을 내주지 아니하셨더라면 어찌 하나가 천을 쫓으며 둘이 만을 도망하게 하였으리요</div>
+        <div class="verse"><span class="verse-num">31</span> 진실로 그들의 반석이 우리의 반석과 같지 아니하니 우리의 원수들이 스스로 판단하도다</div>
+        <div class="verse"><span class="verse-num">32</span> 이는 그들의 포도나무는 소돔의 포도나무요 고모라의 밭의 소산이라 그들의 포도는 독이 든 포도이니 그 송이는 쓰며</div>
+        <div class="verse"><span class="verse-num">33</span> 그들의 포도주는 뱀의 독이요 독사의 맹독이라</div>
+        <div class="verse"><span class="verse-num">34</span> 이것이 내게 쌓여 있고 내 곳간에 봉하여 있지 아니한가</div>
+        <div class="verse"><span class="verse-num">35</span> 그들이 실족할 그 때에 내가 보복하리라 그들의 환난날이 가까우니 그들에게 닥칠 그 일이 속히 오리로다</div>
+        <div class="verse"><span class="verse-num">36</span> 참으로 여호와께서 자기 백성을 판단하시고 그 종들을 불쌍히 여기시리니 곧 그들의 무력함과 갇힌 자나 놓인 자가 없음을 보시는 때에로다</div>
+        <div class="verse"><span class="verse-num">37</span> 또한 그가 말씀하시기를 그들의 신들이 어디 있으며 그들이 피하던 반석이 어디 있느냐</div>
+        <div class="verse"><span class="verse-num">38</span> 그들의 제물의 기름을 먹고 그들의 전제의 제물인 포도주를 마시던 자들이 일어나 너희를 돕게 하고 너희를 위해 피난처가 되게 하라</div>
+        <div class="verse"><span class="verse-num">39</span> 이제는 나 곧 내가 그인 줄 알라 나 외에는 신이 없도다 나는 죽이기도 하며 살리기도 하며 상하게도 하며 낫게도 하나니 내 손에서 능히 빼앗을 자가 없도다</div>
+        <div class="verse"><span class="verse-num">40</span> 이는 내가 하늘을 향하여 내 손을 들고 말하기를 내가 영원히 살리라 하였노라</div>
+        <div class="verse"><span class="verse-num">41</span> 내가 내 번쩍이는 칼을 갈며 내 손이 정의를 붙들고 내 대적들에게 복수하며 나를 미워하는 자들에게 보응할 것이라</div>
+        <div class="verse"><span class="verse-num">42</span> 내 화살이 피에 취하게 하고 내 칼이 그 고기를 삼키게 하리니 곧 피살자와 포로된 자의 피요 대적의 우두머리의 머리로다</div>
+        <div class="verse"><span class="verse-num">43</span> 너희 민족들아 주의 백성과 즐거워하라 주께서 그 종들의 피를 갚으사 그 대적들에게 복수하시고 자기 땅과 자기 백성을 위하여 속죄하시리로다</div>
+        <div class="verse"><span class="verse-num">44</span> 모세와 눈의 아들 호세아가 와서 이 노래의 모든 말씀을 백성에게 말하여 들리니라</div>
+        <div class="verse"><span class="verse-num">45</span> 모세가 이 모든 말씀을 온 이스라엘에게 말하기를 마치고</div>
+        <div class="verse"><span class="verse-num">46</span> 그들에게 이르되 내가 오늘 너희에게 증언한 모든 말을 너희의 마음에 두고 너희의 자녀에게 명령하여 이 율법의 모든 말씀을 지켜 행하게 하라</div>
+        <div class="verse"><span class="verse-num">47</span> 이는 너희에게 헛된 일이 아니라 너희의 생명이니 이 일로 말미암아 너희가 요단을 건너가 차지할 그 땅에서 너희의 날이 장구하리라</div>
+        <div class="verse"><span class="verse-num">48</span> 바로 그 날에 여호와께서 모세에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">49</span> 너는 여리고 맞은편 모압 땅에 있는 아바림 산에 올라가 느보 산에 이르러 내가 이스라엘 자손에게 기업으로 주는 가나안 땅을 바라보라</div>
+        <div class="verse"><span class="verse-num">50</span> 네 형 아론이 호르 산에서 죽어 그의 조상에게로 돌아간 것 같이 너도 올라가는 이 산에서 죽어 네 조상에게로 돌아가리니</div>
+        <div class="verse"><span class="verse-num">51</span> 이는 너희가 신 광야 가데스의 므리바 물 가에서 이스라엘 자손 중 내게 범죄하여 내 거룩함을 이스라엘 자손 중에서 나타내지 아니한 까닭이라</div>
+        <div class="verse"><span class="verse-num">52</span> 네가 비록 내가 이스라엘 자손에게 주는 땅을 맞은편에서 바라보기는 하려니와 그리로 들어가지는 못하리라 하시니라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
