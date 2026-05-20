@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 085</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 --- */
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 --- */
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 085</h1>
+        <p class="sub-title">찬송가 570장 주는 나를 기르시는 목자</p>
+        <p class="sub-title">사사기 17~18장 — 기초가 무너진 사회</p>
+    </div>
+
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 570장</div>
+        <img src="https://lh3.googleusercontent.com/d/1jZGkuwRXiCMuYgjKijcSN1_bohP_qeZr" alt="찬송가 570장 악보" class="hymn-image">
+    </div>
+
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사사기 17장~18장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 개인도, 가정도, 지파도 모두 각자 소견에 옳은 대로 행동합니다.</span>
+            미가 이야기는 당시 사회가 중심부터 무너져 있음을 보여줍니다. 율법이 사라진 시대, 제사장들과 레위인들은 생계를 위해 하나님을 섬기는 소명을 저버리고 유리방황했습니다.
+            <div class="quote">
+                개인과 가정, 그리고 지파 단위에 이르기까지 제사장 나라의 법은 잊혀졌고, 오직 자신의 소견에 옳은 대로 행동하는 영적 무질서가 만연했습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 제사장 나라의 48개의 지방 관공서 시스템이 무너져가고 있습니다.</span>
+            여호수아가 정착시켰던 중앙 성소와 48개 관공서 시스템이 붕괴되었습니다. 레위인이 거할 곳을 찾아 떠돈다는 사실은 이 시스템의 작동이 멈췄음을 의미합니다.
+            <div class="quote">
+                "나는 유다 베들레헴의 레위인으로서 거류할 곳을 찾으러 가노라"는 말은 당시 레위인들이 생존을 위해 소명지를 떠나야 했던 비참한 현실을 상징적으로 보여줍니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 한 레위인이 자기 소견에 옳은 대로 행동합니다.</span>
+            베들레헴을 떠난 레위 청년은 소명을 저버리고 미가의 집에서 개인의 복을 빌어주는 '종교 고용인'이 되기로 선택합니다.
+            <div class="quote">
+                은 열과 의복, 양식을 대가로 한 가정의 제사장이 된 레위인의 모습은 거룩한 사명을 돈과 맞바꾼 타락한 종교인의 전형을 보여줍니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 한 가정이 그들의 소견에 옳은 대로 행동합니다.</span>
+            미가의 어머니는 아들을 위해 하나님이 금하신 우상을 만들고, 미가는 자신의 집에 신당을 차려 사사로이 제사장을 세웁니다.
+            <div class="quote">
+                부모가 자녀에게 신앙 대신 우상을 물려준 결과, 가정은 하나님을 섬기는 곳이 아닌 개인의 욕망을 투사하는 종교적 장소로 변질되었습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 한 지파가 그들의 소견에 옳은 대로 행동합니다.</span>
+            단 지파는 분배받은 땅을 버리고 다른 땅을 찾던 중, 미가의 집에 있던 우상과 레위인을 강탈하여 자신들의 지파 제사장으로 삼습니다.
+            <div class="quote">
+                지파 전체가 하나님의 통치를 거부하고 힘의 논리에 따라 움직이며, 우상을 앞세워 자신들의 이익을 추구하는 극단적인 이기주의를 보여줍니다.
+            </div>
+        </div>
+    </div>
+
+    <div class="intro-text">
+        오늘은 사사기 17~18장 '기초가 무너진 사회'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">사사기 17장 (1~13절)</div>
+        <div class="verse"><span class="verse-num">1</span> 에브라임 산지에 미가라 이름하는 사람이 있더니</div>
+        <div class="verse"><span class="verse-num">2</span> 그의 어머니에게 이르되 어머니께서 은 천백을 잃어버리셨으므로 저주하시고 내 귀에도 말씀하셨더니 보소서 그 은이 내게 있나이다 내가 그것을 가졌나이다 하니 그의 어머니가 이르되 내 아들이 여호와께 복 받기를 원하노라 하니라</div>
+        <div class="verse"><span class="verse-num">3</span> 미가가 은 천백을 그의 어머니에게 도로 주매 그의 어머니가 이르되 내가 내 아들을 위하여 한 신상을 새기며 한 신상을 부어 만들기 위해 내 손에서 이 은을 여호와께 거룩히 드리노라 그러므로 내가 이제 이 은을 네게 도로 주리라</div>
+        <div class="verse"><span class="verse-num">4</span> 미가가 그 은을 그의 어머니에게 도로 주었으므로 어머니가 그 은 이백을 가져다 은장색에게 주어 한 신상을 새기고 한 신상을 부어 만들었더니 그 신상이 미가의 집에 있더라</div>
+        <div class="verse"><span class="verse-num">5</span> 그 사람 미가에게 신당이 있으므로 그가 에봇과 드라빔을 만들고 한 아들을 세워 그의 제사장으로 삼았더라</div>
+        <div class="verse"><span class="verse-num">6</span> 그 때에는 이스라엘에 왕이 없었으므로 사람마다 자기 소견에 옳은 대로 행하였더라</div>
+        <div class="verse"><span class="verse-num">7</span> 유다 가족에 속한 유다 베들레헴에 한 청년이 있었으니 그는 레위인으로서 거기서 거류하였더라</div>
+        <div class="verse"><span class="verse-num">8</span> 그 사람이 거주할 곳을 찾고자 하여 그 성읍 유다 베들레헴을 떠나 가다가 에브라임 산지로 가서 미가의 집에 이르매</div>
+        <div class="verse"><span class="verse-num">9</span> 미가가 그에게 묻되 너는 어디서부터 오느냐 하니 그가 이르되 나는 유다 베들레헴의 레위인으로서 거류할 곳을 찾으러 가노라 하는지라</div>
+        <div class="verse"><span class="verse-num">10</span> 미가가 그에게 이르되 네가 나와 함께 거주하며 나를 위하여 아버지와 제사장이 되라 내가 해마다 은 열과 의복 한 벌과 먹을 것을 주리라 하므로 그 레위인이 들어갔더라</div>
+        <div class="verse"><span class="verse-num">11</span> 그 레위인이 그 사람과 함께 거주하기를 만족하게 생각했으니 이는 그 청년이 미가의 아들 중 하나 같이 됨이라</div>
+        <div class="verse"><span class="verse-num">12</span> 미가가 그 레위인을 거룩하게 구별하매 그 청년이 미가의 제사장이 되어 그 집에 있었더라</div>
+        <div class="verse"><span class="verse-num">13</span> 이에 미가가 이르되 레위인이 내 제사장이 되었으니 이제 여호와께서 내게 복 주실 줄을 아노라 하니라</div>
+
+        <div class="chapter-title">사사기 18장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 때에 이스라엘에 왕이 없었고 단 지파는 그 때에 거주할 기업의 땅을 구하는 중이었으니 이는 그들이 이스라엘 지파 중에서 그 때까지 기업을 분배 받지 못하였음이라</div>
+        <div class="verse"><span class="verse-num">2</span> 단 자손이 소라와 에스다올에서부터 그들의 가족 가운데 용맹스런 다섯 사람을 보내어 땅을 정탐하고 살피게 하며 그들에게 이르되 너희는 가서 땅을 살펴보라 하매 그들이 에브라임 산지에 가서 미가의 집에 이르러 거기서 유숙하니라</div>
+        <div class="verse"><span class="verse-num">3</span> 그들이 미가의 집에 있을 때에 그 레위 청년의 음성을 알아듣고 그리로 돌아가서 그에게 이르되 누가 너를 이리로 인도하였으며 네가 여기서 무엇을 하며 여기서 무엇을 얻었느냐 하니</div>
+        <div class="verse"><span class="verse-num">4</span> 그가 그들에게 이르되 미가가 이러이러하게 나를 대접하고 나를 고용하여 나를 자기의 제사장으로 삼았느니라 하니라</div>
+        <div class="verse"><span class="verse-num">5</span> 그들이 그에게 이르되 청하건대 우리를 위하여 하나님께 물어 보아서 우리가 가는 길이 형통할는지 우리에게 알게 하라 하니</div>
+        <div class="verse"><span class="verse-num">6</span> 그 제사장이 그들에게 이르되 평안히 가라 너희가 가는 길은 여호와 앞에 있느니라 하니라</div>
+        <div class="verse"><span class="verse-num">14</span> 전에 라이스 땅을 정탐하러 갔던 다섯 사람이 그 형제들에게 말하여 이르되 이 집에 에봇과 드라빔과 새긴 신상과 부어 만든 신상이 있는 줄을 너희가 아느냐 그런즉 이제 너희는 마땅히 행할 것을 생각하라 하고</div>
+        <div class="verse"><span class="verse-num">18</span> 그 다섯 사람이 미가의 집에 들어가서 그 새긴 신상과 에봇과 드라빔과 부어 만든 신상을 가지고 나오매 그 제사장이 그들에게 묻되 너희가 무엇을 하느냐 하니</div>
+        <div class="verse"><span class="verse-num">19</span> 그들이 그에게 이르되 잠잠하라 네 손을 입에 대라 우리와 함께 가서 우리의 아버지와 제사장이 되라 네가 한 사람의 집의 제사장이 되는 것과 이스라엘의 한 지파 한 족속의 제사장이 되는 것 중에서 어느 것이 낫겠느냐 하는지라</div>
+        <div class="verse"><span class="verse-num">20</span> 그 제사장이 마음에 기뻐하여 에봇과 드라빔과 새긴 우상을 받아 가지고 그 백성 가운데로 들어가니라</div>
+        <div class="verse"><span class="verse-num">27</span> 단 자손이 미가가 만든 것과 그 제사장을 취하여 라이스에 이르러 한가하고 걱정 없이 사는 백성을 만나 칼날로 그들을 치며 그 성읍을 불사르되</div>
+        <div class="verse"><span class="verse-num">30</span> 단 자손이 자기들을 위하여 그 새긴 신상을 세웠고 모세의 손자요 게르솜의 아들인 요나단과 그의 자손은 단 지파의 제사장이 되어 그 땅 백성이 사로잡히는 날까지 이르렀더라</div>
+        <div class="verse"><span class="verse-num">31</span> 하나님의 집이 실로에 있을 동안에 미가가 만든 바 새긴 신상이 단 자손에게 있었더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

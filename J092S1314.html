@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 092</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 --- */
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 --- */
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 092</h1>
+        <p class="sub-title">찬송가 348장 마귀들과 싸울지라</p>
+        <p class="sub-title">사무엘상 13~14장 — 왕정 500년의 시작</p>
+    </div>
+
+    <!-- Apostles' Creed -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 348장</div>
+        <img src="https://lh3.googleusercontent.com/d/1XJdZ2bkEiISx_rsb9sgyzTjQijyYQCsm" alt="찬송가 348장 악보" class="hymn-image" onerror="this.src='https://placehold.co/600x400/f7fafc/2d3748?text=찬송가+348장+악보'">
+    </div>
+
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사무엘상 13~14장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 왕정 500년은 사울로 시작하여 시드기야로 끝이 납니다.</span>
+            구약의 역사는 모세오경을 거쳐 왕정 500년 시대로 진입합니다. 이 시기는 사무엘로 시작해 예레미야로, 사울로 시작해 시드기야로 이어지며 왕과 선지자의 긴장과 협력 속에 하나님의 뜻이 펼쳐집니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 초대 왕 사울은 백성들과 가까워진 만큼 하나님과는 멀어집니다.</span>
+            사울은 초기에 겸손했으나 권력을 얻은 후 변하기 시작했습니다. 블레셋의 위협 앞에 사무엘을 기다리지 못하고 직접 제사를 집례한 것은 제사장 나라의 법을 어긴 중대한 범죄였습니다.
+            <div class="quote">
+                사울은 백성의 지지에 신경 쓰는 권력자가 되었으나, 정작 하나님과의 관계는 소홀히 여기는 길을 걷게 되었습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 사울은 제사보다, 제사를 통한 전쟁 승리에 더 관심이 많았습니다.</span>
+            번제와 화목제는 헌신과 나눔의 제사이지 전쟁을 위한 도구가 아닙니다. 사울이 이를 수단으로 삼자 하나님께서는 사무엘을 통해 사울의 왕위 폐지를 처음으로 선포하셨습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 요나단의 '첫 번째 마음을 합한 자'는 자신의 무기를 든 자였습니다.</span>
+            요나단은 승리가 숫자가 아닌 하나님의 손에 달렸음을 믿었습니다. 이 믿음에 동참한 무기 든 소년과 단둘이 블레셋 진영으로 나아가 놀라운 승리의 계기를 마련했습니다.
+            <div class="quote">
+                "여호와의 구원은 사람이 많고 적음에 달리지 아니하였느니라"는 고백은 제사장 나라 거룩한 시민의 참된 신앙을 보여줍니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 사울 왕의 잘못된 제사는 사무엘이 막고, 사울 왕의 잘못된 명령은 백성들이 막습니다.</span>
+            사울은 군인들을 붙잡으려 제사를 오용했고, 무모한 금식령으로 백성을 곤란케 했습니다. 요나단마저 죽이려 했으나, 하나님과 동역한 그를 백성들이 나서서 구원해 냈습니다.
+        </div>
+    </div>
+
+    <div class="intro-text">
+        오늘은 사무엘상 13~14장 '왕정 500년의 시작'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">사무엘상 13장 (1~23절)</div>
+        <div class="verse"><span class="verse-num">1</span> 사울이 왕이 될 때에 사십 세라 그가 이스라엘을 다스린 지 이 년에</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 사람 삼천 명을 택하여 그 중에서 이천 명은 자기와 함께 믹마스와 벧엘 산에 있게 하고 일천 명은 요나단과 함께 베냐민 기브아에 있게 하고 남은 백성은 각기 장막으로 보내니라</div>
+        <div class="verse"><span class="verse-num">5</span> 블레셋 사람들이 이스라엘과 싸우려고 모였는데 병거가 삼만이요 마병이 육천 명이요 백성은 해변의 모래 같이 많더라 그들이 올라와 벧아웬 동쪽 믹마스에 진 치매</div>
+        <div class="verse"><span class="verse-num">8</span> 사울은 사무엘이 정한 기한대로 이레 동안을 기다렸으나 사무엘이 길갈로 오지 아니하매 백성이 사울에게서 흩어지는지라</div>
+        <div class="verse"><span class="verse-num">9</span> 사울이 이르되 번제와 화목제물을 이리로 가져오라 하여 번제를 드렸더니</div>
+        <div class="verse"><span class="verse-num">13</span> 사무엘이 사울에게 이르되 왕이 망령되이 행하였도다 왕이 왕의 하나님 여호와께서 왕에게 내리신 명령을 지키지 아니하였도다 그리하였더라면 여호와께서 이스라엘 위에 왕의 나라를 영원히 세우셨을 것이거늘</div>
+        <div class="verse"><span class="verse-num">14</span> 지금은 왕의 나라가 길지 못할 것이라 여호와께서 왕에게 명령하신 바를 왕이 지키지 아니하였으므로 여호와께서 그의 마음에 맞는 사람을 구하여 여호와께서 그를 그의 백성의 지도자로 삼으셨느니라 하고</div>
+
+        <div class="chapter-title">사무엘상 14장 (1~52절)</div>
+        <div class="verse"><span class="verse-num">6</span> 요나단이 자기의 무기를 든 소년에게 이르되 우리가 이 할례 받지 않은 자들에게로 건너가자 여호와께서 우리를 위하여 일하실까 하노라 여호와의 구원은 사람이 많고 적음에 달리지 아니하였느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 무기를 든 자가 그에게 이르되 당신의 마음에 있는 대로 다 행하여 앞서 가소서 내가 당신과 마음을 같이 하여 따르리이다</div>
+        <div class="verse"><span class="verse-num">13</span> 요나단이 손 발로 기어 올라갔고 그 무기를 든 자도 따랐더라 블레셋 사람들이 요나단 앞에서 엎드러지매 무기를 든 자가 따라가며 죽였으니</div>
+        <div class="verse"><span class="verse-num">23</span> 여호와께서 그 날에 이스라엘을 구원하시므로 전쟁이 벧아웬을 지나니라</div>
+        <div class="verse"><span class="verse-num">24</span> 이 날에 이스라엘 백성들이 피곤하였으니 이는 사울이 백성에게 맹세시켜 경계하여 이르기를 저녁 곧 내가 내 원수에게 보복하는 때까지 아무 음식물이든지 먹는 사람은 저주를 받을지어다 하였음이라 그러므로 모든 백성이 음식물을 맛보지 못하고</div>
+        <div class="verse"><span class="verse-num">27</span> 요나단은 그의 아버지가 백성에게 맹세하여 명령할 때에 듣지 못하였으므로 손에 가진 지팡이 끝을 내밀어 벌집의 꿀을 찍고 그의 손을 돌려 입에 대매 눈이 밝아졌더라</div>
+        <div class="verse"><span class="verse-num">45</span> 백성이 사울에게 말하되 이스라엘에 이 큰 구원을 이룬 요나단이 죽겠나이까 결단코 그렇지 아니하니이다 여호와의 살아 계심을 두고 맹세하옵나니 그의 머리털 하나도 땅에 떨어지지 아니할 것은 그가 오늘 하나님과 동역하였음이니이다 하여 백성이 요나단을 구원하여 죽지 않게 하니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- Lord's Prayer -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

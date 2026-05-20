@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 077</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 077</h1>
+        <p class="sub-title">찬송가 302장 내 주 하나님 넓고 큰 은혜는</p>
+        <p class="sub-title">여호수아 20~22장 — 48개 관공서, 레위인 성읍</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 302장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/13OTaZglaRnxxifeF-GnqDK9G3CXDCBkt" alt="찬송가 302장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 여호수아 20장~22장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 여호수아의 가나안 정복 전쟁 5년 마무리는 세 가지입니다.</span>
+            모세의 뒤를 이어 이스라엘의 지도자가 된 여호수아가 <strong>5년 동안의 가나안 정복 전쟁을 마치고 땅 분배까지 마무리를 지었습니다.</strong> 이제 마지막으로 남은 세 가지 일을 정리합니다.
+            <div class="quote">
+                <strong>첫째,</strong> 여호수아는 모세가 요단 동편에 3개의 도피성을 세운 것처럼 <strong>요단 서편에도 3개의 도피성을 세워 이스라엘에 6개의 도피성 설치를 마무리합니다.</strong><br><br>
+                <strong>둘째,</strong> 여호수아는 <strong>레위 지파에게 48개의 성읍을 분배해 줍니다.</strong><br><br>
+                <strong>셋째,</strong> 여호수아는 지난 5년 동안 가나안 정복 전쟁의 선봉대였던 <strong>르우벤, 갓, 므낫세 반 지파를 축복해주며 그들을 요단 동편으로 돌려보냅니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 도피성으로 피하는 자는 재판을 두 번 받아야 합니다.</span>
+            요단 동편과 서편에 각각 3개씩 세워진 도피성으로 피할 수 있는 자는 <strong>이스라엘 모든 자손과 그들 중에 거류하는 거류민 모두</strong>입니다. 도피성으로 피하는 자는 <strong>두 번의 재판 과정</strong>을 통해야 합니다.
+            <div class="quote">
+                <strong>첫 번째 재판</strong> — 성읍 문 어귀에서 성읍 장로들이 판단합니다(신 19:12). 여기서 만약 도피자가 고의적 살인이라 판정이 나면 그는 죽임을 당했습니다.<br><br>
+                <strong>두 번째 재판</strong> — 회중 앞에 서서 재판을 받아야 합니다(수 20:9). 도피성으로 피한 자는 회중 앞에 설 때까지 <strong>보호받을 권리</strong>가 있었습니다.
+            </div>
+            도피성에 피할 수 있는 자라고 최종 판정이 나면 그는 <strong>현직 대제사장이 죽기까지 그 도피성에서 보호를 받을 수 있었습니다.</strong> 만약 도피성으로 피한 자가 만일 현직 대제사장이 죽지 않았음에도 도피성을 벗어났다 면 <strong>그는 어떠한 보호도 받을 수 없었습니다.</strong><br><br>
+            하나님께서 도피성 제도를 이렇게까지 세밀하게 정해주신 이유는 <strong>생명을 귀히 여기기를 바라시는 하나님의 마음 때문</strong>입니다. 하나님께서는 이스라엘 백성만을 위한 도피성이 아닌 <strong>그 땅에 있는 모든 사람, 거류민의 생명까지도 귀히 여김을 받을 수 있는 도피성</strong>을 만드셨습니다.
+            <div class="quote">
+                <strong>그리고 마침내 모든 인류를 위해 골고다 위에서 십자가에 달리셨던 하나님의 아들 예수 그리스도라는 진정한 도피성을 우리에게 주셨습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 제사장 나라는 1개의 중앙 성소와 48개의 관공서로 운영됩니다.</span>
+            여호수아는 드디어 가나안 땅에서 <strong>제사장 나라 시스템을 정착시킵니다.</strong> 이 시스템의 핵심은 <strong>5대 제사와 3대 명절을 위한 하나의 중앙 성소와 도피성 6곳을 포함한 48개의 지역 관공서</strong>입니다.
+            <div class="quote">
+                <strong>48개의 성읍은 하나님께서 당신께 바쳐진 레위 자손들을 책임지시기 위함입니다.</strong>
+            </div>
+            땅을 분배받은 레위 자손은 야곱의 유언(창 49장)과 하나님께서 모세를 통해 명하셨던 것처럼(민 35장) <strong>이스라엘 각 지파 중에 흩어져 살면서 받은 사명을 다해야 합니다.</strong> 제사장 나라 거룩한 시민으로서의 사명을 위해 이스라엘은 가나안 땅에 정착하고, <strong>그 중심에는 열두 지파 속으로 모두 흩어진 하나님께 헌신된 레위인들</strong>이 있습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 여호수아는 모세와의 선봉대 약속을 5년 동안 지킨 두 지파 반에게 책임을 다했음을 선포합니다.</span>
+            르우벤 지파, 갓 지파, 므낫세 반 지파가 요단 동편에서 모세에게 했던 약속(민 32:17~19)대로 <strong>지난 5년 동안 약속을 성실히 이행했습니다.</strong> 그러자 여호수아가 르우벤, 갓, 므낫세 반 지파를 불러 <strong>그들이 맡은 바 책임을 다했음을 공식적으로 선포합니다</strong>(수 22:1~3).
+            <br><br>
+            이 선포 후에 여호수아는 그들로 하여금 기쁘게 요단 동편으로 귀환할 것을 지시합니다. 그리고 여호수아는 그들을 요단 동편으로 돌려보내며 <strong>하나님을 사랑하고 하나님의 계명을 지키며 하나님만을 섬길 것을 따뜻하게 권고합니다.</strong> 그러고 나서 마지막으로 그들을 크게 축복하고 <strong>지난 5년간의 노고를 치하하며 풍성한 전리품을 들려 보냅니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 만나 세대들의 오해를 푸는 솜씨는 전쟁 능력만큼이나 뛰어납니다.</span>
+            사명을 다한 르우벤 지파, 갓 지파, 그리고 므낫세 반 지파가 기다리던 가족들을 향하여 요단 동편으로 발걸음을 재촉하던 중 <strong>그들이 요단 강가에 세운 제단으로 인해 오해가 발생합니다.</strong> 자칫 <strong>내전의 위험으로까지 번질 수 있는 상황</strong>입니다.
+            <br><br>
+            결국 제사장 엘르아살의 아들 비느하스를 중심으로 요단 서편 각 지파의 지도자인 천부장들이 길르앗 땅까지 가서 사건의 진상을 파악합니다(수 22:13~14). 먼저 광야 생활 중에 일어났던 <strong>바알브올의 죄악과 아이성에서의 아간의 범죄</strong>를 언급하며 요단 강가에 세운 제단이 <strong>우상을 숭배하기 위함이 아닌지를 따져 묻습니다.</strong><br><br>
+            그러자 두 지파 반은 그것이 오해라는 것을 서둘러 밝히며 그들이 제단을 쌓은 이유는 <strong>후일에 그들 민족의 하나 됨과 하나님을 향한 신앙 정통성을 입증하기 위해 만든 것</strong>이라고 말합니다. 앞으로 <strong>후손들의 신앙 교육을 하기 위함이며</strong> 또한 후일에 요단 서편 지파들이 자신들을 공동체의 일원이 아니라고 할까봐 염려했던 것입니다.
+            <br><br>
+            모든 오해가 풀린 그들은 <strong>하나의 공동체임을 다시 한번 확인하고 오히려 함께 기뻐합니다.</strong> 그들은 이 사건을 두고 하나님을 찬송하며 세운 제단을 <strong>'엣'이라 부르며 그 증거로 삼습니다</strong>(수 22:34).
+            <div class="quote">
+                <strong>이처럼 만나 세대들은 오해를 푸는 솜씨도 전쟁 능력만큼이나 뛰어났습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 여호수아 20~22장 '48개 관공서, 레위인 성읍'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 여호수아 20장 -->
+        <div class="chapter-title">여호수아 20장 (1~9절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 여호수아에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손에게 말하여 이르기를 내가 모세를 통하여 너희에게 말한 도피성들을 너희를 위해 정하여</div>
+        <div class="verse"><span class="verse-num">3</span> 부지중에 실수로 사람을 죽인 자를 그리로 도망하게 하라 이는 너희를 위해 피의 보복자를 피할 곳이니라</div>
+        <div class="verse"><span class="verse-num">4</span> 이 성읍들 중의 하나에 도피하는 자는 그 성읍에 들어가는 문 어귀에 서서 그 성읍의 장로들의 귀에 자기의 사건을 말할 것이요 그들은 그를 성읍에 받아들여 한 곳을 주어 자기들 중에 거주하게 하고</div>
+        <div class="verse"><span class="verse-num">5</span> 피의 보복자가 그의 뒤를 따라온다 할지라도 그들은 그 살인자를 그의 손에 내주지 말지니 이는 본래 미워함이 없이 부지중에 그의 이웃을 죽였음이라</div>
+        <div class="verse"><span class="verse-num">6</span> 그 살인자는 회중 앞에 서서 재판을 받기까지 또는 그 당시 대제사장이 죽기까지 그 성읍에 거주하다가 그 후에 그 살인자는 그 성읍 곧 자기가 도망하여 나온 자기 성읍 자기 집으로 돌아갈지니라 하라 하시니라</div>
+        <div class="verse"><span class="verse-num">7</span> 이에 그들이 납달리의 산지 갈릴리 게데스와 에브라임 산지의 세겜과 유다 산지의 기럇 아르바 곧 헤브론과</div>
+        <div class="verse"><span class="verse-num">8</span> 여리고 동쪽 요단 저쪽 르우벤 지파 중에서 평지 광야의 베셀과 갓 지파 중에서 길르앗 라못과 므낫세 지파 중에서 바산 골란을 구별하였으니</div>
+        <div class="verse"><span class="verse-num">9</span> 이는 곧 이스라엘 모든 자손과 그들 중에 거류하는 거류민을 위하여 선정된 성읍들로서 누구든지 부지중에 살인한 자가 그리로 도망하여 그가 회중 앞에 설 때까지 피의 보복자의 손에 죽지 아니하게 하기 위함이라</div>
+
+        <!-- 여호수아 21장 -->
+        <div class="chapter-title">여호수아 21장 (1~45절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 때에 레위 사람의 족장들이 제사장 엘르아살과 눈의 아들 여호수아와 이스라엘 자손의 지파 족장들에게 나아와</div>
+        <div class="verse"><span class="verse-num">2</span> 가나안 땅 실로에서 그들에게 말하여 이르되 여호와께서 모세에게 명령하사 우리가 거주할 성읍들과 우리 가축을 위해 그 목초지들을 우리에게 주라 하셨나이다 하매</div>
+        <div class="verse"><span class="verse-num">3</span> 이스라엘 자손이 여호와의 명령을 따라 자기의 기업에서 이 성읍들과 그 목초지들을 레위 사람에게 주니라</div>
+        <div class="verse"><span class="verse-num">4</span> 그핫 가족을 위하여 제비를 뽑았는데 레위 사람 중 제사장 아론의 자손들은 유다 지파와 시므온 지파와 베냐민 지파 중에서 제비 뽑은 대로 열세 성읍을 받았고</div>
+        <div class="verse"><span class="verse-num">5</span> 그핫 자손들 중에 남은 자는 에브라임 지파의 가족과 단 지파와 므낫세 반 지파 중에서 제비 뽑은 대로 열 성읍을 받았으며</div>
+        <div class="verse"><span class="verse-num">6</span> 게르손 자손들은 잇사갈 지파의 가족들과 아셀 지파와 납달리 지파와 바산에 있는 므낫세 반 지파 중에서 제비 뽑은 대로 열세 성읍을 받았더라</div>
+        <div class="verse"><span class="verse-num">7</span> 므라리 자손들은 그 가족대로 르우벤 지파와 갓 지파와 스불론 지파 중에서 열두 성읍을 받았더라</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와께서 모세에게 명령하신 대로 이스라엘 자손이 제비 뽑아 레위 사람에게 준 성읍들과 그 목초지들이 이러하니라</div>
+        <div class="verse"><span class="verse-num">9</span> 유다 자손의 지파와 시므온 자손의 지파 중에서는 이 아래에 기명한 성읍들을 주었는데</div>
+        <div class="verse"><span class="verse-num">10</span> 레위 자손 중 그핫 가족들에 속한 아론 자손이 첫째로 제비 뽑혔으므로</div>
+        <div class="verse"><span class="verse-num">11</span> 아낙의 아버지 아르바의 성읍 유다 산지 기럇 아르바 곧 헤브론과 그 주위의 목초지를 그들에게 주었고</div>
+        <div class="verse"><span class="verse-num">12</span> 그 성읍의 밭과 그 촌락들은 여분네의 아들 갈렙에게 주어 소유가 되게 하였더라</div>
+        <div class="verse"><span class="verse-num">13</span> 제사장 아론의 자손에게 준 것은 살인자의 도피성 헤브론과 그 목초지이요 또 립나와 그 목초지와</div>
+        <div class="verse"><span class="verse-num">14</span> 얏딜과 그 목초지와 에스드모아와 그 목초지와</div>
+        <div class="verse"><span class="verse-num">15</span> 홀론과 그 목초지와 드빌과 그 목초지와</div>
+        <div class="verse"><span class="verse-num">16</span> 아인과 그 목초지와 윳다와 그 목초지와 벧 세메스와 그 목초지이니 이 두 지파에서 아홉 성읍을 냈고</div>
+        <div class="verse"><span class="verse-num">17</span> 또 베냐민 지파 중에서는 기브온과 그 목초지와 게바와 그 목초지와</div>
+        <div class="verse"><span class="verse-num">18</span> 아나돗과 그 목초지와 알몬과 그 목초지 곧 네 성읍을 냈으니</div>
+        <div class="verse"><span class="verse-num">19</span> 제사장 아론 자손의 성읍은 모두 열세 성읍과 그 목초지들이었더라</div>
+        <div class="verse"><span class="verse-num">20</span> 레위 사람인 그핫 자손 중에 남은 자들의 가족들 곧 그핫 자손에게는 제비 뽑아 에브라임 지파 중에서 그 성읍들을 주었으니</div>
+        <div class="verse"><span class="verse-num">21</span> 곧 살인자의 도피성 에브라임 산지 세겜과 그 목초지이요 또 게셀과 그 목초지와</div>
+        <div class="verse"><span class="verse-num">22</span> 깁사임과 그 목초지와 벧호론과 그 목초지이니 네 성읍이요</div>
+        <div class="verse"><span class="verse-num">23</span> 또 단 지파 중에서 준 것은 엘드게와 그 목초지와 깁브돈과 그 목초지와</div>
+        <div class="verse"><span class="verse-num">24</span> 아얄론과 그 목초지와 가드 림몬과 그 목초지이니 네 성읍이요</div>
+        <div class="verse"><span class="verse-num">25</span> 또 므낫세 반 지파 중에서 준 것은 다아낙과 그 목초지와 가드 림몬과 그 목초지이니 두 성읍이라</div>
+        <div class="verse"><span class="verse-num">26</span> 그핫 자손의 남은 가족들을 위한 성읍들은 모두 열 성읍과 그 목초지들이었더라</div>
+        <div class="verse"><span class="verse-num">27</span> 레위 가족의 게르손 자손에게는 므낫세 반 지파 중에서 살인자의 도피성 바산 골란과 그 목초지를 주었고 또 브에스드라와 그 목초지를 주었으니 두 성읍이요</div>
+        <div class="verse"><span class="verse-num">28</span> 잇사갈 지파 중에서는 기시온과 그 목초지와 다브랏과 그 목초지와</div>
+        <div class="verse"><span class="verse-num">29</span> 야르뭇과 그 목초지와 엔 간님과 그 목초지를 주었으니 네 성읍이요</div>
+        <div class="verse"><span class="verse-num">30</span> 아셀 지파 중에서는 미살과 그 목초지와 압돈과 그 목초지와</div>
+        <div class="verse"><span class="verse-num">31</span> 헬갓과 그 목초지와 르홉과 그 목초지를 주었으니 네 성읍이요</div>
+        <div class="verse"><span class="verse-num">32</span> 납달리 지파 중에서는 살인자의 도피성 갈릴리 게데스와 그 목초지를 주었고 또 함못 돌과 그 목초지와 가르단과 그 목초지를 주었으니 세 성읍이라</div>
+        <div class="verse"><span class="verse-num">33</span> 게르손 사람이 그 가족대로 받은 성읍은 모두 열세 성읍과 그 목초지들이었더라</div>
+        <div class="verse"><span class="verse-num">34</span> 그 남은 레위 사람 므라리 자손의 가족들에게 준 것은 스불론 지파 중에서 욕느암과 그 목초지와 가르다와 그 목초지와</div>
+        <div class="verse"><span class="verse-num">35</span> 딤나와 그 목초지와 나할랄과 그 목초지이니 네 성읍이요</div>
+        <div class="verse"><span class="verse-num">36</span> 르우벤 지파 중에서 준 것은 베셀과 그 목초지와 야하스와 그 목초지와</div>
+        <div class="verse"><span class="verse-num">37</span> 그데못과 그 목초지와 므바앗과 그 목초지이니 네 성읍이요</div>
+        <div class="verse"><span class="verse-num">38</span> 갓 지파 중에서 준 것은 살인자의 도피성 길르앗 라못과 그 목초지이요 또 마하나임과 그 목초지와</div>
+        <div class="verse"><span class="verse-num">39</span> 헤스본과 그 목초지와 야셀과 그 목초지이니 모두 네 성읍이라</div>
+        <div class="verse"><span class="verse-num">40</span> 이는 레위 가족의 남은 자 곧 므라리 자손이 그들의 가족대로 받은 성읍이니 그들이 제비 뽑아 얻은 성읍이 열두 성읍이었더라</div>
+        <div class="verse"><span class="verse-num">41</span> 레위 사람들이 이스라엘 자손의 기업 중에서 받은 성읍은 모두 마흔여덟 성읍이요 또 그 목초지들이라</div>
+        <div class="verse"><span class="verse-num">42</span> 이 각 성읍의 주위에 목초지가 있었고 모든 성읍이 다 그러하였더라</div>
+        <div class="verse"><span class="verse-num">43</span> 여호와께서 이스라엘의 조상들에게 맹세하사 주리라 하신 온 땅을 이와 같이 이스라엘에게 다 주셨으므로 그들이 그것을 차지하여 거기에 거주하였으니</div>
+        <div class="verse"><span class="verse-num">44</span> 여호와께서 그들의 주위에 안식을 주셨으되 그 조상들에게 맹세하신 대로 하셨으므로 그들의 모든 원수들 중에 그들과 맞선 자가 하나도 없었으니 이는 여호와께서 그들의 모든 원수들을 그들의 손에 넘겨 주셨음이니라</div>
+        <div class="verse"><span class="verse-num">45</span> 여호와께서 이스라엘 족속에게 말씀하신 선한 말씀이 하나도 남음이 없이 다 응하였더라</div>
+
+        <!-- 여호수아 22장 -->
+        <div class="chapter-title">여호수아 22장 (1~34절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 때에 여호수아가 르우벤 사람과 갓 사람과 므낫세 반 지파를 불러서</div>
+        <div class="verse"><span class="verse-num">2</span> 그들에게 이르되 여호와의 종 모세가 너희에게 명령한 것을 너희가 다 지키며 또 내가 너희에게 명령한 모든 일에 너희가 내 말을 순종하여</div>
+        <div class="verse"><span class="verse-num">3</span> 오늘까지 날이 오래도록 너희가 너희 형제를 떠나지 아니하고 오직 너희의 하나님 여호와께서 명령하신 그 책임을 지키도다</div>
+        <div class="verse"><span class="verse-num">4</span> 이제는 너희의 하나님 여호와께서 이미 말씀하신 대로 너희 형제에게 안식을 주셨으니 그런즉 이제 너희는 여호와의 종 모세가 요단 저쪽에서 너희에게 준 소유지로 가서 너희의 장막으로 돌아가되</div>
+        <div class="verse"><span class="verse-num">5</span> 오직 여호와의 종 모세가 너희에게 명령한 명령과 율법을 반드시 행하여 너희의 하나님 여호와를 사랑하고 그의 모든 길로 행하며 그의 계명을 지켜 그에게 친근히 하고 너희의 마음을 다하며 성품을 다하여 그를 섬길지니라 하고</div>
+        <div class="verse"><span class="verse-num">6</span> 여호수아가 그들에게 축복하여 보내매 그들이 자기 장막으로 갔더라</div>
+        <div class="verse"><span class="verse-num">7</span> 므낫세 반 지파에게는 모세가 바산에서 기업을 주었고 그 남은 반 지파에게는 여호수아가 요단 이쪽 서쪽에서 그들의 형제들과 함께 기업을 준지라 여호수아가 그들을 그들의 장막으로 돌려보낼 때에 그들에게 축복하고</div>
+        <div class="verse"><span class="verse-num">8</span> 말하여 이르되 너희는 많은 재산과 심히 많은 가축과 은과 금과 구리와 쇠와 심히 많은 의복을 가지고 너희의 장막으로 돌아가서 너희의 원수들에게서 탈취한 것을 너희의 형제와 나눌지니라 하매</div>
+        <div class="verse"><span class="verse-num">9</span> 르우벤 자손과 갓 자손과 므낫세 반 지파가 가나안 땅 실로에서 이스라엘 자손을 떠나 여호와께서 모세에게 명령하신 대로 받은 땅 곧 그들의 소유지 길르앗으로 가니라</div>
+        <div class="verse"><span class="verse-num">10</span> 르우벤 자손과 갓 자손과 므낫세 반 지파가 가나안 땅 요단 언덕 가에 이르자 거기서 요단 가에 제단을 쌓았는데 보기에 큰 제단이었더라</div>
+        <div class="verse"><span class="verse-num">11</span> 이스라엘 자손이 들은즉 이르기를 르우벤 자손과 갓 자손과 므낫세 반 지파가 가나안 땅의 맨 앞쪽 요단 언덕 가 이스라엘 자손에게 속한 쪽에 제단을 쌓았다 하는지라</div>
+        <div class="verse"><span class="verse-num">12</span> 이스라엘 자손이 이를 듣자 곧 이스라엘 자손의 온 회중이 실로에 모여서 그들과 싸우러 가려 하니라</div>
+        <div class="verse"><span class="verse-num">13</span> 이스라엘 자손이 제사장 엘르아살의 아들 비느하스를 길르앗 땅으로 보내어 르우벤 자손과 갓 자손과 므낫세 반 지파를 보게 하되</div>
+        <div class="verse"><span class="verse-num">14</span> 이스라엘 각 지파에서 한 지도자씩 열 지도자들을 그와 함께 하게 하니 그들은 각기 그들의 조상들의 가문의 수령으로서 이스라엘 중에서 천부장들이라</div>
+        <div class="verse"><span class="verse-num">15</span> 그들이 길르앗 땅에 이르러 르우벤 자손과 갓 자손과 므낫세 반 지파에게 나아가서 그들에게 말하여 이르되</div>
+        <div class="verse"><span class="verse-num">16</span> 여호와의 온 회중이 말하기를 너희가 어찌하여 이스라엘 하나님께 범죄하여 오늘 여호와를 따르는 데서 돌아서서 너희를 위하여 제단을 쌓아 너희가 오늘 여호와께 거역하고자 하느냐</div>
+        <div class="verse"><span class="verse-num">17</span> 브올의 죄악으로 말미암아 여호와의 회중에 재앙이 내렸으나 오늘까지 우리가 그 죄에서 정결함을 받지 못하였거늘 그 죄악이 우리에게 부족하여서</div>
+        <div class="verse"><span class="verse-num">18</span> 오늘 너희가 돌이켜 여호와를 따르지 아니하려고 하느냐 너희가 오늘 여호와를 배역하면 내일은 그가 이스라엘 온 회중에게 진노하시리라</div>
+        <div class="verse"><span class="verse-num">19</span> 그런데 너희의 소유지가 만일 깨끗하지 아니하거든 여호와의 성막이 있는 여호와의 소유지로 건너와 우리 중에서 소유지를 나누어 가질 것이니라 오직 우리 하나님 여호와의 제단 외에 다른 제단을 쌓음으로 여호와를 거역하지 말며 우리에게도 거역하지 말라</div>
+        <div class="verse"><span class="verse-num">20</span> 세라의 아들 아간이 온전히 바친 물건에 대하여 범죄하므로 이스라엘 온 회중에 진노가 임하지 아니하였느냐 그의 죄악으로 멸망한 자가 그 한 사람만이 아니었느니라 하니라</div>
+        <div class="verse"><span class="verse-num">21</span> 르우벤 자손과 갓 자손과 므낫세 반 지파가 이스라엘 천천의 수령들에게 대답하여 이르되</div>
+        <div class="verse"><span class="verse-num">22</span> 전능하신 자 하나님 여호와, 전능하신 자 하나님 여호와께서 아시나니 이스라엘도 장차 알리라 이 일이 만일 여호와를 거역함이거나 범죄함이거든 주께서는 오늘 우리를 구원하지 마시옵소서</div>
+        <div class="verse"><span class="verse-num">23</span> 우리가 제단을 쌓은 것이 돌이켜 여호와를 따르지 아니하려 함이거나 또는 그 위에 번제나 소제를 드리려 함이거나 또는 화목제물을 드리려 함이거든 여호와는 친히 벌하시옵소서</div>
+        <div class="verse"><span class="verse-num">24</span> 우리가 목적이 있어서 주의하고 이같이 하였노라 곧 생각하기를 후일에 너희의 자손이 우리 자손에게 말하여 이르기를 너희가 이스라엘 하나님 여호와와 무슨 상관이 있느냐</div>
+        <div class="verse"><span class="verse-num">25</span> 너희 르우벤 자손 갓 자손아 여호와께서 우리와 너희 사이에 요단으로 경계를 삼으셨나니 너희는 여호와께 받을 분깃이 없느니라 하여 너희의 자손이 우리 자손에게 여호와 경외하기를 그치게 할까 하여</div>
+        <div class="verse"><span class="verse-num">26</span> 우리가 말하기를 우리가 이제 한 제단 쌓기를 준비하자 하였노니 이는 번제를 위함도 아니요 다른 제사를 위함도 아니라</div>
+        <div class="verse"><span class="verse-num">27</span> 우리가 여호와 앞에서 우리의 번제와 우리의 다른 제사와 우리의 화목제로 섬기는 것을 우리와 너희 사이와 우리의 후대 사이에 증거가 되게 할 뿐으로서 너희 자손들이 후일에 우리 자손들에게 이르기를 너희는 여호와께 받을 분깃이 없다 하지 못하게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">28</span> 우리가 말하였거니와 만일 그들이 후일에 우리에게나 우리 후대에게 이같이 말하면 우리가 말하기를 우리 조상이 지은 여호와의 제단 모형을 보라 이는 번제를 위한 것도 아니요 다른 제사를 위한 것도 아니라 오직 우리와 너희 사이에 증거만 되게 할 뿐이라</div>
+        <div class="verse"><span class="verse-num">29</span> 우리가 번제나 소제나 다른 제사를 위하여 우리 하나님 여호와의 성막 앞에 있는 제단 외에 제단을 쌓음으로 여호와를 거역하고 오늘 여호와를 따르는 데에서 돌아서려는 것은 결단코 아니라 하리라</div>
+        <div class="verse"><span class="verse-num">30</span> 제사장 비느하스와 그와 함께 한 회중의 지도자들 곧 이스라엘 천천의 수령들이 르우벤 자손과 갓 자손과 므낫세 자손의 말을 듣고 좋게 여긴지라</div>
+        <div class="verse"><span class="verse-num">31</span> 제사장 엘르아살의 아들 비느하스가 르우벤 자손과 갓 자손과 므낫세 자손에게 이르되 우리가 오늘 여호와께서 우리 중에 계신 줄을 아노니 이는 너희가 이 죄를 여호와께 범하지 아니하였음이니라 너희가 이제 이스라엘 자손을 여호와의 손에서 건져내었느니라 하고</div>
+        <div class="verse"><span class="verse-num">32</span> 제사장 엘르아살의 아들 비느하스와 지도자들이 르우벤 자손과 갓 자손을 떠나 길르앗 땅에서 가나안 땅 이스라엘 자손에게 돌아와 그들에게 보고하매</div>
+        <div class="verse"><span class="verse-num">33</span> 그 일이 이스라엘 자손을 즐겁게 한지라 이스라엘 자손이 하나님을 찬송하고 르우벤 자손과 갓 자손이 거주하는 땅에 가서 싸워 그것을 멸하자 하는 말을 다시는 하지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">34</span> 르우벤 자손과 갓 자손이 그 제단을 엣이라 불렀으니 우리 사이에 이 제단은 여호와께서 하나님이 되시는 증거라 함이었더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

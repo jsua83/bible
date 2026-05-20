@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 099</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 --- */
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 --- */
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 099</h1>
+        <p class="sub-title">찬송가 455장 주님의 마음을 본받는 자</p>
+        <p class="sub-title">사무엘상 25~26장, 시편 54편 — 3,000명을 잠들게 하신 이유</p>
+    </div>
+
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 455장</div>
+        <img src="https://lh3.googleusercontent.com/d/1mUMIijYparCVcgkfopr03q7Bkw7H2Jm2" alt="찬송가 455장 악보" class="hymn-image" onerror="this.src='https://placehold.co/600x400/f7fafc/2d3748?text=찬송가+455장+악보'">
+    </div>
+
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사무엘상 25~26장·시편 54편의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 이스라엘 백성들의 다윗에 대한 평가가 확연하게 둘로 나뉘기 시작합니다.</span>
+            10여 년의 도망자 생활 동안 다윗은 영웅에서 '도망 나온 종'으로 폄하되기도 했으나, 그일라 구출과 나발의 양 떼 보호 등 백성을 위한 헌신적인 활동을 통해 점차 오해를 풀고 진정한 지도자로 인정받기 시작합니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 다윗은 도망자 생활 중에 도엑, 나발, 그리고 수많은 밀고자를 만납니다.</span>
+            나발은 다윗의 선대를 무시하고 모욕함으로써 사울의 흑색선전이 대중에게 미친 부정적 영향을 대변합니다. 재물의 주권이 하나님께 있음을 무시한 나발의 태도는 다윗을 격분케 했으나, 이는 또한 다윗에게 인내를 시험하는 계기가 되었습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 다윗은 도망자 생활 중 아비가일을 만나게 됩니다.</span>
+            분노한 다윗 앞에 나타난 지혜로운 아비가일은 다윗이 장차 왕이 되었을 때 남을 오점을 막아줍니다. 그녀의 충언은 다윗이 사적인 복수를 멈추고 하나님의 주권을 다시 바라보게 하는 큰 위로와 영적 전환점이 되었습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 십 사람들이 또다시 다윗을 밀고합니다.</span>
+            사울의 보상과 위협에 굴복한 밀고가 일상이 된 현실 속에서도 다윗은 자신을 배신한 자들을 향한 보복 대신 하나님의 긍휼을 먼저 생각했습니다. 그는 공포 정치 아래 신음하는 백성들의 처지를 안타까워하며 기도로 하늘 문을 두드렸습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 사울의 특수부대원 3,000명 모두를 잠들게 하신 후 다윗 한 명을 지켜보십니다.</span>
+            하나님께서 만드신 절호의 기회는 곧 다윗을 향한 '하나님의 시험'이었습니다. 다윗은 기름 부음 받은 자를 치지 않음으로써 자신의 의로움과 하나님의 주권을 다시 한번 증명했고, 결국 사울로부터 어리석음에 대한 사과를 받아냅니다.
+        </div>
+    </div>
+
+    <div class="intro-text">
+        오늘은 사무엘상 25~26장·시편 54편 '3,000명을 잠들게 하신 이유'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">사무엘상 25장 (1~44절)</div>
+        <div class="verse"><span class="verse-num">1</span> 사무엘이 죽으매 온 이스라엘 무리가 모여 그를 두고 슬피 울며 라마 그의 집에서 그를 장사한지라 다윗이 일어나 바란 광야로 내려가니라</div>
+        <div class="verse"><span class="verse-num">10</span> 나발이 다윗의 사환들에게 대답하여 이르되 다윗은 누구며 이새의 아들은 누구냐 요즈음에 각기 주인에게서 억지로 떠나는 종이 많도다</div>
+        <div class="verse"><span class="verse-num">23</span> 아비가일이 다윗을 보고 급히 나귀에서 내려 다윗 앞에 엎드려 그의 얼굴을 땅에 대니라</div>
+        <div class="verse"><span class="verse-num">30</span> 여호와께서 내 주에 대하여 하신 말씀대로 모든 선을 내 주에게 행하사 내 주를 이스라엘의 지도자로 세우실 때에</div>
+        <div class="verse"><span class="verse-num">31</span> 내 주께서 무죄한 피를 흘리셨다든지 내 주께서 친히 보복하셨다든지 함으로 말미암아 슬퍼하실 것도 없고 내 주의 마음에 걸리는 것도 없으시리니 다만 여호와께서 내 주를 후대하실 때에 원하건대 내 주의 여종을 생각하소서 하니라</div>
+        <div class="verse"><span class="verse-num">38</span> 한 열흘 후에 여호와께서 나발을 치시매 그가 죽으니라</div>
+
+        <div class="chapter-title">사무엘상 26장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">7</span> 다윗과 아비새가 밤에 그 백성에게 나아가 본즉 사울이 진영 가운데 누워 자고 창은 머리 곁 땅에 꽂혀 있고 아브넬과 백성들은 그를 둘러 누웠는지라</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 손을 들어 여호와의 기름 부음 받은 자를 치는 것을 여호와께서 금하시나니 너는 그의 머리 곁에 있는 창과 물병만 가지고 가자 하고</div>
+        <div class="verse"><span class="verse-num">12</span> 다윗이 사울의 머리 곁에서 창과 물병을 가지고 떠나가되 아무도 보거나 눈치 채지 못하고 깨어 있는 사람도 없었으니 이는 여호와께서 그들을 깊이 잠들게 하셨으므로 그들이 다 잠들어 있었기 때문이었더라</div>
+        <div class="verse"><span class="verse-num">21</span> 사울이 이르되 내가 범죄하였도다 내 아들 다윗아 돌아오라 네가 오늘 내 생명을 귀하게 여겼은즉 내가 다시는 너를 해하려 하지 아니하리라 내가 어리석은 일을 하였으니 대단히 잘못되었도다 하는지라</div>
+
+        <div class="chapter-title">시편 54편 (1~7절)</div>
+        <div class="verse"><span class="verse-num">1</span> 하나님이여 주의 이름으로 나를 구원하시고 주의 힘으로 나를 변호하소서</div>
+        <div class="verse"><span class="verse-num">4</span> 하나님은 나를 돕는 이시며 주께서는 내 생명을 붙들어 주시는 이시니이다</div>
+        <div class="verse"><span class="verse-num">7</span> 참으로 주께서는 모든 환난에서 나를 건지시고 내 원수가 보응 받는 것을 내 눈이 똑똑히 보게 하셨나이다</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

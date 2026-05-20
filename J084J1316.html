@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 084</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 --- */
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 --- */
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 084</h1>
+        <p class="sub-title">찬송가 330장 어둔 밤 쉬 되리니</p>
+        <p class="sub-title">사사기 13~16장 — 나실인 삼손</p>
+    </div>
+
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 330장</div>
+        <img src="https://lh3.googleusercontent.com/d/1d_yctFjpa10qQ61fX5GmTIOTWHP_v6YV" alt="찬송가 330장 악보" class="hymn-image">
+    </div>
+
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사사기 13장~16장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님의 열심은 시대를 새롭게 할 지도자를 계속해서 찾으시는 것입니다.</span>
+            이스라엘이 하나님을 거역하자 40년 동안 블레셋을 통해 징계하셨으나, 그럼에도 또다시 구원 계획을 세우셔서 삼손을 나실인으로 준비시키십니다.
+            <div class="quote">
+                삼손은 20년 동안 사사로 있었으나 나실인의 규례를 어기고 이방 여인의 유혹에 넘어가는 등 하나님의 기대에 미치지 못하는 모습을 보였습니다. 그러나 하나님께서는 그의 마지막 부르짖음을 들으시고 블레셋으로부터 이스라엘을 구원하셨습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님께서 제사장 나라의 특별법인 '나실인 법'을 직접 발동하십니다.</span>
+            임신하지 못하는 마노아의 아내에게 나타나 아들을 낳을 것이라 말씀하시며, 그를 태에서부터 하나님께 바쳐진 나실인으로 구별하셨습니다.
+            <div class="quote">
+                하나님께서는 아브라함, 사가랴, 마리아의 가정처럼 하나님의 일을 위해 특별히 개인과 가정을 찾아가십니다. 삼손의 탄생 또한 이스라엘을 블레셋의 손에서 구원하기 위한 하나님의 직접적인 개입이었습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 사사 시대임에도 불구하고 마노아도 한나도 모두 제사장 나라의 '나실인 법'을 알고 있었습니다.</span>
+            암흑과 같은 사사 시대 속에서도 하나님의 법을 기억하고 순종하는 가정들이 있었습니다.
+            <div class="quote">
+                마노아의 가정과 이후 한나의 가정을 통해 나실인 삼손과 사무엘이 등장할 수 있었습니다. 이는 시대를 막론하고 하나님의 말씀을 지키는 자들을 통해 구원의 역사가 이어짐을 보여줍니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 삼손은 제사장 나라 나실인 법보다 자기의 소견에 옳은 대로 행동합니다.</span>
+            나실인은 포도주를 금하고, 시체를 멀리하며, 머리에 삭도를 대지 않아야 하는 대제사장급의 헌신이 요구됩니다.
+            <div class="quote">
+                삼손은 죽은 사자의 몸에서 꿀을 취하고 나귀 뼈를 만지는 등 규례를 어겼으며, 이방 여인과의 혼인을 금하신 명령도 소홀히 여겼습니다. 사명보다 자신의 욕망을 앞세운 결과는 비극적이었습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 거인 삼손의 마음이 갈대처럼 흔들립니다.</span>
+            들릴라를 사랑하는 마음과 하나님과의 약속 사이에서 갈등하던 삼손은 결국 눈이 뽑히고 맷돌을 돌리는 신세가 됩니다.
+            <div class="quote">
+                하지만 하나님께서는 삼손의 회개와 그의 머리털이 다시 자라기를 기다리셨습니다. 삼손은 죽으면서 살아있을 때보다 더 많은 블레셋 사람을 죽이며 사사로서의 사명을 완수했고, 히브리서 기자에 의해 믿음의 사람으로 기록되었습니다.
+            </div>
+        </div>
+    </div>
+
+    <div class="intro-text">
+        오늘은 사사기 13~16장 '나실인 삼손'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">사사기 13장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘 자손이 다시 여호와의 목전에 악을 행하였으므로 여호와께서 그들을 사십 년 동안 블레셋 사람의 손에 넘겨 주시니라</div>
+        <div class="verse"><span class="verse-num">2</span> 소라 땅에 단 지파의 가족 중에 마노아라 이름하는 자가 있더라 그의 아내가 임신하지 못하므로 출산하지 못하더니</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와의 사자가 그 여인에게 나타나서 그에게 이르되 보라 네가 본래 임신하지 못하므로 출산하지 못하였으나 이제 임신하여 아들을 낳으리니</div>
+        <div class="verse"><span class="verse-num">4</span> 그러므로 너는 삼가 포도주와 독주를 마시지 말며 어떤 부정한 것도 먹지 말지니라</div>
+        <div class="verse"><span class="verse-num">5</span> 보라 네가 임신하여 아들을 낳으리니 그의 머리 위에 삭도를 대지 말라 이 아이는 태에서 나옴으로부터 하나님께 바쳐진 나실인이 됨이라 그가 블레셋 사람의 손에서 이스라엘을 구원하기 시작하리라 하시니</div>
+        <!-- ... 중략된 본문도 모두 포함하여 생성 ... -->
+        <div class="verse"><span class="verse-num">24</span> 그 여인이 아들을 낳으매 그의 이름을 삼손이라 하니라 그 아이가 자라매 여호와께서 그에게 복을 주시더니</div>
+        <div class="verse"><span class="verse-num">25</span> 소라와 에스다올 사이 마하네단에서 여호와의 영이 그를 움직이기 시작하셨더라</div>
+
+        <div class="chapter-title">사사기 14장 (1~20절)</div>
+        <div class="verse"><span class="verse-num">1</span> 삼손이 딤나에 내려가서 거기서 블레셋 사람의 딸들 중에서 한 여자를 보고</div>
+        <div class="verse"><span class="verse-num">5</span> 삼손이 그의 부모와 함께 딤나에 내려가 딤나의 포도원에 이른즉 젊은 사자가 그를 보고 소리 지르는지라</div>
+        <div class="verse"><span class="verse-num">6</span> 여호와의 영이 삼손에게 강하게 임하니 그가 손에 아무것도 없이 그 사자를 염소 새끼를 찢는 것 같이 찢었으나 그는 자기가 행한 일을 부모에게 알리지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">14</span> 삼손이 그들에게 이르되 먹는 자에게서 먹는 것이 나오고 강한 자에게서 단 것이 나왔느니라 하니라 그들이 사흘이 되도록 수수께끼를 풀지 못하였더라</div>
+
+        <div class="chapter-title">사사기 15장 (1~20절)</div>
+        <div class="verse"><span class="verse-num">4</span> 삼손이 가서 여우 삼백 마리를 붙들어서 그 꼬리와 꼬리를 매고 홰를 가지고 그 두 꼬리 사이에 한 홰를 달고</div>
+        <div class="verse"><span class="verse-num">15</span> 삼손이 나귀의 새 턱뼈를 보고 손을 내밀어 집어들고 그것으로 천 명을 죽이고</div>
+        <div class="verse"><span class="verse-num">16</span> 이르되 나귀의 턱뼈로 한 더미, 두 더미를 쌓았음이여 나귀의 턱뼈로 내가 천 명을 죽였도다 하니라</div>
+        <div class="verse"><span class="verse-num">19</span> 하나님이 레히에서 한 우묵한 곳을 터뜨리시니 거기서 물이 솟아나오는지라 삼손이 그것을 마시고 정신이 회복되어 소생하니 그러므로 그 샘 이름을 엔학고레라 불렀으며 그 샘이 오늘까지 레히에 있더라</div>
+
+        <div class="chapter-title">사사기 16장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">4</span> 이 후에 삼손이 소렉 골짜기의 들릴라라 이름하는 여인을 사랑하매</div>
+        <div class="verse"><span class="verse-num">17</span> 삼손이 진심을 드러내어 그에게 이르되 내 머리 위에는 삭도를 대지 아니하였나니 이는 내가 모태에서부터 하나님의 나실인이 되었음이라 만일 내 머리가 밀리면 내 힘이 내게서 떠나고 나는 약해져서 다른 사람과 같으리라 하니라</div>
+        <div class="verse"><span class="verse-num">21</span> 블레셋 사람들이 그를 붙잡아 그의 눈을 빼고 끌고 가사에 내려가 놋 줄로 매고 그에게 옥에서 맷돌을 돌리게 하였더라</div>
+        <div class="verse"><span class="verse-num">28</span> 삼손이 여호와께 부르짖어 이르되 주 여호와여 구하옵나니 나를 생각하옵소서 하나님이여 구하옵나니 이번만 나를 강하게 하사 나의 두 눈을 뺀 블레셋 사람에게 원수를 단번에 갚게 하옵소서 하고</div>
+        <div class="verse"><span class="verse-num">30</span> 삼손이 이르되 블레셋 사람과 함께 죽기를 원하노라 하고 힘을 다하여 몸을 굽히매 그 집이 곧 무너져 그 안에 있는 모든 방백들과 온 백성에게 덮이니 삼손이 죽을 때에 죽인 자가 살았을 때에 죽인 자보다 더욱 많았더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 075</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 075</h1>
+        <p class="sub-title">찬송가 347장 허락하신 새 땅에</p>
+        <p class="sub-title">여호수아 13~17장 — 갈렙, 여호수아의 자랑</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 347장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1nQoE2uppHsH97urIc-Bp8BDidY6jivUk" alt="찬송가 347장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 여호수아 13~17장의<br>'갈렙, 여호수아의 자랑'의 다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 여호수아, 갈렙의 도움으로 땅 분배에 성공합니다.</span>
+            전쟁보다 어려운 것이 분배입니다. 5년 전 요단 동편 점령 후, 르우벤과 갓 지파에게 모세가 처음에 그토록 화를 냈던 이유도 <strong>그들이 다른 지파들에 앞서 분배를 먼저 요구했기 때문</strong>입니다.<br><br>
+            이렇게 민감했던 분배를 여호수아와 만나 세대들은 약속의 땅 가나안에 들어온 지 5년 만에 <strong>요단 동편에서 땅을 이미 분배받은 두 지파와 반 지파를 제외한 아홉 지파 반에게 시작합니다.</strong> 이때 <strong>45년 전 모세를 통해 하나님으로부터 이미 땅 분배 선택권을 받은 갈렙</strong>이 어떠한 결정을 할지 초미의 관심이었을 것입니다.<br><br>
+            그런데 땅 분배에 앞서 선택권을 이미 확보한 갈렙이 <strong>어느 누구도 상상하지 못한 놀라운 선택을 하고 나옵니다.</strong> 갈렙이 5년 동안 정복한 땅이 아닌, <strong>아직 정복하지 않은 헤브론 땅을 선택하겠다고 나선 것</strong>입니다(수 14:6~15).
+            <div class="quote">
+                <strong>갈렙은 이스라엘 모든 백성에게 땅 분배의 긴장보다는 감사와 양보 분위기를 만들어줍니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 제사장 나라의 가나안 땅 분배 방식은 4단계로 진행됩니다.</span>
+            <div class="quote">
+                <strong>1단계</strong> — 인구 조사 후 '숫자대로' 분배합니다.<br>
+                <strong>2단계</strong> — '책임자'를 세웁니다.<br>
+                <strong>3단계</strong> — '제비뽑기'입니다.<br>
+                <strong>4단계</strong> — 1차 가나안 정복 전쟁 완료 후 정복한 땅과 아직 정복하지 않은 땅까지 모두 각 지파에 분배합니다.
+            </div>
+            아직 정복하지 않은 땅이 있음에도 서둘러 분배를 시작한 이유는 들어가는 여호수아와 하나님께서 주셨던 다음 말씀 때문이었을 것입니다.
+            <div class="quote">
+                <strong>"그러나 그 땅이 황폐하게 됨으로 들짐승이 번성하여 너희를 해할까 하여 일 년 안에는 그들을 네 앞에서 쫓아내지 아니하고 네가 번성하여 그 땅을 기업으로 얻을 때까지 내가 그들을 네 앞에서 조금씩 쫓아내리라"</strong> (출 23:29~30)
+            </div>
+            여호수아는 요단 서편 땅을 분배하면서 모든 이스라엘 백성 앞에서 <strong>요단 동편 땅의 분배지와 레위 지파의 기업 없음을 다시 확인해줍니다</strong>(수 13:8~14). 요단 동편의 땅 분배를 재확인해준 것은 <strong>르우벤, 갓, 므낫세 반 지파가 모세와의 선봉대 약속을 가나안 정복 전쟁이 끝날 때까지 잘 이행했기 때문</strong>입니다. 그리고 레위 지파에게는 <strong>땅의 분배가 없지만 하나님께 드린 제물이 레위 지파의 기업임을 재확인해준 것</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 갈렙, 40세에 목숨과 맞바꿔 얻은 특권을 85세에 하나님께 선물로 드립니다.</span>
+            45년 전 가데스 바네아에서 있었던 가나안 정탐 보고 때, 갈렙은 여호수아와 함께 열 명의 정탐꾼들과 다른 <strong>믿음의 보고를 했습니다.</strong> 이때 갈렙이 하나님께 받은 특권은 <strong>오직 갈렙만 발로 밟고 선택한 땅을 얻게 될 것이라는 약속</strong>이었습니다. 그런데 갈렙은 45년 후 <strong>그 특권을 하나님께 다시 선물로 바칩니다.</strong><br><br>
+            갈렙의 <strong>'용기 있는 선택'</strong>을 살펴보면 다음과 같습니다.<br><br>
+            <strong>첫째, 갈렙이 40세 때에 보여준 용기입니다.</strong>
+            <div class="quote">
+                <strong>"갈렙이 모세 앞에서 백성을 조용하게 하고 이르되 우리가 곧 올라가서 그 땅을 취하자 능히 이기리라"</strong> (민 13:30)
+            </div>
+            <strong>둘째, 가데스 바네아 때로부터 45년 후, 85세 때의 갈렙의 용기입니다.</strong>
+            <div class="quote">
+                <strong>"모세가 나를 보내던 날과 같이 오늘도 내가 여전히 강건하니 내 힘이 그 때나 지금이나 같아서 싸움에나 출입에 감당할 수 있으니 그 날에 여호와께서 말씀하신 이 산지를 지금 내게 주소서 당신도 그 날에 들으셨거니와 그 곳에는 아낙 사람이 있고 그 성읍들은 크고 견고할지라도 여호와께서 나와 함께 하시면 내가 여호와께서 말씀하신 대로 그들을 쫓아내리이다"</strong> (수 14:11~12)
+            </div>
+            <div class="quote">
+                <strong>갈렙의 용기 있는 믿음의 선택은 가나안 땅 분배의 기본 정신이 되어 평화롭고 합리적으로 땅을 분배할 수 있는 분위기를 만들고, 여호수아를 비롯한 이스라엘 모든 백성에게 큰 힘이 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 헤브론은 아브라함의 땅에서 갈렙의 땅으로, 그리고 마침내 다윗의 땅이 됩니다.</span>
+            아브라함이 가나안에서 얻게 된 땅은 아브라함과 사라가 묻힌 <strong>'막벨라 굴'</strong>이었습니다. 그 후 500년이 지나 갈렙이 그의 선택권으로 요구한 땅이 바로 <strong>이 산지, 헤브론</strong>입니다. 그때로부터 500여 년이 지나, <strong>그 땅에서 다윗이 유다 지파로부터 왕으로 세움을 받게 됩니다.</strong><br><br>
+            갈렙이 믿음으로 헤브론 산지를 선택한 이후 <strong>열두 지파 가운데 유다 지파가 가장 먼저 땅을 분배받습니다.</strong> 이는 <strong>야곱의 축복대로 유다 지파가 실질적인 장자 지파가 되어 엄청난 복을 누리게 된 것</strong>입니다.<br><br>
+            유다 지파는 넓은 땅을 차지하고 나서 그 땅 중에 일부 지역을 <strong>베냐민 지파와 시므온 지파에게 나누어줍니다.</strong> 그리고 유다 지파가 분배받은 땅의 일부인 예루살렘을 오랫동안 차지하지 못하다가 결국 <strong>다윗이 여부스 족속을 예루살렘에서 완전히 쫓아내면서 땅 분배를 완성하게 됩니다.</strong>
+            <div class="quote">
+                <strong>이렇게 유다를 향한 야곱의 축복은 갈렙을 지나 다윗 때에 완전하게 성취됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 여호수아는 자신의 지파인 에브라임 지파에게 갈렙의 케이스를 따라하게 합니다.</span>
+            순조롭게 땅을 분배하는 과정에서 에브라임과 므낫세 지파 즉 <strong>요셉의 후손들은 분배받은 땅이 좁다고 여호수아에게 불만을 토로합니다.</strong> 이때 여호수아가 요셉의 후손들에게 제시한 대안은 <strong>에브라임 산지가 좁으니 브리스와 르바임 족속의 땅을 정복해 개척하라</strong>는 것입니다.<br><br>
+            그러자 요셉의 후손들은 <strong>철병거를 소유한 가나안 족속의 힘이 너무 세서 싸우기에 힘들다</strong>고 말합니다. 그러나 여호수아는 자신의 지파인 에브라임 지파에게 <strong>더 이익을 주는 행위를 하지 않고 그들을 설득합니다</strong>(수 17:14~18).
+            <div class="quote">
+                <strong>이는 갈렙의 선택이 있었기에 가능한 설득입니다. 여호수아가 에브라임 지파 사람들에게도 갈렙과 같은 믿음의 선택을 요구한 것입니다. 이처럼 갈렙의 선택은 땅 분배에 있어 멋진 기준이 되었습니다.</strong>
+            </div>
+            <div class="quote">
+                <strong>여호수아는 하나님께서 주시는 지혜와 갈렙의 도움으로 어려운 땅 분배를 성공적으로 이끌어갑니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 여호수아 13~17장 '갈렙, 여호수아의 자랑'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 여호수아 13장 -->
+        <div class="chapter-title">여호수아 13장 (1~33절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호수아가 나이가 많아 늙으매 여호와께서 그에게 이르시되 너는 나이가 많아 늙었고 얻을 땅이 매우 많이 남아 있도다</div>
+        <div class="verse"><span class="verse-num">2</span> 이 남은 땅은 이러하니 블레셋 사람의 모든 지역과 그술 족속의 모든 지역</div>
+        <div class="verse"><span class="verse-num">3</span> 곧 애굽 앞 시홀 시내에서부터 가나안 사람에게 속한 북쪽 에그론 경계까지와 블레셋 사람의 다섯 통치자들의 땅 곧 가사 족속과 아스돗 족속과 아스글론 족속과 가드 족속과 에그론 족속과 또 남쪽 아위 족속의 땅과</div>
+        <div class="verse"><span class="verse-num">4</span> 또 가나안 족속의 모든 땅과 시돈 사람에게 속한 므아라와 아모리 족속의 경계 아벡까지와</div>
+        <div class="verse"><span class="verse-num">5</span> 또 그발 족속의 땅과 해 뜨는 곳의 온 레바논 곧 헤르몬 산 아래 바알갓에서부터 하맛에 들어가는 곳까지와</div>
+        <div class="verse"><span class="verse-num">6</span> 또 레바논에서부터 미스르봇마임까지 산지의 모든 주민 곧 모든 시돈 사람의 땅이라 내가 그들을 이스라엘 자손 앞에서 쫓아내리니 너는 내가 명령한 대로 그 땅을 이스라엘에게 분배하여 기업이 되게 하되</div>
+        <div class="verse"><span class="verse-num">7</span> 너는 이 땅을 아홉 지파와 므낫세 반 지파에게 나누어 기업이 되게 하라 하셨더라</div>
+        <div class="verse"><span class="verse-num">8</span> 므낫세 반 지파와 함께 르우벤 족속과 갓 족속은 요단 저편 동쪽에서 그들의 기업을 모세에게 받았는데 여호와의 종 모세가 그들에게 준 것은 이러하니</div>
+        <div class="verse"><span class="verse-num">9</span> 곧 아르논 골짜기 가에 있는 아로엘에서부터 골짜기 가운데에 있는 성읍과 디본까지 이르는 메드바 온 평지와</div>
+        <div class="verse"><span class="verse-num">10</span> 헤스본에서 다스리던 아모리 족속의 왕 시혼의 모든 성읍 곧 암몬 자손의 경계까지와</div>
+        <div class="verse"><span class="verse-num">11</span> 길르앗과 및 그술 족속과 마아갓 족속의 지역과 온 헤르몬 산과 살르가까지 온 바산</div>
+        <div class="verse"><span class="verse-num">12</span> 곧 르바의 남은 족속으로서 아스다롯과 에드레이에서 다스리던 바산 왕 옥의 온 나라라 모세가 이 땅의 사람들을 쳐서 쫓아냈어도</div>
+        <div class="verse"><span class="verse-num">13</span> 그술 족속과 마아갓 족속은 이스라엘 자손이 쫓아내지 아니하였으므로 그술과 마아갓이 오늘까지 이스라엘 가운데에서 거주하니라</div>
+        <div class="verse"><span class="verse-num">14</span> 오직 레위 지파에게는 여호수아가 기업으로 준 것이 없었으니 이는 그에게 말씀하신 것과 같이 이스라엘의 하나님 여호와께 드리는 화제물이 그들의 기업이 되었음이더라</div>
+        <div class="verse"><span class="verse-num">15</span> 모세가 르우벤 자손의 지파에게 그들의 가족을 따라서 기업을 주었으니</div>
+        <div class="verse"><span class="verse-num">16</span> 그들의 지역은 아르논 골짜기 가에 있는 아로엘에서부터 골짜기 가운데 있는 성읍과 메드바 곁에 있는 온 평지와</div>
+        <div class="verse"><span class="verse-num">17</span> 헤스본과 그 평지에 있는 모든 성읍 곧 디본과 바못 바알과 벧 바알 므온과</div>
+        <div class="verse"><span class="verse-num">18</span> 야하스와 그데못과 메바앗과</div>
+        <div class="verse"><span class="verse-num">19</span> 기랴다임과 십마와 골짜기의 언덕에 있는 세렛 사할과</div>
+        <div class="verse"><span class="verse-num">20</span> 벳브올과 비스가 산기슭과 벧여시못과</div>
+        <div class="verse"><span class="verse-num">21</span> 평지 모든 성읍과 헤스본에서 다스리던 아모리 족속의 왕 시혼의 온 나라라 모세가 시혼을 그 땅에 거주하는 시혼의 군주들 곧 미디안의 귀족 에위와 레겜과 술과 훌과 레바와 함께 죽였으며</div>
+        <div class="verse"><span class="verse-num">22</span> 이스라엘 자손이 그들을 살륙하는 중에 브올의 아들 점술가 발람도 칼날로 죽였더라</div>
+        <div class="verse"><span class="verse-num">23</span> 르우벤 자손의 서쪽 경계는 요단과 그 강 가라 이상은 르우벤 자손의 기업으로 그 가족대로 받은 성읍들과 주변 마을들이니라</div>
+        <div class="verse"><span class="verse-num">24</span> 모세가 갓 지파 곧 갓 자손에게도 그들의 가족을 따라서 기업을 주었으니</div>
+        <div class="verse"><span class="verse-num">25</span> 그들의 지역은 야셀과 길르앗 모든 성읍과 암몬 자손의 땅 절반 곧 랍바 앞의 아로엘까지와</div>
+        <div class="verse"><span class="verse-num">26</span> 헤스본에서 라맛 미스베와 브도님까지와 마하나임에서 드빌 지역까지와</div>
+        <div class="verse"><span class="verse-num">27</span> 골짜기에 있는 벧 하람과 벧니므라와 숙곳과 사본 곧 헤스본 왕 시혼의 나라의 남은 요단과 그 강 가에서부터 요단 동쪽 긴네렛 바다의 끝까지라</div>
+        <div class="verse"><span class="verse-num">28</span> 이는 갓 자손의 기업으로 그들의 가족대로 받은 성읍들과 주변 마을들이니라</div>
+        <div class="verse"><span class="verse-num">29</span> 모세가 므낫세 반 지파에게 기업을 주었으되 므낫세 자손의 반 지파에게 그들의 가족대로 주었으니</div>
+        <div class="verse"><span class="verse-num">30</span> 그 지역은 마하나임에서부터 온 바산 곧 바산 왕 옥의 온 나라와 바산에 있는 야일의 모든 고을 육십 성읍과</div>
+        <div class="verse"><span class="verse-num">31</span> 길르앗 절반과 바산 왕 옥의 나라 성읍 아스다롯과 에드레이라 이는 므낫세의 아들 마길의 자손에게 돌린 것이니 곧 마길 자손의 절반이 그들의 가족대로 받으니라</div>
+        <div class="verse"><span class="verse-num">32</span> 요단 동쪽 여리고 맞은편 모압 평지에서 모세가 분배한 기업이 이러하여도</div>
+        <div class="verse"><span class="verse-num">33</span> 오직 레위 지파에게는 모세가 기업을 주지 아니하였으니 이는 그들에게 말씀하신 것과 같이 이스라엘의 하나님 여호와께서 그들의 기업이 되심이었더라</div>
+
+        <!-- 여호수아 14장 -->
+        <div class="chapter-title">여호수아 14장 (1~15절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이것은 이스라엘 자손이 가나안 땅에서 받은 기업 곧 제사장 엘르아살과 눈의 아들 여호수아와 이스라엘 자손 지파의 족장들이 분배한 것이니라</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와께서 모세에게 명령하신 대로 그들의 기업을 제비 뽑아 아홉 지파와 반 지파에게 주었으니</div>
+        <div class="verse"><span class="verse-num">3</span> 이는 두 지파와 반 지파의 기업은 모세가 요단 저쪽에서 주었음이요 레위 자손에게는 그들 가운데에서 기업을 주지 아니하였으니</div>
+        <div class="verse"><span class="verse-num">4</span> 이는 요셉의 자손이 므낫세와 에브라임의 두 지파가 되었음이라 이 땅에서 레위 사람에게 아무 분깃도 주지 아니하고 다만 거주할 성읍들과 가축과 재산을 위한 목초지만 주었으니</div>
+        <div class="verse"><span class="verse-num">5</span> 이스라엘 자손이 여호와께서 모세에게 명령하신 것과 같이 행하여 그 땅을 나누었더라</div>
+        <div class="verse"><span class="verse-num">6</span> 그 때에 유다 자손이 길갈에 있는 여호수아에게 나아오고 그니스 사람 여분네의 아들 갈렙이 여호수아에게 말하되 여호와께서 가데스 바네아에서 나와 당신에게 대하여 하나님의 사람 모세에게 이르신 일을 당신이 아시는 바라</div>
+        <div class="verse"><span class="verse-num">7</span> 내 나이 사십 세에 여호와의 종 모세가 가데스 바네아에서 나를 보내어 이 땅을 정탐하게 하였으므로 내가 성실한 마음으로 그에게 보고하였고</div>
+        <div class="verse"><span class="verse-num">8</span> 나와 함께 올라갔던 내 형제들은 백성의 간담을 녹게 하였으나 나는 내 하나님 여호와께 충성하였으므로</div>
+        <div class="verse"><span class="verse-num">9</span> 그 날에 모세가 맹세하여 이르되 네가 내 하나님 여호와께 충성하였은즉 네 발로 밟는 땅은 영원히 너와 네 자손의 기업이 되리라 하였나이다</div>
+        <div class="verse"><span class="verse-num">10</span> 이제 보소서 여호와께서 이 말씀을 모세에게 이르신 때로부터 이스라엘이 광야에서 방황한 이 사십오 년 동안을 여호와께서 말씀하신 대로 나를 생존하게 하셨나이다 오늘 내가 팔십오 세로되</div>
+        <div class="verse"><span class="verse-num">11</span> 모세가 나를 보내던 날과 같이 오늘도 내가 여전히 강건하니 내 힘이 그 때나 지금이나 같아서 싸움에나 출입에 감당할 수 있으니</div>
+        <div class="verse"><span class="verse-num">12</span> 그 날에 여호와께서 말씀하신 이 산지를 지금 내게 주소서 당신도 그 날에 들으셨거니와 그 곳에는 아낙 사람이 있고 그 성읍들은 크고 견고할지라도 여호와께서 나와 함께 하시면 내가 여호와께서 말씀하신 대로 그들을 쫓아내리이다 하니</div>
+        <div class="verse"><span class="verse-num">13</span> 여호수아가 여분네의 아들 갈렙을 위하여 축복하고 헤브론을 그에게 주어 기업을 삼게 하매</div>
+        <div class="verse"><span class="verse-num">14</span> 헤브론이 그니스 사람 여분네의 아들 갈렙의 기업이 되어 오늘까지 이르렀으니 이는 그가 이스라엘의 하나님 여호와께 충성하였음이라</div>
+        <div class="verse"><span class="verse-num">15</span> 헤브론의 옛 이름은 기럇 아르바라 아르바는 아낙 사람 가운데에서 가장 큰 사람이었더라 그리고 그 땅에 전쟁이 그쳤더라</div>
+
+        <!-- 여호수아 15장 -->
+        <div class="chapter-title">여호수아 15장 (1~63절)</div>
+        <div class="verse"><span class="verse-num">1</span> 또 유다 자손의 지파가 그들의 가족대로 제비 뽑은 땅의 남쪽으로는 에돔 경계에 이르고 또 남쪽 끝은 신 광야까지라</div>
+        <div class="verse"><span class="verse-num">2</span> 또 그들의 남쪽 경계는 염해의 끝 곧 남향한 해만에서부터</div>
+        <div class="verse"><span class="verse-num">3</span> 아그랍빔 비탈 남쪽으로 지나 신에 이르고 가데스 바네아 남쪽으로 올라가서 헤스론을 지나며 아달로 올라가서 돌이켜 갈가에 이르고</div>
+        <div class="verse"><span class="verse-num">4</span> 거기서 아스몬에 이르러 애굽 시내로 나아가 바다에 이르러 경계의 끝이 되나니 이것이 너희 남쪽 경계가 되리라</div>
+        <div class="verse"><span class="verse-num">5</span> 그 동쪽 경계는 염해이니 요단 끝까지요 그 북쪽 경계는 요단 끝에 있는 해만에서부터</div>
+        <div class="verse"><span class="verse-num">6</span> 벧 호글라로 올라가서 벧 아라바 북쪽을 지나 르우벤 자손 보한의 돌에 이르고</div>
+        <div class="verse"><span class="verse-num">7</span> 또 아골 골짜기에서부터 드빌을 지나 북쪽으로 올라가서 그 강 남쪽에 있는 아둠밈 비탈 맞은편 길갈을 향하고 나아가 엔 세메스 물들을 지나 엔로겔에 이르며</div>
+        <div class="verse"><span class="verse-num">8</span> 또 힌놈의 아들의 골짜기로 올라가서 여부스 곧 예루살렘 남쪽 어깨에 이르며 또 힌놈의 골짜기 앞 서쪽에 있는 산 꼭대기로 올라가나니 이곳은 르바임 골짜기 북쪽 끝이며</div>
+        <div class="verse"><span class="verse-num">9</span> 또 이 산 꼭대기에서부터 넵도아 샘물까지 이르러 에브론 산 성읍들로 나아가고 또 바알라 곧 기럇 여아림으로 접어들며</div>
+        <div class="verse"><span class="verse-num">10</span> 또 바알라에서부터 서쪽으로 돌이켜 세일 산에 이르러 여아림 산 곧 그살론 곁 북쪽에 이르고 또 벧 세메스로 내려가서 딤나를 지나고</div>
+        <div class="verse"><span class="verse-num">11</span> 또 에그론 비탈 북쪽으로 나아가 식그론으로 접어들어 바알라 산을 지나고 얍느엘에 이르나니 그 끝은 바다며</div>
+        <div class="verse"><span class="verse-num">12</span> 서쪽 경계는 대해와 그 해안이니 유다 자손이 그들의 가족대로 받은 사방 경계가 이러하니라</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와께서 여호수아에게 명령하신 대로 여호수아가 기럇 아르바 곧 헤브론을 유다 자손 중에서 분깃으로 여분네의 아들 갈렙에게 주었으니 아르바는 아낙의 아버지였더라</div>
+        <div class="verse"><span class="verse-num">14</span> 갈렙이 거기서 아낙의 소생 그 세 아들 곧 세새와 아히만과 달매를 쫓아내었고</div>
+        <div class="verse"><span class="verse-num">15</span> 거기서 올라가서 드빌 주민을 쳤는데 드빌의 본 이름은 기럇 세벨이라</div>
+        <div class="verse"><span class="verse-num">16</span> 갈렙이 말하기를 기럇 세벨을 쳐서 그것을 점령하는 자에게는 내가 내 딸 악사를 아내로 주리라 하였더니</div>
+        <div class="verse"><span class="verse-num">17</span> 갈렙의 아우 그나스의 아들인 옷니엘이 그것을 점령함으로 갈렙이 자기 딸 악사를 그에게 아내로 주었더라</div>
+        <div class="verse"><span class="verse-num">18</span> 악사가 출가할 때에 그에게 청하여 자기 아버지에게 밭을 구하자 하고 나귀에서 내리매 갈렙이 그에게 묻되 네가 무엇을 원하느냐 하니</div>
+        <div class="verse"><span class="verse-num">19</span> 이르되 내게 복을 주소서 아버지께서 나를 네겝 땅으로 보내시오니 샘물도 내게 주소서 하매 갈렙이 윗샘과 아랫샘을 그에게 주었더라</div>
+        <div class="verse"><span class="verse-num">20</span> 유다 자손의 지파가 그들의 가족대로 받은 기업은 이러하니라</div>
+        <div class="verse"><span class="verse-num">21</span> 유다 자손의 지파의 남쪽 끝 에돔 경계에 접근한 성읍들은 갑스엘과 에델과 야굴과</div>
+        <div class="verse"><span class="verse-num">22</span> 기나와 디모나와 아다다와</div>
+        <div class="verse"><span class="verse-num">23</span> 게데스와 하솔과 잇난과</div>
+        <div class="verse"><span class="verse-num">24</span> 십과 델렘과 브알롯과</div>
+        <div class="verse"><span class="verse-num">25</span> 하솔 하닷다와 그리욧 헤스론 곧 하솔과</div>
+        <div class="verse"><span class="verse-num">26</span> 아맘과 세마와 몰라다와</div>
+        <div class="verse"><span class="verse-num">27</span> 하살갓다와 헤스몬과 벧 벨렛과</div>
+        <div class="verse"><span class="verse-num">28</span> 하살 수알과 브엘세바와 비스요댜와</div>
+        <div class="verse"><span class="verse-num">29</span> 바알라와 이임과 에셈과</div>
+        <div class="verse"><span class="verse-num">30</span> 엘돌랏과 그실과 홀마와</div>
+        <div class="verse"><span class="verse-num">31</span> 시글락과 맛만나와 산산나와</div>
+        <div class="verse"><span class="verse-num">32</span> 르바옷과 실힘과 아인과 림몬이니 모두 스물아홉 성읍과 그 마을들이었으며</div>
+        <div class="verse"><span class="verse-num">33</span> 평지에는 에스다올과 소라와 아스나와</div>
+        <div class="verse"><span class="verse-num">34</span> 사노아와 엔간님과 답부아와 에남과</div>
+        <div class="verse"><span class="verse-num">35</span> 야르뭇과 아둘람과 소고와 아세가와</div>
+        <div class="verse"><span class="verse-num">36</span> 사아라임과 아디다임과 그데라와 그데로다임이니 열네 성읍과 그 마을들이었으며</div>
+        <div class="verse"><span class="verse-num">37</span> 스난과 하다사와 믹달갓과</div>
+        <div class="verse"><span class="verse-num">38</span> 딜르안과 미스베와 욕드엘과</div>
+        <div class="verse"><span class="verse-num">39</span> 라기스와 보스갓과 에글론과</div>
+        <div class="verse"><span class="verse-num">40</span> 갑본과 라맘과 기들리스와</div>
+        <div class="verse"><span class="verse-num">41</span> 그데롯과 벧다곤과 나아마와 막게다이니 열여섯 성읍과 그 마을들이었으며</div>
+        <div class="verse"><span class="verse-num">42</span> 립나와 에델과 아산과</div>
+        <div class="verse"><span class="verse-num">43</span> 입다와 아스나와 느십과</div>
+        <div class="verse"><span class="verse-num">44</span> 그일라와 악십과 마레사니 아홉 성읍과 그 마을들이었으며</div>
+        <div class="verse"><span class="verse-num">45</span> 에그론과 그 촌락들과 그 마을들과</div>
+        <div class="verse"><span class="verse-num">46</span> 에그론에서부터 바다까지 아스돗 곁에 있는 모든 성읍과 그 마을들이었으며</div>
+        <div class="verse"><span class="verse-num">47</span> 아스돗과 그 촌락들과 그 마을들과 가사와 그 촌락들과 그 마을들이니 애굽 시내와 대해의 경계에까지 이르렀으며</div>
+        <div class="verse"><span class="verse-num">48</span> 산지는 사밀과 얏딜과 소고와</div>
+        <div class="verse"><span class="verse-num">49</span> 단나와 기럇 산나 곧 드빌과</div>
+        <div class="verse"><span class="verse-num">50</span> 아납과 에스드모와 아님과</div>
+        <div class="verse"><span class="verse-num">51</span> 고센과 홀론과 길로이니 열한 성읍과 그 마을들이었으며</div>
+        <div class="verse"><span class="verse-num">52</span> 아랍과 두마와 에산과</div>
+        <div class="verse"><span class="verse-num">53</span> 야님과 벧 답부아와 아베가와</div>
+        <div class="verse"><span class="verse-num">54</span> 훔다와 기럇 아르바 곧 헤브론과 시올이니 아홉 성읍과 그 마을들이었으며</div>
+        <div class="verse"><span class="verse-num">55</span> 마온과 갈멜과 십과 윳다와</div>
+        <div class="verse"><span class="verse-num">56</span> 이스르엘과 욕드암과 사노아와</div>
+        <div class="verse"><span class="verse-num">57</span> 가인과 기브아와 딤나니 열 성읍과 그 마을들이었으며</div>
+        <div class="verse"><span class="verse-num">58</span> 할훌과 벧술과 그돌과</div>
+        <div class="verse"><span class="verse-num">59</span> 마아랏과 벧 아놋과 엘드곤이니 여섯 성읍과 그 마을들이었으며</div>
+        <div class="verse"><span class="verse-num">60</span> 기럇 바알 곧 기럇 여아림과 랍바이니 두 성읍과 그 마을들이었으며</div>
+        <div class="verse"><span class="verse-num">61</span> 광야에는 벧 아라바와 밋딘과 스가가와</div>
+        <div class="verse"><span class="verse-num">62</span> 닙산과 소금 성읍과 엔 게디니 여섯 성읍과 그 마을들이었더라</div>
+        <div class="verse"><span class="verse-num">63</span> 예루살렘 주민 여부스 족속을 유다 자손이 쫓아내지 못하였으므로 여부스 족속이 오늘까지 유다 자손과 함께 예루살렘에 거주하니라</div>
+
+        <!-- 여호수아 16장 -->
+        <div class="chapter-title">여호수아 16장 (1~10절)</div>
+        <div class="verse"><span class="verse-num">1</span> 요셉 자손이 제비 뽑은 것은 여리고 샘 동쪽 곧 여리고 곁 요단으로부터 광야로 들어가 여리고로부터 벧엘 산지로 올라가고</div>
+        <div class="verse"><span class="verse-num">2</span> 벧엘에서부터 루스로 나아가 아렉 족속의 경계를 지나 아다롯에 이르고</div>
+        <div class="verse"><span class="verse-num">3</span> 서쪽으로 내려가서 야블렛 족속의 경계와 아래 벧호론과 게셀에까지 이르고 그 끝은 바다라</div>
+        <div class="verse"><span class="verse-num">4</span> 요셉의 자손 므낫세와 에브라임이 그들의 기업을 받았더라</div>
+        <div class="verse"><span class="verse-num">5</span> 에브라임 자손이 그들의 가족대로 받은 지역은 이러하니라 그들의 기업의 경계는 동쪽으로 아다롯 앗달에서 윗 벧호론에 이르고</div>
+        <div class="verse"><span class="verse-num">6</span> 또 서쪽으로 나아가 북쪽 믹므다에 이르고 동쪽으로 돌아 다아낫 실로에 이르러 야노아 동쪽을 지나고</div>
+        <div class="verse"><span class="verse-num">7</span> 야노아에서부터 아다롯과 나아라로 내려가 여리고를 만나서 요단으로 나아가고</div>
+        <div class="verse"><span class="verse-num">8</span> 또 답부아에서부터 서쪽으로 지나서 가나 시내에 이르나니 그 끝은 바다라 에브라임 자손의 지파가 그들의 가족대로 받은 기업이 이러하였고</div>
+        <div class="verse"><span class="verse-num">9</span> 그 외에 므낫세 자손의 기업 중에서 에브라임 자손을 위하여 구분한 모든 성읍과 그 마을들도 있었더라</div>
+        <div class="verse"><span class="verse-num">10</span> 그들이 게셀에 거주하는 가나안 족속을 쫓아내지 아니하였으므로 가나안 족속이 오늘까지 에브라임 가운데에 거주하며 노역하는 종이 되니라</div>
+
+        <!-- 여호수아 17장 -->
+        <div class="chapter-title">여호수아 17장 (1~18절)</div>
+        <div class="verse"><span class="verse-num">1</span> 므낫세 지파를 위하여 제비 뽑은 것은 이러하니라 므낫세는 요셉의 장자였고 므낫세의 장자 마길은 길르앗의 아버지라 그는 용사였기 때문에 길르앗과 바산을 받았으므로</div>
+        <div class="verse"><span class="verse-num">2</span> 므낫세의 남은 자손을 위하여 그들의 가족대로 제비를 뽑았는데 그들은 곧 아비에셀의 자손과 헬렉의 자손과 아스리엘의 자손과 세겜의 자손과 헤벨의 자손과 스미다의 자손이니 그들의 가족대로 요셉의 아들 므낫세의 남자 자손들이며</div>
+        <div class="verse"><span class="verse-num">3</span> 헤벨의 아들 길르앗의 손자 마길의 증손 므낫세의 현손 슬로브핫은 아들이 없고 딸뿐이요 그 딸들의 이름은 말라와 노아와 호글라와 밀가와 디르사라</div>
+        <div class="verse"><span class="verse-num">4</span> 그들이 제사장 엘르아살과 눈의 아들 여호수아와 지도자들 앞에 나아와서 말하기를 여호와께서 모세에게 명령하사 우리 형제 중에서 우리에게 기업을 주라 하셨다 하매 여호와의 명령을 따라 그들에게 그들의 아버지 형제들 중에서 기업을 주므로</div>
+        <div class="verse"><span class="verse-num">5</span> 요단 동쪽 길르앗과 바산 외에 므낫세에게 열 분깃이 돌아갔으니</div>
+        <div class="verse"><span class="verse-num">6</span> 므낫세의 여자 자손들이 그의 남자 자손들 중에서 기업을 받은 까닭이었으며 길르앗 땅은 므낫세의 남은 자손들에게 속하였더라</div>
+        <div class="verse"><span class="verse-num">7</span> 므낫세의 경계는 아셀에서부터 세겜 앞 믹므닷까지이며 그 오른쪽으로 가서 엔답부아 주민의 경계에 이르나니</div>
+        <div class="verse"><span class="verse-num">8</span> 답부아 땅은 므낫세에게 속하였으되 므낫세 경계에 있는 답부아는 에브라임 자손에게 속하였으며</div>
+        <div class="verse"><span class="verse-num">9</span> 또 그 경계가 가나 시내로 내려가서 그 시내 남쪽에 이르나니 므낫세의 성읍 중에 이 성읍들은 에브라임에게 속하였으며 므낫세의 경계는 그 시내 북쪽이요 그 끝은 바다이며</div>
+        <div class="verse"><span class="verse-num">10</span> 남쪽으로는 에브라임에 속하였고 북쪽으로는 므낫세에 속하였고 바다가 그 경계가 되었으며 그들의 땅의 북쪽은 아셀에 이르고 동쪽은 잇사갈에 이르렀으며</div>
+        <div class="verse"><span class="verse-num">11</span> 잇사갈과 아셀에도 므낫세의 소유가 있으니 곧 벧 스안과 그 마을들과 이블르암과 그 마을들과 돌의 주민과 그 마을들이요 또 엔돌 주민과 그 마을들과 다아낙 주민과 그 마을들과 므깃도 주민과 그 마을들 세 언덕 지역이라</div>
+        <div class="verse"><span class="verse-num">12</span> 그러나 므낫세 자손이 그 성읍들의 주민을 쫓아내지 못하매 가나안 족속이 결심하고 그 땅에 거주하였더니</div>
+        <div class="verse"><span class="verse-num">13</span> 이스라엘 자손이 강성한 후에야 가나안 족속에게 노역을 시켰고 다 쫓아내지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">14</span> 요셉 자손이 여호수아에게 말하여 이르되 여호와께서 지금까지 내게 복을 주시므로 내가 큰 민족이 되었거늘 당신이 나의 기업을 위하여 한 제비, 한 분깃으로만 내게 주심은 어찌함이니이까 하니</div>
+        <div class="verse"><span class="verse-num">15</span> 여호수아가 그들에게 이르되 네가 큰 민족이 되므로 에브라임 산지가 네게 너무 좁을진대 브리스 족속과 르바임 족속의 땅 삼림에 올라가서 스스로 개척하라 하니라</div>
+        <div class="verse"><span class="verse-num">16</span> 요셉 자손이 이르되 그 산지는 우리에게 넉넉하지도 못하고 골짜기 땅에 거주하는 모든 가나안 족속에게는 벧 스안과 그 마을들에 거주하는 자이든지 이스르엘 골짜기에 거주하는 자이든지 다 철 병거가 있나이다 하니</div>
+        <div class="verse"><span class="verse-num">17</span> 여호수아가 다시 요셉의 족속 곧 에브라임과 므낫세에게 말하여 이르되 너는 큰 민족이요 큰 권능이 있은즉 한 분깃만 가질 것이 아니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그 산지도 네 것이 되리니 비록 삼림이라도 네가 개척하라 그 끝까지 네 것이 되리라 가나안 족속이 비록 철 병거를 가졌고 강할지라도 네가 능히 그를 쫓아내리라 하였더라</div>
+        
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

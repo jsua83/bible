@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 080</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 080</h1>
+        <p class="sub-title">찬송가 575장 주님께 귀한 것 드려</p>
+        <p class="sub-title">사사기 2:11절~5장 — 출애굽·만나·제3세대</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 575장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/13vcwKBhUcVFACAlW16nEL_jWue2NgbEk" alt="찬송가 575장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사사기 2:10절~5장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : '만나 세대'는 하나님을 알았으나 '그 후에 일어난 다른 세대'는 하나님을 몰랐습니다.</span>
+            안타깝게도 약속의 땅 가나안에서 <strong>모세의 염려가 그대로 현실이 되고 맙니다</strong>(신 8:11~14).
+            <div class="quote">
+                <strong>"그 세대의 사람도 다 그 조상들에게로 돌아갔고 그 후에 일어난 다른 세대는 여호와를 알지 못하며 여호와께서 이스라엘을 위하여 행하신 일도 알지 못하였더라"</strong> (삿 2:10)
+            </div>
+            이런 문제들이 발생한 이유는 너무나 명백합니다. <strong>만나 세대들이 가장 중요한 것을 잊었기 때문</strong>입니다. 모세가 그들에게 그토록 강조했던 <strong>'쉐마(들으라!)' 교육을 잊어버렸기 때문</strong>입니다.<br><br>
+            만나 세대들은 자녀들에게 <strong>제사장 나라 교육을 소홀히 한 채 약속의 땅 가나안에서 모두 죽었고</strong> 이제 하나님을 알지 못하는 그 자녀 세대들이 <strong>가나안 문화에 그대로 노출된 것</strong>입니다.
+            <div class="quote">
+                <strong>만나 세대들의 제사장 나라 자녀 교육 실패가 결국 사사 시대의 어두운 그림자가 되어 그들 후손들의 불행을 초래합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 만나 세대의 자녀 세대들은 안타깝게도 '제사장 나라 문화는 약화'시키고 오히려 '가나안 문화'를 따르기 시작합니다.</span>
+            만나 세대들은 약속의 땅 가나안에 들어가 그들의 자녀 세대들에게 <strong>직업 교육은 월등하게 성공시킵니다.</strong> 그래서 그들은 가나안 땅에서 <strong>아름다운 집도 짓고, 소와 양도 번성시키고, 소유까지 풍성</strong>합니다. 그런데 <strong>모세가 그렇게 신신당부했던 자녀 신앙 교육은 소홀히 했습니다.</strong><br><br>
+            모세가 만나 세대들에게 자녀들의 신앙 교육에 힘쓰라고 강조했던 것은 <strong>결국 그들의 자녀들의 날을 많게 하기 위함</strong>입니다(신 11:9~24). 또한 하나님께서 가나안 족속들을 다 쫓아내지 않고 그 땅에 남겨두신 이유는 <strong>만나 세대들의 자녀 세대들을 시험하시기 위함</strong>입니다(삿 3:1~4).<br><br>
+            그런데 <strong>만나 세대들의 자녀 세대들은 하나님의 시험을 통과하지 못하고 맙니다.</strong> 하나님께서는 과거 광야에서 만나 세대들을 시험하셨을 때 그들은 모세의 지도하에 <strong>그 어려운 시험을 멋지게 통과해서 하나님을 기쁘게 해드렸습니다.</strong> 그런데 안타깝게도 만나 세대의 자녀 세대들은 <strong>신앙 교육을 받지 못했기 때문에 하나님을 알지 못하고 더 나아가 엉뚱하게 가나안 문화에 휩쓸리기까지 합니다.</strong>
+            <div class="quote">
+                <strong>만나 세대들이 자녀 신앙 교육에 실패한 까닭에 만나 세대의 자녀 세대들은 그 아름다운 젖과 꿀이 흐르는 가나안 땅에서 제사장 나라의 율법을 어기고 맙니다.</strong> (삿 2:11~23)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 사사 시대 350여 년 동안 제사장 나라 법에 따라 징계 1단계, 2단계가 반복됩니다.</span>
+            제사장 나라의 율법을 어긴 만나 세대들의 자녀 세대들은 결국 <strong>제사장 나라 법에 의해 복이 아닌 처벌을 받습니다.</strong> 그들이 받을 저주는 <strong>1단계 징계인 흉년과 2단계 징계인 수탈</strong>입니다.<br><br>
+            하나님께서는 그들이 약속의 땅 가나안에 들어가 <strong>제사장 나라 거룩한 시민으로 하나님과 맺은 언약을 다 지켜 행함으로 레위기 26장의 복을 받는 삶을 살기를 원하셨습니다.</strong> 그런데 그들은 모세와 여호수아가 그토록 염려했던 대로 <strong>하나님을 잊고 범죄함으로 복의 근원이신 하나님께 복을 받지 못하고 징계를 받는 안타까운 현실을 만들었습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : '사사'는 하나님의 긍휼을 베푸는 통로입니다.</span>
+            이스라엘 백성들이 죄로 인해 징계를 받고 고통 속에서 슬피 부르짖으면 <strong>하나님께서는 결국 이스라엘을 끝까지 포기하시지 않고 사사들을 보내 긍휼을 베풀어 주십니다.</strong> 사사들의 활약상을 살펴보면 다음과 같습니다.
+            <div class="quote">
+                <strong>옷니엘</strong> — 유다 지파 갈렙의 사위로 이스라엘의 <strong>첫 번째 사사</strong>입니다. 이스라엘을 메소포타미아의 8년 지배에서 건져내고 <strong>40년 동안 이스라엘에 평안을 가져옵니다</strong>(삿 3:10).<br><br>
+                <strong>에훗</strong> — 베냐민 지파 출신의 <strong>두 번째 사사</strong>입니다. 모압 왕 에글론을 죽이고 나팔을 불며 이스라엘을 모아 함께 모압을 쳐서 <strong>18년 동안의 모압 지배를 끝냅니다.</strong> 이로부터 <strong>80년간 이스라엘은 평안을 누립니다</strong>(삿 3:27~29).<br><br>
+                <strong>삼갈</strong> — 블레셋으로부터 이스라엘을 구합니다.<br><br>
+                <strong>드보라</strong> — 바락의 도움을 받아 하솔 왕의 20년 압제에서 이스라엘을 구해 <strong>40년 동안 평안한 시기를 누립니다</strong>(삿 4:14~15).
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 드보라의 찬양은 40년 한 세대의 평화를 만들었습니다.</span>
+            드보라는 사사기에 등장하는 <strong>12명의 사사 가운데 유일한 여성 사사</strong>입니다. 사사 드보라는 <strong>철 병거 900대의 위용을 자랑하며 이스라엘을 심히 괴롭힌 하솔의 야빈 왕을 굴복시키고 40년 한 세대의 평화를 만듭니다.</strong><br><br>
+            그리고 드보라는 하나님을 찬양합니다(삿 5:3~12). 일찍이 모세도 홍해를 건넌 후 온 이스라엘과 함께 하나님을 찬양했습니다(출 15:1~2).
+            <div class="quote">
+                <strong>드보라는 사사들 가운데 하나님을 찬양한 사사로 기록되고 있습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 사사기 2:10절~5장 '출애굽·만나·제3세대'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 사사기 2장 -->
+        <div class="chapter-title">사사기 2장 (11~23절)</div>
+        <div class="verse"><span class="verse-num">11</span> 이스라엘 자손이 여호와의 목전에 악을 행하여 바알들을 섬기며</div>
+        <div class="verse"><span class="verse-num">12</span> 애굽 땅에서 그들을 인도하여 내신 그들의 조상들의 하나님 여호와를 버리고 다른 신들 곧 그들의 주위에 있는 백성의 신들을 따라 그들에게 절하여 여호와를 진노하시게 하였으되</div>
+        <div class="verse"><span class="verse-num">13</span> 곧 그들이 여호와를 버리고 바알과 아스다롯을 섬겼으므로</div>
+        <div class="verse"><span class="verse-num">14</span> 여호와께서 이스라엘에게 진노하사 노략하는 자의 손에 넘겨 주사 그들이 노략을 당하게 하시며 또 주위에 있는 모든 대적의 손에 팔아 넘기시매 그들이 다시는 대적을 당하지 못하였으며</div>
+        <div class="verse"><span class="verse-num">15</span> 그들이 어디로 가든지 여호와의 손이 그들에게 재앙을 내리시니 곧 여호와께서 말씀하신 것과 같고 여호와께서 그들에게 맹세하신 것과 같아서 그들의 괴로움이 심하였더라</div>
+        <div class="verse"><span class="verse-num">16</span> 여호와께서 사사들을 세우사 노략자의 손에서 그들을 구원하게 하셨으나</div>
+        <div class="verse"><span class="verse-num">17</span> 그들이 그 사사들에게도 순종하지 아니하고 오히려 다른 신들을 따라가 음행하며 그들에게 절하고 여호와의 명령을 순종하던 그들의 조상들이 행하던 길에서 속히 치우쳐 떠나서 그와 같이 행하지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">18</span> 여호와께서 그들을 위하여 사사들을 세우실 때에는 그 사사와 함께 하셨고 그 사사가 사는 날 동안에는 여호와께서 그들을 대적의 손에서 구원하셨으니 이는 그들이 대적에게 압박과 괴롭게 함을 받아 슬피 부르짖으므로 여호와께서 뜻을 돌이키셨음이거늘</div>
+        <div class="verse"><span class="verse-num">19</span> 그 사사가 죽은 후에는 그들이 돌이켜 그들의 조상들보다 더욱 타락하여 다른 신들을 따라 섬기며 그들에게 절하고 그들의 행위와 패역한 길을 그치지 아니하였으므로</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와께서 이스라엘에게 진노하여 이르시되 이 백성이 내가 그들의 조상들에게 명령한 언약을 어기고 나의 목소리를 순종하지 아니하였은즉</div>
+        <div class="verse"><span class="verse-num">21</span> 나도 여호수아가 죽을 때에 남겨 둔 이방 민족들을 다시는 그들 앞에서 하나도 쫓아내지 아니하리니</div>
+        <div class="verse"><span class="verse-num">22</span> 이는 이스라엘이 그들의 조상들이 지킨 것 같이 나 여호와의 도를 지켜 행하나 아니하나 그들을 시험하려 함이라 하시니라</div>
+        <div class="verse"><span class="verse-num">23</span> 여호와께서 그 이방 민족들을 머물러 두사 그들을 속히 쫓아내지 아니하셨으며 여호수아의 손에 넘겨 주지 아니하셨더라</div>
+
+        <!-- 사사기 3장 -->
+        <div class="chapter-title">사사기 3장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 가나안의 모든 전쟁들을 알지 못한 이스라엘을 시험하려 하시며</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 자손의 세대 중에 아직 전쟁을 알지 못하는 자들에게 그것을 가르쳐 알게 하려 하사 남겨 두신 이방 민족들은</div>
+        <div class="verse"><span class="verse-num">3</span> 블레셋의 다섯 군주들과 모든 가나안 족속과 시돈 족속과 바알 헤르몬 산에서부터 하맛 입구까지 레바논 산에 거주하는 히위 족속이라</div>
+        <div class="verse"><span class="verse-num">4</span> 남겨 두신 이 이방 민족들로 이스라엘을 시험하사 여호와께서 모세를 통하여 그들의 조상들에게 이르신 명령들을 순종하는지 알고자 하셨더라</div>
+        <div class="verse"><span class="verse-num">5</span> 그러므로 이스라엘 자손은 가나안 족속과 헷 족속과 아모리 족속과 브리스 족속과 히위 족속과 여부스 족속 가운데에 거주하면서</div>
+        <div class="verse"><span class="verse-num">6</span> 그들의 딸들을 맞아 아내로 삼으며 자기 딸들을 그들의 아들들에게 주고 또 그들의 신들을 섬겼더라</div>
+        <div class="verse"><span class="verse-num">7</span> 이스라엘 자손이 여호와의 목전에 악을 행하여 자기들의 하나님 여호와를 잊어버리고 바알들과 아세라들을 섬긴지라</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와께서 이스라엘에게 진노하사 그들을 메소보다미아 왕 구산 리사다임의 손에 파셨으므로 이스라엘 자손이 구산 리사다임을 팔 년 동안 섬겼더니</div>
+        <div class="verse"><span class="verse-num">9</span> 이스라엘 자손이 여호와께 부르짖으매 여호와께서 이스라엘 자손을 위하여 한 구원자를 세워 그들을 구원하게 하시니 그는 곧 갈렙의 아우 그나스의 아들 옷니엘이라</div>
+        <div class="verse"><span class="verse-num">10</span> 여호와의 영이 그에게 임하셨으므로 그가 이스라엘의 사사가 되어 나가서 싸울 때에 여호와께서 메소보다미아 왕 구산 리사다임을 그의 손에 넘겨 주시매 옷니엘의 손이 구산 리사다임을 이기니라</div>
+        <div class="verse"><span class="verse-num">11</span> 그 땅이 평온한 지 사십 년에 그나스의 아들 옷니엘이 죽었더라</div>
+        <div class="verse"><span class="verse-num">12</span> 이스라엘 자손이 또 여호와의 목전에 악을 행하니라 이스라엘 자손이 여호와의 목전에 악을 행하므로 여호와께서 모압 왕 에글론을 강성하게 하사 그들을 대적하게 하시매</div>
+        <div class="verse"><span class="verse-num">13</span> 에글론이 암몬과 아말렉 자손들을 모아 가지고 와서 이스라엘을 쳐서 종려나무 성읍을 점령한지라</div>
+        <div class="verse"><span class="verse-num">14</span> 이에 이스라엘 자손이 모압 왕 에글론을 열여덟 해 동안 섬기니라</div>
+        <div class="verse"><span class="verse-num">15</span> 이스라엘 자손이 여호와께 부르짖으매 여호와께서 그들을 위하여 한 구원자를 세우셨으니 그는 곧 베냐민 사람 게라의 아들 왼손잡이 에훗이라 이스라엘 자손이 그를 통하여 모압 왕 에글론에게 공물을 바칠 때에</div>
+        <div class="verse"><span class="verse-num">16</span> 에훗이 길이가 한 규빗 되는 좌우에 날선 칼을 만들어 그의 오른쪽 허벅지 옷 속에 차고</div>
+        <div class="verse"><span class="verse-num">17</span> 공물을 모압 왕 에글론에게 바쳤는데 에글론은 매우 비둔한 자였더라</div>
+        <div class="verse"><span class="verse-num">18</span> 에훗이 공물 바치기를 마친 후에 공물을 메고 온 자들을 보내고</div>
+        <div class="verse"><span class="verse-num">19</span> 자기는 길갈 근처 돌 뜨는 곳에서부터 돌아와서 이르되 왕이여 내가 은밀한 일을 왕에게 아뢰려 하나이다 하니 왕이 명령하여 조용히 하라 하매 모셔 선 자들이 다 물러간지라</div>
+        <div class="verse"><span class="verse-num">20</span> 에훗이 그에게로 들어가니 왕은 서늘한 다락방에 홀로 앉아 있는 중이라 에훗이 이르되 내가 하나님의 명령을 받들어 왕에게 아뢸 일이 있나이다 하매 왕이 그의 좌석에서 일어나니</div>
+        <div class="verse"><span class="verse-num">21</span> 에훗이 왼손을 뻗쳐 그의 오른쪽 허벅지 위에서 칼을 빼어 왕의 몸을 찌르매</div>
+        <div class="verse"><span class="verse-num">22</span> 칼자루도 날을 따라 들어가서 그 끝이 등 뒤까지 나갔고 그가 칼을 그의 몸에서 빼내지 아니하였으므로 기름이 칼날에 엉겼더라</div>
+        <div class="verse"><span class="verse-num">23</span> 에훗이 현관에 나와서 다락문들을 뒤에서 닫아 잠그니라</div>
+        <div class="verse"><span class="verse-num">24</span> 에훗이 나간 후에 왕의 신하들이 들어와서 다락문들이 잠겼음을 보고 이르되 왕이 분명히 서늘한 방에서 그의 발을 가리우신다 하고</div>
+        <div class="verse"><span class="verse-num">25</span> 그들이 오래 기다려도 왕이 다락문들을 열지 아니하는지라 열쇠를 가지고 열어 본즉 그들의 군주가 이미 땅에 엎드러져 죽었더라</div>
+        <div class="verse"><span class="verse-num">26</span> 그들이 기다리는 동안에 에훗이 피하여 돌 뜨는 곳을 지나 스이라로 도망하니라</div>
+        <div class="verse"><span class="verse-num">27</span> 그가 이르러 에브라임 산지에서 나팔을 불매 이스라엘 자손이 산지에서 그를 따라 내려오니 에훗이 앞서 가며</div>
+        <div class="verse"><span class="verse-num">28</span> 그들에게 이르되 나를 따르라 여호와께서 너희의 원수들인 모압을 너희의 손에 넘겨 주셨느니라 하매 무리가 에훗을 따라 내려가 모압 맞은편 요단 강 나루를 장악하여 한 사람도 건너지 못하게 하였고</div>
+        <div class="verse"><span class="verse-num">29</span> 그 때에 모압 사람 약 만 명을 죽였으니 모두 장사요 모두 용사라 한 사람도 도망하지 못하였더라</div>
+        <div class="verse"><span class="verse-num">30</span> 그 날에 모압이 이스라엘 수하에 굴복하매 그 땅이 팔십 년 동안 평온하였더라</div>
+        <div class="verse"><span class="verse-num">31</span> 에훗 후에는 아낫의 아들 삼갈이 있어 소 모는 막대기로 블레셋 사람 육백 명을 죽였고 그도 이스라엘을 구원하였더라</div>
+
+        <!-- 사사기 4장 -->
+        <div class="chapter-title">사사기 4장 (1~24절)</div>
+        <div class="verse"><span class="verse-num">1</span> 에훗이 죽으니 이스라엘 자손이 또 여호와의 목전에 악을 행하매</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와께서 하솔에서 통치하는 가나안 왕 야빈의 손에 그들을 파셨으니 그의 군대 장관은 하로셋 학고임에 거주하는 시스라요</div>
+        <div class="verse"><span class="verse-num">3</span> 야빈 왕은 철 병거 구백 대가 있어 이십 년 동안 이스라엘 자손을 심히 학대했으므로 이스라엘 자손이 여호와께 부르짖었더라</div>
+        <div class="verse"><span class="verse-num">4</span> 그 때에 랍비돗의 아내 여선지자 드보라가 이스라엘의 사사가 되었는데</div>
+        <div class="verse"><span class="verse-num">5</span> 그는 에브라임 산지 라마와 벧엘 사이 드보라의 종려나무 아래에 거주하였고 이스라엘 자손은 그에게 나아가 재판을 받더라</div>
+        <div class="verse"><span class="verse-num">6</span> 드보라가 사람을 보내어 아비노암의 아들 바락을 납달리 게데스에서 불러다가 그에게 이르되 이스라엘의 하나님 여호와께서 이같이 명령하지 아니하셨느냐 너는 납달리 자손과 스불론 자손 만 명을 거느리고 다볼 산으로 가라</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 야빈의 군대 장관 시스라와 그의 병거들과 그의 무리를 기손 강으로 이끌어 네게 이르게 하고 그를 네 손에 넘겨 주리라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 바락이 그에게 이르되 만일 당신이 나와 함께 가면 내가 가려니와 만일 당신이 나와 함께 가지 아니하면 나도 가지 아니하겠노라 하니</div>
+        <div class="verse"><span class="verse-num">9</span> 이르되 내가 반드시 너와 함께 가리라 그러나 네가 이번에 가는 길에서는 영광을 얻지 못하리니 이는 여호와께서 시스라를 여인의 손에 파실 것임이니라 하고 드보라가 일어나 바락과 함께 게데스로 가니라</div>
+        <div class="verse"><span class="verse-num">10</span> 바락이 스불론과 납달리를 게데스로 부르니 만 명이 그를 따라 올라가고 드보라도 그와 함께 올라가니라</div>
+        <div class="verse"><span class="verse-num">11</span> 모세의 장인 호밥의 자손 중 겐 사람 헤벨이 자기 족속을 떠나 게데스에 가까운 사아난님 상수리나무 곁에 이르러 장막을 쳤더라</div>
+        <div class="verse"><span class="verse-num">12</span> 아비노암의 아들 바락이 다볼 산에 오른 것을 사람들이 시스라에게 알리매</div>
+        <div class="verse"><span class="verse-num">13</span> 시스라가 모든 병거 곧 철 병거 구백 대와 자기와 함께 있는 모든 백성을 하로셋학고임에서부터 기손 강으로 모은지라</div>
+        <div class="verse"><span class="verse-num">14</span> 드보라가 바락에게 이르되 일어나라 이는 여호와께서 시스라를 네 손에 넘겨 주신 날이라 여호와께서 너에 앞서 나가지 아니하시느냐 하는지라 이에 바락이 만 명을 거느리고 다볼 산에서 내려가니</div>
+        <div class="verse"><span class="verse-num">15</span> 여호와께서 바락 앞에서 시스라와 그의 모든 병거와 그의 온 군대를 칼날로 혼란에 빠지게 하시매 시스라가 병거에서 내려 걸어서 도망한지라</div>
+        <div class="verse"><span class="verse-num">16</span> 바락이 그의 병거들과 군대를 추격하여 하로셋학고임에 이르니 시스라의 온 군대가 다 칼에 엎드러졌고 한 사람도 남은 자가 없었더라</div>
+        <div class="verse"><span class="verse-num">17</span> 시스라가 걸어서 도망하여 겐 사람 헤벨의 아내 야엘의 장막에 이르렀으니 이는 하솔 왕 야빈과 겐 사람 헤벨의 집 사이에는 화평이 있음이라</div>
+        <div class="verse"><span class="verse-num">18</span> 야엘이 나가 시스라를 영접하며 그에게 말하되 나의 주여 들어오소서 내게로 들어오시고 두려워하지 마소서 하매 그가 그 장막에 들어가니 야엘이 이불로 그를 덮으니라</div>
+        <div class="verse"><span class="verse-num">19</span> 시스라가 그에게 말하되 청하노니 내게 물을 조금 마시게 하라 내가 목이 마르다 하매 우유 부대를 열어 그에게 마시게 하고 그를 덮으니</div>
+        <div class="verse"><span class="verse-num">20</span> 그가 또 이르되 장막 문에 섰다가 만일 사람이 와서 네게 묻기를 여기 어떤 사람이 있느냐 하거든 너는 없다 하라 하고</div>
+        <div class="verse"><span class="verse-num">21</span> 그가 깊이 잠드니 헤벨의 아내 야엘이 장막 말뚝을 가지고 손에 방망이를 들고 그에게로 가만히 가서 말뚝을 그의 관자놀이에 박으매 말뚝이 꿰뚫고 땅에 박히니 그가 기절하여 죽으니라</div>
+        <div class="verse"><span class="verse-num">22</span> 바락이 시스라를 추격할 때에 야엘이 나가서 그를 맞아 그에게 이르되 오라 네가 찾는 그 사람을 내가 네게 보이리라 하매 바락이 그에게 들어가 보니 시스라가 엎드러져 죽었고 말뚝이 그의 관자놀이에 박혔더라</div>
+        <div class="verse"><span class="verse-num">23</span> 이와 같이 이 날에 하나님이 가나안 왕 야빈을 이스라엘 자손 앞에 굴복하게 하신지라</div>
+        <div class="verse"><span class="verse-num">24</span> 이스라엘 자손의 손이 가나안 왕 야빈을 점점 더 눌러서 마침내 가나안 왕 야빈을 진멸하였더라</div>
+
+        <!-- 사사기 5장 -->
+        <div class="chapter-title">사사기 5장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이 날에 드보라와 아비노암의 아들 바락이 노래하여 이르되</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘의 영솔자들이 영솔하였고 백성이 즐거이 헌신하였으니 여호와를 찬송하라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희 왕들아 들으라 통치자들아 귀를 기울이라 나 곧 내가 여호와를 노래할 것이요 이스라엘의 하나님 여호와를 찬송하리로다</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와여 주께서 세일에서부터 나오시고 에돔 들에서부터 진행하실 때에 땅이 진동하고 하늘이 물을 내리고 구름도 물을 내렸나이다</div>
+        <div class="verse"><span class="verse-num">5</span> 산들이 여호와 앞에서 진동하니 저 시내 산도 이스라엘의 하나님 여호와 앞에서 진동하였도다</div>
+        <div class="verse"><span class="verse-num">6</span> 아낫의 아들 삼갈의 날에 또는 야엘의 날에는 대로가 비었고 길의 행인들은 오솔길로 다녔도다</div>
+        <div class="verse"><span class="verse-num">7</span> 이스라엘에는 마을 사람들이 그쳤으니 나 드보라가 일어나 이스라엘의 어머니가 되기까지 그쳤도다</div>
+        <div class="verse"><span class="verse-num">8</span> 무리가 새 신들을 택하였으므로 그 때에 전쟁이 성문에 이르렀으나 이스라엘의 사만 명 중에 방패와 창이 보였던가</div>
+        <div class="verse"><span class="verse-num">9</span> 내 마음이 이스라엘의 방백을 사모함은 그들이 백성 중에서 즐거이 헌신하였음이니 여호와를 찬송하라</div>
+        <div class="verse"><span class="verse-num">10</span> 흰 나귀를 탄 자들, 양탄자에 앉은 자들, 길에 행하는 자들아 전파할지어다</div>
+        <div class="verse"><span class="verse-num">11</span> 활 쏘는 자들의 소리로부터 멀리 떨어진 물 긷는 곳에서도 여호와의 공의로우신 일을 전하라 이스라엘에서 마을 사람들을 위한 의로우신 일을 노래하라 그 때에 여호와의 백성이 성문에 내려갔도다</div>
+        <div class="verse"><span class="verse-num">12</span> 깰지어다 깰지어다 드보라여 깰지어다 깰지어다 너는 노래할지어다 일어날지어다 바락이여 아비노암의 아들이여 네가 사로잡은 자를 끌고 갈지어다</div>
+        <div class="verse"><span class="verse-num">13</span> 그 때에 남은 귀인과 백성이 내려왔고 여호와께서 나를 위하여 용사를 치시려고 내려오셨도다</div>
+        <div class="verse"><span class="verse-num">14</span> 에브라임에게서 나온 자들은 아말렉에 뿌리 박힌 자들이요 베냐민은 백성들 중에서 너를 따르는 자들이요 마길에게서는 명령하는 자들이 내려왔고 스불론에게서는 대장군의 지팡이를 잡은 자들이 내려왔도다</div>
+        <div class="verse"><span class="verse-num">15</span> 잇사갈의 방백들이 드보라와 함께 하니 잇사갈과 같이 바락도 그의 뒤를 따라 골짜기로 달려 내려가니 르우벤 시냇가에서 큰 결심이 있었도다</div>
+        <div class="verse"><span class="verse-num">16</span> 네가 양의 우리 가운데에 앉아서 목자의 피리 부는 소리를 들음은 어찌 됨이냐 르우벤 시냇가에서 큰 결심이 있었도다</div>
+        <div class="verse"><span class="verse-num">17</span> 길르앗은 요단 강 저쪽에 거주하며 단은 배에 머무름이 어찌 됨이냐 아셀은 해변에 앉으며 자기 항만에 거주하도다</div>
+        <div class="verse"><span class="verse-num">18</span> 스불론은 죽음을 무릅쓰고 목숨을 아끼지 아니한 백성이요 납달리도 들의 높은 곳에서 그러하도다</div>
+        <div class="verse"><span class="verse-num">19</span> 왕들이 와서 싸울 때에 가나안 왕들이 므깃도 물 가 다아낙에서 싸웠으나 은을 탈취하지 못하였도다</div>
+        <div class="verse"><span class="verse-num">20</span> 별들이 하늘에서부터 싸우되 그들이 다니는 길에서 시스라와 싸웠도다</div>
+        <div class="verse"><span class="verse-num">21</span> 기손 강은 그 무리를 표류시켰으니 이 기손 강은 옛 강이라 내 영혼아 네가 힘 있는 자를 밟았도다</div>
+        <div class="verse"><span class="verse-num">22</span> 그 때에 군마가 빨리 달리니 말굽 소리가 땅을 울리도다</div>
+        <div class="verse"><span class="verse-num">23</span> 여호와의 사자의 말씀에 메로스를 저주하라 너희가 거듭거듭 그 주민들을 저주할 것은 그들이 와서 여호와를 돕지 아니하며 여호와를 도와 용사를 치지 아니함이니라 하시도다</div>
+        <div class="verse"><span class="verse-num">24</span> 겐 사람 헤벨의 아내 야엘은 다른 여인들보다 복을 받을 것이니 장막에 있는 여인들보다 더욱 복을 받을 것이로다</div>
+        <div class="verse"><span class="verse-num">25</span> 시스라가 물을 구하매 우유를 주되 곧 엉긴 우유를 귀한 그릇에 담아 주었고</div>
+        <div class="verse"><span class="verse-num">26</span> 손으로 장막 말뚝을 잡으며 오른손에 일꾼들의 방망이를 들고 시스라를 쳐서 그의 머리를 뚫되 곧 그의 관자놀이를 꿰뚫었도다</div>
+        <div class="verse"><span class="verse-num">27</span> 그가 그의 발 앞에 꾸부러지며 엎드러지고 쓰러졌고 그의 발 앞에 꾸부러져 엎드러져서 그 꾸부러진 곳에 엎드러져 죽었도다</div>
+        <div class="verse"><span class="verse-num">28</span> 시스라의 어머니가 창문을 통하여 바라보며 창살을 통하여 부르짖기를 그의 병거가 어찌하여 더디 오는가 그의 병거들의 걸음이 어찌하여 늦어지는가 하매</div>
+        <div class="verse"><span class="verse-num">29</span> 그의 지혜로운 시녀들이 대답하였겠고 그도 스스로 대답하기를</div>
+        <div class="verse"><span class="verse-num">30</span> 그들이 어찌 노략물을 얻지 못하였으랴 그것을 나누지 못하였으랴 사람마다 한두 처녀를 얻었으리로다 시스라는 채색 옷을 노략하였으리니 그것은 수 놓은 채색 옷이리로다 곧 양쪽에 수 놓은 채색 옷이리니 노략한 자의 목에 꾸미리로다 하였으리라</div>
+        <div class="verse"><span class="verse-num">31</span> 여호와여 주의 원수들은 다 이와 같이 망하게 하시고 주를 사랑하는 자들은 해가 힘 있게 돋음 같게 하시옵소서 하니라 그 땅이 사십 년 동안 평온하였더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

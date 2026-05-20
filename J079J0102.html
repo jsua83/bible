@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 079</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 079</h1>
+        <p class="sub-title">찬송가 354장 주를 앙모하는 자</p>
+        <p class="sub-title">사사기 1장~2:10절 — 만나 세대의 세 번째 울음</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 354장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1xSiQf9pJYAyx9T7L7gYGRitLqE7qgq_q" alt="찬송가 354장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사사기 1장~2:10절의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 제사장 나라 1,500년 역사에서 사사 시대 350여 년은 제사장 나라의 틀이 유지된 시대였습니다.</span>
+            사사기는 이스라엘 백성들이 가나안에 정착한 후 <strong>하나님께서 세우신 사사들에 의해 다스림을 받던 350여 년 동안의 이야기</strong>입니다. 사사 시대를 성경 전체에서 보면 <strong>'암흑기'</strong>라고 말하지만 그럼에도 불구하고 기본적으로 <strong>'제사장 나라의 틀'이 유지된 기간</strong>입니다.<br><br>
+            왜냐하면 제사장 나라는 시내산에서 공식적으로 시작되어 예수님께서 이렇게 말씀하실 때까지 <strong>1,500년 동안 유지되었고 그 사이에 사사 시대도 포함되기 때문</strong>입니다.
+            <div class="quote">
+                <strong>"내가 율법이나 선지자를 폐하러 온 줄로 생각하지 말라 폐하러 온 것이 아니요 완전하게 하려함이라"</strong> (마 5:17)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 이제 만나 세대는 모세와 여호수아 없이 가나안에서 제사장 나라의 과제를 수행합니다.</span>
+            여호수아가 죽고 이제 만나 세대들은 여호수아가 남긴 유언을 가지고 <strong>가나안에서 제사장 나라의 두 가지 과제를 실행해야 합니다.</strong>
+            <div class="quote">
+                <strong>첫째,</strong> 가나안에서 <strong>제사장 나라의 삶의 방식을 정착하는 것</strong>입니다. 중앙 성소인 '실로'를 중심으로 1년 세 차례 유월절, 칠칠절(오순절), 초막절에 모이기를 실천해야 합니다. 그리고 48개 레위인의 성읍을 중심으로 제사장 나라의 시스템 세 가지, 즉 <strong>율법학교 교육, 도피성 운영, 지역 보건소 운영</strong>을 해야 합니다.<br><br>
+                <strong>둘째,</strong> 각 지파별로 <strong>아직 점령하지 못한 땅을 믿음으로 싸워 점령해야 합니다.</strong> 이미 점령한 땅과 아직 점령하지 못한 땅을 포함해서 그들의 기업으로 분배받았기 때문입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 유다 지파와 시므온 지파가 연합 전선을 펼쳐 싸웁니다.</span>
+            만나 세대들은 여호수아와 약속한 대로 <strong>가나안 완전 정복을 위한 전쟁을 다시 시작해야 합니다.</strong> 하나님의 명령에 따라 열두 지파 가운데 <strong>가장 강한 유다 지파가 앞장섭니다.</strong> 이때 유다 지파는 전쟁 선봉에 서기로 하고 <strong>시므온 지파에게도 연합 전선을 제시하여 함께 싸움에 나갑니다</strong>(삿 1:1~3).<br><br>
+            이때에도 여전히 <strong>갈렙이 앞장을 섭니다.</strong> 갈렙은 계속 이어지는 드빌 주민과의 전쟁에서 <strong>포상을 내걸어 용기를 북돋고,</strong> 이때 나선 옷니엘이 갈렙의 사위가 됩니다.
+            <div class="quote">
+                <strong>옷니엘은 이후 사사 시대의 첫 번째 사사가 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 가나안은 철 병거를 이끌고 골짜기로 들어가 저항합니다.</span>
+            당시 이스라엘이 <strong>청동기 문명을 이루고 있었던 반면 가나안 원주민들은 철기 문명을 가지고 이스라엘에 대항합니다.</strong> 이때 가나안의 철 병거는 만나 세대들에게 <strong>큰 두려움을 주었으며 이로 인해 가나안 정복은 계속 지연됩니다.</strong><br><br>
+            어렵게 용기를 내 전쟁에 승리한 유다 지파도 <strong>철기 무기로 대항하는 가나안 족속을 완전히 정복하지는 못합니다.</strong> 결국 만나 세대들은 <strong>가나안 족들을 완전히 다 쫓아내지 못합니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 만나 세대는 세 번 소리 높여 울었습니다.</span>
+            출애굽 세대들은 가데스 바네아에서 정탐 보고를 듣고 <strong>말도 안 되게 밤새 울었습니다.</strong> 그러나 만나 세대들이 운 세 번은 의미가 다릅니다.
+            <div class="quote">
+                <strong>첫 번째 울음</strong> — 모세의 죽음을 슬퍼하며 울었습니다.<br><br>
+                <strong>두 번째 울음</strong> — 여호수아의 죽음을 슬퍼하며 울었습니다.<br><br>
+                <strong>세 번째 울음</strong> — 보김에서 그들의 잘못을 꾸짖는 하나님의 사자의 말을 듣고 부끄러워 웁니다(삿 2:1~5).
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 사사기 1장~2:10절 '만나 세대의 세 번째 울음'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 사사기 1장 -->
+        <div class="chapter-title">사사기 1장 (1~36절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호수아가 죽은 후에 이스라엘 자손이 여호와께 여쭈어 이르되 우리 가운데 누가 먼저 올라가서 가나안 족속과 싸우리이까</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와께서 이르시되 유다가 올라갈지니라 보라 내가 이 땅을 그의 손에 넘겨 주었노라 하시니라</div>
+        <div class="verse"><span class="verse-num">3</span> 유다가 그의 형제 시므온에게 이르되 내가 제비 뽑아 얻은 땅에 나와 함께 올라가서 가나안 족속과 싸우자 그리하면 나도 네가 제비 뽑아 얻은 땅에 함께 가리라 하니 이에 시므온이 그와 함께 가니라</div>
+        <div class="verse"><span class="verse-num">4</span> 유다가 올라가매 여호와께서 가나안 족속과 브리스 족속을 그들의 손에 넘겨 주시니 그들이 베섹에서 만 명을 죽이고</div>
+        <div class="verse"><span class="verse-num">5</span> 또 베섹에서 아도니 베섹을 만나 그와 싸워서 가나안 족속과 브리스 족속을 죽이니</div>
+        <div class="verse"><span class="verse-num">6</span> 아도니 베섹이 도망하는지라 그를 쫓아가서 잡아 그의 엄지손가락과 엄지발가락을 자르매</div>
+        <div class="verse"><span class="verse-num">7</span> 아도니 베섹이 이르되 옛적에 칠십 명의 왕들이 그들의 엄지손가락과 엄지발가락이 잘리고 내 상 아래에서 먹을 것을 줍더니 하나님이 내가 행한 대로 내게 갚으심이로다 하니라 무리가 그를 끌고 예루살렘에 이르렀더니 그가 거기서 죽었더라</div>
+        <div class="verse"><span class="verse-num">8</span> 유다 자손이 예루살렘을 쳐서 점령하여 칼날로 치고 그 성을 불살랐으며</div>
+        <div class="verse"><span class="verse-num">9</span> 그 후에 유다 자손이 내려가서 산지와 남방과 평지에 거주하는 가나안 족속과 싸웠고</div>
+        <div class="verse"><span class="verse-num">10</span> 유다가 또 가서 헤브론에 거주하는 가나안 족속을 쳐서 세새와 아히만과 달매를 죽였더라 헤브론의 본 이름은 기럇 아르바였더라</div>
+        <div class="verse"><span class="verse-num">11</span> 거기서 나아가서 드빌의 주민들을 쳤으니 드빌의 본 이름은 기럇 세벨이라</div>
+        <div class="verse"><span class="verse-num">12</span> 갈렙이 말하기를 기럇 세벨을 쳐서 그것을 점령하는 자에게는 내 딸 악사를 아내로 주리라 하였더니</div>
+        <div class="verse"><span class="verse-num">13</span> 갈렙의 아우 그나스의 아들인 옷니엘이 그것을 점령하였으므로 갈렙이 그의 딸 악사를 그에게 아내로 주었더라</div>
+        <div class="verse"><span class="verse-num">14</span> 악사가 출가할 때에 그에게 청하여 자기 아버지에게 밭을 구하자 하고 나귀에서 내리매 갈렙이 묻되 네가 무엇을 원하느냐 하니</div>
+        <div class="verse"><span class="verse-num">15</span> 이르되 내게 복을 주소서 아버지께서 나를 남방으로 보내시니 샘물도 내게 주소서 하매 갈렙이 윗샘과 아랫샘을 그에게 주었더라</div>
+        <div class="verse"><span class="verse-num">16</span> 모세의 장인은 겐 사람이라 그의 자손이 유다 자손과 함께 종려나무 성읍에서 올라가서 아랏 남방의 유다 황무지에 이르러 그 백성 중에 거주하니라</div>
+        <div class="verse"><span class="verse-num">17</span> 유다가 그의 형제 시므온과 함께 가서 스밧에 거주하는 가나안 족속을 쳐서 그 곳을 진멸하였으므로 그 성읍의 이름을 호르마라 하니라</div>
+        <div class="verse"><span class="verse-num">18</span> 유다가 또 가사 및 그 지역과 아스글론 및 그 지역과 에그론 및 그 지역을 점령하였고</div>
+        <div class="verse"><span class="verse-num">19</span> 여호와께서 유다와 함께 계셨으므로 그가 산지 주민을 쫓아내었으나 골짜기의 주민들은 철 병거가 있으므로 그들을 쫓아내지 못하였으며</div>
+        <div class="verse"><span class="verse-num">20</span> 그들이 모세가 명령한 대로 헤브론을 갈렙에게 주었더니 그가 거기서 아낙의 세 아들을 쫓아내었고</div>
+        <div class="verse"><span class="verse-num">21</span> 베냐민 자손은 예루살렘에 거주하는 여부스 족속을 쫓아내지 못하였으므로 여부스 족속이 베냐민 자손과 함께 오늘까지 예루살렘에 거주하니라</div>
+        <div class="verse"><span class="verse-num">22</span> 요셉 가문도 벧엘을 치러 올라가니 여호와께서 그와 함께 하시니라</div>
+        <div class="verse"><span class="verse-num">23</span> 요셉 가문이 벧엘을 정탐하게 하였는데 그 성읍의 본 이름은 루스라</div>
+        <div class="verse"><span class="verse-num">24</span> 정탐꾼들이 그 성읍에서 한 사람이 나오는 것을 보고 그에게 이르되 청하노니 이 성읍의 입구를 우리에게 보이라 그리하면 우리가 네게 선대하리라 하매</div>
+        <div class="verse"><span class="verse-num">25</span> 그 사람이 성읍의 입구를 가리킨지라 이에 그들이 칼날로 그 성읍을 쳤으되 오직 그 사람과 그의 가족을 놓아 보내매</div>
+        <div class="verse"><span class="verse-num">26</span> 그 사람이 헷 사람들의 땅에 가서 성읍을 건축하고 그것의 이름을 루스라 하였더니 오늘까지 그 곳의 이름이 되니라</div>
+        <div class="verse"><span class="verse-num">27</span> 므낫세가 벧스안과 그에 딸린 마을들의 주민과 다아낙과 그에 딸린 마을들의 주민과 돌과 그에 딸린 마을들의 주민과 이블르암과 그에 딸린 마을들의 주민과 므깃도와 그에 딸린 마을들의 주민들을 쫓아내지 못하매 가나안 족속이 결심하고 그 땅에 거주하였더니</div>
+        <div class="verse"><span class="verse-num">28</span> 이스라엘이 강성한 후에야 가나안 족속에게 노역을 시켰고 다 쫓아내지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">29</span> 에브라임이 게셀에 거주하는 가나안 족속을 쫓아내지 못하매 가나안 족속이 게셀에서 그들 중에 거주하였더라</div>
+        <div class="verse"><span class="verse-num">30</span> 스불론은 기드론 주민과 나할롤 주민을 쫓아내지 못하였으므로 가나안 족속이 그들 중에 거주하면서 노역을 하였더라</div>
+        <div class="verse"><span class="verse-num">31</span> 아셀이 악고 주민과 시돈 주민과 알랍과 악십과 헬바와 아빅과 르홉 주민을 쫓아내지 못하고</div>
+        <div class="verse"><span class="verse-num">32</span> 아셀 족속이 그 땅의 주민 가나안 족속 가운데 거주하였으니 이는 그들을 쫓아내지 못함이었더라</div>
+        <div class="verse"><span class="verse-num">33</span> 납달리는 벧세메스 주민과 벧아낫 주민을 쫓아내지 못하고 그 땅의 주민 가나안 족속 가운데 거주하였으나 벧세메스와 벧아낫 주민들이 그들에게 노역을 하였더라</div>
+        <div class="verse"><span class="verse-num">34</span> 아모리 족속이 단 자손을 산지로 몰아넣고 골짜기에 내려오기를 용납하지 아니하였으며</div>
+        <div class="verse"><span class="verse-num">35</span> 결심하고 헤레스 산과 아얄론과 사알빔에 거주하였더니 요셉의 가문의 힘이 강성하매 아모리 족속이 마침내는 노역을 하였으며</div>
+        <div class="verse"><span class="verse-num">36</span> 아모리 족속의 경계는 아그랍빔 비탈의 바위부터 위쪽이었더라</div>
+
+        <!-- 사사기 2장 -->
+        <div class="chapter-title">사사기 2장 (1~10절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와의 사자가 길갈에서부터 보김으로 올라와 말하되 내가 너희를 애굽에서 올라오게 하여 내가 너희의 조상들에게 맹세한 땅으로 들어가게 하였으며 또 내가 이르기를 내가 너희와 함께 한 언약을 영원히 어기지 아니하리니</div>
+        <div class="verse"><span class="verse-num">2</span> 너희는 이 땅의 주민과 언약을 맺지 말며 그들의 제단들을 헐라 하였거늘 너희가 내 목소리를 듣지 아니하였으니 어찌하여 그리하였느냐</div>
+        <div class="verse"><span class="verse-num">3</span> 그러므로 내가 또 말하기를 내가 그들을 너희 앞에서 쫓아내지 아니하리니 그들이 너희 옆구리에 가시가 될 것이며 그들의 신들이 너희에게 올무가 되리라 하였노라</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와의 사자가 이스라엘 모든 자손에게 이 말씀을 이르매 백성이 소리를 높여 운지라</div>
+        <div class="verse"><span class="verse-num">5</span> 그러므로 그 곳을 이름하여 보김이라 하고 그들이 거기서 여호와께 제사를 드렸더라</div>
+        <div class="verse"><span class="verse-num">6</span> 전에 여호수아가 백성을 보내매 이스라엘 자손이 각기 그들의 기업으로 가서 땅을 차지하였고</div>
+        <div class="verse"><span class="verse-num">7</span> 백성이 여호수아가 사는 날 동안과 여호수아 뒤에 생존한 장로들 곧 여호와께서 이스라엘을 위하여 행하신 모든 큰 일을 본 자들이 사는 날 동안에 여호와를 섬겼더라</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와의 종 눈의 아들 여호수아가 백십 세에 죽으매</div>
+        <div class="verse"><span class="verse-num">9</span> 무리가 그의 기업의 경내 에브라임 산지 가아스 산 북쪽 딤낫 헤레스에 장사하였고</div>
+        <div class="verse"><span class="verse-num">10</span> 그 세대의 사람도 다 그 조상들에게로 돌아갔고 그 후에 일어난 다른 세대는 여호와를 알지 못하며 여호와께서 이스라엘을 위하여 행하신 일도 알지 못하였더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
