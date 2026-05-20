@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!-- STREAMING_CHUNK:기본 HTML 구조 및 설정 시작... -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 362</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- STREAMING_CHUNK:스타일(CSS) 정의... -->
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- STREAMING_CHUNK:본문 컨테이너 시작 및 상단 타이틀 구성... -->
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 362</h1>
+        <p class="sub-title">찬송가 180장 하나님의 나팔 소리</p>
+        <p class="sub-title">요한계시록 8~11장 — 일곱 천사의 일곱 나팔</p>
+    </div>
+
+    <!-- STREAMING_CHUNK:사도신경 섹션 렌더링... -->
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- STREAMING_CHUNK:찬송가 이미지 적용 (구글 드라이브 우회 주소)... -->
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 180장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1eZ05AK1zpBurBsi4l8WTWbwWBC1PazCk" alt="찬송가 180장 악보" class="hymn-image">
+    </div>
+
+    <!-- STREAMING_CHUNK:오늘의 굿뉴스 5가지 포인트 작성... -->
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 요한계시록 8~11장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 일곱 나팔을 불기 전에 성도들의 기도가 하나님께 올라갑니다.</span>
+            일곱 천사가 일곱 나팔을 불기 전에 <strong>성도들의 기도가 하나님 앞으로 올려집니다</strong>(계 8:1~5). 성도들의 기도가 하나님께 올라가자 <strong>우레와 음성과 번개와 지진이 나타납니다.</strong> 이는 하나님의 응답입니다.
+            <div class="quote">
+                <strong>예수 그리스도의 임재를 소망하는 성도들의 기도는 이처럼 향로에 고이 모아져 마지막 날에 이 땅에 부어질 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 일곱 나팔은 마치 출애굽 때 애굽에 임한 열 가지 재앙을 생각나게 합니다.</span>
+            <strong>일곱 나팔은 일곱 인의 재앙보다 더욱 확대된 재앙으로 마치 출애굽 때의 재앙을 생각나게 합니다.</strong> 출애굽을 거쳐 제사장 나라를 이루었던 이스라엘 백성들처럼 <strong>마지막 때에 그리스도인들은 일곱 나팔 재앙을 넘어 영원한 하나님 나라로 들어갈 것</strong>입니다.<br><br>
+            그리스도인들은 일곱 인에 이어 <strong>일곱 나팔 재앙까지는 불신자와 함께 고난을 당해야 합니다.</strong> 많은 사람이 죽고 또 죽음보다 더한 고통이 계속되지만 <strong>어리석은 인생들은 죄의 길에서 돌이켜 하나님께로 돌아올 생각을 하지 않습니다</strong>(계 8:6~9:21).<br><br>
+            하나님께서 함께하지 않은 인생은 마지막 때에 <strong>하나님의 심판과 진노를 피할 수 없습니다.</strong> 심판과 진노에서 놓임 받을 수 있는 길은 <strong>'회개'</strong>입니다.
+            <div class="quote">
+                <strong>회개하고 그 길에서 돌이켜 하나님께로 나아갈 때 인생은 심판과 저주의 대상에서 은혜와 사랑의 대상으로 변화됩니다. 자신의 죄를 인정하고 고백하는 이들에게 진정한 자유가 허락됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 하나님께서는 여섯째 나팔과 일곱째 나팔 사이에 요한에게 작은 두루마리를 먹고 백성들에게 예언하라고 말씀하십니다.</span>
+            여섯째 나팔과 일곱째 나팔 사이에 <strong>작은 두루마리를 든 힘 센 천사가 등장합니다.</strong> 이번에는 다니엘 때처럼(단 12:4) <strong>천사가 하는 말을 기록하지 말고 인봉하라</strong>고 하십니다(계 10:1~4). 그리고 앞으로 남은 <strong>일곱째 나팔 재앙이 예고됩니다</strong>(계 10:5~7).
+            <div class="quote">
+                <strong>일곱 나팔의 재앙 가운데 가장 큰 고통을 줄 일곱째 나팔이 울려 퍼질 그때가 하나님의 비밀이 이루어지는 순간입니다.</strong>
+            </div>
+            하늘에서 음성이 들리며 에스겔에게 주신 명령처럼(겔 3:1~3) <strong>요한에게 이 작은 두루마리를 먹고 백성들에게 예언하라고 말씀하십니다</strong>(계 10:8~11).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님께서는 여섯째 나팔과 일곱째 나팔 사이에 요한에게 몇 가지 일을 명하십니다.</span>
+            <div class="quote">
+                <strong>첫째,</strong> 지팡이 같은 갈대로 <strong>성전과 제단, 그리고 경배하는 자들을 측량하라</strong>고 명하십니다.<br><br>
+                <strong>둘째,</strong> 두 증인에게 권세를 주어 <strong>3년 반 동안 예언하게 하라</strong>고 말씀하십니다.<br><br>
+                <strong>셋째,</strong> 두 증인은 <strong>권능을 행하며 예언할 것</strong>이라고 말씀하십니다.<br><br>
+                <strong>넷째,</strong> 두 증인이 <strong>순교할 것이며 이를 기뻐할 사람들이 있을 것</strong>이라고 말씀하십니다.<br><br>
+                <strong>다섯째,</strong> 3일 반 후 두 증인이 <strong>부활하고 땅에서는 큰 지진으로 많은 사람이 죽을 것</strong>이라고 말씀하십니다(계 11:1~13).
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 마지막 일곱째 나팔을 불자 요한은 하늘에서 하나님의 언약궤를 보게 됩니다.</span>
+            마지막 나팔이 울리자 큰 음성들이 <strong>하나님을 찬양하고 이십사 장로가 하나님의 임재를 위한 경배를 드립니다.</strong> 이에 하늘에서 준비된 성전이 열리자 <strong>언약궤가 보입니다</strong>(계 11:15~18).<br><br>
+            이제 <strong>찬란한 하나님의 나라가 임하기까지 시간이 얼마 남지 않았습니다.</strong> 일곱 나팔 재앙 후 이어질 일곱 대접의 재앙이 일어나기 전, 일곱 인이 떼어질 때의 상황이 다시 일어납니다. 그때와 같이(계 8:5) <strong>번개, 음성, 우레, 지진이 일어나고, 이번에는 큰 우박까지 더해집니다</strong>(계 11:19).<br><br>
+            요한은 이때 하늘에 있는 '언약궤와 성전'을 보고 <strong>창세전에 이미 하나님의 구원 계획이 있었다는 것</strong>과, 이 땅에서 사람의 손으로 지은 '언약궤와 성전'은 <strong>하늘 참 것의 그림자였다는 것을 깨닫게 됩니다.</strong> 이 이야기는 히브리서에서 명확하게 설명하고 있습니다(히 9:11~12, 24). 한편 손으로 지은 '언약궤'와 손으로 지은 '성전'은 출애굽기와 열왕기상에 기록되어 있습니다(출 25:22; 왕상 8:27).
+        </div>
+    </div>
+
+    <!-- STREAMING_CHUNK:도입 문구 렌더링... -->
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 요한계시록 8~11장 '일곱 천사의 일곱 나팔'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- STREAMING_CHUNK:성경 본문 요한계시록 8장 파싱... -->
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 요한계시록 8장 -->
+        <div class="chapter-title">요한계시록 8장 (1~13절)</div>
+        <div class="verse"><span class="verse-num">1</span> 일곱째 인을 떼실 때에 하늘이 반 시간쯤 고요하더니</div>
+        <div class="verse"><span class="verse-num">2</span> 내가 보매 하나님 앞에 일곱 천사가 서 있어 일곱 나팔을 받았더라</div>
+        <div class="verse"><span class="verse-num">3</span> 또 다른 천사가 와서 제단 곁에 서서 금 향로를 가지고 많은 향을 받았으니 이는 모든 성도의 기도와 합하여 보좌 앞 금 제단에 드리고자 함이라</div>
+        <div class="verse"><span class="verse-num">4</span> 향연이 성도의 기도와 함께 천사의 손으로부터 하나님 앞으로 올라가는지라</div>
+        <div class="verse"><span class="verse-num">5</span> 천사가 향로를 가지고 제단의 불을 담아다가 땅에 쏟으매 우레와 음성과 번개와 지진이 나더라</div>
+        <div class="verse"><span class="verse-num">6</span> 일곱 나팔을 가진 일곱 천사가 나팔 불기를 준비하더라</div>
+        <div class="verse"><span class="verse-num">7</span> 첫째 천사가 나팔을 부니 피 섞인 우박과 불이 나와서 땅에 쏟아지매 땅의 삼분의 일이 타 버리고 수목의 삼분의 일도 타 버리고 각종 푸른 풀도 타 버렸더라</div>
+        <div class="verse"><span class="verse-num">8</span> 둘째 천사가 나팔을 부니 불 붙는 큰 산과 같은 것이 바다에 던져지매 바다의 삼분의 일이 피가 되고</div>
+        <div class="verse"><span class="verse-num">9</span> 바다 가운데 생명 가진 피조물들의 삼분의 일이 죽고 배들의 삼분의 일이 깨지더라</div>
+        <div class="verse"><span class="verse-num">10</span> 셋째 천사가 나팔을 부니 횃불 같이 타는 큰 별이 하늘에서 떨어져 강들의 삼분의 일과 여러 물샘에 떨어지니</div>
+        <div class="verse"><span class="verse-num">11</span> 이 별 이름은 쓴 쑥이라 물의 삼분의 일이 쓴 쑥이 되매 그 물이 쓴 물이 되므로 많은 사람이 죽더라</div>
+        <div class="verse"><span class="verse-num">12</span> 넷째 천사가 나팔을 부니 해 삼분의 일과 달 삼분의 일과 별들의 삼분의 일이 타격을 받아 그 삼분의 일이 어두워지니 낮 삼분의 일은 비추임이 없고 밤도 그러하더라</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 또 보고 들으니 공중에 날아가는 독수리가 큰 소리로 이르되 땅에 사는 자들에게 화, 화, 화가 있으리니 이는 세 천사들이 불어야 할 나팔 소리가 남아 있음이로다 하더라</div>
+
+        <!-- STREAMING_CHUNK:성경 본문 요한계시록 9장 파싱... -->
+        <!-- 요한계시록 9장 -->
+        <div class="chapter-title">요한계시록 9장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 다섯째 천사가 나팔을 불매 내가 보니 하늘에서 땅에 떨어진 별 하나가 있는데 그가 무저갱의 열쇠를 받았더라</div>
+        <div class="verse"><span class="verse-num">2</span> 그가 무저갱을 여니 그 구멍에서 큰 화덕의 연기 같은 연기가 올라오매 해와 공기가 그 구멍의 연기로 말미암아 어두워지며</div>
+        <div class="verse"><span class="verse-num">3</span> 또 황충이 연기 가운데로부터 땅 위에 나오매 그들이 땅에 있는 전갈의 권세와 같은 권세를 받았더라</div>
+        <div class="verse"><span class="verse-num">4</span> 그들에게 이르시되 땅의 풀이나 푸른 것이나 각종 수목은 해하지 말고 오직 이마에 하나님의 인침을 받지 아니한 사람들만 해하라 하시더라</div>
+        <div class="verse"><span class="verse-num">5</span> 그러나 그들을 죽이지는 못하게 하시고 다섯 달 동안 괴롭게만 하게 하시는데 그 괴롭게 함은 전갈이 사람을 쏠 때에 괴롭게 함과 같더라</div>
+        <div class="verse"><span class="verse-num">6</span> 그 날에는 사람들이 죽기를 구하여도 죽지 못하고 죽고 싶으나 죽음이 그들을 피하리로다</div>
+        <div class="verse"><span class="verse-num">7</span> 황충들의 모양은 전쟁을 위하여 준비한 말들 같고 그 머리에 금 같은 관 비슷한 것을 썼으며 그 얼굴은 사람의 얼굴 같고</div>
+        <div class="verse"><span class="verse-num">8</span> 또 여자의 머리털 같은 머리털이 있고 그 이빨은 사자의 이빨 같으며</div>
+        <div class="verse"><span class="verse-num">9</span> 또 철 호심경 같은 호심경이 있고 그 날개들의 소리는 병거와 많은 말들이 전쟁터로 달려 들어가는 소리 같으며</div>
+        <div class="verse"><span class="verse-num">10</span> 또 전갈과 같은 꼬리와 쏘는 살이 있어 그 꼬리에는 다섯 달 동안 사람들을 해하는 권세가 있더라</div>
+        <div class="verse"><span class="verse-num">11</span> 그들에게 왕이 있으니 무저갱의 사자라 히브리어로는 그 이름이 아바돈이요 헬라어로는 그 이름이 아볼루온이더라</div>
+        <div class="verse"><span class="verse-num">12</span> 첫째 화는 지나갔으나 보라 아직도 이 후에 화 둘이 이르리로다</div>
+        <div class="verse"><span class="verse-num">13</span> 여섯째 천사가 나팔을 불매 내가 들으니 하나님 앞 금 제단 네 뿔에서 한 음성이 나서</div>
+        <div class="verse"><span class="verse-num">14</span> 나팔 가진 여섯째 천사에게 말하기를 큰 강 유브라데에 결박한 네 천사를 놓아 주라 하매</div>
+        <div class="verse"><span class="verse-num">15</span> 네 천사가 놓였으니 그들은 그 년 월 일 시에 이르러 사람 삼분의 일을 죽이기로 준비된 자들이더라</div>
+        <div class="verse"><span class="verse-num">16</span> 마병대의 수는 이만 만이니 내가 그들의 수를 들었노라</div>
+        <div class="verse"><span class="verse-num">17</span> 이같은 환상 가운데 그 말들과 그 위에 탄 자들을 보니 불빛과 자줏빛과 유황빛 호심경이 있고 또 말들의 머리는 사자 머리 같고 그 입에서는 불과 연기와 유황이 나오더라</div>
+        <div class="verse"><span class="verse-num">18</span> 이 세 재앙 곧 자기들의 입에서 나오는 불과 연기와 유황으로 말미암아 사람 삼분의 일이 죽임을 당하니라</div>
+        <div class="verse"><span class="verse-num">19</span> 이 말들의 힘은 입과 꼬리에 있으니 꼬리는 뱀 같고 또 꼬리에 머리가 있어 이것으로 해하더라</div>
+        <div class="verse"><span class="verse-num">20</span> 이 재앙에 죽지 않고 남은 사람들은 손으로 행한 일을 회개하지 아니하고 오히려 여러 귀신과 또는 보거나 듣거나 다니거나 하지 못하는 금, 은, 동과 목석의 우상에게 절하고</div>
+        <div class="verse"><span class="verse-num">21</span> 또 그 살인과 복술과 음행과 도둑질을 회개하지 아니하더라</div>
+
+        <!-- STREAMING_CHUNK:성경 본문 요한계시록 10장 파싱... -->
+        <!-- 요한계시록 10장 -->
+        <div class="chapter-title">요한계시록 10장 (1~11절)</div>
+        <div class="verse"><span class="verse-num">1</span> 내가 또 보니 힘 센 다른 천사가 구름을 입고 하늘에서 내려오는데 그 머리 위에 무지개가 있고 그 얼굴은 해 같고 그 발은 불기둥 같으며</div>
+        <div class="verse"><span class="verse-num">2</span> 그 손에는 펴 놓인 작은 두루마리를 들고 그 오른 발은 바다를 밟고 왼 발은 땅을 밟고</div>
+        <div class="verse"><span class="verse-num">3</span> 사자가 부르짖는 것 같이 큰 소리로 외치니 그가 외칠 때에 일곱 우레가 그 소리를 내어 말하더라</div>
+        <div class="verse"><span class="verse-num">4</span> 일곱 우레가 말을 할 때에 내가 기록하려고 하다가 곧 들으니 하늘에서 소리가 나서 말하기를 일곱 우레가 말한 것을 인봉하고 기록하지 말라 하더라</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 본 바 바다와 땅을 밟고 서 있는 천사가 하늘을 향하여 오른손을 들고</div>
+        <div class="verse"><span class="verse-num">6</span> 세세토록 살아 계신 이 곧 하늘과 그 가운데에 있는 물건이며 땅과 그 가운데에 있는 물건이며 바다와 그 가운데에 있는 물건을 창조하신 이를 가리켜 맹세하여 이르되 지체하지 아니하리니</div>
+        <div class="verse"><span class="verse-num">7</span> 일곱째 천사가 소리 내는 날 그의 나팔을 불려고 할 때에 하나님이 그의 종 선지자들에게 전하신 복음과 같이 하나님의 그 비밀이 이루어지리라 하더라</div>
+        <div class="verse"><span class="verse-num">8</span> 하늘에서 나서 내게 들리던 음성이 또 내게 말하여 이르되 네가 가서 바다와 땅을 밟고 서 있는 천사의 손에 펴 놓인 두루마리를 가지라 하기로</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 천사에게 나아가 작은 두루마리를 달라 한즉 천사가 이르되 갖다 먹어 버리라 네 배에는 쓰나 네 입에는 꿀 같이 달리라 하거늘</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 천사의 손에서 작은 두루마리를 갖다 먹어 버리니 내 입에는 꿀 같이 다나 먹은 후에 내 배에서는 쓰게 되더라</div>
+        <div class="verse"><span class="verse-num">11</span> 그가 내게 말하기를 네가 많은 백성과 나라와 방언과 임금에게 다시 예언하여야 하리라 하더라</div>
+
+        <!-- STREAMING_CHUNK:성경 본문 요한계시록 11장 파싱... -->
+        <!-- 요한계시록 11장 -->
+        <div class="chapter-title">요한계시록 11장 (1~19절)</div>
+        <div class="verse"><span class="verse-num">1</span> 또 내게 지팡이 같은 갈대를 주며 말하기를 일어나서 하나님의 성전과 제단과 그 안에서 경배하는 자들을 측량하되</div>
+        <div class="verse"><span class="verse-num">2</span> 성전 바깥 마당은 측량하지 말고 그냥 두라 이것은 이방인에게 주었은즉 그들이 거룩한 성을 마흔두 달 동안 짓밟으리라</div>
+        <div class="verse"><span class="verse-num">3</span> 내가 나의 두 증인에게 권세를 주리니 그들이 굵은 베옷을 입고 천이백육십 일을 예언하리라</div>
+        <div class="verse"><span class="verse-num">4</span> 그들은 이 땅의 주 앞에 서 있는 두 감람나무와 두 촛대니</div>
+        <div class="verse"><span class="verse-num">5</span> 만일 누구든지 그들을 해하고자 하면 그들의 입에서 불이 나와서 그들의 원수를 삼켜 버릴 것이요 누구든지 그들을 해하고자 하면 반드시 그와 같이 죽임을 당하리라</div>
+        <div class="verse"><span class="verse-num">6</span> 그들이 권능을 가지고 하늘을 닫아 그 예언을 하는 날 동안 비가 오지 못하게 하고 또 권능을 가지고 물을 피로 변하게 하고 아무 때든지 원하는 대로 여러 가지 재앙으로 땅을 치리로다</div>
+        <div class="verse"><span class="verse-num">7</span> 그들이 그 증언을 마칠 때에 무저갱으로부터 올라오는 짐승이 그들과 더불어 전쟁을 일으켜 그들을 이기고 그들을 죽일 터인즉</div>
+        <div class="verse"><span class="verse-num">8</span> 그들의 시체가 큰 성 길에 있으리니 그 성은 영적으로 하면 소돔이라고도 하고 애굽이라고도 하니 곧 그들의 주께서 십자가에 못 박히신 곳이라</div>
+        <div class="verse"><span class="verse-num">9</span> 백성들과 족속과 방언과 나라 중에서 사람들이 그 시체를 사흘 반 동안을 보며 무덤에 장사하지 못하게 하리로다</div>
+        <div class="verse"><span class="verse-num">10</span> 이 두 선지자가 땅에 사는 자들을 괴롭게 한 고로 땅에 사는 자들이 그들의 죽음을 즐거워하고 기뻐하여 서로 예물을 보내리라 하더라</div>
+        <div class="verse"><span class="verse-num">11</span> 삼 일 반 후에 하나님께로부터 생기가 그들 속에 들어가매 그들이 발로 일어서니 구경하는 자들이 크게 두려워하더라</div>
+        <div class="verse"><span class="verse-num">12</span> 하늘로부터 큰 음성이 있어 이리로 올라오라 함을 그들이 듣고 구름을 타고 하늘로 올라가니 그들의 원수들도 구경하더라</div>
+        <div class="verse"><span class="verse-num">13</span> 그 때에 큰 지진이 나서 성 십분의 일이 무너지고 지진에 죽은 사람이 칠천이라 그 남은 자들이 두려워하여 영광을 하늘의 하나님께 돌리더라</div>
+        <div class="verse"><span class="verse-num">14</span> 둘째 화는 지나갔으나 보라 셋째 화가 속히 이르는도다</div>
+        <div class="verse"><span class="verse-num">15</span> 일곱째 천사가 나팔을 불매 하늘에 큰 음성들이 나서 이르되 세상 나라가 우리 주와 그의 그리스도의 나라가 되어 그가 세세토록 왕 노릇 하시리로다 하니</div>
+        <div class="verse"><span class="verse-num">16</span> 하나님 앞에서 자기 보좌에 앉아 있던 이십사 장로가 엎드려 얼굴을 땅에 대고 하나님께 경배하여</div>
+        <div class="verse"><span class="verse-num">17</span> 이르되 감사하옵나니 옛적에도 계셨고 지금도 계신 주 하나님 곧 전능하신 이여 친히 큰 권능을 잡으시고 왕 노릇 하시도다</div>
+        <div class="verse"><span class="verse-num">18</span> 이방들이 분노하매 주의 진노가 내려 죽은 자를 심판하시며 종 선지자들과 성도들과 또 작은 자든지 큰 자든지 주의 이름을 경외하는 자들에게 상 주시며 또 땅을 망하게 하는 자들을 멸망시키실 때로소이다 하더라</div>
+        <div class="verse"><span class="verse-num">19</span> 이에 하늘에 있는 하나님의 성전이 열리니 성전 안에 하나님의 언약궤가 보이며 또 번개와 음성들과 우레와 지진과 큰 우박이 있더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- STREAMING_CHUNK:주기도문 및 마무리 텍스트 렌더링... -->
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
