@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 123</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 기본 설정 */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문) --- */
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 --- */
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 15px 20px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 1. 상단 타이틀 -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 123</h1>
+        <p class="sub-title">찬송가 69장 온 천하 만물 우러러</p>
+        <p class="sub-title">잠언 30~31장 — 진주보다 귀한 여인</p>
+    </div>
+
+    <!-- 2. 사도신경 -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- 3. 찬송가 이미지 -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 69장</div>
+        <!-- 구글 드라이브 우회 주소 적용 -->
+        <img src="https://lh3.googleusercontent.com/d/1QftLpBfJvoGlWRkC07hqjr5cDNOTlg28" alt="찬송가 69장 악보" class="hymn-image">
+    </div>
+
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 잠언 30~31장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 아굴의 기도는 두 가지입니다.</span>
+            아굴은 <strong>헛된 것과 거짓말을 자신에게서 멀리 떠나게 해달라</strong>고 기도합니다. 이어서 <strong>부하게도 마시고 가난하게도 되지 않기를</strong> 기도합니다(잠 30:7~9). 그의 간구에는 <strong>하나님의 이름을 욕되게 하지 않으려는 궁극적인 목적이 깔려 있습니다.</strong><br><br>
+            아굴은 자신의 무지를 철저하게 깨달은 사람입니다.
+            <div class="quote">
+                <strong>아굴의 지혜는 바로 여기서부터 시작됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 아굴은 땅에서 작지만 가장 지혜로운 것, 네 가지를 소개합니다.</span>
+            아굴이 말하는 <strong>'작고도 가장 지혜로운 것'</strong>들은 개미, 사반, 메뚜기, 도마뱀입니다. 하나같이 보잘것없어 보이지만 <strong>틀림없이 지혜롭게 창조된 것들</strong>입니다. 아굴은 이들에게서 <strong>깊은 지혜를 배울 수 있다</strong>고 말합니다(잠 30:24~28).
+            <div class="quote">
+                <strong>첫째, 개미</strong> — 어려움을 미리 대비해 준비하는 모습을 보여줍니다.<br>
+                <strong>둘째, 사반</strong> — 반석 위에 집을 지어야 튼튼하다는 사실을 아는 동물입니다. 그래서 바위 사이에 집을 지어 무리를 보호합니다.<br>
+                <strong>셋째, 메뚜기</strong> — 자신의 약함 때문에 <strong>뭉쳐야 산다는 진리를 터득하고</strong> 떼를 지어 살아갑니다.<br>
+                <strong>넷째, 도마뱀</strong> — 손에 잡힐 만해도 궁중에 거하며 <strong>당당하게 자신의 살 길을 찾는 모습</strong>을 보여줍니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 르무엘 왕에게 주는 어머니의 충고는 두 가지입니다.</span>
+            <div class="quote">
+                <strong>첫째,</strong> 왕의 힘을 어디에 사용할 것인가에 관한 것입니다. <strong>왕이 그 권력과 재물을 어떻게 사용할 것인가는 매우 중요합니다.</strong><br>
+                <strong>둘째,</strong> 여인이 가정에서 차지하는 위치가 얼마나 중요한지 강조합니다.
+            </div>
+            르무엘 왕의 어머니는 <strong>하나님께 서원하여 낳은 아들이 하나님께서 기뻐하시는 공의로운 왕이 되기를 바랐습니다.</strong> 그래서 아들에게 이처럼 지혜로운 두 가지 조언을 했던 것입니다(잠 31장).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 왕의 본분은 재판을 통해 곤고한 자를 신원하는 것입니다.</span>
+            르무엘 왕의 어머니는 이렇게 지도자의 자질에 대해 제시합니다.
+            <div class="quote">
+                <strong>"너는 말 못하는 자와 모든 고독한 자의 송사를 위하여 입을 열지니라. 너는 입을 열어 공의로 재판하여 곤고한 자와 궁핍한 자를 신원할지니라"</strong> (잠 31:8~9)
+            </div>
+            <strong>왕의 가장 중요한 본분은 재판을 통해 곤고한 자를 신원하는 것</strong>이라고 강조합니다.
+            <div class="quote">
+                <strong>"재판이 하나님께 속해 있다"</strong> (신 1:17)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 진주보다 더 귀한 현숙한 여인이 가정도, 세상도 바꿉니다.</span>
+            이스라엘의 왕은 <strong>이스라엘을 제사장 나라로 세워가기 위해 모든 능력을 집중해야 합니다.</strong> 평범한 가정에서도 지혜로운 여인으로 말미암아 가정이 세워질 수도 있고, 어리석은 여인으로 말미암아 <strong>가정이 무너질 수도 있습니다.</strong> 하물며 국가를 경영하는 왕에게 <strong>아내는 더욱 소중한 존재</strong>입니다.<br><br>
+            르무엘 왕의 어머니는 <strong>현숙한 여인, 칭찬받는 아내</strong>에 대해 말합니다(잠 31:10~31).
+            <div class="quote">
+                <strong>진주보다 귀한 현숙한 여인의 가치는 가정을 넘어 세상을 바꾸는 힘이 됩니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 잠언 30~31장 '진주보다 귀한 여인'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- 5. 성경 본문 -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 잠언 30장 -->
+        <div class="chapter-title">잠언 30장 (1~33절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이 말씀은 야게의 아들 아굴의 잠언이니 그가 이디엘 곧 이디엘과 우갈에게 이른 것이니라</div>
+        <div class="verse"><span class="verse-num">2</span> 나는 다른 사람에게 비하면 짐승이라 내게는 사람의 총명이 있지 아니하니라</div>
+        <div class="verse"><span class="verse-num">3</span> 나는 지혜를 배우지 못하였고 또 거룩하신 자를 아는 지식이 없거니와</div>
+        <div class="verse"><span class="verse-num">4</span> 하늘에 올라갔다가 내려온 자가 누구인지, 바람을 그 장중에 모은 자가 누구인지, 물을 옷에 싼 자가 누구인지, 땅의 모든 끝을 정한 자가 누구인지, 그의 이름이 무엇인지, 그의 아들의 이름이 무엇인지 너는 아느냐</div>
+        <div class="verse"><span class="verse-num">5</span> 하나님의 말씀은 다 순전하며 하나님은 그를 의지하는 자의 방패시니라</div>
+        <div class="verse"><span class="verse-num">6</span> 너는 그의 말씀에 더하지 말라 그가 너를 책망하시겠고 너는 거짓말하는 자가 될까 두려우니라</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 두 가지 일을 주께 구하였사오니 내가 죽기 전에 내게 거절하지 마시옵소서</div>
+        <div class="verse"><span class="verse-num">8</span> 곧 헛된 것과 거짓말을 내게서 멀리 하옵시며 나를 가난하게도 마옵시고 부하게도 마옵시고 오직 필요한 양식으로 나를 먹이시옵소서</div>
+        <div class="verse"><span class="verse-num">9</span> 혹 내가 배불러서 하나님을 모른다 여호와가 누구냐 할까 하오며 혹 내가 가난하여 도둑질하고 내 하나님의 이름을 욕되게 할까 두려워함이니이다</div>
+        <div class="verse"><span class="verse-num">10</span> 너는 종을 그의 상전에게 비방하지 말라 그가 너를 저주하겠고 너는 죄책을 당할까 두려우니라</div>
+        <div class="verse"><span class="verse-num">11</span> 아비를 저주하며 어미를 축복하지 아니하는 무리가 있느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 스스로 깨끗한 자로 여기면서도 자기의 더러운 것을 씻지 아니하는 무리가 있느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 눈이 심히 높으며 눈꺼풀이 높이 들린 무리가 있느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 앞니는 장검 같고 어금니는 군도 같아서 가난한 자를 땅에서 삼키며 궁핍한 자를 사람 중에서 삼키는 무리가 있느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 거머리에게는 두 딸이 있어 다오 다오 하느니라 족한 줄을 알지 못하여 족하다 하지 아니하는 것 서넛이 있나니</div>
+        <div class="verse"><span class="verse-num">16</span> 곧 스올과 아이 배지 못하는 태와 물로 채울 수 없는 땅과 족하다 하지 아니하는 불이니라</div>
+        <div class="verse"><span class="verse-num">17</span> 아비를 조롱하며 어미 순종하기를 싫어하는 자의 눈은 골짜기의 까마귀에게 쪼이고 독수리 새끼에게 먹히리라</div>
+        <div class="verse"><span class="verse-num">18</span> 내가 심히 기이히 여기고도 깨닫지 못하는 것 서넛이 있나니</div>
+        <div class="verse"><span class="verse-num">19</span> 곧 공중에 날아다니는 독수리의 자취와 반석 위로 기어 다니는 뱀의 자취와 바다로부터 지나다니는 배의 자취와 남자가 여자와 함께 한 자취며</div>
+        <div class="verse"><span class="verse-num">20</span> 음녀의 자취도 그러하니라 그가 먹고 그의 입을 씻음 같이 말하기를 내가 악을 행하지 아니하였다 하느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 세상을 진동시키며 세상이 견딜 수 없게 하는 것 서넛이 있나니</div>
+        <div class="verse"><span class="verse-num">22</span> 곧 종이 임금된 것과 미련한 자가 음식으로 배부른 것과</div>
+        <div class="verse"><span class="verse-num">23</span> 미움 받는 여자가 시집 간 것과 여종이 주모를 이은 것이니라</div>
+        <div class="verse"><span class="verse-num">24</span> 땅에 작고도 가장 지혜로운 것 넷이 있나니</div>
+        <div class="verse"><span class="verse-num">25</span> 곧 힘이 없는 종류로되 먹을 것을 여름에 준비하는 개미와</div>
+        <div class="verse"><span class="verse-num">26</span> 약한 종류로되 집을 바위 사이에 짓는 사반과</div>
+        <div class="verse"><span class="verse-num">27</span> 임금이 없으되 다 떼를 지어 나아가는 메뚜기와</div>
+        <div class="verse"><span class="verse-num">28</span> 손에 잡힐 만하여도 왕궁에 있는 도마뱀이니라</div>
+        <div class="verse"><span class="verse-num">29</span> 잘 걸으며 위풍 있게 다니는 것 서넛이 있나니</div>
+        <div class="verse"><span class="verse-num">30</span> 곧 짐승 중에 가장 강하여 아무 짐승 앞에서도 물러가지 아니하는 사자와</div>
+        <div class="verse"><span class="verse-num">31</span> 사냥개와 숫염소와 및 당할 수 없는 왕이니라</div>
+        <div class="verse"><span class="verse-num">32</span> 만일 네가 미련하여 스스로 높은 체하였거나 혹 악한 일을 도모하였거든 네 손으로 입을 막으라</div>
+        <div class="verse"><span class="verse-num">33</span> 대저 젖을 저으면 엉긴 젖이 되고 코를 비틀면 피가 나는 것 같이 노를 격동하면 다툼이 남이니라</div>
+
+        <!-- 잠언 31장 -->
+        <div class="chapter-title">잠언 31장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 르무엘 왕이 말씀한 바 곧 그의 어머니가 그를 훈계한 잠언이라</div>
+        <div class="verse"><span class="verse-num">2</span> 내 아들아 내가 무엇을 말하랴 내 태에서 난 아들아 내가 무엇을 말하랴 서원대로 얻은 아들아 내가 무엇을 말하랴</div>
+        <div class="verse"><span class="verse-num">3</span> 네 힘을 여자들에게 쓰지 말며 왕들을 멸망시키는 일을 행하지 말지어다</div>
+        <div class="verse"><span class="verse-num">4</span> 르무엘아 포도주를 마시는 것이 왕들에게 마땅하지 아니하고 왕들에게 마땅하지 아니하며 독주를 찾는 것이 주권자들에게 마땅하지 않도다</div>
+        <div class="verse"><span class="verse-num">5</span> 술을 마시다가 법을 잊어버리고 모든 곤고한 자들의 송사를 굽게 할까 두려우니라</div>
+        <div class="verse"><span class="verse-num">6</span> 독주는 죽게 된 자에게, 포도주는 마음에 근심하는 자에게 줄지어다</div>
+        <div class="verse"><span class="verse-num">7</span> 그는 마시고 자기의 빈궁한 것을 잊어버리겠고 다시 자기의 고통을 기억하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">8</span> 너는 말 못하는 자와 모든 고독한 자의 송사를 위하여 입을 열지니라</div>
+        <div class="verse"><span class="verse-num">9</span> 너는 입을 열어 공의로 재판하여 곤고한 자와 궁핍한 자를 신원할지니라</div>
+        <div class="verse"><span class="verse-num">10</span> 누가 현숙한 여인을 찾아 얻겠느냐 그의 값은 진주보다 더 하니라</div>
+        <div class="verse"><span class="verse-num">11</span> 그런 자의 남편의 마음은 그를 믿나니 산업이 핍절하지 아니하겠으며</div>
+        <div class="verse"><span class="verse-num">12</span> 그런 자는 살아 있는 동안에 그의 남편에게 선을 행하고 악을 행하지 아니하느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그는 양털과 삼을 구하여 부지런히 손으로 일하며</div>
+        <div class="verse"><span class="verse-num">14</span> 상인의 배와 같아서 먼 데서 양식을 가져 오며</div>
+        <div class="verse"><span class="verse-num">15</span> 밤이 새기 전에 일어나서 자기 집안 사람들에게 음식을 나누어 주며 여종들에게 일을 정하여 맡기며</div>
+        <div class="verse"><span class="verse-num">16</span> 밭을 살펴 보고 사며 자기의 손으로 번 것을 가지고 포도원을 일구며</div>
+        <div class="verse"><span class="verse-num">17</span> 힘 있게 허리를 묶으며 자기의 팔을 강하게 하며</div>
+        <div class="verse"><span class="verse-num">18</span> 자기의 장사가 잘 되는 줄을 깨닫고 밤에 등불을 끄지 아니하며</div>
+        <div class="verse"><span class="verse-num">19</span> 손으로 솜뭉치를 들고 손가락으로 가락을 잡으며</div>
+        <div class="verse"><span class="verse-num">20</span> 그는 곤고한 자에게 손을 펴며 궁핍한 자를 위하여 손을 내밀며</div>
+        <div class="verse"><span class="verse-num">21</span> 자기 집 사람들은 다 홍색 옷을 입었으므로 눈이 와도 그는 자기 집 사람들을 위하여 염려하지 아니하며</div>
+        <div class="verse"><span class="verse-num">22</span> 그는 자기를 위하여 아름다운 이불을 지으며 세마포와 자색 옷을 입으며</div>
+        <div class="verse"><span class="verse-num">23</span> 그의 남편은 그 땅의 장로들과 함께 성문에 앉으며 사람들의 인정을 받으며</div>
+        <div class="verse"><span class="verse-num">24</span> 그는 베로 옷을 지어 팔며 띠를 만들어 상인들에게 맡기며</div>
+        <div class="verse"><span class="verse-num">25</span> 능력과 존귀로 옷을 삼고 후일을 웃으며</div>
+        <div class="verse"><span class="verse-num">26</span> 입을 열어 지혜를 베풀며 그의 혀로 인애의 법을 말하며</div>
+        <div class="verse"><span class="verse-num">27</span> 자기의 집안 일을 보살피고 게을리 얻은 양식을 먹지 아니하나니</div>
+        <div class="verse"><span class="verse-num">28</span> 그의 자식들은 일어나 감사하며 그의 남편은 칭찬하기를</div>
+        <div class="verse"><span class="verse-num">29</span> 덕행 있는 여자가 많으나 그대는 모든 여자보다 뛰어나다 하느니라</div>
+        <div class="verse"><span class="verse-num">30</span> 고운 것도 거짓되고 아름다운 것도 헛되나 오직 여호와를 경외하는 여자는 칭찬을 받을 것이라</div>
+        <div class="verse"><span class="verse-num">31</span> 그 손의 열매가 그에게로 돌아갈 것이요 그 행한 일로 말미암아 성문에서 칭찬을 받으리라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- 6. 주기도문 -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 무 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
