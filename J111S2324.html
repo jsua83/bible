@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 111</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 111</h1>
+        <p class="sub-title">찬송가 347장 허락하신 새 땅에</p>
+        <p class="sub-title">사무엘하 23장~24장 — 민수기 인구조사 vs 다윗의 인구조사</p>
+    </div>
+
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 347장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1nQoE2uppHsH97urIc-Bp8BDidY6jivUk" alt="찬송가 347장 악보" class="hymn-image">
+    </div>
+
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사무엘하 23장~24장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 다윗은 선지자 모세, 사무엘, 나단, 갓을 통해 하나님의 언약을 받습니다.</span>
+            다윗은 평생 <strong>하나님께로 마음을 향하여 '하늘 문'을 열고 살았습니다.</strong> 다윗은 율법을 소중히 지켰으며 <strong>선지자들을 통해 전해주시는 하나님의 언약을 받으며 살았습니다.</strong>
+            <div class="quote">
+                <strong>선지자 사무엘을 통해</strong> 하나님의 언약을 받았습니다(삼상 16:13).<br>
+                <strong>선지자 나단을 통해</strong> 하나님의 언약을 받았습니다(삼하 7:15~17).<br>
+                <strong>선지자 갓을 통해</strong> 인구조사 후 세 가지 처벌 중 하나를 선택하라는 하나님의 말씀을 들었습니다(삼하 24:11~12).
+            </div>
+            <div class="quote">
+                <strong>선지자들을 통해 늘 하나님의 언약과 말씀을 들은 다윗은 그 언약들에 기초하여 메시아 시대를 갈망했습니다.</strong> (시 110:1)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 용사가 용사를 만듭니다.</span>
+            우리는 두려움 없이 살기를 바라지만 <strong>사실 두려움을 알지 못하면 '용기'는 끝내 알 수 없습니다.</strong> 다윗도 두려움 가운데 늘 <strong>하나님으로 용기를 냈습니다.</strong> 다윗과 함께 용기를 냈던 <strong>다윗의 용사들</strong>입니다(삼하 23:8~39).
+            <div class="quote">
+                <strong>중앙 조직</strong> — 군대 장관 요압과 30인의 용사들. 정예 용사로 구성된 상비군으로 열두 개 반이 있으며 매월 한 개 반이 돌아가며 근무하는 정규군. <strong>한 개 반의 반열은 24,000명</strong>입니다.<br>
+                <strong>시위대</strong> — 대장 브나야와 그렛, 블렛 사람과 책사들<br>
+                <strong>다윗의 측근</strong> — 다윗과 늘 함께했던 <strong>37명의 용사들</strong>
+            </div>
+            <div class="quote">
+                <strong>이처럼 다윗 같은 용사가 또 다른 용사를 만들었습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 민수기 인구조사와 다윗의 인구조사는 다릅니다.</span>
+            출애굽 후 광야에서 있었던 <strong>민수기의 두 번의 인구조사는 제사장 나라를 위한 세 가지 목적으로 시행</strong>되었습니다.
+            <div class="quote">
+                <strong>첫째,</strong> '싸움에 나갈 만한 자'의 계수였습니다(민 1:2~3).<br>
+                <strong>둘째,</strong> '제사 제도를 위한 자'의 계수였습니다(민 3:40~41).<br>
+                <strong>셋째,</strong> '가나안 땅 분배를 위한 자'의 계수였습니다(민 33:54).
+            </div>
+            그런데 <strong>다윗의 인구조사 목적은 민수기 때와는 달리 다윗 자신의 업적을 과시하기 위함</strong>이었습니다. 국민적 이익이나 하나님의 영광을 꿈꾸는 <strong>공공성을 위해서라기보다는 다윗의 통치 업적에 대한 일종의 과시가 들어 있었던 것이 문제</strong>였습니다.
+            <div class="quote">
+                <strong>다윗의 인구조사는 결국 다윗에게 씻을 수 없는 죄가 되고 다윗은 이로 인해 우리아 사건 이후 다시 한번 하나님께 철저히 회개해야 했습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 다윗은 '숫자 과시'가 죄라는 사실을 깨닫게 됩니다.</span>
+            세상에서는 '숫자'가 곧 성공이요 자기 업적이지만 <strong>하나님 앞에서는 한 영혼이 천하보다 소중합니다.</strong> 그런데 다윗이 그 사실을 알고 있었음에도 불구하고 <strong>자기 과시를 위해 인구를 조사한 것</strong>입니다.
+            <br><br>
+            다윗이 인구조사에 대해 하나님께 회개하자 하나님께서 갓 선지자를 통해 이를 날카롭게 처벌하시며 <strong>다윗에게 다음 세 가지 중 처벌 방법을 선택하라고 말씀하십니다</strong>(삼하 24:11~13).
+            <div class="quote">
+                <strong>첫째,</strong> 7년 기근입니다. (역대상에서는 3년으로 기록)<br>
+                <strong>둘째,</strong> 3달간 쫓기는 일입니다.<br>
+                <strong>셋째,</strong> 3일의 전염병입니다.
+            </div>
+            이에 다윗이 <strong>3일 전염병을 선택하고 이로 인해 이스라엘 백성 7만 명이 죽습니다</strong>(삼하 24:14~15). 자신의 잘못으로 인해 이스라엘 백성 7만 명이 죽자 <strong>다윗이 다시 하나님께 회개하며 백성들이 아니라 자신과 자신의 집안을 치실 것을 간구합니다</strong>(대상 21:17).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 아브라함과 이삭의 모리아산이 1,000년 후 다윗과 솔로몬의 성전 터가 됩니다.</span>
+            다윗의 회개를 들으시고 <strong>하나님께서 갓 선지자를 통해 다윗에게 용서를 위한 제사를 명하십니다</strong>(삼하 24:18). 이에 <strong>다윗은 아라우나 타작마당에서 하나님께 번제와 화목제를 드림으로 용서를 받습니다.</strong>
+            <br><br>
+            다윗이 하나님께 번제와 화목제를 드린 <strong>아라우나(오르난)의 타작마당은 다윗 시대 1,000년 전 아브라함이 아들 이삭을 제물로 드리려 했던 '모리아산'</strong>입니다.
+            <div class="quote">
+                <strong>이후 이곳에 솔로몬 성전이 건축됩니다.</strong> (대하 3:1)
+            </div>
+        </div>
+    </div>
+
+    <div class="intro-text">
+        오늘은 사무엘하 23장~24장 '민수기 인구조사 vs 다윗의 인구조사'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">사무엘하 23장 (1~39절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이는 다윗의 마지막 말이라 이새의 아들 다윗이 말함이여 높이 세워진 자, 야곱의 하나님께로부터 기름 부음 받은 자, 이스라엘의 노래 잘 하는 자가 말하노라</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와의 영이 나를 통하여 말씀하심이여 그의 말씀이 내 혀에 있도다</div>
+        <div class="verse"><span class="verse-num">3</span> 이스라엘의 하나님이 말씀하시며 이스라엘의 반석이 내게 이르시기를 사람을 공의로 다스리는 자, 하나님을 경외함으로 다스리는 자여</div>
+        <div class="verse"><span class="verse-num">4</span> 그는 돋는 해의 아침 빛 같고 구름 없는 아침 같고 비 내린 후의 광선으로 땅에서 움이 돋는 새 풀 같으니라 하시도다</div>
+        <div class="verse"><span class="verse-num">5</span> 내 집이 하나님 앞에 이같지 아니하냐 하나님이 나와 더불어 영원한 언약을 세우사 만사에 구비하고 견고하게 하셨으니 나의 모든 구원과 나의 모든 소원을 어찌 이루지 아니하시랴</div>
+        <div class="verse"><span class="verse-num">6</span> 그러나 사악한 자는 다 내버려질 가시나무 같으니 이는 손으로 잡을 수 없음이로다</div>
+        <div class="verse"><span class="verse-num">7</span> 그것들을 만지는 자는 철과 창자루를 가져야 하리니 그것들이 당장에 불살리리로다 하니라</div>
+        <div class="verse"><span class="verse-num">8</span> 다윗의 용사들의 이름은 이러하니라 다그몬 사람 요셉밧세벳이라고도 하고 에센 사람 아디노라고도 하는 자는 군지휘관의 두목이라 그가 단번에 팔백 명을 쳐죽였더라</div>
+        <div class="verse"><span class="verse-num">9</span> 그 다음은 아호아 사람 도대의 아들 엘르아살이니 다윗과 함께 한 세 용사 중의 한 사람이라 블레셋 사람들이 싸우려고 거기에 모이매 이스라엘 사람들이 물러간지라 세 용사가 싸움을 돋우고</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 나가서 손이 피곤하여 그의 손이 칼에 붙기까지 블레셋 사람을 치니라 그 날에 여호와께서 크게 이기게 하셨으므로 백성들은 돌아와 그의 뒤를 따라가며 노략할 뿐이었더라</div>
+        <div class="verse"><span class="verse-num">11</span> 그 다음은 하랄 사람 아게의 아들 삼마라 블레셋 사람들이 사기가 올라 거기 녹두나무가 가득한 한쪽 밭에 모이매 백성들은 블레셋 사람들 앞에서 도망하되</div>
+        <div class="verse"><span class="verse-num">12</span> 그는 그 밭 가운데 서서 막아 블레셋 사람들을 친지라 여호와께서 큰 구원을 이루시니라</div>
+        <div class="verse"><span class="verse-num">13</span> 또 삼십 두목 중 세 사람이 곡식 벨 때에 아둘람 굴에 내려가 다윗에게 나아갔는데 때에 블레셋 사람의 한 무리가 르바임 골짜기에 진 쳤더라</div>
+        <div class="verse"><span class="verse-num">14</span> 그 때에 다윗은 산성에 있고 그 때에 블레셋 사람의 요새는 베들레헴에 있는지라</div>
+        <div class="verse"><span class="verse-num">15</span> 다윗이 소원하여 이르되 베들레헴 성문 곁 우물 물을 누가 내게 마시게 할까 하매</div>
+        <div class="verse"><span class="verse-num">16</span> 세 용사가 블레셋 사람의 진영을 돌파하고 지나가서 베들레헴 성문 곁 우물 물을 길어 가지고 다윗에게로 왔으나 다윗이 마시기를 기뻐하지 아니하고 그 물을 여호와께 부어 드리며</div>
+        <div class="verse"><span class="verse-num">17</span> 이르되 여호와여 내가 나를 위하여 결단코 이런 일을 하지 아니하리이다 이는 목숨을 걸고 갔던 사람들의 피가 아니니이까 하고 마시기를 즐겨하지 아니하니라 세 용사가 이런 일을 행하였더라</div>
+        <div class="verse"><span class="verse-num">18</span> 또 스루야의 아들 요압의 아우 아비새이니 그는 그 세 사람의 우두머리라 그가 그의 창을 들어 삼백 명을 죽이고 세 사람 중에 이름을 얻었으니</div>
+        <div class="verse"><span class="verse-num">19</span> 그는 세 사람 중에 가장 존귀한 자가 아니냐 그가 그들의 우두머리가 되었으나 그러나 첫 세 사람에게는 미치지 못하였더라</div>
+        <div class="verse"><span class="verse-num">20</span> 또 갑스엘 용사의 손자 여호야다의 아들 브나야이니 그는 용맹스런 일을 행한 자라 일찍이 모압 아리엘의 아들 둘을 죽였고 또 눈이 올 때에 구덩이에 내려가서 사자 한 마리를 쳐죽였으며</div>
+        <div class="verse"><span class="verse-num">21</span> 또 장대한 애굽 사람을 죽였는데 그의 손에 창이 있어도 그가 막대기를 가지고 내려가 그 애굽 사람의 손에서 창을 빼앗아 그 창으로 그를 죽였더라</div>
+        <div class="verse"><span class="verse-num">22</span> 여호야다의 아들 브나야가 이런 일을 행하였으므로 세 용사 중에 이름을 얻고</div>
+        <div class="verse"><span class="verse-num">23</span> 삼십 명보다 존귀하나 그러나 세 사람에게는 미치지 못하였더라 다윗이 그를 세워 시위대 대장을 삼았더라</div>
+        <div class="verse"><span class="verse-num">24</span> 요압의 아우 아사헬은 삼십 명 중의 하나요 또 베들레헴 도도의 아들 엘하난과</div>
+        <div class="verse"><span class="verse-num">25</span> 하롯 사람 삼훗과 하롯 사람 엘리가와</div>
+        <div class="verse"><span class="verse-num">26</span> 발디 사람 헬레스와 드고아 사람 익게스의 아들 이라와</div>
+        <div class="verse"><span class="verse-num">27</span> 아나돗 사람 아비에셀과 후사 사람 므분내와</div>
+        <div class="verse"><span class="verse-num">28</span> 아호아 사람 살몬과 느도바 사람 마하래와</div>
+        <div class="verse"><span class="verse-num">29</span> 느도바 사람 바아나의 아들 헬렙과 베냐민 자손에 속한 기브아 사람 리배의 아들 잇대와</div>
+        <div class="verse"><span class="verse-num">30</span> 비라돈 사람 브나야와 가아스 시냇가에 사는 힛대와</div>
+        <div class="verse"><span class="verse-num">31</span> 아르바 사람 아비알본과 바르훔 사람 아스마웻과</div>
+        <div class="verse"><span class="verse-num">32</span> 사알본 사람 엘리아바와 야센의 아들 요나단과</div>
+        <div class="verse"><span class="verse-num">33</span> 하랄 사람 삼마와 아랄 사람 사랄의 아들 아히암과</div>
+        <div class="verse"><span class="verse-num">34</span> 마아가 사람의 손자 아하스배의 아들 엘리벨렛과 길로 사람 아히도벨의 아들 엘리암과</div>
+        <div class="verse"><span class="verse-num">35</span> 갈멜 사람 헤스래와 아랍 사람 바아래와</div>
+        <div class="verse"><span class="verse-num">36</span> 소바 사람 나단의 아들 이갈과 갓 사람 바니와</div>
+        <div class="verse"><span class="verse-num">37</span> 암몬 사람 셀렉과 스루야의 아들 요압의 무기를 잡은 자 브에롯 사람 나하래와</div>
+        <div class="verse"><span class="verse-num">38</span> 이델 사람 이라와 이델 사람 가렙과</div>
+        <div class="verse"><span class="verse-num">39</span> 헷 사람 우리아라 이상 총수가 삼십칠 명이었더라</div>
+
+        <div class="chapter-title">사무엘하 24장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 다시 이스라엘을 향하여 진노하사 그들을 치시려고 다윗을 격동시키사 가서 이스라엘과 유다의 인구를 조사하라 하신지라</div>
+        <div class="verse"><span class="verse-num">2</span> 이에 왕이 그 곁에 있는 군사령관 요압에게 이르되 너는 이스라엘 모든 지파 가운데로 다니며 이제 단에서부터 브엘세바까지 인구를 조사하여 백성의 수를 내게 보고하라 하니</div>
+        <div class="verse"><span class="verse-num">3</span> 요압이 왕께 아뢰되 이 백성이 얼마든지 왕의 하나님 여호와께서 백 배나 더하게 하사 내 주 왕의 눈으로 보게 하시기를 원하나이다 그런데 내 주 왕은 어찌하여 이런 일을 기뻐하시나이까 하되</div>
+        <div class="verse"><span class="verse-num">4</span> 왕의 명령이 요압과 군대 사령관들을 재촉한지라 요압과 사령관들이 이스라엘 인구를 조사하려고 왕 앞에서 물러나</div>
+        <div class="verse"><span class="verse-num">5</span> 요단을 건너 갓 골짜기 가운데 성읍 아로엘 오른쪽 곧 야셀 맞은쪽에 이르러 장막을 치고</div>
+        <div class="verse"><span class="verse-num">6</span> 길르앗에 이르고 닷딤홋시 땅에 이르고 또 다냐안에 이르러서는 시돈으로 돌아</div>
+        <div class="verse"><span class="verse-num">7</span> 두로 견고한 성에 이르고 히위 사람과 가나안 사람의 모든 성읍에 이르고 유다 남쪽으로 나와 브엘세바에 이르니라</div>
+        <div class="verse"><span class="verse-num">8</span> 그들 무리가 국내를 두루 돌아 아홉 달 스무 날 만에 예루살렘에 이르러</div>
+        <div class="verse"><span class="verse-num">9</span> 요압이 백성의 수를 왕께 보고하니 곧 이스라엘에서 칼을 빼는 담대한 자가 팔십만 명이요 유다 사람이 오십만 명이었더라</div>
+        <div class="verse"><span class="verse-num">10</span> 다윗이 백성을 조사한 후에 그의 마음에 자책하고 다윗이 여호와께 아뢰되 내가 이 일을 행함으로 큰 죄를 범하였나이다 여호와여 이제 간구하옵나니 종의 죄를 사하여 주옵소서 내가 심히 미련하게 행하였나이다 하니라</div>
+        <div class="verse"><span class="verse-num">11</span> 다윗이 아침에 일어날 때에 여호와의 말씀이 다윗의 선견자 된 선지자 갓에게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">12</span> 가서 다윗에게 말하기를 여호와께서 이와 같이 말씀하시기를 내가 네게 세 가지를 보이노니 너를 위하여 너는 그 중에서 하나를 택하라 내가 그것을 네게 행하리라 하셨다 하라 하시니</div>
+        <div class="verse"><span class="verse-num">13</span> 갓이 다윗에게 이르러 아뢰어 이르되 왕의 땅에 칠 년 기근이 있을 것이니이까 혹은 왕이 왕의 원수에게 쫓겨 석 달 동안 그들 앞에서 도망하실 것이니이까 혹은 왕의 땅에 사흘 동안 전염병이 있을 것이니이까 왕은 생각하여 보고 나를 보내신 이에게 무엇을 대답하게 하소서 하는지라</div>
+        <div class="verse"><span class="verse-num">14</span> 다윗이 갓에게 이르되 내가 고통 중에 있도다 청하건대 여호와께서는 긍휼이 크시니 우리가 여호와의 손에 빠지고 내가 사람의 손에 빠지지 아니하기를 원하노라 하는지라</div>
+        <div class="verse"><span class="verse-num">15</span> 이에 여호와께서 그 아침부터 정하신 때까지 전염병을 이스라엘에게 내리시니 단에서부터 브엘세바까지 백성의 죽은 자가 칠만 명이라</div>
+        <div class="verse"><span class="verse-num">16</span> 천사가 예루살렘을 향하여 그의 손을 들어 멸하려 하더니 여호와께서 이 재앙 내리심을 뉘우치사 백성을 멸하는 천사에게 이르시되 족하다 이제는 네 손을 거두라 하시니 여호와의 사자가 여부스 사람 아라우나의 타작 마당 곁에 있는지라</div>
+        <div class="verse"><span class="verse-num">17</span> 다윗이 백성을 치는 천사를 보고 곧 여호와께 아뢰어 이르되 나는 범죄하였고 악을 행하였거니와 이 양 무리는 무엇을 행하였나이까 청하건대 주의 손으로 나와 내 아버지의 집을 치소서 하니라</div>
+        <div class="verse"><span class="verse-num">18</span> 이 날에 갓이 다윗에게 이르러 그에게 아뢰되 올라가서 여부스 사람 아라우나의 타작 마당에서 여호와를 위하여 제단을 쌓으소서 하매</div>
+        <div class="verse"><span class="verse-num">19</span> 다윗이 여호와께서 명령하신 바 갓의 말대로 올라가니라</div>
+        <div class="verse"><span class="verse-num">20</span> 아라우나가 바라보다가 왕과 그의 부하들이 자기를 향하여 건너옴을 보고 나가서 왕 앞에서 얼굴을 땅에 대고 절하며</div>
+        <div class="verse"><span class="verse-num">21</span> 이르되 어찌하여 내 주 왕께서 종에게 임하시나이까 하니 다윗이 이르되 네게서 타작 마당을 사서 여호와께 제단을 쌓아 백성에게 내리는 재앙을 그치게 하려 함이라 하는지라</div>
+        <div class="verse"><span class="verse-num">22</span> 아라우나가 다윗에게 아뢰되 원하건대 내 주 왕은 좋게 여기시는 대로 취하여 드리소서 번제에 대하여는 소가 있고 땔 나무에 대하여는 마당질 하는 도구와 소의 멍에가 있나이다</div>
+        <div class="verse"><span class="verse-num">23</span> 왕이여 아라우나가 이것을 다 왕께 드리나이다 하고 또 왕께 아뢰되 왕의 하나님 여호와께서 왕을 기쁘게 받으시기를 원하나이다</div>
+        <div class="verse"><span class="verse-num">24</span> 왕이 아라우나에게 이르되 그렇지 아니하다 내가 값을 주고 네게서 사리라 값 없이는 내 하나님 여호와께 번제를 드리지 아니하리라 하고 다윗이 은 오십 세겔로 타작 마당과 소를 사고</div>
+        <div class="verse"><span class="verse-num">25</span> 그 곳에서 여호와를 위하여 제단을 쌓고 번제와 화목제를 드렸더니 이에 여호와께서 그 땅을 위한 기도를 들으시매 이스라엘에게 내리는 재앙이 그쳤더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

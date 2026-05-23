@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 119</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 119</h1>
+        <p class="sub-title">찬송가 430장 주와 같이 길 가는 것</p>
+        <p class="sub-title">잠언 10~15장 — 지혜자와 동행하면</p>
+    </div>
+
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 430장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1IQthV-g9UUWYakAkHb5-PK3tcu0z5OLg" alt="찬송가 430장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 잠언 10~15장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 추수 때를 놓치지 말아야 하나님께 예물을 드릴 수 있습니다.</span>
+            추수의 때에 추수하지 않으면 <strong>미래를 대비할 수 없습니다.</strong> 또한 그동안 열심히 노력한 한 해의 수고를 물거품으로 만듭니다. <strong>모든 일에는 시작도 중요하지만 마무리도 중요합니다.</strong><br><br>
+            이스라엘은 첫 수확의 때에 칠칠절로 감사하고 수확을 마무리할 때에 초막절로 하나님께 감사를 드립니다(민 28:26).
+            <div class="quote">
+                <strong>칠칠절</strong> — 처음 익은 열매로 이웃과 함께 여호와 앞에서 즐거워하라고 말씀하십니다(신 16:10~11).<br>
+                <strong>초막절</strong> — 모든 추수를 끝내면서 이웃과 함께 여호와 앞에서 즐거워하라고 말씀하십니다(신 16:13~15).<br><br>
+                <strong>추수 때를 놓치지 말아야 그 추수물을 가지고 하나님께 예물을 드리는 기쁨을 누릴 수 있고 이웃과 나눌 수 있는 복된 인생이 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 사랑은 허다한 허물을 덮습니다.</span>
+            <div class="quote">
+                <strong>"사랑은 허물을 덮는 것"</strong> (잠 10:12)
+            </div>
+            미움은 더 큰 미움을 만듭니다. <strong>미움으로 인해 다툼이 되고 다툼은 다시 미움이 되는 악순환이 될 뿐</strong>입니다. 당연히 그 결과는 파멸입니다. 그러나 <strong>사랑은 허물을 덮어 감사를 낳고 감사는 화목을 낳고 모두가 평화롭게 됩니다.</strong> 노아의 세 아들 중 두 아들이 아버지의 허물을 뒷걸음쳐 들어가 덮었습니다(창 9:23).<br><br>
+            또한 솔로몬은 반복적으로 <strong>입술의 말에 대해 교훈합니다</strong>(잠 10:19). 자신의 혀를 다스릴 수 있는 사람이라면 <strong>온몸을 다스릴 수 있는 사람</strong>입니다. 마음에 있는 것을 아무리 숨기려 해도 <strong>마음은 언제나 말을 통해 묻어 나온다</strong>는 사실입니다. 악한 입술로 이웃을 아프게 해서는 안 됩니다.<br><br>
+            사랑은 상대의 허물을 덮는 것을 넘어 <strong>상대를 위해 기쁨을 만드는 지혜를 만들어냅니다.</strong> 누군가를 위하려는 마음에서 지혜가 꽃을 피우게 되는 것입니다.
+            <div class="quote">
+                <strong>지혜로워지기를 원하는 사람은 나 아닌 다른 사람들을 '위하는 마음'이 있어야 합니다. 그 '위함' 속에서 지혜가 나오고 그 지혜가 기쁨이 솟아나는 원천이 되는 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 악인은 그 입술의 허물 때문에 그물에 걸리게 됩니다.</span>
+            솔로몬은 <strong>의인과 악인의 차이를 입술의 말로 분명하게 구분합니다</strong>(잠 12:13). 의인의 정직한 말은 생명을 구원하지만 <strong>악인은 그 입술의 허물로 말미암아 그물에 걸리게 됩니다.</strong><br><br>
+            예를 들어, 어리석은 말로 화를 자청했던 <strong>미갈과 시므이</strong>에게서 교훈을 얻는 반면, 곤란한 중에서도 결코 입술을 범죄하지 않았던 <strong>다윗과 욥</strong>에게서 의인의 모습을 보고 배울 수 있습니다. 입술의 말로 표현되는 의인과 악인의 차이는 이후 <strong>예수님과 함께 못 박혔던 좌우의 죄인들에게서도 명확히 드러납니다.</strong>
+            <div class="quote">
+                <strong>이처럼 악인의 말과 의인의 말은 하늘과 땅만큼이나 차이가 나며 결국 의인의 말은 그 입술의 열매가 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 겸손한 자는 권면을 듣는 지혜가 있습니다.</span>
+            하나님께서는 창조주이시고 인간은 하나님의 피조물입니다. 그러므로 <strong>인간은 그 한계를 철저히 인정하고 겸손히 엎드리는 것이 지혜요 존귀하게 되는 길</strong>입니다.
+            <div class="quote">
+                <strong>"여호와를 경외하는 것은 지혜의 훈계이고 겸손은 존귀의 길잡이입니다"</strong> (잠 15:33)
+            </div>
+            그리고 겸손에 더해 피조물인 인간이 더해야 할 지혜로운 일은 <strong>권면을 듣는 것</strong>입니다(잠 13:10). 불세출의 지도자 모세가 <strong>그의 장인 이드로의 권면을 지혜롭게 경청하여 듣고 그 권면을 실행하는 모습</strong>이 성경에 기록되어 있습니다(출 18:25~26). 그러나 어리석은 남유다의 시드기야는 <strong>끝내 예레미야의 지혜로운 충고를 듣지 않음으로 결국 비참한 최후를 맞게 됩니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 지혜로운 자와 동행하면 지혜를 얻습니다.</span>
+            솔로몬은 <strong>지혜로운 자와 동행하면 지혜를 얻고 미련한 자와 사귀면 해를 받는다</strong>고 말합니다(잠 13:20). <strong>칭찬에 귀를 좁게 열고 충고에 귀를 넓게 여는 지혜가 주변의 지혜자들을 자신의 귀한 친구로 만드는 비결</strong>입니다.<br><br>
+            성경에서 <strong>지혜로운 친구와 동행해 지혜를 얻은 경우</strong>는 다음과 같습니다.
+            <div class="quote">
+                여호수아와 갈렙(수 14:13~14) / 다윗과 요나단(삼상 18:1) / 다윗과 후새(삼하 15:37) / 에스더와 모르드개(에 9:29) / 다니엘과 그의 세 친구(단 2:17~18) / 바울과 바나바(행 9:26~27) / 바울과 오네시모, 그리고 빌레몬(몬 1:9~12)
+            </div>
+            성경에서 <strong>악한 친구와 동행해 지혜를 얻지 못한 경우</strong>는 다음과 같습니다.
+            <div class="quote">
+                암논과 요나답(삼하 13:3) / 르호보암과 그의 친구들(왕상 12:10)<br><br>
+                <strong>우리의 가장 지혜로운 친구는 우리 주 예수 그리스도이십니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 잠언 10~15장 '지혜자와 동행하면'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 잠언 10장 -->
+        <div class="chapter-title">잠언 10장 (1~32절)</div>
+        <div class="verse"><span class="verse-num">1</span> 솔로몬의 잠언이라 지혜로운 아들은 아비를 기쁘게 하거니와 미련한 아들은 어미의 근심이니라</div>
+        <div class="verse"><span class="verse-num">2</span> 불의의 재물은 무익하여도 공의는 죽음에서 건지느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와께서 의인의 영혼은 주리지 않게 하시나 악인의 소욕은 물리치시느니라</div>
+        <div class="verse"><span class="verse-num">4</span> 손을 게으르게 놀리는 자는 가난하게 되고 손이 부지런한 자는 부하게 되느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 여름에 거두는 자는 지혜로운 아들이나 추수 때에 자는 자는 부끄러움을 끼치는 아들이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 의인의 머리에는 복이 임하나 악인의 입은 독을 머금었느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 의인을 기념할 때에는 칭찬하거니와 악인의 이름은 썩게 되느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 마음이 지혜로운 자는 계명을 받거니와 입이 미련한 자는 멸망하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 바른 길로 행하는 자는 걸음이 평안하려니와 굽은 길로 행하는 자는 드러나리라</div>
+        <div class="verse"><span class="verse-num">10</span> 눈짓하는 자는 근심을 끼치고 입이 미련한 자는 멸망하느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 의인의 입은 생명의 샘이라도 악인의 입은 독을 머금었느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 미움은 다툼을 일으켜도 사랑은 모든 허물을 가리느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 명철한 자의 입술에는 지혜가 있어도 지혜 없는 자의 등을 위하여는 채찍이 있느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 지혜로운 자는 지식을 간직하거니와 미련한 자의 입은 멸망에 가까우니라</div>
+        <div class="verse"><span class="verse-num">15</span> 부자의 재물은 그의 견고한 성이요 가난한 자의 궁핍은 그의 멸망이니라</div>
+        <div class="verse"><span class="verse-num">16</span> 의인의 수고는 생명에 이르고 악인의 소득은 죄에 이르느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 훈계를 지키는 자는 생명 길로 행하여도 징계를 버리는 자는 그릇 가느니라</div>
+        <div class="verse"><span class="verse-num">18</span> 미움을 감추는 자는 거짓된 입술을 가진 자요 중상하는 자는 미련한 자이니라</div>
+        <div class="verse"><span class="verse-num">19</span> 말이 많으면 허물을 면하기 어려우나 그 입술을 제어하는 자는 지혜가 있느니라</div>
+        <div class="verse"><span class="verse-num">20</span> 의인의 혀는 순은과 같거니와 악인의 마음은 가치가 적으니라</div>
+        <div class="verse"><span class="verse-num">21</span> 의인의 입술은 여러 사람을 교육하나 미련한 자는 지식이 없어 죽느니라</div>
+        <div class="verse"><span class="verse-num">22</span> 여호와께서 주시는 복은 사람을 부하게 하고 근심을 겸하여 주지 아니하시느니라</div>
+        <div class="verse"><span class="verse-num">23</span> 미련한 자는 행악으로 낙을 삼는 것 같이 명철한 자는 지혜로 낙을 삼느니라</div>
+        <div class="verse"><span class="verse-num">24</span> 악인에게는 그의 두려워하는 것이 임하거니와 의인은 그 원하는 것이 이루어지느니라</div>
+        <div class="verse"><span class="verse-num">25</span> 회오리바람이 지나가면 악인은 없어져도 의인은 영원한 기초 같으니라</div>
+        <div class="verse"><span class="verse-num">26</span> 게으른 자는 그 부리는 사람에게 마치 이에 식초 같고 눈에 연기 같으니라</div>
+        <div class="verse"><span class="verse-num">27</span> 여호와를 경외하면 장수하느니라 그러나 악인의 수명은 짧아지느니라</div>
+        <div class="verse"><span class="verse-num">28</span> 의인의 소망은 즐거움을 이루어도 악인의 소망은 끊어지느니라</div>
+        <div class="verse"><span class="verse-num">29</span> 여호와의 도가 정직한 자에게는 산성이요 행악하는 자에게는 멸망이니라</div>
+        <div class="verse"><span class="verse-num">30</span> 의인은 영영히 이동되지 아니하여도 악인은 땅에 거하지 못하게 되느니라</div>
+        <div class="verse"><span class="verse-num">31</span> 의인의 입은 지혜를 내어도 패역한 혀는 베임을 당할 것이니라</div>
+        <div class="verse"><span class="verse-num">32</span> 의인의 입술은 기쁘게 할 것을 알거늘 악인의 입은 패역을 말하느니라</div>
+
+        <!-- 잠언 11장 -->
+        <div class="chapter-title">잠언 11장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 속이는 저울은 여호와께서 미워하시나 공평한 추는 그가 기뻐하시느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 교만이 오면 욕도 오거니와 겸손한 자에게는 지혜가 있느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 정직한 자의 성실은 자기를 인도하거니와 사악한 자의 패역은 자기를 망하게 하느니라</div>
+        <div class="verse"><span class="verse-num">4</span> 재물은 진노하시는 날에 무익하나 공의는 죽음에서 건지느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 완전한 자의 공의는 자기의 길을 곧게 하려니와 악한 자는 자기의 악으로 말미암아 넘어지리라</div>
+        <div class="verse"><span class="verse-num">6</span> 정직한 자의 공의는 자기를 건지려니와 사악한 자는 자기의 악에 잡히리라</div>
+        <div class="verse"><span class="verse-num">7</span> 악인은 죽을 때에 그 소망이 끊어지나니 불의의 소망이 없어지느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 의인은 환난에서 구원을 얻으나 악인은 자기의 길로 가느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 악인은 입으로 그의 이웃을 망하게 하여도 의인은 그의 지식으로 말미암아 구원을 얻느니라</div>
+        <div class="verse"><span class="verse-num">10</span> 의인이 형통하면 성읍이 즐거워하고 악인이 패망하면 기뻐 외치느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 성읍은 정직한 자의 축복으로 인하여 진흥하고 악한 자의 입으로 말미암아 무너지느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 지혜 없는 자는 그의 이웃을 멸시하나 명철한 자는 잠잠하느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 두루 다니며 한담하는 자는 남의 비밀을 누설하나 마음이 신실한 자는 그런 것을 숨기느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 지략이 없으면 백성이 망하여도 지략이 많으면 평안을 누리느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 타인을 위하여 보증이 되는 자는 손해를 당하여도 보증이 되기를 싫어하는 자는 평안하니라</div>
+        <div class="verse"><span class="verse-num">16</span> 유덕한 여자는 존영을 얻고 근면한 남자는 재물을 얻느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 인자한 자는 자기의 영혼을 이롭게 하고 잔인한 자는 자기의 몸을 해롭게 하느니라</div>
+        <div class="verse"><span class="verse-num">18</span> 악인의 삯은 허무하되 공의를 뿌린 자의 상은 확실하니라</div>
+        <div class="verse"><span class="verse-num">19</span> 공의를 굳게 지키는 자는 생명에 이르고 악을 따르는 자는 사망에 이르느니라</div>
+        <div class="verse"><span class="verse-num">20</span> 마음이 굽은 자는 여호와께 미움을 받아도 행위가 온전한 자는 그의 기뻐하심을 받느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 악인은 피차 손을 잡을지라도 벌을 면하지 못할 것이나 의인의 자손은 구원을 얻으리라</div>
+        <div class="verse"><span class="verse-num">22</span> 아름다운 여인이 삼가지 아니하는 것은 마치 돼지 코에 금 고리 같으니라</div>
+        <div class="verse"><span class="verse-num">23</span> 의인의 소원은 오직 선하나 악인의 소망은 진노를 이루느니라</div>
+        <div class="verse"><span class="verse-num">24</span> 흩어 구제하여도 더욱 부하게 되는 일이 있나니 과도히 아껴도 가난하게 될 뿐이니라</div>
+        <div class="verse"><span class="verse-num">25</span> 구제를 좋아하는 자는 풍족하여질 것이요 남을 윤택하게 하는 자는 자기도 윤택하여지리라</div>
+        <div class="verse"><span class="verse-num">26</span> 곡식을 내놓지 아니하는 자는 백성에게 저주를 받을 것이나 파는 자는 그의 머리에 복이 임하리라</div>
+        <div class="verse"><span class="verse-num">27</span> 선을 간절히 구하는 자는 은총을 얻으려니와 악을 더듬어 찾는 자에게는 악이 임하리라</div>
+        <div class="verse"><span class="verse-num">28</span> 자기의 재물을 의지하는 자는 패망하려니와 의인은 푸른 잎사귀 같아서 번성하리라</div>
+        <div class="verse"><span class="verse-num">29</span> 자기 집을 해롭게 하는 자의 소득은 바람이라 미련한 자는 마음이 지혜로운 자의 종이 되리라</div>
+        <div class="verse"><span class="verse-num">30</span> 의인의 열매는 생명 나무라 지혜로운 자는 사람을 얻느니라</div>
+        <div class="verse"><span class="verse-num">31</span> 보라 의인이라도 이 세상에서 보응을 받겠거든 하물며 악인과 죄인이리요</div>
+
+        <!-- 잠언 12장 -->
+        <div class="chapter-title">잠언 12장 (1~28절)</div>
+        <div class="verse"><span class="verse-num">1</span> 훈계를 좋아하는 자는 지식을 좋아하거니와 징계를 싫어하는 자는 짐승과 같으니라</div>
+        <div class="verse"><span class="verse-num">2</span> 선인은 여호와께 은총을 받으려니와 악을 꾀하는 자는 정죄하심을 받으리라</div>
+        <div class="verse"><span class="verse-num">3</span> 사람이 악으로서 굳게 서지 못하거니와 의인의 뿌리는 움직이지 아니하느니라</div>
+        <div class="verse"><span class="verse-num">4</span> 어진 여인은 그 지아비의 면류관이나 욕을 끼치는 여인은 그 지아비의 뼈가 썩음 같게 하느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 의인의 생각은 정직하여도 악인의 도모는 속임이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 악인의 말은 사람을 엿보아 피를 흘리자 하는 것이거니와 정직한 자의 입은 사람을 구원하느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 악인은 엎드러져서 소멸되려니와 의인의 집은 서 있으리라</div>
+        <div class="verse"><span class="verse-num">8</span> 사람은 그 지혜대로 칭찬을 받으려니와 마음이 굽은 자는 멸시를 받으리라</div>
+        <div class="verse"><span class="verse-num">9</span> 비천히 여김을 받을지라도 종을 부리는 자는 스스로 높은 체하고도 음식이 핍절한 자보다 나으니라</div>
+        <div class="verse"><span class="verse-num">10</span> 의인은 자기의 가축의 생명을 돌보나 악인의 긍휼은 잔인이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 자기의 토지를 경작하는 자는 먹을 것이 많거니와 방탕한 것을 따르는 자는 지혜가 없느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 악인은 불의의 이익을 탐하나 의인은 그 뿌리로 말미암아 결실하느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 악인은 입술의 허물로 말미암아 그물에 걸려도 의인은 환난에서 벗어나느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 사람은 입의 열매로 말미암아 복록에 족하며 그 손이 행하는 대로 자기가 받느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 미련한 자는 자기 행위를 바른 줄로 여기나 지혜로운 자는 권고를 듣느니라</div>
+        <div class="verse"><span class="verse-num">16</span> 미련한 자는 당장 분노를 나타내거니와 슬기로운 자는 수욕을 참느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 진리를 말하는 자는 의를 나타내어도 거짓 증인은 속이는 말을 하느니라</div>
+        <div class="verse"><span class="verse-num">18</span> 칼로 찌름 같이 함부로 말하는 자가 있거니와 지혜로운 자의 혀는 양약과 같으니라</div>
+        <div class="verse"><span class="verse-num">19</span> 진실한 입술은 영원히 보존되거니와 거짓 혀는 잠시 동안만 있을 뿐이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 악을 꾀하는 자의 마음에는 속임이 있고 화평을 의논하는 자에게는 희락이 있느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 의인에게는 어떤 재앙도 임하지 아니하려니와 악인에게는 앙화가 가득하리라</div>
+        <div class="verse"><span class="verse-num">22</span> 거짓 입술은 여호와께 미움을 받아도 진실하게 행하는 자는 그의 기뻐하심을 받느니라</div>
+        <div class="verse"><span class="verse-num">23</span> 슬기로운 자는 지식을 감추어도 미련한 자의 마음은 미련한 것을 전파하느니라</div>
+        <div class="verse"><span class="verse-num">24</span> 부지런한 자의 손은 사람을 다스리게 되어도 게으른 자는 부림을 받느니라</div>
+        <div class="verse"><span class="verse-num">25</span> 근심이 사람의 마음에 있으면 그것으로 번뇌하게 되나 선한 말은 그것을 즐겁게 하느니라</div>
+        <div class="verse"><span class="verse-num">26</span> 의인은 그 이웃의 인도자가 되나 악인의 소행은 자신을 미혹하느니라</div>
+        <div class="verse"><span class="verse-num">27</span> 게으른 자는 그 잡을 것도 사냥하지 아니하나니 사람의 부귀는 부지런한 것이니라</div>
+        <div class="verse"><span class="verse-num">28</span> 공의로운 길에 생명이 있나니 그 길에는 사망이 없느니라</div>
+
+        <!-- 잠언 13장 -->
+        <div class="chapter-title">잠언 13장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 지혜로운 아들은 아비의 훈계를 들으나 거만한 자는 꾸지람을 즐겨 듣지 아니하느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 사람은 입의 열매로 인하여 복록을 누리거니와 마음이 궤사한 자는 강포를 당하느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 입을 지키는 자는 자기의 생명을 보전하나 입술을 크게 벌리는 자에게는 멸망이 오느니라</div>
+        <div class="verse"><span class="verse-num">4</span> 게으른 자는 마음으로 원하여도 얻지 못하나 부지런한 자의 마음은 풍족함을 얻느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 의인은 거짓말을 미워하나 악인은 행위가 흉악하여 부끄러운 데에 이르느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 공의는 행실이 정직한 자를 보호하고 악은 죄인을 패망하게 하느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 스스로 부한 체하여도 아무 것도 없는 자가 있고 스스로 가난한 체하여도 재물이 많은 자가 있느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 사람의 재물이 자기 생명의 속전일 수 있으나 가난한 자는 협박을 받을 일이 없느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 의인의 빛은 환하게 빛나고 악인의 등불은 꺼지느니라</div>
+        <div class="verse"><span class="verse-num">10</span> 교만에서는 다툼만 일어날 뿐이라 권면을 듣는 자는 지혜가 있느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 망령되이 얻은 재물은 줄어가고 손으로 모은 것은 늘어가느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 소망이 더디 이루어지면 그것이 마음을 상하게 하거니와 소원이 이루어지는 것은 곧 생명 나무니라</div>
+        <div class="verse"><span class="verse-num">13</span> 말씀을 멸시하는 자는 자기에게 패망을 이루고 계명을 두려워하는 자는 상을 받느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 지혜 있는 자의 교훈은 생명의 샘이니 사망의 그물에서 벗어나게 하느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 선한 지혜는 은혜를 베푸나 사악한 자의 길은 험하니라</div>
+        <div class="verse"><span class="verse-num">16</span> 무릇 슬기로운 자는 지식으로 행하거니와 미련한 자는 자기의 미련한 것을 나타내느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 악한 사자는 재앙에 빠져도 충성된 사신은 양약이 되느니라</div>
+        <div class="verse"><span class="verse-num">18</span> 훈계를 저버리는 자에게는 궁핍과 수욕이 이르거니와 경계를 받는 자는 존영을 받느니라</div>
+        <div class="verse"><span class="verse-num">19</span> 소원을 성취하면 마음에 달아도 미련한 자는 악에서 떠나기를 싫어하느니라</div>
+        <div class="verse"><span class="verse-num">20</span> 지혜로운 자와 동행하면 지혜를 얻고 미련한 자와 사귀면 해를 받느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 재앙은 죄인을 따르고 선한 보응은 의인에게 이르느니라</div>
+        <div class="verse"><span class="verse-num">22</span> 선인은 그 산업을 자자 손손에게 끼쳐도 죄인의 재물은 의인을 위하여 쌓이느니라</div>
+        <div class="verse"><span class="verse-num">23</span> 가난한 자는 밭을 경작함으로 양식이 많아지거니와 불의로 말미암아 가산을 탕진하는 자가 있느니라</div>
+        <div class="verse"><span class="verse-num">24</span> 매를 아끼는 자는 그의 자식을 미워함이라 자식을 사랑하는 자는 근실히 징계하느니라</div>
+        <div class="verse"><span class="verse-num">25</span> 의인은 포식하여도 악인의 배는 주리느니라</div>
+
+        <!-- 잠언 14장 -->
+        <div class="chapter-title">잠언 14장 (1~35절)</div>
+        <div class="verse"><span class="verse-num">1</span> 지혜로운 여인은 자기 집을 세우되 미련한 여인은 자기 손으로 그것을 허느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 정직하게 행하는 자는 여호와를 경외하여도 패역하게 행하는 자는 여호와를 경멸하느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 미련한 자는 교만하여 입으로 매를 자청하고 지혜로운 자의 입술은 자기를 보전하느니라</div>
+        <div class="verse"><span class="verse-num">4</span> 소가 없으면 구유는 깨끗하려니와 소의 힘으로 얻는 것이 많으니라</div>
+        <div class="verse"><span class="verse-num">5</span> 신실한 증인은 거짓말을 아니하여도 거짓 증인은 거짓말을 뱉느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 거만한 자는 지혜를 구하여도 얻지 못하거니와 명철한 자는 지식 얻기가 쉬우니라</div>
+        <div class="verse"><span class="verse-num">7</span> 너는 미련한 자의 앞을 떠나라 그 입술에 지식 있음을 보지 못함이니라</div>
+        <div class="verse"><span class="verse-num">8</span> 슬기로운 자의 지혜는 자기의 길을 아는 것이라도 미련한 자의 어리석음은 속이는 것이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 미련한 자는 죄를 심상히 여겨도 정직한 자 중에는 은혜가 있느니라</div>
+        <div class="verse"><span class="verse-num">10</span> 마음의 고통은 자기가 알고 마음의 즐거움은 타인이 참여하지 못하느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 악한 자의 집은 망하겠고 정직한 자의 장막은 흥하리라</div>
+        <div class="verse"><span class="verse-num">12</span> 어떤 길은 사람이 보기에 바르나 필경은 사망의 길이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 웃을 때에도 마음에 슬픔이 있고 즐거움의 끝에도 근심이 있느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 마음이 굽은 자는 자기 행위로 보응이 가득하겠고 선한 사람도 자기의 행위로 그러하리라</div>
+        <div class="verse"><span class="verse-num">15</span> 어리석은 자는 온갖 말을 믿으나 슬기로운 자는 자기의 행동을 삼가느니라</div>
+        <div class="verse"><span class="verse-num">16</span> 지혜로운 자는 두려워하여 악을 떠나나 어리석은 자는 방자하여 스스로 믿느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 노하기를 속히 하는 자는 어리석은 일을 행하고 악한 계교를 꾀하는 자는 미움을 받느니라</div>
+        <div class="verse"><span class="verse-num">18</span> 어리석은 자는 어리석음으로 기업을 삼아도 슬기로운 자는 지식으로 면류관을 삼느니라</div>
+        <div class="verse"><span class="verse-num">19</span> 악인은 선인 앞에 엎드리고 불의한 자는 의인의 문에 엎드리느니라</div>
+        <div class="verse"><span class="verse-num">20</span> 가난한 자는 이웃에게도 미움을 받게 되나 부요한 자는 친구가 많으니라</div>
+        <div class="verse"><span class="verse-num">21</span> 이웃을 업신여기는 자는 죄를 범하는 자요 빈곤한 자를 불쌍히 여기는 자는 복이 있는 자니라</div>
+        <div class="verse"><span class="verse-num">22</span> 악을 도모하는 자는 잘못 가는 것이 아니냐 선을 도모하는 자에게는 인자와 진리가 있으리라</div>
+        <div class="verse"><span class="verse-num">23</span> 모든 수고에는 이익이 있어도 입술의 말은 궁핍을 이룰 뿐이니라</div>
+        <div class="verse"><span class="verse-num">24</span> 지혜로운 자의 재물은 그의 면류관이요 미련한 자의 소유는 다만 미련한 것이니라</div>
+        <div class="verse"><span class="verse-num">25</span> 진실한 증인은 사람의 생명을 구원하여도 거짓말을 뱉는 사람은 속이느니라</div>
+        <div class="verse"><span class="verse-num">26</span> 여호와를 경외하는 자에게는 견고한 의뢰가 있나니 그 자녀들에게 피난처가 있으리라</div>
+        <div class="verse"><span class="verse-num">27</span> 여호와를 경외하는 것은 생명의 샘이니 사망의 그물에서 벗어나게 하느니라</div>
+        <div class="verse"><span class="verse-num">28</span> 백성이 많은 것은 왕의 영광이요 백성이 적은 것은 주권자의 패망이니라</div>
+        <div class="verse"><span class="verse-num">29</span> 노하기를 더디 하는 자는 크게 명철하여도 마음이 조급한 자는 어리석음을 나타내느니라</div>
+        <div class="verse"><span class="verse-num">30</span> 평온한 마음은 육신의 생명이나 시기는 뼈를 썩게 하느니라</div>
+        <div class="verse"><span class="verse-num">31</span> 가난한 사람을 학대하는 자는 그를 지으신 이를 멸시하는 자요 궁핍한 사람을 불쌍히 여기는 자는 주를 공경하는 자니라</div>
+        <div class="verse"><span class="verse-num">32</span> 악인은 그의 환난에 엎드러져도 의인은 그의 죽음에도 소망이 있느니라</div>
+        <div class="verse"><span class="verse-num">33</span> 지혜는 명철한 자의 마음에 머물거니와 미련한 자의 속에 있는 것은 나타나느니라</div>
+        <div class="verse"><span class="verse-num">34</span> 공의는 나라를 영화롭게 하고 죄는 백성을 욕되게 하느니라</div>
+        <div class="verse"><span class="verse-num">35</span> 슬기롭게 행하는 신하는 왕에게 은총을 입고 욕을 끼치는 신하는 그의 진노를 당하느니라</div>
+
+        <!-- 잠언 15장 -->
+        <div class="chapter-title">잠언 15장 (1~33절)</div>
+        <div class="verse"><span class="verse-num">1</span> 유순한 대답은 분노를 쉬게 하여도 과격한 말은 노를 격동하느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 지혜 있는 자의 혀는 지식을 선히 베풀고 미련한 자의 입은 미련한 것을 쏟느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와의 눈은 어디서든지 악인과 선인을 감찰하시느니라</div>
+        <div class="verse"><span class="verse-num">4</span> 온순한 혀는 곧 생명 나무이지만 패역한 혀는 마음을 상하게 하느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 아비의 훈계를 업신여기는 자는 미련한 자요 경계를 받는 자는 슬기를 얻을 자니라</div>
+        <div class="verse"><span class="verse-num">6</span> 의인의 집에는 많은 보물이 있어도 악인의 소득은 고통이 되느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 지혜로운 자의 입술은 지식을 전파하여도 미련한 자의 마음은 정함이 없느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 악인의 제사는 여호와께서 미워하셔도 정직한 자의 기도는 그가 기뻐하시느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 악인의 길은 여호와께서 미워하셔도 공의를 따라가는 자는 그가 사랑하시느니라</div>
+        <div class="verse"><span class="verse-num">10</span> 도를 배반하는 자는 엄한 징계를 받을 것이요 견책을 싫어하는 자는 죽을 것이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 스올과 아바돈도 여호와의 앞에 드러나거든 하물며 사람의 마음이리요</div>
+        <div class="verse"><span class="verse-num">12</span> 거만한 자는 견책 받기를 좋아하지 아니하며 지혜 있는 자에게로 가지도 아니하느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 마음의 즐거움은 얼굴을 빛나게 하여도 마음의 근심은 심령을 상하게 하느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 명철한 자의 마음은 지식을 요구하고 미련한 자의 입은 미련한 것을 즐기느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 고난 받는 자는 그 날이 다 험악하나 마음이 즐거운 자는 항상 잔치하느니라</div>
+        <div class="verse"><span class="verse-num">16</span> 가산이 적어도 여호와를 경외하는 것이 크게 부하고 번뇌하는 것보다 나으니라</div>
+        <div class="verse"><span class="verse-num">17</span> 채소를 먹으며 서로 사랑하는 것이 살진 소를 먹으며 서로 미워하는 것보다 나으니라</div>
+        <div class="verse"><span class="verse-num">18</span> 분을 쉽게 내는 자는 다툼을 일으켜도 노하기를 더디 하는 자는 시비를 그치게 하느니라</div>
+        <div class="verse"><span class="verse-num">19</span> 게으른 자의 길은 가시 울타리 같으나 정직한 자의 길은 대로니라</div>
+        <div class="verse"><span class="verse-num">20</span> 지혜로운 아들은 아비를 즐겁게 하여도 미련한 자는 어미를 업신여기느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 무지한 자는 미련한 것을 즐겨 하여도 명철한 자는 그 길을 바르게 하느니라</div>
+        <div class="verse"><span class="verse-num">22</span> 의논이 없으면 경영이 무너지고 지략이 많으면 경영이 성립하느니라</div>
+        <div class="verse"><span class="verse-num">23</span> 사람은 그 입의 대답으로 말미암아 기쁨을 얻나니 때에 맞는 말이 얼마나 아름다운고</div>
+        <div class="verse"><span class="verse-num">24</span> 지혜로운 자는 위로 향한 생명 길로 말미암음으로 그 아래에 있는 스올을 떠나게 되느니라</div>
+        <div class="verse"><span class="verse-num">25</span> 여호와는 교만한 자의 집을 허시며 과부의 지계를 정하시느니라</div>
+        <div class="verse"><span class="verse-num">26</span> 악한 꾀는 여호와께서 미워하시나 선한 말은 정결하니라</div>
+        <div class="verse"><span class="verse-num">27</span> 이익을 탐하는 자는 자기 집을 해롭게 하나 뇌물을 싫어하는 자는 살게 되느니라</div>
+        <div class="verse"><span class="verse-num">28</span> 의인의 마음은 대답할 말을 깊이 생각하여도 악인의 입은 악을 쏟느니라</div>
+        <div class="verse"><span class="verse-num">29</span> 여호와는 악인을 멀리 하시고 의인의 기도를 들으시느니라</div>
+        <div class="verse"><span class="verse-num">30</span> 눈이 밝은 것은 마음을 기쁘게 하고 좋은 기별은 뼈를 윤택하게 하느니라</div>
+        <div class="verse"><span class="verse-num">31</span> 생명의 경계를 듣는 귀는 지혜로운 자 가운데에 있느니라</div>
+        <div class="verse"><span class="verse-num">32</span> 훈계 받기를 싫어하는 자는 자기의 영혼을 경히 여김이라 견책을 달게 받는 자는 지식을 얻느니라</div>
+        <div class="verse"><span class="verse-num">33</span> 여호와를 경외하는 것은 지혜의 훈계라 겸손은 존귀의 길잡이니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 무 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

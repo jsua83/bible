@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 102</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 102</h1>
+        <p class="sub-title">찬송가 570장 주는 나를 기르시는 목자</p>
+        <p class="sub-title">사무엘하 3장~5장 5절 — 다윗의 세 번째 기름 부음과 통일왕조 수립</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 570장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1jZGkuwRXiCMuYgjKijcSN1_bohP_qeZr" alt="찬송가 570장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사무엘하 3장~5장 5절까지의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 민족 분단 7년 6개월 만에 다윗과 아브넬이 '통일 담판'을 합니다.</span>
+            사울이 죽은 후 사울의 군대 장관이었던 아브넬이 사울의 남은 아들 이스보셋을 내세워 열한 지파를 이끌고 북쪽 마하나임으로 가서 <strong>아브넬 정권을 유지한 7년 6개월 동안</strong> 남쪽에서는 다윗이 유다 한 지파를 이끌고 <strong>통일의 날을 기다리고 있었습니다.</strong> 그동안 <strong>다윗 가문은 점점 더 번성하고 사울 가문은 몰락해갔습니다.</strong>
+            <br><br>
+            사울의 가문이 몰락해간 이유는 <strong>아브넬과 이스보셋의 내분 때문</strong>이었습니다. 처음에는 아브넬이 북쪽 이스라엘의 실권을 장악했습니다. 그런데 <strong>아브넬이 사울의 첩과 통간한 것을 이스보셋이 문제 삼습니다.</strong> 결국 이 문제가 아브넬로 하여금 <strong>사울 가문을 무너뜨리고 다윗에게로 나라를 돌리려는 계기가 됩니다.</strong>
+            <br><br>
+            북쪽 열한 지파 사이에서 이러한 갈등이 있은 후 <strong>아브넬이 남쪽으로 내려와 다윗과 통일을 위한 비밀 회동을 합니다</strong>(삼하 3:12~21).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 요압의 아브넬 살해로 남북 갈등이 최고조에 달합니다.</span>
+            아브넬과 다윗의 비밀 회동 때에 <strong>다윗 왕가의 2인자였던 군대 장관 요압은 그 자리에 배석하지 않았습니다.</strong> 이후 이 사실을 알고 다윗에게 분개한 요압은 <strong>다윗 몰래 아브넬을 암살하고 맙니다</strong>(삼하 3:26~27).
+            <br><br>
+            요압이 아브넬을 암살한 것은 두 가지 이유 때문입니다.
+            <div class="quote">
+                <strong>첫째,</strong> 국가 통합이 되면 <strong>자신이 현재 2인자에서 아브넬 뒤인 3인자로 밀리는 것이 싫었던 것</strong>입니다.<br><br>
+                <strong>둘째,</strong> 동생 아사헬이 과거 두 나라 간의 국지적 싸움에서 아브넬과 싸우다 죽은 것에 대한 <strong>개인적 원한</strong> 때문이었습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 다윗은 3일 만에 '요압의 아브넬 단독 살해' 범행을 온 국민에게 밝혀냅니다.</span>
+            아브넬의 죽음은 <strong>다윗의 정치 인생에 두 번의 큰 위기 가운데 하나</strong>였습니다. 이후에 압살롬 쿠데타로 또 한 번의 위기를 맞이하게 되지만 <strong>이때에도 그에 버금가는 위기</strong>였습니다. 이 위기를 다윗이 뛰어넘습니다(삼하 3:28~37).
+            <div class="quote">
+                <strong>첫째,</strong> 아브넬의 죽음 소식을 들은 다윗은 <strong>바로 요압을 저주합니다.</strong><br><br>
+                <strong>둘째,</strong> 다윗은 온 백성과 더불어 울고 애통하며 진심으로 애도하고, <strong>자신이 직접 장례위원장이 되어 아브넬 장례를 남쪽 유다의 국장으로 치릅니다.</strong><br><br>
+                <strong>셋째,</strong> 애가를 지어 부르며 <strong>온 백성의 마음을 얻습니다.</strong><br><br>
+                <strong>넷째,</strong> 아브넬의 장례 기간 동안 <strong>금식하며 슬퍼합니다.</strong><br><br>
+                <strong>다섯째,</strong> 결국 3일 만에 아브넬의 죽음이 다윗과 요압의 합작품이 아닌 <strong>요압의 단독 범행임을 온 이스라엘 백성이 알게 됩니다.</strong>
+            </div>
+            <div class="quote">
+                <strong>이를 계기로 이스라엘은 남북통일을 이루는 토대를 놓게 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 림몬의 아들들의 이스보셋 살해로 베냐민 지파 내부 권력이 완전히 붕괴됩니다.</span>
+            이스보셋과 북쪽 열한 지파는 <strong>실권자 아브넬의 죽음으로 너무나 큰 충격을 받습니다.</strong> 아브넬이 갑자기 죽자 <strong>베냐민 지파 사람인 림몬의 아들들인 바아나와 레갑이 이스보셋을 살해합니다.</strong> 그 이유는 <strong>급변하는 정세 가운데 빨리 다윗 편에 서서 출세하려는 욕망 때문</strong>입니다.
+            <br><br>
+            그들은 전에 아말렉 청년이 사울의 왕관을 가지고 왔던 것처럼 <strong>이스보셋의 수급을 가지고 다윗에게로 달려갑니다.</strong> 그러나 다윗은 <strong>살인자들을 처형함으로 이스보셋의 죽음에 자신이 결백하다는 것을 백성들에게 알리고</strong> 이스보셋의 장례를 치러 <strong>끝까지 사울 가문을 존중합니다</strong>(삼하 4:9~12).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 다윗이 37세에 열두 지파 모든 백성으로부터 왕으로서 기름 부음을 받습니다.</span>
+            다윗은 그의 평생에 <strong>세 번의 기름 부음을 받습니다.</strong>
+            <div class="quote">
+                <strong>첫 번째</strong> — '청소년 때 사무엘을 통해서'였습니다(삼상 16:13).<br><br>
+                <strong>두 번째</strong> — '30세에 유다 지파로부터'였습니다(삼하 2:4).<br><br>
+                <strong>세 번째</strong> — 두 번째 기름 부음을 받은 이후 7년 6개월 만에 <strong>'이스라엘 열두 지파로부터'</strong>였습니다(삼하 5:3).
+            </div>
+            <div class="quote">
+                <strong>다윗이 한 지파 왕으로 7년 6개월을 참고 기다린 것은 열두 지파 모두의 민심을 얻어 민족 통일을 이룰 때를 기다린 것입니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 사무엘하 3장~5장 5절까지 '다윗의 세 번째 기름 부음과 통일왕조 수립'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 사무엘하 3장 -->
+        <div class="chapter-title">사무엘하 3장 (1~39절)</div>
+        <div class="verse"><span class="verse-num">1</span> 사울의 집과 다윗의 집 사이에 전쟁이 오래매 다윗은 점점 강하여 가고 사울의 집은 점점 약하여 가니라</div>
+        <div class="verse"><span class="verse-num">2</span> 다윗이 헤브론에서 아들들을 낳았으되 맏아들은 암논이라 이스르엘 여인 아히노암의 소생이요</div>
+        <div class="verse"><span class="verse-num">3</span> 둘째는 길르압이라 갈멜 사람 나발의 아내였던 아비가일의 소생이요 셋째는 압살롬이라 그술 왕 달매의 딸 마아가의 아들이요</div>
+        <div class="verse"><span class="verse-num">4</span> 넷째는 아도니야라 학깃의 아들이요 다섯째는 스바댜라 아비달의 아들이요</div>
+        <div class="verse"><span class="verse-num">5</span> 여섯째는 이드르암이라 다윗의 아내 에글라의 소생이니 이들은 다윗이 헤브론에서 낳은 자들이더라</div>
+        <div class="verse"><span class="verse-num">6</span> 사울의 집과 다윗의 집 사이에 전쟁이 있는 동안에 아브넬이 사울의 집에서 점점 권세를 잡으니라</div>
+        <div class="verse"><span class="verse-num">7</span> 사울에게 첩이 있었으니 이름은 리스바요 아야의 딸이더라 이스보셋이 아브넬에게 이르되 네가 어찌하여 내 아버지의 첩과 통간하였느냐 하니</div>
+        <div class="verse"><span class="verse-num">8</span> 아브넬이 이스보셋의 말을 매우 분하게 여겨 이르되 내가 유다의 개 머리냐 내가 오늘 당신의 아버지 사울의 집과 그의 형제와 그의 친구에게 은혜를 베풀어 당신을 다윗의 손에 내주지 아니하였거늘 당신이 오늘 이 여인에게 관한 허물을 내게 돌리는도다</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와께서 다윗에게 맹세하신 대로 내가 이루게 하지 아니하면 하나님이 아브넬에게 벌 위에 벌을 내리심이 마땅하니라</div>
+        <div class="verse"><span class="verse-num">10</span> 그 맹세는 곧 이 나라를 사울의 집에서 다윗에게 옮겨서 그의 왕위를 단에서 브엘세바까지 이스라엘과 유다에 세우리라 하신 것이니라 하매</div>
+        <div class="verse"><span class="verse-num">11</span> 이스보셋이 아브넬을 두려워하여 감히 한 마디도 대답하지 못하니라</div>
+        <div class="verse"><span class="verse-num">12</span> 아브넬이 자기를 대신하여 전령들을 다윗에게 보내어 이르되 이 땅이 누구의 것이니이까 또 이르되 당신은 나와 더불어 언약을 맺사이다 내 손이 당신을 도와 온 이스라엘이 당신에게 돌아가게 하리이다 하니</div>
+        <div class="verse"><span class="verse-num">13</span> 다윗이 이르되 좋다 내가 너와 언약을 맺거니와 내가 네게 한 가지 일을 요구하노니 나를 보러올 때에 우선 사울의 딸 미갈을 데리고 오라 그리하지 아니하면 내 얼굴을 보지 못하리라 하고</div>
+        <div class="verse"><span class="verse-num">14</span> 다윗이 사울의 아들 이스보셋에게 전령들을 보내 이르되 내 처 미갈을 내게로 돌리라 그는 내가 전에 블레셋 사람의 포피 백 개로 나와 정혼한 자니라 하니</div>
+        <div class="verse"><span class="verse-num">15</span> 이스보셋이 사람을 보내 그의 남편 라이스의 아들 발디엘에게서 그를 빼앗아 오매</div>
+        <div class="verse"><span class="verse-num">16</span> 그의 남편이 그와 함께 오되 울며 바후림까지 따라왔더니 아브넬이 그에게 돌아가라 하매 돌아가니라</div>
+        <div class="verse"><span class="verse-num">17</span> 아브넬이 이스라엘 장로들에게 말하여 이르되 너희가 여러 번 다윗을 너희의 임금으로 세우기를 구하였으니</div>
+        <div class="verse"><span class="verse-num">18</span> 이제 그대로 하라 여호와께서 이미 다윗에 대하여 말씀하시기를 내가 내 종 다윗의 손으로 내 백성 이스라엘을 구원하여 블레셋 사람의 손과 모든 대적의 손에서 벗어나게 하리라 하셨음이니라 하고</div>
+        <div class="verse"><span class="verse-num">19</span> 아브넬이 또 베냐민 사람의 귀에 말하고 아브넬이 이스라엘과 베냐민의 온 집이 선하게 여기는 모든 것을 다윗의 귀에 말하려고 헤브론으로 가니라</div>
+        <div class="verse"><span class="verse-num">20</span> 아브넬이 부하 이십 명과 더불어 헤브론에 이르러 다윗에게 나아가니 다윗이 아브넬과 그와 함께 한 사람을 위하여 잔치를 배설하였더라</div>
+        <div class="verse"><span class="verse-num">21</span> 아브넬이 다윗에게 말하되 내가 일어나 가서 온 이스라엘 무리를 내 주 왕의 앞에 모아 더불어 언약을 맺게 하고 마음에 원하시는 대로 모든 것을 다스리시게 하리이다 하니 이에 다윗이 아브넬을 보내매 그가 평안히 가니라</div>
+        <div class="verse"><span class="verse-num">22</span> 다윗의 신복들과 요압이 적군을 치고 크게 노략한 물건을 가지고 돌아오니 아브넬은 이미 보냄을 받아 평안히 갔고 다윗과 함께 헤브론에 있지 아니한 때라</div>
+        <div class="verse"><span class="verse-num">23</span> 요압 및 요압과 함께 한 모든 군사가 돌아오매 어떤 사람이 요압에게 말하여 이르되 넬의 아들 아브넬이 왕에게 왔더니 왕이 보내매 그가 평안히 갔나이다 하니</div>
+        <div class="verse"><span class="verse-num">24</span> 요압이 왕에게 나아가 이르되 어찌 하심이니이까 아브넬이 왕에게 나아왔거늘 어찌하여 그를 보내 잘 가게 하셨나이까</div>
+        <div class="verse"><span class="verse-num">25</span> 왕도 아시려니와 넬의 아들 아브넬이 온 것은 왕을 속임이라 그가 왕이 출입하는 것을 알고 왕이 하시는 모든 것을 알려 함이니이다 하고</div>
+        <div class="verse"><span class="verse-num">26</span> 이에 요압이 다윗에게서 나와 전령들을 보내 아브넬을 쫓아가게 하였더니 시라 우물 가에서 그를 데리고 돌아왔으나 다윗은 알지 못하였더라</div>
+        <div class="verse"><span class="verse-num">27</span> 아브넬이 헤브론으로 돌아오매 요압이 더불어 조용히 말하려는 듯이 그를 데리고 성문 안으로 들어가 거기서 배를 찔러 죽이니 이는 자기의 동생 아사헬의 피로 말미암음이더라</div>
+        <div class="verse"><span class="verse-num">28</span> 그 후에 다윗이 듣고 이르되 넬의 아들 아브넬의 피에 대하여 나와 내 나라는 여호와 앞에 영원히 무죄하니</div>
+        <div class="verse"><span class="verse-num">29</span> 그 죄가 요압의 머리와 그의 아버지의 온 집으로 돌아갈지어다 또 요압의 집에서 백탁병자나 나병 환자나 지팡이를 의지하는 자나 칼에 죽는 자나 양식이 떨어진 자가 끊어지지 아니할지로다 하니라</div>
+        <div class="verse"><span class="verse-num">30</span> 요압과 그의 동생 아비새가 아브넬을 죽인 것은 그가 기브온 전쟁에서 자기 동생 아사헬을 죽인 까닭이었더라</div>
+        <div class="verse"><span class="verse-num">31</span> 다윗이 요압과 및 자기와 함께 있는 모든 백성에게 이르되 너희는 옷을 찢고 굵은 베를 띠고 아브넬 앞에서 애도하라 하니라 다윗 왕이 상여를 따라가</div>
+        <div class="verse"><span class="verse-num">32</span> 아브넬을 헤브론에 장사하고 아브넬의 무덤에서 왕이 소리를 높여 울고 백성도 다 우니라</div>
+        <div class="verse"><span class="verse-num">33</span> 왕이 아브넬을 위하여 애가를 지어 이르되 아브넬의 죽음이 어찌하여 미련한 자의 죽음 같은고</div>
+        <div class="verse"><span class="verse-num">34</span> 네 손이 결박되지 아니하였고 네 발이 차꼬에 채이지 아니하였거늘 불의한 자식의 앞에 엎드러짐 같이 네가 엎드러졌도다 하매 온 백성이 다시 그를 슬퍼하여 우니라</div>
+        <div class="verse"><span class="verse-num">35</span> 석양에 뭇 백성이 나아와 다윗에게 음식을 권하니 다윗이 맹세하여 이르되 만일 내가 해 지기 전에 떡이나 다른 모든 것을 맛보면 하나님이 내게 벌 위에 벌을 내리심이 마땅하니라 하매</div>
+        <div class="verse"><span class="verse-num">36</span> 온 백성이 보고 기뻐하며 왕이 무슨 일을 하든지 무리가 다 기뻐하므로</div>
+        <div class="verse"><span class="verse-num">37</span> 이 날에야 온 백성과 온 이스라엘이 넬의 아들 아브넬을 죽인 것이 왕이 한 것이 아닌 줄을 아니라</div>
+        <div class="verse"><span class="verse-num">38</span> 왕이 그의 신복에게 이르되 오늘 이스라엘의 지도자요 큰 인물이 죽은 것을 알지 못하느냐</div>
+        <div class="verse"><span class="verse-num">39</span> 내가 기름 부음을 받은 왕이 되었으나 오늘 약하여서 스루야의 아들인 이 사람들을 제어하기가 너무 어려우니 여호와는 악행한 자에게 그 악한 대로 갚으실지로다 하니라</div>
+
+        <!-- 사무엘하 4장 -->
+        <div class="chapter-title">사무엘하 4장 (1~12절)</div>
+        <div class="verse"><span class="verse-num">1</span> 사울의 아들 이스보셋은 아브넬이 헤브론에서 죽었다 함을 듣고 손의 맥이 풀렸고 온 이스라엘이 놀라니라</div>
+        <div class="verse"><span class="verse-num">2</span> 사울의 아들 이스보셋에게 군지휘관 두 사람이 있으니 한 사람의 이름은 바아나요 한 사람의 이름은 레갑이라 베냐민 족속 브에롯 사람 림몬의 아들들이더라 브에롯도 베냐민 지파에 속하였으니</div>
+        <div class="verse"><span class="verse-num">3</span> 일찍이 브에롯 사람들이 깃다임으로 도망하여 오늘까지 거기에 우거함이더라</div>
+        <div class="verse"><span class="verse-num">4</span> 사울의 아들 요나단에게 다리 저는 아들 하나가 있었으니 이름은 므비보셋이라 전에 사울과 요나단이 죽은 소식이 이스르엘에서 올 때에 그의 나이가 다섯 살이었는데 그 유모가 안고 도망할 때 급히 도망하다가 아이가 떨어져 절게 되었더라</div>
+        <div class="verse"><span class="verse-num">5</span> 브에롯 사람 림몬의 아들 레갑과 바아나가 길을 떠나 볕이 쬘 때 즈음에 이스보셋의 집에 이르니 마침 그가 침상에서 낮잠을 자는지라</div>
+        <div class="verse"><span class="verse-num">6</span> 레갑과 그의 형제 바아나가 밀을 가지러 온 체하고 집 가운데로 들어가서 그의 배를 찌르고 도망하였더라</div>
+        <div class="verse"><span class="verse-num">7</span> 그들이 집에 들어가니 이스보셋이 침실에서 침상 위에 누워 있는지라 그를 쳐죽이고 목을 베어 그의 머리를 가지고 밤새도록 아라바 길로 가</div>
+        <div class="verse"><span class="verse-num">8</span> 헤브론에 이르러 다윗 왕에게 이스보셋의 머리를 드리며 아뢰되 왕의 생명을 해하려 하던 원수 사울의 아들 이스보셋의 머리가 여기 있나이다 여호와께서 오늘 우리 주 되신 왕의 원수를 사울과 그의 자손에게 갚으셨나이다 하니</div>
+        <div class="verse"><span class="verse-num">9</span> 다윗이 브에롯 사람 림몬의 아들 레갑과 그의 형제 바아나에게 대답하여 그들에게 이르되 내 생명을 여러 환난 가운데서 건지신 여호와께서 살아 계심을 두고 맹세하노니</div>
+        <div class="verse"><span class="verse-num">10</span> 전에 사람이 내게 알리기를 보라 사울이 죽었다 하며 그가 좋은 소식을 전하는 줄로 생각하였어도 내가 그를 잡아 시글락에서 죽여서 그것을 그 소식을 전한 갚음으로 삼았거든</div>
+        <div class="verse"><span class="verse-num">11</span> 하물며 악인이 의인을 그의 집 침상 위에서 죽인 것이겠느냐 그런즉 내가 악인의 피흘린 죄를 너희에게 갚아서 너희를 이 땅에서 없이하지 아니하겠느냐 하고</div>
+        <div class="verse"><span class="verse-num">12</span> 청년들에게 명령하매 곧 그들을 죽이고 수족을 베어 헤브론 못 가에 매달고 이스보셋의 머리를 가져다가 헤브론에서 아브넬의 무덤에 매장하였더라</div>
+
+        <!-- 사무엘하 5장 -->
+        <div class="chapter-title">사무엘하 5장 (1~5절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘 모든 지파가 헤브론에 이르러 다윗에게 나아와 이르되 보소서 우리는 왕의 한 골육이니이다</div>
+        <div class="verse"><span class="verse-num">2</span> 전에 곧 사울이 우리의 왕이 되었을 때에도 이스라엘을 거느려 출입하게 하신 분은 왕이시었고 여호와께서도 왕에게 말씀하시기를 네가 내 백성 이스라엘의 목자가 되며 네가 이스라엘의 주권자가 되리라 하셨나이다 하니라</div>
+        <div class="verse"><span class="verse-num">3</span> 이에 이스라엘 모든 장로가 헤브론에 이르러 왕에게 나아오매 다윗 왕이 헤브론에서 여호와 앞에 그들과 언약을 맺으매 그들이 다윗에게 기름을 부어 이스라엘 왕으로 삼으니라</div>
+        <div class="verse"><span class="verse-num">4</span> 다윗이 나이가 삼십 세에 왕위에 올라 사십 년 동안 다스렸으되</div>
+        <div class="verse"><span class="verse-num">5</span> 헤브론에서 칠 년 육 개월 동안 유다를 다스렸고 예루살렘에서 삼십삼 년 동안 온 이스라엘과 유다를 다스렸더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 114</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 114</h1>
+        <p class="sub-title">찬송가 208장 내 주의 나라와</p>
+        <p class="sub-title">열왕기상 5~7장 — 1,000년 성전 개막</p>
+    </div>
+
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 208장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1lcRDOMMrtfZlYyRyqmZJmdHWJSalFU5l" alt="찬송가 208장 악보" class="hymn-image">
+    </div>
+
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 열왕기상 5~7장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 500년 '움직이는 성막(회막) 시대'가 종결되고 1,000년 '예루살렘 성전 시대'가 열립니다.</span>
+            하나님과 이스라엘의 만남의 장소인 성막(회막)은 500년 만에 <strong>시내산에서 여리고성으로, 기럇여아림으로, 오벧에돔의 집을 지나 마침내 예루살렘에 도착했습니다.</strong> 다윗 시대의 준비를 통해 이제 솔로몬 시대에 <strong>성전 건축이 시작됩니다.</strong> 이는 <strong>500년 동안의 '움직이는 성막 시대'를 종결하고 1,000년 '예루살렘 성전 시대'를 여는 것</strong>으로 이스라엘의 역사에서 매우 중요한 사건이 됩니다.
+            <br><br>
+            드디어 <strong>7년의 긴 공사 끝에 하나님의 성전이 완성됩니다.</strong> 성전이 세워짐으로 말미암아 <strong>시온성, 곧 예루살렘은 이스라엘의 정치적 수도일 뿐 아니라 종교적인 성지로 온 이스라엘의 중심 도시가 됩니다.</strong>
+            <div class="quote">
+                <strong>예루살렘의 성전 중심 사상은 이후 바벨론 포로 시대에도 지속되어 이스라엘 민족의 고향으로 남게 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 이스라엘과 두로가 성전 건축과 관련해 국제 협약을 맺습니다.</span>
+            솔로몬은 아버지 다윗 때부터 우호적 관계를 가져오던 두로와 <strong>성전 건축과 관련하여 협약을 맺습니다</strong>(왕상 5:1~12).
+            <div class="quote">
+                <strong>첫째,</strong> 두로가 솔로몬 즉위 축하 사절단을 보내자 <strong>솔로몬이 그들에게 다윗의 오랜 꿈을 이야기하면서 자신의 계획을 밝힙니다.</strong><br>
+                <strong>둘째,</strong> 솔로몬이 두로 왕 히람에게 <strong>건축 자재와 기술자를 요청합니다.</strong><br>
+                <strong>셋째,</strong> 이스라엘이 두로와의 협력을 시작합니다. <strong>이스라엘은 두로로부터 자재를 수급하고</strong> 이스라엘 사람들이 두로까지 가서 두로 사람들의 도움을 받습니다(대하 2:16). <strong>그리고 이스라엘은 두로에 식량을 공급해줍니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 성막 제작의 헌신자는 브살렐과 오홀리압이었고 예루살렘 성전 건축의 헌신자는 아도니람과 히람입니다.</span>
+            500년 전 시내산에서 성막을 제작할 때에는 <strong>브살렐과 오홀리압이 성막 제작에 중요 책임자들이 되어 헌신했습니다</strong>(출 31:2~6). 이제는 1,000년을 이어갈 예루살렘 성전 건축을 위하여 <strong>아도니람과 히람이 성전 건축에 중요 책임자들이 되어 헌신합니다.</strong> 특히 <strong>아도니람(하도람)은 성전 건축의 총책임 감독이 됩니다.</strong>
+            <br><br>
+            예루살렘 성전 건축에 동원된 <strong>총인원은 18만 3,300명</strong>입니다.
+            <div class="quote">
+                <strong>두로 레바논 파견</strong> — 3만 명 (한 달 파견, 두 달 휴식 교대 근무)<br>
+                <strong>짐꾼</strong> — 연인원 7만 명<br>
+                <strong>돌 뜨는 사람</strong> — 8만 명<br>
+                <strong>중간 감독 관리</strong> — 3,300명
+            </div>
+            솔로몬은 목재는 두로 레바논의 것을 사용했지만 <strong>석재 자재는 석회암 지대가 있는 이스라엘에서 조달했을 것</strong>입니다. 돌을 다듬는 데에는 <strong>이 방면의 월등한 기술자들인 두로의 기술자들과 그발 사람들이 힘을 더합니다.</strong>
+            <br><br>
+            예루살렘 성전 건축의 기초석이 놓인 곳은 <strong>아브라함과 이삭이 '모리아산 번제'를 드린 곳</strong>이며, 그곳은 <strong>다윗이 제단을 쌓은 '아라우나의 타작마당'</strong>이기도 합니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님의 시선은 성전을 짓고 있는 솔로몬의 마음에 있습니다.</span>
+            예루살렘 성전 건축은 <strong>외부 공사에서 내부 공사 순서로 진행됩니다.</strong> 성전 건축의 시작은 출애굽부터 연수를 계산하여 밝힙니다(왕상 6:1). 이는 <strong>모세 때 만들어진 성막에서 성전으로 하나님의 임재가 이동되었음을 밝힌 것</strong>입니다.
+            <br><br>
+            성전 외부 공사는 모세의 율법을 기반으로 <strong>철 연장 소리도 나지 않게 채석장이나 벌목장에서 자재를 완벽하게 만들어 와서 끼우기만 합니다</strong>(왕상 6:7). 성전 안뜰은 바깥뜰도 있음을 시사하며 <strong>성전 바깥뜰은 여인의 뜰, 이스라엘의 뜰, 이방인의 뜰 등으로 추측됩니다.</strong>
+            <br><br>
+            이처럼 공사가 한창일 때 <strong>하나님께서 솔로몬에게 나타나 성전 건축에 대한 칭찬과 함께 '다윗과 맺으신 언약'을 솔로몬에게 상기시키십니다</strong>(삼하 7:13~16).
+            <div class="quote">
+                <strong>이는 하나님의 시선이 성전 건축을 넘어 성전을 건축하는 솔로몬의 '마음'에 더 집중하고 계심을 보여주신 것입니다. 하나님께는 눈에 보이는 건물보다 그 마음에 따르는 행함이 더 중요하기 때문입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 역사 속 성전 건축은 두 번은 설계도대로 그리고 한 번은 정치적으로 건축됩니다.</span>
+            솔로몬의 예루살렘 성전 건축은 <strong>다윗이 건네준 설계도대로 실행됩니다</strong>(대상 28:11). 예루살렘 성전 건축기간이 생각보다 적게 걸린 이유는 다음과 같습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 하나님께서 주신 설계도가 있었습니다(대상 28:19).<br>
+                <strong>둘째,</strong> 다윗의 준비가 완벽했습니다(대상 29:2).<br>
+                <strong>셋째,</strong> 공사 기간 전 모든 자재 준비가 완료되었습니다(왕상 5:18).<br>
+                <strong>넷째,</strong> 이스라엘 백성들의 전방위적 협력이 있었습니다(대상 28:21).<br>
+                <strong>다섯째,</strong> 공사 인원이 일시에 함께 일했습니다.<br>
+                <strong>여섯째,</strong> 성전 규모가 크지 않았습니다.
+            </div>
+            이렇게 건축된 솔로몬 성전은 <strong>BC 586년에 바벨론 제국의 군인들에 의해 파괴됩니다</strong>(왕하 25:8~9). 바벨론 제국에 의해 불타버린 예루살렘 성전은 <strong>하나님께서 주신 설계도대로 70년 만에 포로에서 돌아온 백성들에 의해 '스룹바벨 성전'으로 재건됩니다</strong>(스 5:1~2).
+            <br><br>
+            그런데 이후 스룹바벨 성전의 증축인 <strong>헤롯 성전은 헤롯이 자기의 정치적 목적을 위해 외부 공사는 거창하게, 그러나 내부 공사는 적당히 증축합니다</strong>(요 2:20).
+            <div class="quote">
+                <strong>AD 64년경에 완공된 헤롯 성전은 AD 70년 로마의 티투스 장군에 의해 파괴되고 맙니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="intro-text">
+        오늘은 열왕기상 5~7장 '1,000년 성전 개막'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">열왕기상 5장 (1~18절)</div>
+        <div class="verse"><span class="verse-num">1</span> 솔로몬이 기름 부음을 받고 그의 아버지를 이어 왕이 되었다 함을 두로 왕 히람이 듣고 그의 신하들을 솔로몬에게 보냈으니 이는 히람이 평생에 다윗을 사랑하였음이라</div>
+        <div class="verse"><span class="verse-num">2</span> 이에 솔로몬이 히람에게 사람을 보내어 이르되</div>
+        <div class="verse"><span class="verse-num">3</span> 당신도 알거니와 내 아버지 다윗이 사방의 전쟁으로 말미암아 그의 하나님 여호와의 이름을 위하여 성전을 건축하지 못하고 여호와께서 그의 원수들을 그의 발바닥 밑에 두시기를 기다렸나이다</div>
+        <div class="verse"><span class="verse-num">4</span> 이제 내 하나님 여호와께서 내게 사방의 태평을 주시매 원수도 없고 재앙도 없도다</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와께서 내 아버지 다윗에게 하신 말씀에 내가 너를 이어 네 자리에 오르게 할 네 아들 그가 내 이름을 위하여 성전을 건축하리라 하신 대로 내가 내 하나님 여호와의 이름을 위하여 성전을 건축하려 하오니</div>
+        <div class="verse"><span class="verse-num">6</span> 당신은 명령을 내려 나를 위하여 레바논에서 백향목을 베어내게 하소서 내 종과 당신의 종이 함께 할 것이요 또 내가 당신의 모든 말씀대로 당신의 종의 삯을 당신에게 드리리이다 당신도 알거니와 우리 중에는 시돈 사람처럼 벌목을 잘하는 자가 없나이다</div>
+        <div class="verse"><span class="verse-num">7</span> 히람이 솔로몬의 말을 듣고 크게 기뻐하여 이르되 오늘 여호와를 찬양할지로다 그가 다윗에게 지혜로운 아들을 주사 그 많은 백성을 다스리게 하셨도다 하고</div>
+        <div class="verse"><span class="verse-num">8</span> 이에 솔로몬에게 사람을 보내어 이르되 당신이 사람을 보내어 하신 말씀을 내가 들었거니와 내 백향목 재목과 잣나무 재목에 대하여는 당신이 바라시는 대로 할지라</div>
+        <div class="verse"><span class="verse-num">9</span> 내 종이 레바논에서 바다로 운반하겠고 내가 그것을 바다에서 뗏목으로 엮어 당신이 지정하는 곳으로 보내고 거기서 그것을 풀리니 당신은 받으시고 내 원을 이루어 나의 궁정을 위하여 음식물을 주소서 하고</div>
+        <div class="verse"><span class="verse-num">10</span> 솔로몬의 모든 원대로 백향목 재목과 잣나무 재목을 주매</div>
+        <div class="verse"><span class="verse-num">11</span> 솔로몬이 히람에게 그의 궁정의 음식물로 밀 이만 고르와 맑은 기름 이십 고르를 주고 해마다 그와 같이 주었더라</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와께서 그의 말씀대로 솔로몬에게 지혜를 주신 고로 히람과 솔로몬이 친목하여 두 사람이 함께 약조를 맺었더라</div>
+        <div class="verse"><span class="verse-num">13</span> 이에 솔로몬 왕이 온 이스라엘 가운데서 역군을 불러일으키니 그 역군의 수가 삼만 명이라</div>
+        <div class="verse"><span class="verse-num">14</span> 솔로몬이 그들을 한 달에 만 명씩 번갈아 레바논으로 보내매 그들이 한 달은 레바논에 있고 두 달은 집에 있으며 아도니람은 감독이 되었고</div>
+        <div class="verse"><span class="verse-num">15</span> 솔로몬에게 또 짐꾼이 칠만 명이요 산에서 돌을 뜨는 자가 팔만 명이며</div>
+        <div class="verse"><span class="verse-num">16</span> 이 외에 그 사역을 감독하는 관리가 삼천삼백 명이라 그들이 일하는 백성을 거느렸더라</div>
+        <div class="verse"><span class="verse-num">17</span> 이에 왕이 명령을 내려 크고 귀한 돌을 떠다가 다듬어서 성전의 기초석으로 놓게 하매</div>
+        <div class="verse"><span class="verse-num">18</span> 솔로몬의 건축자와 히람의 건축자와 그발 사람이 그 돌을 다듬고 성전을 건축하기 위하여 재목과 돌들을 갖추니라</div>
+
+        <div class="chapter-title">열왕기상 6장 (1~38절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘 자손이 애굽 땅에서 나온 지 사백팔십 년이요 솔로몬이 이스라엘 왕이 된 지 사 년 시브월 곧 둘째 달에 솔로몬이 여호와를 위하여 성전 건축하기를 시작하였더라</div>
+        <div class="verse"><span class="verse-num">2</span> 솔로몬 왕이 여호와를 위하여 건축한 성전은 길이가 육십 규빗이요 너비가 이십 규빗이요 높이가 삼십 규빗이며</div>
+        <div class="verse"><span class="verse-num">3</span> 성전의 성소 앞 주랑의 길이는 성전의 너비와 같이 이십 규빗이요 그 너비는 성전 앞에서부터 십 규빗이며</div>
+        <div class="verse"><span class="verse-num">4</span> 성전을 위하여 창틀 있는 붙박이 창문을 내고</div>
+        <div class="verse"><span class="verse-num">5</span> 또 성전의 벽 곧 성소와 지성소의 벽에 연접하여 돌아가며 다락들을 건축하되 다락마다 돌아가며 골방들을 만들었으니</div>
+        <div class="verse"><span class="verse-num">6</span> 하층 다락의 너비는 다섯 규빗이요 중층 다락의 너비는 여섯 규빗이요 셋째 층 다락의 너비는 일곱 규빗이라 성전의 벽 바깥으로 돌아가며 턱을 내어 골방 들보들로 성전의 벽에 박히지 아니하게 하였으며</div>
+        <div class="verse"><span class="verse-num">7</span> 이 성전은 건축할 때에 돌을 그 뜨는 곳에서 다듬고 가져다가 건축하였으므로 건축하는 동안에 성전 속에서는 방망이나 도끼나 모든 철 연장 소리가 들리지 아니하였으며</div>
+        <div class="verse"><span class="verse-num">8</span> 중층 골방의 문은 성전 오른쪽에 있는데 나사 모양 층계로 말미암아 하층에서 중층에 오르고 중층에서 셋째 층에 오르게 하였더라</div>
+        <div class="verse"><span class="verse-num">9</span> 성전의 건축을 마치니라 그 성전은 백향목 서까래와 널판으로 덮었고</div>
+        <div class="verse"><span class="verse-num">10</span> 또 온 성전으로 돌아가며 높이가 다섯 규빗 되는 다락방을 건축하되 백향목 들보로 성전에 연접하게 하였더라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와의 말씀이 솔로몬에게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">12</span> 네가 지금 이 성전을 건축하니 네가 만일 내 법도를 따르며 내 율례를 행하며 내 모든 계명을 지켜 그대로 행하면 내가 네 아버지 다윗에게 한 말을 네게 확실히 이룰 것이요</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 또한 이스라엘 자손 가운데에 거하며 내 백성 이스라엘을 버리지 아니하리라 하셨더라</div>
+        <div class="verse"><span class="verse-num">14</span> 솔로몬이 성전 건축하기를 마치고</div>
+        <div class="verse"><span class="verse-num">15</span> 백향목 널판으로 성전의 안벽 곧 성전 마루에서 천장까지의 벽에 입히고 또 잣나무 널판으로 성전 마루를 놓고</div>
+        <div class="verse"><span class="verse-num">16</span> 또 성전 뒤쪽에서부터 이십 규빗 되는 곳에 마루에서 천장까지 백향목 널판으로 가로막아 성전의 내소 곧 지성소를 만들었으며</div>
+        <div class="verse"><span class="verse-num">17</span> 내소 앞에 있는 외소 곧 성소의 길이가 사십 규빗이며</div>
+        <div class="verse"><span class="verse-num">18</span> 성전 안에 입힌 백향목에는 박과 핀 꽃을 아로새겼고 모두 백향목이라 돌이 보이지 아니하며</div>
+        <div class="verse"><span class="verse-num">19</span> 여호와의 언약궤를 두기 위하여 성전 안에 내소를 마련하였는데</div>
+        <div class="verse"><span class="verse-num">20</span> 그 내소의 안은 길이가 이십 규빗이요 너비가 이십 규빗이요 높이가 이십 규빗이라 정금으로 입혔고 백향목 제단에도 입혔더라</div>
+        <div class="verse"><span class="verse-num">21</span> 솔로몬이 정금으로 외소 안에 입히고 내소 앞에 금사슬로 건너지르고 내소를 금으로 입히고</div>
+        <div class="verse"><span class="verse-num">22</span> 온 성전을 금으로 입히기를 마치고 내소에 속한 제단의 전부를 금으로 입혔더라</div>
+        <div class="verse"><span class="verse-num">23</span> 내소 안에 감람나무로 두 그룹을 만들었는데 그 높이가 각각 십 규빗이라</div>
+        <div class="verse"><span class="verse-num">24</span> 한 그룹의 이쪽 날개도 다섯 규빗이요 저쪽 날개도 다섯 규빗이니 이쪽 날개 끝으로부터 저쪽 날개 끝까지 십 규빗이며</div>
+        <div class="verse"><span class="verse-num">25</span> 다른 그룹도 십 규빗이니 그 두 그룹은 같은 크기와 같은 모양이요</div>
+        <div class="verse"><span class="verse-num">26</span> 이 그룹의 높이가 십 규빗이요 저 그룹도 같았더라</div>
+        <div class="verse"><span class="verse-num">27</span> 솔로몬이 내소 가운데에 그룹을 두었으니 그룹들의 날개가 퍼져 있는데 이쪽 그룹의 날개는 이쪽 벽에 닿았고 저쪽 그룹의 날개는 저쪽 벽에 닿았으며 두 날개는 성전의 중앙에서 서로 닿았더라</div>
+        <div class="verse"><span class="verse-num">28</span> 그가 금으로 그룹을 입혔더라</div>
+        <div class="verse"><span class="verse-num">29</span> 내 외소 사방 벽에는 모두 그룹들과 종려와 핀 꽃 형상을 아로새겼고</div>
+        <div class="verse"><span class="verse-num">30</span> 내외 성전 마루에는 금으로 입혔으며</div>
+        <div class="verse"><span class="verse-num">31</span> 내소에 들어가는 곳에는 감람나무로 문을 만들었는데 그 문인방과 문설주는 벽의 오분의 일이요</div>
+        <div class="verse"><span class="verse-num">32</span> 감람나무로 만든 그 두 문짝에 그룹과 종려와 핀 꽃을 아로새기고 금으로 입히되 곧 그룹들과 종려에 금으로 입혔더라</div>
+        <div class="verse"><span class="verse-num">33</span> 또 외소의 문을 위하여 감람나무로 문설주를 만들었으니 곧 벽의 사분의 일이며</div>
+        <div class="verse"><span class="verse-num">34</span> 그 두 문짝은 잣나무라 이쪽 문짝도 두 짝으로 접게 되었고 저쪽 문짝도 두 짝으로 접게 되었으며</div>
+        <div class="verse"><span class="verse-num">35</span> 그 문짝에 그룹들과 종려와 핀 꽃을 아로새기고 금으로 입히되 그 새긴 데에 맞게 하였고</div>
+        <div class="verse"><span class="verse-num">36</span> 또 다듬은 돌 세 켜와 백향목 두꺼운 판자 한 켜로 둘러 안뜰을 만들었더라</div>
+        <div class="verse"><span class="verse-num">37</span> 넷째 해 시브월에 여호와의 성전 기초를 쌓았고</div>
+        <div class="verse"><span class="verse-num">38</span> 열한째 해 불월 곧 여덟째 달에 그 설계와 식양대로 성전 건축이 다 끝났으니 솔로몬이 칠 년 동안 성전을 건축하였더라</div>
+
+        <div class="chapter-title">열왕기상 7장 (1~51절)</div>
+        <div class="verse"><span class="verse-num">1</span> 솔로몬이 자기의 왕궁을 십삼 년 동안 건축하여 그 전부를 준공하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 그가 레바논 나무로 왕궁을 지었으니 길이가 백 규빗이요 너비가 오십 규빗이요 높이가 삼십 규빗이라 백향목 기둥이 네 줄이요 기둥 위에 백향목 들보가 있으며</div>
+        <div class="verse"><span class="verse-num">3</span> 기둥 위에 있는 들보 사십오 개를 백향목으로 덮었는데 들보는 한 줄에 열 다섯이요</div>
+        <div class="verse"><span class="verse-num">4</span> 또 창틀이 세 줄로 있는데 창과 창이 세 층으로 서로 마주 대하였고</div>
+        <div class="verse"><span class="verse-num">5</span> 모든 문과 문설주를 다 큰 나무로 네모지게 만들었는데 창과 창이 세 층으로 서로 마주 대하였으며</div>
+        <div class="verse"><span class="verse-num">6</span> 또 기둥을 세워 주랑을 지었으니 길이가 오십 규빗이요 너비가 삼십 규빗이며 또 기둥 앞에 한 주랑이 있고 또 그 앞에 기둥과 섬돌이 있으며</div>
+        <div class="verse"><span class="verse-num">7</span> 또 심판하기 위하여 보좌의 주랑 곧 재판하는 주랑을 짓고 온 마루를 백향목으로 덮었고</div>
+        <div class="verse"><span class="verse-num">8</span> 솔로몬이 거처할 왕궁은 그 주랑 뒤 다른 뜰에 있으니 그 양식이 동일하며 솔로몬이 또 그가 장가 든 바로의 딸을 위하여 집을 지었는데 이 주랑과 같더라</div>
+        <div class="verse"><span class="verse-num">9</span> 이 집들은 안팎을 모두 귀하고 다듬은 돌로 지었으니 크기대로 톱으로 켠 것이라 그 초석에서 처마까지와 외면에서 큰 뜰에 이르기까지 다 그러하니</div>
+        <div class="verse"><span class="verse-num">10</span> 그 초석은 귀하고 큰 돌 곧 십 규빗 되는 돌과 여덟 규빗 되는 돌이라</div>
+        <div class="verse"><span class="verse-num">11</span> 그 위에는 크기대로 다듬은 귀한 돌도 있고 백향목도 있으며</div>
+        <div class="verse"><span class="verse-num">12</span> 또 큰 뜰 주위에는 다듬은 돌 세 켜와 백향목 두꺼운 판자 한 켜를 놓았으니 마치 여호와의 성전 안뜰과 주랑에 놓은 것 같더라</div>
+        <div class="verse"><span class="verse-num">13</span> 솔로몬 왕이 사람을 보내어 히람을 두로에서 데려오니</div>
+        <div class="verse"><span class="verse-num">14</span> 그는 납달리 지파 과부의 아들이요 그의 아버지는 두로 사람이니 놋쇠 대장장이라 이 히람은 모든 놋 일에 지혜와 총명과 재능을 구비한 자이더니 솔로몬 왕에게 와서 그 모든 공사를 하니라</div>
+        <div class="verse"><span class="verse-num">15</span> 그가 놋기둥 둘을 만들었으니 그 높이는 각각 십팔 규빗이라 각각 십이 규빗 되는 줄을 두를 만하며</div>
+        <div class="verse"><span class="verse-num">16</span> 또 놋을 녹여 부어서 기둥 머리를 만들어 기둥 꼭대기에 두었으니 한쪽 머리의 높이도 다섯 규빗이요 다른쪽 머리의 높이도 다섯 규빗이며</div>
+        <div class="verse"><span class="verse-num">17</span> 기둥 꼭대기에 있는 머리를 위하여 바둑판 모양으로 얽은 그물과 사슬 모양으로 땋은 것을 만들었으니 이 머리에 일곱이요 저 머리에 일곱이라</div>
+        <div class="verse"><span class="verse-num">18</span> 기둥을 이렇게 만들었고 또 두 줄 석류를 한 그물 위에 둘러 만들어서 기둥 꼭대기에 있는 머리에 두르게 하였고 다른 기둥 머리에도 그렇게 하였으며</div>
+        <div class="verse"><span class="verse-num">19</span> 주랑 기둥 꼭대기에 있는 머리의 네 규빗은 백합화 모양으로 만들었으며</div>
+        <div class="verse"><span class="verse-num">20</span> 이 두 기둥 머리에 있는 그물 곁 곧 그 머리의 공 같이 둥근 곳으로 돌아가며 각기 석류 이백 개가 줄을 지었더라</div>
+        <div class="verse"><span class="verse-num">21</span> 이 두 기둥을 성전의 주랑 앞에 세우되 오른쪽 기둥을 세우고 그 이름을 야긴이라 하고 왼쪽의 기둥을 세우고 그 이름을 보아스라 하였으며</div>
+        <div class="verse"><span class="verse-num">22</span> 그 두 기둥 꼭대기에는 백합화 형상이 있더라 두 기둥의 공사가 끝나니라</div>
+        <div class="verse"><span class="verse-num">23</span> 또 바다를 부어 만들었으니 그 직경이 십 규빗이요 그 모양이 둥글며 그 높이는 다섯 규빗이요 주위는 삼십 규빗 줄을 두를 만하며</div>
+        <div class="verse"><span class="verse-num">24</span> 그 가장자리 아래에는 돌아가며 박이 있는데 매 규빗에 열 개씩 있어서 바다 주위에 둘렸으니 그 박은 바다를 부어 만들 때에 두 줄로 부어 만들었으며</div>
+        <div class="verse"><span class="verse-num">25</span> 그 바다를 소 열두 마리가 받쳤으니 셋은 북쪽을 향하였고 셋은 서쪽을 향하였고 셋은 남쪽을 향하였고 셋은 동쪽을 향하였으며 바다를 그 위에 놓았고 소의 뒤는 다 안으로 두었으며</div>
+        <div class="verse"><span class="verse-num">26</span> 바다의 두께는 한 손 너비만 하고 그것의 가는 백합화의 양식으로 잔 가와 같이 만들었으니 그 바다에는 이천 밧을 담겠더라</div>
+        <div class="verse"><span class="verse-num">27</span> 또 놋으로 받침 수레 열을 만들었으니 매 받침 수레의 길이가 네 규빗이요 너비가 네 규빗이요 높이가 세 규빗이라</div>
+        <div class="verse"><span class="verse-num">28</span> 그 받침 수레의 구조는 이러하니 사면 옆 가장자리 가운데에는 판이 있고</div>
+        <div class="verse"><span class="verse-num">29</span> 가장자리 가운데 판에는 사자와 소와 그룹들이 있고 또 가장자리 위에는 놓는 자리가 있고 사자와 소 아래에는 화환 모양이 있으며</div>
+        <div class="verse"><span class="verse-num">30</span> 그 받침 수레에 각각 네 놋바퀴와 놋축이 있고 받침 수레 네 발 밑에는 어깨 같은 것이 있으며 그 어깨 같은 것은 물두멍 아래쪽에 부어 만들었고 화환은 각각 그 옆에 있으며</div>
+        <div class="verse"><span class="verse-num">31</span> 그 받침 수레 위로 들이켜 높이가 한 규빗 되게 내민 것이 있고 그 면은 직경 한 규빗 반 되게 반원형으로 우묵하며 그 나머지 면에는 아로새긴 것이 있으며 그 내민 판들은 네모지고 둥글지 아니하며</div>
+        <div class="verse"><span class="verse-num">32</span> 네 바퀴는 옆판 밑에 있고 바퀴 축은 받침 수레에 연결되었는데 바퀴의 높이는 각각 한 규빗 반이며</div>
+        <div class="verse"><span class="verse-num">33</span> 그 바퀴의 구조는 병거 바퀴의 구조 같은데 그 축과 테와 살과 통이 다 부어 만든 것이며</div>
+        <div class="verse"><span class="verse-num">34</span> 받침 수레 네 모퉁이에 어깨 같은 것 넷이 있는데 그 어깨는 받침 수레와 연결되었고</div>
+        <div class="verse"><span class="verse-num">35</span> 받침 수레 위에 둥근 테두리가 있는데 높이가 반 규빗이요 또 받침 수레 위의 버팀대와 옆판들이 받침 수레와 연결되었고</div>
+        <div class="verse"><span class="verse-num">36</span> 버팀대 판과 옆판에는 각각 빈 곳을 따라 그룹들과 사자와 종려나무를 아로새겼고 또 그 둘레에 화환 모양이 있더라</div>
+        <div class="verse"><span class="verse-num">37</span> 이와 같이 받침 수레 열 개를 만들었는데 그 부어 만든 법과 크기와 양식을 다 동일하게 만들었더라</div>
+        <div class="verse"><span class="verse-num">38</span> 또 물두멍 열 개를 놋으로 만들었는데 물두멍마다 각각 사십 밧을 담게 하였으며 매 물두멍의 직경은 네 규빗이라 열 받침 수레 위에 각각 물두멍이 하나씩이더라</div>
+        <div class="verse"><span class="verse-num">39</span> 그 받침 수레 다섯은 성전 오른쪽에 두었고 다섯은 성전 왼쪽에 두었고 성전 오른쪽 동남쪽에는 그 바다를 두었더라</div>
+        <div class="verse"><span class="verse-num">40</span> 히람이 또 물두멍과 부삽과 대접들을 만들었더라 이와 같이 히람이 솔로몬 왕을 위하여 여호와의 전의 모든 일을 마쳤으니</div>
+        <div class="verse"><span class="verse-num">41</span> 곧 기둥 둘과 그 기둥 꼭대기의 공 같은 머리 둘과 또 기둥 꼭대기의 공 같은 머리를 가리는 그물 둘과</div>
+        <div class="verse"><span class="verse-num">42</span> 또 그 그물들을 위하여 만든 바 매 그물에 두 줄씩으로 기둥 위의 공 같은 두 머리를 가리게 한 석류 사백 개와</div>
+        <div class="verse"><span class="verse-num">43</span> 또 열 개의 받침 수레와 받침 수레 위의 열 개의 물두멍과</div>
+        <div class="verse"><span class="verse-num">44</span> 한 바다와 그 바다 아래의 소 열두 마리와</div>
+        <div class="verse"><span class="verse-num">45</span> 솥과 부삽과 대접들이라 히람이 솔로몬 왕을 위하여 여호와의 성전에 이 모든 그릇을 빛난 놋으로 만드니라</div>
+        <div class="verse"><span class="verse-num">46</span> 왕이 요단 평지에서 숙곳과 사르단 사이의 차진 흙에 그것들을 부어 내었더라</div>
+        <div class="verse"><span class="verse-num">47</span> 기구가 심히 많으므로 솔로몬이 다 달아보지 아니하고 두었으니 그 놋 무게를 능히 측량할 수 없었더라</div>
+        <div class="verse"><span class="verse-num">48</span> 솔로몬이 또 여호와의 성전의 모든 기구를 만들었으니 곧 금 단과 진설병의 금 상과</div>
+        <div class="verse"><span class="verse-num">49</span> 내소 앞에 좌우로 다섯씩 둘 정금 등잔대며 또 금 꽃과 등잔과 불집게며</div>
+        <div class="verse"><span class="verse-num">50</span> 또 정금 대접과 불집게와 주발과 숟가락과 불을 옮기는 그릇이며 또 내소 곧 지성소 문의 금 돌쩌귀와 성전 곧 외소 문의 금 돌쩌귀더라</div>
+        <div class="verse"><span class="verse-num">51</span> 솔로몬 왕이 여호와의 성전을 위하여 만드는 모든 일을 마친지라 이에 솔로몬이 그의 아버지 다윗이 드린 물건 곧 은과 금과 기구들을 가져다가 여호와의 성전 곳간에 두었더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

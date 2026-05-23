@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 115</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 115</h1>
+        <p class="sub-title">찬송가 361장 기도하는 이 시간</p>
+        <p class="sub-title">열왕기상 8장 — 세계 정치 선언기도: 성전 낙성식</p>
+    </div>
+
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 361장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1umR7HMMvR_lA44a7G1JzTKfnYnVjZb8h" alt="찬송가 361장 악보" class="hymn-image">
+    </div>
+
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 열왕기상 8장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 움직이는 성막 500년 동안 법궤의 이동 경로에는 시내산에서부터 예루살렘까지 열 개의 이야기가 들어 있습니다.</span>
+            하나님께서 지정하신 만남의 장소 '거기서'는 <strong>시내산에서 시작하여 500년 만에 예루살렘 성전으로 이어집니다.</strong> '예루살렘 성전 1,000년' 이전에 '움직이는 성막 500년'을 정리한 <strong>열 가지 역사 이야기</strong>입니다.
+            <div class="quote">
+                <strong>첫째,</strong> 모세 때 법궤가 제작됩니다(출 25:22).<br>
+                <strong>둘째,</strong> 법궤는 광야 생활 40년 동안 이스라엘 백성들과 함께합니다(민 9:17).<br>
+                <strong>셋째,</strong> 이스라엘의 제사장들은 법궤를 메고 요단강을 건너 가나안으로 들어갑니다(수 3:17).<br>
+                <strong>넷째,</strong> 법궤는 가나안에 도착한 이후 맨 처음 '길갈'에 모셔집니다(수 4:20~22).<br>
+                <strong>다섯째,</strong> 이스라엘의 제사장들은 법궤를 메고 여리고성을 점령합니다(수 6:13).<br>
+                <strong>여섯째,</strong> 실로에 모셔져 있던 법궤가 홉니와 비느하스로 말미암아 블레셋에게 빼앗깁니다(삼상 4:3).<br>
+                <strong>일곱째,</strong> 벧세메스의 소가 끄는 수레에 실려 법궤는 블레셋에서 기럇여아림으로 돌아오게 됩니다(삼상 7:2).<br>
+                <strong>여덟째,</strong> 다윗은 법궤를 기럇여아림에서 예루살렘으로 옮겨오려 했으나 웃사의 죽음으로 <strong>법궤가 오벧에돔의 집에 머물게 됩니다</strong>(대상 13:12~14).<br>
+                <strong>아홉째,</strong> 법궤가 오벧에돔의 집에서 다시 다윗의 노래와 함께 예루살렘으로 모셔집니다(대상 16:1).<br>
+                <strong>열째,</strong> 솔로몬의 성전 건축으로 <strong>법궤가 마침내 예루살렘 성전 안 지성소로 들어가게 됩니다</strong>(왕상 8:4~5).
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 성막 봉헌 때에도, 성전 봉헌 때에도 구름이 덮이고 하나님의 영광이 충만합니다.</span>
+            마침내 <strong>법궤가 예루살렘 성전에 안치되자 예루살렘 성전 건축의 완성이 선포되고 낙성식이 시작됩니다.</strong> 이는 <strong>'움직이는 성막 500년'의 종료이자 '예루살렘 성전 1,000년'의 시작</strong>입니다.
+            <div class="quote">
+                <strong>시내산에서 성막 봉헌 때에 구름이 그곳을 덮었던 것처럼 예루살렘 성전 봉헌 때에도 구름이 성전을 덮으며 두 번 다 하나님의 영광이 그곳에 충만했습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 솔로몬의 성전 낙성식 기도는 '열방을 향한 세계 정치 성명서'입니다.</span>
+            먼저 솔로몬이 그곳에 모인 모든 사람에게 인사말을 한 후 <strong>이스라엘의 시작은 출애굽이라고 선언합니다</strong>(왕상 8:16). 이제 <strong>예루살렘 성전 낙성식의 최고의 장면인 '솔로몬의 기도'</strong>가 이어집니다(왕상 8:22~53). 솔로몬의 이 기도는 <strong>솔로몬 지혜의 극치이자 솔로몬의 세계 정치 성명서</strong>입니다.
+            <div class="quote">
+                <strong>첫째,</strong> 솔로몬은 <strong>'맹세의 기도'</strong>를 드립니다.<br>
+                <strong>둘째,</strong> 솔로몬은 레위기 26장의 제사장 나라 경영 3단계의 징계인 <strong>'포로의 기도'</strong>를 드립니다.<br>
+                <strong>셋째,</strong> 솔로몬은 레위기 26장의 제사장 나라 경영 1단계의 징계인 <strong>'가뭄 때의 기도'</strong>를 드립니다.<br>
+                <strong>넷째,</strong> 솔로몬은 레위기 26장의 제사장 나라 경영 1단계와 2단계 징계인 <strong>'여러 재앙 때의 기도'</strong>를 드립니다.<br>
+                <strong>다섯째,</strong> 솔로몬은 <strong>'이방인들을 위한 기도'</strong>를 드립니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 다니엘의 하루 세 번 예루살렘 성전을 향한 기도는 솔로몬의 성전 낙성식 기도에 그 근거를 두고 있습니다.</span>
+            다니엘은 <strong>바벨론 포로 70년 동안 불타버리고 없는 예루살렘 성전 쪽을 향하여 하루에 세 번씩 기도했습니다</strong>(단 6:10). 솔로몬의 낙성식 기도 속에 이미 이 근거가 있습니다.
+            <div class="quote">
+                <strong>"그들이 사로잡혀 간 땅에서 스스로 깨닫고 성전 있는 쪽을 향하여 주께 기도하거든 주는 계신 곳 하늘에서 그들의 기도와 간구를 들으시고 그들의 일을 돌아보시오며 주께 범죄한 백성을 용서하시며~"</strong> (왕상 8:47~50)
+            </div>
+            <br>
+            <strong>이렇게 솔로몬의 기도대로 다니엘은 사로잡혀 간 땅 바벨론에서 예루살렘으로 향한 창문을 열고 하늘에 계신 주께 기도했습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 성막 봉헌 때에는 12일간, 성전 봉헌 때에는 14일간 예물을 드립니다.</span>
+            시내 광야에서의 성막(회막) 봉헌 때에는 <strong>열두 지파가 매일 하루에 한 지파씩 12일에 걸쳐 봉헌 예물을 드렸습니다</strong>(민 7:1~5). 이제 예루살렘 성전 봉헌 때에는 <strong>하맛 어귀에서 애굽강까지 온 이스라엘 백성이 14일간 예물을 드립니다.</strong> 먼저 솔로몬이 이스라엘 백성들을 향하여 축복하고 권면합니다. 그리고 <strong>솔로몬과 온 이스라엘 백성이 예루살렘 성전 낙성식 제사를 드립니다</strong>(왕상 8:62~66).
+            <br><br>
+            이 낙성식은 <strong>초막절 절기 14일간에 걸쳐 거행</strong>되는데 <strong>소 2만 2천 마리와 양 12만 마리를 화목제물로 바칩니다.</strong> 성전 낙성식 후 하나님께 드려진 화목제물은 이스라엘의 북방 경계 하맛 어귀에서부터 남방 경계 애굽강까지의 <strong>온 이스라엘 백성이 화목제 제사법에 따라 다 함께 나누어 먹습니다.</strong>
+            <div class="quote">
+                <strong>이스라엘 열두 지파 모두가 함께 성전을 봉헌하는 기쁨을 누린 것입니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="intro-text">
+        오늘은 열왕기상 8장 '세계 정치 선언기도: 성전 낙성식'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">열왕기상 8장 (1~66절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이에 솔로몬이 여호와의 언약궤를 다윗 성 곧 시온에서 메어 올리고자 하여 이스라엘 장로와 모든 지파의 우두머리 곧 이스라엘 자손의 족장들을 예루살렘에 있는 자기에게로 소집하니</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 모든 사람이 다 에다님월 곧 일곱째 달 절기에 솔로몬 왕에게 모이고</div>
+        <div class="verse"><span class="verse-num">3</span> 이스라엘 장로들이 다 이르매 제사장들이 궤를 메니라</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와의 궤와 회막과 성막 안의 모든 거룩한 기구들을 메고 올라가되 제사장과 레위 사람이 그것들을 메고 올라가매</div>
+        <div class="verse"><span class="verse-num">5</span> 솔로몬 왕과 그 앞에 모인 이스라엘 회중이 그와 함께 그 궤 앞에 있어 양과 소로 제사를 지냈으니 그 수가 많아 기록할 수도 없고 셀 수도 없었더라</div>
+        <div class="verse"><span class="verse-num">6</span> 제사장들이 여호와의 언약궤를 그 처소로 메어 들였으니 곧 성전의 내소인 지성소 그룹들의 날개 아래라</div>
+        <div class="verse"><span class="verse-num">7</span> 그룹들이 그 궤 처소 위에서 날개를 펴서 궤와 그 채를 덮었는데</div>
+        <div class="verse"><span class="verse-num">8</span> 채가 길므로 채 끝이 내소 앞 성소에서 보이나 밖에서는 보이지 아니하며 그 채는 오늘까지 그 곳에 있으며</div>
+        <div class="verse"><span class="verse-num">9</span> 그 궤 안에는 두 돌판 외에 아무것도 없으니 이것은 이스라엘 자손이 애굽 땅에서 나온 후 여호와께서 저희와 언약을 맺으실 때에 모세가 호렙에서 그 안에 넣은 것이더라</div>
+        <div class="verse"><span class="verse-num">10</span> 제사장이 성소에서 나올 때에 구름이 여호와의 성전에 가득하매</div>
+        <div class="verse"><span class="verse-num">11</span> 제사장이 그 구름으로 말미암아 능히 서서 섬기지 못하였으니 이는 여호와의 영광이 여호와의 성전에 가득함이었더라</div>
+        <div class="verse"><span class="verse-num">12</span> 그 때에 솔로몬이 이르되 여호와께서 캄캄한 데 계시겠다 말씀하셨사오나</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 참으로 주를 위하여 계실 성전을 건축하였사오니 주께서 영원히 계실 처소로소이다 하고</div>
+        <div class="verse"><span class="verse-num">14</span> 얼굴을 돌이켜 이스라엘의 온 회중을 위하여 축복하니 그 때에 이스라엘의 온 회중이 서 있더라</div>
+        <div class="verse"><span class="verse-num">15</span> 왕이 이르되 이스라엘의 하나님 여호와를 송축할지로다 여호와께서 그의 입으로 내 아버지 다윗에게 말씀하신 것을 이제 그의 손으로 이루셨도다 이르시기를</div>
+        <div class="verse"><span class="verse-num">16</span> 내가 내 백성 이스라엘을 애굽에서 인도하여 낸 날부터 내 이름을 둘 만한 집을 건축하기 위하여 이스라엘 모든 지파 가운데에서 아무 성읍도 택하지 아니하고 다만 다윗을 택하여 내 백성 이스라엘을 다스리게 하였노라 하신지라</div>
+        <div class="verse"><span class="verse-num">17</span> 내 아버지 다윗이 이스라엘의 하나님 여호와의 이름을 위하여 성전을 건축할 마음이 있었더니</div>
+        <div class="verse"><span class="verse-num">18</span> 여호와께서 내 아버지 다윗에게 이르시되 네가 내 이름을 위하여 성전을 건축할 마음이 있으니 이 마음이 네게 있는 것이 좋도다</div>
+        <div class="verse"><span class="verse-num">19</span> 그러나 너는 그 성전을 건축하지 못할 것이요 네 몸에서 낳을 네 아들 그가 내 이름을 위하여 성전을 건축하리라 하시더니</div>
+        <div class="verse"><span class="verse-num">20</span> 이제 여호와께서 말씀하신 대로 이루시도다 내가 여호와께서 말씀하신 대로 내 아버지 다윗을 이어서 일어나 이스라엘의 왕위에 앉고 이스라엘의 하나님 여호와의 이름을 위하여 성전을 건축하고</div>
+        <div class="verse"><span class="verse-num">21</span> 내가 또 그 곳에 우리 조상들을 애굽 땅에서 인도하여 내실 때에 그들과 세우신 바 여호와의 언약을 넣은 궤를 위하여 한 처소를 설치하였노라</div>
+        <div class="verse"><span class="verse-num">22</span> 솔로몬이 여호와의 제단 앞에서 이스라엘의 온 회중과 마주서서 하늘을 향하여 손을 펴고</div>
+        <div class="verse"><span class="verse-num">23</span> 이르되 이스라엘의 하나님 여호와여 위로 하늘과 아래로 땅에 주와 같은 신이 없나이다 주께서는 온 마음으로 주의 앞에서 행하는 종들에게 언약을 지키시고 은혜를 베푸시나이다</div>
+        <div class="verse"><span class="verse-num">24</span> 주께서 주의 종 내 아버지 다윗에게 하신 말씀을 지키사 주의 입으로 말씀하신 것을 손으로 이루심이 오늘과 같으니이다</div>
+        <div class="verse"><span class="verse-num">25</span> 이스라엘의 하나님 여호와여 주께서 주의 종 내 아버지 다윗에게 말씀하시기를 네 자손이 자기 길을 삼가서 네가 내 앞에서 행한 것 같이 내 앞에서 행하기만 하면 네게서 나서 이스라엘의 왕위에 앉을 사람이 내 앞에서 끊어지지 아니하리라 하셨사오니 이제 다윗을 위하여 그 하신 말씀을 지키시옵소서</div>
+        <div class="verse"><span class="verse-num">26</span> 그런즉 이스라엘의 하나님이여 원하건대 주는 주의 종 내 아버지 다윗에게 하신 말씀이 확실하게 하옵소서</div>
+        <div class="verse"><span class="verse-num">27</span> 하나님이 참으로 땅에 거하시리이까 하늘과 하늘들의 하늘이라도 주를 용납하지 못하겠거든 하물며 내가 건축한 이 성전이오리이까</div>
+        <div class="verse"><span class="verse-num">28</span> 그러나 내 하나님 여호와여 주의 종의 기도와 간구를 돌아보시며 이 종이 오늘 주 앞에서 부르짖음과 비는 기도를 들으시옵소서</div>
+        <div class="verse"><span class="verse-num">29</span> 주께서 전에 말씀하시기를 내 이름이 거기 있으리라 하신 곳 이 성전을 향하여 주의 눈이 주야로 보시오며 주의 종이 이 곳을 향하여 비는 기도를 들으시옵소서</div>
+        <div class="verse"><span class="verse-num">30</span> 주의 종과 주의 백성 이스라엘이 이 곳을 향하여 기도할 때에 주는 그 간구함을 들으시되 주께서 계신 곳 하늘에서 들으시고 들으시사 사하여 주옵소서</div>
+        <div class="verse"><span class="verse-num">31</span> 만일 어떤 사람이 그 이웃에게 범죄함으로 맹세시킴을 받고 그가 와서 이 성전에 있는 주의 제단 앞에서 맹세하거든</div>
+        <div class="verse"><span class="verse-num">32</span> 주는 하늘에서 들으시고 행하시되 주의 종들을 심판하사 악한 자의 죄를 정하여 그 행위대로 그 머리에 돌리시고 의로운 자를 의롭다 하사 그의 의로운 바대로 갚으시옵소서</div>
+        <div class="verse"><span class="verse-num">33</span> 만일 주의 백성 이스라엘이 주께 범죄하여 적국 앞에 패하게 되므로 주께로 돌아와서 주의 이름을 인정하고 이 성전에서 주께 기도하며 간구하거든</div>
+        <div class="verse"><span class="verse-num">34</span> 주는 하늘에서 들으시고 주의 백성 이스라엘의 죄를 사하시고 그들의 조상들에게 주신 땅으로 돌아오게 하옵소서</div>
+        <div class="verse"><span class="verse-num">35</span> 만일 그들이 주께 범죄함으로 말미암아 하늘이 닫히고 비가 없어서 주께 벌을 받을 때에 이 곳을 향하여 기도하며 주의 이름을 찬양하고 그들의 죄에서 떠나거든</div>
+        <div class="verse"><span class="verse-num">36</span> 주는 하늘에서 들으사 주의 종들과 주의 백성 이스라엘의 죄를 사하시고 그들이 마땅히 행할 선한 길을 가르쳐 주시오며 주의 백성에게 기업으로 주신 주의 땅에 비를 내리시옵소서</div>
+        <div class="verse"><span class="verse-num">37</span> 만일 이 땅에 기근이나 전염병이 있거나 곡식이 시들거나 깜부기가 나거나 메뚜기나 황충이 나거나 적국이 와서 성읍을 에워싸거나 무슨 재앙이나 무슨 질병이 있든지 막론하고</div>
+        <div class="verse"><span class="verse-num">38</span> 한 사람이나 혹 주의 온 백성 이스라엘이 다 각각 자기의 마음에 재앙을 깨닫고 이 성전을 향하여 손을 펴고 무슨 기도나 무슨 간구를 하거든</div>
+        <div class="verse"><span class="verse-num">39</span> 주는 계신 곳 하늘에서 들으시고 사하시며 각 사람의 마음을 아시오니 그들의 모든 행위대로 행하사 갚으시옵소서 주만 홀로 사람의 마음을 다 아심이니이다</div>
+        <div class="verse"><span class="verse-num">40</span> 그리하시면 그들이 주께서 우리 조상들에게 주신 땅에서 사는 동안에 항상 주를 경외하리이다</div>
+        <div class="verse"><span class="verse-num">41</span> 또 주의 백성 이스라엘에 속하지 아니한 자 곧 주의 이름을 위하여 먼 지방에서 온 이방인이라도</div>
+        <div class="verse"><span class="verse-num">42</span> 그들이 주의 크신 이름과 주의 능한 손과 주의 펴신 팔의 소문을 듣고 와서 이 성전을 향하여 기도하거든</div>
+        <div class="verse"><span class="verse-num">43</span> 주는 계신 곳 하늘에서 들으시고 이방인이 주께 부르짖는 대로 이루사 땅의 만민이 주의 이름을 알고 주의 백성 이스라엘처럼 경외하게 하시오며 또 내가 건축한 이 성전을 주의 이름으로 일컫는 줄을 알게 하옵소서</div>
+        <div class="verse"><span class="verse-num">44</span> 주의 백성이 그들의 적국과 더불어 싸우고자 하여 주께서 보내신 길로 나갈 때에 그들이 주께서 택하신 성읍과 내가 주의 이름을 위하여 건축한 성전이 있는 쪽을 향하여 여호와께 기도하거든</div>
+        <div class="verse"><span class="verse-num">45</span> 주는 하늘에서 그들의 기도와 간구를 들으시고 그들의 일을 돌아보옵소서</div>
+        <div class="verse"><span class="verse-num">46</span> 범죄하지 아니하는 사람이 없사오니 그들이 주께 범죄함으로 주께서 그들에게 진노하사 그들을 적국에게 넘기시매 적국이 그들을 사로잡아 원근을 막론하고 적국의 땅으로 끌어간 후에</div>
+        <div class="verse"><span class="verse-num">47</span> 그들이 사로잡혀 간 땅에서 스스로 깨닫고 그 사로잡은 자의 땅에서 돌이켜 주께 간구하기를 우리가 범죄하여 반역을 행하며 악을 지었나이다 하며</div>
+        <div class="verse"><span class="verse-num">48</span> 자기를 사로잡아 간 적국의 땅에서 온 마음과 온 뜻으로 주께 돌아와서 주께서 그들의 조상들에게 주신 땅 곧 주께서 택하신 성읍과 내가 주의 이름을 위하여 건축한 성전 있는 쪽을 향하여 주께 기도하거든</div>
+        <div class="verse"><span class="verse-num">49</span> 주는 계신 곳 하늘에서 그들의 기도와 간구를 들으시고 그들의 일을 돌아보시오며</div>
+        <div class="verse"><span class="verse-num">50</span> 주께 범죄한 백성을 용서하시며 주께 범한 그 모든 허물을 사하시고 그들을 사로잡아 간 자 앞에서 그들로 불쌍히 여김을 얻게 하사 그 사람들로 그들을 불쌍히 여기게 하옵소서</div>
+        <div class="verse"><span class="verse-num">51</span> 그들은 주께서 철 풀무 같은 애굽에서 인도하여 내신 주의 백성, 주의 소유가 됨이니이다</div>
+        <div class="verse"><span class="verse-num">52</span> 원하건대 주는 눈을 들어 종의 간구함과 주의 백성 이스라엘의 간구함을 보시고 주께 부르짖는 대로 들으시옵소서</div>
+        <div class="verse"><span class="verse-num">53</span> 주 여호와여 주께서 우리 조상을 애굽에서 인도하여 내실 때에 주의 종 모세를 통하여 말씀하심 같이 주께서 세상 만민 가운데에서 그들을 구별하여 주의 기업으로 삼으셨나이다</div>
+        <div class="verse"><span class="verse-num">54</span> 솔로몬이 무릎을 꿇고 손을 펴서 하늘을 향하여 이 기도와 간구로 여호와께 아뢰기를 마치고 여호와의 제단 앞에서 일어나</div>
+        <div class="verse"><span class="verse-num">55</span> 서서 큰 소리로 이스라엘의 온 회중을 위하여 축복하며 이르되</div>
+        <div class="verse"><span class="verse-num">56</span> 여호와를 찬송할지로다 그가 말씀하신 대로 그의 백성 이스라엘에게 태평을 주셨으니 그 종 모세를 통하여 무릇 말씀하신 그 모든 좋은 약속이 하나도 이루어지지 아니함이 없도다</div>
+        <div class="verse"><span class="verse-num">57</span> 우리 하나님 여호와께서 우리 조상들과 함께 계시던 것 같이 우리와 함께 계시옵고 우리를 떠나지 마시오며 버리지 마시옵고</div>
+        <div class="verse"><span class="verse-num">58</span> 우리의 마음을 주께로 향하여 그의 모든 길로 행하게 하시오며 우리 조상들에게 명령하신 계명과 법도와 율례를 지키게 하시기를 원하오며</div>
+        <div class="verse"><span class="verse-num">59</span> 여호와 앞에서 내가 간구한 이 말씀이 주야로 우리 하나님 여호와께 가까이 있게 하시옵고 또 주의 종의 일과 주의 백성 이스라엘의 일을 날마다 필요한 대로 돌아보사</div>
+        <div class="verse"><span class="verse-num">60</span> 이에 세상 만민에게 여호와께서만 하나님이시고 그 외에는 없는 줄을 알게 하시기를 원하노라</div>
+        <div class="verse"><span class="verse-num">61</span> 그런즉 너희의 마음을 우리 하나님 여호와께 온전히 바쳐 완전하게 하여 오늘과 같이 그의 법도를 행하며 그의 계명을 지킬지어다</div>
+        <div class="verse"><span class="verse-num">62</span> 이에 왕과 및 왕과 함께 한 이스라엘이 다 여호와 앞에 희생제물을 드리니라</div>
+        <div class="verse"><span class="verse-num">63</span> 솔로몬이 화목제의 희생제물을 드렸으니 곧 여호와께 드린 소가 이만 이천 마리요 양이 십이만 마리라 이와 같이 왕과 모든 이스라엘 자손이 여호와의 성전의 봉헌식을 행하였는데</div>
+        <div class="verse"><span class="verse-num">64</span> 그 날에 왕이 여호와의 성전 앞뜰 가운데를 거룩히 구별하고 거기서 번제와 소제와 감사제물의 기름을 드렸으니 이는 여호와의 앞 놋 제단이 작으므로 번제물과 소제물과 화목제의 기름을 다 용납할 수 없음이라</div>
+        <div class="verse"><span class="verse-num">65</span> 그 때에 솔로몬이 칠 일과 칠 일 도합 십사 일간을 우리 하나님 여호와 앞에서 절기로 지켰는데 하맛 어귀에서부터 애굽 강까지의 온 이스라엘의 큰 회중이 모여 그와 함께 하였더니</div>
+        <div class="verse"><span class="verse-num">66</span> 여덟째 날에 솔로몬이 백성을 돌려보내매 백성이 왕을 위하여 축복하고 자기 장막으로 돌아가는데 여호와께서 그의 종 다윗과 그의 백성 이스라엘에게 베푸신 모든 은혜로 말미암아 기뻐하며 마음에 즐거워하였더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

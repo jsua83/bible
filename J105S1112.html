@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- STREAMING_CHUNK:Configuring meta tags and linking fonts... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 105</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* STREAMING_CHUNK:Styling the base elements... */
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* STREAMING_CHUNK:Styling the header section... */
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* STREAMING_CHUNK:Styling the confession and prayer boxes... */
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* STREAMING_CHUNK:Styling the hymn section... */
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* STREAMING_CHUNK:Styling the 5 points section... */
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* STREAMING_CHUNK:Styling the intro text and bible section... */
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        
+        /* STREAMING_CHUNK:Styling bible verses and numbers... */
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* STREAMING_CHUNK:Styling the closing words and footer... */
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* STREAMING_CHUNK:Adding media queries for mobile responsiveness... */
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- STREAMING_CHUNK:Rendering the header section... -->
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 105</h1>
+        <p class="sub-title">찬송가 272장 고통의 멍에 벗으려고</p>
+        <p class="sub-title">사무엘하 11장~12장, 시편 51편 — 우슬초 정결</p>
+    </div>
+
+
+    <!-- STREAMING_CHUNK:Rendering the Apostles' Creed... -->
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- STREAMING_CHUNK:Rendering the hymn section... -->
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 272장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1Budj3QICHWEPzv8qRiQhfDNyhak2DH5K" alt="찬송가 272장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- STREAMING_CHUNK:Rendering the 5 points section... -->
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사무엘하 11장~12장·시편 51편의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 다윗은 편지 한 장으로 우리아에 대한 차도살인을 시행합니다.</span>
+            해가 바뀌면서 이스라엘과 암몬의 전쟁이 재개된 상황에서 일어난 일입니다. 당시 군대 장관 요압과 이스라엘 군대를 암몬의 수도 랍바로 보내고 다윗이 왕궁에 있던 어느 날 <strong>밧세바가 다윗의 눈에 들어왔습니다.</strong> 다윗은 밧세바가 자신의 부하 우리아의 아내임을 알면서도 <strong>그녀를 궁으로 데려와 동침합니다.</strong>
+            <br><br>
+            그런데 얼마 후 다윗이 밧세바의 임신을 은폐해보고자 <strong>암몬과의 전쟁 중에 있는 우리아를 예루살렘으로 불러들입니다.</strong> 그러나 <strong>다윗의 계획은 충성된 신하 우리아의 행동으로 뜻을 이루지 못합니다.</strong> 그러자 다윗이 급기야 자신의 잘못을 덮기 위해 암몬과의 전쟁 상황을 이용해 <strong>우리아에 대한 차도살인 계획을 세웁니다.</strong>
+            <br><br>
+            다윗은 자신의 권력을 이용해 <strong>우리아를 전쟁 중 최전방으로 보내 적의 손에 죽임을 당하도록 합니다.</strong> 요압을 통해 편지 한 장으로 감쪽같이 <strong>충성스러운 우리아를 죽게 한 것</strong>입니다(삼하 11:14~15).
+            <div class="quote">
+                <strong>그러나 이 모든 다윗의 죄를 하나님께서 지켜보고 계셨습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 선지자 나단은 왕 다윗과 대립을 선언합니다.</span>
+            선지자는 하나님의 대변인으로 <strong>제사장 나라 법을 어긴 사람에게 하나님의 뜻과 경고를 전해야 하는 사람</strong>입니다. 이것이 선지자의 존재 이유입니다.
+            <br><br>
+            선지자 나단은 다윗이 성전 건축에 대해 하나님의 허락을 구할 때에는 <strong>다윗 왕과 협력했습니다</strong>(삼하 7:3). 그러나 다윗 왕이 죄 없는 우리아를 '차도살인'하자 <strong>그 사실을 밝히기 위해 왕과의 대립을 선언합니다.</strong> 왕의 잘못에 대해 하나님께서 나단을 보내셔서 <strong>사건의 전모를 밝히십니다</strong>(삼하 12:7~9).
+            <div class="quote">
+                <strong>이처럼 선지자는 어떤 권력자 앞에서도 목숨을 걸고 하나님의 뜻을 전하는 사명을 받은 하나님의 사람입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 왕 다윗이 제사장 나라 법 앞에 무릎을 꿇습니다.</span>
+            일반적으로 보통 나라의 왕들에 견주어보면 다윗의 잘못은 죄의 범주에 끼지도 못할 것입니다. 하지만 <strong>제사장 나라 법은 제사장 나라의 측량대 위에서 다윗의 잘못을 계측합니다.</strong> 때문에 <strong>다윗의 죄는 용서받을 수 없는 죄</strong>였습니다.
+            <br><br>
+            하나님께서 나단 선지자를 통해 <strong>무고한 우리아를 죽인 다윗의 죄에 대한 판결을 말씀하십니다</strong>(삼하 12:10~14).
+            <div class="quote">
+                <strong>첫째,</strong> '칼이 다윗의 집에서 떠나지 않는다.'<br>
+                <strong>둘째,</strong> '다윗도 아내를 빼앗긴다.'<br>
+                <strong>셋째,</strong> '밧세바가 낳은 아이가 죽는다.'
+            </div>
+            여기에서 놀라운 일은 다윗이 말한 이 한마디입니다.
+            <div class="quote">
+                <strong>"내가 여호와께 죄를 범하였노라"</strong> (삼하 12:13)
+            </div>
+            <strong>다윗이 어떤 변명도 없이 즉시 자신의 죄를 인정하고 회개한 것</strong>입니다.
+            <div class="quote">
+                <strong>그래서 다윗은 죄인이지만 회개하고 구원받은 '하나님의 사람'인 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 다윗이 우슬초 정결 시로 '하나님의 용서의 기적'을 노래합니다.</span>
+            우슬초는 <strong>벽이나 담 위에서 자라는 향기가 짙은 박하과의 식물</strong>입니다. 우슬초는 다양한 정결 의식에 사용되었습니다.
+            <div class="quote">
+                <strong>애굽에서의 첫 번째 유월절</strong> — 어린 양의 피를 바를 때 사용되었습니다(출 12:22).<br>
+                <strong>나병 환자의 정결예식</strong> — 우슬초가 사용되었습니다(레 14:6~7).<br>
+                <strong>부정한 물건이나 시체를 접촉한 사람</strong> — 깨끗이 할 때에도 사용되었습니다(민 19:18).<br>
+                <strong>예수님의 십자가</strong> — 사람들이 신 포도주를 머금은 해면을 우슬초에 매어 드리기도 했습니다(요 19:29).
+            </div>
+            <strong>다윗이 바로 이 우슬초로 자신의 죄를 씻어달라고 하나님께 기도합니다.</strong> 다윗은 우슬초 정결을 통해 <strong>하나님의 긍휼을 힘입어야 자신의 죄를 용서받는다는 사실을 알았습니다.</strong>
+            <br><br>
+            그래서 다윗은 죄 사함을 받고 다시 하나님께 찬양하며 <strong>제사장 나라의 거룩한 제사자의 자리에 서기를 기도합니다</strong>(시 51:14~19). 시편 51편에서 다윗은 나(내)라는 <strong>1인칭 주어를 무려 32회나 사용하며 하나님께 자신의 죄를 회개합니다.</strong>
+            <div class="quote">
+                <strong>다윗의 이런 진실하고도 깊은 회개는 하나님과의 관계를 회복하는 계기가 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 회개한 다윗에게 선지자 나단을 다시 보내주십니다.</span>
+            다윗이 밧세바를 범한 것과 죄 없는 우리아를 죽인 것은 <strong>제사장 나라 법에 의하면 사형에 해당하는 범죄였지만 하나님께서 긍휼을 베푸심으로 다윗의 목숨을 보존시켜주십니다</strong>(삼하 12:13). 그리고 밧세바와 다윗 사이에서 낳은 첫아이는 죽지만 <strong>하나님께서 다시 다윗에게 아들 솔로몬을 주십니다.</strong>
+            <br><br>
+            이후 하나님께서는 다윗에게 <strong>다시 선지자 나단을 보내시며 하나님의 사랑을 드러내십니다</strong>(삼하 12:24~25). 다윗이 이렇게 큰 죄를 지었음에도 끝까지 하나님으로부터 <strong>'내 종 다윗'으로 불린 이유</strong>는 다윗은 죄인이었지만 <strong>자신의 죄를 인정하고 하나님 앞에 나아가 끝까지 최선을 다해 회개했기 때문</strong>입니다.
+            <div class="quote">
+                <strong>하나님께서는 하나님 앞에 죄를 회개하는 자에게 다윗에게 베푸셨던 것처럼 놀라운 '용서의 은혜'를 베풀어주십니다. 하나님께서는 긍휼의 하나님이십니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- STREAMING_CHUNK:Rendering the intro text... -->
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 사무엘하 11장~12장·시편 51편 '우슬초 정결'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- STREAMING_CHUNK:Rendering the bible text for Samuel 11... -->
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 사무엘하 11장 -->
+        <div class="chapter-title">사무엘하 11장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 해가 돌아와 왕들이 출전할 때가 되매 다윗이 요압과 그에게 있는 그의 부하들과 온 이스라엘 군대를 보내니 그들이 암몬 자손을 멸하고 랍바를 에워쌌고 다윗은 예루살렘에 그대로 있더라</div>
+        <div class="verse"><span class="verse-num">2</span> 저녁 때에 다윗이 그의 침상에서 일어나 왕궁 옥상에서 거닐다가 그 곳에서 보니 한 여인이 목욕을 하는데 심히 아름다워 보이는지라</div>
+        <div class="verse"><span class="verse-num">3</span> 다윗이 사람을 보내 그 여인을 알아보게 하였더니 그가 아뢰되 그는 엘리암의 딸이요 헷 사람 우리아의 아내 밧세바가 아니니이까 하니</div>
+        <div class="verse"><span class="verse-num">4</span> 다윗이 전령을 보내어 그 여자를 자기에게로 데려오게 하고 그 여자가 그 부정함을 깨끗하게 하였으므로 더불어 동침하매 그 여자가 자기 집으로 돌아가니라</div>
+        <div class="verse"><span class="verse-num">5</span> 그 여인이 임신하매 사람을 보내 다윗에게 말하여 이르되 내가 임신하였나이다 하니라</div>
+        <div class="verse"><span class="verse-num">6</span> 다윗이 요압에게 기별하여 헷 사람 우리아를 내게 보내라 하매 요압이 우리아를 다윗에게로 보내니</div>
+        <div class="verse"><span class="verse-num">7</span> 우리아가 다윗에게 이르매 다윗이 요압의 안부와 군사의 안부와 싸움이 어떠했는지를 묻고</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 또 우리아에게 이르되 네 집으로 내려가서 발을 씻으라 하니 우리아가 왕궁에서 나가매 왕의 음식물이 뒤따라 가니라</div>
+        <div class="verse"><span class="verse-num">9</span> 그러나 우리아는 집으로 내려가지 아니하고 왕궁 문에서 그의 주의 모든 부하들과 더불어 잔지라</div>
+        <div class="verse"><span class="verse-num">10</span> 어떤 사람이 다윗에게 아뢰되 우리아가 그의 집으로 내려가지 아니하였나이다 다윗이 우리아에게 이르되 네가 길 갔다가 돌아온 것이 아니냐 어찌하여 네 집으로 내려가지 아니하였느냐 하니</div>
+        <div class="verse"><span class="verse-num">11</span> 우리아가 다윗에게 아뢰되 언약궤와 이스라엘과 유다가 야영 중에 있고 내 주 요압과 내 왕의 부하들이 바깥 들에 진 치고 있거늘 내가 어찌 내 집으로 가서 먹고 마시고 내 처와 같이 자리이까 내가 이 일을 행하지 아니하기로 왕의 살아 계심과 왕의 혼의 살아 계심을 두고 맹세하나이다 하니라</div>
+        <div class="verse"><span class="verse-num">12</span> 다윗이 우리아에게 이르되 오늘도 여기 있으라 내일은 내가 너를 보내리라 우리아가 그 날에 예루살렘에 머무니라 이튿날</div>
+        <div class="verse"><span class="verse-num">13</span> 다윗이 그를 불러서 그로 그 앞에서 먹고 마시고 취하게 하니 저녁 때에 그가 나가서 그의 주의 부하들과 더불어 침상에 눕고 그의 집으로 내려가지 아니하니라</div>
+        <div class="verse"><span class="verse-num">14</span> 아침이 되매 다윗이 편지를 써서 우리아의 손에 들려 요압에게 보내니</div>
+        <div class="verse"><span class="verse-num">15</span> 그 편지에 써서 이르기를 너희가 우리아를 맹렬한 싸움에 앞세워 두고 너희는 뒤로 물러가서 그로 맞아 죽게 하라 하였더라</div>
+        <div class="verse"><span class="verse-num">16</span> 요압이 그 성을 살펴 용사들이 있는 것을 아는 그 곳에 우리아를 두니</div>
+        <div class="verse"><span class="verse-num">17</span> 그 성 사람들이 나와서 요압과 더불어 싸울 때에 다윗의 부하 중 몇 사람이 엎드러지고 헷 사람 우리아도 죽으니라</div>
+        <div class="verse"><span class="verse-num">18</span> 요압이 사람을 보내 그 전쟁의 모든 일을 다윗에게 보고할새</div>
+        <div class="verse"><span class="verse-num">19</span> 그 전령에게 명령하여 이르되 전쟁의 모든 일을 네가 왕께 보고하기를 마친 후에</div>
+        <div class="verse"><span class="verse-num">20</span> 혹시 왕이 노하여 네게 말씀하기를 너희가 어찌하여 성에 그처럼 가까이 가서 싸웠느냐 그들이 성 위에서 쏠 줄을 알지 못하였느냐</div>
+        <div class="verse"><span class="verse-num">21</span> 여룹베셋의 아들 아비멜렉을 쳐죽인 자가 누구냐 여인 하나가 성에서 맷돌 위짝을 그 위에 던지매 그가 데벳스에서 죽지 아니하였느냐 어찌하여 성에 가까이 갔더냐 하시거든 네가 말하기를 왕의 종 헷 사람 우리아도 죽었나이다 하라</div>
+        <div class="verse"><span class="verse-num">22</span> 전령이 가서 다윗에게 이르러 요압이 그를 보낸 모든 일을 다윗에게 아뢰어</div>
+        <div class="verse"><span class="verse-num">23</span> 이르되 그 사람들이 우리보다 우세하여 우리를 향하여 들로 나오므로 우리가 그들을 쳐서 성문 어귀까지 미쳤더니</div>
+        <div class="verse"><span class="verse-num">24</span> 활 쏘는 자들이 성 위에서 왕의 부하들을 향하여 쏘매 왕의 부하 중 몇 사람이 죽고 왕의 종 헷 사람 우리아도 죽었나이다 하니</div>
+        <div class="verse"><span class="verse-num">25</span> 다윗이 전령에게 이르되 너는 요압에게 이같이 말하기를 이 일로 걱정하지 말라 칼은 이 사람이나 저 사람이나 삼키느니라 그 성을 향하여 더욱 힘써 싸워 함락시키라 하여 너는 그를 담대하게 하라 하니라</div>
+        <div class="verse"><span class="verse-num">26</span> 우리아의 아내는 그 남편 우리아가 죽었음을 듣고 그의 남편을 위하여 소리내어 우니라</div>
+        <div class="verse"><span class="verse-num">27</span> 그 장례를 마치매 다윗이 사람을 보내 그를 왕궁으로 데려오니 그가 그의 아내가 되어 그에게 아들을 낳으니라 다윗이 행한 그 일이 여호와 보시기에 악하였더라</div>
+
+        <!-- STREAMING_CHUNK:Rendering the bible text for Samuel 12... -->
+        <!-- 사무엘하 12장 -->
+        <div class="chapter-title">사무엘하 12장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 나단을 다윗에게 보내시니 그가 다윗에게 가서 그에게 이르되 한 성읍에 두 사람이 있는데 한 사람은 부하고 한 사람은 가난하니</div>
+        <div class="verse"><span class="verse-num">2</span> 그 부한 사람은 양과 소가 심히 많으나</div>
+        <div class="verse"><span class="verse-num">3</span> 가난한 사람은 아무것도 없고 자기가 사서 기르는 작은 암양 새끼 한 마리뿐이라 그 암양 새끼는 그와 그의 자식과 함께 자라며 그가 먹는 것을 먹으며 그의 잔으로 마시며 그의 품에 누우므로 그에게는 딸처럼 되었거늘</div>
+        <div class="verse"><span class="verse-num">4</span> 어떤 행인이 그 부자에게 오매 부자가 자기에게 온 행인을 위하여 자기의 양과 소를 아껴 잡지 아니하고 가난한 사람의 양 새끼를 빼앗아다가 자기에게 온 사람을 위하여 잡았나이다 하니</div>
+        <div class="verse"><span class="verse-num">5</span> 다윗이 그 사람으로 말미암아 노하여 나단에게 이르되 여호와의 살아 계심을 두고 맹세하노니 이 일을 행한 그 사람은 마땅히 죽을 자라</div>
+        <div class="verse"><span class="verse-num">6</span> 그가 불쌍히 여기지 아니하고 이런 일을 행하였으니 그 양 새끼를 네 배나 갚아 주어야 하리라 한지라</div>
+        <div class="verse"><span class="verse-num">7</span> 나단이 다윗에게 이르되 당신이 그 사람이라 이스라엘의 하나님 여호와께서 이와 같이 이르시기를 내가 너를 이스라엘 왕으로 기름 붓기 위하여 너를 사울의 손에서 구원하고</div>
+        <div class="verse"><span class="verse-num">8</span> 네 주인의 집을 네게 주고 네 주인의 아내들을 네 품에 두고 이스라엘과 유다 족속을 네게 맡겼느니라 만일 그것이 부족하였을 것 같으면 내가 네게 이것 저것을 더 주었으리라</div>
+        <div class="verse"><span class="verse-num">9</span> 그러한데 어찌하여 네가 여호와의 말씀을 업신여기고 나 보기에 악을 행하였느냐 네가 칼로 헷 사람 우리아를 치되 암몬 자손의 칼로 죽이고 그의 아내를 빼앗아 네 아내로 삼았도다</div>
+        <div class="verse"><span class="verse-num">10</span> 이제 네가 나를 업신여기고 헷 사람 우리아의 아내를 빼앗아 네 아내로 삼았은즉 칼이 네 집에서 영원토록 떠나지 아니하리라 하셨고</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와께서 또 이와 같이 이르시기를 보라 내가 너와 네 집에 재앙을 일으키고 내가 네 눈앞에서 네 아내를 빼앗아 네 이웃들에게 주리니 그 사람들이 네 아내들과 더불어 백주에 동침하리라</div>
+        <div class="verse"><span class="verse-num">12</span> 너는 은밀히 행하였으나 나는 온 이스라엘 앞에서 백주에 이 일을 행하리라 하셨나이다 하니</div>
+        <div class="verse"><span class="verse-num">13</span> 다윗이 나단에게 이르되 내가 여호와께 죄를 범하였노라 하매 나단이 다윗에게 말하되 여호와께서도 당신의 죄를 사하셨나니 당신이 죽지 아니하려니와</div>
+        <div class="verse"><span class="verse-num">14</span> 이 일로 말미암아 여호와의 원수가 크게 비방할 거리를 얻게 하였으니 당신이 낳은 아이가 반드시 죽으리이다 하고</div>
+        <div class="verse"><span class="verse-num">15</span> 나단이 자기 집으로 돌아가니라 우리아의 아내가 다윗에게 낳은 아이를 여호와께서 치시매 심히 앓는지라</div>
+        <div class="verse"><span class="verse-num">16</span> 다윗이 그 아이를 위하여 하나님께 간구하되 다윗이 금식하고 안에 들어가서 밤새도록 땅에 엎드렸으니</div>
+        <div class="verse"><span class="verse-num">17</span> 그 집의 늙은 자들이 그 곁에 서서 다윗을 땅에서 일으키려 하되 왕이 듣지 아니하고 그들과 더불어 먹지도 아니하더라</div>
+        <div class="verse"><span class="verse-num">18</span> 이레 만에 그 아이가 죽으니라 그러나 다윗의 신하들이 아이가 죽은 것을 왕에게 아뢰기를 두려워하니 이는 그들이 말하기를 아이가 살았을 때에 우리가 그에게 말하여도 왕이 그 말을 듣지 아니하셨나니 어떻게 그 아이가 죽은 것을 그에게 아뢸 수 있으랴 왕이 상심하시리로다 함이라</div>
+        <div class="verse"><span class="verse-num">19</span> 다윗이 그의 신하들이 서로 수군거리는 것을 보고 그 아이가 죽은 줄을 다윗이 깨닫고 그의 신하들에게 묻되 아이가 죽었느냐 하니 대답하되 죽었나이다 하는지라</div>
+        <div class="verse"><span class="verse-num">20</span> 다윗이 땅에서 일어나 몸을 씻고 기름을 바르고 의복을 갈아입고 여호와의 전에 들어가서 경배하고 왕궁으로 돌아와 명령하여 음식을 그 앞에 차리게 하고 먹은지라</div>
+        <div class="verse"><span class="verse-num">21</span> 그의 신하들이 그에게 이르되 아이가 살았을 때에는 그를 위하여 금식하고 우시더니 죽은 후에는 일어나서 잡수시니 이 일이 어찌 됨이니이까 하니</div>
+        <div class="verse"><span class="verse-num">22</span> 이르되 아이가 살았을 때에 내가 금식하고 운 것은 혹시 여호와께서 나를 불쌍히 여기사 아이를 살려 주실는지 누가 알까 생각함이거니와</div>
+        <div class="verse"><span class="verse-num">23</span> 지금은 죽었으니 내가 어찌 금식하랴 내가 다시 돌아오게 할 수 있느냐 나는 그에게로 가려니와 그는 내게로 돌아오지 아니하리라 하니라</div>
+        <div class="verse"><span class="verse-num">24</span> 다윗이 그의 아내 밧세바를 위로하고 그에게 들어가 그와 동침하였더니 그가 아들을 낳으매 그의 이름을 솔로몬이라 하니라 여호와께서 그를 사랑하사</div>
+        <div class="verse"><span class="verse-num">25</span> 선지자 나단을 보내 그의 이름을 여디디야라 하시니 이는 여호와께서 사랑하셨기 때문이더라</div>
+        <div class="verse"><span class="verse-num">26</span> 요압이 암몬 자손의 랍바를 쳐서 그 왕성을 점령하매</div>
+        <div class="verse"><span class="verse-num">27</span> 요압이 전령을 다윗에게 보내 이르되 내가 랍바 곧 물들의 성읍을 쳐서 점령하였으니</div>
+        <div class="verse"><span class="verse-num">28</span> 이제 왕은 그 백성의 남은 군사를 모아 그 성에 맞서 진 치고 이 성읍을 쳐서 점령하소서 내가 이 성읍을 점령하면 이 성읍이 내 이름으로 일컬음을 받을까 두려워하나이다 하니</div>
+        <div class="verse"><span class="verse-num">29</span> 다윗이 모든 군사를 모아 랍바로 가서 그 곳을 쳐서 점령하고</div>
+        <div class="verse"><span class="verse-num">30</span> 그 왕의 머리에서 보석 박힌 왕관을 가져오니 그 중량이 금 한 달란트라 다윗이 자기의 머리에 쓰니라 다윗이 또 그 성읍에서 노략한 물건을 무수히 내오고</div>
+        <div class="verse"><span class="verse-num">31</span> 그 안에 있는 백성들을 끌어내어 톱질과 써레질과 철도끼질과 벽돌구이를 그들에게 하게 하니라 암몬 자손의 모든 성읍을 이같이 하고 다윗과 모든 백성이 예루살렘으로 돌아가니라</div>
+
+        <!-- STREAMING_CHUNK:Rendering the bible text for Psalms 51... -->
+        <!-- 시편 51편 -->
+        <div class="chapter-title">시편 51편 (1~19절)</div>
+        <div class="verse"><span class="verse-num">1</span> 하나님이여 주의 인자를 따라 내게 은혜를 베푸시며 주의 많은 긍휼을 따라 내 죄악을 지워 주소서</div>
+        <div class="verse"><span class="verse-num">2</span> 나의 죄악을 말갛게 씻으시며 나의 죄를 깨끗이 제하소서</div>
+        <div class="verse"><span class="verse-num">3</span> 무릇 나는 내 죄과를 아오니 내 죄가 항상 내 앞에 있나이다</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 주께만 범죄하여 주의 목전에 악을 행하였사오니 주께서 말씀하실 때에 의로우시다 하고 주께서 심판하실 때에 순전하시다 하리이다</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 죄악 중에서 출생하였음이여 어머니가 죄 중에서 나를 잉태하였나이다</div>
+        <div class="verse"><span class="verse-num">6</span> 보소서 주께서는 중심이 진실함을 원하시오니 내게 지혜를 은밀히 가르치시리이다</div>
+        <div class="verse"><span class="verse-num">7</span> 우슬초로 나를 정결하게 하소서 내가 정하리이다 나의 죄를 씻어 주소서 내가 눈보다 희리이다</div>
+        <div class="verse"><span class="verse-num">8</span> 내게 즐겁고 기쁜 소리를 들려 주시사 주께서 꺾으신 뼈들도 즐거워하게 하소서</div>
+        <div class="verse"><span class="verse-num">9</span> 주의 얼굴을 내 죄에서 돌이키시고 내 모든 죄악을 지워 주소서</div>
+        <div class="verse"><span class="verse-num">10</span> 하나님이여 내 속에 정한 마음을 창조하시고 내 안에 정직한 영을 새롭게 하소서</div>
+        <div class="verse"><span class="verse-num">11</span> 나를 주 앞에서 쫓아내지 마시며 주의 성령을 내게서 거두지 마소서</div>
+        <div class="verse"><span class="verse-num">12</span> 주의 구원의 즐거움을 내게 회복시켜 주시고 자원하는 심령을 주사 나를 붙드소서</div>
+        <div class="verse"><span class="verse-num">13</span> 그리하면 내가 범죄자에게 주의 도를 가르치리니 죄인들이 주께 돌아오리이다</div>
+        <div class="verse"><span class="verse-num">14</span> 하나님이여 나의 구원의 하나님이여 피 흘린 죄에서 나를 건지소서 내 혀가 주의 의를 높이 노래하리이다</div>
+        <div class="verse"><span class="verse-num">15</span> 주여 내 입술을 열어 주소서 내 입이 주를 찬송하여 전파하리이다</div>
+        <div class="verse"><span class="verse-num">16</span> 주께서는 제사를 기뻐하지 아니하시나니 그렇지 아니하면 내가 드렸을 것이라 주는 번제를 기뻐하지 아니하시나이다</div>
+        <div class="verse"><span class="verse-num">17</span> 하나님께서 구하시는 제사는 상한 심령이라 하나님이여 상하고 통회하는 마음을 주께서 멸시하지 아니하시리이다</div>
+        <div class="verse"><span class="verse-num">18</span> 주의 은택으로 시온에 선을 행하시고 예루살렘 성을 쌓으소서</div>
+        <div class="verse"><span class="verse-num">19</span> 그 때에 주께서 의로운 제사와 번제와 온전한 번제를 기뻐하시리니 그 때에 그들이 수소를 주의 제단에 드리리이다</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- STREAMING_CHUNK:Rendering the Lord's Prayer... -->
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- STREAMING_CHUNK:Rendering the closing words and footer... -->
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

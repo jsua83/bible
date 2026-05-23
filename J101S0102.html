@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 101</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 101</h1>
+        <p class="sub-title">찬송가 220장 사랑하는 주님 앞에</p>
+        <p class="sub-title">사무엘하 1~2장 — 유다 지파의 왕으로 추대된 다윗</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 220장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1U48uiTa9_Zjbu_FMqWAXeuAq_iHwQ_Bl" alt="찬송가 220장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 사무엘하 1~2장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 이스라엘은 사울의 죽음 후 '한 민족 두 국가'로 1차 분단됩니다.</span>
+            블레셋과의 길보아 전투에서 일어난 <strong>이스라엘의 초대 왕 사울의 자결과 그의 세 아들의 죽음은 국가적인 위기를 초래합니다.</strong> 사울의 군대 장관 아브넬은 사울의 살아남은 유일한 아들 이스보셋을 <strong>허수아비 왕으로 내세우고</strong> 결국 이스라엘이 남북으로 분단되는 상황을 만듭니다.
+            <br><br>
+            그러자 다윗은 <strong>헤브론에서 유다 한 지파의 왕이 됩니다.</strong> 이렇게 이스라엘은 열한 지파와 한 지파로 나뉘어 <strong>7년 6개월의 시간을 보내게 됩니다.</strong>
+            <div class="quote">
+                <strong>이때가 이스라엘 역사에서 '1차 한 민족 두 국가 체제'입니다.</strong> 그리고 솔로몬 사후 이스라엘은 또다시 남북으로 분단되어 다시금 한 민족 두 국가 상태가 됩니다(왕상 11:35~36).
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 사울의 '도망 나간 종 다윗' 모함 대신 다윗은 '용사 사울의 죽음'을 유다 지파와 함께 애도합니다.</span>
+            사울이 죽었다는 소식을 들은 다윗은 <strong>그토록 자신을 괴롭힌 정적의 죽음에도 불구하고 극도로 슬퍼하며 옷을 찢고 금식하며 자신들의 측근과 유다 지파와 함께 애도합니다.</strong>
+            <br><br>
+            더 나아가 다윗은 사울과 요나단의 죽음을 <strong>'용사 사울의 죽음'으로 애도하며 노래를 지어 유다 지파 사람들에게 따라 부르게까지 합니다</strong>(삼하 1:17~27).
+            <div class="quote">
+                <strong>이 애가는 다윗의 어떠한 정치적 명령보다도 더 강력한 국민 통합의 명령이 되었습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 다윗은 사무엘에게 기름 부음을 받은 후 15년여 만에 유다 지파에게 두 번째 기름 부음을 받고 왕이 됩니다.</span>
+            다윗은 골리앗을 만나기도 전인 베들레헴 목동 시절 <strong>하나님께서 사무엘을 보내 다윗의 머리에 기름을 부으신 적이 있습니다</strong>(삼상 16:1). 다윗은 그때로부터 대략 <strong>15년이 지나 마침내 유다 지파의 왕으로 두 번째 기름 부음을 받습니다.</strong>
+            <br><br>
+            다윗이 유다 지파만의 왕이 된 이유는 크게 세 가지로 볼 수 있습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 사울의 죽음 후 아브넬의 선택, 즉 <strong>아브넬의 권력 사유화 때문</strong>입니다.<br><br>
+                <strong>둘째,</strong> 아브넬이 수도를 기브아에서 북쪽 마하나임으로 옮겨 <strong>유다 지파를 블레셋으로부터 더 위험하게 만들었기 때문</strong>입니다.<br><br>
+                <strong>셋째,</strong> 다윗이 아말렉과의 전쟁에서 얻은 <strong>전리품을 유다 지파 사람들에게 보냈기 때문</strong>입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 유다 지파의 왕이 된 다윗의 첫 업무는 길르앗 야베스 사람들을 축복한 일입니다.</span>
+            사울은 40년 전 길르앗 야베스 사람들을 위기에서 구해준 적이 있었습니다. 하지만 그 후 사울의 정치는 누가 보아도 선하지 않았습니다. 그럼에도 불구하고 <strong>길르앗 야베스 사람들은 사울에게 받은 은혜를 잊지 않고 밤새 달려와 사울의 시신을 수습하고 장사 지냈습니다</strong>(삼상 31:11~13).
+            <br><br>
+            사실 이 일은 <strong>사울의 군대 장관 아브넬이 앞장서서 해야 할 일</strong>이었습니다. 그런데 또 한편으로 생각해보면 길르앗 야베스 사람들은 <strong>이제 막 떠오르는 다윗 권력의 눈치를 보아야 하는 상황</strong>이었습니다.
+            <div class="quote">
+                <strong>이런 상황 가운데 다윗이 유다 지파의 왕이 되어 가장 처음 한 일이 사울을 장사 지낸 길르앗 야베스 사람들을 축복한 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 북쪽 열한 지파와 남쪽 한 지파의 남북 갈등은 7년 반 동안 지속됩니다.</span>
+            사울의 40년 권력 사유화는 <strong>사울이 죽었다 해서 하루아침에 해체되지 않습니다.</strong> 사울과 함께 베냐민 지파를 중심으로 권력을 사유화한 세력들이 <strong>이제는 아브넬을 중심으로 다윗을 적대하며 그들의 권력을 유지해갑니다.</strong>
+            <div class="quote">
+                <strong>그러는 동안 한 민족 두 국가의 불필요하고 무모한 싸움이 계속됩니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 사무엘하 1~2장 '유다 지파의 왕으로 추대된 다윗'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 사무엘하 1장 -->
+        <div class="chapter-title">사무엘하 1장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 사울이 죽은 후에 다윗이 아말렉 사람을 쳐죽이고 돌아와 다윗이 시글락에서 이틀을 머물더니</div>
+        <div class="verse"><span class="verse-num">2</span> 사흘째 되는 날에 한 사람이 사울의 진영에서 나왔는데 그의 옷은 찢어졌고 머리에는 흙이 있더라 그가 다윗에게 나아와 땅에 엎드려 절하매</div>
+        <div class="verse"><span class="verse-num">3</span> 다윗이 그에게 묻되 너는 어디서 왔느냐 하니 대답하되 이스라엘 진영에서 도망하여 왔나이다 하니라</div>
+        <div class="verse"><span class="verse-num">4</span> 다윗이 그에게 이르되 일이 어떻게 되었느냐 너는 내게 말하라 그가 대답하되 군사가 전쟁 중에 도망하기도 하였고 무리 가운데에 엎드러져 죽은 자도 많았고 사울과 그의 아들 요나단도 죽었나이다 하는지라</div>
+        <div class="verse"><span class="verse-num">5</span> 다윗이 자기에게 알리는 청년에게 묻되 사울과 그의 아들 요나단이 죽은 줄을 네가 어떻게 아느냐</div>
+        <div class="verse"><span class="verse-num">6</span> 그에게 알리는 청년이 이르되 내가 우연히 길보아 산에 올라가 보니 사울이 자기 창에 기대고 병거와 기병은 그를 급히 따르는데</div>
+        <div class="verse"><span class="verse-num">7</span> 사울이 뒤로 돌아 나를 보고 부르시기로 내가 대답하되 내가 여기 있나이다 한즉</div>
+        <div class="verse"><span class="verse-num">8</span> 내게 이르되 너는 누구냐 하시기로 내가 그에게 대답하되 나는 아말렉 사람이니이다 한즉</div>
+        <div class="verse"><span class="verse-num">9</span> 또 내게 이르시되 내 목숨이 아직 내게 완전히 있으므로 내가 고통 중에 있나니 청하건대 너는 내 곁에 서서 나를 죽이라 하시기로</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 엎드러진 후에는 살 수 없는 줄을 내가 알고 그의 곁에 서서 죽이고 그의 머리에 있는 왕관과 팔에 있는 고리를 벗겨서 내 주께로 가져왔나이다 하니라</div>
+        <div class="verse"><span class="verse-num">11</span> 이에 다윗이 자기 옷을 잡아 찢으매 함께 있는 모든 사람도 그리하고</div>
+        <div class="verse"><span class="verse-num">12</span> 사울과 그의 아들 요나단과 여호와의 백성과 이스라엘 족속이 칼에 죽음으로 말미암아 저녁 때까지 슬퍼하여 울며 금식하니라</div>
+        <div class="verse"><span class="verse-num">13</span> 다윗이 그 소식을 전한 청년에게 묻되 너는 어디 사람이냐 대답하되 나는 아말렉 사람 곧 외국인의 아들이니이다 하니</div>
+        <div class="verse"><span class="verse-num">14</span> 다윗이 그에게 이르되 네가 어찌하여 손을 들어 여호와의 기름 부음 받은 자 죽이기를 두려워하지 아니하였느냐 하고</div>
+        <div class="verse"><span class="verse-num">15</span> 다윗이 청년 중 한 사람을 불러 이르되 가까이 가서 그를 죽이라 하매 그가 치매 곧 죽으니라</div>
+        <div class="verse"><span class="verse-num">16</span> 다윗이 그에게 이르기를 네 피가 네 머리로 돌아갈지어다 네 입이 네게 대하여 증언하기를 내가 여호와의 기름 부음 받은 자를 죽였노라 함이니라 하였더라</div>
+        <div class="verse"><span class="verse-num">17</span> 다윗이 이 슬픈 노래로 사울과 그의 아들 요나단을 조상하고</div>
+        <div class="verse"><span class="verse-num">18</span> 명령하여 그것을 유다 족속에게 가르치라 하였으니 곧 활 노래라 야살의 책에 기록되었으되</div>
+        <div class="verse"><span class="verse-num">19</span> 이스라엘아 네 영광이 산 위에서 죽임을 당하였도다 오호라 두 용사가 엎드러졌도다</div>
+        <div class="verse"><span class="verse-num">20</span> 이 일을 가드에도 알리지 말며 아스글론 거리에도 전파하지 말지어다 블레셋 사람들의 딸들이 즐거워할까, 할례 받지 못한 자의 딸들이 개가를 부를까 염려로다</div>
+        <div class="verse"><span class="verse-num">21</span> 길보아 산들아 너희 위에 이슬과 비가 내리지 아니하며 제물 낼 밭도 없을지어다 거기서 두 용사의 방패가 버린 바 됨이니라 곧 사울의 방패가 기름 부음을 받지 아니함 같이 됨이로다</div>
+        <div class="verse"><span class="verse-num">22</span> 죽은 자의 피에서, 용사의 기름에서 요나단의 활이 뒤로 물러가지 아니하였으며 사울의 칼이 헛되이 돌아오지 아니하였도다</div>
+        <div class="verse"><span class="verse-num">23</span> 사울과 요나단이 생전에 사랑스럽고 아름다운 자이러니 죽을 때에도 서로 떠나지 아니하였도다 그들은 독수리보다 빠르고 사자보다 강하였도다</div>
+        <div class="verse"><span class="verse-num">24</span> 이스라엘 딸들아 사울을 슬퍼하여 울지어다 그가 붉은 옷으로 너희에게 화려하게 입혔고 금 노리개를 너희 옷에 채웠도다</div>
+        <div class="verse"><span class="verse-num">25</span> 오호라 두 용사가 전쟁 중에 엎드러졌도다 요나단이 네 산 위에서 죽임을 당하였도다</div>
+        <div class="verse"><span class="verse-num">26</span> 내 형 요나단이여 내가 그대를 애통함은 그대는 내게 심히 아름다움이라 그대가 나를 사랑함이 기이하여 여인의 사랑보다 더하였도다</div>
+        <div class="verse"><span class="verse-num">27</span> 오호라 두 용사가 엎드러졌으며 싸우는 무기가 망하였도다 하였더라</div>
+
+        <!-- 사무엘하 2장 -->
+        <div class="chapter-title">사무엘하 2장 (1~32절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 후에 다윗이 여호와께 여쭈어 아뢰되 내가 유다 한 성읍으로 올라가리이까 여호와께서 이르시되 올라가라 다윗이 아뢰되 어디로 가리이까 이르시되 헤브론으로 갈지니라</div>
+        <div class="verse"><span class="verse-num">2</span> 다윗이 그의 두 아내 이스르엘 여인 아히노암과 갈멜 사람 나발의 아내였던 아비가일을 데리고 그리로 올라갈 때에</div>
+        <div class="verse"><span class="verse-num">3</span> 또 자기와 함께 한 추종자들과 그들의 가족들을 다윗이 다 데리고 올라가서 헤브론 각 성읍에 살게 하니라</div>
+        <div class="verse"><span class="verse-num">4</span> 유다 사람들이 와서 거기서 다윗에게 기름을 부어 유다 족속의 왕으로 삼았더라 ○어떤 사람이 다윗에게 말하여 이르되 사울을 장사한 사람은 길르앗 야베스 사람들이니이다 하매</div>
+        <div class="verse"><span class="verse-num">5</span> 다윗이 길르앗 야베스 사람들에게 전령들을 보내 그들에게 이르되 너희가 너희 주 사울에게 이처럼 은혜를 베풀어 그를 장사하였으니 여호와께 복을 받을지어다</div>
+        <div class="verse"><span class="verse-num">6</span> 너희가 이 일을 하였으니 이제 여호와께서 은혜와 진리로 너희에게 베푸시기를 원하고 나도 이 선한 일을 너희에게 갚으리니</div>
+        <div class="verse"><span class="verse-num">7</span> 이제 너희는 손을 강하게 하고 담대히 할지어다 너희 주 사울이 죽었고 또 유다 족속이 내게 기름을 부어 그들의 왕으로 삼았음이니라 하니라</div>
+        <div class="verse"><span class="verse-num">8</span> 사울의 군사령관 넬의 아들 아브넬이 이미 사울의 아들 이스보셋을 데리고 마하나임으로 건너가</div>
+        <div class="verse"><span class="verse-num">9</span> 길르앗과 아술과 이스르엘과 에브라임과 베냐민과 온 이스라엘의 왕으로 삼았더라</div>
+        <div class="verse"><span class="verse-num">10</span> 사울의 아들 이스보셋이 이스라엘 왕이 될 때에 나이가 사십 세이며 두 해 동안 왕위에 있으니라 유다 족속은 다윗을 따르니</div>
+        <div class="verse"><span class="verse-num">11</span> 다윗이 헤브론에서 유다 족속의 왕이 된 날 수는 칠 년 육 개월이더라</div>
+        <div class="verse"><span class="verse-num">12</span> 넬의 아들 아브넬과 사울의 아들 이스보셋의 신복들은 마하나임에서 나와 기브온에 이르고</div>
+        <div class="verse"><span class="verse-num">13</span> 스루야의 아들 요압과 다윗의 신복들도 나와 기브온 못 가에서 그들을 만나 함께 앉으니 이는 못 이쪽이요 그는 못 저쪽이라</div>
+        <div class="verse"><span class="verse-num">14</span> 아브넬이 요압에게 이르되 원하건대 청년들에게 일어나서 우리 앞에서 겨루게 하자 요압이 이르되 일어나게 하자 하매</div>
+        <div class="verse"><span class="verse-num">15</span> 그들이 일어나 그 수대로 나아가니 베냐민과 사울의 아들 이스보셋의 편에 열두 명이요 다윗의 신복 중에 열두 명이라</div>
+        <div class="verse"><span class="verse-num">16</span> 각기 상대방의 머리를 잡고 칼로 상대방의 옆구리를 찌르매 일제히 쓰러진지라 그러므로 그 곳을 헬갓 핫수림이라 일컬었으며 기브온에 있더라</div>
+        <div class="verse"><span class="verse-num">17</span> 그 날에 싸움이 심히 맹렬하더니 아브넬과 이스라엘 사람들이 다윗의 신복들 앞에서 패하니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그 곳에 스루야의 세 아들 요압과 아비새와 아사헬이 있었는데 아사헬의 발은 들노루 같이 빠르더라</div>
+        <div class="verse"><span class="verse-num">19</span> 아사헬이 아브넬을 쫓아 달려가되 좌우로 치우치지 않고 아브넬의 뒤를 쫓으니</div>
+        <div class="verse"><span class="verse-num">20</span> 아브넬이 뒤를 돌아보며 이르되 아사헬아 너냐 대답하되 나로라</div>
+        <div class="verse"><span class="verse-num">21</span> 아브넬이 그에게 이르되 너는 왼쪽으로나 오른쪽으로나 가서 청년 하나를 붙잡아 그의 군복을 빼앗으라 하되 아사헬이 그렇게 하기를 원하지 아니하고 그의 뒤를 쫓으매</div>
+        <div class="verse"><span class="verse-num">22</span> 아브넬이 다시 아사헬에게 이르되 너는 나 쫓기를 그치라 내가 너를 쳐서 땅에 엎드러지게 할 까닭이 무엇이냐 그렇게 하면 내가 어떻게 네 형 요압을 대면하겠느냐 하되</div>
+        <div class="verse"><span class="verse-num">23</span> 그가 물러가기를 거절하매 아브넬이 창 뒤 끝으로 그의 배를 찌르니 창이 그의 등을 꿰뚫고 나간지라 곧 그 곳에 엎드러져 죽으매 아사헬이 엎드러져 죽은 곳에 이르는 자마다 머물러 섰더라</div>
+        <div class="verse"><span class="verse-num">24</span> 요압과 아비새가 아브넬의 뒤를 쫓아 기브온 거친 땅의 길 가 기아 맞은쪽 암마 산에 이를 때에 해가 졌고</div>
+        <div class="verse"><span class="verse-num">25</span> 베냐민 족속은 함께 모여 아브넬을 따라 한 무리를 이루고 작은 산 꼭대기에 섰더라</div>
+        <div class="verse"><span class="verse-num">26</span> 아브넬이 요압에게 외쳐 이르되 칼이 영원히 사람을 상하겠느냐 마침내 참혹한 일이 생길 줄을 알지 못하느냐 네가 언제 무리에게 그의 형제 쫓기를 그치라 명령하겠느냐</div>
+        <div class="verse"><span class="verse-num">27</span> 요압이 이르되 하나님이 살아 계심을 두고 맹세하노니 네가 말하지 아니하였더면 무리가 아침에 각각 다 돌아갔을 것이요 그의 형제를 쫓지 아니하였으리라 하고</div>
+        <div class="verse"><span class="verse-num">28</span> 요압이 나팔을 불매 온 무리가 머물러 서고 다시는 이스라엘을 쫓아가지 아니하고 다시는 싸우지도 아니하니라</div>
+        <div class="verse"><span class="verse-num">29</span> 아브넬과 그의 부하들이 밤새도록 걸어서 아라바를 지나 요단을 건너 비드론 온 땅을 지나 마하나임에 이르니라</div>
+        <div class="verse"><span class="verse-num">30</span> 요압이 아브넬 쫓기를 그치고 돌아와 무리를 다 모으니 다윗의 신복 중에 열아홉 명과 아사헬이 없어졌으나</div>
+        <div class="verse"><span class="verse-num">31</span> 다윗의 신복들이 베냐민과 아브넬에게 속한 자들을 쳐서 삼백육십 명을 죽였더라</div>
+        <div class="verse"><span class="verse-num">32</span> 무리가 아사헬을 들어올려 베들레헴에 있는 그의 조상 묘에 장사하고 요압과 그의 부하들이 밤새도록 걸어서 헤브론에 이른 때에 날이 밝았더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
