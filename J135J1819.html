@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 135</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+        
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 135</h1>
+        <p class="sub-title">찬송가 384장 나의 갈 길 다가도록</p>
+        <p class="sub-title">욥기 18~19장 — 오직 소망의 대상</p>
+    </div>
+
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 384장</div>
+        <img src="https://lh3.googleusercontent.com/d/132Lk3g6DWW0uOKbU0KYTC0Qjz5TzN_LG" alt="찬송가 384장 악보" class="hymn-image">
+    </div>
+
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 욥기 18~19장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 빌닷은 시종일관 욥을 과격한 태도로 책망합니다.</span>
+            빌닷은 고통의 늪에서 괴로워하며 슬퍼하고 있는 욥을 <strong>고통 가운데에서 꺼내주려 하기보다 더 힘들게 하고 있습니다.</strong> 빌닷은 친구들의 충고를 받아들이지 않는다며 욥에게 대놓고 <strong>불쾌함을 드러내며 질책하기 시작합니다</strong>(욥 18:2~3).
+            <br><br>
+            하지만 욥은 지금까지 자신을 사랑하고 동행해주셨던 <strong>하나님께서 끝까지 자신과 함께하실 것이라는 믿음만은 확고하게 지키고 있습니다.</strong>
+            <div class="quote">
+                <strong>해석되지 않는 고난 가운데에서도 욥은 끝내 하나님에 대한 믿음만은 놓지 않고 확실하게 붙잡고 있는 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 빌닷이 말하고 있는 악인은 구체적으로 욥을 빗대어 하는 말입니다.</span>
+            빌닷은 욥에게 <strong>악인이 반드시 멸망하게 된다는 것을 자세히 설명합니다.</strong> 이는 <strong>욥이 악인이라며 욥을 정죄하는 것</strong>입니다. 빌닷은 더 이상 욥의 친구도 그리고 욥의 위로자도 아니었습니다. <strong>그의 머리에는 선과 악의 구분만 있을 뿐이고 그의 입술에는 남을 정죄하는 판단만 있을 뿐</strong>입니다.
+            <div class="quote">
+                <strong>빌닷의 말은 저주와 별반 다를 것이 없습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 욥은 자신에게 고통을 주시는 분이 하나님이시라고 토로합니다.</span>
+            욥은 <strong>하나님께서 자신에게 너무 많은 고통을 주셨다</strong>고 말합니다. 그리고 하나님께서 <strong>더 이상 앞으로 나갈 수 없게 어두움으로 길을 막으셨다고 좌절합니다.</strong> 욥은 이미 모든 사람으로부터 버림을 받았고 충분히 비웃음을 받았다고 말합니다(욥 19:8~20).
+            <div class="quote">
+                <strong>그러나 욥은 이 고통이 하나님께 왔으므로, 괴롭지만 자신이 탄원할 수 있는 분도 하나님밖에 없음을 알고 있습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 욥은 이제 친구들에게 자신을 불쌍히 여겨달라고 부탁합니다.</span>
+            친구들의 조롱을 받는 고통은 욥에게 <strong>육신의 고통보다 더한 아픔</strong>입니다. 욥은 더 이상 <strong>친구들의 변론에 맞서 싸울 힘조차 없습니다.</strong> 자신을 죄인으로 몰아세우는 친구들 앞에
+            <div class="quote">
+                <strong>"나를 불쌍히 여겨다오"</strong> (욥 19:21)
+            </div>
+            라는 말밖에 할 말이 없습니다. 욥은 그가 당하는 고통이 하나님으로부터 왔다는 것을 알고 있습니다. <strong>그러므로 친구들만큼은 자신의 슬픔에 동참해달라는 것</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 욥이 바라고 소망할 대상은 오직 하나님뿐입니다.</span>
+            친구들에게 자신을 불쌍히 여겨달라고까지 부탁했던 욥은 <strong>부활을 확신하며 하나님께 의로운 심판을 호소합니다</strong>(욥 19:25~26). 욥은 고통 가운데 <strong>자신의 구원자 되신 하나님께서 살아 계심을 고백하며 하나님을 신뢰하고 있습니다.</strong>
+            <br><br>
+            지금 살아 있는 동안에도 이후 그의 모든 여정도 <strong>하나님께서 지키시리라는 믿음이 지독한 고통의 현실에서 이렇게 찬란하게 피어오르고 있는 것</strong>입니다.
+        </div>
+    </div>
+
+    <div class="intro-text">
+        오늘은 욥기 18~19장 '오직 소망의 대상'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">욥기 18장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 수아 사람 빌닷이 대답하여 이르되</div>
+        <div class="verse"><span class="verse-num">2</span> 너희가 어느 때에 가서 말의 끝을 맺겠느냐 깨달으라 그 후에야 우리가 말하리라</div>
+        <div class="verse"><span class="verse-num">3</span> 어찌하여 우리를 짐승으로 여기며 부정하게 보느냐</div>
+        <div class="verse"><span class="verse-num">4</span> 울분을 터뜨리며 자기 자신을 찢는 사람아 너 때문에 땅이 버림을 받겠느냐 바위가 그 자리에서 옮겨지겠느냐</div>
+        <div class="verse"><span class="verse-num">5</span> 악인의 빛은 꺼지고 그의 불꽃은 빛나지 않을 것이요</div>
+        <div class="verse"><span class="verse-num">6</span> 그의 장막 안의 빛은 어두워지고 그 위의 등불은 꺼질 것이요</div>
+        <div class="verse"><span class="verse-num">7</span> 그의 활기찬 걸음이 피곤하여지고 그가 마련한 꾀에 스스로 빠질 것이니</div>
+        <div class="verse"><span class="verse-num">8</span> 이는 그의 발이 그물에 빠지고 올가미에 걸려들며</div>
+        <div class="verse"><span class="verse-num">9</span> 그의 발 뒤꿈치는 덫에 치이고 그의 몸은 올무에 얽힐 것이며</div>
+        <div class="verse"><span class="verse-num">10</span> 그를 잡을 덫이 땅에 숨겨져 있고 그를 빠뜨릴 함정이 길목에 있으며</div>
+        <div class="verse"><span class="verse-num">11</span> 무서운 것이 사방에서 그를 놀라게 하고 그 뒤를 쫓아갈 것이며</div>
+        <div class="verse"><span class="verse-num">12</span> 그의 힘은 기근으로 말미암아 쇠하고 그 곁에는 재앙이 기다릴 것이며</div>
+        <div class="verse"><span class="verse-num">13</span> 질병이 그의 피부를 삼키리니 곧 사망의 장자가 그의 지체를 먹을 것이며</div>
+        <div class="verse"><span class="verse-num">14</span> 그가 의지하던 것들이 장막에서 뽑히며 그는 공포의 왕에게로 잡혀가고</div>
+        <div class="verse"><span class="verse-num">15</span> 그에게 속하지 않은 자가 그의 장막에 거하리니 유황이 그의 처소에 뿌려질 것이며</div>
+        <div class="verse"><span class="verse-num">16</span> 밑으로 그의 뿌리가 마르고 위로는 그의 가지가 시들 것이며</div>
+        <div class="verse"><span class="verse-num">17</span> 그를 기념함이 땅에서 사라지고 거리에서는 그의 이름이 전해지지 않을 것이며</div>
+        <div class="verse"><span class="verse-num">18</span> 그는 광명으로부터 흑암으로 쫓겨 들어가며 세상에서 쫓겨날 것이며</div>
+        <div class="verse"><span class="verse-num">19</span> 그는 그의 백성 가운데 후손도 없고 후예도 없을 것이며 그가 거하던 곳에는 남은 자가 한 사람도 없을 것이라</div>
+        <div class="verse"><span class="verse-num">20</span> 그의 운명에 서쪽에서 오는 자와 동쪽에서 오는 자가 깜짝 놀라리라</div>
+        <div class="verse"><span class="verse-num">21</span> 참으로 불의한 자의 집이 이러하고 하나님을 알지 못하는 자의 처소도 이러하니라</div>
+
+        <div class="chapter-title">욥기 19장 (1~29절)</div>
+        <div class="verse"><span class="verse-num">1</span> 욥이 대답하여 이르되</div>
+        <div class="verse"><span class="verse-num">2</span> 너희가 내 마음을 괴롭히며 말로 나를 짓부수기를 어느 때까지 하겠느냐</div>
+        <div class="verse"><span class="verse-num">3</span> 너희가 열 번이나 나를 학대하고도 부끄러워 아니하는구나</div>
+        <div class="verse"><span class="verse-num">4</span> 비록 내게 허물이 있다 할지라도 그 허물이 내게만 있느냐</div>
+        <div class="verse"><span class="verse-num">5</span> 너희가 참으로 나를 향하여 자만하며 내게 수치스러운 행위가 있다고 증언하려면 하려니와</div>
+        <div class="verse"><span class="verse-num">6</span> 하나님이 나를 억울하게 하시고 자기 그물로 나를 에워싸신 줄을 알아야 할지니라</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 폭행을 당한다고 부르짖으나 응답이 없고 도움을 간구하였으나 정의가 없구나</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 내 길을 막아 지나가지 못하게 하시고 내 앞길에 어둠을 두셨으며</div>
+        <div class="verse"><span class="verse-num">9</span> 나의 영광을 거두어가시며 나의 관모를 머리에서 벗기시고</div>
+        <div class="verse"><span class="verse-num">10</span> 사면으로 나를 헐으시니 나는 죽었구나 내 희망을 나무 뽑듯 뽑으시고</div>
+        <div class="verse"><span class="verse-num">11</span> 나를 향하여 진노하시고 원수 같이 보시는구나</div>
+        <div class="verse"><span class="verse-num">12</span> 그 군대가 일제히 나아와서 길을 돋우고 나를 치며 내 장막을 둘러 진을 쳤구나</div>
+        <div class="verse"><span class="verse-num">13</span> 나의 형제들이 나를 멀리 떠나게 하시니 나를 아는 모든 사람이 내게 낯선 사람이 되었구나</div>
+        <div class="verse"><span class="verse-num">14</span> 내 친척은 나를 버렸으며 가까운 친지들은 나를 잊었구나</div>
+        <div class="verse"><span class="verse-num">15</span> 내 집에 머물러 사는 자와 내 여종들은 나를 낯선 사람으로 여기니 내가 그들 앞에서 타국 사람이 되었구나</div>
+        <div class="verse"><span class="verse-num">16</span> 내가 내 종을 불러도 대답하지 아니하니 내 입으로 그에게 간청하여야 하겠구나</div>
+        <div class="verse"><span class="verse-num">17</span> 내 아내도 내 숨결을 싫어하며 내 허리의 자식들도 나를 가련하게 여기는구나</div>
+        <div class="verse"><span class="verse-num">18</span> 어린 아이들까지도 나를 업신여기고 내가 일어나면 나를 조롱하는구나</div>
+        <div class="verse"><span class="verse-num">19</span> 나의 가까운 친구들이 나를 미워하며 내가 사랑하는 사람들이 돌이켜 나의 원수가 되었구나</div>
+        <div class="verse"><span class="verse-num">20</span> 내 피부와 살이 뼈에 붙었고 남은 것은 겨우 잇몸 뿐이로구나</div>
+        <div class="verse"><span class="verse-num">21</span> 나의 친구야 너희는 나를 불쌍히 여겨다오 나를 불쌍히 여겨다오 하나님의 손이 나를 치셨구나</div>
+        <div class="verse"><span class="verse-num">22</span> 너희가 어찌하여 하나님처럼 나를 박해하느냐 내 살로도 부족하냐</div>
+        <div class="verse"><span class="verse-num">23</span> 나의 말이 곧 기록되었으면, 책에 씌어졌으면,</div>
+        <div class="verse"><span class="verse-num">24</span> 철필과 납으로 영원히 돌에 새겨졌으면 좋겠노라</div>
+        <div class="verse"><span class="verse-num">25</span> 내가 알기에는 나의 대속자가 살아 계시니 마침내 그가 땅 위에 서실 것이라</div>
+        <div class="verse"><span class="verse-num">26</span> 내 가죽이 벗김을 당한 뒤에도 내가 육체 밖에서 하나님을 보리라</div>
+        <div class="verse"><span class="verse-num">27</span> 내가 그를 보리니 내 눈으로 그를 보기를 낯선 사람처럼 하지 않을 것이라 내 마음이 초조하구나</div>
+        <div class="verse"><span class="verse-num">28</span> 너희가 만일 이르기를 우리가 그를 어떻게 칠까 하며 또 이르기를 일의 뿌리가 그에게 있다 할진대</div>
+        <div class="verse"><span class="verse-num">29</span> 너희는 칼을 두려워 할지니라 분노는 칼의 형벌을 부르나니 너희가 심판장이 있는 줄을 알게 되리라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

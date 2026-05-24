@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 133</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 133</h1>
+        <p class="sub-title">찬송가 14장 주 우리 하나님</p>
+        <p class="sub-title">욥기 11~14장 — 하나님께 호소하기</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 14장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1k9PwX1xweg6w8oUVuTcBCaoHGo4Z0Fsm" alt="찬송가 14장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 욥기 11~14장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 소발은 욥의 탄식까지도 불의하다고 정죄합니다.</span>
+            욥의 탄식은 소발의 감정을 자극하였고 <strong>소발은 욥의 탄식까지도 불의하다고 정죄하며 질책합니다.</strong> 욥과 욥의 친구들 간의 우정이 헛된 논쟁 속에서 이렇게 <strong>불신만 가중되고 있습니다.</strong>
+            <br><br>
+            욥은 친구들에게 <strong>위로와 이해를 받고 싶었습니다.</strong> 그러나 친구들은 욥을 위로하기는커녕 <strong>고통 가운데 있는 욥을 오히려 정죄하고 있습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 소발은 욥의 교만이 사라지도록 '하나님의 뜻'을 나타내실 것을 간구합니다.</span>
+            소발은 하나님께서 내리신 벌이 <strong>실제 욥이 저지른 죄보다 가벼운 것이라고 말하며</strong> 모든 것을 보고 계신 하나님께 회개하면 환난을 거두실 것이라고 주장합니다. 그리고 욥이 고난을 당하는 이유가 <strong>그가 지은 죄악 때문이라고 단언합니다.</strong>
+            <br><br>
+            욥이 처한 처참한 상황을 증거 삼아서 주장을 펴니 <strong>욥은 꼼짝없이 죄인이 되고 맙니다.</strong> 소발은 욥이 고통 중에 내뱉은 신음 섞인 말들의 꼬투리를 잡아 욥을 정죄합니다. <strong>이러한 소발의 말은 바리새인들의 원조 같은 교만하기 이를 데 없는 말</strong>입니다(욥 11:13~17).
+            <br><br>
+            소발은 자신이 욥에게 '정답'을 제시했다고 자부합니다.
+            <div class="quote">
+                <strong>그러나 소발의 말은 정답이 아닌 오답일 뿐입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 욥은 친구들의 지식의 한계에 대해 반박합니다.</span>
+            욥의 친구들이 욥 앞에서 <strong>셀 수 없이 많은 지식과 지혜를 뽐내듯 쏟아내고 있습니다.</strong> 도움을 가장한 그들의 교만은 <strong>욥의 마음을 더욱 아프게 합니다.</strong> 그러자 욥이 <strong>그들의 교만을 비판합니다.</strong>
+            <br><br>
+            욥이 당하는 고난은 욥의 친구들이 가진 <strong>단편적인 지식 수준의 이해를 가지고는 해석도 되지 않을뿐더러 어떤 해결책도 내놓을 수 없습니다.</strong> 욥은 하나님의 뜻을 알지도 못하면서 세상의 인과율로만 판단하고 조언하려는 친구들의 조언은 <strong>자신의 문제를 해결할 수 없다고 판단합니다</strong>(욥 12:6~10).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 이제 욥은 친구들을 더 이상 상대하려 하지 않습니다.</span>
+            이제 욥은 <strong>하나님과 일대일로 마주하여 하나님께 호소하기 시작합니다.</strong> 욥이 세 친구와 차례로 논쟁하다가 지쳐 <strong>공의의 하나님 앞으로 나아가 두 가지 내용을 간곡하게 기도합니다</strong>(욥 13:20~21).
+            <div class="quote">
+                <strong>주의 손을 거두어주시기를, 그리고 주의 위엄으로 자신을 두렵게 하지 마시기를 간구합니다.</strong>
+            </div>
+            극심한 고통 속에서 오랜 시간을 보내게 되자 <strong>욥에게 하나님은 더 이상 용서의 하나님이 아니라 심판의 하나님이십니다.</strong> 그래서 하나님의 손길이 두려움의 대상이 된 것입니다.
+            <br><br>
+            또한 욥은 <strong>자신에게 임한 고통이 무엇 때문인지 알고 싶어 기도합니다</strong>(욥 13:22~23). 욥의 간절한 부르짖음과 외침은 <strong>욥의 답답한 심정을 그대로 표현합니다.</strong> 이유를 알지 못하고 겪는 지금의 형편은 세상 어떤 사람이라도 감당하기 어려운 것입니다. <strong>욥의 속마음은 재처럼 까맣게 변해갑니다.</strong>
+            <div class="quote">
+                <strong>욥기의 많은 분량을 차지하고 있는 욥의 기도는 자신에게 닥친 이유 없는 고통에 대해 침묵하시는 하나님께 자신의 고통을 부르짖는 소리입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 욥은 하나님을 피해 도망하는 것이 아니라 하나님 앞에 다시 섭니다.</span>
+            욥은 자신이 하나님으로부터 아무런 이유도 없이 징계를 받고 있다고 생각하지만 그럼에도 <strong>풀기 어려운 고통의 문제를 하나님께 다시 여쭙고 답을 구합니다</strong>(욥 14:2~3). 또한 인생의 덧없음을 말하며 <strong>자신의 고통을 끝내주시기를 간구합니다.</strong>
+            <br><br>
+            욥에게는 이제 <strong>숨 쉬고 있는 것 자체가 고통</strong>입니다. 욥은 품꾼이 휴식을 고대하듯 <strong>차라리 생을 마감하고 죽음 이후의 휴식을 소망합니다.</strong> 욥은 하나님마저 떠나버리신다면 자기 주변에 아무도 없다는 것을 압니다. 그러나 욥은 하나님의 심판의 손을 떠나 <strong>홀로 있게 해달라고 기도합니다.</strong>
+            <div class="quote">
+                <strong>외로운 중에도 홀로 있게 해달라는 욥의 고백을 통해 그의 고통의 무게가 얼마나 큰지 느낄 수 있습니다.</strong>
+            </div>
+            그러나 <strong>욥은 다시 일어나 소망을 가지고 하나님의 구원을 사모합니다</strong>(욥 14:14~17).
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 욥기 11~14장 '하나님께 호소하기'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 욥기 11장 -->
+        <div class="chapter-title">욥기 11장 (1~20절)</div>
+        <div class="verse"><span class="verse-num">1</span> 나아마 사람 소발이 대답하여 이르되</div>
+        <div class="verse"><span class="verse-num">2</span> 말이 많으니 어찌 대답이 없으랴 말이 많은 사람이 어찌 의롭다 함을 얻겠느냐</div>
+        <div class="verse"><span class="verse-num">3</span> 네 자랑하는 말이 어떻게 사람으로 잠잠하게 하겠으며 네가 비웃으면 어찌 너를 부끄럽게 할 사람이 없겠느냐</div>
+        <div class="verse"><span class="verse-num">4</span> 네 말에 의하면 내 도는 정결하고 나는 주께서 보시기에 깨끗하다 하는구나</div>
+        <div class="verse"><span class="verse-num">5</span> 하나님은 말씀을 내시며 너를 향하여 입을 여시고</div>
+        <div class="verse"><span class="verse-num">6</span> 지혜의 오묘함으로 네게 보이시기를 원하노니 이는 그의 지식이 광대하심이라 하나님께서 너로 하여금 너의 죄를 잊게 하여 주셨음을 알라</div>
+        <div class="verse"><span class="verse-num">7</span> 네가 하나님의 오묘함을 어찌 능히 측량하며 전능자를 어찌 능히 완전히 알겠느냐</div>
+        <div class="verse"><span class="verse-num">8</span> 하늘보다 높으시니 네가 무엇을 하겠으며 스올보다 깊으시니 네가 어찌 알겠느냐</div>
+        <div class="verse"><span class="verse-num">9</span> 그의 크심은 땅보다 길고 바다보다 넓으니라</div>
+        <div class="verse"><span class="verse-num">10</span> 하나님이 두루 다니시며 사람을 잡아 가두시고 재판을 여시면 누가 능히 막을소냐</div>
+        <div class="verse"><span class="verse-num">11</span> 하나님은 허망한 사람을 아시나니 악한 일은 상관하지 않으시는 듯하나 다 보시느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 허망한 사람은 지각이 없나니 그의 출생함이 들나귀 새끼 같으니라</div>
+        <div class="verse"><span class="verse-num">13</span> 만일 네가 마음을 바로 정하고 주를 향하여 손을 들 때에</div>
+        <div class="verse"><span class="verse-num">14</span> 네 손에 죄악이 있거든 멀리 버리라 불의가 네 장막에 있지 못하게 하라</div>
+        <div class="verse"><span class="verse-num">15</span> 그리하면 네가 반드시 흠 없는 얼굴을 들게 되고 굳게 서서 두려움이 없으리니</div>
+        <div class="verse"><span class="verse-num">16</span> 곧 네 환난을 잊을 것이라 네가 기억할지라도 물이 흘러감 같을 것이며</div>
+        <div class="verse"><span class="verse-num">17</span> 네 생명의 날이 대낮보다 밝으리니 어둠이 있다 할지라도 아침과 같이 될 것이요</div>
+        <div class="verse"><span class="verse-num">18</span> 네가 희망이 있으므로 안전할 것이며 두루 살펴보고 평안히 쉬리라</div>
+        <div class="verse"><span class="verse-num">19</span> 네가 누워도 두렵게 할 자가 없겠고 많은 사람이 네게 은혜를 구하리라</div>
+        <div class="verse"><span class="verse-num">20</span> 그러나 악한 자들은 눈이 어두워서 도망할 곳을 찾지 못하리니 그들의 희망은 숨을 거두는 것이니라</div>
+
+        <!-- 욥기 12장 -->
+        <div class="chapter-title">욥기 12장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 욥이 대답하여 이르되</div>
+        <div class="verse"><span class="verse-num">2</span> 너희만 참으로 백성이로구나 너희가 죽으면 지혜도 죽겠구나</div>
+        <div class="verse"><span class="verse-num">3</span> 나도 너희 같이 생각이 있어 너희만 못하지 아니하니 그같은 일을 누가 알지 못하겠느냐</div>
+        <div class="verse"><span class="verse-num">4</span> 하나님께 불러 아뢰어 들으심을 입은 내가 이웃에게 웃음거리가 되었으니 의롭고 온전한 자가 조롱거리가 되었구나</div>
+        <div class="verse"><span class="verse-num">5</span> 평안한 자의 마음은 재앙을 멸시하나 재앙이 실족하는 자를 기다리는구나</div>
+        <div class="verse"><span class="verse-num">6</span> 강도의 장막은 형통하고 하나님을 진노하게 하는 자는 평안하니 하나님이 그의 손에 후히 주심이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 이제 모든 짐승에게 물어 보라 그것들이 네게 가르치리라 공중의 새에게 물어 보라 그것들이 또한 네게 말하리라</div>
+        <div class="verse"><span class="verse-num">8</span> 땅에게 말하라 네게 가르치리라 바다의 고기도 네게 설명하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 이것들 중에 어느 것이 여호와의 손이 이를 행하신 줄을 알지 못하랴</div>
+        <div class="verse"><span class="verse-num">10</span> 모든 생물의 생명과 모든 사람의 육신의 목숨이 다 그의 손에 있느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 입이 음식의 맛을 구별함 같이 귀가 말을 분간하지 아니하느냐</div>
+        <div class="verse"><span class="verse-num">12</span> 늙은 자에게는 지혜가 있고 장수하는 자에게는 명철이 있느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 지혜와 권능이 하나님께 있고 계략과 명철도 그에게 속하였나니</div>
+        <div class="verse"><span class="verse-num">14</span> 그가 헐으신즉 다시 세울 수 없고 사람을 가두신즉 놓아주지 못하느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 그가 물을 막으신즉 곧 마르고 물을 보내신즉 곧 땅을 뒤집나니</div>
+        <div class="verse"><span class="verse-num">16</span> 능력과 지혜가 그에게 있고 속은 자와 속이는 자가 다 그에게 속하였으므로</div>
+        <div class="verse"><span class="verse-num">17</span> 모사를 벌거벗겨 끌어 가시며 재판장을 어리석은 자가 되게 하시며</div>
+        <div class="verse"><span class="verse-num">18</span> 왕들이 맨 것을 풀어 그들의 허리를 동이시며</div>
+        <div class="verse"><span class="verse-num">19</span> 제사장들을 벌거벗겨 끌어 가시고 권력이 있는 자를 넘어뜨리시며</div>
+        <div class="verse"><span class="verse-num">20</span> 충성된 사람들의 말을 물리치시며 늙은 자들의 판단을 빼앗으시며</div>
+        <div class="verse"><span class="verse-num">21</span> 귀인들에게 멸시를 쏟으시며 강한 자의 띠를 푸시며</div>
+        <div class="verse"><span class="verse-num">22</span> 어두운 가운데에서 은밀한 것을 드러내시며 죽음의 그늘을 광명한 데로 나오게 하시며</div>
+        <div class="verse"><span class="verse-num">23</span> 민족들을 커지게도 하시고 다시 멸하기도 하시며 민족들을 널리 퍼지게도 하시고 다시 끌려가게도 하시며</div>
+        <div class="verse"><span class="verse-num">24</span> 만민의 우두머리들의 총명을 빼앗으시고 그들을 길 없는 거친 들에서 방황하게 하시며</div>
+        <div class="verse"><span class="verse-num">25</span> 빛 없이 캄캄한 데를 더듬게 하시며 취한 사람 같이 비틀거리게 하시느니라</div>
+
+        <!-- 욥기 13장 -->
+        <div class="chapter-title">욥기 13장 (1~28절)</div>
+        <div class="verse"><span class="verse-num">1</span> 나의 눈이 이것을 다 보았고 나의 귀가 이것을 듣고 깨달았느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 너희 아는 것을 나도 아노니 너희만 못하지 않으니라</div>
+        <div class="verse"><span class="verse-num">3</span> 참으로 나는 전능자에게 말씀하려 하며 하나님과 변론하려 하노라</div>
+        <div class="verse"><span class="verse-num">4</span> 너희는 거짓말을 지어내는 자요 다 쓸모 없는 의원이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 너희가 참으로 잠잠하면 그것이 너희의 지혜일 것이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 너희는 나의 변론을 들으며 내 입술의 변명을 들어 보라</div>
+        <div class="verse"><span class="verse-num">7</span> 너희가 하나님을 위하여 불의를 말하려느냐 그를 위하여 속임을 말하려느냐</div>
+        <div class="verse"><span class="verse-num">8</span> 너희가 하나님의 낯을 따르려느냐 그를 위하여 변론하려느냐</div>
+        <div class="verse"><span class="verse-num">9</span> 하나님이 너희를 감찰하시면 좋겠느냐 너희가 사람을 속임 같이 그를 속이려느냐</div>
+        <div class="verse"><span class="verse-num">10</span> 만일 너희가 몰래 낯을 따를진대 그가 반드시 책망하시리니</div>
+        <div class="verse"><span class="verse-num">11</span> 그의 존귀가 너희를 두렵게 하지 않겠으며 그의 두려움이 너희 위에 임하지 않겠느냐</div>
+        <div class="verse"><span class="verse-num">12</span> 너희의 격언은 재 같은 속담이요 너희가 방어하는 것은 토성이니라</div>
+        <div class="verse"><span class="verse-num">13</span> 너희는 잠잠하고 나를 버려두어 말하게 하라 무슨 일이 닥치든지 내가 당하리라</div>
+        <div class="verse"><span class="verse-num">14</span> 내가 어찌하여 내 살을 내 이로 물고 내 생명을 내 손에 두겠느냐</div>
+        <div class="verse"><span class="verse-num">15</span> 그가 나를 죽이시리니 내가 희망이 없노라 그러나 그의 앞에서 내 행위를 아뢰리라</div>
+        <div class="verse"><span class="verse-num">16</span> 경건하지 않은 자는 그 앞에 이르지 못하나니 이것이 나의 구원이 되리라</div>
+        <div class="verse"><span class="verse-num">17</span> 너희들은 내 말을 분명히 들으라 내가 너희 귀에 알려 줄 것이 있느니라</div>
+        <div class="verse"><span class="verse-num">18</span> 보라 내가 내 사정을 진술하였거니와 내가 정의롭다 함을 얻을 줄 아노라</div>
+        <div class="verse"><span class="verse-num">19</span> 나와 변론할 자가 누구이랴 그러면 내가 잠잠하고 기운이 끊어지리라</div>
+        <div class="verse"><span class="verse-num">20</span> 오직 내게 이 두 가지 일을 행하지 마옵소서 그리하시면 내가 주의 얼굴을 피하여 숨지 아니하오리니</div>
+        <div class="verse"><span class="verse-num">21</span> 곧 주의 손을 내게 대지 마시오며 주의 위엄으로 나를 두렵게 하지 마실 것이니이다</div>
+        <div class="verse"><span class="verse-num">22</span> 그리하시고 주는 나를 부르소서 내가 대답하리이다 혹 내가 말씀하게 하옵시고 주는 내게 대답하옵소서</div>
+        <div class="verse"><span class="verse-num">23</span> 나의 죄악이 얼마나 많으니이까 나의 허물과 죄를 내게 알게 하옵소서</div>
+        <div class="verse"><span class="verse-num">24</span> 주께서 어찌하여 얼굴을 가리시고 나를 주의 원수로 여기시나이까</div>
+        <div class="verse"><span class="verse-num">25</span> 주께서 어찌하여 날리는 낙엽을 놀라게 하시며 마른 검불을 뒤쫓으시나이까</div>
+        <div class="verse"><span class="verse-num">26</span> 주께서 나를 대적하사 괴로운 일들을 기록하시며 내가 젊었을 때에 지은 죄를 내가 받게 하시오며</div>
+        <div class="verse"><span class="verse-num">27</span> 내 발을 차꼬에 채우시며 나의 모든 길을 살피사 내 발자취를 점검하시나이다</div>
+        <div class="verse"><span class="verse-num">28</span> 나는 썩은 물건의 낡아짐 같으며 좀 먹은 의복 같으니이다</div>
+
+        <!-- 욥기 14장 -->
+        <div class="chapter-title">욥기 14장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여인에게서 태어난 사람은 생애가 짧고 걱정이 가득하며</div>
+        <div class="verse"><span class="verse-num">2</span> 그는 꽃과 같이 자라나서 시들며 그림자 같이 지나가며 머물지 아니하거늘</div>
+        <div class="verse"><span class="verse-num">3</span> 이와 같은 자를 주께서 눈여겨 보시나이까 나를 주 앞으로 이끌어서 재판하시나이까</div>
+        <div class="verse"><span class="verse-num">4</span> 누가 깨끗한 것을 더러운 것 가운데에서 낼 수 있으리이까 하나도 없나이다</div>
+        <div class="verse"><span class="verse-num">5</span> 그의 날을 정하셨고 그의 달 수도 주께 있으므로 그의 규례를 정하여 넘어가지 못하게 하셨사온즉</div>
+        <div class="verse"><span class="verse-num">6</span> 그에게서 눈을 돌이켜 그가 품꾼 같이 그의 날을 마칠 때까지 그를 홀로 있게 하옵소서</div>
+        <div class="verse"><span class="verse-num">7</span> 나무는 희망이 있나니 찍힐지라도 다시 움이 나서 연한 가지가 끊이지 아니하며</div>
+        <div class="verse"><span class="verse-num">8</span> 그 뿌리가 땅에서 늙고 줄기가 흙에서 죽을지라도</div>
+        <div class="verse"><span class="verse-num">9</span> 물 기운에 움이 돋고 가지가 뻗어서 새로 심은 것과 같거니와</div>
+        <div class="verse"><span class="verse-num">10</span> 장정이라도 죽으면 소멸되나니 인생이 숨을 거두면 그가 어디 있느냐</div>
+        <div class="verse"><span class="verse-num">11</span> 물이 바다에서 줄어들고 강물이 잦아서 마름 같이</div>
+        <div class="verse"><span class="verse-num">12</span> 사람이 누우면 다시 일어나지 못하고 하늘이 없어지기까지 눈을 뜨지 못하며 잠을 깨지 못하느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 주는 나를 스올에 감추시며 주의 진노를 돌이키실 때까지 나를 숨기시고 나를 위하여 규례를 정하시고 나를 기억하옵소서</div>
+        <div class="verse"><span class="verse-num">14</span> 장정이라도 죽으면 어찌 다시 살리이까 나는 나의 모든 고난의 날 동안을 참으면서 풀려나기를 기다리겠나이다</div>
+        <div class="verse"><span class="verse-num">15</span> 주께서는 나를 부르시겠고 나는 대답하겠나이다 주께서는 주의 손으로 지으신 것을 기다리시겠나이다</div>
+        <div class="verse"><span class="verse-num">16</span> 그러하온데 이제 주께서 나의 걸음을 세시오니 나의 죄를 감찰하지 아니하시나이까</div>
+        <div class="verse"><span class="verse-num">17</span> 주는 내 허물을 주머니에 봉하시고 내 죄악을 싸매시나이다</div>
+        <div class="verse"><span class="verse-num">18</span> 무너지는 산은 반드시 흩어지고 바위는 그 자리에서 옮겨가고</div>
+        <div class="verse"><span class="verse-num">19</span> 물은 돌을 닳게 하고 넘치는 물은 땅의 티끌을 씻어버리나이다 이와 같이 주께서는 사람의 희망을 끊으시나이다</div>
+        <div class="verse"><span class="verse-num">20</span> 주께서 사람을 영원히 이기셔서 떠나게 하시며 그의 얼굴 빛을 변하게 하시고 쫓아보내시오니</div>
+        <div class="verse"><span class="verse-num">21</span> 그의 아들들이 존귀하게 되어도 그가 알지 못하며 그들이 비천하게 되어도 그가 깨닫지 못하나이다</div>
+        <div class="verse"><span class="verse-num">22</span> 다만 그의 살이 아프고 그의 영혼이 애곡할 뿐이니이다</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

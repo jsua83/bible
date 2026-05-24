@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 129</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 기본 설정 */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문) --- */
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 --- */
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 15px 20px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 1. 상단 타이틀 -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 129</h1>
+        <p class="sub-title">찬송가 393장 오 신실하신 주</p>
+        <p class="sub-title">전도서 8~12장 — '헛되다'를 배우다</p>
+    </div>
+
+    <!-- 2. 사도신경 -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- 3. 찬송가 이미지 -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 393장</div>
+        <!-- 구글 드라이브 우회 주소 적용 -->
+        <img src="https://lh3.googleusercontent.com/d/15nInOvBvutwA9drghXlH4X3RiBMGrTu6" alt="찬송가 393장 악보" class="hymn-image">
+    </div>
+
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 전도서 8~12장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 인간의 한계는 자신의 죽을 날을 피하거나 연기시킬 수 없다는 것입니다.</span>
+            인간으로서 누릴 수 있는 모든 부귀와 영화를 다 누려본 솔로몬의 고백은 다름 아닌 <strong>인간은 자신의 죽을 날을 피하거나 연기시킬 수 없다</strong>는 것입니다. 그러므로 인간은 <strong>피조물로서 자신의 위치를 깨닫고 자신의 한계를 인정하며 겸손히 인생을 살아야 합니다.</strong>
+            <div class="quote">
+                <strong>하나님의 피조물인 인간이 이 세상을 가장 지혜롭게 사는 길은 하나님 앞에 겸손히, 그리고 하나님을 경외하며 사는 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 악인은 결국 잘되지 못하며 그날이 그림자와 같습니다.</span>
+            다윗은 악인에 대하여 <strong>"바람에 나는 겨와 같도다"</strong>(시 1:4)라고 말했는데 솔로몬은 이에 더해 <strong>악인이 잘되지 못하는 이유까지 말합니다</strong>(전 8:13). 세상은 불합리한 것으로 가득 찬 것만 같습니다. 악인이 잘되고 의인이 고통받는 일이 허다하게 일어나고 있기 때문입니다.<br><br>
+            그러나 <strong>악을 행할 때마다 징벌이 곧 주어지지 않는다고 해서 악이 옳다거나 징벌이 없는 것이 결코 아닙니다.</strong> 성경은 분명히 <strong>악인은 그림자와 같이 사라질 것</strong>이라고 말합니다(시 119:119).
+            <div class="quote">
+                <strong>다윗의 고백처럼 의인은 고난이 많으나 하나님께서 모든 고난에서 그를 건져주십니다.</strong> (시 34:19)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 술 맡은 관원장에게 다시 요셉을 기억나게 하신 분은 바로 살아 계신 하나님이십니다.</span>
+            전도자 솔로몬은 그의 인생 경험을 통해 <strong>인생들에게 일어나는 모든 일이 그들 각자의 노력으로 다 되는 것이 아님을 말합니다.</strong> 다시 말해 <strong>하나님의 도움과 은혜가 아니면 우리 인간들은 어떤 힘이나 능력으로도 행할 수 없다</strong>는 것입니다(전 9:11).<br><br>
+            만약 하나님의 도움 없이도 인간의 노력만으로 모든 것을 이룰 수 있다면 우리는 하나님께 도움을 구할 필요가 없습니다. 그러나 <strong>성경 속 하나님의 사람들은 그들이 최선을 다하면서 늘 하나님께 도움을 구했습니다.</strong><br><br>
+            2년 동안이나 요셉을 잊어버렸던 <strong>애굽 왕 바로의 술 맡은 관원장에게 다시 요셉을 기억나게 하신 분은 바로 살아 계신 하나님이셨습니다.</strong> 이 일은 요셉의 노력이 아니라 <strong>하나님께서 요셉의 인생에 은혜를 베푸신 것</strong>입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 10대에는 꿈을 배우고, 20대 청년의 때에는 '헛되다'를 배워야 합니다.</span>
+            노년에 이른 전도자 솔로몬이 <strong>전도서를 기록한 이유를 밝힙니다.</strong> 그것은 '청년의 때'에 '헛되다'를 배운 후 <strong>헛되지 않은 삶을 위해 무엇을 해야 할지를 말해주고자 한 것</strong>입니다(전 11:9~10). 솔로몬은 청년의 때에 어떠한 삶을 살아야 하는지 <strong>구체적인 방법을 제시해줍니다</strong>(전 11:1~8).
+            <div class="quote">
+                <strong>첫째,</strong> 이웃에게 <strong>선을 베푸는 삶</strong>을 살아야 합니다.<br>
+                <strong>둘째,</strong> 하나님을 <strong>의지하는 삶</strong>을 살아야 합니다.<br>
+                <strong>셋째,</strong> 성실하게 <strong>최선을 다하는 삶</strong>을 살아야 합니다.<br>
+                <strong>넷째,</strong> <strong>즐겁게 살아야</strong> 합니다. 그래야 헛되지 않은 삶을 살 수 있습니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 인생들의 모든 행위와 모든 은밀한 일을 선악 간에 심판하십니다.</span>
+            일생을 한걸음으로 달려와 그 끝에 다다른 전도자가 젊은이들을 향해 마지막으로 전하는 <strong>사랑 어린 당부의 말</strong>은 다른 것이 아닙니다. 인생의 허무함과 그 헛됨이 어떠한지를 알았으니 <strong>이제 하나님을 경외하라</strong>는 것입니다. <strong>인생의 모든 것을 보시는 하나님께서 선한 것이든 악한 것이든 은밀한 일을 다 심판하신다</strong>는 것입니다.<br><br>
+            그러므로 전도자 솔로몬은 <strong>곤고한 날이 이르기 전에 하나님을 기억하라</strong>고 말합니다(전 12:1~5). 곤고한 날, 노년이 되면 손발이 떨릴 정도로 힘이 없을 것입니다. 힘이 사라지고 몸이 구부러집니다. 치아도 얼마 남지 않고 눈은 어두워집니다. 다니지 못하고 음식도 많이 먹지 못하며 귀는 어두워집니다. 목소리도 약해지고 두려움이 많아집니다. 머리는 백발이 되고 육신은 쇠약해집니다. <strong>결국 죽음을 맞이하게 됩니다.</strong><br><br>
+            이렇게 <strong>유한한 인생이기에 우리는 시간을 낭비하지 말고 주어진 생을 지혜롭게 살아야 합니다.</strong>
+            <div class="quote">
+                <strong>솔로몬은 그 지혜가 청년의 때부터 창조주를 기억하는 것이라고 힘주어 말합니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 전도서 8~12장 ''헛되다'를 배우다'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- 5. 성경 본문 -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 전도서 8장 -->
+        <div class="chapter-title">전도서 8장 (1~17절)</div>
+        <div class="verse"><span class="verse-num">1</span> 누가 지혜자와 같으며 누가 사물의 이치를 아는 자이냐 사람의 지혜는 그의 얼굴에 광채가 나게 하나니 그의 얼굴의 사나운 것이 변하느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 내가 권하노라 왕의 명령을 지키라 이미 하나님을 가리켜 맹세하였음이니라</div>
+        <div class="verse"><span class="verse-num">3</span> 왕 앞에서 물러가기를 급하게 하지 말며 악한 것을 일삼지 말라 왕은 자기가 하고자 하는 것을 다 행함이니라</div>
+        <div class="verse"><span class="verse-num">4</span> 왕의 말은 권능이 있나니 누가 그에게 이르기를 왕께서 무엇을 하시나이까 할 수 있으랴</div>
+        <div class="verse"><span class="verse-num">5</span> 명령을 지키는 자는 불행을 알지 못하리라 지혜자의 마음은 때와 판단을 분변하나니</div>
+        <div class="verse"><span class="verse-num">6</span> 무슨 일에든지 때와 판단이 있으므로 사람에게 임하는 화가 심함이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 사람이 장래 일을 알지 못하나니 장래 일을 가르칠 자가 누구이랴</div>
+        <div class="verse"><span class="verse-num">8</span> 바람을 주장하여 바람을 움직이게 할 사람도 없고 죽는 날을 주장할 사람도 없으며 전쟁할 때를 모면할 사람도 없으니 악이 그의 주민들을 건져낼 수는 없느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 이 모든 것들을 보고 해 아래에서 행하는 모든 일을 마음에 두고 살핀즉 사람이 사람을 주장하여 해롭게 하는 때가 있도다</div>
+        <div class="verse"><span class="verse-num">10</span> 그런 후에 내가 본즉 악인들은 장사지낸 바 되어 거룩한 곳을 떠나 그들이 그렇게 행한 성읍 안에서 잊어버린 바 되었으니 이것도 헛되도다</div>
+        <div class="verse"><span class="verse-num">11</span> 악한 일에 관한 징벌이 속히 실행되지 아니하므로 인생들이 악을 행하는 데에 마음이 담대하도다</div>
+        <div class="verse"><span class="verse-num">12</span> 죄인은 백 번이나 악을 행하고도 장수하거니와 또한 내가 아노니 하나님을 경외하여 그를 경외하는 자들은 잘 될 것이요</div>
+        <div class="verse"><span class="verse-num">13</span> 악인은 잘 되지 못하며 장수하지 못하고 그 날이 그림자와 같으리니 이는 하나님을 경외하지 아니함이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 세상에서 행해지는 헛된 일이 있나니 곧 악인들의 행위에 따라 벌을 받는 의인들도 있고 의인들의 행위에 따라 상을 받는 악인들도 있다는 것이라 내가 이르노니 이것도 헛되도다</div>
+        <div class="verse"><span class="verse-num">15</span> 이에 내가 희락을 찬양하노니 이는 사람이 먹고 마시고 즐거워하는 것보다 더 나은 것이 해 아래에는 없음이라 하나님이 사람을 해 아래에서 살게 하신 날 동안 수고하는 일 중에 그러한 일이 그와 함께 있을 것이니라</div>
+        <div class="verse"><span class="verse-num">16</span> 내가 마음을 다하여 지혜를 알고자 하며 세상에서 행해지는 일을 보았는데 밤낮으로 자지 못하는 자도 있도다</div>
+        <div class="verse"><span class="verse-num">17</span> 또 내가 하나님의 모든 행사를 살펴 보니 해 아래에서 행해지는 일을 사람이 능히 알아낼 수 없도다 사람이 아무리 애써 알아보려고 할지라도 능히 알지 못하나니 비록 지혜자가 아노라 할지라도 능히 알아내지 못하리로다</div>
+
+        <!-- 전도서 9장 -->
+        <div class="chapter-title">전도서 9장 (1~18절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이 모든 것을 내가 마음에 두고 이 모든 것을 살펴 본즉 의인들이나 지혜자들이나 그들의 행위나 모두 다 하나님의 손 안에 있으니 사랑을 받을는지 미움을 받을는지 사람이 알지 못하는 것은 모두 그들의 미래의 일들임이니라</div>
+        <div class="verse"><span class="verse-num">2</span> 모든 사람에게 임하는 그 모든 것이 일반이라 의인과 악인, 선한 자와 깨끗한 자와 깨끗하지 아니한 자, 제사를 드리는 자와 제사를 드리지 아니하는 자에게 일어나는 일들이 모두 일반이니 선인과 죄인, 맹세하는 자와 맹세하기를 무서워하는 자가 일반이로다</div>
+        <div class="verse"><span class="verse-num">3</span> 모든 사람의 결국은 일반이라 이것은 해 아래에서 행해지는 모든 일 중의 악한 것이니 곧 인생의 마음에는 악이 가득하여 그들의 평생에 미친 마음을 품고 있다가 후에는 죽은 자들에게로 돌아가는 것이라</div>
+        <div class="verse"><span class="verse-num">4</span> 모든 산 자들 중에 들어 있는 자에게는 누구나 소망이 있음은 산 개가 죽은 사자보다 낫기 때문이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 산 자들은 죽을 줄을 알되 죽은 자들은 아무것도 모르며 그들이 다시는 상을 받지 못하는 것은 그들의 이름이 잊어버린 바 됨이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 그들의 사랑과 미움과 시기도 없어진 지 오래이니 해 아래에서 행하는 모든 일 중에서 그들에게 돌아갈 몫은 영원히 없느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 너는 가서 기쁨으로 네 음식물을 먹고 즐거운 마음으로 네 포도주를 마실지어다 이는 하나님이 네가 하는 일들을 벌써 기쁘게 받으셨음이니라</div>
+        <div class="verse"><span class="verse-num">8</span> 네 의복을 항상 희게 하며 네 머리에 향 기름을 그치지 아니하도록 할지니라</div>
+        <div class="verse"><span class="verse-num">9</span> 네 헛된 평생의 모든 날 곧 하나님이 해 아래에서 네게 주신 모든 헛된 날에 네가 사랑하는 아내와 함께 즐겁게 살지어다 그것이 네가 평생에 해 아래에서 수고하고 얻은 네 몫이니라</div>
+        <div class="verse"><span class="verse-num">10</span> 네 손이 일을 얻는 대로 힘을 다하여 할지어다 네가 장차 들어갈 스올에는 일도 없고 계획도 없고 지식도 없고 지혜도 없음이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 다시 해 아래에서 보니 빠른 경주자들이라고 선착하는 것이 아니며 용사들이라고 전쟁에 승리하는 것이 아니며 지혜자들이라고 음식물을 얻는 것도 아니며 명철자들이라고 재물을 얻는 것도 아니며 지식인들이라고 은총을 입는 것이 아니니 이는 시기와 기회는 그들 모두에게 임함이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 분명히 사람은 자기의 시기도 알지 못하나니 물고기들이 재난의 그물에 걸리고 새들이 올무에 걸림 같이 인생들도 재앙의 날이 그들에게 홀연히 임하면 거기에 걸리느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 또 해 아래에서 지혜를 보고 내가 크게 여긴 것이 이러하니</div>
+        <div class="verse"><span class="verse-num">14</span> 곧 작고 인구가 많지 아니한 어떤 성읍에 큰 왕이 와서 그것을 에워싸고 큰 흉벽을 쌓고 치고자 할 때에</div>
+        <div class="verse"><span class="verse-num">15</span> 그 성읍 가운데에 가난한 지혜자가 있어서 그의 지혜로 그 성읍을 건진 그것이라 그러나 그 가난한 자를 기억하는 사람이 없었도다</div>
+        <div class="verse"><span class="verse-num">16</span> 그러므로 내가 이르기를 지혜가 힘보다 나으나 가난한 자의 지혜가 멸시를 받고 그의 말들을 사람들이 듣지 아니한다 하였노라</div>
+        <div class="verse"><span class="verse-num">17</span> 조용히 들리는 지혜자들의 말들이 우매한 자들을 다스리는 자의 호령보다 나으니라</div>
+        <div class="verse"><span class="verse-num">18</span> 지혜가 무기보다 나으니라 그러나 죄인 한 사람이 많은 선을 무너지게 하느니라</div>
+
+        <!-- 전도서 10장 -->
+        <div class="chapter-title">전도서 10장 (1~20절)</div>
+        <div class="verse"><span class="verse-num">1</span> 죽은 파리들이 향기름을 악취가 나게 만드는 것 같이 적은 우매가 지혜와 존귀를 난처하게 만드느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 지혜자의 마음은 오른쪽에 있고 우매자의 마음은 왼쪽에 있느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 우매한 자는 길을 갈 때에도 지혜가 부족하여 각 사람에게 자기가 우매함을 말하느니라</div>
+        <div class="verse"><span class="verse-num">4</span> 주권자가 네게 분을 일으키거든 너는 네 자리를 떠나지 말라 공손함이 큰 허물을 용서 받게 하느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 해 아래에서 한 가지 재난을 보았노니 곧 주권자에게서 나오는 허물이라</div>
+        <div class="verse"><span class="verse-num">6</span> 우매한 자가 크게 높은 지위들을 얻고 부자들이 낮은 지위에 앉는도다</div>
+        <div class="verse"><span class="verse-num">7</span> 또 내가 보았노니 종들은 말을 타고 고관들은 종들처럼 땅에 걸어 다니는도다</div>
+        <div class="verse"><span class="verse-num">8</span> 함정을 파는 자는 거기에 빠질 것이요 담을 허는 자는 뱀에게 물리리라</div>
+        <div class="verse"><span class="verse-num">9</span> 돌들을 떠내는 자는 그로 말미암아 상할 것이요 나무들을 쪼개는 자는 그로 말미암아 위험을 당하리라</div>
+        <div class="verse"><span class="verse-num">10</span> 철 연장이 무디어졌는데도 날을 갈지 아니하면 힘이 더 드느니라 오직 지혜는 성공하기에 유익하니라</div>
+        <div class="verse"><span class="verse-num">11</span> 주술을 베풀기 전에 뱀에게 물렸으면 술객은 소용이 없느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 지혜자의 입의 말들은 은혜로우나 우매자의 입술들은 자기를 삼키나니</div>
+        <div class="verse"><span class="verse-num">13</span> 그의 입의 말들의 시작은 우매요 그의 입의 결말들은 심히 미친 것이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 우매한 자는 말을 많이 하거니와 사람은 장래 일을 알지 못하나니 나중에 일어날 일을 누가 그에게 알리리요</div>
+        <div class="verse"><span class="verse-num">15</span> 우매한 자들의 수고는 자신을 피곤하게 할 뿐이라 그들은 성읍에 들어갈 줄도 알지 못함이니라</div>
+        <div class="verse"><span class="verse-num">16</span> 왕은 어리고 대신들은 아침부터 잔치하는 나라여 네게 화가 있도다</div>
+        <div class="verse"><span class="verse-num">17</span> 왕은 귀족들의 아들이요 대신들은 취하지 아니하고 기력을 보하려고 정한 때에 먹는 나라여 네게 복이 있도다</div>
+        <div class="verse"><span class="verse-num">18</span> 게으른즉 서까래가 내려앉고 손을 놓은즉 집이 새느니라</div>
+        <div class="verse"><span class="verse-num">19</span> 잔치는 희락을 위하여 베푸는 것이요 포도주는 생명을 기쁘게 하는 것이나 돈은 범사에 이용되느니라</div>
+        <div class="verse"><span class="verse-num">20</span> 심중에라도 왕을 저주하지 말며 침실에서라도 부자를 저주하지 말라 공중의 새가 그 소리를 전하고 날짐승이 그 일을 전파할 것임이니라</div>
+
+        <!-- 전도서 11장 -->
+        <div class="chapter-title">전도서 11장 (1~10절)</div>
+        <div class="verse"><span class="verse-num">1</span> 너는 네 떡을 물 위에 던져라 여러 날 후에 도로 찾으리라</div>
+        <div class="verse"><span class="verse-num">2</span> 일곱에게나 여덟에게 나눠 줄지어다 무슨 재앙이 땅에 임할는지 네가 알지 못함이니라</div>
+        <div class="verse"><span class="verse-num">3</span> 구름에 비가 가득하면 땅에 쏟아지며 나무가 남으로나 북으로나 쓰러지면 그 쓰러진 곳에 그냥 있으리라</div>
+        <div class="verse"><span class="verse-num">4</span> 풍세를 살펴보는 자는 파종하지 못할 것이요 구름만 바라보는 자는 거두지 못하리라</div>
+        <div class="verse"><span class="verse-num">5</span> 바람의 길이 어떠함과 아이 밴 자의 태에서 뼈가 어떻게 자라는지를 네가 알지 못함 같이 만사를 성취하시는 하나님의 일을 네가 알지 못하느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 너는 아침에 씨를 뿌리고 저녁에도 손을 놓지 말라 이것이 잘 될는지, 저것이 잘 될는지, 혹 둘이 다 잘 될는지 알지 못함이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 빛은 실로 아름다운 것이라 눈으로 해를 보는 것이 즐거운 일이로다</div>
+        <div class="verse"><span class="verse-num">8</span> 사람이 여러 해를 살면 항상 즐거워할지로다 그러나 캄캄한 날들이 많으리니 그 날들을 생각할지로다 다가올 일은 다 헛되도다</div>
+        <div class="verse"><span class="verse-num">9</span> 청년이여 네 어린 때를 즐거워하며 네 청년의 날들을 마음에 기뻐하여 마음에 원하는 길들과 네 눈이 보는 대로 행하라 그러나 하나님이 이 모든 일로 말미암아 너를 심판하실 줄 알라</div>
+        <div class="verse"><span class="verse-num">10</span> 그런즉 근심이 네 마음에서 떠나게 하며 악이 네 몸에서 물러가게 하라 어릴 때와 검은 머리의 시절이 다 헛되니라</div>
+
+        <!-- 전도서 12장 -->
+        <div class="chapter-title">전도서 12장 (1~14절)</div>
+        <div class="verse"><span class="verse-num">1</span> 너는 청년의 때에 너의 창조주를 기억하라 곧 곤고한 날이 이르기 전에, 나는 아무 낙이 없다고 할 해들이 가깝기 전에</div>
+        <div class="verse"><span class="verse-num">2</span> 해와 빛과 달과 별들이 어둡기 전에, 비 뒤에 구름이 다시 일어나기 전에 그리하라</div>
+        <div class="verse"><span class="verse-num">3</span> 그런 날에는 집을 지키는 자들이 떨 것이며 힘 있는 자들이 구부러질 것이며 맷돌질 하는 자들이 적으므로 그칠 것이며 창들로 내다 보는 자가 어두워질 것이며</div>
+        <div class="verse"><span class="verse-num">4</span> 길거리 문들이 닫혀질 것이며 맷돌 소리가 적어질 것이며 새의 소리로 말미암아 일어날 것이며 음악하는 여자들은 다 쇠하여질 것이며</div>
+        <div class="verse"><span class="verse-num">5</span> 또한 그런 자들은 높은 곳을 두려워할 것이며 길에서는 놀랄 것이며 살구나무가 꽃이 필 것이며 메뚜기도 짐이 될 것이며 정욕이 그치리니 이는 사람이 자기의 영원한 집으로 돌아가고 조문객들이 거리로 왕래하게 됨이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 은 줄이 풀리고 금 그릇이 깨지고 항아리가 샘 곁에서 깨지고 바퀴가 우물 위에서 깨지고</div>
+        <div class="verse"><span class="verse-num">7</span> 흙은 여전히 땅으로 돌아가고 영은 그것을 주신 하나님께로 돌아가기 전에 기억하라</div>
+        <div class="verse"><span class="verse-num">8</span> 전도자가 이르되 헛되고 헛되도다 모든 것이 헛되도다</div>
+        <div class="verse"><span class="verse-num">9</span> 전도자는 지혜자이어서 여전히 백성에게 지식을 가르쳤고 또 깊이 생각하고 연구하여 잠언을 많이 지었으며</div>
+        <div class="verse"><span class="verse-num">10</span> 전도자는 힘써 아름다운 말들을 구하였나니 진리의 말씀들을 정직하게 기록하였느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 지혜자들의 말씀들은 찌르는 채찍들 같고 회중의 스승들의 말씀들은 잘 박힌 못 같으니 다 한 목자가 주신 바이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 내 아들아 또 이것들로부터 경계를 받으라 많은 책들을 짓는 것은 끝이 없고 많이 공부하는 것은 몸을 피곤하게 하느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 일의 결국을 다 들었으니 하나님을 경외하고 그의 명령들을 지킬지어다 이것이 모든 사람의 본분이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 하나님은 모든 행위와 모든 은밀한 일을 선악 간에 심판하시리라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- 6. 주기도문 -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 무 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
