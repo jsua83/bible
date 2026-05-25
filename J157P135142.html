@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 157</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 157</h1>
+        <p class="sub-title">찬송가 406장 곤한 내 영혼 편히 쉴 곳과</p>
+        <p class="sub-title">시편 135~142편 — 입술에 파수꾼을</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 406장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1ErfoMuasnXMZz6hw5akTMW5tDBBk-a9p" alt="찬송가 406장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 시편 135~142편의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 시인은 "주를 기념함이 대대에 이르리이다"라고 고백합니다.</span>
+            시편 78편, 105편, 106편과 함께 **역사 시편**이며 저자 미상의 예배시인 시편 135편에서 시인은 **하나님께서 이스라엘을 구원하신 참 신이시며 우상은 손으로 만든 조각에 불과하다고 선포합니다.** 시인은 성전 뜰에 서 있는 자들에게 여러 가지 이유를 제시하면서 **마땅히 하나님을 찬양해야 한다고 강조합니다.**
+            <br><br>
+            > **위대하신 하나님을 송축하며 찬양할 이유가 바로 여기에 있습니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 다윗은 "여호와는 높이 계셔도 낮은 자를 굽어 살피신다"라고 고백합니다.</span>
+            시편 138편은 다윗의 '찬양시'입니다. 다윗은 성전 앞에서 감사와 찬양의 고백을 드립니다. 그리고 자신이 어떠한 어려움과 곤경에 처해 있더라도 **끝까지 구원해주실 것을 믿는 믿음을 고백합니다.**
+            <br><br>
+            > **"주의 인자하심과 성실하심"을 감사하며 / "응답하심"을 감사하며 / "내 영혼에 힘을 주심"을 감사합니다.** 그리고 **"주의 오른손"이 항상 자신과 함께하심을 신뢰합니다.**
+            <br><br>
+            > **높이 계시지만 낮은 우리의 형편을 다 살피시는 하나님, 참 좋으신 우리 하나님이십니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 다윗은 "여호와는 내 혀의 말을 알지 못하시는 것이 하나도 없으시다"라고 하나님을 찬양합니다.</span>
+            시편 139편은 다윗의 찬양시입니다. 다윗은 **'나를 아시는 하나님'을 증언합니다**(시 139:2~16).
+            <br><br>
+            하나님께서는 나의 **앉고 일어섬**을 아십니다.<br>
+            하나님께서는 나의 **생각**을 밝히 아십니다.<br>
+            하나님께서는 나의 **모든 행위**를 아십니다.<br>
+            하나님께서는 내 **혀의 말**을 아십니다.<br>
+            하나님께서는 내 **형질이 이루어지기 전에 주의 눈으로** 보셨습니다.<br>
+            <br>
+            > **"내가 주의 영을 떠나 어디로 가며 주의 앞에서 어디로 피하리이까"** (시 139:7) — 이는 하나님을 떠날 수 없다는 말입니다.
+            <br><br>
+            **다윗의 인생 전체를 통해 역사하신 하나님, 이 세상 어디를 가도 자신을 인도하시고 붙드신 하나님, 지극히 작은 자를 세밀하고도 따뜻하게 감찰하시는 그 하나님과 다윗은 동행해왔습니다.**
+            <br><br>
+            > **믿음은 거기서부터 시작됩니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 다윗은 "주는 나의 하나님이시다"라고 하나님을 찬양합니다.</span>
+            다윗의 탄원시인 시편 140편에서 다윗은 사울 왕에게 쫓김을 당할 때 **자신을 보호해 줄 사람이 아무도 없었다**고 말합니다. 다윗은 악인들로부터 핍박을 받을 때 **그들을 대적하기보다는 하나님의 공의로운 심판을 기대하며 참아냈습니다.**
+            <br><br>
+            시편 140편에서 하나님께 악인들이 파놓은 함정과 위험을 탄원하는 다윗의 표현들은 다음과 같습니다.
+            <br><br>
+            > **첫째,** "마음속으로 악을 꾀하고 싸우기 위하여 매일 모이오며" (시 140:2)<br>
+            > **둘째,** "뱀 같이 그 혀를 날카롭게 하니" (시 140:3)<br>
+            > **셋째,** "나의 걸음을 밀치려 하나이다" (시 140:4)<br>
+            > **넷째,** "올무와 줄을 놓으며 길 곁에 그물을 치며 함정을 두었나이다" (시 140:5)
+            <br><br>
+            **사면초가요, 진퇴양난의 위험 속에 처한 다윗입니다.** 그러나 다윗은 **위에 계신 하나님을 바라며 하나님께 도움을 요청합니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 다윗은 "나의 기도가 주의 앞에 분향함과 같이 된다"라고 하나님을 찬양합니다.</span>
+            다윗의 '탄원시'인 시편 141편에서 다윗은 **악인들을 대적하기보다는 하나님께 호소하며 하나님의 심판을 간구합니다.** 그 후 다윗은 **자신의 입술에 파수꾼을 세워달라고 기도하며 악으로부터 자신을 지켜달라고 간청합니다.**
+            <br><br>
+            다윗의 기도에는 **진실함이 있습니다.** 자신의 기도가 하나님 앞에 **분향하는 것과 같이 되기를 간절히 바랍니다.** 다윗은 실제로 짐승을 바치는 제사를 드리고 실제로 향기로운 향을 피워 올려 보았던 사람입니다.
+            <br><br>
+            다윗의 기도는 다음과 같습니다(시 141:2~9).
+            <br><br>
+            > **첫째,** 나의 기도가 **제물이 되게 하소서.**<br>
+            > **둘째,** 나의 입술과 나의 마음을 지켜주셔서 **악인들의 행사에 기울어지지 않게 하소서.**<br>
+            > **셋째,** 의인들의 쓴소리를 **잘 받아들이게 하소서.**<br>
+            > **넷째,** 주님께 피하오니 **악인들이 만들어놓은 올무와 함정에서 구원해주소서.**
+            <br><br>
+            > **다윗이 이렇게 기도를 드릴 수 있었던 것은 다윗 평생에 늘 소원하는 기도가 있었기 때문입니다.**
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 시편 135~142편 '입술에 파수꾼을'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">시편 135편 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 할렐루야 여호와의 이름을 찬송하라 여호와의 종들아 찬송하라</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와의 집 우리 여호와의 성전 곧 우리 하나님의 성전 뜰에 서 있는 너희여</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와를 찬송하라 여호와는 선하시며 그의 이름이 아름다우니 그의 이름을 찬양하라</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와께서 자기를 위하여 야곱 곧 이스라엘을 자기의 특별한 소유로 택하셨음이로다</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 알거니와 여호와께서는 위대하시며 우리 주는 모든 신들보다 위대하시도다</div>
+        <div class="verse"><span class="verse-num">6</span> 여호와께서 그가 기뻐하시는 모든 일을 천지와 바다와 모든 깊은 데서 다 행하셨도다</div>
+        <div class="verse"><span class="verse-num">7</span> 안개를 땅 끝에서 일으키시며 비를 위하여 번개를 만드시며 바람을 그 곳간에서 내시는도다</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 애굽의 처음 난 자를 사람부터 짐승까지 치셨도다</div>
+        <div class="verse"><span class="verse-num">9</span> 애굽이여 여호와께서 네게 행한 표적들과 징조들을 바로와 그의 모든 신하들에게 보내셨도다</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 많은 나라를 치시고 강한 왕들을 죽이셨나니</div>
+        <div class="verse"><span class="verse-num">11</span> 곧 아모리인의 왕 시혼과 바산 왕 옥과 가나안의 모든 국왕이로다</div>
+        <div class="verse"><span class="verse-num">12</span> 그들의 땅을 기업으로 주시되 자기 백성 이스라엘에게 기업으로 주셨도다</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와여 주의 이름이 영원하시니이다 여호와여 주를 기념함이 대대에 이르리이다</div>
+        <div class="verse"><span class="verse-num">14</span> 여호와께서 자기 백성을 판단하시며 그의 종들로 말미암아 위로를 받으시리로다</div>
+        <div class="verse"><span class="verse-num">15</span> 열국의 우상은 은금이요 사람의 손으로 만든 것이라</div>
+        <div class="verse"><span class="verse-num">16</span> 입이 있어도 말하지 못하며 눈이 있어도 보지 못하며</div>
+        <div class="verse"><span class="verse-num">17</span> 귀가 있어도 듣지 못하며 그들의 입에는 아무 호흡도 없나니</div>
+        <div class="verse"><span class="verse-num">18</span> 그것을 만든 자와 그것을 의지하는 자가 다 그것과 같으리로다</div>
+        <div class="verse"><span class="verse-num">19</span> 이스라엘 족속아 여호와를 송축하라 아론의 족속아 여호와를 송축하라</div>
+        <div class="verse"><span class="verse-num">20</span> 레위 족속아 여호와를 송축하라 여호와를 경외하는 너희들아 여호와를 송축하라</div>
+        <div class="verse"><span class="verse-num">21</span> 예루살렘에 계시는 여호와는 시온에서 찬송을 받으실지어다 할렐루야</div>
+
+        <div class="chapter-title">시편 136편 (1~26절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께 감사하라 그는 선하시며 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">2</span> 신들 중에 뛰어난 하나님께 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">3</span> 주들 중에 뛰어난 주께 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">4</span> 홀로 큰 기이한 일들을 행하시는 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">5</span> 지혜로 하늘을 지으신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">6</span> 땅을 물 위에 펴신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">7</span> 큰 빛들을 지으신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">8</span> 해로 낮을 주관하게 하신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">9</span> 달과 별들로 밤을 주관하게 하신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">10</span> 애굽의 장자를 치신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">11</span> 이스라엘을 그들 중에서 인도하여 내신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">12</span> 강한 손과 펴신 팔로 인도하여 내신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">13</span> 홍해를 가르신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">14</span> 이스라엘을 그 가운데로 통과하게 하신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">15</span> 바로와 그의 군대를 홍해에 엎드러뜨리신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">16</span> 그의 백성을 인도하여 광야를 통과하게 하신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">17</span> 큰 왕들을 치신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">18</span> 유명한 왕들을 죽이신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">19</span> 아모리인의 왕 시혼을 죽이신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">20</span> 바산 왕 옥을 죽이신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">21</span> 그들의 땅을 기업으로 주신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">22</span> 곧 그 종 이스라엘에게 기업으로 주신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">23</span> 우리를 비천한 가운데에서도 기억해 주신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">24</span> 우리를 우리의 대적에게서 건지신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">25</span> 모든 육체에게 먹을 것을 주신 이에게 감사하라 그 인자하심이 영원함이로다</div>
+        <div class="verse"><span class="verse-num">26</span> 하늘의 하나님께 감사하라 그 인자하심이 영원함이로다</div>
+
+        <div class="chapter-title">시편 137편 (1~9절)</div>
+        <div class="verse"><span class="verse-num">1</span> 우리가 바벨론의 여러 강변 거기에 앉아서 시온을 기억하며 울었도다</div>
+        <div class="verse"><span class="verse-num">2</span> 그 중의 버드나무에 우리가 우리의 수금을 걸었나니</div>
+        <div class="verse"><span class="verse-num">3</span> 이는 우리를 사로잡은 자가 거기서 우리에게 노래를 청하며 우리를 황폐하게 한 자가 기쁨을 청하고 자기들을 위하여 시온의 노래 중 하나를 노래하라 함이로다</div>
+        <div class="verse"><span class="verse-num">4</span> 우리가 이방 땅에서 어찌 여호와의 노래를 부를까</div>
+        <div class="verse"><span class="verse-num">5</span> 예루살렘아 내가 너를 잊을진대 내 오른손이 그의 재주를 잊을지로다</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 예루살렘을 기억하지 아니하거나 내가 가장 즐거워하는 것보다 더 즐거워하지 아니할진대 내 혀가 내 입천장에 붙을지로다</div>
+        <div class="verse"><span class="verse-num">7</span> 여호와여 예루살렘이 멸망하던 날을 기억하시고 에돔 자손을 치소서 그들의 말이 헐어 버리라 헐어 버리라 그 기초까지 헐어 버리라 하였나이다</div>
+        <div class="verse"><span class="verse-num">8</span> 멸망할 딸 바벨론아 네가 우리에게 행한 대로 네게 갚는 자가 복이 있으리로다</div>
+        <div class="verse"><span class="verse-num">9</span> 네 어린 것들을 바위에 메어치는 자는 복이 있으리로다</div>
+
+        <div class="chapter-title">시편 138편 (1~8절)</div>
+        <div class="verse"><span class="verse-num">1</span> 내가 전심으로 주께 감사하며 신들 앞에서 주께 찬송하리이다</div>
+        <div class="verse"><span class="verse-num">2</span> 내가 주의 성전을 향하여 예배하며 주의 인자하심과 성실하심으로 말미암아 주의 이름에 감사하오리니 이는 주께서 주의 말씀을 주의 모든 이름보다 높게 하셨음이라</div>
+        <div class="verse"><span class="verse-num">3</span> 내가 간구하는 날에 주께서 응답하시고 내 영혼에 힘을 주어 나를 강하게 하셨나이다</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와여 세상의 모든 왕들이 주께 감사할 것은 그들이 주의 입의 말씀을 들음이오며</div>
+        <div class="verse"><span class="verse-num">5</span> 그들이 여호와의 도를 노래할 것은 여호와의 영광이 크심이니이다</div>
+        <div class="verse"><span class="verse-num">6</span> 여호와께서는 높이 계셔도 낮은 자를 굽어살피시며 멀리서도 교만한 자를 아심이니이다</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 환난 중에 다닐지라도 주께서 나를 살아나게 하시고 주의 손을 펴사 내 원수들의 분노를 막으시며 주의 오른손이 나를 구원하시리이다</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와께서 나를 위하여 보상해 주시리이다 여호와여 주의 인자하심이 영원하오니 주의 손으로 지으신 것을 버리지 마옵소서</div>
+
+        <div class="chapter-title">시편 139편 (1~24절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와여 주께서 나를 살펴 보셨으므로 나를 아시나이다</div>
+        <div class="verse"><span class="verse-num">2</span> 주께서 내가 앉고 일어섬을 아시고 멀리서도 나의 생각을 밝히 아시오며</div>
+        <div class="verse"><span class="verse-num">3</span> 나의 모든 길과 내가 눕는 것을 살펴 보셨으므로 나의 모든 행위를 익히 아시오니</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와여 내 혀의 말을 알지 못하시는 것이 하나도 없으시니이다</div>
+        <div class="verse"><span class="verse-num">5</span> 주께서 나의 앞뒤를 둘러싸시고 내게 안수하셨나이다</div>
+        <div class="verse"><span class="verse-num">6</span> 이 지식이 내게 너무 기이하니 높아서 내가 능히 미치지 못하나이다</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 주의 영을 떠나 어디로 가며 주의 앞에서 어디로 피하리이까</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 하늘에 올라갈지라도 거기 계시며 스올에 내 자리를 펼지라도 거기 계시니이다</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 새벽 날개를 치며 바다 끝에 가서 거주할지라도</div>
+        <div class="verse"><span class="verse-num">10</span> 거기서도 주의 손이 나를 인도하시며 주의 오른손이 나를 붙드시리이다</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 혹시 말하기를 흑암이 반드시 나를 덮고 나를 두른 빛은 밤이 되리라 할지라도</div>
+        <div class="verse"><span class="verse-num">12</span> 주에게서는 흑암이 숨기지 못하며 밤이 낮과 같이 비추이나니 주에게는 흑암과 빛이 같음이니이다</div>
+        <div class="verse"><span class="verse-num">13</span> 주께서 내 내장을 지으시며 나의 모태에서 나를 만드셨나이다</div>
+        <div class="verse"><span class="verse-num">14</span> 내가 주께 감사하옴은 나를 지으심이 심히 기묘하심이라 주께서 하시는 일이 기이함을 내 영혼이 잘 아나이다</div>
+        <div class="verse"><span class="verse-num">15</span> 내가 은밀한 데서 지음을 받고 땅의 깊은 곳에서 기이하게 지음을 받은 때에 나의 형체가 주의 앞에 숨겨지지 못하였나이다</div>
+        <div class="verse"><span class="verse-num">16</span> 내 형질이 이루어지기 전에 주의 눈이 보셨으며 나를 위하여 정한 날이 하루도 되기 전에 주의 책에 다 기록이 되었나이다</div>
+        <div class="verse"><span class="verse-num">17</span> 하나님이여 주의 생각이 내게 어찌 그리 보배로우신지요 그 수가 어찌 그리 많은지요</div>
+        <div class="verse"><span class="verse-num">18</span> 내가 세려고 할지라도 그 수가 모래보다 많도소이다 내가 깰 때에도 여전히 주와 함께 있나이다</div>
+        <div class="verse"><span class="verse-num">19</span> 하나님이여 주께서 반드시 악인을 죽이시리이다 피 흘리기를 즐기는 자들아 나를 떠날지어다</div>
+        <div class="verse"><span class="verse-num">20</span> 그들이 주를 대하여 악하게 말하며 주의 원수들이 주의 이름으로 헛되이 맹세하나이다</div>
+        <div class="verse"><span class="verse-num">21</span> 여호와여 내가 주를 미워하는 자들을 미워하지 아니하오며 주를 치러 일어나는 자들을 미워하지 아니하나이까</div>
+        <div class="verse"><span class="verse-num">22</span> 내가 그들을 심히 미워하니 그들은 나의 원수들이니이다</div>
+        <div class="verse"><span class="verse-num">23</span> 하나님이여 나를 살피사 내 마음을 아시며 나를 시험하사 내 뜻을 아옵소서</div>
+        <div class="verse"><span class="verse-num">24</span> 내게 무슨 악한 행위가 있나 보시고 나를 영원한 길로 인도하소서</div>
+
+        <div class="chapter-title">시편 140편 (1~13절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와여 악인에게서 나를 건지시며 포악한 자에게서 나를 보전하소서</div>
+        <div class="verse"><span class="verse-num">2</span> 그들이 마음속으로 악을 꾀하고 싸우기 위하여 매일 모이오며</div>
+        <div class="verse"><span class="verse-num">3</span> 뱀 같이 그 혀를 날카롭게 하니 그 입술 아래에는 독사의 독이 있나이다 (셀라)</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와여 나를 지키사 악인의 손에 빠지지 않게 하시며 나를 보전하사 포악한 자에게서 벗어나게 하소서 그들은 나의 걸음을 밀치려 하나이다</div>
+        <div class="verse"><span class="verse-num">5</span> 교만한 자가 나를 해하려고 올무와 줄을 놓으며 길 곁에 그물을 치며 함정을 두었나이다 (셀라)</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 여호와께 말하기를 주는 나의 하나님이시니 여호와여 나의 간구하는 소리에 귀를 기울이소서 하였나이다</div>
+        <div class="verse"><span class="verse-num">7</span> 내 구원의 능력이신 주 여호와여 전쟁의 날에 주께서 내 머리를 가려 주셨나이다</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와여 악인의 소원을 허락하지 마시며 그의 악한 꾀를 이루지 못하게 하소서 그들이 스스로 높일까 하나이다 (셀라)</div>
+        <div class="verse"><span class="verse-num">9</span> 나를 에워싸는 자들이 그들의 머리를 들 때에 그들의 입술의 재난이 그들을 덮게 하소서</div>
+        <div class="verse"><span class="verse-num">10</span> 뜨거운 숯불이 그들 위에 떨어지게 하시며 불 가운데와 깊은 웅덩이에 그들로 하여금 빠져 다시 일어나지 못하게 하소서</div>
+        <div class="verse"><span class="verse-num">11</span> 악담하는 자는 세상에서 굳게 서지 못하며 포악한 자는 재앙이 따라서 패망하게 하리이다</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 알거니와 여호와는 고난 당하는 자를 변호해 주시며 궁핍한 자에게 정의를 베푸시리이다</div>
+        <div class="verse"><span class="verse-num">13</span> 진실로 의인들이 주의 이름에 감사하며 정직한 자들이 주의 앞에서 살리이다</div>
+
+        <div class="chapter-title">시편 141편 (1~10절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와여 내가 주를 불렀사오니 속히 내게 오시옵소서 내가 주께 부르짖을 때에 내 음성에 귀를 기울이소서</div>
+        <div class="verse"><span class="verse-num">2</span> 나의 기도가 주의 앞에 분향함과 같이 되며 나의 손 드는 것이 저녁 제사 같이 되게 하소서</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와여 내 입에 파수꾼을 세우시고 내 입술의 문을 지키소서</div>
+        <div class="verse"><span class="verse-num">4</span> 내 마음이 악한 일에 기울어 죄악을 행하는 자들과 함께 악을 행하지 말게 하시며 그들의 진수성찬을 먹지 말게 하소서</div>
+        <div class="verse"><span class="verse-num">5</span> 의인이 나를 칠지라도 은혜로 여기며 책망할지라도 머리의 기름 같이 여겨서 내 머리가 이를 거절하지 아니할지라 그들의 재난 중에도 내가 항상 기도하리로다</div>
+        <div class="verse"><span class="verse-num">6</span> 그들의 재판관들이 바위 곁에 내려 던져졌도다 내 말이 달므로 무리가 들으리로다</div>
+        <div class="verse"><span class="verse-num">7</span> 사람이 밭 갈아 흙을 부스러뜨림 같이 우리의 해골이 스올 입구에 흩어졌도다</div>
+        <div class="verse"><span class="verse-num">8</span> 주 여호와여 내 눈이 주께 향하며 내가 주께 피하오니 내 영혼을 빈궁한 대로 버려 두지 마옵소서</div>
+        <div class="verse"><span class="verse-num">9</span> 나를 지키사 그들이 나를 잡으려고 놓은 올무와 악을 행하는 자들의 함정에서 벗어나게 하옵소서</div>
+        <div class="verse"><span class="verse-num">10</span> 악인은 자기 그물에 걸리게 하시고 나만은 온전히 면하게 하소서</div>
+
+        <div class="chapter-title">시편 142편 (1~7절)</div>
+        <div class="verse"><span class="verse-num">1</span> 내가 소리 내어 여호와께 부르짖으며 소리 내어 여호와께 간구하는도다</div>
+        <div class="verse"><span class="verse-num">2</span> 내가 내 원통함을 그의 앞에 토로하며 내 우환을 그의 앞에 진술하는도다</div>
+        <div class="verse"><span class="verse-num">3</span> 내 영이 내 속에서 상할 때에도 주께서 내 길을 아셨나이다 내가 가는 길에 그들이 나를 잡으려고 올무를 숨겼나이다</div>
+        <div class="verse"><span class="verse-num">4</span> 오른쪽을 살펴 보소서 나를 아는 이도 없고 나의 피난처도 없고 내 영혼을 돌보는 이도 없나이다</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와여 내가 주께 부르짖어 말하기를 주는 나의 피난처시요 살아 있는 사람들의 땅에서 나의 분깃이시라 하였나이다</div>
+        <div class="verse"><span class="verse-num">6</span> 나의 부르짖음을 들으소서 나는 심히 비천하니이다 나를 핍박하는 자들에게서 나를 건지소서 그들은 나보다 강하니이다</div>
+        <div class="verse"><span class="verse-num">7</span> 내 영혼을 옥에서 이끌어 내사 주의 이름을 감사하게 하소서 주께서 나에게 갚아 주시리니 의인들이 나를 두르리이다</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

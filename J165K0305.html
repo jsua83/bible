@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 165</title>
+    <!-- STREAMING_CHUNK:Initializing the document structure -->
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- STREAMING_CHUNK:Styling the layout -->
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 165</h1>
+        <p class="sub-title">찬송가 449장 예수 따라 가며</p>
+        <p class="sub-title">열왕기하 3~5장 — 엘리사의 기적들의 의미</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <!-- STREAMING_CHUNK:Configuring confession box -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 449장</div>
+        <!-- STREAMING_CHUNK:Loading hymn image -->
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1g-E1IJNe8MVM2wThhRqogQf7e_kmBs31" alt="찬송가 449장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <!-- STREAMING_CHUNK:Rendering points -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 열왕기하 3~5장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 엘리야의 뒤를 이은 엘리사는 제자 양성으로 다가올 사역을 준비합니다.</span>
+            아합의 또 다른 아들 여호람이 북이스라엘의 왕이 됩니다. 여호람은 아버지 아합이 <strong>22년간 왕으로 있으면서 셀 수 없을 만큼 많이 만들어놓은 바알의 제단과 아세라 목상을 없앱니다.</strong> 그러나 안타깝게도 여호람은 <strong>'여로보암의 길'에서는 벗어나지 못합니다.</strong>
+            <br><br>
+            이러한 역사 속에서 <strong>엘리사 선지자는 선지자의 제자들을 양성하는 일에 힘씁니다.</strong> 엘리사는 일정한 거주지도 없고 정해진 끼니도 없이 삽니다. 엘리사는 <strong>힘든 조건 속에서도 하나님의 말씀으로 그 시대를 바로 세우고자 선지자의 제자들을 양육하는 일을 멈추지 않았습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 남유다의 여호사밧 왕은 북이스라엘의 선지자 엘리사를 찾아가 도움을 구합니다.</span>
+            여호람이 북이스라엘의 왕이 되자 <strong>모압이 이스라엘을 배반합니다.</strong> 그동안 모압은 다윗 시대 이래로 이스라엘의 속국이었습니다(삼하 8:2). 아합이 죽자 <strong>모압이 이를 기회로 삼아 독립을 시도한 것</strong>입니다. 이에 북이스라엘과 남유다와 에돔이 모압을 치기 위한 <strong>연합군을 구성합니다.</strong>
+            <br><br>
+            연합군은 원정길에 <strong>물을 구하지 못해 큰 어려움을 겪습니다</strong>(왕하 3:9). 그러자 <strong>남유다의 왕 여호사밧이 엘리사 선지자를 통해 도움을 구하자고 제안합니다.</strong> 엘리사가 이들의 만남을 수락한 것은 <strong>남유다의 왕 여호사밧 때문</strong>입니다.
+            <br><br>
+            엘리사는 세 명의 왕에게 물을 얻을 비결을 알려주고 <strong>모압과의 전쟁에서 승리하게 될 것을 예언합니다</strong>(왕하 3:16~19).
+            <br><br>
+            > <strong>하나님의 말씀까지 들은 북이스라엘과 남유다와 에돔 연합군은 용기백배하여 전쟁에 임했고 마침내 큰 승리를 거둡니다.</strong> (왕하 3:24)
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 엘리사의 기적은 당시 하나님의 선지자로 헌신한다는 것이 얼마나 힘든 역경의 길인지 보여줍니다.</span>
+            열왕기하에는 엘리사 선지자가 기적을 일으킨 기록이 상당히 많습니다(왕하 4장).
+            <br><br>
+            > <strong>첫째,</strong> 엘리사가 <strong>빈 그릇에 기름을 채운 기적</strong>입니다. 과부가 된 선지자 제자의 아내가 아들들이 종으로 팔릴 위기에 처했을 때 엘리사가 이를 해결해 준 기적입니다.<br>
+            > <strong>둘째,</strong> 엘리사를 공궤한 <strong>수넴 여인이 아들을 얻은 기적</strong>입니다.<br>
+            > <strong>셋째,</strong> 수넴 여인의 <strong>아들이 살아난 기적</strong>입니다.<br>
+            > <strong>넷째,</strong> <strong>독이 든 국이 해독된 기적</strong>입니다.<br>
+            > <strong>다섯째,</strong> 보리떡 20개와 채소 조금으로 <strong>100명이 먹은 기적</strong>입니다.
+            <br><br>
+            선지자들과 제자들이 들에서 나는 풀을 따다가 국으로 끓여 끼니를 때워야 할 정도로 <strong>가난함을 보여주는 시대에 일어난 기적들</strong>입니다.
+            <br><br>
+            > <strong>이런 시대 배경에 대한 이해 없이 기적의 능력만을 구한다면 그것은 성경의 숲도, 하나님의 마음도 헤아리지 못하는 것입니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 아람의 나아만 장군은 엘리사와 종들의 도움으로 하나님의 기적을 체험하게 됩니다.</span>
+            아람의 군대 장관이자 큰 용사였던 나아만이 <strong>북이스라엘에서 전쟁 포로로 잡혀온 어린 소녀를 통해 그의 나병을 고칠 수 있는 길을 찾게 되어 북이스라엘로 가고자 합니다.</strong> 엘리사 선지자는 자신을 찾아온 나아만을 직접 만나지 않고 <strong>신하를 통해 병을 고칠 수 있는 처방만을 알려줍니다.</strong>
+            <br><br>
+            어떤 주술적 행위를 기대했던 나아만은 <strong>엘리사의 처방을 성의 없는 것으로 여겨 분노하고 돌아가려 합니다.</strong> 이때 <strong>나아만을 향한 종들의 지혜로운 조언 덕분에 나아만은 엘리사의 처방을 따릅니다.</strong>
+            <br><br>
+            > <strong>나아만이 엘리사의 처방대로 요단강에 일곱 번 몸을 씻자 나병이 치유되는 기적이 일어납니다.</strong> 하나님의 은혜를 체험한 나아만은 <strong>하나님을 찬양하며 자신이 림몬을 숭배한 것까지 용서를 구합니다.</strong> (왕하 5:15~19)
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 롯의 아내, 아간, 게하시는 시대의 숲을 보지 못했습니다.</span>
+            병 고침을 받고 돌아가는 나아만을 뒤따라가 <strong>거짓말을 하며 대가를 요구했던 게하시에게 엘리사 선지자가 탄식합니다.</strong>
+            <br><br>
+            > <strong>"지금이 어찌 은을 받으며, 옷을 받으며... 남종이나 여종을 받을 때냐"</strong> (왕하 5:26)
+            <br><br>
+            '지금'은 한마디로 돈과 옷이 아니라 하나님께 집중할 때라는 것입니다. 성경에는 <strong>게하시를 비롯해 탐욕으로 망한 사람들의 사례</strong>가 기록되어 있습니다.
+            <br><br>
+            > 소금 기둥이 된 롯의 아내 / 아이성 전투의 실패를 제공한 아간 / 전리품과 아말렉 왕 아각을 살려준 사울 왕 / 탐욕으로 예수님을 팔아버린 가뤗 유다 / 성령을 속인 아나니아와 삽비라
+            <br><br>
+            > <strong>인간의 탐욕의 끝은 야고보서의 말씀대로 죄가 장성한 즉 사망을 낳습니다.</strong> (약 1:14~15)
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 열왕기하 3~5장 '엘리사의 기적들의 의미'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <!-- STREAMING_CHUNK:Loading scripture -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">열왕기하 3장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 유다의 여호사밧 왕 열여덟째 해에 아합의 아들 여호람이 사마리아에서 이스라엘을 열두 해 동안 다스리니라</div>
+        <div class="verse"><span class="verse-num">2</span> 그가 여호와 보시기에 악을 행하였으나 그의 부모와 같이 하지는 아니하였으니 이는 그가 그의 아버지가 만든 바알의 주상을 없이하였음이라</div>
+        <div class="verse"><span class="verse-num">3</span> 그러나 그가 느밧의 아들 여로보암이 이스라엘에게 범하게 한 그 죄를 따라 행하고 떠나지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">4</span> 모압 왕 메사는 양을 치는 자라 새끼 양 십만 마리의 털과 숫양 십만 마리의 털을 이스라엘 왕에게 바치더니</div>
+        <div class="verse"><span class="verse-num">5</span> 아합이 죽은 후에 모압 왕이 이스라엘 왕을 배반한지라</div>
+        <div class="verse"><span class="verse-num">6</span> 그 때에 여호람 왕이 사마리아에서 나가 온 이스라엘을 둘러보고</div>
+        <div class="verse"><span class="verse-num">7</span> 또 가서 유다의 왕 여호사밧에게 사신을 보내 이르되 모압 왕이 나를 배반하였으니 당신은 나와 함께 가서 모압을 치시겠느냐 하니 그가 이르되 내가 올라가리이다 나는 당신과 같고 내 백성은 당신의 백성과 같고 내 말들도 당신의 말들과 같으니이다 하는지라</div>
+        <div class="verse"><span class="verse-num">8</span> 여호람이 이르되 우리가 어느 길로 올라가리이까 하니 그가 대답하되 에돔 광야 길로니이다 하니라</div>
+        <div class="verse"><span class="verse-num">9</span> 이스라엘 왕과 유다 왕과 에돔 왕이 가더니 길을 둘러 간 지 칠 일에 군사와 따라가는 가축을 먹일 물이 없는지라</div>
+        <div class="verse"><span class="verse-num">10</span> 이스라엘 왕이 이르되 슬프다 여호와께서 이 세 왕을 불러 모아 모압의 손에 넘기려 하시는도다 하니</div>
+        <div class="verse"><span class="verse-num">11</span> 여호사밧이 이르되 우리가 여호와께 물을 만한 여호와의 선지자가 여기 없느냐 하는지라 이스라엘 왕의 신하들 중의 한 사람이 대답하여 이르되 전에 엘리야의 손에 물을 붓던 사밧의 아들 엘리사가 여기 있나이다 하니</div>
+        <div class="verse"><span class="verse-num">12</span> 여호사밧이 이르되 여호와의 말씀이 그에게 있도다 하는지라 이에 이스라엘 왕과 여호사밧과 에돔 왕이 그에게로 내려가니라</div>
+        <div class="verse"><span class="verse-num">13</span> 엘리사가 이스라엘 왕에게 이르되 내가 당신과 무슨 상관이 있나이까 당신의 부친의 선지자들과 당신의 모친의 선지자들에게로 가소서 하니 이스라엘 왕이 그에게 이르되 그렇지 아니하니이다 여호와께서 이 세 왕을 불러 모아 모압의 손에 넘기려 하시나이다 하니라</div>
+        <div class="verse"><span class="verse-num">14</span> 엘리사가 이르되 내가 섬기는 만군의 여호와께서 살아 계심을 두고 맹세하노니 내가 만일 유다의 왕 여호사밧의 얼굴을 봄이 아니면 그 앞에서 당신을 향하지도 아니하고 보지도 아니하였으리이다</div>
+        <div class="verse"><span class="verse-num">15</span> 이제 내게로 거문고 탈 자를 불러오소서 하니라 거문고 타는 자가 거문고를 탈 때에 여호와의 손이 엘리사 위에 있더니</div>
+        <div class="verse"><span class="verse-num">16</span> 그가 이르되 여호와의 말씀이 이 골짜기에 개천을 많이 파라 하셨나이다</div>
+        <div class="verse"><span class="verse-num">17</span> 여호와께서 이르시기를 너희가 바람도 보지 못하고 비도 보지 못하되 이 골짜기에 물이 가득하여 너희와 너희 가축과 짐승이 마시리라 하셨나이다</div>
+        <div class="verse"><span class="verse-num">18</span> 이것은 여호와께서 보시기에 작은 일이라 여호와께서 모압 사람도 당신의 손에 넘기시리니</div>
+        <div class="verse"><span class="verse-num">19</span> 당신들이 모든 견고한 성읍과 모든 아름다운 성읍을 치고 모든 좋은 나무를 베고 모든 샘을 메우고 돌로 모든 좋은 밭을 헐리이다 하더니</div>
+        <div class="verse"><span class="verse-num">20</span> 아침이 되어 소제 드릴 때에 물이 에돔 쪽에서부터 흘러와 그 땅에 가득하였더라</div>
+        <div class="verse"><span class="verse-num">21</span> 모압의 모든 사람은 왕들이 올라와서 자기를 치려 한다 함을 듣고 갑옷 입을 만한 자로부터 그 이상이 다 모여 그 경계에 서 있더라</div>
+        <div class="verse"><span class="verse-num">22</span> 아침에 모압 사람이 일찍이 일어나서 해가 물에 비치므로 맞은편 물이 붉어 피와 같음을 보고</div>
+        <div class="verse"><span class="verse-num">23</span> 이르되 이는 피라 틀림없이 저 왕들이 싸워 서로 죽인 것이로다 모압 사람들아 이제 노략하러 가자 하고</div>
+        <div class="verse"><span class="verse-num">24</span> 이스라엘 진에 이르니 이스라엘 사람이 일어나 모압 사람을 쳐서 그들 앞에서 도망하게 하고 그 지경에 들어가며 모압 사람을 치고</div>
+        <div class="verse"><span class="verse-num">25</span> 그 성읍들을 쳐서 헐고 각기 돌을 던져 모든 좋은 밭에 가득하게 하고 모든 샘을 메우고 모든 좋은 나무를 베고 길하레셋의 돌들은 남기고 물매꾼이 두루 다니며 치니라</div>
+        <div class="verse"><span class="verse-num">26</span> 모압 왕이 전세가 극렬하여 당하기 어려움을 보고 칼찬 군사 칠백 명을 거느리고 돌파하여 지나서 에돔 왕에게로 가고자 하되 가지 못하고</div>
+        <div class="verse"><span class="verse-num">27</span> 이에 자기 왕위를 이어 왕이 될 맏아들을 데려와 성 위에서 번제를 드린지라 이스라엘에게 크게 격노함이 임하매 그들이 떠나 각기 고국으로 돌아갔더라</div>
+
+        <div class="chapter-title">열왕기하 4장 (1~44절)</div>
+        <div class="verse"><span class="verse-num">1</span> 선지자의 제자들의 아내 중의 한 여인이 엘리사에게 부르짖어 이르되 당신의 종 나의 남편이 이미 죽었는데 당신의 종이 여호와를 경외한 줄은 당신이 아시는 바니이다 이제 빚 준 사람이 와서 나의 두 아이를 데려가 그의 종을 삼고자 하나이다 하니</div>
+        <div class="verse"><span class="verse-num">2</span> 엘리사가 그에게 이르되 내가 너를 위하여 어떻게 하랴 네 집에 무엇이 있는지 내게 말하라 그가 이르되 계집종의 집에 기름 한 그릇 외에는 아무것도 없나이다 하니</div>
+        <div class="verse"><span class="verse-num">3</span> 이르되 너는 밖에 나가서 모든 이웃에게 그릇을 빌리라 빈 그릇을 빌리되 조금 빌리지 말고</div>
+        <div class="verse"><span class="verse-num">4</span> 너는 네 두 아들과 함께 들어가서 문을 닫고 그 모든 그릇에 기름을 부어서 차는 대로 옮겨 놓으라 하니라</div>
+        <div class="verse"><span class="verse-num">5</span> 여인이 물러가서 그의 두 아들과 함께 문을 닫은 후에 그들은 그릇을 그에게로 가져오고 그는 부었더니</div>
+        <div class="verse"><span class="verse-num">6</span> 그릇에 다 찬지라 여인이 아들에게 이르되 또 그릇을 내게로 가져오라 하니 아들이 이르되 다른 그릇이 없나이다 하니 기름이 곧 그쳤더라</div>
+        <div class="verse"><span class="verse-num">7</span> 그 여인이 하나님의 사람에게 나아가서 말하니 그가 이르되 너는 가서 기름을 팔아 빚을 갚고 남은 것으로 너와 네 두 아들이 생활하라 하였더라</div>
+        <div class="verse"><span class="verse-num">8</span> 하루는 엘리사가 수넴에 이르렀더니 거기에 한 귀한 여인이 그를 간권하여 음식을 먹게 하였으므로 엘리사가 그 곳을 지날 때마다 음식을 먹으러 그리로 들어갔더라</div>
+        <div class="verse"><span class="verse-num">9</span> 여인이 그의 남편에게 이르되 항상 우리를 지나가는 이 사람은 하나님의 거룩한 사람인 줄을 내가 아노니</div>
+        <div class="verse"><span class="verse-num">10</span> 청하건대 우리가 그를 위하여 작은 방을 담 위에 만들고 침상과 책상과 의자와 촛대를 두사이다 그가 우리에게 이르면 거기에 머물리이다 하였더라</div>
+        <div class="verse"><span class="verse-num">11</span> 하루는 엘리사가 거기에 이르러 그 방에 들어가 누웠더니</div>
+        <div class="verse"><span class="verse-num">12</span> 자기 사환 게하시에게 이르되 이 수넴 여인을 불러오라 하니 곧 여인을 부르매 여인이 그 앞에 선지라</div>
+        <div class="verse"><span class="verse-num">13</span> 엘리사가 자기 사환에게 이르되 너는 그에게 이르라 네가 이같이 우리를 위하여 세심한 배려를 하는도다 내가 너를 위하여 무엇을 하랴 왕에게나 사령관에게 무슨 구할 것이 있느냐 하니 여인이 이르되 나는 내 백성 중에 거주하나이다 하니라</div>
+        <div class="verse"><span class="verse-num">14</span> 엘리사가 이르되 그러면 그를 위하여 무엇을 하여야 할까 하니 게하시가 대답하되 참으로 이 여인은 아들이 없고 그 남편은 늙었나이다 하니</div>
+        <div class="verse"><span class="verse-num">15</span> 이르되 다시 부르라 하여 부르매 여인이 문에 서니라</div>
+        <div class="verse"><span class="verse-num">16</span> 엘리사가 이르되 한 해가 지나 이 때쯤에 네가 아들을 안으리라 하니 여인이 이르되 아니로소이다 내 주 하나님의 사람이여 당신의 계집종을 속이지 마옵소서 하니라</div>
+        <div class="verse"><span class="verse-num">17</span> 여인이 과연 잉태하여 한 해가 지나 이 때쯤에 엘리사가 여인에게 말한 대로 아들을 낳았더라</div>
+        <div class="verse"><span class="verse-num">18</span> 그 아이가 자라매 하루는 추수꾼들에게 나가서 그의 아버지에게 이르렀더니</div>
+        <div class="verse"><span class="verse-num">19</span> 그의 아버지에게 이르되 내 머리야 내 머리야 하는지라 그의 아버지가 사환에게 말하여 그의 어머니에게로 데려가라 하매</div>
+        <div class="verse"><span class="verse-num">20</span> 곧 어머니에게로 데려갔더니 낮까지 어머니의 무릎에 앉아 있다가 죽은지라</div>
+        <div class="verse"><span class="verse-num">21</span> 그의 어머니가 올라가서 아들을 하나님의 사람의 침상 위에 두고 문을 닫고 나와</div>
+        <div class="verse"><span class="verse-num">22</span> 그 남편을 불러 이르되 청하건대 사환 한 명과 나귀 한 마리를 내게로 보내소서 내가 하나님의 사람에게 달려갔다가 돌아오리이다 하니</div>
+        <div class="verse"><span class="verse-num">23</span> 그 남편이 이르되 초하루도 아니요 안식일도 아니거늘 그대가 오늘 어찌하여 그에게 나아가고자 하느냐 하는지라 여인이 이르되 평안을 비나이다 하니라</div>
+        <div class="verse"><span class="verse-num">24</span> 이에 나귀에 안장을 지우고 자기 사환에게 이르되 몰고 가라 내가 말하지 아니하거든 나를 위하여 달려가기를 멈추지 말라 하고</div>
+        <div class="verse"><span class="verse-num">25</span> 드디어 갈멜 산으로 가서 하나님의 사람에게로 나아가니라 하나님의 사람이 멀리서 그를 보고 자기 사환 게하시에게 이르되 저기 수넴 여인이 있도다</div>
+        <div class="verse"><span class="verse-num">26</span> 너는 달려가서 그를 맞아 이르기를 너는 평안하냐 네 남편이 평안하냐 아이가 평안하냐 하라 하였더니 여인이 대답하되 평안하다 하고</div>
+        <div class="verse"><span class="verse-num">27</span> 산에 이르러 하나님의 사람에게 나아가서 그 발을 안은지라 게하시가 가까이 와서 그를 물리치고자 하매 하나님의 사람이 이르되 가만 두라 그의 영혼이 괴로워하지마는 여호와께서 내게 숨기시고 이르지 아니하셨도다 하니라</div>
+        <div class="verse"><span class="verse-num">28</span> 여인이 이르되 내가 내 주께 아들을 구하더이까 나를 속이지 말라고 내가 말하지 아니하더이까 하니</div>
+        <div class="verse"><span class="verse-num">29</span> 엘리사가 게하시에게 이르되 네 허리를 묶고 내 지팡이를 손에 들고 가라 사람을 만나거든 인사하지 말며 사람이 네게 인사할지라도 대답하지 말고 내 지팡이를 그 아이 얼굴에 놓으라 하는지라</div>
+        <div class="verse"><span class="verse-num">30</span> 아이의 어머니가 이르되 여호와께서 살아 계심과 당신의 영혼이 살아 계심을 두고 맹세하노니 내가 당신을 떠나지 아니하리이다 엘리사가 이에 일어나 여인을 따라가니라</div>
+        <div class="verse"><span class="verse-num">31</span> 게하시가 그들보다 앞서 가서 지팡이를 그 아이의 얼굴에 놓았으나 소리도 없고 듣지도 아니하는지라 돌아와서 엘리사를 맞아 그에게 말하여 아이가 깨지 아니하였나이다 하니라</div>
+        <div class="verse"><span class="verse-num">32</span> 엘리사가 집에 들어가 보니 아이가 죽었는데 자기의 침상에 눕혔는지라</div>
+        <div class="verse"><span class="verse-num">33</span> 들어가서는 문을 닫으니 두 사람 뿐이라 엘리사가 여호와께 기도하고</div>
+        <div class="verse"><span class="verse-num">34</span> 아이 위에 올라 엎드려 자기 입을 그의 입에, 자기 눈을 그의 눈에, 자기 손을 그의 손에 대고 그의 몸에 엎드리니 아이의 살이 차차 따뜻하더라</div>
+        <div class="verse"><span class="verse-num">35</span> 엘리사가 내려서 집 안에서 한 번 이리 저리 다니고 다시 아이 위에 올라 엎드리니 아이가 일곱 번 재채기 하고 눈을 뜨는지라</div>
+        <div class="verse"><span class="verse-num">36</span> 엘리사가 게하시를 불러 저 수넴 여인을 불러오라 하니 곧 부르매 여인이 들어가니 엘리사가 이르되 네 아들을 데리고 가라 하니라</div>
+        <div class="verse"><span class="verse-num">37</span> 여인이 들어가서 엘리사의 발 앞에서 땅에 엎드려 절하고 아들을 안고 나가니라</div>
+        <div class="verse"><span class="verse-num">38</span> 엘리사가 다시 길갈에 이르니 그 땅에 흉년이 들었는데 선지자의 제자들이 엘리사의 앞에 앉은지라 엘리사가 자기 사환에게 이르되 큰 솥을 걸고 선지자의 제자들을 위하여 국을 끓이라 하매</div>
+        <div class="verse"><span class="verse-num">39</span> 한 사람이 채소를 캐러 들에 나가 들포도덩굴을 만나 그것에서 들호박을 따서 옷자락에 채워가지고 돌아와 썰어 국 끓이는 솥에 넣되 그들은 무엇인지 알지 못한지라</div>
+        <div class="verse"><span class="verse-num">40</span> 이에 퍼다가 무리에게 주어 먹게 하였더니 무리가 국을 먹다가 그들이 외쳐 이르되 하나님의 사람이여 솥에 죽음의 독이 있나이다 하고 능히 먹지 못하는지라</div>
+        <div class="verse"><span class="verse-num">41</span> 엘리사가 이르되 그러면 가루를 가져오라 하여 솥에 던지고 이르되 퍼다가 무리에게 주어 먹게 하라 하매 이에 솥 가운데 독이 없어지니라</div>
+        <div class="verse"><span class="verse-num">42</span> 한 사람이 바알 살리사에서부터 와서 처음 만든 떡 곧 보리떡 이십 개와 또 자루에 담은 채소를 하나님의 사람에게 드린지라 그가 이르되 무리에게 주어 먹게 하라</div>
+        <div class="verse"><span class="verse-num">43</span> 그 사환이 이르되 내가 어찌 이것을 백 명에게 주겠나이까 하나 엘리사는 또 이르되 무리에게 주어 먹게 하라 여호와의 말씀이 그들이 먹고 남으리라 하셨느니라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">44</span> 그가 그들 앞에 주었더니 여호와께서 말씀하신 대로 먹고 남았더라
+
+        열왕기하 5장(1~27절)
+        1 아람 왕의 군대 장관 나아만은 그의 주인 앞에서 크고 존귀한 자니 이는 여호와께서 전에 그에게 아람을 구원하게 하셨음이라 그는 큰 용사이나 나병환자더라
+        2 전에 아람 사람이 떼를 지어 나가서 이스라엘 땅에서 어린 소녀 하나를 사로잡으매 그가 나아만의 아내에게 수종들더니
+        3 그의 여주인에게 이르되 우리 주인이 사마리아에 계신 선지자 앞에 계셨으면 좋겠나이다 그가 그 나병을 고치리이다 하는지라
+        4 나아만이 들어가서 그의 주인께 아뢰어 이르되 이스라엘 땅에서 온 소녀의 말이 이러이러하더이다 하니
+        5 아람 왕이 이르되 갈지어다 이제 내가 이스라엘 왕에게 글을 보내리라 하더라 나아만이 곧 떠날새 은 십 달란트와 금 육천 개와 의복 열 벌을 가지고 가서
+        6 이스라엘 왕에게 그 글을 전하니 일렀으되 내가 내 신하 나아만을 당신에게 보내오니 이 글이 당신에게 이르거든 당신은 그의 나병을 고쳐 주소서 하였더라
+        7 이스라엘 왕이 그 글을 읽고 자기 옷을 찢으며 이르되 내가 사람을 죽이고 살리는 하나님이냐 그가 어찌하여 사람을 내게로 보내 그의 나병을 고치라 하느냐 너희는 깊이 생각하고 저 왕이 틈을 타서 나와 더불어 시비하려 함인줄 알라 하니라
+        8 하나님의 사람 엘리사가 이스라엘 왕이 자기의 옷을 찢었다 함을 듣고 왕에게 보내 이르되 왕이 어찌하여 옷을 찢었나이까 그 사람을 내게로 오게 하소서 그가 이스라엘 중에 선지자가 있는 줄을 알리이다 하니라
+        9 나아만이 이에 말들과 병거들을 거느리고 이르러 엘리사의 집 문에 서니
+        10 엘리사가 사자를 그에게 보내 이르되 너는 가서 요단 강에 몸을 일곱 번 씻으라 네 살이 회복되어 깨끗하리라 하는지라
+        11 나아만이 노하여 물러가며 이르되 내 생각에는 그가 내게로 나와 서서 그의 하나님 여호와의 이름을 부르고 그의 손을 그 부위 위에 흔들어 나병을 고칠까 하였도다
+        12 다메섹 강 아바나와 바르발은 이스라엘 모든 강물보다 낫지 아니하냐 내가 거기서 몸을 씻으면 깨끗하게 되지 아니하랴 하고 몸을 돌려 분노하여 떠나니
+        13 그의 종들이 나아와서 말하여 이르되 내 아버지여 선지자가 당신에게 큰 일을 행하라 말하였더면 행하지 아니하였으리이까 하물며 당신에게 이르기를 씻어 깨끗하게 하라 함이리이까 하니
+        14 나아만이 이에 내려가서 하나님의 사람의 말대로 요단 강에 일곱 번 몸을 잠그니 그의 살이 어린 아이의 살 같이 회복되어 깨끗하게 되었더라
+        15 나아만이 모든 군대와 함께 하나님의 사람에게로 도로 와서 그의 앞에 서서 이르되 내가 이제 이스라엘 외에는 온 천하에 신이 없는 줄을 아나이다 청하건대 당신의 종에게서 예물을 받으소서 하니
+        16 이르되 내가 섬기는 여호와께서 살아 계심을 두고 맹세하노니 내가 그 앞에서 받지 아니하리라 하였더라 나아만이 받으라고 강권하되 그가 거절하니라
+        17 나아만이 이르되 그러면 청하건대 노새 두 마리에 실을 흙을 당신의 종에게 주소서 이제부터는 종이 번제물과 다른 희생제사를 여호와 외 다른 신에게는 드리지 아니하고 다만 여호와께 드리겠나이다
+        18 오직 한 가지 일이 있사오니 여호와께서 당신의 종을 용서하시기를 원하나이다 곧 내 주인께서 림몬의 신당에 들어가 거기서 경배하며 그가 내 손을 의지하시매 내가 림몬의 신당에서 몸을 굽히오니 내가 림몬의 신당에서 몸을 굽힐 때에 여호와께서 이 일에 대하여 당신의 종을 용서하시기를 원하나이다 하니
+        19 엘리사가 이르되 너는 평안히 가라 하니라 그가 엘리사를 떠나 조금 가니라
+        20 하나님의 사람 엘리사의 사환 게하시가 스스로 이르되 내 주인이 이 아람 사람 나아만에게 면하여 주고 그가 가지고 온 것을 그의 손에서 받지 아니하였도다 여호와께서 살아 계심을 두고 맹세하노니 내가 그를 쫓아가서 무엇이든지 그에게서 받으리라 하고
+        21 나아만의 뒤를 쫓아가니 나아만이 자기 뒤에 달려옴을 보고 수레에서 내려 맞이하여 이르되 평안이냐 하니
+        22 그가 이르되 평안하나이다 우리 주인께서 나를 보내시며 말씀하시기를 지금 선지자의 제자 중에 두 청년이 에브라임 산지에서부터 내게로 왔으니 청하건대 당신은 그들에게 은 한 달란트와 옷 두 벌을 주라 하시더이다 하니
+        23 나아만이 이르되 바라건대 두 달란트를 받으라 하고 그를 강권하여 은 두 달란트를 두 전대에 넣어 매고 옷 두 벌을 아울러 두 사환에게 지우매 그들이 게하시 앞에서 지고 가니라
+        24 언덕에 이르러서는 게하시가 그 물건을 두 사환의 손에서 받아 집에 감추고 그들을 보내 가게 한 후
+        25 들어가 그의 주인 앞에 서니 엘리사가 이르되 게하시야 네가 어디서 오느냐 하니 대답하되 당신의 종이 아무데도 가지 아니하였나이다 하니라
+        26 엘리사가 이르되 한 사람이 수레에서 내려 너를 맞이할 때에 내 마음이 함께 가지 아니하였느냐 지금이 어찌 은을 받으며 옷을 받으며 감람원이나 포도원이나 양이나 소나 남종이나 여종을 받을 때이냐
+        27 그러므로 나아만의 나병이 네게 들어 네 자손에게 미쳐 영원토록 이르리라 하니 게하시가 그 앞에서 물러나오매 나병이 발하여 눈같이 되었더라
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

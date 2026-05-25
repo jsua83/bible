@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 162</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 162</h1>
+        <p class="sub-title">찬송가 585장 내 주는 강한 성이요</p>
+        <p class="sub-title">열왕기상 18~19장 — 갈멜산 대결의 결말</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 585장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1bZaINMTeOmBtawrVxDPVfm6OPOF8Eepl" alt="찬송가 585장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 열왕기상 18~19장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 북이스라엘은 3년 동안 가뭄이 계속되자 엘리야와 아합이 논쟁을 벌입니다.</span>
+            북이스라엘에 3년째 가뭄이 계속되자 아합 왕이 신하 오바댜와 함께 물의 근원지를 찾아 나섭니다. **왕궁의 책임을 맡은 아합의 신하 오바댜는 어려서부터 하나님을 경외하는 자**(왕상 18:12)로 몰래 선지자들 100명을 공궤하고 있었습니다.
+            <br><br>
+            오바댜의 도움으로 **엘리야는 아합을 만나게 되고 만나자마자 논쟁을 벌입니다**(왕상 18:17~18). 3년째 계속되는 가뭄의 원인이 서로에게 있다는 것입니다.
+            <br><br>
+            > **아합의 주장** — 가뭄의 원인이 엘리야 때문이라는 것입니다.<br>
+            > **엘리야의 주장** — 가뭄의 원인이 아합과 아합의 아버지 오므리의 죄 때문이라는 것입니다.<br><br>
+            > **엘리야와 아합의 논쟁은 엘리야의 계획대로 갈멜산 대결로 이어지게 됩니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 엘리야는 아론의 첫 제사 방식으로 갈멜산 대결을 제안합니다.</span>
+            갈멜산 대결은 **엘리야가 제안하는 대결 방식으로 진행이 됩니다**(왕상 18:22~24). 엘리야가 제안한 대결 방식은 **양측이 각각 송아지 한 마리를 잡아 나무 위에 놓고 불이 붙기를 기다리는 것**입니다. 이때 **제단에 불로 응답한 신이 참 신이라는 것**입니다.
+            <br><br>
+            > **갈멜산 사건은 죄악의 길에서 조금도 벗어나지 못하는 이스라엘을 위해 하나님께서 직접 보여주신 '눈높이 기적'입니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 이세벨은 공개적으로 엘리야에게 자객을 보냅니다.</span>
+            갈멜산 대결의 결말을 알게 된 이세벨은 **자신이 세운 바알 선지자들 450명이 죽은 것에 대해 복수하기 위해 하루 만에 엘리야를 죽이겠다고 공개적으로 선포한 후 자객을 보냅니다**(왕상 19:2). 전혀 뜻밖의 소식을 들은 엘리야는 사마리아로 향하던 발걸음을 급하게 돌려 **광야로 도망갑니다.**
+            <br><br>
+            엘리야는 살기 위해 사력을 다해 도망하다가 자기의 사환은 브엘세바에 피신시키고 **자신은 광야의 한 로뎀 나무 아래에서 하나님 앞에 죽기를 간청합니다.** 엘리야가 이렇게까지 힘들어하는 이유는 **갈멜산에서의 기적을 보고도 이세벨이 눈 하나 꿈쩍하지 않았기 때문**입니다.
+            <br><br>
+            > **하나님께서는 엘리야에게 천사를 보내 다시 힘을 낼 수 있도록 하십니다.** (왕상 19:5~7)
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 모세는 애굽 왕 바로를 피해, 엘리야는 이세벨의 자객을 피해 광야로 도망했습니다.</span>
+            하나님께서는 엘리야가 쓰러져 누워버린 로뎀 나무에서 다시 **호렙산까지 광야 40일을 도망하게 하셔서 이세벨의 자객으로부터 엘리야의 생명을 건져주십니다.** 그리고 **호렙산에서 친히 엘리야를 만나주십니다**(왕상 19:11~13).
+            <br><br>
+            하나님께서 하나님의 사람들을 만나주셨던 성경의 기록들입니다.
+            <br>
+            > **첫째,** 떨기나무에서 **모세를 만나주셨습니다** (출 3:2).<br>
+            > **둘째,** 시내산에서 **이스라엘 백성들을 만나주셨습니다** (출 19:18~19).<br>
+            > **셋째,** 시내산에서 **모세를 만나주셨습니다** (출 33:21~23).<br>
+            > **넷째,** 예수님이 세례 받으실 때 **하늘로부터 음성을 들려주셨습니다** (마 3:16~17).<br>
+            > **다섯째,** 변화산에서 **하늘로부터 음성을 들려주셨습니다** (마 17:5~6).<br>
+            > **여섯째,** 밧모섬에서 **사도 요한을 만나주셨습니다** (계 1:17).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 엘리야는 호렙산에서 엘리사와 7,000명에게 전달한 제사장 나라 사명을 부여받습니다.</span>
+            엘리야는 호렙산에서도 **"자기 혼자만 남았다"고 애타는 심정으로 하나님께 외칩니다.** 그러나 하나님께서는 **하나님의 사람들 7,000명이 남아 있으며 엘리야의 뒤를 이어 더 열심히 사역할 엘리사가 있음**도 말씀하십니다.
+            <br><br>
+            > **하나님께서는 이스라엘을 제사장 나라로 이끌어가시겠다는 계획에서 조금도 물러섬이 없으십니다.** 하나님께서 **하사엘, 예후, 그리고 엘리사를 통한 새로운 시대를 계획하십니다**(왕상 19:15~18).
+            <br><br>
+            엘리야의 사명이 엘리사에게 이어지는 장면에서 이렇게 기록합니다.
+            <br>
+            > **"겉옷을 그의 위에 던졌더니"** (왕상 19:19) — 선지자의 겉옷을 던지는 것은 후계자 지명을 알리는 것입니다.
+            <br><br>
+            > **이렇게 엘리야의 사명은 하나님의 뜻에 따라 엘리사에게로 이어집니다.**
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 열왕기상 18~19장 '갈멜산 대결의 결말'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <div class="chapter-title">열왕기상 18장 (1~46절)</div>
+        <div class="verse"><span class="verse-num">1</span> 많은 날이 지나고 제삼년에 여호와의 말씀이 엘리야에게 임하여 이르시되 너는 가서 아합에게 보이라 내가 비를 지면에 내리리라</div>
+        <div class="verse"><span class="verse-num">2</span> 엘리야가 아합에게 보이려고 가니 그 때에 사마리아에 기근이 심하였더라</div>
+        <div class="verse"><span class="verse-num">3</span> 아합이 왕궁 맡은 자 오바댜를 불렀으니 이 오바댜는 여호와를 지극히 경외하는 자라</div>
+        <div class="verse"><span class="verse-num">4</span> 이세벨이 여호와의 선지자들을 멸할 때에 오바댜가 선지자 백 명을 가지고 오십 명씩 굴에 숨기고 떡과 물을 먹였더라</div>
+        <div class="verse"><span class="verse-num">5</span> 아합이 오바댜에게 이르되 이 땅의 모든 물 근원과 모든 내로 가자 혹시 꼴을 얻으리라 그리하면 말과 노새를 살리리니 짐승을 다 잃지 않게 되리라 하고</div>
+        <div class="verse"><span class="verse-num">6</span> 두 사람이 두루 다닐 땅을 나누어 아합은 홀로 이 길로 가고 오바댜는 홀로 저 길로 가니라</div>
+        <div class="verse"><span class="verse-num">7</span> 오바댜가 길에 있을 때에 엘리야가 그를 만난지라 그가 알아보고 엎드려 말하되 내 주 엘리야여 당신이시니이까</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 그에게 대답하여 이르되 그러하다 가서 네 주에게 말하기를 엘리야가 여기 있다 하라</div>
+        <div class="verse"><span class="verse-num">9</span> 이르되 내가 무슨 죄를 범하였기에 당신이 당신의 종을 아합의 손에 넘겨 죽이게 하려 하시나이까</div>
+        <div class="verse"><span class="verse-num">10</span> 당신의 하나님 여호와께서 살아 계심을 두고 맹세하노니 내 주께서 사람을 보내어 당신을 찾지 아니한 족속이나 나라가 없었는데 그들이 말하기를 엘리야가 없다 하면 그 나라와 그 족속으로 당신을 보지 못하였다는 맹세를 하게 하였거늘</div>
+        <div class="verse"><span class="verse-num">11</span> 이제 당신의 말씀이 가서 네 주에게 말하기를 엘리야가 여기 있다 하라 하시나</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 당신을 떠나간 후에 여호와의 영이 내가 알지 못하는 곳으로 당신을 이끌어 가시리니 내가 가서 아합에게 말하였다가 그가 당신을 찾지 못하면 내가 죽임을 당하리이다 당신의 종은 어려서부터 여호와를 경외하는 자라</div>
+        <div class="verse"><span class="verse-num">13</span> 이세벨이 여호와의 선지자들을 죽일 때에 내가 여호와의 선지자 중에 백 명을 오십 명씩 굴에 숨기고 떡과 물로 먹인 일이 내 주에게 들리지 아니하였나이까</div>
+        <div class="verse"><span class="verse-num">14</span> 이제 당신의 말씀이 가서 네 주에게 말하기를 엘리야가 여기 있다 하라 하시니 그리하면 그가 나를 죽이리이다</div>
+        <div class="verse"><span class="verse-num">15</span> 엘리야가 이르되 내가 섬기는 만군의 여호와께서 살아 계심을 두고 맹세하노니 내가 오늘 아합에게 보이리라</div>
+        <div class="verse"><span class="verse-num">16</span> 오바댜가 가서 아합을 만나 그에게 말하매 아합이 엘리야를 만나러 가다가</div>
+        <div class="verse"><span class="verse-num">17</span> 엘리야를 볼 때에 아합이 그에게 이르되 이스라엘을 괴롭게 하는 자여 너냐</div>
+        <div class="verse"><span class="verse-num">18</span> 그가 대답하되 내가 이스라엘을 괴롭게 한 것이 아니라 당신과 당신의 아버지의 집이 괴롭게 하였으니 이는 여호와의 명령을 버렸고 당신이 바알들을 따랐음이라</div>
+        <div class="verse"><span class="verse-num">19</span> 그런즉 사람을 보내 온 이스라엘과 이세벨의 상에서 먹는 바알의 선지자 사백오십 명과 아세라의 선지자 사백 명을 갈멜 산으로 모아 내게로 나아오게 하소서</div>
+        <div class="verse"><span class="verse-num">20</span> 아합이 이에 이스라엘의 모든 자손에게로 사람을 보내 선지자들을 갈멜 산으로 모으니라</div>
+        <div class="verse"><span class="verse-num">21</span> 엘리야가 모든 백성에게 가까이 나아가 이르되 너희가 어느 때까지 둘 사이에서 머뭇머뭇 하려느냐 여호와가 만일 하나님이면 그를 따르고 바알이 만일 하나님이면 그를 따를지니라 하니 백성이 말 한마디도 대답하지 아니하는지라</div>
+        <div class="verse"><span class="verse-num">22</span> 엘리야가 백성에게 이르되 여호와의 선지자는 나만 홀로 남았으나 바알의 선지자는 사백오십 명이로다</div>
+        <div class="verse"><span class="verse-num">23</span> 그런즉 송아지 둘을 우리에게 가져오게 하고 그들은 송아지 한 마리를 택하여 각을 떠서 나무 위에 놓고 불은 붙이지 말며 나도 송아지 한 마리를 잡아 나무 위에 놓고 불은 붙이지 않고</div>
+        <div class="verse"><span class="verse-num">24</span> 너희는 너희 신의 이름을 부르라 나는 여호와의 이름을 부르리니 이에 불로 응답하는 신 그가 하나님이니라 백성이 다 대답하되 그 말이 옳도다 하니라</div>
+        <div class="verse"><span class="verse-num">25</span> 엘리야가 바알의 선지자들에게 이르되 너희는 많으니 먼저 송아지 한 마리를 택하여 잡고 너희 신의 이름을 부르라 그러나 불을 붙이지 말라</div>
+        <div class="verse"><span class="verse-num">26</span> 그들이 받은 송아지를 가져다가 잡고 아침부터 낮까지 바알의 이름을 불러 이르되 바알이여 우리에게 응답하소서 하나 아무 소리도 없고 아무 응답하는 자도 없으므로 그들이 그 쌓은 제단 주위에서 뛰놀더라</div>
+        <div class="verse"><span class="verse-num">27</span> 정오에 이르러는 엘리야가 그들을 조롱하여 이르되 큰 소리로 부르라 그는 신인즉 묵상하고 있는지 혹은 그가 잠깐 나갔는지 혹은 그가 길을 행하는지 혹은 그가 잠이 들어서 깨워야 할 것인지 하매</div>
+        <div class="verse"><span class="verse-num">28</span> 이에 그들이 큰 소리로 부르고 그들의 규례를 따라 피가 흐르기까지 칼과 창으로 그들의 몸을 상하게 하더라</div>
+        <div class="verse"><span class="verse-num">29</span> 이같이 하여 정오가 지났고 그들이 미친 듯이 떠들어 저녁 소제 드릴 때까지 이르렀으나 아무 소리도 없고 응답하는 자나 돌아보는 자가 아무도 없더라</div>
+        <div class="verse"><span class="verse-num">30</span> 엘리야가 모든 백성을 향하여 이르되 내게로 가까이 오라 백성이 다 그에게 가까이 가매 그가 무너진 여호와의 제단을 수축하되</div>
+        <div class="verse"><span class="verse-num">31</span> 야곱의 아들들의 지파의 수효를 따라 엘리야가 돌 열두 개를 취하니 이 야곱은 옛적에 여호와의 말씀이 임하여 이르시기를 네 이름을 이스라엘이라 하리라 하신 자더라</div>
+        <div class="verse"><span class="verse-num">32</span> 그가 여호와의 이름을 의지하여 그 돌로 제단을 쌓고 제단을 돌아가며 곡식 종자 두 스아를 둘 만한 도랑을 만들고</div>
+        <div class="verse"><span class="verse-num">33</span> 또 나무를 벌이고 송아지의 각을 떠서 나무 위에 놓고 이르되 통 넷에 물을 채워다가 번제물과 나무 위에 부으라 하고</div>
+        <div class="verse"><span class="verse-num">34</span> 또 이르되 다시 그리하라 하여 다시 그리하니 또 이르되 세 번째로 그리하라 하여 세 번째로 그리하니</div>
+        <div class="verse"><span class="verse-num">35</span> 물이 제단으로 두루 흐르고 도랑에도 물이 가득 찼더라</div>
+        <div class="verse"><span class="verse-num">36</span> 저녁 소제 드릴 때에 이르러 선지자 엘리야가 나아가서 말하되 아브라함과 이삭과 이스라엘의 하나님 여호와여 주께서 이스라엘 중에서 하나님이신 것과 내가 주의 종인 것과 내가 주의 말씀대로 이 모든 일을 행하는 것을 오늘 알게 하옵소서</div>
+        <div class="verse"><span class="verse-num">37</span> 여호와여 내게 응답하옵소서 내게 응답하옵소서 이 백성에게 주 여호와는 하나님이신 것과 주는 그들의 마음을 되돌이키심을 알게 하옵소서 하매</div>
+        <div class="verse"><span class="verse-num">38</span> 이에 여호와의 불이 내려서 번제물과 나무와 돌과 흙을 태우고 또 도랑의 물을 핥은지라</div>
+        <div class="verse"><span class="verse-num">39</span> 모든 백성이 보고 엎드려 말하되 여호와 그는 하나님이시로다 여호와 그는 하나님이시로다 하니</div>
+        <div class="verse"><span class="verse-num">40</span> 엘리야가 그들에게 이르되 바알의 선지자를 잡되 그들 중 하나도 도망하지 못하게 하라 하매 곧 잡은지라 엘리야가 그들을 기손 시내로 내려다가 거기서 죽이니라</div>
+        <div class="verse"><span class="verse-num">41</span> 엘리야가 아합에게 이르되 올라가서 먹고 마시소서 큰 비 소리가 있나이다</div>
+        <div class="verse"><span class="verse-num">42</span> 아합이 먹고 마시러 올라가니라 엘리야가 갈멜 산 꼭대기로 올라가서 땅에 꿇어 엎드려 그의 얼굴을 무릎 사이에 넣고</div>
+        <div class="verse"><span class="verse-num">43</span> 그의 사환에게 이르되 올라가 바다쪽을 바라보라 그가 올라가 바라보고 말하되 아무것도 없나이다 이르되 일곱 번까지 다시 가라</div>
+        <div class="verse"><span class="verse-num">44</span> 일곱 번째 이르러서는 그가 말하되 바다에서 사람의 손 만한 작은 구름이 일어나나이다 이르되 올라가 아합에게 말하기를 비에 막히지 아니하도록 마차를 갖추고 내려가소서 하라 하니라</div>
+        <div class="verse"><span class="verse-num">45</span> 조금 후에 구름과 바람이 일어나서 하늘이 캄캄해지며 큰 비가 내리는지라 아합이 마차를 타고 이스르엘로 가니</div>
+        <div class="verse"><span class="verse-num">46</span> 여호와의 능력이 엘리야에게 임하매 그가 허리를 동이고 이스르엘로 들어가는 곳까지 아합 앞에서 달려갔더라</div>
+
+        <!-- 열왕기상 19장 -->
+        <div class="chapter-title">열왕기상 19장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아합이 엘리야가 행한 모든 일과 그가 어떻게 모든 선지자를 칼로 죽였는지를 이세벨에게 말하니</div>
+        <div class="verse"><span class="verse-num">2</span> 이세벨이 사신을 엘리야에게 보내어 이르되 내가 내일 이맘때에는 반드시 네 생명을 저 사람들 중 한 사람의 생명과 같게 하리라 그렇게 하지 아니하면 신들이 내게 벌 위에 벌을 내림이 마땅하니라 한지라</div>
+        <div class="verse"><span class="verse-num">3</span> 그가 이 형편을 보고 일어나 자기의 생명을 위해 도망하여 유다에 속한 브엘세바에 이르러 자기의 사환을 그 곳에 머물게 하고</div>
+        <div class="verse"><span class="verse-num">4</span> 자기 자신은 광야로 들어가 하룻길쯤 가서 한 로뎀 나무 아래에 앉아서 자기가 죽기를 원하여 이르되 여호와여 넉넉하오니 지금 내 생명을 거두시옵소서 나는 내 조상들보다 낫지 못하니이다 하고</div>
+        <div class="verse"><span class="verse-num">5</span> 로뎀 나무 아래에 누워 자더니 천사가 그를 어루만지며 그에게 이르되 일어나서 먹으라 하는지라</div>
+        <div class="verse"><span class="verse-num">6</span> 본즉 머리맡에 숯불에 구운 떡과 한 병 물이 있더라 이에 먹고 마시고 다시 누웠더니</div>
+        <div class="verse"><span class="verse-num">7</span> 여호와의 천사가 또 다시 와서 어루만지며 이르되 일어나 먹으라 네가 갈 길을 다 가지 못할까 하노라 하는지라</div>
+        <div class="verse"><span class="verse-num">8</span> 이에 일어나 먹고 마시고 그 음식물의 힘을 의지하여 사십 주 사십 야를 가서 하나님의 산 호렙에 이르니라</div>
+        <div class="verse"><span class="verse-num">9</span> 엘리야가 그 곳 굴에 들어가 거기서 머물더니 여호와의 말씀이 그에게 임하여 이르시되 엘리야야 네가 어찌하여 여기 있느냐</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 대답하되 내가 만군의 하나님 여호와께 열심이 유별하오니 이는 이스라엘 자손이 주의 언약을 버리고 주의 제단을 헐며 칼로 주의 선지자들을 죽였음이오며 오직 나만 남았거늘 그들이 내 생명을 찾아 빼앗으려 하나이다</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와께서 이르시되 너는 나가서 여호와 앞에서 산에 서라 하시더니 여호와께서 지나가시는데 여호와 앞에 크고 강한 바람이 산을 가르고 바위를 부수나 바람 가운데에 여호와께서 계시지 아니하며 바람 후에 지진이 있으나 지진 가운데에도 여호와께서 계시지 아니하며</div>
+        <div class="verse"><span class="verse-num">12</span> 또 지진 후에 불이 있으나 불 가운데에도 여호와께서 계시지 아니하더니 불 후에 세미한 소리가 있는지라</div>
+        <div class="verse"><span class="verse-num">13</span> 엘리야가 듣고 겉옷으로 얼굴을 가리고 나가 굴 어귀에 서매 소리가 그에게 임하여 이르시되 엘리야야 네가 어찌하여 여기 있느냐</div>
+        <div class="verse"><span class="verse-num">14</span> 그가 대답하되 내가 만군의 하나님 여호와께 열심이 유별하오니 이는 이스라엘 자손이 주의 언약을 버리고 주의 제단을 헐며 칼로 주의 선지자들을 죽였음이오며 오직 나만 남았거늘 그들이 내 생명을 찾아 빼앗으려 하나이다</div>
+        <div class="verse"><span class="verse-num">15</span> 여호와께서 그에게 이르시되 너는 네 길을 돌이켜 광야를 통하여 다메섹에 가서 이르거든 하사엘에게 기름을 부어 아람의 왕이 되게 하고</div>
+        <div class="verse"><span class="verse-num">16</span> 너는 또 님시의 아들 예후에게 기름을 부어 이스라엘의 왕이 되게 하고 또 아벨므홀라 사밧의 아들 엘리사에게 기름을 부어 너를 대신하여 선지자가 되게 하라</div>
+        <div class="verse"><span class="verse-num">17</span> 하사엘의 칼을 피하는 자를 예후가 죽일 것이요 예후의 칼을 피하는 자를 엘리사가 죽이리라</div>
+        <div class="verse"><span class="verse-num">18</span> 그러나 내가 이스라엘 가운데에 칠천 명을 남기리니 다 바알에게 무릎을 꿇지 아니하고 다 바알에게 입맞추지 아니한 자니라</div>
+        <div class="verse"><span class="verse-num">19</span> 엘리야가 거기서 떠나 사밧의 아들 엘리사를 만나니 그가 열두 겨릿소를 앞세우고 밭을 가는데 자기는 열두째 겨릿소와 함께 있더라 엘리야가 그리로 건너가서 겉옷을 그의 위에 던졌더니</div>
+        <div class="verse"><span class="verse-num">20</span> 그가 소를 버리고 엘리야에게로 달려가서 이르되 청하건대 나를 내 부모와 입맞추게 하소서 그리한 후에 내가 당신을 따르리이다 엘리야가 그에게 이르되 돌아가라 내가 네게 어떻게 행하였느냐 하니라</div>
+        <div class="verse"><span class="verse-num">21</span> 엘리사가 그를 떠나 돌아가서 한 겨릿소를 가져다가 잡고 소의 기구를 불살라 그 고기를 삶아 백성에게 주어 먹게 하고 일어나 엘리야를 따르며 수종 들었더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 169</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 기본 설정 */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9;
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4;
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문) --- */
+        .confession-box {
+            background-color: #fef8ec;
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 --- */
+        .points-wrapper {
+            background-color: #f0fdf4;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 15px 20px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b;
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 1. 상단 타이틀 -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 169</h1>
+        <p class="sub-title">찬송가 499장 흑암에 사는 백성들을 보라</p>
+        <p class="sub-title">아모스 1~5장 — 아모스 선지자의 공의</p>
+    </div>
+
+    <!-- 2. 사도신경 -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- 3. 찬송가 이미지 -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 499장</div>
+        <!-- 구글 드라이브 우회 주소 적용 -->
+        <img src="https://lh3.googleusercontent.com/d/1NCKm3kryIVT_gUZSqoDVTMKQ_hqH8b5w" alt="찬송가 499장 악보" class="hymn-image">
+    </div>
+
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 아모스 1~5장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서는 북이스라엘을 제사장 나라로 고치시려고 엘리야, 엘리사에 이어 아모스 선지자를 보내십니다.</span>
+            하나님께서는 북이스라엘 오므리 왕조 때 <strong>엘리야와 엘리사 선지자를 보내셔서 북이스라엘이 죄에서 돌이켜 제사장 나라의 사명을 감당하기를 촉구하셨습니다.</strong> 그리고 북이스라엘이 가장 경제적으로 번성한 <strong>예후 왕조의 여로보암 2세 때에도 하나님의 선지자들을 보내심으로 죄에서 돌이킬 기회를 주십니다.</strong><br><br>
+            하나님께서는 먼저 <strong>아모스 선지자를 보내십니다.</strong> 아모스는 남유다의 성읍인 <strong>드고아의 목자이자 뽕나무를 재배하던 사람</strong>입니다. 하나님께서는 <strong>남유다 출신의 아모스를 북이스라엘까지 보내셔서 하나님의 말씀을 전하게 하십니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님께서는 '모든 민족'을 다스리시며 역사를 주관하시는 살아계신 하나님이십니다.</span>
+            아모스는 북이스라엘로 올라가서 <strong>"여호와께서 이와 같이 말씀하시되"</strong>(암 1:3)라고 입을 열기 시작해 <strong>아람, 블레셋, 두로, 에돔, 암몬, 모압, 그리고 남유다와 북이스라엘의 죄를 지적하며 각 나라들이 하나님의 심판을 받을 것이라고 경고합니다</strong>(암 1:3~2:16).
+            <div class="quote">
+                <strong>아모스가 언급한 이방 나라들에 대한 심판 선언은 하나님께서 이스라엘만의 하나님이 아니라 온 세상을 주관하고 심판하시는 창조주이심을 보여준 것입니다.</strong> 그리고 더 나아가 이스라엘이 의지할 곳은 하나님께 심판받을 이방 나라들이 아니라 <strong>오직 하나님이심을 가르쳐준 것</strong>입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 하나님께서는 아모스를 통해 북이스라엘의 수도 사마리아의 악행을 구체적으로 드러내십니다.</span>
+            아모스 선지자에 의해 낱낱이 밝혀진 <strong>북이스라엘의 잘못</strong>입니다(암 2:6~8).
+            <div class="quote">
+                <strong>첫째,</strong> 북이스라엘은 <strong>'공의가 없는 나라'</strong>였습니다.<br>
+                <strong>둘째,</strong> 북이스라엘은 <strong>'타락한 나라'로 하나님의 이름을 더럽혔습니다.</strong><br>
+                <strong>셋째,</strong> 북이스라엘은 <strong>'율법을 지키지 않는 나라'</strong>였습니다. 가난한 이웃에 관한 법과 나실인 법 등 율법을 어겼습니다.
+            </div>
+            <div class="quote">
+                <strong>북이스라엘에 대한 아모스의 예언은 B.C. 722년 북이스라엘이 앗수르 제국에 의해 멸망하면서 성취됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님께서는 사마리아 성의 상류층 사람들의 죄악을 지적하셨습니다.</span>
+            하나님께서는 아모스 선지자를 통해 <strong>북이스라엘의 죄에 대해서 하나하나 다 들춰내시며 꼼꼼하게 지적하시고 죄로 인해 받을 심판에 대해 말씀하십니다</strong>(암 4:1~11).
+            <div class="quote">
+                <strong>첫째,</strong> '바산의 암소들' 곧 북이스라엘 상류층 사람들은 <strong>죄를 범하면서도 겉으로 보이는 종교적인 열심은 가득하여 뜻도 의미도 없이 많은 제사를 드렸습니다.</strong><br>
+                <strong>둘째,</strong> 하나님께서 지적하신 북이스라엘 상류층 사람들의 죄는 <strong>가난한 자를 압제한 것</strong>입니다. 또한 그들은 뇌물을 요구하며 <strong>하나님을 향한 마음 없이 종교적인 행위만을 열심히 했습니다.</strong><br>
+                <strong>셋째,</strong> 북이스라엘 상류층을 향한 <strong>하나님의 심판을 경고해주십니다.</strong><br>
+                <strong>넷째,</strong> 북이스라엘은 <strong>하나님의 수많은 경고에도 불구하고 끝내 회개하지 않았습니다.</strong> 양식이 떨어져도, 비가 내리지 않아도, 재앙이 닥쳐도, 전염병이 돌아도, 소돔과 고모라와 같이 무너져도 회개하지 않습니다.
+            </div>
+            <div class="quote">
+                <strong>이 재앙들은 모두 하나님께서 북이스라엘 백성들이 죄에서 돌이켜 돌아오기를 바라시며 내린 징계였지만 그들은 끝내 하나님의 백성 되기를 거부했습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 아모스는 심판의 날인 '여호와의 날'을 선포하며 회개를 촉구합니다.</span>
+            아모스는 <strong>'여호와의 날'을 선포하면서 다음과 같이 회개를 촉구합니다</strong>(암 5장).
+            <div class="quote">
+                <strong>첫째,</strong> 아모스는 먼저 슬픈 노래인 <strong>'애가'를 부릅니다.</strong><br>
+                <strong>둘째,</strong> 아모스는 북이스라엘 사람들에게 <strong>"여호와를 찾으라"</strong>(암 5:6)라고 촉구합니다.<br>
+                <strong>셋째,</strong> 아모스는 북이스라엘에 심판의 날인 <strong>'여호와의 날'을 선포합니다.</strong><br>
+                <strong>넷째,</strong> 아모스는 하나님께서 <strong>거짓으로 제사하는 자를 심판하신다</strong>고 선언합니다.<br>
+                <strong>다섯째,</strong> 아모스는 포기하지 않고 북이스라엘에 <strong>또다시 회개를 촉구합니다.</strong><br>
+                <strong>여섯째,</strong> 아모스는 마침내 <strong>북이스라엘의 멸망을 예언합니다.</strong>
+            </div>
+            당시 북이스라엘의 여로보암 2세 때는 경제적으로 <strong>최고의 번영을 누리며 기쁨에 차 있었습니다.</strong> 하지만 하나님께서는 <strong>그들의 기쁨과 영광은 사라지게 될 것이고 그들은 멸망할 것이라고 말씀하십니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 아모스 1~5장 '아모스 선지자의 공의'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- 5. 성경 본문 -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 아모스 1장 -->
+        <div class="chapter-title">아모스 1장 (1~15절)</div>
+        <div class="verse"><span class="verse-num">1</span> 유다 왕 웃시야의 시대 곧 이스라엘 왕 요아스의 아들 여로보암의 시대 지진 전 이년에 드고아 목자 중 아모스가 이스라엘에 대하여 이상으로 받은 말씀이라</div>
+        <div class="verse"><span class="verse-num">2</span> 그가 이르되 여호와께서 시온에서부터 부르짖으시며 예루살렘에서부터 소리를 내시리니 목자의 초장이 마르고 갈멜 산 꼭대기가 마르리로다</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와께서 이와 같이 말씀하시되 다메섹의 서너 가지 죄로 말미암아 내가 그 벌을 돌이키지 아니하리니 이는 그들이 철 타작기로 타작하듯 길르앗을 압박하였음이라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 하사엘의 집에 불을 보내리니 벤하닷의 궁궐들을 사르리라</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 다메섹의 빗장을 꺾으며 아웬 골짜기에서 그 주민들을 끊으며 벧에덴에서 규 잡은 자를 끊으리니 아람 백성이 사로잡혀 기르에 이르리라 여호와께서 말씀하셨느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 여호와께서 이와 같이 말씀하시되 가사의 서너 가지 죄로 말미암아 내가 그 벌을 돌이키지 아니하리니 이는 그들이 모든 사로잡은 자를 끌어 에돔에 넘겼음이라</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 가사 성에 불을 보내리니 그 궁궐들을 사르리라</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 또 아스돗에서 그 주민들과 아스글론에서 규를 잡은 자를 끊고 또 손을 돌이켜 에그론을 치리니 블레셋의 남아 있는 자가 멸망하리라 주 여호와께서 말씀하셨느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와께서 이와 같이 말씀하시되 두로의 서너 가지 죄로 말미암아 내가 그 벌을 돌이키지 아니하리니 이는 그들이 그 형제의 계약을 기억하지 아니하고 모든 사로잡은 자를 에돔에 넘겼음이라</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 두로 성에 불을 보내리니 그 궁궐들을 사르리라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와께서 이와 같이 말씀하시되 에돔의 서너 가지 죄로 말미암아 내가 그 벌을 돌이키지 아니하리니 이는 그가 칼로 그의 형제를 쫓아가며 긍휼을 버리며 항상 맹렬히 화를 내며 분을 끝없이 품었음이라</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 데만에 불을 보내리니 보스라의 궁궐들을 사르리라</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와께서 이와 같이 말씀하시되 암몬 자손의 서너 가지 죄로 말미암아 내가 그 벌을 돌이키지 아니하리니 이는 그들이 자기 지경을 넓히고자 하여 길르앗의 아이 밴 여인의 배를 갈랐음이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 내가 랍바 성에 불을 놓아 그 궁궐들을 사르되 전쟁의 날에 외침과 회오리바람의 날에 폭풍으로 할 것이며</div>
+        <div class="verse"><span class="verse-num">15</span> 그들의 왕은 그 지도자들과 함께 사로잡혀 가리라 여호와께서 말씀하셨느니라</div>
+
+        <!-- 아모스 2장 -->
+        <div class="chapter-title">아모스 2장 (1~16절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와께서 이와 같이 말씀하시되 모압의 서너 가지 죄로 말미암아 내가 그 벌을 돌이키지 아니하리니 이는 그가 에돔 왕의 뼈를 불살라 재를 만들었음이라</div>
+        <div class="verse"><span class="verse-num">2</span> 내가 모압에 불을 보내리니 그리욧 궁궐들을 사르리라 모압이 요란함과 외침과 나팔 소리 중에서 죽을 것이라</div>
+        <div class="verse"><span class="verse-num">3</span> 내가 그 중에서 재판장을 멸하며 지도자들을 그와 함께 죽이리라 여호와께서 말씀하시니라</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와께서 이와 같이 말씀하시되 유다의 서너 가지 죄로 말미암아 내가 그 벌을 돌이키지 아니하리니 이는 그들이 여호와의 율법을 멸시하며 그 율례를 지키지 아니하고 그의 조상들이 따라가던 거짓 것에 미혹되었음이라</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 유다에 불을 보내리니 예루살렘의 궁궐들을 사르리라</div>
+        <div class="verse"><span class="verse-num">6</span> 여호와께서 이와 같이 말씀하시되 이스라엘의 서너 가지 죄로 말미암아 내가 그 벌을 돌이키지 아니하리니 이는 그들이 은을 받고 의인을 팔며 신 한 켤레를 받고 가난한 자를 팔며</div>
+        <div class="verse"><span class="verse-num">7</span> 힘 없는 자의 머리를 티끌 먼지 속에 발로 밟고 연약한 자의 길을 굽게 하며 아버지와 아들이 한 젊은 여인에게 다녀서 내 거룩한 이름을 더럽히며</div>
+        <div class="verse"><span class="verse-num">8</span> 모든 제단 옆에서 전당 잡은 옷 위에 누우며 그들의 신전에서 벌금으로 얻은 포도주를 마심이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 아모리 사람을 그들 앞에서 멸하였나니 그 키는 백향목 높이와 같고 강하기는 상수리나무 같으나 내가 그 위의 열매와 그 아래의 뿌리를 진멸하였느니라</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 너희를 애굽 땅에서 이끌어 내어 사십 년 동안 광야에서 인도하고 아모리 사람의 땅을 너희가 차지하게 하였고</div>
+        <div class="verse"><span class="verse-num">11</span> 또 너희 아들 중에서 선지자를, 너희 청년 중에서 나실인을 일으켰나니 이스라엘 자손들아 과연 그렇지 아니하냐 이는 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그러나 너희가 나실 사람으로 포도주를 마시게 하며 또 선지자에게 명령하여 예언하지 말라 하였느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 보라 곡식 단을 가득히 실은 수레가 흙을 누름 같이 내가 너희를 누르리니</div>
+        <div class="verse"><span class="verse-num">14</span> 빨리 달음박질하는 자도 도망할 수 없으며 강한 자도 자기 힘을 낼 수 없으며 용사도 자기 목숨을 구할 수 없으며</div>
+        <div class="verse"><span class="verse-num">15</span> 활을 가진 자도 설 수 없으며 발이 빠른 자도 피할 수 없으며 말 타는 자도 자기 목숨을 구할 수 없고</div>
+        <div class="verse"><span class="verse-num">16</span> 용사 가운데 그 마음이 굳센 자도 그 날에는 벌거벗고 도망하리라 여호와의 말씀이니라</div>
+
+        <!-- 아모스 3장 -->
+        <div class="chapter-title">아모스 3장 (1~15절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘 자손들아 여호와께서 너희에 대하여 이르시는 이 말씀을 들으라 애굽 땅에서 인도하여 올리신 모든 족속에 대하여 이르시기를</div>
+        <div class="verse"><span class="verse-num">2</span> 내가 땅의 모든 족속 가운데 너희만을 알았나니 그러므로 내가 너희 모든 죄악을 너희에게 보응하리라 하셨나니</div>
+        <div class="verse"><span class="verse-num">3</span> 두 사람이 뜻이 같지 않은데 어찌 동행하겠으며</div>
+        <div class="verse"><span class="verse-num">4</span> 사자가 움킨 것이 없는데 어찌 수풀에서 부르짖겠으며 젊은 사자가 잡은 것이 없는데 어찌 굴에서 소리를 내겠느냐</div>
+        <div class="verse"><span class="verse-num">5</span> 덫을 땅에 놓지 않았는데 새가 어찌 거기 치이겠으며 잡힌 것이 없는데 덫이 어찌 땅에서 튀겠느냐</div>
+        <div class="verse"><span class="verse-num">6</span> 성읍에서 나팔이 울리는데 백성이 어찌 두려워하지 아니하겠으며 여호와의 행하심이 없는데 재앙이 어찌 성읍에 임하겠느냐</div>
+        <div class="verse"><span class="verse-num">7</span> 주 여호와께서는 자기의 비밀을 그 종 선지자들에게 보이지 아니하시고는 결코 행하심이 없으시리라</div>
+        <div class="verse"><span class="verse-num">8</span> 사자가 부르짖은즉 누가 두려워하지 아니하겠느냐 주 여호와께서 말씀하신즉 누가 예언하지 아니하겠느냐</div>
+        <div class="verse"><span class="verse-num">9</span> 아스돗의 궁궐들과 애굽 땅의 궁궐들에 선포하여 이르기를 너희는 사마리아 산들에 모여 그 성 중에서 얼마나 큰 요란함과 학대함이 있나 보라 하라</div>
+        <div class="verse"><span class="verse-num">10</span> 자기 궁궐에서 포학과 겁탈을 쌓는 자들이 바른 일 행할 줄을 모르느니라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 그러므로 주 여호와께서 이와 같이 말씀하시되 이 땅 사면에 대적이 있어 네 힘을 쇠하게 하며 네 궁궐을 약탈하리라</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와께서 이와 같이 말씀하시되 목자가 사자 입에서 양의 두 다리나 귀 조각을 건져냄과 같이 사마리아에서 침상 모서리에나 걸상의 방석에 앉은 이스라엘 자손도 건져냄을 입으리라</div>
+        <div class="verse"><span class="verse-num">13</span> 주 여호와 만군의 하나님의 말씀이니라 너희는 듣고 야곱의 족속에게 증언하라</div>
+        <div class="verse"><span class="verse-num">14</span> 내가 이스라엘의 모든 죄를 보응하는 날에 벧엘의 제단들을 벌하여 그 제단의 뿔들을 꺾어 땅에 떨어뜨리고</div>
+        <div class="verse"><span class="verse-num">15</span> 겨울 궁과 여름 궁을 치리니 상아 궁들이 파괴되며 큰 궁들이 무너지리라 여호와의 말씀이니라</div>
+
+        <!-- 아모스 4장 -->
+        <div class="chapter-title">아모스 4장 (1~13절)</div>
+        <div class="verse"><span class="verse-num">1</span> 사마리아의 산에 있는 바산의 암소들아 이 말을 들으라 너희는 힘 없는 자를 학대하며 가난한 자를 압제하며 가장에게 이르기를 술을 가져다가 우리로 마시게 하라 하는도다</div>
+        <div class="verse"><span class="verse-num">2</span> 주 여호와께서 자기의 거룩함을 두고 맹세하시되 때가 너희에게 이를지라 사람이 갈고리로 너희를 끌어 가며 낚시로 너희의 남은 자들도 그리하리라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희가 성 무너진 데를 통하여 각기 앞으로 바로 나가서 하르몬에 던져지리라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">4</span> 너희는 벧엘에 가서 범죄하며 길갈에 가서 죄를 더하며 아침마다 너희 희생을, 삼일마다 너희 십일조를 드리며</div>
+        <div class="verse"><span class="verse-num">5</span> 누룩 넣은 것을 불살라 수은제로 드리며 낙헌제를 소리내어 선포하려무나 이스라엘 자손들아 이것이 너희가 기뻐하는 바니라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 또 내가 너희 모든 성읍에서 너희 이를 깨끗하게 하며 너희의 각 처소에서 양식이 떨어지게 하였으나 너희가 내게로 돌아오지 아니하였느니라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 또 추수하기 석 달 전에 내가 너희에게 비를 멈추게 하여 어떤 성읍에는 내리고 어떤 성읍에는 내리지 않게 하였더니 땅 한 부분은 비를 얻고 한 부분은 비를 얻지 못하여 말랐으매</div>
+        <div class="verse"><span class="verse-num">8</span> 두 세 성읍 사람이 어떤 성읍으로 비틀거리며 물을 마시러 가서 만족하게 마시지 못하였으나 너희가 내게로 돌아오지 아니하였느니라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 곡식을 마르게 하는 재앙과 깜부기 재앙으로 너희를 쳤으며 팥중이로 너희의 많은 동산과 포도원과 무화과나무와 감람나무를 다 먹게 하였으나 너희가 내게로 돌아오지 아니하였느니라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 너희 중에 전염병 보내기를 애굽에서 한 것처럼 하였으며 칼로 너희 청년들을 죽였으며 너희 말들을 노략하게 하며 너희 진영의 악취로 코를 찌르게 하였으나 너희가 내게로 돌아오지 아니하였느니라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 너희 중의 성읍 무너뜨리기를 하나님인 내가 소돔과 고모라를 무너뜨림 같이 하였으므로 너희가 불붙는 가운데서 빼낸 나무 조각 같이 되었으나 너희가 내게로 돌아오지 아니하였느니라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그러므로 이스라엘아 내가 이와 같이 네게 행하리라 내가 이것을 네게 행하리니 이스라엘아 네 하나님 만나기를 준비하라</div>
+        <div class="verse"><span class="verse-num">13</span> 보라 산들을 지으며 바람을 창조하며 자기 뜻을 사람에게 보이며 아침을 어둡게 하며 땅의 높은 데를 밟는 이는 그의 이름이 만군의 하나님 여호와시니라</div>
+
+        <!-- 아모스 5장 -->
+        <div class="chapter-title">아모스 5장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘 족속아 내가 너희에게 대하여 애가로 지은 이 말을 들으라</div>
+        <div class="verse"><span class="verse-num">2</span> 처녀 이스라엘이 엎드러졌음이여 다시 일어나지 못하리로다 자기 땅에 던지움이여 일으킬 자 없으리로다</div>
+        <div class="verse"><span class="verse-num">3</span> 주 여호와께서 이와 같이 말씀하시되 이스라엘 중에서 천 명이 행군해 나가던 성읍에는 백 명만 남고 백 명이 행군해 나가던 성읍에는 열 명만 남으리라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와께서 이스라엘 족속에게 이와 같이 말씀하시기를 너희는 나를 찾으라 그리하면 살리라</div>
+        <div class="verse"><span class="verse-num">5</span> 벧엘을 찾지 말며 길갈로 들어가지 말며 브엘세바로도 나아가지 말라 길갈은 반드시 사로잡히겠고 벧엘은 비참하게 될 것임이라 하셨나니</div>
+        <div class="verse"><span class="verse-num">6</span> 너희는 여호와를 찾으라 그리하면 살리라 그렇지 않으면 그가 불 같이 요셉의 집에 임하여 멸하시리니 벧엘에서 그 불들을 끌 자가 없으리라</div>
+        <div class="verse"><span class="verse-num">7</span> 정의를 쓴 쑥으로 바꾸며 공의를 땅에 던지는 자들아</div>
+        <div class="verse"><span class="verse-num">8</span> 묘성과 삼성을 만드시며 사망의 그늘을 아침으로 바꾸시고 낮을 어두운 밤으로 바꾸시며 바닷물을 불러 지면에 쏟으시는 이를 찾으라 그의 이름은 여호와시니라</div>
+        <div class="verse"><span class="verse-num">9</span> 그가 강한 자에게 갑자기 패망이 이르게 하신즉 그 패망이 산성에 미치느니라</div>
+        <div class="verse"><span class="verse-num">10</span> 무리가 성문에서 책망하는 자를 미워하며 정직히 말하는 자를 싫어하는도다</div>
+        <div class="verse"><span class="verse-num">11</span> 너희가 힘없는 자를 밟고 그에게서 밀의 부당한 세를 거두었은즉 너희가 비록 다듬은 돌로 집을 건축하였으나 거기 거주하지 못할 것이요 아름다운 포도원을 가꾸었으나 그 포도주를 마시지 못하리라</div>
+        <div class="verse"><span class="verse-num">12</span> 너희의 허물이 많고 죄악이 무거움을 내가 아노라 너희는 의인을 학대하며 뇌물을 받고 성문에서 가난한 자를 억울하게 하는 자로다</div>
+        <div class="verse"><span class="verse-num">13</span> 그러므로 이런 때에 지혜자가 잠잠하나니 이는 악한 때임이니라</div>
+        <div class="verse"><span class="verse-num">14</span> 너희는 살려면 선을 구하고 악을 구하지 말지어다 만군의 하나님 여호와께서 너희의 말과 같이 너희와 함께 하시리라</div>
+        <div class="verse"><span class="verse-num">15</span> 너희는 악을 미워하고 선을 사랑하며 성문에서 정의를 세울지어다 만군의 하나님 여호와께서 혹시 요셉의 남은 자를 불쌍히 여기시리라</div>
+        <div class="verse"><span class="verse-num">16</span> 그러므로 주 만군의 하나님 여호와께서 이와 같이 말씀하시기를 사람이 모든 광장에서 울겠고 모든 거리에서 슬프도다 슬프도다 하겠으며 농부를 불러다가 애곡하게 하며 울음꾼을 불러다가 울게 할 것이며</div>
+        <div class="verse"><span class="verse-num">17</span> 모든 포도원에서도 울리니 이는 내가 너희 가운데로 지나갈 것임이라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">18</span> 화 있을진저 여호와의 날을 사모하는 자여 너희가 어찌하여 여호와의 날을 사모하느냐 그 날은 어둠이요 빛이 아니라</div>
+        <div class="verse"><span class="verse-num">19</span> 마치 사람이 사자를 피하다가 곰을 만나거나 혹은 집에 들어가서 손을 벽에 대었다가 뱀에게 물림 같도다</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와의 날은 빛 없는 어둠이 아니며 빛남 없는 캄캄함이 아니냐</div>
+        <div class="verse"><span class="verse-num">21</span> 내가 너희 절기들을 미워하여 멸시하며 너희 성회들을 기뻐하지 아니하나니</div>
+        <div class="verse"><span class="verse-num">22</span> 너희가 내게 번제나 소제를 드릴지라도 내가 받지 아니할 것이요 너희의 살진 희생의 화목제도 내가 돌아보지 아니하리라</div>
+        <div class="verse"><span class="verse-num">23</span> 네 노랫소리를 내 앞에서 그칠지어다 네 비파 소리도 내가 듣지 아니하리라</div>
+        <div class="verse"><span class="verse-num">24</span> 오직 정의를 물 같이, 공의를 마르지 않는 강 같이 흐르게 할지어다</div>
+        <div class="verse"><span class="verse-num">25</span> 이스라엘 족속아 너희가 사십 년 동안 광야에서 희생과 소제물을 내게 드렸느냐</div>
+        <div class="verse"><span class="verse-num">26</span> 너희가 너희 왕 식굿과 기윤과 너희 우상들과 너희가 너희를 위하여 만든 신들의 별 형상을 지고 가리라</div>
+        <div class="verse"><span class="verse-num">27</span> 내가 너희를 다메섹 밖으로 사로잡혀 가게 하리라 그의 이름이 만군의 하나님이라 불리우는 여호와께서 말씀하셨느니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- 6. 주기도문 -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 무 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
