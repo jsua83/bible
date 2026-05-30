@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 178</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* STREAMING_CHUNK:Styling confession and prayer boxes... -->
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* STREAMING_CHUNK:Styling the 5 points section and quotes... -->
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* STREAMING_CHUNK:Styling the bible text section and footer... -->
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 178</h1>
+        <p class="sub-title">찬송가 8장 거룩 거룩 거룩 전능하신 주님</p>
+        <p class="sub-title">이사야 4~7장 — 이사야의 충고, 동행하지 말라</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 8장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1fhdaEEJIglCGOWMOfP1rVvsYAQmW_coW" alt="찬송가 8장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 이사야 4~7장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 이사야 선지자는 남은 자들에게는 회복이 있고 그들에게 주의 영광이 머물 것이라고 예언합니다.</span>
+            이사야 선지자는 남유다 백성들에게 <strong>멸망으로 인한 심판의 날에 당할 수치에 대해 말합니다.</strong> 그러나 하나님의 심판의 날에도 <strong>'남은 자'들에게는 회복이 있고 주의 영광이 머물 것이라고 위로해줍니다</strong>(사 4:1~3).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 이사야 선지자는 하나님을 '포도원의 주인'이라고 비유를 들어 말합니다.</span>
+            이사야 5장을 <strong>'포도원의 노래'</strong>라고 부릅니다. <strong>포도원의 주인이신 하나님께서 좋은 열매를 기대하며 남유다 백성들이라는 포도나무를 심으셨습니다.</strong> 그런데 좋은 포도 열매 대신 들포도를 맺은 남유다를 향해 진노하시며 <strong>하나님께서 심판을 말씀하십니다.</strong><br><br>
+            구체적으로 지적하신 남유다 백성들의 죄악들입니다(사 5:8~23).
+            <div class="quote">
+                <strong>한없는 탐욕으로</strong> 땅과 소유에 대한 제사장 나라 법을 지키지 않은 죄 / <strong>쾌락만을 추구한 죄</strong> / <strong>거짓을 일삼고 죄악을 이끈 죄</strong> / <strong>선과 악을 구별하지 않은 죄</strong> / <strong>교만한 죄</strong> / <strong>방탕하며 뇌물을 받고 재판을 굽게 한 죄</strong>
+            </div>
+            <div class="quote">
+                <strong>남유다는 계속되는 앗수르의 침략으로 나라가 패망의 길을 가다가 결국 B.C. 586년 바벨론 제국에 의해 멸망합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 이사야 선지자는 성전에서 환상을 보며 소명을 받습니다.</span>
+            하나님의 선지자로 소명을 받게 된 이사야는 <strong>제단 숯불로 정결하게 되는 체험을 합니다.</strong> 하나님께서는 이사야 선지자에게 완고한 남유다 백성들에 대한 말씀을 미리 들려주시며 그들이 이후에 포로로 끌려갈 것과 <strong>남은 자들을 통해 구원의 역사를 이어갈 것을 말씀해주십니다</strong>(사 6:6~13).<br><br>
+            하나님께서 이사야 선지자에게 주신 청사진은 <strong>'심판'이었으나 심판 그 자체가 전부는 아니었습니다.</strong>
+            <div class="quote">
+                <strong>'거룩한 씨'를 통해 남유다와 예루살렘의 역사를 이어가신다는 것이 청사진의 핵심이었습니다. 이 청사진을 가지고 하나님과 함께 일할 이사야를 부르신 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 이사야 선지자는 아하스 왕에게 "동맹하지 말라"라고 충고합니다.</span>
+            북이스라엘과 아람 연합군이 또다시 예루살렘을 침략한다는 소식이 퍼지자 <strong>남유다는 큰 두려움에 사로잡히게 됩니다</strong>(사 7:2). 이때 이사야 선지자가 하나님의 메시지를 전합니다. 현실적인 국제 정세를 보아서는 북이스라엘과 아람의 동맹이 이길 것 같지만 <strong>그들은 죄로 말미암아 멸망할 것이기 때문에 두려워하지 말라</strong>는 것입니다.<br><br>
+            이사야 선지자가 끊임없이 <strong>하나님께로 외교 노선을 바꿀 것을 요청하는 세 가지 중요한 이유</strong>입니다.
+            <div class="quote">
+                <strong>첫째,</strong> 형제국 북이스라엘이 멸망하는데 <strong>어떤 빌미도 제공해서는 안 된다</strong>는 것입니다.<br><br>
+                <strong>둘째,</strong> 앗수르와 가까이하면 <strong>앗수르의 종교적 영향이 문제가 될 것</strong>이기 때문입니다.<br><br>
+                <strong>셋째,</strong> 결국 앗수르는 <strong>제국주의의 본성을 드러내어 남유다를 침략할 것</strong>이기 때문입니다.
+            </div>
+            이사야 선지자가 <strong>'앗수르는 하나님께서 잠시 사용하는 막대기'에 불과하다고 아무리 권고해도 아하스 왕은 끝내 듣지 않습니다.</strong> 그래도 이사야는 끝까지 포기하지 않고 <strong>"동맹하지 말라"라고 아하스 왕을 설득합니다.</strong> 친앗수르도 반앗수르도, <strong>친애굽도 반애굽도 하지 말라</strong>는 것입니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 이사야에게 북이스라엘과 아람 동맹의 실패를 미리 알려주십니다.</span>
+            이사야의 아들 스알아숩의 이름은 <strong>'남은 자가 돌아오리라'는 뜻으로 '남은 자'의 구원을 말씀하신 것</strong>입니다. 그리고 하나님께서는 이사야 선지자를 통해 <strong>북이스라엘의 완전한 멸망을 예언하게 하십니다</strong>(사 7:8).<br><br>
+            예언대로 북이스라엘은 멸망하고 <strong>앗수르의 식민지 정책에 따라 혼혈족 사마리아인이 되어 다시는 나라를 세우지 못하게 됩니다.</strong> 계속되는 예언에도 <strong>아하스 왕은 하나님의 능력에 의지할 마음이 없습니다.</strong> 그러나 이때 하나님께서는 이사야 선지자를 통해 <strong>메시아 탄생 예언을 주십니다.</strong>
+            <div class="quote">
+                <strong>"보라 처녀가 잉태하여 아들을 낳을 것이요 그의 이름을 임마누엘이라 하리라"</strong> (사 7:14)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 이사야 4~7장 '이사야의 충고, 동행하지 말라'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 이사야 4장 -->
+        <div class="chapter-title">이사야 4장 (1~6절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 날에 일곱 여자가 한 남자를 붙잡고 말하기를 우리가 우리 떡을 먹으며 우리 옷을 입으리니 다만 당신의 이름으로 우리를 부르게 하여 우리가 수치를 면하게 하라 하리라</div>
+        <div class="verse"><span class="verse-num">2</span> 그 날에 여호와의 싹이 아름답고 영화로울 것이요 그 땅의 소산은 이스라엘의 피난한 자를 위하여 영화롭고 아름다울 것이며</div>
+        <div class="verse"><span class="verse-num">3</span> 시온에 남아 있는 자, 예루살렘에 머물러 있는 자 곧 예루살렘 안에 생존한 자 중 기록된 모든 사람은 거룩하다 칭함을 얻으리니</div>
+        <div class="verse"><span class="verse-num">4</span> 이는 주께서 심판하는 영과 소멸하는 영으로 시온의 딸들의 더러움을 씻기시며 예루살렘의 피를 그 중에서 청결하게 하실 때가 됨이라</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와께서 거하시는 온 시온 산과 모든 집회 위에 낮이면 구름과 연기, 밤이면 화염의 빛을 만드시고 그 모든 영광 위에 덮개를 두시며</div>
+        <div class="verse"><span class="verse-num">6</span> 또 초막이 있어서 낮에는 더위를 피하는 그늘을 지으며 또 풍우를 피하여 숨는 곳이 되리라</div>
+
+        <!-- 이사야 5장 -->
+        <div class="chapter-title">이사야 5장 (1~30절)</div>
+        <div class="verse"><span class="verse-num">1</span> 나는 내가 사랑하는 자를 위하여 노래하되 내가 사랑하는 자의 포도원을 노래하리라 내가 사랑하는 자에게 포도원이 있음이여 심히 기름진 산에로다</div>
+        <div class="verse"><span class="verse-num">2</span> 땅을 파서 돌을 제하고 극상품 포도나무를 심었도다 그 중에 망대를 세웠고 또 그 안에 술틀을 팠도다 좋은 포도 맺기를 바랐더니 들포도를 맺었도다</div>
+        <div class="verse"><span class="verse-num">3</span> 예루살렘 주민과 유다 사람들아 구하노니 이제 나와 내 포도원 사이에서 사리를 판단하라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 내 포도원을 위하여 행한 것 외에 무엇을 더할 것이 있으랴 내가 좋은 포도 맺기를 기다렸거늘 들포도를 맺음은 어찌 됨인고</div>
+        <div class="verse"><span class="verse-num">5</span> 이제 내가 내 포도원에 어떻게 행할지를 너희에게 이르리라 내가 그 울타리를 걷어 먹힘을 당하게 하며 그 담을 헐어 짓밟히게 할 것이요</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 그것을 황폐하게 하리니 다시는 가지를 자름이나 북을 돋우지 못하여 찔레와 가시가 날 것이며 내가 또 구름에게 명하여 그 위에 비를 내리지 못하게 하리라 하셨으니</div>
+        <div class="verse"><span class="verse-num">7</span> 무릇 만군의 여호와의 포도원은 이스라엘 족속이요 그가 기뻐하시는 나무는 유다 사람이라 그들에게 정의를 바라셨더니 도리어 포학이요 그들에게 공의를 바라셨더니 도리어 부르짖음이었도다</div>
+        <div class="verse"><span class="verse-num">8</span> 가옥에 가옥을 이으며 전토에 전토를 더하여 빈 틈이 없도록 하고 이 땅 가운데에서 홀로 거주하려 하는 자들은 화 있을진저</div>
+        <div class="verse"><span class="verse-num">9</span> 만군의 여호와께서 내 귀에 말씀하시되 정녕히 허다한 가옥이 황폐하리니 크고 아름다울지라도 거주할 자가 없을 것이며</div>
+        <div class="verse"><span class="verse-num">10</span> 열흘 갈이 포도원에 겨우 포도주 한 바트가 나겠고 한 호멜의 종자를 뿌려도 간신히 한 에바가 나리라 하시도다</div>
+        <div class="verse"><span class="verse-num">11</span> 아침에 일찍이 일어나 독주를 마시며 밤이 깊도록 포도주에 취하는 자들은 화 있을진저</div>
+        <div class="verse"><span class="verse-num">12</span> 그들이 연회에는 수금과 비파와 소고와 피리와 포도주를 갖추었어도 여호와께서 행하시는 일에 관심을 두지 아니하며 그의 손으로 하신 일을 보지 아니하는도다</div>
+        <div class="verse"><span class="verse-num">13</span> 그러므로 내 백성이 무지함으로 말미암아 사로잡힐 것이요 그들의 귀한 자는 굶주릴 것이요 무리는 목마를 것이라</div>
+        <div class="verse"><span class="verse-num">14</span> 그러므로 스올이 욕심을 크게 내어 한량 없이 그 입을 벌린즉 그들의 호화로움과 그들의 많은 무리와 그들의 떠드는 것과 그 중에서 즐거워하는 자가 거기에 빠질 것이라</div>
+        <div class="verse"><span class="verse-num">15</span> 여느 사람은 구푸리고 존귀한 자는 낮아지고 오만한 자의 눈도 낮아질 것이로되</div>
+        <div class="verse"><span class="verse-num">16</span> 오직 만군의 여호와는 정의로우시므로 높임을 받으시며 거룩하신 하나님은 공의로우시므로 거룩하다 일컬음을 받으시리니</div>
+        <div class="verse"><span class="verse-num">17</span> 그 때에는 어린 양들이 자기 초장에 있는 것 같이 풀을 먹을 것이요 유리하는 자들이 부자의 버려진 밭에서 먹으리라</div>
+        <div class="verse"><span class="verse-num">18</span> 거짓으로 끈을 삼아 죄악을 끌며 수레 줄로 함 같이 죄악을 끄는 자는 화 있을진저</div>
+        <div class="verse"><span class="verse-num">19</span> 그들이 이르기를 그는 자기의 일을 속속히 이루어 우리에게 보게 할 것이며 이스라엘의 거룩한 이는 자기의 계획을 속히 이루어 우리가 알게 할 것이라 하는도다</div>
+        <div class="verse"><span class="verse-num">20</span> 악을 선하다 하며 선을 악하다 하며 흑암으로 광명을 삼으며 광명으로 흑암을 삼으며 쓴 것으로 단 것을 삼으며 단 것으로 쓴 것을 삼는 자들은 화 있을진저</div>
+        <div class="verse"><span class="verse-num">21</span> 스스로 지혜롭다 하며 스스로 명철하다 하는 자들은 화 있을진저</div>
+        <div class="verse"><span class="verse-num">22</span> 포도주를 마시기에 용감하며 독주를 잘 빚는 자들은 화 있을진저</div>
+        <div class="verse"><span class="verse-num">23</span> 그들은 뇌물로 말미암아 악인을 의롭다 하고 의인에게서 그 공의를 빼앗는도다</div>
+        <div class="verse"><span class="verse-num">24</span> 이로 말미암아 불꽃이 그루터기를 삼킴 같이, 마른 풀이 불 속에 떨어짐 같이 그들의 뿌리가 썩겠고 꽃이 티끌처럼 날리리니 그들이 만군의 여호와의 율법을 버리며 이스라엘의 거룩하신 이의 말씀을 멸시하였음이라</div>
+        <div class="verse"><span class="verse-num">25</span> 그러므로 여호와께서 자기 백성에게 노를 발하시고 그들 위에 손을 들어 그들을 치신지라 산들은 진동하며 그들의 시체는 거리 가운데에 분토 같이 되었도다 그럴지라도 그의 노가 돌아서지 아니하였고 그의 손이 여전히 펼쳐져 있느니라</div>
+        <div class="verse"><span class="verse-num">26</span> 또 그가 기치를 세우시고 먼 나라들을 불러 땅 끝에서부터 자기에게로 오게 하실 것이라 보라 그들이 빨리 달려올 것이로되</div>
+        <div class="verse"><span class="verse-num">27</span> 그 중에 곤핍하여 넘어지는 자도 없을 것이며 조는 자나 자는 자도 없을 것이며 그들의 허리띠는 풀리지 아니하며 그들의 들메끈은 끊어지지 아니하며</div>
+        <div class="verse"><span class="verse-num">28</span> 그들의 화살은 날카롭고 모든 활은 당겨졌으며 그들의 말굽은 부싯돌 같고 병거 바퀴는 회오리바람 같을 것이며</div>
+        <div class="verse"><span class="verse-num">29</span> 그들의 부르짖음은 암사자 같을 것이요 그들의 소리지름은 어린 사자들과 같을 것이라 그들이 부르짖으며 먹이를 움켜 가져가 버려도 건질 자가 없으리로다</div>
+        <div class="verse"><span class="verse-num">30</span> 그 날에 그들이 바다 물결 소리 같이 백성을 향하여 부르짖으리니 사람이 그 땅을 바라보면 흑암과 고난이 있고 빛은 구름에 가려서 어두우리라</div>
+
+        <!-- 이사야 6장 -->
+        <div class="chapter-title">이사야 6장 (1~13절)</div>
+        <div class="verse"><span class="verse-num">1</span> 웃시야 왕이 죽던 해에 내가 본즉 주께서 높이 들린 보좌에 앉으셨는데 그의 옷자락은 성전에 가득하였고</div>
+        <div class="verse"><span class="verse-num">2</span> 스랍들이 모시고 섰는데 각기 여섯 날개가 있어 그 둘로는 자기의 얼굴을 가리었고 그 둘로는 자기의 발을 가리었고 그 둘로는 날며</div>
+        <div class="verse"><span class="verse-num">3</span> 서로 불러 이르되 거룩하다 거룩하다 거룩하다 만군의 여호와여 그의 영광이 온 땅에 충만하도다 하더라</div>
+        <div class="verse"><span class="verse-num">4</span> 이같이 화답하는 자의 소리로 말미암아 문지방의 터가 요동하며 성전에 연기가 충만한지라</div>
+        <div class="verse"><span class="verse-num">5</span> 그 때에 내가 말하되 화로다 나여 망하게 되었도다 나는 입술이 부정한 사람이요 나는 입술이 부정한 백성 중에 거주하면서 만군의 여호와이신 왕을 뵈었음이로다 하였더라</div>
+        <div class="verse"><span class="verse-num">6</span> 그 때에 그 스랍 중의 하나가 부젓가락으로 제단에서 집은 바 핀 숯을 손에 가지고 내게로 날아와서</div>
+        <div class="verse"><span class="verse-num">7</span> 그것을 내 입술에 대며 이르되 보라 이것이 네 입에 닿았으니 네 악이 제하여졌고 네 죄가 사하여졌느니라 하더라</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 또 주의 목소리를 들으니 주께서 이르시되 내가 누구를 보내며 누가 우리를 위하여 갈꼬 하시니 그 때에 내가 이르되 내가 여기 있나이다 나를 보내소서 하였더니</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와께서 이르시되 가서 이 백성에게 이르기를 너희가 듣기는 들어도 깨닫지 못할 것이요 보기는 보아도 알지 못하리라 하여</div>
+        <div class="verse"><span class="verse-num">10</span> 이 백성의 마음을 둔하게 하며 그들의 귀가 막히고 그들의 눈이 감기게 하라 염려하건대 그들이 눈으로 보고 귀로 듣고 마음으로 깨닫고 다시 돌아와 고침을 받을까 하노라 하시기로</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 이르되 주여 어느 때까지니이까 하였더니 주께서 대답하시되 성읍들은 황폐하여 주민이 없으며 가옥들에는 사람이 없고 이 토지는 황폐하게 되며</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와께서 사람들을 멀리 옮기셔서 이 땅 가운데에 황폐한 곳이 많을 때까지니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그 중에 십분의 일이 아직 남아 있을지라도 이것도 황폐하게 될 것이나 밤나무와 상수리나무가 베임을 당하여도 그 그루터기는 남아 있는 것 같이 거룩한 씨가 이 땅의 그루터기니라 하시더라</div>
+
+        <!-- 이사야 7장 -->
+        <div class="chapter-title">이사야 7장 (1~25절)</div>
+        <div class="verse"><span class="verse-num">1</span> 웃시야의 손자요 요담의 아들인 유다의 아하스 왕 때에 아람의 르신 왕과 르말리야의 아들 이스라엘의 베가 왕이 올라와서 예루살렘을 쳤으나 능히 이기지 못하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 어떤 사람이 다윗의 집에 알려 이르되 아람이 에브라임과 동맹하였다 하였으므로 왕의 마음과 그의 백성의 마음이 숲이 바람에 흔들림 같이 흔들렸더라</div>
+        <div class="verse"><span class="verse-num">3</span> 그 때에 여호와께서 이사야에게 이르시되 너와 네 아들 스알야숩은 윗못 수도 끝 세탁자의 밭 큰 길에 나가서 아하스를 만나</div>
+        <div class="verse"><span class="verse-num">4</span> 그에게 이르기를 너는 삼가며 조용하라 르신과 아람과 르말리야의 아들이 심히 노할지라도 이들은 연기 나는 두 부지깽이 그루터기에 불과하니 두려워하지 말며 낙심하지 말라</div>
+        <div class="verse"><span class="verse-num">5</span> 아람과 에브라임과 르말리야의 아들이 악한 꾀로 너를 대적하여 이르기를</div>
+        <div class="verse"><span class="verse-num">6</span> 우리가 올라가 유다를 쳐서 그것을 쓰러뜨리고 우리를 위하여 그것을 무너뜨리고 다브엘의 아들을 그 중에 세워 왕으로 삼자 하였으나</div>
+        <div class="verse"><span class="verse-num">7</span> 주 여호와의 말씀이 그 일은 서지 못하며 이루어지지 못하리라</div>
+        <div class="verse"><span class="verse-num">8</span> 대저 아람의 머리는 다메섹이요 다메섹의 머리는 르신이며 육십오년 내에 에브라임이 패망하여 다시는 나라를 이루지 못할 것이며</div>
+        <div class="verse"><span class="verse-num">9</span> 에브라임의 머리는 사마리아요 사마리아의 머리는 르말리야의 아들이니라 만일 너희가 굳게 믿지 아니하면 너희는 굳게 서지 못하리라 하시니라</div>
+        <div class="verse"><span class="verse-num">10</span> 여호와께서 또 아하스에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">11</span> 너는 네 하나님 여호와께 한 징조를 구하되 깊은 데에서든지 높은 데에서든지 구하라 하시니</div>
+        <div class="verse"><span class="verse-num">12</span> 아하스가 이르되 나는 구하지 아니하겠나이다 나는 여호와를 시험하지 아니하겠나이다 한지라</div>
+        <div class="verse"><span class="verse-num">13</span> 이사야가 이르되 다윗의 집이여 원하건대 들을지어다 너희가 사람을 괴롭히고서 그것을 작은 일로 여겨 또 나의 하나님을 괴롭히려 하느냐</div>
+        <div class="verse"><span class="verse-num">14</span> 그러므로 주께서 친히 징조를 너희에게 주실 것이라 보라 처녀가 잉태하여 아들을 낳을 것이요 그의 이름을 임마누엘이라 하리라</div>
+        <div class="verse"><span class="verse-num">15</span> 그가 악을 버리며 선을 택할 줄 알 때가 되면 엉긴 젖과 꿀을 먹을 것이라</div>
+        <div class="verse"><span class="verse-num">16</span> 대저 이 아이가 악을 버리며 선을 택할 줄 알기 전에 네가 미워하는 두 왕의 땅이 황폐하게 되리라</div>
+        <div class="verse"><span class="verse-num">17</span> 여호와께서 에브라임이 유다를 떠날 때부터 당하여 보지 못한 날을 너와 네 백성과 네 아버지 집에 임하게 하시리니 곧 앗수르 왕이 오는 날이니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그 날에는 여호와께서 애굽 하수에서 먼 곳의 파리와 앗수르 땅의 벌을 부르시리니</div>
+        <div class="verse"><span class="verse-num">19</span> 다 와서 거친 골짜기와 바위 틈과 가시나무 울타리와 모든 초장에 앉으리라</div>
+        <div class="verse"><span class="verse-num">20</span> 그 날에는 주께서 하수 저쪽에서 세내어 온 삭도 곧 앗수르 왕으로 네 백성의 머리 털과 발 털을 미실 것이요 수염도 깎으시리라</div>
+        <div class="verse"><span class="verse-num">21</span> 그 날에는 사람이 한 어린 암소와 두 양을 기르리니</div>
+        <div class="verse"><span class="verse-num">22</span> 그것들이 내는 젖이 많으므로 엉긴 젖을 먹을 것이라 그 땅 가운데에 남아 있는 자는 엉긴 젖과 꿀을 먹으리라</div>
+        <div class="verse"><span class="verse-num">23</span> 그 날에는 천 그루에 은 천 개의 가치가 있는 포도나무가 있던 곳마다 찔레와 가시가 날 것이라</div>
+        <div class="verse"><span class="verse-num">24</span> 온 땅에 찔레와 가시가 있으므로 화살과 활을 가지고 그리로 갈 것이요</div>
+        <div class="verse"><span class="verse-num">25</span> 보습으로 갈던 모든 산에도 찔레와 가시 때문에 두려워서 그리로 가지 못할 것이요 그 땅은 소를 풀어 놓으며 양이 밟는 곳이 되리라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

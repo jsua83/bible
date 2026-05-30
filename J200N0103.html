@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 200</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 200</h1>
+        <p class="sub-title">찬송가 585장 내 주는 강한 성이요</p>
+        <p class="sub-title">나훔 1~3장 — 나훔과 요나의 앗수르</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 585장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1bZaINMTeOmBtawrVxDPVfm6OPOF8Eepl" alt="찬송가 585장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 나훔 1~3장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다.</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 요나 선지자와 나훔 선지자는 모두 앗수르에 하나님의 말씀을 선포한 선지자들입니다.</span>
+            하나님께서는 150여 년 전 <strong>요나 선지자를 통해 앗수르의 큰 성읍 니느웨를 구원해주셨습니다.</strong> 그런데 이제 <strong>나훔 선지자를 통해서는 앗수르 제국의 완전한 멸망을 선포하십니다.</strong>
+            <div class="quote">
+                <strong>요나</strong> — 하나님의 긍휼이 선포됩니다.<br>
+                <strong>나훔</strong> — 하나님의 심판이 선포됩니다.
+            </div>
+            <div class="quote">
+                <strong>하나님께서는 나훔 선지자를 통해 심판자 되신 공의의 하나님과 긍휼의 하나님을 동시에 나타내십니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 나훔 선지자는 니느웨가 물로 진멸될 것이라고 예언합니다.</span>
+            나훔 선지자는 <strong>니느웨가 범람한 물로 진멸될 것이며 하나님께서 니느웨를 흑암으로 쫓아내실 것이라고 완전한 멸망을 예언합니다</strong>(나 1:8~9).
+            <div class="quote">
+                <strong>범람한 물은 앗수르 유적의 키워드입니다. 강물이 니느웨를 덮고 그 위에 토사가 쌓여 니느웨는 오랜 시간 그 흔적을 발견할 수 없었습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 나훔 선지자는 니느웨가 공허하고 황폐하게 될 것이라고 예언합니다.</span>
+            히스기야 왕 때에 예루살렘성 공성전에서 <strong>185,000명의 군인들을 모두 잃고 돌아간 앗수르 왕 산헤립이 암살되면서 앗수르 제국은 힘을 잃기 시작했습니다.</strong> 이후 앗수르 제국은 잠시 국력을 회복했으나 <strong>앗수르의 식민지들이 여기저기에서 동시다발적으로 반란을 일으키자 반란 진압을 위한 전쟁을 계속 치러야 했습니다.</strong>
+            <div class="quote">
+                <strong>나훔 선지자의 예언대로 앗수르는 결국 바벨론과 메디아 연합군에게 멸망하고 맙니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 나훔 선지자는 니느웨가 '피의 도시'이기 때문에 멸망할 것이라고 예언합니다.</span>
+            하나님께서 나훔 선지자를 통해 니느웨의 멸망을 말씀하신 것은 <strong>그곳이 포악과 거짓으로 가득했기 때문</strong>입니다. 그리고 <strong>마술과 음행으로 다른 나라들까지 죄에 빠지게 했기 때문</strong>입니다(나 3:1~4).
+            <div class="quote">
+                <strong>하나님께서 니느웨를 '피의 성', '피의 도시'라고 부르신 것은 그들의 잔학성과 강포로 인해 붙이신 말씀이지만 이젠 그들의 행위에 대한 대가로 니느웨가 '피의 성'이 되는 것입니다.</strong>
+            </div>
+            하나님께서는 나훔 선지자를 통해 <strong>노아몬의 예를 들어 앗수르 제국의 멸망이 헛된 말이 아님을 말씀하십니다</strong>(나 3:8~10). 노아몬은 나일강 유역에 있는 <strong>애굽의 대도시로 니느웨보다 훨씬 더 지정학적 위치가 좋은 강력한 도시</strong>였는데도 앗수르에게 멸망했습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 앗수르 제국의 왕들은 스스로 잔인함을 자랑했습니다.</span>
+            앗수르 제국의 멸망은 <strong>고대 근동의 많은 나라가 박수를 칠 만큼 기쁜 소식이 될 것</strong>입니다. 왜냐하면 오랜 세월 <strong>앗수르 제국이 제국주의를 펼치면서 매우 잔인한 방법으로 식민지 민족들을 통치했기 때문</strong>입니다(나 3:18~19).<br><br>
+            왕과 귀족들은 죽고 백성들은 도망갈 것입니다. <strong>죽어가는 니느웨 사람들을 보며 누구 한 사람도 그들을 도와주지 않고 조롱만 할 것</strong>입니다. <strong>그들이 압제했던 많은 민족과 나라들이 앗수르의 무너짐을 보고 손뼉을 치며 기뻐할 것</strong>입니다.
+            <div class="quote">
+                <strong>한때 하나님의 은혜를 입었던 그곳이 그들 스스로의 교만과 악행으로 결국 폐허가 되어 다시는 재건할 수 없게 될 것입니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 나훔 1~3장 '나훔과 요나의 앗수르'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 나훔 1장 -->
+        <div class="chapter-title">나훔 1장 (1~15절)</div>
+        <div class="verse"><span class="verse-num">1</span> 니느웨에 대한 경고 곧 엘고스 사람 나훔의 묵시의 글이라</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와는 질투하시며 보복하시는 하나님이시니라 여호와는 보복하시며 진노하시되 자기를 거스르는 자에게 여호와는 보복하시며 자기를 대적하는 자에게 진노를 품으시며</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와는 노하기를 더디하시며 권능이 크시며 벌 받을 자를 결코 내버려두지 아니하시느니라 여호와의 길은 회오리바람과 광풍에 있고 구름은 그의 발의 티끌이로다</div>
+        <div class="verse"><span class="verse-num">4</span> 그는 바다를 꾸짖어 그것을 말리시며 모든 강을 말리시나니 바산과 갈멜이 쇠하며 레바논의 꽃이 시드는도다</div>
+        <div class="verse"><span class="verse-num">5</span> 그로 말미암아 산들이 진동하며 작은 산들이 녹고 그 앞에서는 땅 곧 세계와 그 가운데에 있는 모든 것들이 솟아오르는도다</div>
+        <div class="verse"><span class="verse-num">6</span> 누가 능히 그의 분노 앞에 서며 누가 능히 그의 진노를 감당하랴 그의 진노가 불처럼 쏟아지니 그로 말미암아 바위들이 깨지는도다</div>
+        <div class="verse"><span class="verse-num">7</span> 여호와는 선하시며 환난 날에 산성이시라 그는 자기에게 피하는 자들을 아시느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 범람하는 물로 그 곳을 진멸하시고 자기 대적들을 흑암으로 쫓아내시리라</div>
+        <div class="verse"><span class="verse-num">9</span> 너희는 여호와께 대하여 무엇을 꾀하느냐 그가 온전히 멸하시리니 재난이 다시 일어나지 아니하리라</div>
+        <div class="verse"><span class="verse-num">10</span> 가시덤불 같이 엉크러졌고 술을 마신 것 같이 취한 그들은 마른 지푸라기 같이 모두 탈 것이거늘</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와께 악을 꾀하는 한 사람이 너희 중에서 나와서 사악한 것을 권하는도다</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와께서 이같이 말씀하시기를 그들이 비록 강하고 많을지라도 반드시 멸절을 당하리니 그가 없어지리라 내가 전에는 너를 괴롭혔으나 다시는 너를 괴롭히지 아니할 것이라</div>
+        <div class="verse"><span class="verse-num">13</span> 이제 네게 지운 그의 멍에를 내가 깨뜨리고 네 결박을 끊으리라</div>
+        <div class="verse"><span class="verse-num">14</span> 나 여호와가 네게 대하여 명령하였나니 네 이름이 다시는 전파되지 않을 것이라 내가 네 신들의 집에서 새긴 우상과 부은 우상을 멸절하며 네 무덤을 준비하리니 이는 네가 쓸모 없게 되었음이라</div>
+        <div class="verse"><span class="verse-num">15</span> 볼지어다 아름다운 소식을 알리고 화평을 전하는 자의 발이 산 위에 있도다 유다야 네 절기를 지키고 네 서원을 갚을지어다 악인이 진멸되었으니 그가 다시는 네 가운데로 통행하지 아니하리로다 하시니라</div>
+
+        <!-- 나훔 2장 -->
+        <div class="chapter-title">나훔 2장 (1~13절)</div>
+        <div class="verse"><span class="verse-num">1</span> 파괴하는 자가 너를 치러 올라왔나니 너는 산성을 지키며 길을 파수하며 네 허리를 견고히 묶고 네 힘을 크게 굳게 할지어다</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와께서 야곱의 영광을 회복하시되 이스라엘의 영광 같게 하시나니 이는 약탈자들이 약탈하였고 또 그들의 포도나무 가지를 없이 하였음이라</div>
+        <div class="verse"><span class="verse-num">3</span> 그의 용사들의 방패는 붉고 그의 무사들의 옷도 붉으며 그 항오를 벌이는 날에 병거의 쇠가 번쩍이고 노송나무 창이 요동하는도다</div>
+        <div class="verse"><span class="verse-num">4</span> 그 병거는 미친 듯이 거리를 달리며 대로에서 이리저리 빨리 달리니 그 모양이 횃불 같고 빠르기가 번개 같도다</div>
+        <div class="verse"><span class="verse-num">5</span> 그가 그의 존귀한 자들을 생각해 내니 그들이 엎드러질 듯이 달려서 급히 성에 이르러 막을 것을 준비하도다</div>
+        <div class="verse"><span class="verse-num">6</span> 강들의 수문이 열리고 왕궁이 소멸되며</div>
+        <div class="verse"><span class="verse-num">7</span> 정한 대로 왕후가 벌거벗은 몸으로 끌려가니 그 모든 시녀들이 가슴을 치며 비둘기 같이 슬피 우는도다</div>
+        <div class="verse"><span class="verse-num">8</span> 니느웨는 예로부터 물이 모인 못 같더니 이제 모두 도망하니 서라 서라 하나 돌아보는 자가 없도다</div>
+        <div class="verse"><span class="verse-num">9</span> 은을 노략하라 금을 노략하라 그 저축한 것이 무한하고 아름다운 기구가 풍부함이니라</div>
+        <div class="verse"><span class="verse-num">10</span> 니느웨가 공허하였고 황폐하였도다 주민이 낙담하여 그 무릎이 서로 부딪히며 모든 허리가 아프게 되며 모든 낯이 빛을 잃도다</div>
+        <div class="verse"><span class="verse-num">11</span> 이제 사자의 굴이 어디냐 젊은 사자가 먹을 곳이 어디냐 전에는 수사자 암사자가 그 새끼 사자와 함께 거기서 다니되 그것들을 두렵게 할 자가 없었으며</div>
+        <div class="verse"><span class="verse-num">12</span> 수사자가 그 새끼를 위하여 먹이를 충분히 찢고 그의 암사자들을 위하여 움켜 사냥한 것으로 그 굴을 채웠고 찢은 것으로 그 구멍을 채웠었도다</div>
+        <div class="verse"><span class="verse-num">13</span> 만군의 여호와의 말씀에 내가 네 대적이 되어 네 병거들을 불살라 연기가 되게 하고 네 젊은 사자들을 칼로 멸할 것이며 내가 또 네 노략한 것을 땅에서 끊으리니 네 파견자의 목소리가 다시는 들리지 아니하리라 하셨느니라</div>
+
+        <!-- 나훔 3장 -->
+        <div class="chapter-title">나훔 3장 (1~19절)</div>
+        <div class="verse"><span class="verse-num">1</span> 화 있을진저 피의 성이여 그 안에는 거짓이 가득하고 포악이 가득하며 탈취가 떠나지 아니하는도다</div>
+        <div class="verse"><span class="verse-num">2</span> 휙휙 하는 채찍 소리, 윙윙 하는 병거 바퀴 소리, 뛰는 말, 달리는 병거,</div>
+        <div class="verse"><span class="verse-num">3</span> 충돌하는 기병, 번쩍이는 칼, 번개 같은 창, 죽임 당한 자의 떼, 주검의 큰 무더기, 무수한 시체여 사람이 그 시체에 걸려 넘어지니</div>
+        <div class="verse"><span class="verse-num">4</span> 이는 마술에 능숙한 미모의 음녀가 많은 음행을 함이라 그가 그의 음행으로 여러 나라를 미혹하고 그의 마술로 여러 족속을 미혹하느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 보라 내가 네게 말하노니 만군의 여호와의 말씀에 네 치마를 걷어 올려 네 얼굴에 이르게 하고 네 벌거벗은 것을 나라들에게 보이며 네 부끄러운 곳을 뭇 민족에게 보일 것이요</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 또 가증하고 더러운 것들을 네 위에 던져 능욕하여 너를 구경거리가 되게 하리니</div>
+        <div class="verse"><span class="verse-num">7</span> 그 때에 너를 보는 자가 다 네게서 도망하며 이르기를 니느웨가 황폐하였도다 누가 그것을 위하여 애곡하며 내가 어디서 너를 위로할 자를 구하리요 하리라</div>
+        <div class="verse"><span class="verse-num">8</span> 네가 어찌 노아몬보다 낫겠느냐 그는 강들 사이에 있으므로 물이 둘렸으니 바다가 성루가 되었고 바다가 방어벽이 되었으며</div>
+        <div class="verse"><span class="verse-num">9</span> 구스와 애굽은 그의 힘이 강하여 끝이 없었고 붓과 루빔이 그를 돕는 자가 되었으나</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 포로가 되어 사로잡혀 갔고 그의 어린 아이들은 길 모퉁이 모퉁이에 메어침을 당하여 부서졌으며 그의 존귀한 자들은 제비 뽑혀 나뉘었고 그의 모든 권세자들은 사슬에 결박되었나니</div>
+        <div class="verse"><span class="verse-num">11</span> 너도 술에 취하여 숨으리라 너도 원수들 때문에 피난처를 찾으리라</div>
+        <div class="verse"><span class="verse-num">12</span> 네 모든 산성은 무화과나무의 처음 익은 열매가 흔들기만 하면 먹는 자의 입에 떨어짐과 같으리라</div>
+        <div class="verse"><span class="verse-num">13</span> 네 가운데 1)장정들은 여인 같고 네 땅의 성문들은 네 원수 앞에 넓게 열리고 빗장들은 불에 타도다</div>
+        <div class="verse"><span class="verse-num">14</span> 너는 물을 길어 에워싸일 것을 대비하며 너의 산성들을 견고하게 하며 진흙에 들어가서 흙을 밟아 벽돌 가마를 수리하라</div>
+        <div class="verse"><span class="verse-num">15</span> 거기서 불이 너를 삼키며 칼이 너를 베기를 느치가 먹는 것 같이 하리라 네가 느치 같이 스스로 많게 할지어다 네가 메뚜기 같이 스스로 많게 할지어다</div>
+        <div class="verse"><span class="verse-num">16</span> 네가 네 상인을 하늘의 별보다 많게 하였으나 느치가 날개를 펴서 날아감과 같고</div>
+        <div class="verse"><span class="verse-num">17</span> 네 방백은 메뚜기 같고 너의 장수들은 큰 메뚜기 떼가 추운 날에는 울타리에 깃들였다가 해가 뜨면 날아감과 같으니 그 있는 곳을 알 수 없도다</div>
+        <div class="verse"><span class="verse-num">18</span> 앗수르 왕이여 네 목자가 자고 네 귀족은 누워 쉬며 네 백성은 산들에 흩어지나 그들을 모을 사람이 없도다</div>
+        <div class="verse"><span class="verse-num">19</span> 네 상처는 고칠 수 없고 네 부상은 중하도다 네 소식을 듣는 자가 다 너를 보고 손뼉을 치나니 이는 그들이 항상 네게 행패를 당하였음이 아니더냐 하시니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

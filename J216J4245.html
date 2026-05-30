@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 216</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* STREAMING_CHUNK:Styling confession boxes... -->
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* STREAMING_CHUNK:Styling the 5 points section and quotes... -->
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* STREAMING_CHUNK:Styling the bible text section and footer... -->
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 216</h1>
+        <p class="sub-title">찬송가 384장 나의 갈 길 다가도록</p>
+        <p class="sub-title">예레미야 42~45장 — 애굽으로 도망친 자들</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 384장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/132Lk3g6DWW0uOKbU0KYTC0Qjz5TzN_LG" alt="찬송가 384장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 예레미야 42~45장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 3차 바벨론 포로 이후 남유다에 남겨진 자들이 애굽행을 결정하면서 예레미야에게 중보기도를 요청합니다.</span>
+            남유다에 남아 있던 백성들 일부가 <strong>하나님께서 정하신 방향이 아닌 반대 방향 애굽을 마음에 결정하고서 예레미야 선지자에게 중보기도를 부탁합니다</strong>(렘 42:1~3). 이는 마치 <strong>시드기야 왕이 바벨론에 항복하라는 하나님의 말씀에 순종할 마음이 전혀 없으면서 예레미야 선지자에게 기도 요청을 했던 것과 같았습니다</strong>(렘 37:3).<br><br>
+            그들은 <strong>바벨론의 보복이 두려워 애굽으로 도망하기로 모든 결정을 이미 끝냈습니다.</strong> 예레미야 선지자에게 기도를 요청한 것은 겉보기에 하나님께 여쭙고 애굽으로 간 것처럼 보이게 하려는 것뿐이었습니다.
+            <div class="quote">
+                <strong>이들의 기도 부탁은 결코 하나님의 뜻에 순종하겠다는 진심이 아니었습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 예레미야 선지자의 중보기도에 대한 하나님의 응답은 "애굽으로 가면 재앙이 있을 것이다"입니다.</span>
+            <strong>하나님의 뜻은 애굽으로 내려가지 말고 비록 폐허가 되었지만 남유다에 머물라는 것</strong>입니다. 그러면 극상품 무화과 열매가 될 바벨론 포로로 끌려간 백성들처럼 <strong>남유다에 남아 있는 백성들도 하나님께서 뜻을 돌이켜 용서해주시고 구원해 주겠다고 응답해 주십니다</strong>(렘 42:10~12).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 결국 요하난과 군 지휘관들은 예레미야 선지자와 바룩까지 데리고 애굽으로 망명을 갑니다.</span>
+            이미 애굽행을 결심하고 예레미야 선지자에게 기도를 부탁했던 남유다 백성들은 <strong>애굽으로 내려가지 말라는 하나님의 응답을 듣고 예레미야에게 폭언을 쏟아붓습니다</strong>(렘 43:2~3). 그들은 <strong>예레미야 선지자가 전한 하나님의 말씀을 모두 거짓이라고 치부해버렸습니다.</strong> 더 나아가 <strong>바룩이 예레미야 선지자를 부추겨 자신들을 바벨론 포로로 팔아넘기려 한다고 모함까지 합니다.</strong>
+            <div class="quote">
+                <strong>결국 요하난과 군 지휘관들은 예레미야 선지자와 바룩까지 거느리고 애굽으로의 망명을 강행합니다.</strong> (렘 43:4~7)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님께서는 애굽으로 내려간 '나쁜 무화과나무' 남유다 백성들에게까지 예레미야를 통해 말씀을 주십니다.</span>
+            하나님께서는 하나님의 말씀을 거역한 그들에게도 <strong>남유다의 멸망 원인을 다시 말씀해주십니다</strong>(렘 44:2~5). 마침내 <strong>하나님께서는 애굽으로 내려간 남유다 백성들을 향해 심판을 선언하십니다</strong>(렘 44:12~13).<br><br>
+            그러나 그들은 회개하지 않고 오히려 <strong>남유다가 멸망한 원인이 하늘의 여왕에게 했던 분향을 폐했기 때문이라고 주장합니다.</strong> 예레미야 선지자가 그렇게 열심히 외쳤어도 <strong>그들이 듣지 않고 외면했던 이유가 여기에 있었던 것</strong>입니다.<br><br>
+            하나님께서는 이제 <strong>그들에게 최후 심판을 말씀하십니다</strong>(렘 44:26~27).
+            <div class="quote">
+                <strong>하나님의 말씀은 B.C. 570년 애굽의 왕 호브라가 내전으로 죽고 B.C. 567년 바벨론 느부갓네살 왕의 애굽 원정으로 애굽이 멸망하면서 성취됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 예레미야 선지자와 끝까지 동행한 바룩에게 구원을 약속해주십니다.</span>
+            민족의 멸망을 이야기하며 <strong>극심한 고통 가운데 고군분투하는 예레미야 선지자와 동행한 바룩에게 주어진 현실은 시온의 대로가 아니었습니다.</strong> 오히려 <strong>예레미야가 당했던 고통, 눈물, 아픔이 고스란히 바룩에게도 주어졌습니다.</strong><br><br>
+            <strong>진실을 붙드는 대가가 고통과 슬픔임을 알면서도 기꺼이 예레미야 선지자와 함께 그 길을 선택한 바룩</strong>, 고통의 한가운데서도 예레미야의 곁을 떠나지 않고 함께한 바룩을 <strong>하나님께서 위로해주십니다.</strong>
+            <div class="quote">
+                <strong>"재앙 가운데서도 생명을 얻게 되리라"</strong> (렘 45:4~5)<br><br>
+                <strong>바룩은 예레미야 선지자가 힘들고 어려운 환경 속에서 고통과 눈물을 참아야 했던 시간에 가장 가까운 곳에서 끝까지 함께했던 예레미야의 소중하고 진실한 친구이자 하나님의 사람이었습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 예레미야 42~45장 '애굽으로 도망친 자들'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 예레미야 42장 -->
+        <div class="chapter-title">예레미야 42장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이에 모든 군대의 지휘관과 가레아의 아들 요하난과 호사야의 아들 여사냐와 백성의 낮은 자로부터 높은 자까지 다 나아와</div>
+        <div class="verse"><span class="verse-num">2</span> 선지자 예레미야에게 이르되 당신은 우리의 탄원을 듣고 이 남아 있는 모든 자를 위하여 당신의 하나님 여호와께 기도해 주소서 당신이 보는 바와 같이 우리는 많은 사람 중에서 남은 적은 무리이니</div>
+        <div class="verse"><span class="verse-num">3</span> 당신의 하나님 여호와께서 우리가 마땅히 갈 길과 할 일을 보이시기를 원하나이다</div>
+        <div class="verse"><span class="verse-num">4</span> 선지자 예레미야가 그들에게 이르되 내가 너희 말을 들었은즉 너희 말대로 너희 하나님 여호와께 기도하고 무릇 여호와께서 너희에게 응답하시는 것을 숨김이 없이 너희에게 말하리라</div>
+        <div class="verse"><span class="verse-num">5</span> 그들이 예레미야에게 이르되 우리가 당신의 하나님 여호와께서 당신을 보내사 우리에게 이르시는 모든 말씀대로 행하리이다 여호와께서는 우리 가운데에 진실하고 성실한 증인이 되시옵소서</div>
+        <div class="verse"><span class="verse-num">6</span> 우리가 당신을 우리 하나님 여호와께 보냄은 그의 목소리가 우리에게 좋든지 좋지 않든지를 막론하고 순종하려 함이라 우리가 우리 하나님 여호와의 목소리를 순종하면 우리에게 복이 있으리이다 하니라</div>
+        <div class="verse"><span class="verse-num">7</span> 십일 후에 여호와의 말씀이 예레미야에게 임하니</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 가레아의 아들 요하난과 그와 함께 있는 모든 군 지휘관과 백성의 낮은 자로부터 높은 자까지 다 부르고</div>
+        <div class="verse"><span class="verse-num">9</span> 그들에게 이르되 너희가 나를 보내어 너희의 간구를 이스라엘의 하나님 여호와께 드리게 하지 아니하였느냐 그가 이렇게 이르니라</div>
+        <div class="verse"><span class="verse-num">10</span> 너희가 이 땅에 눌러 앉아 산다면 내가 너희를 세우고 헐지 아니하며 너희를 심고 뽑지 아니하리니 이는 내가 너희에게 내린 재난에 대하여 뜻을 돌이킴이라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와의 말씀이니라 너희는 너희가 두려워하는 바벨론의 왕을 겁내지 말라 내가 너희와 함께 있어 너희를 구원하며 그의 손에서 너희를 건지리니 두려워하지 말라</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 너희를 불쌍히 여기리니 그도 너희를 불쌍히 여겨 너희를 너희 본향으로 돌려보내리라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그러나 만일 너희가 너희 하나님 여호와의 말씀을 복종하지 아니하고 말하기를 우리는 이 땅에 살지 아니하리라 하며</div>
+        <div class="verse"><span class="verse-num">14</span> 또 너희가 말하기를 아니라 우리는 전쟁도 보이지 아니하며 나팔 소리도 들리지 아니하며 양식의 궁핍도 당하지 아니하는 애굽 땅으로 들어가 살리라 하면 잘못되리라</div>
+        <div class="verse"><span class="verse-num">15</span> 너희 유다의 남은 자여 이제 여호와의 말씀을 들으라 만군의 여호와 이스라엘의 하나님께서 이와 같이 말씀하시되 너희가 만일 애굽에 들어가서 거기에 살기로 고집하면</div>
+        <div class="verse"><span class="verse-num">16</span> 너희가 두려워하는 칼이 애굽 땅으로 따라가서 너희에게 미칠 것이요 너희가 두려워하는 기근이 애굽으로 급히 따라가서 너희에게 임하리니 너희가 거기에서 죽을 것이라</div>
+        <div class="verse"><span class="verse-num">17</span> 무릇 애굽으로 들어가서 거기에 머물러 살기로 고집하는 모든 사람은 이와 같이 되리니 곧 칼과 기근과 전염병에 죽을 것인즉 내가 그들에게 내리는 재난을 벗어나서 남을 자 없으리라</div>
+        <div class="verse"><span class="verse-num">18</span> 만군의 여호와 이스라엘의 하나님께서 이와 같이 말씀하시되 나의 노여움과 분을 예루살렘 주민에게 부은 것 같이 너희가 애굽에 이를 때에 나의 분을 너희에게 부으리니 너희가 가증함과 놀램과 저주와 치욕거리가 될 것이라 너희가 다시는 이 땅을 보지 못하리라 하시도다</div>
+        <div class="verse"><span class="verse-num">19</span> 유다의 남은 자들아 여호와께서 너희를 두고 하신 말씀에 너희는 애굽으로 가지 말라 하셨고 나도 오늘 너희에게 경고한 것을 너희는 분명히 알라</div>
+        <div class="verse"><span class="verse-num">20</span> 너희가 나를 너희 하나님 여호와께 보내며 이르기를 우리를 위하여 우리 하나님 여호와께 기도하고 우리 하나님 여호와께서 말씀하신 대로 우리에게 전하라 우리가 그대로 행하리라 하여 너희 마음을 속였느니라</div>
+        <div class="verse"><span class="verse-num">21</span> 너희 하나님 여호와께서 나를 보내사 너희에게 명하신 말씀을 내가 오늘 너희에게 전하였어도 너희가 너희 하나님 여호와의 목소리를 도무지 순종하지 아니하였은즉</div>
+        <div class="verse"><span class="verse-num">22</span> 너희가 가서 머물려고 하는 곳에서 칼과 기근과 전염병에 죽을 줄 분명히 알지니라</div>
+
+        <!-- 예레미야 43장 -->
+        <div class="chapter-title">예레미야 43장 (1~13절)</div>
+        <div class="verse"><span class="verse-num">1</span> 예레미야가 모든 백에게 그들의 하나님 여호와의 말씀 곧 그들의 하나님 여호와께서 자기를 보내사 그들에게 이르신 이 모든 말씀을 말하기를 마치니</div>
+        <div class="verse"><span class="verse-num">2</span> 호사야의 아들 아사랴와 가레아의 아들 요하난과 모든 오만한 자가 예레미야에게 말하기를 네가 거짓을 말하는도다 우리 하나님 여호와께서 너희는 애굽에서 살려고 그리로 가지 말라고 너를 보내어 말하게 하지 아니하셨느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 이는 네리야의 아들 바룩이 너를 부추겨서 우리를 대적하여 갈대아 사람의 손에 넘겨 죽이며 바벨론으로 붙잡아가게 하려 함이라</div>
+        <div class="verse"><span class="verse-num">4</span> 이에 가레아의 아들 요하난과 모든 군 지휘관과 모든 백성이 유다 땅에 살라 하시는 여호와의 목소리를 순종하지 아니하고</div>
+        <div class="verse"><span class="verse-num">5</span> 가레아의 아들 요하난과 모든 군 지휘관이 유다의 남은 자 곧 쫓겨났던 여러 나라 가운데에서 유다 땅에 살려 하여 돌아온 자</div>
+        <div class="verse"><span class="verse-num">6</span> 곧 남자와 여자와 유아와 왕의 딸들과 사령관 느부사라단이 사반의 손자 아히감의 아들 그다랴에게 맡겨 둔 모든 사람과 선지자 예레미야와 네리야의 아들 바룩을 거느리고</div>
+        <div class="verse"><span class="verse-num">7</span> 애굽 땅에 들어가 다바네스에 이르렀으니 그들이 여호와의 목소리를 순종하지 아니함이러라</div>
+        <div class="verse"><span class="verse-num">8</span> 다바네스에서 여호와의 말씀이 예레미야에게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">9</span> 너는 유다 사람의 눈 앞에서 네 손으로 큰 돌 여러 개를 가져다가 다바네스에 있는 바로의 궁전 대문의 벽돌로 쌓은 축대에 진흙으로 감추라</div>
+        <div class="verse"><span class="verse-num">10</span> 그리고 너는 그들에게 말하기를 만군의 여호와 이스라엘의 하나님께서 이와 같이 말씀하시되 보라 내가 내 종 바벨론의 느부갓네살 왕을 불러오리니 그가 그의 왕좌를 내가 감추게 한 이 돌들 위에 놓고 또 그 화려한 큰 장막을 그 위에 치리라</div>
+        <div class="verse"><span class="verse-num">11</span> 그가 와서 애굽 땅을 치고 죽일 자는 죽이고 사로잡을 자는 사로잡고 칼로 칠 자는 칼로 칠 것이라</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 애굽 신들의 신당들을 불지르리라 느부갓네살이 그들을 불사르며 그들을 사로잡을 것이요 목자가 그의 몸에 옷을 두름 같이 애굽 땅을 자기 몸에 두르고 평안히 그 곳을 떠날 것이며</div>
+        <div class="verse"><span class="verse-num">13</span> 그가 또 애굽 땅 벧세메스의 석상들을 깨뜨리고 애굽 신들의 신당들을 불사르리라 하셨다 할지니라 하시니라</div>
+
+        <!-- 예레미야 44장 -->
+        <div class="chapter-title">예레미야 44장 (1~30절)</div>
+        <div class="verse"><span class="verse-num">1</span> 애굽 땅에 사는 모든 유다 사람 곧 믹돌과 다바네스와 놉과 바드로스 지방에 사는 자에 대하여 말씀이 예레미야에게 임하니라 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 만군의 여호와 이스라엘의 하나님께서 이와 같이 말씀하시니라 너희가 예루살렘과 유다 모든 성읍에 내린 나의 모든 재난을 보았느니라 보라 오늘 그것들이 황무지가 되었고 사는 사람이 없나니</div>
+        <div class="verse"><span class="verse-num">3</span> 이는 그들이 자기나 너희나 너희 조상들이 알지 못하는 다른 신들에게 나아가 분향하여 섬겨서 나의 노여움을 일으킨 악행으로 말미암음이라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 나의 모든 종 선지자들을 너희에게 보내되 끊임없이 보내어 이르기를 너희는 내가 미워하는 이 가증한 일을 행하지 말라 하였으나</div>
+        <div class="verse"><span class="verse-num">5</span> 그들이 듣지 아니하며 귀를 기울이지 아니하고 다른 신들에게 여전히 분향하여 그들의 악에서 돌이키지 아니하였으므로</div>
+        <div class="verse"><span class="verse-num">6</span> 나의 분과 나의 노여움을 쏟아서 유다 성읍들과 예루살렘 거리를 불살랐더니 그것들이 오늘과 같이 폐허와 황무지가 되었느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 만군의 하나님 이스라엘의 하나님 여호와께서 이와 같이 말씀하셨느니라 너희가 어찌하여 큰 악을 행하여 자기 영혼을 해하며 유다 가운데에서 너희의 남자와 여자와 아이와 젖 먹는 자를 멸절하여 남은 자가 없게 하려느냐</div>
+        <div class="verse"><span class="verse-num">8</span> 어찌하여 너희가 너희 손이 만든 것으로 나의 노여움을 일으켜 너희가 가서 머물러 사는 애굽 땅에서 다른 신들에게 분향함으로 끊어 버림을 당하여 세계 여러 나라 가운데에서 저주와 수치거리가 되고자 하느냐</div>
+        <div class="verse"><span class="verse-num">9</span> 너희가 유다 땅과 예루살렘 거리에서 행한 너희 조상들의 악행과 유다 왕들의 악행과 왕비들의 악행과 너희의 악행과 너희 아내들의 악행을 잊었느냐</div>
+        <div class="verse"><span class="verse-num">10</span> 그들이 오늘까지 겸손하지 아니하며 두려워하지도 아니하고 내가 너희와 너희 조상들 앞에 세운 나의 율법과 나의 법규를 지켜 행하지 아니하느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 그러므로 만군의 여호와 이스라엘의 하나님께서 이와 같이 말씀하시니라 보라 내가 얼굴을 너희에게로 향하여 환난을 내리고 온 유다를 끊어 버릴 것이며</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 또 애굽 땅에 머물러 살기로 고집하고 그리로 들어간 유다의 남은 자들을 처단하리니 그들이 다 멸망하여 애굽 땅에서 엎드러질 것이라 그들이 칼과 기근에 망하되 낮은 자로부터 높은 자까지 칼과 기근에 죽어서 저주와 놀램과 조롱과 수치의 대상이 되리라</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 예루살렘을 벌한 것 같이 애굽 땅에 사는 자들을 칼과 기근과 전염병으로 벌하리니</div>
+        <div class="verse"><span class="verse-num">14</span> 애굽 땅에 들어가서 거기에 머물러 살려는 유다의 남은 자 중에 피하거나 살아 남아 소원대로 돌아와서 살고자 하여 유다 땅에 돌아올 자가 없을 것이라 도망치는 자들 외에는 돌아올 자가 없으리라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 그리하여 자기 아내들이 다른 신들에게 분향하는 줄을 아는 모든 남자와 곁에 섰던 모든 여인 곧 애굽 땅 바드로스에 사는 모든 백성의 큰 무리가 예레미야에게 대답하여 이르되</div>
+        <div class="verse"><span class="verse-num">16</span> 네가 여호와의 이름으로 우리에게 하는 말을 우리가 듣지 아니하고</div>
+        <div class="verse"><span class="verse-num">17</span> 우리 입에서 낸 모든 말을 반드시 실행하여 우리가 본래 하던 것 곧 우리와 우리 선조와 우리 왕들과 우리 고관들이 유다 성읍들과 예루살렘 거리에서 하던 대로 하늘의 여왕에게 분향하고 그 앞에 전제를 드리리라 그 때에는 우리가 먹을 것이 풍부하며 복을 받고 재난을 당하지 아니하였더니</div>
+        <div class="verse"><span class="verse-num">18</span> 우리가 하늘의 여왕에게 분향하고 그 앞에 전제 드리던 것을 폐한 후부터는 모든 것이 궁핍하고 칼과 기근에 멸망을 당하였느니라 하며</div>
+        <div class="verse"><span class="verse-num">19</span> 여인들은 이르되 우리가 하늘의 여왕에게 분향하고 그 앞에 전제를 드릴 때에 어찌 우리 남편의 허락이 없이 그의 형상과 같은 과자를 만들어 놓고 전제를 드렸느냐 하는지라</div>
+        <div class="verse"><span class="verse-num">20</span> 예레미야가 남녀 모든 무리 곧 이 말로 대답하는 모든 백성에게 일러 이르되</div>
+        <div class="verse"><span class="verse-num">21</span> 너희가 너희 선조와 너희 왕들과 고관들과 유다 땅 백성이 유다 성읍들과 예루살렘 거리에서 분향한 일을 여호와께서 기억하셨고 그의 마음에 떠오른 것이 아닌가</div>
+        <div class="verse"><span class="verse-num">22</span> 여호와께서 너희 악행과 가증한 행위를 더 참을 수 없으셨으므로 너희 땅이 오늘과 같이 황폐하며 놀램과 저줏거리가 되어 주민이 없게 되었나니</div>
+        <div class="verse"><span class="verse-num">23</span> 너희가 분향하여 여호와께 범죄하였으며 여호와의 목소리를 순종하지 아니하고 여호와의 율법과 법규와 여러 증거대로 행하지 아니하였으므로 이 재난이 오늘과 같이 너희에게 일어났느니라</div>
+        <div class="verse"><span class="verse-num">24</span> 예레미야가 다시 모든 백성과 모든 여인에게 말하되 애굽 땅에서 사는 모든 유다 사람이여 여호와의 말씀을 들으라</div>
+        <div class="verse"><span class="verse-num">25</span> 만군의 여호와 이스라엘의 하나님께서 이와 같이 말씀하시되 너희와 너희 아내들이 입으로 말하고 손으로 이루려 하여 이르기를 우리가 서원한 대로 반드시 이행하여 하늘의 여왕에게 분향하고 전제를 드리리라 하였은즉 너희 서원을 성취하며 너희 서원을 이행하라 하시느니라</div>
+        <div class="verse"><span class="verse-num">26</span> 그러므로 애굽 땅에서 사는 모든 유다 사람이여 여호와의 말씀을 들으라 여호와께서 말씀하시되 보라 내가 나의 큰 이름으로 맹세하였은즉 애굽 온 땅에 사는 유다 사람들의 입에서 다시는 내 이름을 부르며 주 여호와의 살아 계심을 두고 맹세하노라 하는 자가 없으리라</div>
+        <div class="verse"><span class="verse-num">27</span> 보라 내가 깨어 있어 그들에게 재난을 내리고 복을 내리지 아니하리니 애굽 땅에 있는 유다 모든 사람이 칼과 기근에 망하여 멸절되리라</div>
+        <div class="verse"><span class="verse-num">28</span> 그런즉 칼을 피한 소수의 사람이 애굽 땅에서 나와 유다 땅으로 돌아오리니 애굽 땅에 들어가서 거기에 머물러 사는 유다의 모든 남은 자가 내 말과 그들의 말 가운데서 누구의 말이 진리인지 알리라</div>
+        <div class="verse"><span class="verse-num">29</span> 여호와의 말씀이니라 내가 이 곳에서 너희를 벌할 표징이 이것이라 내가 너희에게 재난을 내리리라 한 말이 반드시 이루어질 것을 그것으로 알게 하리라</div>
+        <div class="verse"><span class="verse-num">30</span> 보라 내가 유다의 시드기야 왕을 그의 원수 곧 그의 생명을 찾는 바벨론의 느부갓네살 왕의 손에 넘긴 것 같이 애굽의 바로 호브라 왕을 그의 원수들 곧 그의 생명을 찾는 자들의 손에 넘겨 주리라 여호와께서 이와 같이 말씀하셨느니라
+
+        <!-- 예레미야 45장 -->
+        <div class="chapter-title">예레미야 45장 (1~5절)</div>
+        <div class="verse"><span class="verse-num">1</span> 유다의 요시야 왕의 아들 여호야김 넷째 해에 네리야의 아들 바룩이 예레미야가 불러 주는 대로 이 모든 말을 책에 기록하니라 그 때에 선지자 예레미야가 그에게 말하여 이르되</div>
+        <div class="verse"><span class="verse-num">2</span> 바룩아 이스라엘의 하나님 여호와께서 네게 이같이 말씀하셨느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 네가 일찍이 말하기를 화로다 여호와께서 나의 고통에 슬픔을 더하셨으니 나는 나의 탄식으로 피곤하여 평안을 찾지 못하도다</div>
+        <div class="verse"><span class="verse-num">4</span> 너는 그에게 이르라 여호와께서 이와 같이 말씀하시기를 보라 나는 내가 세운 것을 헐기도 하며 내가 심은 것을 뽑기도 하나니 온 땅에 그리하겠거늘</div>
+        <div class="verse"><span class="verse-num">5</span> 네가 너를 위하여 큰 일을 찾느냐 그것을 찾지 말라 보라 내가 모든 육체에 재난을 내리리라 그러나 네가 가는 모든 곳에서는 내가 너에게 네 생명을 노략물 주듯 하리라 여호와의 말씀이니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

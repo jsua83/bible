@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 210</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 210</h1>
+        <p class="sub-title">찬송가 549장 내 주여 뜻대로</p>
+        <p class="sub-title">예레미야 26~28장 — 예레미야의 '줄과 멍에' 퍼포먼스</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 549장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1txlTSLQXWXxrF6VROOUP-8IoGe8f7as6" alt="찬송가 549장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 예레미야 26~28장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서는 예레미야 선지자에게 예루살렘 성전 뜰에서 하나님의 공개 메시지를 전하게 하십니다.</span>
+            예레미야 26장의 성전 설교는 <strong>예레미야 7장의 내용과 동일합니다.</strong> 이는 남유다 백성들이 성전에 와서 예배는 드리지만 <strong>율법대로 행하지 않고 선지자들을 통한 하나님의 말씀에 귀를 기울이지 않은 것에 대한 하나님의 강한 질책과 책망</strong>이었습니다.<br><br>
+            마침내 하나님께서는 <strong>예루살렘 성전을 '실로 같이' 되게 하겠다고 말씀하십니다</strong>(렘 26:3~6). 실로는 이스라엘 백성들이 가나안에 들어간 이후 <strong>회막을 세우고 언약궤를 두어 매년 절기를 지킨 곳</strong>입니다. 그런데 <strong>엘리 제사장 시대에 실로에 있던 언약궤를 빼앗긴 적이 있었습니다</strong>(삼상 4:11). 이와 같이 <strong>하나님의 율법을 지키지 않으면 예루살렘 성전도 망할 수 있음을 말씀하신 것</strong>입니다(렘 7:12~13, 26:9).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 예레미야 선지자는 시드기야 왕이 주재한 '6개국 동맹' 국제회의장에서 '줄과 멍에' 퍼포먼스를 시행합니다.</span>
+            바벨론 제국의 힘이 고대 근동 전체를 뒤흔들자 <strong>시드기야 왕이 남유다 주변 5개국 대표들을 예루살렘으로 초청해 국제회의를 개최합니다.</strong> 하나님께서 그곳에 <strong>예레미야 선지자를 보내십니다</strong>(렘 27:1~11).<br><br>
+            초대받지도 않은 예레미야 선지자가 <strong>국제회의장에 들어가서 '줄과 멍에' 퍼포먼스를 통해 하나님의 메시지를 전합니다.</strong>
+            <div class="quote">
+                <strong>첫째, 줄을 보여주며</strong> — "하나님의 측량이 이미 끝났으니 그러므로 <strong>남유다는 바벨론 포로로 끌려갈 것</strong>"이라고 말합니다.<br><br>
+                <strong>둘째, 멍에를 보여주며</strong> — "나무 멍에를 지지 않으면 쇠 멍에를 메게 될 것이고 이 또한 <strong>남유다가 바벨론 포로로 끌려가는 것</strong>"이라고 말합니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 예레미야 선지자는 시드기야 왕에게 바벨론 왕에게 항복하고 거짓 선지자들의 말은 듣지 말라고 권고합니다.</span>
+            예레미야 선지자는 시드기야 왕에게 <strong>죽음을 각오하고 담대하게 하나님의 뜻을 분명하게 전합니다</strong>(렘 27:12~15).
+            <div class="quote">
+                <strong>첫째,</strong> 하나님의 말씀대로 바벨론에게 항복하고 <strong>'바벨론 왕을 섬기라'</strong>는 것입니다.<br><br>
+                <strong>둘째,</strong> <strong>거짓 선지자들의 말을 듣지 말라</strong>는 것입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 예루살렘 국제회의가 무산되자 시드기야 왕은 거짓 선지자 하나냐를 주 강사로 세워 '구국 성회'를 개최합니다.</span>
+            예레미야 선지자의 '줄과 멍에' 퍼포먼스 때문에 국제회의가 중단되고 5개국 사신들이 모두 자국으로 돌아가 버리자 <strong>시드기야 왕이 이번에는 '구국 성회'를 성대하게 개최합니다</strong>(렘 28:1).
+            <div class="quote">
+                <strong>장소</strong> — 예루살렘 성전<br>
+                <strong>때</strong> — 시드기야 왕 취임 4주년을 맞이하는 5월<br>
+                <strong>대상</strong> — 제사장들과 남유다의 모든 백성<br>
+                <strong>주제</strong> — "내가 바벨론의 왕의 멍에를 꺾었다"
+            </div>
+            이러한 때 구국 성회에서 <strong>하나냐가 하나님의 말씀이라며 메시지를 전한 것</strong>입니다(렘 28:3~4). 하나냐의 메시지를 듣고 백성들은 열화와 같이 환호했지만 <strong>예레미야 선지자는 그 자리에서 대놓고 "하나냐는 거짓 선지자"라고 선포합니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 예레미야 선지자는 바벨론 포로 기간이 2년이라고 주장하는 하나냐에게 올해 죽을 것이라고 예언합니다.</span>
+            예레미야 선지자는 <strong>모든 백성이 보는 앞에서 거짓 선지자 하나냐에게 하나님의 말씀을 선포합니다</strong>(렘 28:14~16).
+            <div class="quote">
+                <strong>첫째,</strong> 남유다는 나무 멍에 대신 <strong>더 무거운 쇠 멍에를 멜 것이고 바벨론에 의한 남유다의 멸망은 변하지 않을 것</strong>이라고 예언합니다.<br><br>
+                <strong>둘째,</strong> 거짓 선지자 하나냐는 <strong>하나님의 심판을 받게 될 것</strong>이라고 예언합니다.
+            </div>
+            <div class="quote">
+                <strong>하나냐에 대한 예언은 말씀이 전해진 지 2개월 후에 하나냐가 죽음으로 이루어집니다.</strong> (렘 28:17)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 예레미야 26~28장 '예레미야의 줄과 멍에 퍼포먼스'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 예레미야 26장 -->
+        <div class="chapter-title">예레미야 26장 (1~24절)</div>
+        <div class="verse"><span class="verse-num">1</span> 유다의 왕 요시야의 아들 여호야김이 다스리기 시작한 때에 여호와께로부터 이 말씀이 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와께서 이와 같이 말씀하시니라 너는 여호와의 성전 뜰에 서서 유다 모든 성읍에서 여호와의 성전에 와서 예배하는 자에게 내가 네게 명령하여 이르게 한 모든 말을 전하되 한 마디도 감하지 말라</div>
+        <div class="verse"><span class="verse-num">3</span> 그들이 듣고 혹시 각각 그 악한 길에서 돌아오리라 그리하면 내가 그들의 악행으로 말미암아 그들에게 재앙을 내리려 하던 뜻을 돌이키리라</div>
+        <div class="verse"><span class="verse-num">4</span> 너는 그들에게 이와 같이 이르라 여호와의 말씀에 너희가 나를 순종하지 아니하며 내가 너희 앞에 둔 내 율법을 행하지 아니하며</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 너희에게 나의 종 선지자들을 꾸준히 보내 그들의 말을 순종하라고 하였으나 너희는 순종하지 아니하였느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 이 성전을 실로 같이 되게 하고 이 성을 세계 모든 민족의 저줏거리가 되게 하리라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 예레미야가 여호와의 성전에서 이 말을 하매 제사장들과 선지자들과 모든 백성이 듣더라</div>
+        <div class="verse"><span class="verse-num">8</span> 예레미야가 여호와께서 명령하신 말씀을 모든 백성에게 전하기를 마치매 제사장들과 선지자들과 모든 백성이 그를 붙잡고 이르되 네가 반드시 죽어야 하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 어찌하여 네가 여호와의 이름을 의지하고 예언하여 이르기를 이 성전이 실로 같이 되겠고 이 성이 황폐하여 주민이 없으리라 하느냐 하며 그 모든 백성이 여호와의 성전에서 예레미야를 향하여 모여드니라</div>
+        <div class="verse"><span class="verse-num">10</span> 유다의 고관들이 이 말을 듣고 왕궁에서 여호와의 성전으로 올라가 여호와의 성전 새 대문의 입구에 앉으매</div>
+        <div class="verse"><span class="verse-num">11</span> 제사장들과 선지자들이 고관들과 모든 백성에게 말하여 이르되 이 사람은 죽는 것이 합당하니 너희 귀로 들음 같이 이 성에 관하여 예언하였음이라</div>
+        <div class="verse"><span class="verse-num">12</span> 예레미야가 모든 고관과 백성에게 말하여 이르되 여호와께서 나를 보내사 너희가 들은 바 모든 말로 이 성전과 이 성을 향하여 예언하게 하셨느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그런즉 너희는 너희 길과 행위를 고치고 너희 하나님 여호와의 목소리를 청종하라 그리하면 여호와께서 너희에게 선언하신 재앙에 대하여 뜻을 돌이키시리라</div>
+        <div class="verse"><span class="verse-num">14</span> 보라 나는 너희 손에 있으니 너희 의견에 좋은 대로, 옳은 대로 하려니와</div>
+        <div class="verse"><span class="verse-num">15</span> 너희는 분명히 알아라 너희가 나를 죽이면 반드시 무죄한 피를 너희 몸과 이 성과 이 성 주민에게 돌리는 것이니라 이는 여호와께서 진실로 나를 보내사 이 모든 말을 너희 귀에 말하게 하셨음이라</div>
+        <div class="verse"><span class="verse-num">16</span> 고관들과 모든 백성이 제사장들과 선지자들에게 이르되 이 사람이 우리 하나님 여호와의 이름으로 우리에게 말하였으니 죽일 만한 이유가 없느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 그러자 그 지방의 장로 중 몇 사람이 일어나 백성의 온 회중에게 말하여 이르기를</div>
+        <div class="verse"><span class="verse-num">18</span> 유다의 왕 히스기야 시대에 모레셋 사람 미가가 유다의 모든 백성에게 예언하여 이르되 만군의 여호와께서 이와 같이 말씀하셨느니라 시온은 밭 같이 경작지가 될 것이며 예루살렘은 돌 무더기가 되며 이 성전의 산은 산당의 숲과 같이 되리라 하였으나</div>
+        <div class="verse"><span class="verse-num">19</span> 유다의 왕 히스기야와 모든 유다가 그를 죽였느냐 히스기야가 여호와를 두려워하여 여호와께 간구하매 여호와께서 그들에게 선언한 재앙에 대하여 뜻을 돌이키지 아니하셨느냐 우리가 이같이 하면 우리의 생명을 스스로 심히 해롭게 하는 것이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 또 여호와의 이름으로 예언한 사람이 있었는데 곧 기럇여아림 스마야의 아들 우리야라 그가 예레미야의 모든 말과 같이 이 성과 이 땅에 경고하여 예언하매</div>
+        <div class="verse"><span class="verse-num">21</span> 여호야김 왕과 그의 모든 용사와 모든 고관이 그의 말을 듣고서 왕이 그를 죽이려 하매 우리야가 그 말을 듣고 두려워 애굽으로 도망하여 간지라</div>
+        <div class="verse"><span class="verse-num">22</span> 여호야김 왕이 사람을 애굽으로 보내되 곧 악볼의 아들 엘라단과 몇 사람을 함께 애굽으로 보냈더니</div>
+        <div class="verse"><span class="verse-num">23</span> 그들이 우리야를 애굽에서 연행하여 여호야김 왕에게로 그를 데려오매 왕이 칼로 그를 죽이고 그의 시체를 평민의 묘지에 던지게 하니라</div>
+        <div class="verse"><span class="verse-num">24</span> 사반의 아들 아히감의 손이 예레미야를 도와 주어 그를 백성의 손에 내어 주지 아니하여 죽이지 못하게 하니라</div>
+
+        <!-- 예레미야 27장 -->
+        <div class="chapter-title">예레미야 27장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 유다의 왕 요시야의 아들 여호야김이 다스리기 시작할 때에 여호와께서 말씀으로 예레미야에게 임하시니라</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와께서 이와 같이 내게 말씀하시되 너는 줄과 멍에를 만들어 네 목에 걸고</div>
+        <div class="verse"><span class="verse-num">3</span> 유다의 왕 시드기야를 보러 예루살렘에 온 사신들의 손에도 그것을 주어 에돔의 왕과 모압의 왕과 암몬 자손의 왕과 두로의 왕과 시돈의 왕에게 보내며</div>
+        <div class="verse"><span class="verse-num">4</span> 그들에게 명령하여 그들의 주에게 말하게 하기를 만군의 여호와 이스라엘의 하나님께서 이와 같이 말씀하시되 너희는 너희의 주에게 이같이 전하라</div>
+        <div class="verse"><span class="verse-num">5</span> 나는 내 큰 능력과 나의 쳐든 팔로 땅과 지상에 있는 사람과 짐승들을 만들고 내가 보기에 옳은 사람에게 그것을 주었노라</div>
+        <div class="verse"><span class="verse-num">6</span> 이제 내가 이 모든 땅을 내 종 바벨론의 왕 느부갓네살의 손에 주고 또 들짐승들을 그에게 주어서 섬기게 하였나니</div>
+        <div class="verse"><span class="verse-num">7</span> 모든 나라가 그와 그의 아들과 손자를 그 땅의 기한이 이르기까지 섬기리라 또한 많은 나라들과 큰 왕들이 그 자신을 섬기리라</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와의 말씀이니라 바벨론의 왕 느부갓네살을 섬기지 아니하며 그 목으로 바벨론의 왕의 멍에를 메지 아니하는 백성과 나라는 내가 그들이 멸망하기까지 칼과 기근과 전염병으로 그 민족을 벌하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 너희는 너희 선지자나 복술가나 꿈꾸는 자나 술사나 요술자가 이르기를 너희가 바벨론의 왕을 섬기게 되지 아니하리라 하여도 너희는 듣지 말라</div>
+        <div class="verse"><span class="verse-num">10</span> 그들은 너희에게 거짓을 예언하여 너희가 너희 땅에서 멀리 떠나게 하며 또 내가 너희를 몰아내게 하며 너희를 멸망하게 하느니라</div>
+        <div class="verse"><span class="verse-num">11</span> 그러나 그 목으로 바벨론의 왕의 멍에를 메고 그를 섬기는 나라는 내가 그들을 그 땅에 머물러 밭을 갈며 거기서 살게 하리라 하셨다 하라 여호와의 말씀이니라 하시니라</div>
+        <div class="verse"><span class="verse-num">12</span> 내가 이 모든 말씀대로 유다의 왕 시드기야에게 전하여 이르되 왕과 백성은 바벨론 왕의 멍에를 목에 메고 그와 그의 백성을 섬기소서 그리하면 사시리라</div>
+        <div class="verse"><span class="verse-num">13</span> 어찌하여 당신과 당신의 백성이 여호와께서 바벨론의 왕을 섬기지 아니하는 나라에 대하여 하신 말씀과 같이 칼과 기근과 전염병에 죽으려 하나이까</div>
+        <div class="verse"><span class="verse-num">14</span> 그러므로 당신들은 바벨론의 왕을 섬기게 되지 아니하리라 하는 선지자의 말을 듣지 마소서 그들은 거짓을 예언함이니이다</div>
+        <div class="verse"><span class="verse-num">15</span> 이는 여호와의 말씀이니라 내가 그들을 보내지 아니하였거늘 그들이 내 이름으로 거짓을 예언하니 내가 너희를 몰아내리니 너희와 너희에게 예언하는 선지자들이 멸망하리라</div>
+        <div class="verse"><span class="verse-num">16</span> 내가 또 제사장들과 그 모든 백성에게 전하여 이르되 여호와께서 이와 같이 말씀하시기를 보라 여호와의 성전의 기구를 이제 바벨론에서 속히 돌려오리라고 너희에게 예언하는 선지자들의 말을 듣지 말라 이는 그들이 거짓을 예언함이니라 하셨나니</div>
+        <div class="verse"><span class="verse-num">17</span> 너희는 그들의 말을 듣지 말고 바벨론의 왕을 섬기라 그리하면 살리라 어찌하여 이 성을 황무지가 되게 하려느냐</div>
+        <div class="verse"><span class="verse-num">18</span> 만일 그들이 선지자이고 여호와의 말씀을 가지고 있다면 그들이 여호와의 성전에와 유다의 왕의 궁전에와 예루살렘에 남아 있는 기구를 바벨론으로 옮겨가지 못하도록 만군의 여호와께 구하여야 할 것이니라</div>
+        <div class="verse"><span class="verse-num">19</span> 만군의 여호와께서 기둥들과 큰 대야와 받침들과 이 성에 남아 있는 기구에 대하여 이같이 말씀하시나니</div>
+        <div class="verse"><span class="verse-num">20</span> 이것은 바벨론의 왕 느부갓네살이 유다의 왕 여호야김의 아들 여고니야와 유다와 예루살렘 모든 귀인을 예루살렘에서 바벨론으로 사로잡아 옮길 때에 가져가지 아니하였던 것이라</div>
+        <div class="verse"><span class="verse-num">21</span> 만군의 여호와 이스라엘의 하나님께서 여호와의 성전과 유다의 왕의 궁전과 예루살렘에 남아 있는 그 기구에 대하여 이와 같이 말씀하셨느니라</div>
+        <div class="verse"><span class="verse-num">22</span> 그것들이 바벨론으로 옮겨지고 내가 이것을 돌보는 날까지 거기에 있을 것이니라 그 후에 내가 그것을 올려 와 이 곳에 그것들을 되돌려 두리라 여호와의 말씀이니라</div>
+
+        <!-- 예레미야 28장 -->
+        <div class="chapter-title">예레미야 28장 (1~17절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 해 곧 유다 왕 시드기야가 다스리기 시작한 지 사 년 다섯째 달 기브온앗술의 아들 선지자 하나냐가 여호와의 성전에서 제사장들과 모든 백성이 보는 앞에서 내게 말하여 이르되</div>
+        <div class="verse"><span class="verse-num">2</span> 만군의 여호와 이스라엘의 하나님이 이같이 일러 말씀하시기를 내가 바벨론의 왕의 멍에를 꺾었느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 내가 바벨론의 왕 느부갓네살이 이 곳에서 빼앗아 바벨론으로 옮겨 간 여호와의 성전 모든 기구를 이 년 안에 다시 이 곳으로 되돌려 오리라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 또 유다의 왕 여호야김의 아들 여고니야와 바벨론으로 간 유다 모든 포로를 다시 이 곳으로 돌아오게 하리니 이는 내가 바벨론의 왕의 멍에를 꺾을 것임이라 여호와의 말씀이니라 하니라</div>
+        <div class="verse"><span class="verse-num">5</span> 선지자 예레미야가 여호와의 성전에 서 있는 제사장들과 모든 백성들이 보는 앞에서 선지자 하나냐에게 말하니라</div>
+        <div class="verse"><span class="verse-num">6</span> 선지자 예레미야가 말하니라 아멘, 여호와는 이같이 하옵소서 여호와께서 네가 예언한 말대로 이루사 여호와의 성전 기구와 모든 포로를 바벨론에서 이 곳으로 되돌려 오시기를 원하노라</div>
+        <div class="verse"><span class="verse-num">7</span> 그러나 너는 내가 네 귀와 모든 백성의 귀에 이르는 이 말을 잘 들으라</div>
+        <div class="verse"><span class="verse-num">8</span> 나와 너 이전의 선지자들이 예로부터 많은 땅들과 큰 나라들에 대하여 전쟁과 재앙과 전염병을 예언하였느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 평화를 예언하는 선지자는 그 예언자의 말이 응한 후에야 그가 진실로 여호와께서 보내신 선지자로 인정 받게 되리라</div>
+        <div class="verse"><span class="verse-num">10</span> 선지자 하나냐가 선지자 예레미야의 목에서 멍에를 빼앗아 꺾고</div>
+        <div class="verse"><span class="verse-num">11</span> 모든 백성 앞에서 하나냐가 말하여 이르되 여호와께서 이와 같이 말씀하시니라 내가 이 년 안에 모든 민족의 목에서 바벨론의 왕 느부갓네살의 멍에를 이와 같이 꺾어 버리리라 하셨느니라 하매 선지자 예레미야가 자기의 길을 가니라</div>
+        <div class="verse"><span class="verse-num">12</span> 선지자 하나냐가 선지자 예레미야의 목에서 멍에를 꺾어 버린 후에 여호와의 말씀이 예레미야에게 임하니라 이르시기를</div>
+        <div class="verse"><span class="verse-num">13</span> 너는 가서 하나냐에게 말하여 이르기를 여호와의 말씀에 네가 나무 멍에들을 꺾었으나 그 대신 쇠 멍에들을 만들었느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 만군의 여호와 이스라엘의 하나님께서 이와 같이 말씀하시니라 내가 쇠 멍에로 이 모든 나라의 목에 메워 바벨론의 왕 느부갓네살을 섬기게 하였으니 그들이 그를 섬기리라 내가 들짐승도 그에게 주었느니라 하라</div>
+        <div class="verse"><span class="verse-num">15</span> 선지자 예레미야가 선지자 하나냐에게 이르되 하나냐여 들으라 여호와께서 너를 보내지 아니하셨거늘 네가 이 백성에게 거짓을 믿게 하는도다</div>
+        <div class="verse"><span class="verse-num">16</span> 그러므로 여호와께서 이와 같이 말씀하시되 내가 너를 지면에서 제하리니 네가 여호와께 패역한 말을 하였음이라 네가 금년에 죽으리라 하셨느니라 하더니</div>
+        <div class="verse"><span class="verse-num">17</span> 선지자 하나냐가 그 해 일곱째 달에 죽었더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

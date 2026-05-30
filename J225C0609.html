@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 225</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 225</h1>
+        <p class="sub-title">찬송가 210장 시온성과 같은 교회</p>
+        <p class="sub-title">역대상 6~9장 — 역대기 족보 특강 3: 희망</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 210장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1mo5HFcT_CU2AJOmrVyPOppvvkDVbL4KL" alt="찬송가 210장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 역대상 6~9장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 야곱의 유언대로 레위 지파는 제사장 지파가 되어 이스라엘 각 지파 사이로 흩어집니다.</span>
+            역대상 1~9장까지는 전체가 족보입니다. 그러나 <strong>어느 한 절도 빠짐없이 밑줄을 다 쳐야 할 정도로 한 사람 한 사람의 이름이 중요하고 의미 있으며 그 안에 살아 있는 '역사'가 들어 있음을 발견하게 됩니다.</strong><br><br>
+            역대상 6장에는 <strong>야곱(이스라엘)의 셋째 아들 레위와 레위 지파의 족보, 그들의 행적이 기록되어 있습니다.</strong> 레위 지파는 야곱의 유언(창 49:5~7)대로 <strong>제사장 지파가 되어 이스라엘 각 지파로 흩어져 살게 됩니다.</strong> 레위 지파 사람들은 <strong>각 지파의 땅에 들어가 도피성 6개를 포함하여 48개 성읍에 살면서 제사장 나라 일을 감당</strong>하며 살았습니다.
+            <div class="quote">
+                <strong>레위 지파는 가나안에서 땅을 분배받지 못했지만 하나님께서 그들의 기업이 되어 주셨습니다.</strong>
+            </div>
+            이후 <strong>바벨론에 의해 남유다가 멸망할 때 대제사장이었던 여호사닥까지 바벨론 포로로 끌려감으로 성전 기능이 중지되었습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 다윗의 성전 조직 정비 때에 성전에서 찬송하는 사람들, 즉 '찬양대'가 생겨납니다.</span>
+            다윗 때에 <strong>인류 최초의 회막 앞에서 하나님의 성호를 찬양하는 '찬양대'가 출범합니다</strong>(대상 6:31~32). 언약궤가 예루살렘성으로 들어간 후 다윗은 <strong>고핫, 게르손, 므라리 자손들이 회막에서 하나님의 성호를 찬양하도록 찬양대를 조직</strong>했습니다.
+            <div class="quote">
+                <strong>다윗과 솔로몬 때에 이들은 성전에서 찬양대의 일과 각자 맡은 임무를 수행했고 대제사장 가문인 아론 가문은 제사와 지성소의 모든 일을 감당했습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 요단 서편 지파들의 족보에서 단 지파와 스불론 지파의 기록은 제외됩니다.</span>
+            역대상 7장에는 잇사갈, 베냐민, 납달리 지파와 므낫세 반 지파, 에브라임 지파의 족보가 기록되어 있습니다. <strong>그러나 단 지파와 스불론 지파의 족보는 제외되어 있습니다.</strong> 그 이유는 <strong>단 지파와 스불론 지파가 이스라엘 북쪽 지역에서 살면서 가장 먼저 우상숭배에 깊이 빠졌기 때문</strong>인 것 같습니다.
+            <div class="quote">
+                <strong>특히 역대상 7장에는 이스라엘 전체의 군사력을 유지하는 핵심이 되는 각 지파의 병력 수까지 꼼꼼히 기록되어 있습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 이스라엘이 솔로몬 이후 남북으로 나뉠 때에 남유다와 함께한 베냐민 지파 족보가 다시 한번 기록됩니다.</span>
+            야곱의 유언에서 베냐민 지파는 이렇게 표현됩니다.
+            <div class="quote">
+                <strong>"베냐민은 물어뜯는 이리라 아침에는 빼앗은 것을 먹고 저녁에는 움킨 것을 나누리로다"</strong> (창 49:27)
+            </div>
+            베냐민 지파의 특징을 역사 속에서 살펴봅니다.
+            <div class="quote">
+                <strong>첫째,</strong> 베냐민 지파는 <strong>이스라엘의 초대 왕 사울의 지파</strong>입니다(삼상 10:20~21).<br>
+                <strong>둘째,</strong> 이스라엘이 솔로몬 사후 남북으로 나뉠 때에 <strong>베냐민 지파 일부는 유다 지파와 함께 남유다에 남았습니다</strong>(왕상 12:21).<br>
+                <strong>셋째,</strong> 베냐민 지파는 <strong>유다 지파와 가장 끈끈한 우애를 나누었습니다.</strong> 다윗과 요나단이 보여준 '세기의 우정', 다수를 따르지 않고 남유다에 함께 남은 베냐민 지파의 사랑, 그리고 유다 지파 예수님과 베냐민 지파 사도 바울의 사랑이 <strong>성경 속 두 지파의 끈끈한 사랑 이야기로 기록되어 있습니다.</strong><br>
+                <strong>넷째,</strong> 베냐민 지파는 <strong>바벨론 포로 귀환의 주역이 됩니다</strong>(느 11:4~7).
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 바벨론 포로 귀환 후 극상품 무화과 열매가 된 사람들의 명단이 기록됩니다.</span>
+            역대상 9장에서는 <strong>하나님께서 소금 언약(민 18장)을 맺으셨던 레위 지파에 대한 족보와 행적이 자세하게 소개됩니다.</strong> 바벨론 포로 70년을 보내고 <strong>예루살렘으로 돌아온 귀환 공동체는 하나님의 훈련의 채찍에 겸손과 기대로 응답하고 있습니다</strong>(대상 9:1~2).<br><br>
+            바벨론에서 70년 만에 다시 예루살렘으로 귀환하여 자신의 성읍에 거주하기 시작한 사람들의 명단은 다음과 같습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 제사장들입니다.<br>
+                <strong>둘째,</strong> 레위인들입니다. 레위인들 가운데에는 <strong>문지기, 성전 기구를 맡은 이들, 그리고 찬양대</strong>가 속해 있습니다.<br>
+                <strong>셋째,</strong> 느디님 사람들입니다. 느디님 사람들은 <strong>'바쳐진 사람들'로 성전에서 레위 사람들을 돕던 일꾼들</strong>이었으며 주로 전쟁 포로들이었습니다(민 31:40, 스 8:20). 이들도 성전에서 일하기 때문에 <strong>세금을 면제받았습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 역대상 6~9장 '역대기 족보 특강 3: 희망'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 역대상 6장 -->
+        <div class="chapter-title">역대상 6장 (1~81절)</div>
+        <div class="verse"><span class="verse-num">1</span> 레위의 아들들은 게르손과 그핫과 므라리요</div>
+        <div class="verse"><span class="verse-num">2</span> 그핫의 아들들은 아므람과 이스할과 헤브론과 웃시엘이요</div>
+        <div class="verse"><span class="verse-num">3</span> 아므람의 자녀는 아론과 모세와 미리암이요 아론의 자녀는 나답과 아비후와 엘르아살과 이다말이며</div>
+        <div class="verse"><span class="verse-num">4</span> 엘르아살은 비느하스를 낳고 비느하스는 아비수아를 낳고</div>
+        <div class="verse"><span class="verse-num">5</span> 아비수아는 북기를 낳고 북기는 웃시를 낳고</div>
+        <div class="verse"><span class="verse-num">6</span> 웃시는 스라히야를 낳고 스라히야는 므라욧을 낳고</div>
+        <div class="verse"><span class="verse-num">7</span> 므라욧은 아마랴를 낳고 아마랴는 아히둡을 낳고</div>
+        <div class="verse"><span class="verse-num">8</span> 아히둡은 사독을 낳고 사독은 아히마아스를 낳고</div>
+        <div class="verse"><span class="verse-num">9</span> 아히마아스는 아사랴를 낳고 아사랴는 요하난을 낳고</div>
+        <div class="verse"><span class="verse-num">10</span> 요하난은 아사랴를 낳았으니 이 아사랴는 솔로몬이 예루살렘에 세운 성전에서 제사장의 직분을 행한 자이며</div>
+        <div class="verse"><span class="verse-num">11</span> 아사랴는 아마랴를 낳고 아마랴는 아히둡을 낳고</div>
+        <div class="verse"><span class="verse-num">12</span> 아히둡은 사독을 낳고 사독은 살룸을 낳고</div>
+        <div class="verse"><span class="verse-num">13</span> 살룸은 힐기야를 낳고 힐기야는 아사랴를 낳고</div>
+        <div class="verse"><span class="verse-num">14</span> 아사랴는 스라야를 낳고 스라야는 여호사닥을 낳았으며</div>
+        <div class="verse"><span class="verse-num">15</span> 여호와께서 느부갓네살의 손으로 유다와 예루살렘 백성을 옮기실 때에 여호사닥도 가니라</div>
+        <div class="verse"><span class="verse-num">16</span> 레위의 아들들은 게르손과 그핫과 므라리이며</div>
+        <div class="verse"><span class="verse-num">17</span> 게르손의 아들들의 이름은 이러하니 립니와 시므이요</div>
+        <div class="verse"><span class="verse-num">18</span> 그핫의 아들들은 아므람과 이스할과 헤브론과 웃시엘이요</div>
+        <div class="verse"><span class="verse-num">19</span> 므라리의 아들들은 말리와 무시라 그 조상에 따라 레위의 종족은 이러하니</div>
+        <div class="verse"><span class="verse-num">20</span> 게르손에게서 난 자는 곧 그의 아들 립니요 그의 아들은 야핫이요 그의 아들은 심마요</div>
+        <div class="verse"><span class="verse-num">21</span> 그의 아들은 요아요 그의 아들은 잇도요 그의 아들은 세라요 그의 아들은 여아드래이며</div>
+        <div class="verse"><span class="verse-num">22</span> 그핫에게서 난 자는 곧 그 아들은 암미나답이요 그의 아들은 고라요 그의 아들은 앗실이요</div>
+        <div class="verse"><span class="verse-num">23</span> 그의 아들은 엘가나요 그의 아들은 에비아삽이요 그의 아들은 앗실이요</div>
+        <div class="verse"><span class="verse-num">24</span> 그의 아들은 다핫이요 그의 아들은 우리엘이요 그의 아들은 웃시야요 그의 아들은 사울이라</div>
+        <div class="verse"><span class="verse-num">25</span> 엘가나의 아들들은 아마새와 아히못이라</div>
+        <div class="verse"><span class="verse-num">26</span> 엘가나로 말하면 그의 자손은 이러하니 그의 아들은 소배요 그의 아들은 나핫이요</div>
+        <div class="verse"><span class="verse-num">27</span> 그의 아들은 엘리압이요 그의 아들은 여로함이요 그의 아들은 엘가나라</div>
+        <div class="verse"><span class="verse-num">28</span> 사무엘의 아들들은 맏아들 요엘이요 다음은 아비야라</div>
+        <div class="verse"><span class="verse-num">29</span> 므라리에게서 난 자는 말리요 그의 아들은 립니요 그의 아들은 시므이요 그의 아들은 웃사요</div>
+        <div class="verse"><span class="verse-num">30</span> 그의 아들은 시므아요 그의 아들은 학기야요 그의 아들은 아사야더라</div>
+        <div class="verse"><span class="verse-num">31</span> 언약궤가 평안을 얻었을 때에 다윗이 여호와의 성전에서 찬송하는 직분을 맡긴 자들은 아래와 같았더라</div>
+        <div class="verse"><span class="verse-num">32</span> 솔로몬이 예루살렘에서 여호와의 성전을 세울 때까지 그들이 회막 앞에서 찬송하는 일을 행하되 그 계열대로 직무를 행하였더라</div>
+        <div class="verse"><span class="verse-num">33</span> 직무를 행하는 자와 그의 아들들은 이러하니 그핫의 자손 중에 헤만은 찬송하는 자라 그는 요엘의 아들이요 요엘은 사무엘의 아들이요</div>
+        <div class="verse"><span class="verse-num">34</span> 사무엘은 엘가나의 아들이요 엘가나는 여로함의 아들이요 여로함은 엘리엘의 아들이요 엘리엘은 도아의 아들이요</div>
+        <div class="verse"><span class="verse-num">35</span> 도아는 숩의 아들이요 숩은 엘가나의 아들이요 엘가나는 마핫의 아들이요 마핫은 아마새의 아들이요</div>
+        <div class="verse"><span class="verse-num">36</span> 아마새는 엘가나의 아들이요 엘가나는 요엘의 아들이요 요엘은 아사랴의 아들이요 아사랴는 스바냐의 아들이요</div>
+        <div class="verse"><span class="verse-num">37</span> 스바냐는 다핫의 아들이요 다핫은 앗실의 아들이요 앗실은 에비아삽의 아들이요 에비아삽은 고라의 아들이요</div>
+        <div class="verse"><span class="verse-num">38</span> 고라는 이스할의 아들이요 이스할은 그핫의 아들이요 그핫은 레위의 아들이요 레위는 이스라엘의 아들이라</div>
+        <div class="verse"><span class="verse-num">39</span> 헤만의 형제 아삽은 헤만의 오른쪽에서 직무를 행하였으니 그는 베레갸의 아들이요 베레갸는 시므아의 아들이요</div>
+        <div class="verse"><span class="verse-num">40</span> 시므아는 미가엘의 아들이요 미가엘은 바아세야의 아들이요 바아세야는 말기야의 아들이요</div>
+        <div class="verse"><span class="verse-num">41</span> 말기야는 에드니의 아들이요 에드니는 세라의 아들이요 세라는 아다야의 아들이요</div>
+        <div class="verse"><span class="verse-num">42</span> 아다야는 에단의 아들이요 에단은 심마의 아들이요 심마는 시므이의 아들이요</div>
+        <div class="verse"><span class="verse-num">43</span> 시므이는 야핫의 아들이요 야핫은 게르손의 아들이요 게르손은 레위의 아들이며</div>
+        <div class="verse"><span class="verse-num">44</span> 그들의 형제 므라리의 자손 중 그의 왼쪽에서 직무를 행하는 자는 에단이라 에단은 기시의 아들이요 기시는 압디의 아들이요 압디는 말룩의 아들이요</div>
+        <div class="verse"><span class="verse-num">45</span> 말룩은 하사뱌의 아들이요 하사뱌는 아마시야의 아들이요 아마시야는 힐기야의 아들이요</div>
+        <div class="verse"><span class="verse-num">46</span> 힐기야는 암시의 아들이요 암시는 바니의 아들이요 바니는 세멜의 아들이요</div>
+        <div class="verse"><span class="verse-num">47</span> 세멜은 말리의 아들이요 말리는 무시의 아들이요 무시는 므라리의 아들이요 므라리는 레위의 아들이며</div>
+        <div class="verse"><span class="verse-num">48</span> 그들의 형제 레위 사람들은 하나님의 집 장막의 모든 일을 맡았더라</div>
+        <div class="verse"><span class="verse-num">49</span> 아론과 그의 자손들은 번제단과 향단 위에 분향하며 제사를 드리며 지성소의 모든 일을 하여 하나님의 종 모세의 모든 명령대로 이스라엘을 위하여 속죄하니</div>
+        <div class="verse"><span class="verse-num">50</span> 아론의 자손들은 이러하니라 그의 아들은 엘르아살이요 그의 아들은 비느하스요 그의 아들은 아비수아요</div>
+        <div class="verse"><span class="verse-num">51</span> 그의 아들은 북기요 그의 아들은 웃시요 그의 아들은 스라히야요</div>
+        <div class="verse"><span class="verse-num">52</span> 그의 아들은 므라욧이요 그의 아들은 아마랴요 그의 아들은 아히둡이요</div>
+        <div class="verse"><span class="verse-num">53</span> 그의 아들은 사독이요 그의 아들은 아히마아스이더라</div>
+        <div class="verse"><span class="verse-num">54</span> 그들의 거주한 곳은 사방 지계 안에 있으니 그들의 마을은 아래와 같으니라 아론 자손 곧 그핫 종족이 먼저 제비 뽑았으므로</div>
+        <div class="verse"><span class="verse-num">55</span> 그들에게 유다 땅의 헤브론과 그 사방 초원을 주었고</div>
+        <div class="verse"><span class="verse-num">56</span> 그러나 그 성의 밭과 마을은 여분네의 아들 갈렙에게 주었으며</div>
+        <div class="verse"><span class="verse-num">57</span> 아론 자손에게 도피성을 주었으니 헤브론과 립나와 그 초원과 얏딜과 에스드모아와 그 초원과</div>
+        <div class="verse"><span class="verse-num">58</span> 힐렌과 그 초원과 드빌과 그 초원과</div>
+        <div class="verse"><span class="verse-num">59</span> 아산과 그 초원과 벧세메스와 그 초원이며</div>
+        <div class="verse"><span class="verse-num">60</span> 또 베냐민 지파 중에서는 게바와 그 초원과 알레멧과 그 초원과 아나돗과 그 초원을 주었으니 그들의 종족이 얻은 성이 모두 열셋이었더라</div>
+        <div class="verse"><span class="verse-num">61</span> 그핫 자손의 남은 자에게는 절반 지파 즉 므낫세 반 지파 종족 중에서 제비 뽑아 열 성읍을 주었고</div>
+        <div class="verse"><span class="verse-num">62</span> 게르손 자손에게는 그들의 종족대로 잇사갈 지파와 아셀 지파와 납달리 지파와 바산에 있는 므낫세 지파 중에서 열세 성읍을 주었고</div>
+        <div class="verse"><span class="verse-num">63</span> 므라리 자손에게는 그 종족대로 르우벤 지파와 갓 지파와 스불론 지파 중에서 제비 뽑아 열두 성읍을 주었더라</div>
+        <div class="verse"><span class="verse-num">64</span> 이스라엘 자손이 이 모든 성읍과 그 목초지를 레위 자손에게 주되</div>
+        <div class="verse"><span class="verse-num">65</span> 유다 자손의 지파와 시므온 자손의 지파와 베냐민 자손의 지파 중에서 이 위에 기록한 여러 성읍을 제비 뽑아 주었더라</div>
+        <div class="verse"><span class="verse-num">66</span> 그핫 자손의 몇 종족은 에브라임 지파 중에서 성읍을 얻어 영토를 삼았으며</div>
+        <div class="verse"><span class="verse-num">67</span> 또 그들에게 도피성을 주었으니 에브라임 산중 세겜과 그 초원과 게셀과 그 초원과</div>
+        <div class="verse"><span class="verse-num">68</span> 욕므암과 그 초원과 벧호론과 그 초원과</div>
+        <div class="verse"><span class="verse-num">69</span> 아얄론과 그 초원과 가드림몬과 그 초원이며</div>
+        <div class="verse"><span class="verse-num">70</span> 또 그핫 자손의 남은 종족에게는 므낫세 반 지파 중에서 아넬과 그 초원과 빌르암과 그 초원을 주었더라</div>
+        <div class="verse"><span class="verse-num">71</span> 게르손 자손에게는 므낫세 반 지파 종족 중에서 바산의 골란과 그 초원과 아스다롯과 그 초원을 주고</div>
+        <div class="verse"><span class="verse-num">72</span> 또 잇사갈 지파 중에서 게데스와 그 초원과 다브랏과 그 초원과</div>
+        <div class="verse"><span class="verse-num">73</span> 라못과 그 초원과 아넴과 그 초원을 주고</div>
+        <div class="verse"><span class="verse-num">74</span> 아셀 지파 중에서 마살과 그 초원과 압돈과 그 초원과</div>
+        <div class="verse"><span class="verse-num">75</span> 후곡과 그 초원과 르홉과 그 초원을 주고</div>
+        <div class="verse"><span class="verse-num">76</span> 납달리 지파 중에서 갈릴리의 게데스와 그 초원과 함몬과 그 초원과 기랴다임과 그 초원을 주니라</div>
+        <div class="verse"><span class="verse-num">77</span> 므라리 자손의 남은 자에게는 스불론 지파 중에서 림모노와 그 초원과 다볼과 그 초원을 주었고</div>
+        <div class="verse"><span class="verse-num">78</span> 또 요단 건너 동쪽 곧 여리고 맞은편 르우벤 지파 중에서 광야의 베셀과 그 초원과 야사와 그 초원과</div>
+        <div class="verse"><span class="verse-num">79</span> 그데못과 그 초원과 메바앗과 그 초원을 주었고</div>
+        <div class="verse"><span class="verse-num">80</span> 또 갓 지파 중에서 길르앗의 라못과 그 초원과 마하나임과 그 초원과</div>
+        <div class="verse"><span class="verse-num">81</span> 헤스본과 그 초원과 야셀과 그 초원을 주었더라</div>
+
+        <!-- 역대상 7장 -->
+        <div class="chapter-title">역대상 7장 (1~40절)</div>
+        <div class="verse"><span class="verse-num">1</span> 잇사갈의 아들들은 돌라와 부아와 야숩과 시므론 네 사람이며</div>
+        <div class="verse"><span class="verse-num">2</span> 돌라의 아들들은 웃시와 르바야와 여리엘과 야매와 입삼과 스므엘이니 다 그의 아버지 돌라의 집 우두머리라 대대로 용사이더니 다윗 때에 이르러는 그 수효가 이만 이천육백 명이었더라</div>
+        <div class="verse"><span class="verse-num">3</span> 웃시의 아들은 이스라히야요 이스라히야의 아들들은 미가엘과 오바댜와 요엘과 잇시야 다섯 사람이 모두 우두머리며</div>
+        <div class="verse"><span class="verse-num">4</span> 그들과 함께 있는 자는 그 계보와 종족대로 능히 출전할 만한 군대가 삼만 육천 명이니 이는 그 처자가 많기 때문이며</div>
+        <div class="verse"><span class="verse-num">5</span> 그의 형제 잇사갈의 모든 종족은 다 용감한 장사라 그 전체를 계수하면 팔만 칠천 명이었더라</div>
+        <div class="verse"><span class="verse-num">6</span> 베냐민의 아들들은 벨라와 베겔과 여디아엘 세 사람이며</div>
+        <div class="verse"><span class="verse-num">7</span> 벨라의 아들들은 에스본과 우시와 웃시엘과 여리못과 이리 다섯 사람이니 다 그 집의 우두머리요 큰 용사라 그 계보대로 계수하면 이만 이천삼십사 명이며</div>
+        <div class="verse"><span class="verse-num">8</span> 베겔의 아들들은 스미라와 요아스와 엘리에셀과 엘료에내와 오므리와 여레못과 아비야와 아나돗과 알레멧이니 베겔의 아들들은 모두 이러하며</div>
+        <div class="verse"><span class="verse-num">9</span> 그들은 다 그 집의 우두머리요 용감한 장사라 그 자손을 계보에 의해 계수하면 이만 이백 명이며</div>
+        <div class="verse"><span class="verse-num">10</span> 여디아엘의 아들은 빌한이요 빌한의 아들들은 여우스와 베냐민과 에훗과 그나아나와 세단과 다시스와 아히사할이니</div>
+        <div class="verse"><span class="verse-num">11</span> 이 여디아엘의 아들들은 모두 그 집의 우두머리요 큰 용사라 그들의 자손 중에 능히 출전할 만한 자가 만 칠천이백 명이며</div>
+        <div class="verse"><span class="verse-num">12</span> 일의 아들은 숩빔과 훕빔이요 아헬의 아들은 후심이더라</div>
+        <div class="verse"><span class="verse-num">13</span> 납달리의 아들들은 야시엘과 구니와 예셀과 살룸이니 이는 빌하의 손자더라</div>
+        <div class="verse"><span class="verse-num">14</span> 므낫세의 아들들은 그의 아내가 낳아 준 아스리엘과 그의 소실 아람 여인이 낳아 준 길르앗의 아버지 마길이니</div>
+        <div class="verse"><span class="verse-num">15</span> 마길은 훕빔과 숩빔의 누이 마아가라 하는 이에게 장가 들었더라 므낫세의 둘째 아들의 이름은 슬로브핫이니 슬로브핫은 딸들만 낳았으며</div>
+        <div class="verse"><span class="verse-num">16</span> 마길의 아내 마아가는 아들을 낳아 그의 이름을 베레스라 하였으며 그의 아우의 이름은 세레스이며 세레스의 아들들은 울람과 라겜이요</div>
+        <div class="verse"><span class="verse-num">17</span> 울람의 아들들은 브단이니 이는 다 길르앗의 자손이라 길르앗은 마길의 아들이요 므낫세의 손자이며</div>
+        <div class="verse"><span class="verse-num">18</span> 그의 누이 함몰레겟은 이스홋과 아비에셀과 말라를 낳았고</div>
+        <div class="verse"><span class="verse-num">19</span> 스미다의 아들들은 아히안과 세겜과 릭히와 아니암이더라</div>
+        <div class="verse"><span class="verse-num">20</span> 에브라임의 아들은 수델라요 그의 아들은 베렛이요 그의 아들은 다핫이요 그의 아들은 엘르아다요 그의 아들은 다핫이요</div>
+        <div class="verse"><span class="verse-num">21</span> 그의 아들은 사밧이요 그의 아들은 수델라며 그가 또 에셀과 엘르앗을 낳았으나 그들이 가드 원주민에게 죽임을 당하였으니 이는 그들이 내려가서 가드 사람의 짐승을 빼앗고자 하였음이라</div>
+        <div class="verse"><span class="verse-num">22</span> 그의 아버지 에브라임이 여러 날 슬퍼하므로 그의 형제가 가서 위로하였더라</div>
+        <div class="verse"><span class="verse-num">23</span> 그리고 에브라임이 그의 아내와 동침하매 임신하여 아들을 낳으니 그 집이 재앙을 받았으므로 그의 이름을 브리아라 하였더라</div>
+        <div class="verse"><span class="verse-num">24</span> 에브라임의 딸은 세에라이니 그가 아래 윗 성 벧호론과 우센세에라를 건설하였더라</div>
+        <div class="verse"><span class="verse-num">25</span> 브리아의 아들들은 레바와 레셉이요 레셉의 아들은 델라요 그의 아들은 다한이요</div>
+        <div class="verse"><span class="verse-num">26</span> 그의 아들은 라단이요 그의 아들은 암미훗이요 그의 아들은 엘리사마요</div>
+        <div class="verse"><span class="verse-num">27</span> 그의 아들은 눈이요 그의 아들은 여호수아더라</div>
+        <div class="verse"><span class="verse-num">28</span> 에브라임 자손의 토지와 거주지는 벧엘과 그 주변 마을이요 동쪽으로는 나아란이요 서쪽에는 게셀과 그 주변 마을이며 또 세겜과 그 주변 마을이니 아사와 그 주변 마을까지이며</div>
+        <div class="verse"><span class="verse-num">29</span> 또 므낫세 자손의 지계에 가까운 벧스안과 그 주변 마을과 다아낙과 그 주변 마을과 므깃도와 그 주변 마을과 돌과 그 주변 마을이라 이스라엘의 아들 요셉의 자손이 이 여러 곳에 거하였더라</div>
+        <div class="verse"><span class="verse-num">30</span> 아셀의 아들들은 임나와 이스와와 이스위와 브리아요 그들의 매제는 세라이며</div>
+        <div class="verse"><span class="verse-num">31</span> 브리아의 아들들은 헤벨과 말기엘이니 말기엘은 비르사잇의 아버지이며</div>
+        <div class="verse"><span class="verse-num">32</span> 헤벨은 야블렛과 소멜과 호담과 그들의 매제 수아를 낳았으며</div>
+        <div class="verse"><span class="verse-num">33</span> 야블렛의 아들들은 바삭과 빔할과 아스왓이니 야블렛의 아들은 이러하며</div>
+        <div class="verse"><span class="verse-num">34</span> 소멜의 아들들은 아히와 로가와 호바와 아람이요</div>
+        <div class="verse"><span class="verse-num">35</span> 그의 아우 헬렘의 아들들은 소바와 임나와 셀레스와 아말이요</div>
+        <div class="verse"><span class="verse-num">36</span> 소바의 아들들은 수아와 하르네벨과 수알과 베리와 이므라와</div>
+        <div class="verse"><span class="verse-num">37</span> 베셀과 홋과 사마와 실사와 이드란과 브에라요</div>
+        <div class="verse"><span class="verse-num">38</span> 예델의 아들들은 여분네와 비스바와 아라요</div>
+        <div class="verse"><span class="verse-num">39</span> 울라의 아들들은 아라와 한니엘과 리시아이니</div>
+        <div class="verse"><span class="verse-num">40</span> 이는 다 아셀의 자손으로 우두머리요 정선된 용감한 장사요 방백의 우두머리라 출전할 만한 자를 그들의 계보대로 계수하면 이만 육천 명이었더라</div>
+
+        <!-- 역대상 8장 -->
+        <div class="chapter-title">역대상 8장 (1~40절)</div>
+        <div class="verse"><span class="verse-num">1</span> 베냐민이 낳은 자는 맏아들 벨라와 둘째 아스벨과 셋째 아하라와</div>
+        <div class="verse"><span class="verse-num">2</span> 넷째 노하와 다섯째 라바이며</div>
+        <div class="verse"><span class="verse-num">3</span> 벨라에게 아들들이 있으니 곧 앗달과 게라와 아비훗과</div>
+        <div class="verse"><span class="verse-num">4</span> 아비수아와 나아만과 아호아와</div>
+        <div class="verse"><span class="verse-num">5</span> 게라와 스부반과 후람이라</div>
+        <div class="verse"><span class="verse-num">6</span> 에훗의 아들들은 이러하니라 그들은 게바 주민의 우두머리로서, 사로잡혀 마나핫으로 갔으니</div>
+        <div class="verse"><span class="verse-num">7</span> 곧 나아만과 아히야와 게라이며 게라는 또 웃사와 아히훗을 낳았으며</div>
+        <div class="verse"><span class="verse-num">8</span> 사하라임은 두 아내 후심과 바아라를 내 보낸 후에 모압 땅에서 자녀를 낳았으니</div>
+        <div class="verse"><span class="verse-num">9</span> 그의 아내 호데스에게서 낳은 자는 요밥과 시비야와 메사와 말감과</div>
+        <div class="verse"><span class="verse-num">10</span> 여우스와 사갸와 미르마이니 이 아들들은 우두머리이며</div>
+        <div class="verse"><span class="verse-num">11</span> 또 그의 아내 후심에게서 아비둡과 엘바알을 낳았으며</div>
+        <div class="verse"><span class="verse-num">12</span> 엘바알의 아들들은 에벨과 미삼과 세멧이니 그는 오노와 롯과 그 주변 마을들을 세웠고</div>
+        <div class="verse"><span class="verse-num">13</span> 또 브리아와 세마이니 그들은 아얄론 주민의 우두머리가 되어 그들이 가드 주민을 쫓아냈더라</div>
+        <div class="verse"><span class="verse-num">14</span> 아히요와 사삭과 여레못과</div>
+        <div class="verse"><span class="verse-num">15</span> 스바댜와 아랏과 에델과</div>
+        <div class="verse"><span class="verse-num">16</span> 미가엘과 이스바와 요하는 다 브리아의 아들들이요</div>
+        <div class="verse"><span class="verse-num">17</span> 스바댜와 므술람과 히스기와 헤벨과</div>
+        <div class="verse"><span class="verse-num">18</span> 이스므래와 이슬리아와 요밥은 다 엘바알의 아들들이요</div>
+        <div class="verse"><span class="verse-num">19</span> 야김과 시그리와 삽디와</div>
+        <div class="verse"><span class="verse-num">20</span> 엘리에내와 실르대와 엘리엘과</div>
+        <div class="verse"><span class="verse-num">21</span> 아다야와 브라야와 시므랏은 다 시므이의 아들들이요</div>
+        <div class="verse"><span class="verse-num">22</span> 이스반과 에벨과 엘리엘과</div>
+        <div class="verse"><span class="verse-num">23</span> 압돈과 시그리와 하난과</div>
+        <div class="verse"><span class="verse-num">24</span> 하나냐와 엘람과 안도디야와</div>
+        <div class="verse"><span class="verse-num">25</span> 이브드야와 브누엘은 다 사삭의 아들들이요</div>
+        <div class="verse"><span class="verse-num">26</span> 삼스래와 스하랴와 아달랴와</div>
+        <div class="verse"><span class="verse-num">27</span> 야아레시야와 엘리야와 시그리는 다 여로함의 아들들이니</div>
+        <div class="verse"><span class="verse-num">28</span> 그들은 다 가문의 우두머리이며 그들의 족보의 우두머리로서 예루살렘에 거주하였더라</div>
+        <div class="verse"><span class="verse-num">29</span> 기브온의 조상 여이엘은 기브온에 거주하였으니 그 아내의 이름은 마아가며</div>
+        <div class="verse"><span class="verse-num">30</span> 장자는 압돈이요 다음은 술과 기스와 바알과 나답과</div>
+        <div class="verse"><span class="verse-num">31</span> 그돌과 아히오와 세겔이며</div>
+        <div class="verse"><span class="verse-num">32</span> 미글롯은 시므아를 낳았으며 그들은 친족들과 더불어 마주하고 예루살렘에 거주하였더라</div>
+        <div class="verse"><span class="verse-num">33</span> 넬은 기스를 낳고 기스는 사울을 낳고 사울은 요나단과 말기수아와 아비나답과 에스바알을 낳았으며</div>
+        <div class="verse"><span class="verse-num">34</span> 요나단의 아들은 므립바알이라 므립바알은 미가를 낳았고</div>
+        <div class="verse"><span class="verse-num">35</span> 미가의 아들들은 비돈과 멜렉과 다레아와 아하스이며</div>
+        <div class="verse"><span class="verse-num">36</span> 아하스는 여호앗다를 낳고 여호앗다는 알레멧과 아스마웻과 시므리를 낳고 시므리는 모사를 낳고</div>
+        <div class="verse"><span class="verse-num">37</span> 모사는 비느아를 낳았으며 비느아의 아들은 라바요 그의 아들은 엘르아사요 그의 아들은 아셀이며</div>
+        <div class="verse"><span class="verse-num">38</span> 아셀에게 여섯 아들이 있어 그들의 이름은 이러하니 아스리감과 보그루와 이스마엘과 스아랴와 오바댜와 하난이라 아셀의 모든 아들이 이러하며</div>
+        <div class="verse"><span class="verse-num">39</span> 그의 아우 에섹의 아들은 이러하니 그의 맏아들은 울람이요 둘째는 여우스요 셋째는 엘리벨렛이며</div>
+        <div class="verse"><span class="verse-num">40</span> 울람의 아들은 다 용감한 장사요 활을 잘 쏘는 자라 아들과 손자가 많아 모두 백오십 명이었더라 베냐민의 자손들은 이러하였더라</div>
+
+        <!-- 역대상 9장 -->
+        <div class="chapter-title">역대상 9장 (1~44절)</div>
+        <div class="verse"><span class="verse-num">1</span> 온 이스라엘이 그 계보대로 계수되어 그들은 이스라엘 왕조실록에 기록되니라 유다가 범죄함으로 말미암아 바벨론으로 사로잡혀 갔더니</div>
+        <div class="verse"><span class="verse-num">2</span> 그들의 땅 안에 있는 성읍에 처음으로 거주한 이스라엘 사람들은 제사장들과 레위 사람들과 느디님 사람들이라</div>
+        <div class="verse"><span class="verse-num">3</span> 유다 자손과 베냐민 자손과 에브라임과 므낫세 자손 중에서 예루살렘에 거주한 자는</div>
+        <div class="verse"><span class="verse-num">4</span> 유다의 아들 베레스 자손 중에 우대이니 그는 암미훗의 아들이요 오므리의 손자요 이므리의 증손이요 바니의 현손이며</div>
+        <div class="verse"><span class="verse-num">5</span> 실로 사람 중에서는 맏아들 아사야와 그의 아들들이요</div>
+        <div class="verse"><span class="verse-num">6</span> 세라 자손 중에서는 여우엘과 그 형제 육백구십 명이요</div>
+        <div class="verse"><span class="verse-num">7</span> 베냐민 자손 중에서는 핫스누아의 증손 호다위아의 손자 므술람의 아들 살루요</div>
+        <div class="verse"><span class="verse-num">8</span> 여로함의 아들 이브느야와 미그리의 손자 웃시의 아들 엘라요 이브니야의 증손 르우엘의 손자 스바댜의 아들 무술람이요</div>
+        <div class="verse"><span class="verse-num">9</span> 또 그의 형제들이라 그들의 계보대로 계수하면 구백오십육 명이니 다 종족의 가문의 우두머리들이더라</div>
+        <div class="verse"><span class="verse-num">10</span> 제사장 중에서는 여다야와 여호야립과 야긴과</div>
+        <div class="verse"><span class="verse-num">11</span> 하나님의 성전을 맡은 자 아사랴이니 그는 힐기야의 아들이요 므술람의 손자요 사독의 증손이요 므라욧의 현손이요 아히둡의 오대손이며</div>
+        <div class="verse"><span class="verse-num">12</span> 또 아다야이니 그는 여로함의 아들이요 바스훌의 손자요 말기야의 증손이며 또 마아새니 그는 아디엘의 아들이요 야세라의 손자요 므술람의 증손이요 므실레밋의 현손이요 임멜의 오대손이며</div>
+        <div class="verse"><span class="verse-num">13</span> 또 그의 형제들이니 종족의 가문의 우두머리라 하나님의 성전의 임무를 수행할 힘있는 자는 모두 천칠백육십 명이더라</div>
+        <div class="verse"><span class="verse-num">14</span> 레위 사람 중에서는 므라리 자손 스마야이니 그는 핫숩의 아들이요 아스리감의 손자요 하사뱌의 증손이며</div>
+        <div class="verse"><span class="verse-num">15</span> 또 박박갈과 헤레스와 갈랄과 맛다냐이니 그는 미가의 아들이요 시그리의 손자요 아삽의 증손이며</div>
+        <div class="verse"><span class="verse-num">16</span> 또 오바댜이니 그는 스마야의 아들이요 갈랄의 손자요 여두둔의 증손이며 또 베레갸이니 그는 아사의 아들이요 엘가나의 손자라 느도바 사람의 마을에 거주하였더라</div>
+        <div class="verse"><span class="verse-num">17</span> 문지기는 살룸과 악굽과 달몬과 아히만과 그의 형제들이니 살룸은 그 우두머리라</div>
+        <div class="verse"><span class="verse-num">18</span> 이 사람들은 전에 왕의 문 동쪽 곧 레위 자손의 진영의 문지기이며</div>
+        <div class="verse"><span class="verse-num">19</span> 고라의 증손 에비아삽의 손자 고레의 아들 살룸과 그의 종족 형제 곧 고라의 자손이 수종 드는 일을 맡아 성막 문들을 지켰으니 그들의 조상들도 여호와의 진영을 맡고 출입문을 지켰으며</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와께서 함께 하신 엘르아살의 아들 비느하스가 옛적에 그의 무리를 거느렸고</div>
+        <div class="verse"><span class="verse-num">21</span> 므셀레먀의 아들 스가랴는 회막 문지기가 되었더라</div>
+        <div class="verse"><span class="verse-num">22</span> 택함을 입어 문지기 된 자가 모두 이백열두 명이니 이는 그들의 마을에서 그들의 계보대로 계수된 자요 다윗과 선견자 사무엘이 전에 세워서 이 직분을 맡긴 자라</div>
+        <div class="verse"><span class="verse-num">23</span> 그들과 그들의 자손이 그 순차를 좇아 여호와의 성전 곧 성막 문을 지켰는데</div>
+        <div class="verse"><span class="verse-num">24</span> 이 문지기가 동, 서, 남, 북 사방에 섰고</div>
+        <div class="verse"><span class="verse-num">25</span> 그들의 마을에 있는 형제들은 이레마다 와서 그들과 함께 있으니</div>
+        <div class="verse"><span class="verse-num">26</span> 이는 문지기의 우두머리 된 레위 사람 넷이 중요한 직분을 맡아 하나님의 성전 모든 방과 곳간을 지켰음이라</div>
+        <div class="verse"><span class="verse-num">27</span> 그들은 하나님의 성전을 맡은 직분이 있으므로 성전 주위에서 밤을 지내며 아침마다 문을 여는 책임이 그들에게 있었더라</div>
+        <div class="verse"><span class="verse-num">28</span> 그 중에 어떤 자는 섬기는 데 쓰는 기구를 맡아서 그 수효대로 들여가고 수효대로 내오며</div>
+        <div class="verse"><span class="verse-num">29</span> 또 어떤 자는 성소의 기구와 모든 그릇과 고운 가루와 포도주와 기름과 유향과 향품을 맡았으며</div>
+        <div class="verse"><span class="verse-num">30</span> 또 제사장의 아들 중의 어떤 자는 향품으로 향기름을 만들었으며</div>
+        <div class="verse"><span class="verse-num">31</span> 고라 자손 살룸의 맏아들 맛디댜라 하는 레위 사람은 전병을 굽는 일을 맡았으며</div>
+        <div class="verse"><span class="verse-num">32</span> 또 그의 형제 그핫 자손 중에 어떤 자는 진설하는 떡을 맡아 안식일마다 준비하였더라</div>
+        <div class="verse"><span class="verse-num">33</span> 또 찬송하는 자가 있으니 곧 레위 우두머리라 그들은 골방에 거주하면서 주야로 자기 직분에 전념하므로 다른 일은 하지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">34</span> 그들은 다 레위 가문의 우두머리이며 그들의 족보의 우두머리로서 예루살렘에 거주하였더라</div>
+        <div class="verse"><span class="verse-num">35</span> 기브온의 조상 여이엘은 기브온에 거주하였으니 그의 아내의 이름은 마아가라</div>
+        <div class="verse"><span class="verse-num">36</span> 그의 맏아들은 압돈이요 다음은 술과 기스와 바알과 넬과 나답과</div>
+        <div class="verse"><span class="verse-num">37</span> 그돌과 아히오와 스가랴와 미글롯이며</div>
+        <div class="verse"><span class="verse-num">38</span> 미글롯은 시므암을 낳았으니 그들은 그들의 친족들과 더불어 마주하고 예루살렘에 거주하였더라</div>
+        <div class="verse"><span class="verse-num">39</span> 넬은 기스를 낳고 기스는 사울을 낳고 사울은 요나단과 말기수아와 아비나답과 에스바알을 낳았으며</div>
+        <div class="verse"><span class="verse-num">40</span> 요나단의 아들은 므립바알이라 므립바알은 미가를 낳았고</div>
+        <div class="verse"><span class="verse-num">41</span> 미가의 아들들은 비돈과 멜렉과 다레아와 아하스이며</div>
+        <div class="verse"><span class="verse-num">42</span> 아하스는 야라를 낳고 야라는 알레멧과 아스마웻과 시므리를 낳고 시므리는 모사를 낳고</div>
+        <div class="verse"><span class="verse-num">43</span> 모사는 비느아를 낳았으며 비느아의 아들은 르바야요 그의 아들은 엘르아사요 그의 아들은 아셀이며</div>
+        <div class="verse"><span class="verse-num">44</span> 아셀이 여섯 아들이 있으니 그들의 이름은 아스리감과 보그루와 이스마엘과 스아랴와 오바댜와 하난이라 아셀의 아들들이 이러하였더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

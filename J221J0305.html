@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 221</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 221</h1>
+        <p class="sub-title">찬송가 435장 나의 영원하신 기업</p>
+        <p class="sub-title">예레미야애가 3~5장 — 소망: 주의 인자와 긍휼</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 435장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1sfKlaMD39AJctPZVAsjnWpu9Vk2tZt80" alt="찬송가 435장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 예레미야애가 3~5장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 언제나 '한 사람의 순종'은 하나님의 시작입니다.</span>
+            울다 지친 예레미야 선지자가 놀랍게도 <strong>다시 희망을 노래합니다.</strong>
+            <div class="quote">
+                <strong>첫째,</strong> 하나님께서 바벨론에 <strong>'남은 자'를 두셨다는 사실</strong> 때문입니다 (애 3:21~22).<br>
+                <strong>둘째,</strong> 앞으로 남은 자들과 후손들, 즉 <strong>다니엘, 에스겔, 스룹바벨, 에스더, 에스라, 느헤미야 같은 극상품 무화과 열매들이 배출될 것</strong>이기 때문입니다 (애 5:21).
+            </div>
+            <div class="quote">
+                <strong>성경을 통해 배우게 되는 소중한 진실은 언제나 '한 사람의 순종'은 하나님의 시작이라는 사실입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님께서 인생으로 고생하게 하시며 근심하게 하심은 본심이 아닙니다.</span>
+            예레미야 선지자가 <strong>하나님의 분노의 매를 맞은 자가 되어 탄식의 노래를 부릅니다</strong>(애 3:1~18). 그렇게 고통과 절망을 노래하던 예레미야 선지자가 <strong>하나님의 긍휼을 의지하며 다시 구원의 소망을 노래합니다</strong>(애 3:19~23).<br><br>
+            그리고 바벨론에서의 징계 70년 동안 <strong>남유다 백성들이 앞으로 해야 할 일들을 말합니다</strong>(애 3:24~40).
+            <div class="quote">
+                <strong>첫째,</strong> 하나님을 바라며 <strong>잠잠히 기다리자</strong>고 말합니다.<br>
+                <strong>둘째,</strong> <strong>멍에를 메자</strong>고 말합니다. 멍에를 메는 것이 사는 길입니다.<br>
+                <strong>셋째,</strong> <strong>땅의 티끌에 입을 대자</strong>고 말합니다. 징계를 당하는 자는 티끌이 입에 닿을 정도로 숙여 하나님께 복종해야 한다는 것입니다.<br>
+                <strong>넷째,</strong> <strong>치욕을 당하자</strong>고 말합니다.<br>
+                <strong>다섯째,</strong> <strong>회개하고 하나님께 돌아가자</strong>고 말합니다.
+            </div>
+            <div class="quote">
+                <strong>예레미야 선지자는 하나님의 징계의 시간을 인내하고 참으면 하나님의 구원이 임할 것이라고 말합니다. 왜냐하면 하나님의 본심은 인자와 긍휼에 있기 때문입니다.</strong> (애 3:31~33)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 남유다를 멸망으로 이끈 두 가지 이유는 첫째 종교 지도자들의 잘못 때문이며 둘째 이방 민족을 의지했기 때문입니다.</span>
+            예레미야 선지자는 모든 탄식을 마친 후에 <strong>남유다가 멸망하게 된 원인 두 가지를 지적합니다.</strong>
+            <div class="quote">
+                <strong>첫째,</strong> 남유다를 멸망으로 이끈 첫 번째 책임은 <strong>'종교 지도자들'</strong>에게 있다고 지적합니다(애 4:11~13). 이는 종교 지도자들이 <strong>의인들의 피를 흘리게 했으며 맹인이 인도하는 것처럼 백성들을 의의 길로 인도하지 못했음을 비판</strong>합니다.<br>
+                <strong>둘째,</strong> 남유다를 멸망으로 이끈 두 번째 책임은 남유다가 <strong>'이방 민족을 의지'</strong>했음에 있습니다(애 4:17). 남유다는 나라가 풍전등화였음에도 <strong>예레미야 선지자의 충고를 끝내 외면하고 계속 애굽을 의지하려 했습니다.</strong> 그러나 모두 헛된 것이었습니다.
+            </div>
+            <div class="quote">
+                <strong>이렇게 예레미야를 통해 남유다의 멸망의 원인을 정확하게 밝히신 하나님께서는 에돔의 멸망과 남유다의 회복을 다시 한번 말씀하십니다.</strong> (애 4:21~22)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 예레미야 선지자는 남유다 멸망의 참담한 상황을 자세하게 증언합니다.</span>
+            예레미야 선지자는 <strong>남유다의 참담한 상황과 그들이 받은 치욕을 하나님께서 살펴주시며 긍휼을 베풀어주시기를 간청합니다.</strong> 예레미야애가 5장에 <strong>예레미야의 애타는 심정이 잘 나타나 있습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 예레미야 선지자는 모든 이를 대표해 죄 고백하며 하나님의 구원을 간구합니다.</span>
+            예레미야 선지자가 하나님께 <strong>남유다의 죄를 고백합니다</strong>(애 5:6~7, 16). <strong>하나님을 의지하지 않고 이방 민족과 동맹을 맺어 의지하려 했던 죄를 고백한 것</strong>입니다. 지금의 이 모든 결과는 <strong>조상들로부터 시작해 지금까지 행하고 있는 남유다의 죄악 때문임을 하나님께 고백한 것</strong>입니다.<br><br>
+            그리고 이제 <strong>하나님의 구원을 간구합니다</strong>(애 5:20~21).
+            <div class="quote">
+                <strong>예레미야 선지자는 제사장 나라 남유다가 마침내 하나님의 거룩한 시민이 되는 놀라운 꿈을 끝내 포기할 수 없었습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 예레미야애가 3~5장 '소망: 주의 인자와 긍휼'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 예레미야 애가 3장 -->
+        <div class="chapter-title">예레미야 애가 3장 (1~66절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와의 분노의 매로 말미암아 고난 당한 자는 나로다</div>
+        <div class="verse"><span class="verse-num">2</span> 나를 이끌어 어둠 안에서 걸어가게 하시고 빛 안에서 걸어가지 못하게 하셨으며</div>
+        <div class="verse"><span class="verse-num">3</span> 종일토록 손을 들어 자주자주 나를 치시는도다</div>
+        <div class="verse"><span class="verse-num">4</span> 나의 살과 가죽을 쇠하게 하시며 나의 뼈들을 꺾으셨고</div>
+        <div class="verse"><span class="verse-num">5</span> 고통과 수고를 쌓아 나를 에우셨으며</div>
+        <div class="verse"><span class="verse-num">6</span> 나를 어둠 속에 살게 하시기를 죽은 지 오랜 자 같게 하셨도다</div>
+        <div class="verse"><span class="verse-num">7</span> 나를 둘러싸서 나가지 못하게 하시고 내 사슬을 무겁게 하셨으며</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 부르짖어 도움을 구하나 내 기도를 물리치시며</div>
+        <div class="verse"><span class="verse-num">9</span> 다듬은 돌을 쌓아 내 길들을 막으사 내 길들을 굽게 하셨도다</div>
+        <div class="verse"><span class="verse-num">10</span> 그는 내게 대하여 엎드려 기다리는 곰과 은밀한 곳에 있는 사자 같으사</div>
+        <div class="verse"><span class="verse-num">11</span> 나의 길들로 치우치게 하시며 내 몸을 찢으시며 나를 적막하게 하셨도다</div>
+        <div class="verse"><span class="verse-num">12</span> 활을 당겨 나를 화살의 과녁으로 삼으심이여</div>
+        <div class="verse"><span class="verse-num">13</span> 화살통의 화살들로 내 허리를 맞추셨도다</div>
+        <div class="verse"><span class="verse-num">14</span> 나는 내 모든 백성에게 조롱거리 곧 종일토록 그들의 노랫거리가 되었도다</div>
+        <div class="verse"><span class="verse-num">15</span> 나를 쓴 것들로 배불리시고 쑥으로 취하게 하셨으며</div>
+        <div class="verse"><span class="verse-num">16</span> 조약돌로 내 이들을 꺾으시고 재로 나를 덮으셨도다</div>
+        <div class="verse"><span class="verse-num">17</span> 주께서 내 심령이 평강에서 멀리 떠나게 하시니 내가 복을 내어버렸음이여</div>
+        <div class="verse"><span class="verse-num">18</span> 스스로 이르기를 나의 힘과 여호와께 대한 내 소망이 끊어졌다 하였도다</div>
+        <div class="verse"><span class="verse-num">19</span> 내 고초와 재난 곧 쑥과 담즙을 기억하소서</div>
+        <div class="verse"><span class="verse-num">20</span> 내 마음이 그것을 기억하고 내가 낙심이 되오나</div>
+        <div class="verse"><span class="verse-num">21</span> 이것을 내가 내 마음에 담아 두었더니 그것이 오히려 나의 소망이 되었사옴은</div>
+        <div class="verse"><span class="verse-num">22</span> 여호와의 인자와 긍휼이 무궁하시므로 우리가 진멸되지 아니함이니이다</div>
+        <div class="verse"><span class="verse-num">23</span> 이것들이 아침마다 새로우니 주의 성실하심이 크시도소이다</div>
+        <div class="verse"><span class="verse-num">24</span> 내 심령에 이르기를 여호와는 나의 기업이시니 그러므로 내가 그를 바라리라 하도다</div>
+        <div class="verse"><span class="verse-num">25</span> 기다리는 자들에게나 구하는 영혼들에게 여호와는 선하시도다</div>
+        <div class="verse"><span class="verse-num">26</span> 사람이 여호와의 구원을 바라고 잠잠히 기다림이 좋도다</div>
+        <div class="verse"><span class="verse-num">27</span> 사람은 젊었을 때에 멍에를 메는 것이 좋으니</div>
+        <div class="verse"><span class="verse-num">28</span> 혼자 앉아서 잠잠할 것은 주께서 그것을 그에게 메우셨음이라</div>
+        <div class="verse"><span class="verse-num">29</span> 그대의 입을 땅의 티끌에 댈지어다 혹시 소망이 있을지로다</div>
+        <div class="verse"><span class="verse-num">30</span> 자기를 치는 자에게 뺨을 돌려대어 치욕으로 배불릴지어다</div>
+        <div class="verse"><span class="verse-num">31</span> 이는 주께서 영원하도록 버리지 아니하실 것임이며</div>
+        <div class="verse"><span class="verse-num">32</span> 그가 비록 근심하게 하시나 그의 풍부한 인자하심에 따라 긍휼히 여기실 것임이라</div>
+        <div class="verse"><span class="verse-num">33</span> 주께서 인생으로 고생하게 하시며 근심하게 하심은 본심이 아니시로다</div>
+        <div class="verse"><span class="verse-num">34</span> 세상에 있는 모든 갇힌 자들을 발로 밟는 것과</div>
+        <div class="verse"><span class="verse-num">35</span> 지존자의 얼굴 앞에서 사람의 재판을 굽게 하는 것과</div>
+        <div class="verse"><span class="verse-num">36</span> 사람의 송사를 억울하게 하는 것은 다 주께서 기쁘게 보시는 것이 아니로다</div>
+        <div class="verse"><span class="verse-num">37</span> 주의 명령이 아니면 누가 이것을 능히 말하여 이루게 할 수 있으랴</div>
+        <div class="verse"><span class="verse-num">38</span> 화와 복이 지존자의 입으로부터 나오지 아니하느냐</div>
+        <div class="verse"><span class="verse-num">39</span> 살아 있는 사람은 자기 죄들 때문에 벌을 받나니 어찌 원망하랴</div>
+        <div class="verse"><span class="verse-num">40</span> 우리가 스스로 우리의 행위들을 조사하고 여호와께로 돌아가자</div>
+        <div class="verse"><span class="verse-num">41</span> 우리의 마음과 손을 아울러 하늘에 계신 하나님께 들자</div>
+        <div class="verse"><span class="verse-num">42</span> 우리의 범죄함과 우리의 반역함을 주께서 사하지 아니하시고</div>
+        <div class="verse"><span class="verse-num">43</span> 진노로 자신을 가리시고 우리를 추격하시며 죽이시고 긍휼을 베풀지 아니하셨나이다</div>
+        <div class="verse"><span class="verse-num">44</span> 주께서 구름으로 자신을 가리사 기도가 상달되지 못하게 하시고</div>
+        <div class="verse"><span class="verse-num">45</span> 우리를 뭇 나라 가운데에서 쓰레기와 폐물로 삼으셨으므로</div>
+        <div class="verse"><span class="verse-num">46</span> 우리의 모든 원수들이 우리를 향하여 그들의 입을 크게 벌렸나이다</div>
+        <div class="verse"><span class="verse-num">47</span> 두려움과 함정과 파멸과 멸망이 우리에게 임하였도다</div>
+        <div class="verse"><span class="verse-num">48</span> 딸 내 백성의 파멸로 말미암아 내 눈에는 눈물이 시내처럼 흐르도다</div>
+        <div class="verse"><span class="verse-num">49</span> 내 눈에 흐르는 눈물이 그치지 아니하고 쉬지 아니함이여</div>
+        <div class="verse"><span class="verse-num">50</span> 여호와께서 하늘에서 살피시고 돌아보실 때까지니라</div>
+        <div class="verse"><span class="verse-num">51</span> 나의 성읍의 모든 여자들을 내 눈으로 보니 내 심령이 상하는도다</div>
+        <div class="verse"><span class="verse-num">52</span> 나의 원수들이 이유없이 나를 새처럼 사냥하는도다</div>
+        <div class="verse"><span class="verse-num">53</span> 그들이 내 생명을 끊으려고 나를 구덩이에 넣고 그 위에 돌을 던짐이여</div>
+        <div class="verse"><span class="verse-num">54</span> 물이 내 머리 위로 넘치니 내가 스스로 이르기를 이제는 멸절되었다 하도다</div>
+        <div class="verse"><span class="verse-num">55</span> 여호와여 내가 심히 깊은 구덩이에서 주의 이름을 불렀나이다</div>
+        <div class="verse"><span class="verse-num">56</span> 주께서 이미 나의 음성을 들으셨사오니 이제 나의 탄식과 부르짖음에 주의 귀를 가리지 마옵소서</div>
+        <div class="verse"><span class="verse-num">57</span> 내가 주께 아뢴 날에 주께서 내게 가까이 하여 이르시되 두려워하지 말라 하셨나이다</div>
+        <div class="verse"><span class="verse-num">58</span> 주여 주께서 내 심령의 원통함을 풀어 주셨고 내 생명을 속량하셨나이다</div>
+        <div class="verse"><span class="verse-num">59</span> 여호와여 나의 억울함을 보셨사오니 나를 위하여 원통함을 풀어주옵소서</div>
+        <div class="verse"><span class="verse-num">60</span> 그들이 내게 보복하며 나를 모해함을 주께서 다 보셨나이다</div>
+        <div class="verse"><span class="verse-num">61</span> 여호와여 그들이 나를 비방하며 나를 모해하는 모든 것</div>
+        <div class="verse"><span class="verse-num">62</span> 곧 일어나 나를 치는 자들의 입술에서 나오는 것들과 종일 나를 모해하는 것들을 들으셨나이다</div>
+        <div class="verse"><span class="verse-num">63</span> 그들이 앉으나 서나 나를 조롱하여 노래하는 것을 주목하여 보옵소서</div>
+        <div class="verse"><span class="verse-num">64</span> 여호와여 주께서 그들의 손이 행한 대로 그들에게 보응하사</div>
+        <div class="verse"><span class="verse-num">65</span> 그들에게 거만한 마음을 주시고 그들에게 저주를 내리소서</div>
+        <div class="verse"><span class="verse-num">66</span> 주께서 진노로 그들을 뒤쫓으사 여호와의 하늘 아래에서 멸하소서</div>
+
+        <!-- 예레미야 애가 4장 -->
+        <div class="chapter-title">예레미야 애가 4장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 슬프다 어찌 그리 금이 빛을 잃고 순금이 변질하였으며 성소의 돌들이 거리 어귀마다 쏟아졌는고</div>
+        <div class="verse"><span class="verse-num">2</span> 순금에 비할 만큼 보배로운 시온의 아들들이 어찌 그리 토기장이가 만든 질항아리 같이 여김이 되었는고</div>
+        <div class="verse"><span class="verse-num">3</span> 들개들도 젖을 주어 그들의 새끼를 먹이나 딸 내 백성은 잔인하여 마치 광야의 타조 같도다</div>
+        <div class="verse"><span class="verse-num">4</span> 젖먹이가 목말라서 혀가 입천장에 붙음이여 어린 아이들이 떡을 구하나 떼어 줄 사람이 없도다</div>
+        <div class="verse"><span class="verse-num">5</span> 맛있는 음식을 먹던 자들이 외롭게 거리 거리에 있으며 이전에는 붉은 옷을 입고 자라난 자들이 이제는 거름더미를 안았도다</div>
+        <div class="verse"><span class="verse-num">6</span> 전에 소돔이 사람의 손을 대지 아니하였는데도 순식간에 무너지더니 이제는 딸 내 백성의 죄가 소돔의 죄악보다 무겁도다</div>
+        <div class="verse"><span class="verse-num">7</span> 전에는 존귀한 자들의 몸이 눈보다 깨끗하고 젖보다 희며 산호들보다 붉어 그들의 윤택함이 갈아서 빛낸 청옥 같더니</div>
+        <div class="verse"><span class="verse-num">8</span> 이제는 그들의 얼굴이 숯보다 검고 그들의 가죽이 뼈들에 붙어 막대기 같이 말랐으니 어느 거리에서든지 알아볼 사람이 없도다</div>
+        <div class="verse"><span class="verse-num">9</span> 칼에 죽은 자들이 주려 죽은 자들보다 나음은 토지 소산이 끊어지므로 그들은 찔림 받은 자들처럼 점점 쇠약하여 감이로다</div>
+        <div class="verse"><span class="verse-num">10</span> 딸 내 백성이 멸망할 때에 자비로운 부녀들이 자기들의 손으로 자기들의 자녀들을 삶아 먹었도다</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와께서 그의 분을 내시며 그의 맹렬한 진노를 쏟으심이여 시온에 불을 지르사 그 터를 사르셨도다</div>
+        <div class="verse"><span class="verse-num">12</span> 대적과 원수가 예루살렘 성문으로 들어갈 줄은 세상의 모든 왕들과 천하 모든 백성이 믿지 못하였었도다</div>
+        <div class="verse"><span class="verse-num">13</span> 그의 선지자들의 죄들과 제사장들의 죄악들 때문이니 그들이 성읍 안에서 의인들의 피를 흘렸도다</div>
+        <div class="verse"><span class="verse-num">14</span> 그들이 거리 거리에서 맹인 같이 방황함이여 그들의 옷들이 피에 더러워졌으므로 아무도 만질 수 없도다</div>
+        <div class="verse"><span class="verse-num">15</span> 사람들이 그들에게 외쳐 이르기를 저리 가라 부정하다, 저리 가라, 저리 가라, 만지지 말라 하였음이여 그들이 도망하여 방황할 때에 이방인들이 말하기를 그들이 다시는 여기서 살지 못하리라 하였도다</div>
+        <div class="verse"><span class="verse-num">16</span> 여호와께서 노하여 그들을 흩으시고 다시는 돌보지 아니하시리니 그들이 제사장들을 높이지 아니하였으며 장로들을 대접하지 아니하였음이로다</div>
+        <div class="verse"><span class="verse-num">17</span> 우리가 헛되이 도움을 바라므로 우리의 눈이 상함이여 우리를 구원하지 못할 나라를 바라보고 바라보았도다</div>
+        <div class="verse"><span class="verse-num">18</span> 그들이 우리의 걸음을 엿보니 우리가 거리마다 다 다닐 수 없음이여 우리의 끝이 가깝고 우리의 날들이 다하였으며 우리의 종말이 이르렀도다</div>
+        <div class="verse"><span class="verse-num">19</span> 우리를 뒤쫓는 자들이 하늘의 독수리들보다 빠름이여 산 꼭대기까지도 뒤쫓으며 광야에서도 우리를 잡으려고 매복하였도다</div>
+        <div class="verse"><span class="verse-num">20</span> 우리의 콧김 곧 여호와께서 기름 부으신 자가 그들의 함정에 빠졌음이여 우리가 그를 가리키며 전에 이르기를 우리가 그의 그늘 아래에서 이방인들 중에 살겠다 하던 자로다</div>
+        <div class="verse"><span class="verse-num">21</span> 우스 땅에 사는 딸 에돔아 즐거워하며 기뻐하라 잔이 네게도 이를지니 네가 취하여 벌거벗으리라</div>
+        <div class="verse"><span class="verse-num">22</span> 딸 시온아 네 죄악의 형벌이 다하였으니 주께서 다시는 너로 사로잡혀 가지 아니하게 하시리로다 딸 에돔아 주께서 네 죄악을 벌하시며 네 허물을 드러내시리로다</div>
+
+        <!-- 예레미야 애가 5장 -->
+        <div class="chapter-title">예레미야 애가 5장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와여 우리가 당한 것을 기억하시고 우리가 받은 치욕을 살펴보옵소서</div>
+        <div class="verse"><span class="verse-num">2</span> 우리의 기업이 외인들에게, 우리의 집들도 이방인들에게 돌아갔나이다</div>
+        <div class="verse"><span class="verse-num">3</span> 우리는 아버지 없는 고아들이오며 우리의 어머니는 과부들 같으니</div>
+        <div class="verse"><span class="verse-num">4</span> 우리가 은을 주고 물을 마시며 값을 주고 나무들을 가져오며</div>
+        <div class="verse"><span class="verse-num">5</span> 우리를 뒤쫓는 자들이 우리의 목을 눌렀사오니 우리가 기진하여 쉴 수 없나이다</div>
+        <div class="verse"><span class="verse-num">6</span> 우리가 애굽 사람과 앗수르 사람과 악수하고 양식을 얻어 배불리고자 하였나이다</div>
+        <div class="verse"><span class="verse-num">7</span> 우리의 조상들은 범죄하고 없어졌으며 우리는 그들의 죄악을 담당하였나이다</div>
+        <div class="verse"><span class="verse-num">8</span> 종들이 우리를 지배함이여 그들의 손에서 건져낼 자가 없나이다</div>
+        <div class="verse"><span class="verse-num">9</span> 광야에는 칼이 있으므로 죽기를 무릅써야 양식을 얻사오니</div>
+        <div class="verse"><span class="verse-num">10</span> 굶주림의 열기로 말미암아 우리의 피부가 아궁이처럼 검으니이다</div>
+        <div class="verse"><span class="verse-num">11</span> 대적들이 시온에서 부녀들을, 유다 각 성읍에서 처녀들을 욕보였나이다</div>
+        <div class="verse"><span class="verse-num">12</span> 지도자들은 그들의 손에 매달리고 장로들의 얼굴도 존경을 받지 못하나이다</div>
+        <div class="verse"><span class="verse-num">13</span> 청년들이 맷돌을 지며 아이들이 나무를 지다가 엎드러지오며</div>
+        <div class="verse"><span class="verse-num">14</span> 노인들은 다시 성문에 앉지 못하며 청년들은 다시 노래하지 못하나이다</div>
+        <div class="verse"><span class="verse-num">15</span> 우리의 마음에는 기쁨이 그쳤고 우리의 춤은 변하여 슬픔이 되었사오며</div>
+        <div class="verse"><span class="verse-num">16</span> 우리의 머리에서는 면류관이 떨어졌사오니 오호라 우리의 범죄 때문이니이다</div>
+        <div class="verse"><span class="verse-num">17</span> 이러므로 우리의 마음이 피곤하고 이러므로 우리 눈들이 어두우며</div>
+        <div class="verse"><span class="verse-num">18</span> 시온 산이 황폐하여 여우가 그 안에서 노나이다</div>
+        <div class="verse"><span class="verse-num">19</span> 여호와여 주는 영원히 계시오며 주의 보좌는 대대에 이르나이다</div>
+        <div class="verse"><span class="verse-num">20</span> 주께서 어찌하여 우리를 영원히 잊으시오며 우리를 이같이 오래 버리시나이까</div>
+        <div class="verse"><span class="verse-num">21</span> 여호와여 우리를 주께로 돌이키소서 그리하시면 우리가 주께로 돌아가겠사오니 우리의 날들을 다시 새롭게 하사 옛적 같게 하옵소서</div>
+        <div class="verse"><span class="verse-num">22</span> 주께서 우리를 아주 버리셨사오며 우리에게 진노하심이 참으로 크시니이다</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

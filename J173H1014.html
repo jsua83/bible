@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 173</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 173</h1>
+        <p class="sub-title">찬송가 94장 주 예수보다 더 귀한 것은 없네</p>
+        <p class="sub-title">호세아 10~14장 — 불붙는 긍휼, 십자가 예고</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 94장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/12VjWuEl3I4ZxAtkB2rOvZWBQM5BaYXSF" alt="찬송가 94장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 호세아 10~14장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 제사장 나라 이스라엘을 향한 하나님의 사랑은 언제나 한결같았으나, 안타깝게도 북이스라엘은 두 마음을 품었습니다.</span>
+            하나님께서는 호세아 선지자를 통해 <strong>북이스라엘이 두 마음을 품었음에 대해 책망하십니다</strong>(호 10:2). 북이스라엘이 두 마음을 품기 시작한 것은 <strong>여로보암 왕이 단과 벧엘에 금송아지 우상을 세웠을 때부터</strong>였습니다.<br><br>
+            하나님께서는 <strong>사사 시대의 기브아 사건</strong>을 언급하시며(삿 20:13~14, 21:2~3) <strong>북이스라엘이 흔적도 없이 사라지기 전에 마지막으로 그들에게 회개할 기회를 주십니다</strong>(호 10:9~15).
+            <div class="quote">
+                <strong>그 기회까지도 놓치면 하나님의 심판은 피할 길이 없습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 북이스라엘을 향한 하나님의 끝없는 사랑의 줄은 결국 하나님의 긍휼의 집대성인 십자가 예고로 꽃을 피웁니다.</span>
+            하나님께서는 호세아 선지자를 통해 <strong>출애굽 때부터 이스라엘 백성들을 어떻게 돌보고 사랑해왔는지 그 역사를 상기시키십니다</strong>(호 11:1~4).
+            <div class="quote">
+                <strong>"이스라엘이 어렸을 때에 내가 사랑하여 내 아들을 애굽에서 불러냈거늘"</strong> (호 11:1) — 이 말씀은 이후 요셉과 마리아가 헤롯을 피해 애굽으로 갈 때 다시 인용됩니다(마 2:15).
+            </div>
+            안타깝게도 <strong>북이스라엘은 끝내 그 사랑을 깨닫지 못합니다.</strong> 하나님께서는 아버지의 사랑을 배반한 북이스라엘이 <strong>앗수르로 끌려가는 징계를 받을 것이라고 말씀하십니다</strong>(호 11:5). 그러나 하나님께서는 확고한 처벌을 선언하시면서도 <strong>인간의 생각으로는 도저히 가늠이 불가능한 하나님의 사랑과 긍휼을 드러내십니다.</strong>
+            <div class="quote">
+                <strong>"에브라임이여 내가 어찌 너를 놓겠느냐 내가 어찌 너를 아드마 같이 놓겠느냐 어찌 너를 스보임 같이 두겠느냐 내 마음이 내 속에서 돌이키어 나의 긍휼이 온전히 불붙듯 하도다"</strong> (호 11:8)
+            </div>
+            북이스라엘을 <strong>'내놓으시면서' 동시에 '놓지 못하시는' 하나님</strong>이십니다.
+            <div class="quote">
+                <strong>하나님의 그 사랑은 예수 그리스도를 보내심으로, 그리고 예수 그리스도의 십자가로 나타나게 될 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 북이스라엘은 끝내 하나님께 회개하지 않고 강대국을 의지하여 정치적 동맹과 조공으로 나라의 위기를 해결하려고 합니다.</span>
+            호세아 선지자를 통한 하나님의 최후통첩에도 불구하고 <strong>북이스라엘은 하나님께 회개하지 않고 모든 문제를 정치적·외교적 방법으로 해결하려고 합니다.</strong>
+            <div class="quote">
+                <strong>"에브라임은 바람을 먹으며 동풍을 따라가서 종일토록 거짓과 포학을 더하여 앗수르와 계약을 맺고 기름을 애굽에 보내도다"</strong> (호 12:1)
+            </div>
+            <strong>"동풍을 따라가서"는 북이스라엘이 강대국을 의지하여 조공을 바치고 도움을 청한 것</strong>을 말합니다. 그러자 하나님께서는 안타까운 마음으로 <strong>야곱의 얍복강 사건을 언급하시며 북이스라엘에게 또다시 회개할 기회를 주십니다</strong>(호 12:4~6).
+            <div class="quote">
+                <strong>북이스라엘의 죄악은 죄를 짓고도 죄를 인정하지 않는 교만이며, 하나님께서 선지자들을 보냈으나 그들이 하나님의 말씀을 듣지 않은 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 호세아 선지자는 북이스라엘이 멸망하는 근본 원인이 우상숭배임을 단언합니다.</span>
+            북이스라엘의 많은 죄 가운데 <strong>북이스라엘이 멸망으로 이르는 근본적 원인은 바로 우상숭배 때문</strong>입니다. 그러므로 하나님께서는 <strong>우상숭배로 하나님을 버린 북이스라엘이 반드시 심판을 받을 것이라고 말씀하십니다</strong>(호 13:8).
+            <div class="quote">
+                <strong>북이스라엘이 심판을 받게 되는 것은 하나님과 맺은 제사장 나라 언약을 깨뜨린 결과입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 호세아의 마지막 외침은 "회개하는 자에게 복을 주신다"라는 것입니다.</span>
+            북이스라엘을 향한 <strong>호세아 선지자의 마지막 호소</strong>입니다(호 14:1~3).
+            <div class="quote">
+                <strong>첫째,</strong> 하나님께 <strong>돌아오라</strong>는 것입니다.<br><br>
+                <strong>둘째,</strong> 하나님께 <strong>회개의 열매를 드리라</strong>는 것입니다.<br><br>
+                <strong>셋째,</strong> 오직 <strong>하나님만 의지하라</strong>는 것입니다.<br><br>
+                <strong>넷째,</strong> 우상을 <strong>다시는 섬기지 말라</strong>는 것입니다.
+            </div>
+            <div class="quote">
+                <strong>호세아 선지자가 외친 결론은 '하나님께서는 하나님께 돌아오는 자에게 복을 주신다'는 것입니다.</strong> (호 14:7~8)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 호세아 10~14장 '불붙는 긍휼, 십자가 예고'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 호세아 10장 -->
+        <div class="chapter-title">호세아 10장 (1~15절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘은 열매 맺는 무성한 포도나무라 그 열매가 많을수록 제단을 많게 하며 그 땅이 번영할수록 주상을 아름답게 하도다</div>
+        <div class="verse"><span class="verse-num">2</span> 그들이 두 마음을 품었으니 이제 벌을 받을 것이라 하나님이 그 제단을 쳐서 깨뜨리시며 그 주상을 허시리라</div>
+        <div class="verse"><span class="verse-num">3</span> 그들이 이제 이르기를 우리가 여호와를 두려워하지 아니하므로 우리에게 왕이 없거니와 왕이 우리를 위하여 무엇을 하리요 하리로다</div>
+        <div class="verse"><span class="verse-num">4</span> 그들이 헛된 말을 내며 거짓 맹세로 언약을 세우니 그 재판이 밭이랑에 돋는 독초 같으리로다</div>
+        <div class="verse"><span class="verse-num">5</span> 사마리아 주민이 벧아웬의 송아지로 말미암아 두려워할 것이라 그 백성이 슬퍼하며 그것을 기뻐하던 제사장들도 슬퍼하리니 이는 그의 영광이 떠나감이며</div>
+        <div class="verse"><span class="verse-num">6</span> 그 송아지는 앗수르로 옮겨다가 예물로 야렙 왕에게 드리리니 에브라임은 수치를 받을 것이요 이스라엘은 자기들의 계책을 부끄러워할 것이며</div>
+        <div class="verse"><span class="verse-num">7</span> 사마리아 왕은 물 위에 있는 거품 같이 멸망할 것이며</div>
+        <div class="verse"><span class="verse-num">8</span> 이스라엘의 죄 곧 아웬의 산당은 파괴되어 가시와 찔레가 그 제단 위에 날 것이니 그 때에 그들이 산더러 우리를 가리라 할 것이요 작은 산더러 우리 위에 무너지라 하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 이스라엘아 네가 기브아 시대로부터 범죄하더니 지금까지 죄를 짓는구나 그러니 범죄한 자손들에 대한 전쟁이 어찌 기브아에서 일어나지 않겠느냐</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 원하는 때에 그들을 징계하리니 그들이 두 가지 죄에 걸릴 때에 만민이 모여서 그들을 치리라</div>
+        <div class="verse"><span class="verse-num">11</span> 에브라임은 마치 길들인 암소 같아서 곡식 밟기를 좋아하나 내가 그의 아름다운 목에 멍에를 메우고 에브라임 위에 사람을 태우리니 유다가 밭을 갈고 야곱이 흙덩이를 깨뜨리리라</div>
+        <div class="verse"><span class="verse-num">12</span> 너희가 자기를 위하여 공의를 심고 인애를 거두라 너희 묵은 땅을 기경하라 지금이 곧 여호와를 찾을 때니 마침내 여호와께서 오사 공의를 비처럼 너희에게 내리시리라</div>
+        <div class="verse"><span class="verse-num">13</span> 너희는 악을 밭 갈아 죄를 거두고 거짓 열매를 먹었나니 이는 네가 네 길과 네 용사의 많음을 의뢰하였음이라</div>
+        <div class="verse"><span class="verse-num">14</span> 그러므로 너희 백성 중에 요란함이 일어나며 네 산성들이 다 무너지되 살만이 전쟁의 날에 벧아벨을 무너뜨린 것 같이 될 것이라 그 때에 어머니와 자식이 함께 부서졌도다</div>
+        <div class="verse"><span class="verse-num">15</span> 너희의 큰 악으로 말미암아 벧엘이 이같이 너희에게 행하리니 이스라엘 왕이 새벽에 정녕 망하리로다</div>
+
+        <!-- 호세아 11장 -->
+        <div class="chapter-title">호세아 11장 (1~12절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘이 어렸을 때에 내가 사랑하여 내 아들을 애굽에서 불러냈거늘</div>
+        <div class="verse"><span class="verse-num">2</span> 선지자들이 그들을 부를수록 그들은 점점 멀리하고 바알들에게 제사하며 아로새긴 우상 앞에서 분향하였느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 그러나 내가 에브라임에게 걸음을 가르치고 내 팔로 안았음에도 내가 그들을 고치는 줄을 그들은 알지 못하였도다</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 사람의 줄 곧 사랑의 줄로 그들을 이끌었고 그들에게 대하여 그 목에서 멍에를 벗기는 자 같이 되었으며 그들 앞에 먹을 것을 두었노라</div>
+        <div class="verse"><span class="verse-num">5</span> 그들은 애굽 땅으로 되돌아 가지 못하겠거늘 내게 돌아 오기를 싫어하니 앗수르 사람이 그 임금이 될 것이라</div>
+        <div class="verse"><span class="verse-num">6</span> 칼이 그들의 성읍들을 치며 빗장을 깨뜨려 없이하리니 이는 그들의 계책으로 말미암음이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 내 백성이 끝끝내 내게서 물러가나니 비록 그들을 불러 위에 계신 이에게로 돌아오라 할지라도 일어나는 자가 하나도 없도다</div>
+        <div class="verse"><span class="verse-num">8</span> 에브라임이여 내가 어찌 너를 놓겠느냐 이스라엘이여 내가 어찌 너를 버리겠느냐 내가 어찌 너를 아드마 같이 놓겠느냐 어찌 너를 스보임 같이 두겠느냐 내 마음이 내 속에서 돌이키어 나의 긍휼이 온전히 불붙듯 하도다</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 나의 맹렬한 진노를 나타내지 아니하며 내가 다시는 에브라임을 멸하지 아니하리니 이는 내가 하나님이요 사람이 아님이라 네 가운데 있는 거룩한 이니 진노함으로 네게 임하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">10</span> 그들은 사자처럼 소리를 내시는 여호와를 따를 것이라 여호와께서 소리를 내시면 자손들이 서쪽에서부터 떨며 오되</div>
+        <div class="verse"><span class="verse-num">11</span> 그들은 애굽에서부터 새 같이, 앗수르에서부터 비둘기 같이 떨며 오리니 내가 그들을 그들의 집에 머물게 하리라 나 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 에브라임은 거짓으로, 이스라엘 족속은 속임수로 나를 에워쌌고 유다는 하나님 곧 신실하시고 거룩하신 자에게 대하여 정함이 없도다</div>
+
+        <!-- 호세아 12장 -->
+        <div class="chapter-title">호세아 12장 (1~14절)</div>
+        <div class="verse"><span class="verse-num">1</span> 에브라임은 바람을 먹으며 동풍을 따라가서 종일토록 거짓과 포학을 더하여 앗수르와 계약을 맺고 기름을 애굽에 보내도다</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와께서 유다와 논쟁하시고 야곱을 그 행실대로 벌하시며 그의 행위대로 그에게 보응하시리라</div>
+        <div class="verse"><span class="verse-num">3</span> 야곱은 모태에서 그의 형의 발뒤꿈치를 잡았고 또 힘으로는 하나님과 겨루되</div>
+        <div class="verse"><span class="verse-num">4</span> 천사와 겨루어 이기고 울며 그에게 간구하였으며 하나님은 벧엘에서 그를 만나셨고 거기에서 우리에게 말씀하셨나니</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와는 만군의 하나님이시라 여호와는 그를 기억하게 하는 이름이니라</div>
+        <div class="verse"><span class="verse-num">6</span> 그런즉 너의 하나님께로 돌아와서 인애와 정의를 지키며 항상 너의 하나님을 바랄지니라</div>
+        <div class="verse"><span class="verse-num">7</span> 그는 상인이라 손에 거짓 저울을 가지고 속이기를 좋아하는도다</div>
+        <div class="verse"><span class="verse-num">8</span> 에브라임이 말하기를 나는 실로 부자라 내가 재물을 얻었는데 내가 수고한 모든 것 중에서 죄라 할 만한 불의를 내게서 찾아 낼 자 없으리라 하거니와</div>
+        <div class="verse"><span class="verse-num">9</span> 네가 애굽 땅에 있을 때부터 나는 네 하나님 여호와니라 내가 너로 다시 장막에 거주하게 하기를 명절날에 하던 것 같게 하리라</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 여러 선지자에게 말하였고 이상을 많이 보였으며 선지자들을 통하여 비유를 베풀었노라</div>
+        <div class="verse"><span class="verse-num">11</span> 길르앗은 불의한 것이냐 과연 그러하다 그들은 거짓되도다 길갈에서는 무리가 수송아지로 제사를 드리며 그 제단은 밭이랑에 쌓인 돌무더기 같도다</div>
+        <div class="verse"><span class="verse-num">12</span> 야곱이 아람의 들로 도망하였으며 이스라엘이 아내를 얻기 위하여 사람을 섬기며 아내를 얻기 위하여 양을 쳤고</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와께서는 한 선지자로 이스라엘을 애굽에서 인도하여 내셨고 이스라엘이 한 선지자로 보호 받았거늘</div>
+        <div class="verse"><span class="verse-num">14</span> 에브라임이 격노하게 함이 극심하였으니 그의 주께서 그의 피로 그의 위에 머물러 있게 하시며 그의 수치를 그에게 돌리시리라</div>
+
+        <!-- 호세아 13장 -->
+        <div class="chapter-title">호세아 13장 (1~16절)</div>
+        <div class="verse"><span class="verse-num">1</span> 에브라임이 말을 하면 사람들이 떨었도다 그가 이스라엘 중에서 자기를 높이더니 바알로 말미암아 범죄하므로 망하였거늘</div>
+        <div class="verse"><span class="verse-num">2</span> 이제도 그들은 더욱 범죄하여 그 은으로 자기를 위하여 우상을 부어 만들되 자기의 정교함을 따라 우상을 만들었으며 그것은 다 은장색이 만든 것이거늘 그들은 그것에 대하여 말하기를 제사를 드리는 자는 송아지와 입을 맞출 것이라 하도다</div>
+        <div class="verse"><span class="verse-num">3</span> 이러므로 그들은 아침 구름 같으며 쉬 사라지는 이슬 같으며 타작 마당에서 광풍에 날리는 쭉정이 같으며 굴뚝에서 나가는 연기 같으리라</div>
+        <div class="verse"><span class="verse-num">4</span> 그러나 애굽 땅에 있을 때부터 나는 네 하나님 여호와라 나 밖에 네가 다른 신을 알지 말 것이라 나 외에는 구원자가 없느니라</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 광야 마른 땅에서 너를 알았거늘</div>
+        <div class="verse"><span class="verse-num">6</span> 그들이 먹여 준 대로 배가 불렀고 배가 부르니 그들의 마음이 교만하여 이로 말미암아 나를 잊었느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 그러므로 내가 그들에게 사자 같고 길 가에서 기다리는 표범 같으니라</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 새끼 잃은 곰 같이 그들을 만나 그의 염통 꺼풀을 찢고 거기서 암사자 같이 그들을 삼키리라 들짐승이 그들을 찢으리라</div>
+        <div class="verse"><span class="verse-num">9</span> 이스라엘아 네가 패망하였나니 이는 너를 도와 주는 나를 대적함이니라</div>
+        <div class="verse"><span class="verse-num">10</span> 전에 네가 이르기를 내게 왕과 지도자들을 주소서 하였느니라 네 모든 성읍에서 너를 구원할 자 곧 네 왕이 이제 어디 있으며 네 재판장들이 어디 있느냐</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 분노하므로 네게 왕을 주고 진노하므로 폐하였노라</div>
+        <div class="verse"><span class="verse-num">12</span> 에브라임의 불의가 봉함되었고 그 죄가 저장되었나니</div>
+        <div class="verse"><span class="verse-num">13</span> 해산하는 여인의 어려움이 그에게 임하리라 그는 지혜 없는 자식이로다 해산할 때가 되어도 그가 나오지 못하느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 내가 그들을 스올의 권세에서 속량하며 사망에서 구속하리니 사망아 네 재앙이 어디 있느냐 스올아 네 멸망이 어디 있느냐 뉘우침이 내 눈 앞에서 숨으리라</div>
+        <div class="verse"><span class="verse-num">15</span> 그가 비록 형제 중에서 결실하나 동풍이 오리니 곧 광야에서 일어나는 여호와의 바람이라 그의 근원이 마르며 그의 샘이 마르고 그 쌓아 둔 바 모든 보배의 그릇이 약탈되리로다</div>
+        <div class="verse"><span class="verse-num">16</span> 사마리아가 그들의 하나님을 배반하였으므로 형벌을 당하여 칼에 엎드러질 것이요 그 어린 아이는 부서뜨려지며 아이 밴 여인은 배가 갈라지리라</div>
+
+        <!-- 호세아 14장 -->
+        <div class="chapter-title">호세아 14장 (1~9절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘아 네 하나님 여호와께로 돌아오라 네가 불의함으로 말미암아 엎드러졌느니라</div>
+        <div class="verse"><span class="verse-num">2</span> 너는 말씀을 가지고 여호와께로 돌아와서 아뢰기를 모든 불의를 제거하시고 선한 바를 받으소서 우리가 수송아지를 대신하여 입술의 열매를 주께 드리리이다</div>
+        <div class="verse"><span class="verse-num">3</span> 우리가 앗수르의 구원을 의지하지 아니하며 말을 타지 아니하며 다시는 우리의 손으로 만든 것을 향하여 너희는 우리의 신이라 하지 아니하오리니 이는 고아가 주로 말미암아 긍휼을 얻음이니이다 할지니라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 그들의 반역을 고치고 기쁘게 그들을 사랑하리니 나의 진노가 그에게서 떠났음이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 이스라엘에게 이슬과 같으리니 그가 백합화 같이 피겠고 레바논 백향목 같이 뿌리가 박힐 것이라</div>
+        <div class="verse"><span class="verse-num">6</span> 그의 가지는 퍼지며 그의 아름다움은 감람나무와 같고 그의 향기는 레바논 백향목 같으리니</div>
+        <div class="verse"><span class="verse-num">7</span> 그 그늘 아래에 거주하는 자가 돌아올지라 그들은 곡식 같이 풍성할 것이며 포도나무 같이 꽃이 필 것이며 그 향기는 레바논의 포도주 같이 되리라</div>
+        <div class="verse"><span class="verse-num">8</span> 에브라임의 말이 내가 다시 우상과 무슨 상관이 있으리요 할지라 내가 그를 돌아보아 대답하기를 나는 푸른 잣나무 같으니 네가 나로 말미암아 열매를 얻으리라 하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 누가 지혜가 있어 이런 일을 깨달으며 누가 총명이 있어 이런 일을 알겠느냐 여호와의 도는 정직하니 의인은 그 길로 다니거니와 그러나 죄인은 그 길에 걸려 넘어지리라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

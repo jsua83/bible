@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 185</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 185</h1>
+        <p class="sub-title">찬송가 585장 내 주는 강한 성이요</p>
+        <p class="sub-title">열왕기하 18장 13~37절, 이사야 36장 — 히스기야의 선택</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 585장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1bZaINMTeOmBtawrVxDPVfm6OPOF8Eepl" alt="찬송가 585장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 열왕기하 18장 13~37절, 이사야 36장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 선지자들은 남유다가 주변 나라들과 군사적인 동맹을 맺으면 제사장 나라를 세워갈 수 없다고 주장했습니다.</span>
+            남유다가 하나님 대신 강대국을 의지하며 맺었던 동맹의 역사입니다.
+            <div class="quote">
+                <strong>첫째,</strong> 남유다의 아하스 왕이 앗수르의 디글랏 빌레셀 왕과 동맹을 맺었습니다. <strong>이는 북이스라엘과 아람 동맹에 대한 남유다의 자구책</strong>이었습니다(왕하 16:7~9).<br>
+                <strong>둘째,</strong> 남유다의 히스기야 왕이 애굽과 동맹을 맺었습니다. <strong>이 동맹은 앗수르에게 남유다 침략의 빌미를 제공하게 했습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 히스기야 왕은 앗수르 산헤립 왕의 1차 침입에 예루살렘 성전 기둥의 금을 벗겨 바칩니다.</span>
+            마침내 <strong>앗수르가 히스기야 왕 14년째에 남유다를 쳐들어와 20만 명이 넘는 사람들을 포로로 끌어가고 남유다의 46개 성읍을 점령합니다.</strong> 그리고 <strong>예루살렘성 공성전을 시작합니다</strong>(사 36:1~2).<br><br>
+            남유다의 모든 강한 성읍이 점령된 상황에서 히스기야 왕은 <strong>할 수 없이 아버지 아하스에게 배운 것들을 순서대로 실천합니다</strong>(왕하 18:14~16).
+            <div class="quote">
+                <strong>첫째,</strong> 앗수르 왕에게 <strong>굴욕 편지를 씁니다.</strong><br>
+                <strong>둘째,</strong> 앗수르 왕에게 성전과 왕궁 곳간에 있는 <strong>은금을 바칩니다.</strong> 히스기야는 금 30달란트를 만들지 못해 <strong>성전 문과 기둥에 입힌 금까지 벗깁니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 앗수르 왕 산헤립은 성전 기둥에서 벗긴 금을 받고서도 예루살렘성을 사마리아성처럼 포위 공격합니다.</span>
+            앗수르 왕 산헤립은 <strong>히스기야가 보낸 은과 금을 받았음에도 불구하고 앗수르 군대의 장수들과 185,000명의 군인들을 예루살렘성으로 보내 공격합니다</strong>(왕하 18:17, 사 36:2). 앗수르는 남유다 예루살렘성을 함락시키기 위해 그들의 특기인 <strong>'심리전'을 펼칩니다.</strong>
+            <div class="quote">
+                <strong>심리전에 능한 언어의 천재 랍사게는 남유다의 말로 남유다의 약한 군사력을 비웃고 앗수르의 군사력을 과시합니다.</strong> 또한 <strong>남유다와 애굽의 군사적 동맹을 조롱합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 앗수르의 장수 랍사게는 하나님에 대한 무지로 감히 하나님을 모욕합니다.</span>
+            앗수르의 장수 랍사게가 <strong>남유다를 조롱하고 비웃는 데서 도를 넘어 하나님과 히스기야의 신앙 갱신까지도 비웃습니다</strong>(왕하 18:22, 사 36:7).
+            <div class="quote">
+                <strong>랍사게는 하나님께서 앗수르의 큰 성읍 니느웨에 요나 선지자를 보내셔서 그들을 회개하게 하시고 구원하신 역사를 몰랐습니다. 역사도, 하나님도 모르니 랍사게의 말은 그저 공중에 흩어지는 먼지와 다를 바 없습니다.</strong>
+            </div>
+            랍사게는 심리전을 펼치며 예루살렘 사람들에게 앗수르에 항복하라고 협박도, 회유도 감행합니다. <strong>예루살렘 성에 양식이 떨어져 대소변을 먹을 정도로 비참한 상태가 될 것이라고 협박하고</strong> 항복하면 <strong>예전에 영화를 누리던 때처럼 평안하게 살 것이라고 회유합니다.</strong> 마지막으로 <strong>랍사게는 하나님을 조롱하기까지 합니다</strong>(왕하 18:27~35, 사 36:12~20).
+            <div class="quote">
+                <strong>거주의 경계는 처음부터 하나님께서 결정하십니다. 하나님께서 북이스라엘을 처벌하시기 위해 사용한 몽둥이에 불과한 앗수르 제국은 하나님의 뜻대로 사마리아까지만 내려올 수 있는 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 히스기야 왕은 앗수르 제국의 장수 랍사게의 비웃음에 침묵하라고 명령합니다.</span>
+            앗수르의 장수 랍사게의 협박과 회유가 계속되자 <strong>히스기야 왕은 남유다 백성들에게 대응하지 말고 침묵하라고 명령합니다</strong>(왕하 18:36, 사 36:21). 그리고 마침내 <strong>히스기야가 찾아간 곳은 하나님의 성전입니다.</strong> 히스기야는 <strong>문제의 해결을 하나님께 맡기기로 결정한 것</strong>입니다.<br><br>
+            열왕기하 18장 13절부터 20장 19절까지와 이사야 36~39장까지의 말씀은 대동소이합니다. 이사야 38장에 <strong>히스기야의 노래가 추가된 정도만 다를 뿐</strong>입니다. 또한 역대하 32장에는 위의 사건들이 짧게 요약되어 있습니다.
+            <div class="quote">
+                <strong>그러므로 역사서와 예언서를 역사순으로 묶어 통으로 공부하면 성경이 훨씬 쉽게 이해됩니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 열왕기하 18장 13~37절, 이사야 36장 '히스기야의 선택'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 열왕기하 18장 -->
+        <div class="chapter-title">열왕기하 18장 (13~37절)</div>
+        <div class="verse"><span class="verse-num">13</span> 히스기야 왕 제십사년에 앗수르의 왕 산헤립이 올라와서 유다 모든 견고한 성읍들을 쳐서 점령하매</div>
+        <div class="verse"><span class="verse-num">14</span> 유다의 왕 히스기야가 라기스로 사람을 보내어 앗수르 왕에게 이르되 내가 범죄하였나이다 나를 떠나 돌아가소서 왕이 내게 지우시는 것을 내가 당하리이다 하였더니 앗수르 왕이 곧 은 삼백 달란트와 금 삼십 달란트를 정하여 유다 왕 히스기야에게 내게 한지라</div>
+        <div class="verse"><span class="verse-num">15</span> 히스기야가 이에 여호와의 성전과 왕궁 곳간에 있는 은을 다 주었고</div>
+        <div class="verse"><span class="verse-num">16</span> 또 그 때에 유다 왕 히스기야가 여호와의 성전 문의 금과 자기가 모든 기둥에 입힌 금을 벗겨 모두 앗수르 왕에게 주었더라</div>
+        <div class="verse"><span class="verse-num">17</span> 앗수르 왕이 다르단과 랍사리스와 랍사게로 하여금 대군을 거느리고 라기스에서부터 예루살렘으로 가서 히스기야 왕을 치게 하매 그들이 예루살렘으로 올라가니라 그들이 올라가서 윗못 수도 곁 곧 세탁자의 밭에 있는 큰 길에 이르러 서니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그들이 왕을 부르매 힐기야의 아들로서 왕궁의 책임자인 엘리야김과 서기관 셉나와 아삽의 아들 사관 요아가 그에게 나가니</div>
+        <div class="verse"><span class="verse-num">19</span> 랍사게가 그들에게 이르되 너희는 히스기야에게 말하라 대왕 앗수르 왕의 말씀이 네가 의뢰하는 이 의뢰가 무엇이냐</div>
+        <div class="verse"><span class="verse-num">20</span> 네가 싸울 만한 계교와 용력이 있다고 한다마는 이는 입에 붙은 말 뿐이라 네가 이제 누구를 의뢰하고 나를 반역하였느냐</div>
+        <div class="verse"><span class="verse-num">21</span> 이제 네가 너를 위하여 저 상한 갈대 지팡이 애굽을 의뢰하도다 사람이 그것을 의지하면 그의 손에 찔려 들어갈지라 애굽의 왕 바로는 그에게 의뢰하는 모든 자에게 이와 같으니라</div>
+        <div class="verse"><span class="verse-num">22</span> 너희가 내게 이르기를 우리는 우리 하나님 여호와를 의뢰하노라 하리라마는 히스기야가 그들의 산당들과 제단을 제거하고 유다와 예루살렘 사람에게 명령하기를 예루살렘 이 제단 앞에서만 예배하라 하지 아니하였느냐 하셨나니</div>
+        <div class="verse"><span class="verse-num">23</span> 청하건대 이제 너는 내 주 앗수르 왕과 내기하라 네가 만일 말을 탈 사람을 낼 수 있다면 나는 네게 말 이천 마리를 주리라</div>
+        <div class="verse"><span class="verse-num">24</span> 네가 어찌 내 주의 신하 중 지극히 작은 지휘관 한 사람인들 물리치며 애굽을 의뢰하고 그 병거와 기병을 얻을 듯하냐</div>
+        <div class="verse"><span class="verse-num">25</span> 내가 어찌 여호와의 뜻이 아니고야 이제 이 곳을 멸하러 올라왔겠느냐 여호와께서 전에 내게 이르시기를 이 땅으로 올라와서 쳐서 멸하라 하셨느니라 하는지라</div>
+        <div class="verse"><span class="verse-num">26</span> 힐기야의 아들 엘리야김과 셉나와 요아가 랍사게에게 이르되 우리가 알아듣겠사오니 청하건대 아람 말로 당신의 종들에게 말씀하시고 성 위에 있는 백성이 듣는 데서 유다 말로 우리에게 말씀하지 마옵소서</div>
+        <div class="verse"><span class="verse-num">27</span> 랍사게가 그에게 이르되 내 주께서 네 주와 네게만 이 말을 하라고 나를 보내신 것이냐 성 위에 앉은 사람들도 너희와 함께 자기의 대변을 먹게 하고 자기의 소변을 마시게 하신 것이 아니냐 하고</div>
+        <div class="verse"><span class="verse-num">28</span> 랍사게가 드디어 일어서서 유다 말로 크게 소리 질러 불러 이르되 너희는 대왕 앗수르 왕의 말씀을 들으라</div>
+        <div class="verse"><span class="verse-num">29</span> 왕의 말씀이 너희는 히스기야에게 속지 말라 그가 너희를 내 손에서 건져내지 못하리라</div>
+        <div class="verse"><span class="verse-num">30</span> 또한 히스기야가 너희에게 여호와를 의뢰하라 함을 듣지 말라 그가 이르기를 여호와께서 반드시 우리를 건지실지라 이 성읍이 앗수르 왕의 손에 함락되지 아니하게 하시리라 할지라도</div>
+        <div class="verse"><span class="verse-num">31</span> 너희는 히스기야의 말을 듣지 말라 앗수르 왕의 말씀이 너희는 내게 항복하고 내게로 나아오라 그리하고 너희는 각각 그의 포도와 무화과를 먹고 또한 각각 자기의 우물의 물을 마시라</div>
+        <div class="verse"><span class="verse-num">32</span> 내가 장차 와서 너희를 한 지방으로 옮기리니 그 곳은 너희 본토와 같은 지방 곧 곡식과 포도주가 있는 지방이요 떡과 포도원이 있는 지방이요 기름 나는 감람과 꿀이 있는 지방이라 너희가 살고 죽지 아니하리라 히스기야가 너희를 설득하여 이르기를 여호와께서 우리를 건지시리라 하여도 히스기야에게 듣지 말라</div>
+        <div class="verse"><span class="verse-num">33</span> 민족의 신들 중에 어느 한 신이 그의 땅을 앗수르 왕의 손에서 건진 자가 있느냐</div>
+        <div class="verse"><span class="verse-num">34</span> 하맛과 아르밧의 신들이 어디 있으며 스발와임과 헤나와 아와의 신들이 어디 있느냐 그들이 사마리아를 내 손에서 건졌느냐</div>
+        <div class="verse"><span class="verse-num">35</span> 민족의 모든 신들 중에 누가 그의 땅을 내 손에서 건졌기에 여호와가 예루살렘을 내 손에서 건지겠느냐 하셨느니라</div>
+        <div class="verse"><span class="verse-num">36</span> 그러나 백성이 잠잠하고 한 마디도 그에게 대답하지 아니하니 이는 왕이 명령하여 대답하지 말라 하였음이라</div>
+        <div class="verse"><span class="verse-num">37</span> 이에 힐기야의 아들로서 왕궁 내의 책임자인 엘리야김과 서기관 셉나와 아삽의 아들 사관 요아가 옷을 찢고 히스기야에게 나아가서 랍사게의 말을 전하니라</div>
+
+        <!-- 이사야 36장 -->
+        <div class="chapter-title">이사야 36장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 히스기야 왕 십사년에 앗수르 왕 산헤립이 올라와서 유다의 모든 견고한 성을 쳐서 취하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 앗수르 왕이 라기스에서부터 랍사게를 예루살렘으로 보내되 대군을 거느리고 히스기야 왕에게로 가게 하매 그가 윗못 수도 곁 세탁자의 밭 큰 길에 서매</div>
+        <div class="verse"><span class="verse-num">3</span> 힐기야의 아들 왕궁 맡은 자 엘리아김과 서기관 셉나와 아삽의 아들 사관 요아가 그에게 나아가니라</div>
+        <div class="verse"><span class="verse-num">4</span> 랍사게가 그들에게 이르되 이제 히스기야에게 말하라 대왕 앗수르 왕이 이같이 말씀하시기를 네가 믿는 바 그 믿는 것이 무엇이냐</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 말하노니 네가 족히 싸울 계략과 용맹이 있노라 함은 입술에 붙은 말뿐이니라 네가 이제 누구를 믿고 나를 반역하느냐</div>
+        <div class="verse"><span class="verse-num">6</span> 보라 네가 애굽을 믿는도다 그것은 상한 갈대 지팡이와 같은 것이라 사람이 그것을 의지하면 손이 찔리리니 애굽 왕 바로는 그를 믿는 모든 자에게 이와 같으니라</div>
+        <div class="verse"><span class="verse-num">7</span> 혹시 네가 내게 이르기를 우리는 우리 하나님 여호와를 신뢰하노라 하리라마는 그는 그의 산당과 제단을 히스기야가 제하여 버리고 유다와 예루살렘에 명령하기를 너희는 이 제단 앞에서만 예배하라 하던 그 신이 아니냐 하셨느니라</div>
+        <div class="verse"><span class="verse-num">8</span> 그러므로 이제 청하노니 내 주 앗수르 왕과 내기하라 내가 네게 말 이천 필을 주어도 너는 그 탈 자를 능히 내지 못하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 그런즉 네가 어찌 내 주의 종 가운데 극히 작은 총독 한 사람인들 물리칠 수 있으랴 어찌 애굽을 믿고 병거와 기병을 얻으려 하느냐</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 이제 올라와서 이 땅을 멸하는 것이 여호와의 뜻이 없음이겠느냐 여호와께서 내게 이르시기를 올라가 그 땅을 쳐서 멸하라 하셨느니라 하니라</div>
+        <div class="verse"><span class="verse-num">11</span> 이에 엘리아김과 셉나와 요아가 랍사게에게 이르되 우리가 아람 방언을 아오니 청하건대 그 방언으로 당신의 종들에게 말하고 성 위에 있는 백성이 듣는 데에서 우리에게 유다 방언으로 말하지 마소서 하니</div>
+        <div class="verse"><span class="verse-num">12</span> 랍사게가 이르되 내 주께서 이 일을 네 주와 네게만 말하라고 나를 보내신 것이냐 너희와 함께 자기의 대변을 먹으며 자기의 소변을 마실 성 위에 앉은 사람들에게도 하라고 보내신 것이 아니냐 하더라</div>
+        <div class="verse"><span class="verse-num">13</span> 이에 랍사게가 일어서서 유다 방언으로 크게 외쳐 이르되 너희는 대왕 앗수르 왕의 말씀을 들으라</div>
+        <div class="verse"><span class="verse-num">14</span> 왕의 말씀에 너희는 히스기야에게 미혹되지 말라 그가 능히 너희를 건지지 못할 것이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 히스기야가 너희에게 여호와를 신뢰하게 하려는 것을 따르지 말라 그가 말하기를 여호와께서 반드시 우리를 건지시리니 이 성이 앗수르 왕의 손에 넘어가지 아니하리라 할지라도</div>
+        <div class="verse"><span class="verse-num">16</span> 히스기야의 말을 듣지 말라 앗수르 왕이 또 이같이 말씀하시기를 너희는 내게 항복하고 내게로 나아오라 그리하면 너희가 각각 자기의 포도와 자기의 무화과를 먹을 것이며 각각 자기의 우물 물을 마실 것이요</div>
+        <div class="verse"><span class="verse-num">17</span> 내가 와서 너희를 너희 본토와 같이 곡식과 포도주와 떡과 포도원이 있는 땅에 옮기기까지 하리라</div>
+        <div class="verse"><span class="verse-num">18</span> 혹시 히스기야가 너희에게 이르기를 여호와께서 우리를 건지시리라 할지라도 속지 말라 열국의 신들 중에 자기의 땅을 앗수르 왕의 손에서 건진 자가 있느냐</div>
+        <div class="verse"><span class="verse-num">19</span> 하맛과 아르밧의 신들이 어디 있느냐 스발와임의 신들이 어디 있느냐 그들이 사마리아를 내 손에서 건졌느냐</div>
+        <div class="verse"><span class="verse-num">20</span> 이 열방의 신들 중에 어떤 신이 자기의 나라를 내 손에서 건져냈기에 여호와가 능히 예루살렘을 내 손에서 건지겠느냐 하셨느니라 하니라</div>
+        <div class="verse"><span class="verse-num">21</span> 그러나 그들이 잠잠하여 한 말도 대답하지 아니하였으니 이는 왕이 그들에게 명령하여 대답하지 말라 하였음이었더라</div>
+        <div class="verse"><span class="verse-num">22</span> 그 때에 힐기야의 아들 왕궁 맡은 자 엘리아김과 서기관 셉나와 아삽의 아들 사관 요아가 자기의 옷을 찢고 히스기야에게 나아가서 랍사게의 말을 그에게 전하니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

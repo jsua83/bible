@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 217</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 217</h1>
+        <p class="sub-title">찬송가 370장 주 안에 있는 나에게</p>
+        <p class="sub-title">예레미야 46~48장 — 하나님의 세계 경영</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 370장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1Lx7axgH7niJJHGzjPQyRI1aFnniHdFl7" alt="찬송가 370장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 예레미야 46~48장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서는 애굽을 비롯해 남유다 주변 열 개 나라에 대한 심판을 말씀하십니다.</span>
+            <div class="quote">
+                <strong>예레미야 46~48장</strong> — 애굽, 블레셋, 모압에 대한 심판<br>
+                <strong>예레미야 49장</strong> — 암몬, 에돔, 다메섹(아람), 게달, 하솔, 엘람에 대한 심판<br>
+                <strong>예레미야 50~51장</strong> — 바벨론에 대한 심판
+            </div>
+            먼저 <strong>애굽이 갈그미스 전투에서 바벨론에게 패할 것을 말씀하십니다.</strong> 하나님께서는 애굽으로 향하는 느부갓네살 왕의 군대를 <strong>웅장한 다볼산과 갈멜산으로 묘사하며 바벨론 제국이 애굽을 정복하여 애굽 백성들을 포로로 끌어갈 것이라고 말씀하십니다</strong>(렘 46:13~26).
+            <div class="quote">
+                <strong>애굽을 향한 하나님의 말씀은 사실 남유다를 향한 하나님의 경고였습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님께서는 바벨론 포로 70년이 지나면 남유다가 다시 회복될 것을 말씀하십니다.</span>
+            하나님께서는 <strong>바벨론 포로로 끌려간 남유다 백성들이 그곳에서 하나님의 징계를 달게 받고 나면 다시 회복될 것이라고 말씀해주십니다</strong>(렘 46:27~28).
+            <div class="quote">
+                <strong>바벨론 포로 70년이 지나면 남유다가 다시 회복되어 제사장 나라 거룩한 시민이 될 것이라는 예레미야 46장의 말씀은 예레미야 30장의 말씀과 거의 동일합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 예레미야 선지자를 통한 열방에 대한 예언은 곧 하나님의 세계 경영입니다.</span>
+            하나님께서 애굽에 이어 <strong>블레셋에 대해 말씀하십니다.</strong> 이스라엘 역사에서 <strong>블레셋만큼 이스라엘과 관계가 깊은 나라도 없을 것입니다.</strong> 해변가에 위치하고 있던 블레셋은 <strong>이스라엘보다 막강한 군사력으로 늘 이스라엘을 괴롭혔습니다.</strong> 하나님께서는 블레셋의 포악과 죄악을 <strong>큰 홍수와 같은 바벨론 제국을 들어 심판하겠다고 말씀하십니다</strong>(렘 47장).
+            <div class="quote">
+                <strong>하나님께서는 그동안 이스라엘의 죄악을 벌하기 위해 블레셋을 들어 사용하기도 하셨지만 블레셋의 죄 또한 결코 하나님의 심판에서 벗어날 수 없는 것이었습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님께서는 이스라엘과 늘 긴장 관계를 유지해왔던 모압에 대해 다시 한번 심판을 말씀하십니다.</span>
+            모압은 <strong>아브라함의 조카 롯의 후손으로 이스라엘과는 혈연으로 맺어진 민족</strong>이었습니다. 하나님께서는 일찍이 출애굽한 이스라엘이 가나안으로 입성할 때에도 <strong>모압을 보호해주셨습니다</strong>(신 2:8~9). 그러나 <strong>모압은 이스라엘의 호의를 받아들이지 않고 적대적이었으며 모압의 풍습은 이스라엘에 여러 가지로 악영향을 끼쳐왔습니다</strong>(수 24:9, 민 35:1, 왕상 11:7).
+            <div class="quote">
+                <strong>이렇게 이스라엘과 늘 긴장 관계 속에서 지내왔던 모압이 이사야(사 15~16장)에 이어 예레미야 48장에서 다시금 하나님의 심판 선언을 받고 있습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 모압이 하나님께 심판받는 이유는 '우상숭배'와 '교만' 때문입니다.</span>
+            <strong>첫 번째 이유 — 우상숭배</strong><br>
+            하나님께서는 <strong>모압도 그모스 우상을 숭배했기 때문에 멸망한다고 말씀하십니다</strong>(렘 48:13). 그모스는 <strong>불의 신, 전쟁의 신으로 일컫는 모압의 민족 신</strong>이었습니다. 모압의 우상숭배가 얼마나 극심했는지 <strong>모압의 왕이 자기의 뒤를 이을 맏아들까지 인신 제사를 할 정도</strong>였습니다(왕하 3:27).<br><br>
+            
+            <strong>두 번째 이유 — 교만</strong><br>
+            모압은 고원지대에 위치해 <strong>외부의 침략에 유리한 방어 조건을 갖추고 있고 경제적 번영으로 풍요를 누린 탓에 교만하기까지 했습니다</strong>(렘 48:29~30). 하나님께서는 <strong>이사야, 아모스, 스바냐 선지자를 통해서도 계속 경고해오셨습니다.</strong>
+            <div class="quote">
+                <strong>하나님의 말씀대로 모압은 바벨론의 느부갓네살 왕에게 정복된 후 다시는 나라를 이루지 못하고 역사 속에서 사라집니다.</strong> 모압 백성들이 다시 회복되는 날은 <strong>오직 메시아의 나라에서 이루어지는 궁극적인 회복의 날</strong>일 것입니다(렘 48:47).
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 예레미야 46~48장 '하나님의 세계 경영'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 예레미야 46장 -->
+        <div class="chapter-title">예레미야 46장 (1~28절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이방 나라들에 대하여 선지자 예레미야에게 임한 여호와의 말씀이라</div>
+        <div class="verse"><span class="verse-num">2</span> 애굽에 관한 것이라 곧 유다의 요시야 왕의 아들 여호야김 넷째 해에 유브라데 강 가 갈그미스에서 바벨론의 느부갓네살 왕에게 패한 애굽의 왕 바로느고의 군대에 대한 말씀이라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희는 작은 방패와 큰 방패를 예비하고 나가서 싸우라</div>
+        <div class="verse"><span class="verse-num">4</span> 너희 기병이여 말에 안장을 지워 타며 투구를 쓰고 나서며 창을 갈며 갑옷을 입으라</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와의 말씀이니라 내가 본즉 그들이 놀라 물러가며 그들의 용사는 패하여 황급히 도망하며 뒤를 돌아보지 아니함은 어찜이냐 두려움이 그들의 사방에 있음이로다</div>
+        <div class="verse"><span class="verse-num">6</span> 발이 빠른 자도 도망하지 못하며 용사도 피하지 못하고 그들이 다 북쪽에서 유브라데 강 가에 넘어지며 엎드러지는도다</div>
+        <div class="verse"><span class="verse-num">7</span> 강의 물이 출렁임 같고 나일 강이 불어남 같은 자가 누구냐</div>
+        <div class="verse"><span class="verse-num">8</span> 애굽은 나일 강이 불어남 같고 강물이 출렁임 같도다 그가 이르되 내가 일어나 땅을 덮어 성읍들과 그 주민을 멸할 것이라</div>
+        <div class="verse"><span class="verse-num">9</span> 말들아 달려라 병거들아 정신 없이 달려라 용사여 나오라 방패 잡은 구스 사람과 붓 사람과 활을 당기는 루딤 사람이여 나올지니라 하거니와</div>
+        <div class="verse"><span class="verse-num">10</span> 그 날은 주 만군의 여호와께서 그의 대적에게 원수 갚는 보복일이라 칼이 배부르게 삼키며 그들의 피를 넘치도록 마시리니 주 만군의 여호와께서 북쪽 유브라데 강 가에서 희생제물을 받으실 것임이로다</div>
+        <div class="verse"><span class="verse-num">11</span> 처녀 딸 애굽이여 길르앗으로 올라가서 유향을 취하라 네가 치료를 많이 받아도 효력이 없어 낫지 못하리라</div>
+        <div class="verse"><span class="verse-num">12</span> 네 수치가 나라들에 들렸고 네 부르짖음은 땅에 가득하였나니 용사가 용사에게 걸려 넘어져 둘이 함께 엎드러졌음이라</div>
+        <div class="verse"><span class="verse-num">13</span> 바벨론의 느부갓네살 왕이 와서 애굽 땅을 칠 일에 대하여 선지자 예레미야에게 이르신 여호와의 말씀이라</div>
+        <div class="verse"><span class="verse-num">14</span> 너희는 애굽에 선포하며 믹돌과 놉과 다바네스에 선포하여 말하기를 너희는 굳건히 서서 준비하라 네 사방이 칼에 삼키웠느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 너희 장사들이 쓰러짐은 어찌함이냐 그들이 서지 못함은 여호와께서 그들을 몰아내신 까닭이니라</div>
+        <div class="verse"><span class="verse-num">16</span> 그가 많은 사람을 넘어지게 하시매 사람이 사람 위에 엎드러지며 이르되 일어나라 우리가 포악한 칼을 피하여 우리 민족에게로, 우리 고향으로 돌아가자 하도다</div>
+        <div class="verse"><span class="verse-num">17</span> 그들이 그 곳에서 부르짖기를 애굽의 바로 왕이 망하였도다 그가 기회를 놓쳤도다</div>
+        <div class="verse"><span class="verse-num">18</span> 만군의 여호와라 일컫는 왕이 이르시되 나의 삶으로 맹세하노니 그가 과연 산들 중의 다볼 같이, 해변의 갈멜 같이 오리라</div>
+        <div class="verse"><span class="verse-num">19</span> 애굽에 사는 딸이여 너는 너를 위하여 포로의 짐을 꾸리라 놉이 황무하며 불에 타서 주민이 없을 것임이라</div>
+        <div class="verse"><span class="verse-num">20</span> 애굽은 심히 아름다운 암송아지일지라도 북으로부터 쇠파리 떼가 줄곧 오리라</div>
+        <div class="verse"><span class="verse-num">21</span> 또 그 중의 고용꾼은 살진 수송아지 같아서 돌이켜 함께 도망하고 서지 못하였나니 재난의 날이 이르렀고 벌 받는 때가 왔음이라</div>
+        <div class="verse"><span class="verse-num">22</span> 애굽의 소리가 뱀의 소리 같으리니 이는 그들의 군대가 벌목하는 자 같이 도끼를 가지고 올 것임이라</div>
+        <div class="verse"><span class="verse-num">23</span> 여호와의 말씀이니라 그들이 황충보다 많아서 셀 수 없으므로 조사할 수 없는 그의 수풀을 찍을 것이라</div>
+        <div class="verse"><span class="verse-num">24</span> 딸 애굽이 수치를 당하여 북쪽 백성의 손에 붙임을 당하리로다</div>
+        <div class="verse"><span class="verse-num">25</span> 만군의 여호와 이스라엘의 하나님께서 말씀하시니라 보라 내가 노의 아몬과 바로와 애굽과 애굽 신들과 왕들 곧 바로와 및 그를 의지하는 자들을 벌할 것이라</div>
+        <div class="verse"><span class="verse-num">26</span> 내가 그들의 생명을 노리는 자의 손 곧 바벨론의 느부갓네살 왕의 손과 그 종들의 손에 넘기리라 그럴지라도 그 후에는 그 땅이 이전 같이 사람 살 곳이 되리라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">27</span> 내 종 야곱아 두려워하지 말라 이스라엘아 놀라지 말라 보라 내가 너를 먼 곳에서 구원하며 네 자손을 포로된 땅에서 구원하리니 야곱이 돌아와서 평안하며 걱정 없이 살게 될 것이라 그를 두렵게 할 자 없으리라</div>
+        <div class="verse"><span class="verse-num">28</span> 여호와의 말씀이니라 내 종 야곱아 내가 너와 함께 있나니 두려워하지 말라 내가 너를 흩었던 그 나라들은 다 멸할지라도 너는 사라지지 아니하리라 내가 너를 법도대로 징계할 것이요 결코 무죄한 자로 여기지 아니하리라 하시니라</div>
+
+        <!-- 예레미야 47장 -->
+        <div class="chapter-title">예레미야 47장 (1~7절)</div>
+        <div class="verse"><span class="verse-num">1</span> 바로가 가사를 치기 전에 블레셋 사람에 대하여 선지자 예레미야에게 임한 여호와의 말씀이라</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와께서 이와 같이 말씀하시되 보라 물이 북쪽에서 일어나 물결치는 시내를 이루어 그 땅과 그 중에 있는 모든 것과 그 성읍과 거기에 사는 자들을 휩쓸리니 사람들이 부르짖으며 그 땅 모든 주민이 울부짖으리라</div>
+        <div class="verse"><span class="verse-num">3</span> 군마의 발굽 소리와 달리는 병거 바퀴가 진동하는 소리 때문에 아버지의 손맥이 풀려서 자기의 자녀를 돌보지 못하리니</div>
+        <div class="verse"><span class="verse-num">4</span> 이는 블레셋 사람을 유린하시며 두로와 시돈에 남아 있는 바 도와 줄 자를 다 끊어 버리시는 날이 올 것임이라 여호와께서 갑돌 섬에 남아 있는 블레셋 사람을 유린하시리라</div>
+        <div class="verse"><span class="verse-num">5</span> 가사는 대머리가 되었고 아스글론과 그들에게 남아 있는 평지가 잠잠하게 되었나니 네가 네 몸 베기를 어느 때까지 하겠느냐</div>
+        <div class="verse"><span class="verse-num">6</span> 오호라 여호와의 칼이여 네가 언제까지 쉬지 않겠느냐 네 칼집에 들어가서 가만히 쉴지어다</div>
+        <div class="verse"><span class="verse-num">7</span> 여호와께서 이를 명령하셨은즉 어떻게 잠잠하며 쉬겠느냐 아스글론과 해변을 치려 하여 그가 정하셨느니라 하니라</div>
+
+        <!-- 예레미야 48장 -->
+        <div class="chapter-title">예레미야 48장 (1~47절)</div>
+        <div class="verse"><span class="verse-num">1</span> 모압에 관한 것이라 만군의 여호와 이스라엘의 하나님께서 이와 같이 말씀하시되 오호라 느보여 그가 유린 당하였도다 기랴다임이 수치를 당하여 점령되었고 미스갑이 수치를 당하여 파괴되었으니</div>
+        <div class="verse"><span class="verse-num">2</span> 모압의 찬송 소리가 없어졌도다 헤스본에서 무리가 그를 해하려고 악을 도모하고 이르기를 와서 그를 끊어서 나라를 이루지 못하게 하자 하는도다 맛멘이여 너도 조용하게 되리니 칼이 너를 뒤쫓아 가리라</div>
+        <div class="verse"><span class="verse-num">3</span> 호로나임에서 부르짖는 소리여 황폐와 큰 파멸이로다</div>
+        <div class="verse"><span class="verse-num">4</span> 모압이 멸망을 당하여 그 어린이들의 부르짖음이 들리는도다</div>
+        <div class="verse"><span class="verse-num">5</span> 그들이 루힛 언덕으로 올라가면서 울고 호로나임 내리막 길에서 파멸의 고통스런 울부짖음을 듣는도다</div>
+        <div class="verse"><span class="verse-num">6</span> 도망하여 네 생명을 구원하여 광야의 노간주나무 같이 될지어다</div>
+        <div class="verse"><span class="verse-num">7</span> 네가 네 업적과 보물을 의뢰하므로 너도 정복을 당할 것이요 그모스는 그의 제사장들과 고관들과 함께 포로되어 갈 것이라</div>
+        <div class="verse"><span class="verse-num">8</span> 파멸하는 자가 각 성읍에 이를 것인즉 한 성읍도 면하지 못할 것이며 골짜기가 멸망하였으며 평지는 파멸되어 여호와의 말씀과 같으리로다</div>
+        <div class="verse"><span class="verse-num">9</span> 모압에 날개를 주어 날아 피하게 하라 그 성읍들이 황폐하여 거기에 사는 자가 없으리로다</div>
+        <div class="verse"><span class="verse-num">10</span> 여호와의 일을 게을리 하는 자는 저주를 받을 것이요 자기 칼을 금하여 피를 흘리지 아니하는 자도 저주를 받을 것이로다</div>
+        <div class="verse"><span class="verse-num">11</span> 모압은 젊은 시절부터 평안하고 포로도 되지 아니하였으므로 마치 술이 그 찌끼 위에 있고 이 그릇에서 저 그릇으로 옮기지 않음 같아서 그 맛이 남아 있고 냄새가 변하지 아니하였도다</div>
+        <div class="verse"><span class="verse-num">12</span> 그러므로 여호와께서 말씀하시니라 날이 이르리니 내가 술을 옮겨 담는 사람을 보낼 것이라 그들이 기울여서 그 그릇을 비게 하고 그 병들을 부수리니</div>
+        <div class="verse"><span class="verse-num">13</span> 이스라엘 집이 벧엘을 의뢰하므로 수치를 당한 것 같이 모압이 그모스로 말미암아 수치를 당하리로다</div>
+        <div class="verse"><span class="verse-num">14</span> 너희가 어찌하여 말하기를 우리는 용사요 능란한 전사라 하느냐</div>
+        <div class="verse"><span class="verse-num">15</span> 만군의 여호와라 일컫는 왕께서 이와 같이 말하노라 모압이 황폐하였도다 그 성읍들은 사라졌고 그 선택 받은 장정들은 내려가서 죽임을 당하니</div>
+        <div class="verse"><span class="verse-num">16</span> 모압의 재난이 가까웠고 그 고난이 속히 닥치리로다</div>
+        <div class="verse"><span class="verse-num">17</span> 그의 사면에 있는 모든 자여, 그의 이름을 아는 모든 자여, 그를 위로하며 말하기를 어찌하여 강한 막대기, 아름다운 지팡이가 부러졌는고 할지니라</div>
+        <div class="verse"><span class="verse-num">18</span> 디본에 사는 딸아 네 영화에서 내려와 메마른 데 앉으라 모압을 파멸하는 자가 올라와서 너를 쳐서 네 요새를 깨뜨렸음이로다</div>
+        <div class="verse"><span class="verse-num">19</span> 아로엘에 사는 여인이여 길 곁에 서서 지키며 도망하는 자와 피하는 자에게 무슨 일이 생겼는지 물을지어다</div>
+        <div class="verse"><span class="verse-num">20</span> 모압이 패하여 수치를 받나니 너희는 울면서 부르짖으며 아르논 가에서 이르기를 모압이 황폐하였다 할지어다</div>
+        <div class="verse"><span class="verse-num">21</span> 심판이 평지에 이르렀나니 곧 홀론과 야사와 메바앗과</div>
+        <div class="verse"><span class="verse-num">22</span> 디본과 느보와 벧디불라다임과</div>
+        <div class="verse"><span class="verse-num">23</span> 기랴다임과 벧가물과 벧므온과</div>
+        <div class="verse"><span class="verse-num">24</span> 그리욧과 보스라와 모압 땅 원근 모든 성읍에로다</div>
+        <div class="verse"><span class="verse-num">25</span> 모압의 뿔이 잘렸고 그 팔이 부러졌도다 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">26</span> 모압으로 취하게 할지어다 이는 그가 여호와에 대하여 교만함이라 그가 그 토한 것에서 뒹굴므로 조롱거리가 되리로다</div>
+        <div class="verse"><span class="verse-num">27</span> 네가 이스라엘을 조롱하지 아니하였느냐 그가 도둑 가운데에서 발견되었느냐 네가 그를 말할 때마다 네 머리를 흔드는도다</div>
+        <div class="verse"><span class="verse-num">28</span> 모압 주민들아 너희는 성읍을 떠나 바위 사이에 살지어다 깊은 골짜기 어귀에 깃들이는 비둘기 같이 할지어다</div>
+        <div class="verse"><span class="verse-num">29</span> 우리가 모압의 교만을 들었나니 심한 교만 곧 그의 자고와 오만과 자랑과 그 마음의 거만이로다</div>
+        <div class="verse"><span class="verse-num">30</span> 여호와의 말씀이니라 내가 그의 노여워함의 허탄함을 아노니 그가 자랑하여도 아무 것도 성취하지 못하였도다</div>
+        <div class="verse"><span class="verse-num">31</span> 그러므로 내가 모압을 위하여 울며 온 모압을 위하여 부르짖으리니 무리가 길헤레스 사람을 위하여 신음하리로다</div>
+        <div class="verse"><span class="verse-num">32</span> 십마의 포도나무여 너의 가지가 바다를 넘어 야셀 바다까지 뻗었더니 너의 여름 과일과 포도 수확을 탈취하는 자가 나타났으니 내가 너를 위하여 울기를 야셀이 우는 것보다 더하리로다</div>
+        <div class="verse"><span class="verse-num">33</span> 기쁨과 환희가 옥토와 모압 땅에서 빼앗겼도다 내가 포도주 틀에 포도주가 끊어지게 하리니 외치며 밟는 자가 없을 것이라 그 외침은 즐거운 외침이 되지 못하리로다</div>
+        <div class="verse"><span class="verse-num">34</span> 헤스본에서 엘르알레를 지나 야하스까지와 소알에서 호로나임을 지나 에글랏 셀리시야에 이르는 지역에 사는 사람들이 소리를 내어 부르짖음은 니므림의 물도 황폐하였음이로다</div>
+        <div class="verse"><span class="verse-num">35</span> 여호와의 말씀이라 모압 산당에서 제사하며 그 신들에게 분향하는 자를 내가 끊어버리리라</div>
+        <div class="verse"><span class="verse-num">36</span> 그러므로 나의 마음이 모압을 위하여 피리 같이 소리 내며 나의 마음이 길헤레스 사람들을 위하여 피리 같이 소리 내나니 이는 그가 모은 재물이 없어졌음이라</div>
+        <div class="verse"><span class="verse-num">37</span> 모든 사람이 대머리가 되었고 모든 사람이 수염을 밀었으며 손에 칼자국이 있고 허리에 굵은 베가 둘렸고</div>
+        <div class="verse"><span class="verse-num">38</span> 모압의 모든 지붕과 거리 각처에서 슬피 우는 소리가 들리니 내가 모압을 마음에 들지 않는 그릇 같이 깨뜨렸음이라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">39</span> 어찌하여 모압이 파괴되었으며 어찌하여 그들이 애곡하는가 모압이 부끄러워서 등을 돌렸도다 그런즉 모압이 그 사방 모든 사람의 조롱거리와 공포의 대상이 되리로다</div>
+        <div class="verse"><span class="verse-num">40</span> 이는 여호와의 말씀이니라 보라 그가 독수리 같이 날아와서 모압 위에 그의 날개를 펴리라</div>
+        <div class="verse"><span class="verse-num">41</span> 성읍들이 점령을 당하며 요새가 함락되는 날에 모압 용사의 마음이 산고를 당하는 여인 같을 것이라</div>
+        <div class="verse"><span class="verse-num">42</span> 모압이 여호와를 거슬러 자만하였으므로 멸망하고 다시 나라를 이루지 못하리로다</div>
+        <div class="verse"><span class="verse-num">43</span> 여호와의 말씀이니라 모압 주민아 두려움과 함정과 올무가 네게 닥치나니</div>
+        <div class="verse"><span class="verse-num">44</span> 두려움에서 도망하는 자는 함정에 떨어지겠고 함정에서 나오는 자는 올무에 걸리리니 이는 내가 모압이 벌 받을 해가 임하게 할 것임이라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">45</span> 도망하는 자들이 기진하여 헤스본 그늘 아래에 서니 이는 불이 헤스본에서 나며 불길이 시혼 가운데 나서 모압의 살쩍과 떠드는 자들의 정수리를 사름이로다</div>
+        <div class="verse"><span class="verse-num">46</span> 모압이여 네게 화가 있도다 그모스의 백성이 망하였도다 네 아들들은 사로잡혀 갔고 네 딸들은 포로가 되었도다</div>
+        <div class="verse"><span class="verse-num">47</span> 그러나 내가 마지막 날에 모압의 포로를 돌려보내리라 여호와의 말씀이니라 모압의 심판이 여기까지니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

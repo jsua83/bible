@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 187</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 187</h1>
+        <p class="sub-title">찬송가 338장 내 주를 가까이 하게 함은</p>
+        <p class="sub-title">열왕기하 20장, 이사야 38~39장 — 히스기야, 통곡 기도로 병이 낫다</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 338장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/16D0gG_vR6la-FvMQeyHCl4akc12fA6A_" alt="찬송가 338장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 열왕기하 20장, 이사야 38~39장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 히스기야 왕은 하나님께 한 번은 나라를 구하는 기도를, 또 한 번은 자신의 병 낫기를 구하는 기도를 드립니다.</span>
+            히스기야 왕이 **하나님께 간절한 기도를 드립니다.** 자신의 죽을병이 낫기를 간구하는 **통곡의 기도**였습니다. 하나님께 자신이 선하게 행했던 것을 기억하셔서 **살려주시기를 간절히 기도합니다**(왕하 20:1~3, 사 38:1~3).
+            <div class="quote">
+                **하나님께서 히스기야 왕의 병도 고쳐주시고 15년간 생명도 연장시켜주심으로 아들 므낫세도 잘 돌볼 수 있게 됩니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 아하스 왕은 징조를 구하지 않았지만, 히스기야 왕은 징조를 구합니다.</span>
+            남유다의 아하스 왕이 이사야 선지자를 통한 하나님의 말씀을 듣고도 끝내 **징조를 구하지 않았던 것은 하나님을 믿으려는 시도조차 하지 않았기 때문**입니다(사 7:10~14). 그런데 **히스기야 왕은 그의 아버지와 달리 하나님께 믿음으로 징조를 구합니다.**
+            <div class="quote">
+                **그러자 하나님께서 히스기야 왕에게 기적으로 징표를 보여주십니다.** (왕하 20:11, 사 38:8)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 히스기야 왕은 앗수르 왕의 편지를 받았을 때는 하나님 앞에서 겸손했으나 바벨론 왕에게서 편지와 예물을 받고서는 사람들 앞에서 교만합니다.</span>
+            히스기야 왕이 앗수르 왕으로부터 항복하라는 최후통첩의 글을 받았을 때에는 **하나님 앞에 겸손하기 이를 데 없었습니다**(사 37:14~17). 그런데 **바벨론 왕의 친필 서한과 선물을 받고서는 이전과는 달리 교만이 그의 마음을 사로잡습니다**(왕하 20:12~13, 사 39:1~3).<br><br>
+            히스기야 왕 당시 바벨론은 비록 앗수르의 '보호' 아래에 있었지만 **앗수르를 물리치고 패권을 쥐어보려는 야심을 갖고 호시탐탐 엿보며 강대국의 면모를 갖춰 나가고 있었습니다.** 따라서 **바벨론은 남유다의 우방이 아니었습니다.**
+            <div class="quote">
+                **그런데 히스기야는 바벨론 왕이 보낸 특사에게 아무런 의심 없이 남유다의 모든 것을 공개했습니다. 이는 바벨론에게 좋은 정보가 되었을 것입니다.**
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 다윗 왕은 두로 왕 히람의 사절단을 보고 하나님을 높였고, 히스기야 왕은 바벨론 왕의 사절단을 보고 자신을 자랑합니다.</span>
+            다윗 왕은 두로 왕 히람이 보낸 사절단을 보고 **하나님을 높였습니다**(삼하 5:11~12). 그런데 **히스기야 왕은 바벨론 사절단을 보고 안타깝게도 교만합니다.** 히스기야 왕이 병에서 나은 것과 히스기야 왕의 부는 모두 **하나님께서 주신 복이었습니다.** 그런데 히스기야 왕은 그것이 마치 **자기의 업적인 듯 바벨론 특사에게 자랑했습니다**(대하 32:27~29).
+            <div class="quote">
+                **바벨론 특사가 히스기야 왕을 찾아간 것은 하나님께서 히스기야 왕의 마음을 시험하신 것입니다. 그런데 안타깝게도 히스기야 왕이 그 시험에서 낙마합니다.** (대하 32:31)
+            </div>
+            결국 바벨론의 특사가 남유다를 잘 정탐하고 돌아간 뒤 **얼마 지나지 않아 바벨론은 앗수르 제국을 물리치고 남유다와 애굽을 치기 위해 내려올 준비를 하기 시작합니다.**
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 히스기야 왕은 이사야 선지자와의 대화를 통해 자신의 잘못을 깨닫게 됩니다.</span>
+            과거 북이스라엘의 아합 왕은 **엘리야 선지자와의 대화를 통해서도 자신의 잘못을 깨닫지 못했습니다**(왕상 18:16~18). 그러나 **히스기야 왕은 다행히 이사야 선지자와의 대화를 통해 자신의 잘못을 깨닫습니다.**
+            <div class="quote">
+                **그러나 히스기야 왕이 바벨론 특사에게 보여준 모든 것은 이제 바벨론으로 옮겨가게 되고 히스기야 왕의 후손들 가운데 몇몇은 바벨론 왕실의 환관이 될 것입니다.**
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 열왕기하 20장, 이사야 38~39장 '히스기야, 통곡 기도로 병이 낫다'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 열왕기하 20장 -->
+        <div class="chapter-title">열왕기하 20장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 때에 히스기야가 병들어 죽게 되매 아모스의 아들 선지자 이사야가 그에게 나아와서 그에게 이르되 여호와의 말씀이 너는 집을 정리하라 네가 죽고 살지 못하리라 하셨나이다</div>
+        <div class="verse"><span class="verse-num">2</span> 히스기야가 낯을 벽으로 향하고 여호와께 기도하여 이르되</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와여 구하오니 내가 진실과 전심으로 주 앞에 행하며 주께서 보시기에 선하게 행한 것을 기억하옵소서 하고 히스기야가 심히 통곡하더라</div>
+        <div class="verse"><span class="verse-num">4</span> 이사야가 성읍 가운데까지도 이르기 전에 여호와의 말씀이 그에게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">5</span> 너는 돌아가서 내 백성의 주권자 히스기야에게 이르기를 왕의 조상 다윗의 하나님 여호와의 말씀이 내가 네 기도를 들었고 네 눈물을 보았노라 내가 너를 낫게 하리니 네가 삼 일 만에 여호와의 성전에 올라가겠고</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 네 날에 십오 년을 더할 것이며 내가 너와 이 성을 앗수르 왕의 손에서 구원하고 내가 나를 위하고 또 내 종 다윗을 위하므로 이 성을 보호하리라 하셨다 하라 하셨더라</div>
+        <div class="verse"><span class="verse-num">7</span> 이사야가 이르되 무화과 반죽을 가져오라 하매 무리가 가져다가 그 상처에 놓으니 나으니라</div>
+        <div class="verse"><span class="verse-num">8</span> 히스기야가 이사야에게 이르되 여호와께서 나를 낫게 하시고 삼 일 만에 여호와의 성전에 올라가게 하실 무슨 징표가 있나이까 하니</div>
+        <div class="verse"><span class="verse-num">9</span> 이사야가 이르되 여호와께서 하신 말씀을 응하게 하실 일에 대하여 여호와께로부터 왕에게 한 징표가 임하리이다 해 그림자가 십도를 나아갈 것이니이까 혹 십도를 물러갈 것이니이까 하니</div>
+        <div class="verse"><span class="verse-num">10</span> 히스기야가 대답하되 그림자가 십도를 나아가기는 쉬우니 그리할 것이 아니라 십도가 뒤로 물러갈 것이니이다 하니라</div>
+        <div class="verse"><span class="verse-num">11</span> 선지자 이사야가 여호와께 간구하매 아하스의 해시계 위에 나아갔던 해 그림자를 십도 뒤로 물러가게 하셨더라</div>
+        <div class="verse"><span class="verse-num">12</span> 그 때에 발라단의 아들 바벨론의 왕 브로닥발라단이 히스기야가 병 들었다 함을 듣고 편지와 예물을 그에게 보낸지라</div>
+        <div class="verse"><span class="verse-num">13</span> 히스기야가 사자들의 말을 듣고 자기 보물고의 금은과 향품과 보배로운 기름과 그의 군기고와 창고의 모든 것을 다 사자들에게 보였는데 왕궁과 그의 나라 안에 있는 모든 것 중에서 히스기야가 그에게 보이지 아니한 것이 없더라</div>
+        <div class="verse"><span class="verse-num">14</span> 선지자 이사야가 히스기야 왕에게 나아와 그에게 이르되 이 사람들이 무슨 말을 하였으며 어디서부터 왕에게 왔나이까 히스기야가 이르되 먼 지방 바벨론에서 왔나이다 하니</div>
+        <div class="verse"><span class="verse-num">15</span> 이사야가 이르되 그들이 왕궁에서 무엇을 보았나이까 하니 히스기야가 대답하되 내 궁에 있는 것을 그들이 다 보았나니 나의 창고에서 하나도 보이지 아니한 것이 없나이다 하더라</div>
+        <div class="verse"><span class="verse-num">16</span> 이사야가 히스기야에게 이르되 여호와의 말씀을 들으소서</div>
+        <div class="verse"><span class="verse-num">17</span> 여호와의 말씀이 날이 이르리니 왕궁의 모든 것과 왕의 조상들이 오늘까지 쌓아 두었던 것이 바벨론으로 옮긴 바 되고 하나도 남지 아니할 것이요</div>
+        <div class="verse"><span class="verse-num">18</span> 또 왕의 몸에서 날 아들 중에서 사로잡혀 바벨론 왕궁의 환관이 되리라 하셨나이다 하니</div>
+        <div class="verse"><span class="verse-num">19</span> 히스기야가 이사야에게 이르되 당신이 전한 바 여호와의 말씀이 선하니이다 하고 또 이르되 만일 내가 사는 날에 태평과 진실이 있을진대 어찌 선하지 아니하리요 하니라</div>
+        <div class="verse"><span class="verse-num">20</span> 히스기야의 남은 사적과 그의 모든 업적과 저수지와 수도를 만들어 물을 성 안으로 끌어들인 일은 유다 왕 역대지략에 기록되지 아니하였느냐</div>
+        <div class="verse"><span class="verse-num">21</span> 히스기야가 그의 조상들과 함께 자고 그의 아들 므낫세가 대신하여 왕이 되니라</div>
+
+        <!-- 이사야 38장 -->
+        <div class="chapter-title">이사야 38장 (1~22절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 때에 히스기야가 병들어 죽게 되니 아모스의 아들 선지자 이사야가 나아가 그에게 이르되 여호와께서 이같이 말씀하시기를 너는 네 집에 유언하라 네가 죽고 살지 못하리라 하셨나이다 하니</div>
+        <div class="verse"><span class="verse-num">2</span> 히스기야가 얼굴을 벽으로 향하고 여호와께 기도하여</div>
+        <div class="verse"><span class="verse-num">3</span> 이르되 여호와여 구하오니 내가 주 앞에서 진실과 전심으로 행하며 주의 목전에서 선하게 행한 것을 기억하옵소서 하고 히스기야가 심히 통곡하니</div>
+        <div class="verse"><span class="verse-num">4</span> 이에 여호와의 말씀이 이사야에게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">5</span> 너는 가서 히스기야에게 이르기를 네 조상 다윗의 하나님 여호와께서 이같이 말씀하시기를 내가 네 기도를 들었고 네 눈물을 보았노라 내가 네 수한에 십오 년을 더하고</div>
+        <div class="verse"><span class="verse-num">6</span> 너와 이 성을 앗수르 왕의 손에서 건져내겠고 내가 또 이 성을 보호하리라</div>
+        <div class="verse"><span class="verse-num">7</span> 이는 여호와께로 말미암는 너를 위한 징조이니 곧 여호와께서 하신 말씀을 그가 이루신다는 증거이니라</div>
+        <div class="verse"><span class="verse-num">8</span> 보라 아하스의 해시계에 나아갔던 해 그림자를 뒤로 십 도를 물러가게 하리라 하셨다 하라 하시더니 이에 해시계에 나아갔던 해의 그림자가 십 도를 물러가니라</div>
+        <div class="verse"><span class="verse-num">9</span> 유다 왕 히스기야가 병들었다가 그의 병이 나은 때에 기록한 글이 이러하니라</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 말하기를 나의 중년에 스올의 문에 들어가고 나의 여생을 빼앗기게 되리라 하였도다</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 또 말하기를 내가 다시는 여호와를 뵈옵지 못하리니 산 자의 땅에서 다시는 여호와를 뵈옵지 못하겠고 내가 세상의 거민 중에서 한 사람도 다시는 보지 못하리라 하였도다</div>
+        <div class="verse"><span class="verse-num">12</span> 나의 거처는 목자의 장막을 걷음 같이 나를 떠나 옮겨졌고 직공이 베를 걷어 말음 같이 내가 내 생명을 말았도다 주께서 나를 틀에서 끊으시리니 조석간에 나를 끝내시리라</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 아침까지 견디었사오나 주께서 사자 같이 나의 모든 뼈를 꺾으시오니 조석간에 나를 끝내시리라</div>
+        <div class="verse"><span class="verse-num">14</span> 나는 제비 같이, 학 같이 지저귀며 비둘기 같이 슬피 울며 내 눈이 쇠하도록 앙망하나이다 여호와여 내가 압제를 받사오니 나의 중보가 되옵소서</div>
+        <div class="verse"><span class="verse-num">15</span> 주께서 내게 말씀하시고 또 친히 이루셨사오니 내가 무슨 말씀을 하오리이까 내 영혼의 고통으로 말미암아 내가 종신토록 방황하리이다</div>
+        <div class="verse"><span class="verse-num">16</span> 주여 사람이 사는 것이 이에 있고 내 심령의 생명도 온전히 거기에 있사오니 원하건대 나를 치료하시며 나를 살려 주옵소서</div>
+        <div class="verse"><span class="verse-num">17</span> 보옵소서 내게 큰 고통을 더하신 것은 내게 평안을 주려 하심이라 주께서 내 영혼을 사랑하사 멸망의 구덩이에서 건지셨고 내 모든 죄를 주의 등 뒤에 던지셨나이다</div>
+        <div class="verse"><span class="verse-num">18</span> 스올이 주께 감사하지 못하며 사망이 주를 찬양하지 못하며 구덩이에 들어간 자가 주의 신실을 바라지 못하되</div>
+        <div class="verse"><span class="verse-num">19</span> 오직 산 자 곧 산 자는 오늘 내가 하는 것과 같이 주께 감사하며 주의 신실을 아버지가 그의 자녀에게 알게 하리이다</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와께서 나를 구원하시리니 우리가 종신토록 여호와의 전에서 수금으로 나의 노래를 노래하리로다</div>
+        <div class="verse"><span class="verse-num">21</span> 이사야가 이르기를 한 뭉치 무화과를 가져다가 종처에 붙이면 왕이 나으리라 하였고</div>
+        <div class="verse"><span class="verse-num">22</span> 히스기야도 말하기를 내가 여호와의 전에 올라갈 징조가 무엇이냐 하였더라</div>
+
+        <!-- 이사야 39장 -->
+        <div class="chapter-title">이사야 39장 (1~8절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 때에 발라단의 아들 바벨론 왕 므로닥발라단이 히스기야가 병 들었다가 나았다 함을 듣고 히스기야에게 글과 예물을 보낸지라</div>
+        <div class="verse"><span class="verse-num">2</span> 히스기야가 사자들로 말미암아 기뻐하여 그들에게 보물 창고 곧 은금과 향료와 보배로운 기름과 모든 무기고에 있는 것을 다 보여 주었으니 히스기야가 궁중의 소유와 전 국내의 소유를 보이지 아니한 것이 없는지라</div>
+        <div class="verse"><span class="verse-num">3</span> 이에 선지자 이사야가 히스기야 왕에게 나아와 묻되 그 사람들이 무슨 말을 하였으며 어디서 왕에게 왔나이까 하니 히스기야가 이르되 그들이 원방 곧 바벨론에서 내게 왔나이다 하니라</div>
+        <div class="verse"><span class="verse-num">4</span> 이사야가 이르되 그들이 왕의 궁전에서 무엇을 보았나이까 하니 히스기야가 대답하되 그들이 내 궁전에 있는 것을 다 보았나이다 내 창고에 있는 것으로 보이지 아니한 보물이 하나도 없나이다 하니라</div>
+        <div class="verse"><span class="verse-num">5</span> 이사야가 히스기야에게 이르되 왕은 만군의 여호와의 말씀을 들으소서</div>
+        <div class="verse"><span class="verse-num">6</span> 보라 날이 이르리니 네 집에 있는 모든 소유와 네 조상들이 오늘까지 쌓아 둔 것이 모두 바벨론으로 옮긴 바 되고 남을 것이 없으리라 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 또 네게서 태어날 자손 중에서 몇이 사로잡혀 바벨론 왕궁의 환관이 되리라 하셨나이다 하니</div>
+        <div class="verse"><span class="verse-num">8</span> 히스기야가 이사야에게 이르되 당신이 이른 바 여호와의 말씀이 좋소이다 하고 또 이르되 내 생전에는 평안과 견고함이 있으리로다 하니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
