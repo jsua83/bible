@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 229</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 229</h1>
+        <p class="sub-title">찬송가 279장 인애하신 구세주여</p>
+        <p class="sub-title">역대상 21~22장 — 다윗의 죄악과 회개</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 279장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1bVDHRdvjCw3oaJsE9CpZgZHoFpb0_1Kl" alt="찬송가 279장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 역대상 21~22장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다.</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 다윗은 요압의 만류에도 불구하고 인구조사를 강행합니다.</span>
+            다윗의 인구조사는 <strong>하나님께서 진노하실 만큼 큰 문제가 되었습니다.</strong> 오래전 민수기의 인구조사와는 <strong>그 목적부터가 달랐습니다.</strong><br><br>
+            민수기의 인구조사 목적은 다음과 같습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 가나안 정복 전쟁에 나갈 만한 자를 <strong>계수했던 것</strong>입니다.<br>
+                <strong>둘째,</strong> 제사장 나라의 <strong>제사 제도를 위한 계수</strong>였습니다.<br>
+                <strong>셋째,</strong> 가나안 <strong>땅 분배를 위한 계수</strong>였습니다.
+            </div>
+            그러나 <strong>다윗의 인구조사는 자신의 '성과와 숫자를 과시'하기 위한 것이었고 이는 하나님께서 하신 일을 자신의 성과로 바꾸려는 악한 일이었습니다.</strong> 다윗이 인구조사를 시행하려고 하자 <strong>요압까지도 이를 만류합니다.</strong> 그러나 <strong>다윗은 인구조사를 강행합니다</strong>(대상 21:2~4).
+            <div class="quote">
+                <strong>하나님께서 이를 악하게 여기시고 이스라엘을 치심으로 다윗에게 큰 위기가 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 인구조사 후에 하나님께서 이스라엘에 내리신 징계에 대해 역대기는 다윗과 이스라엘의 장로들이 함께 회개했다고 기록하고 있습니다.</span>
+            하나님께서 갓 선지자를 통해 <strong>다윗에게 선택하라고 제시하신 세 가지 징계</strong>입니다.
+            <div class="quote">
+                <strong>첫째,</strong> 3년 기근 징계입니다 (사무엘하에는 7년 기근으로 기록).<br>
+                <strong>둘째,</strong> 3개월간 <strong>적군에게 쫓기는 징계</strong>입니다.<br>
+                <strong>셋째,</strong> 3일간의 <strong>전염병 징계</strong>입니다.
+            </div>
+            다윗이 선택한 <strong>3일간의 전염병 징계로 인해 7만 명의 백성이 죽자 다윗이 하나님 앞에 회개하며 다시 간구합니다</strong>(대상 21:16~17).
+            <div class="quote">
+                <strong>사무엘하에서는 다윗이 홀로 회개한 것으로 기록되어 있으나 역대상에서는 다윗과 이스라엘의 장로들이 국민적 재앙 앞에 함께 하나님께 회개한 것으로 기록되어 있습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 오르난 타작마당에서 드린 다윗의 제사에 하나님께서 불로 응답해주십니다.</span>
+            하나님께서 다윗에게 제사를 드리라고 명하신 곳은 <strong>1,000년 전 하나님께서 아브라함에게 이삭을 바치라고 명하셨던 모리아산</strong>입니다. 다윗 시대에는 그곳이 <strong>여부스 사람 오르난의 타작마당이 되어 있습니다.</strong><br><br>
+            다윗은 오르난에게 <strong>상당한 값을 주고 그 땅을 구입하고 그곳에서 하나님께서 명하신 대로 제사를 드립니다</strong>(대상 21:24~30).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 다윗은 오르난 타작마당에서 희생제사를 드린 후 그곳을 '하나님의 성전'이라고 부릅니다.</span>
+            다윗은 본격적으로 <strong>오르난의 타작마당을 성전 부지로 확보하며 성전 건축에 박차를 가합니다</strong>(대상 22:1). 다윗은 성전이 세워지기 전이지만 그곳을 <strong>'하나님의 성전', '이스라엘의 번제단'으로 부릅니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 다윗은 성전 설계도와 자신이 준비한 모든 것을 그의 아들 솔로몬에게 물려줍니다.</span>
+            다윗은 성전 건축을 위해 <strong>많은 물적 자원을 비롯해 무엇보다 중요한 인적 자원을 준비시킵니다.</strong> 그리고 책임자로 <strong>자신의 아들 솔로몬을 세우고 축복과 당부의 메시지를 전합니다</strong>(대상 22:11~16).
+            <div class="quote">
+                <strong>첫째,</strong> 여호와의 <strong>율법을 지키라</strong>고 당부합니다.<br>
+                <strong>둘째,</strong> <strong>강하고 담대하라</strong>고 당부합니다.<br>
+                <strong>셋째,</strong> 다윗 자신이 넉넉히 준비한 것 외에도 <strong>더 준비해 성전 건축에 최선을 다할 것</strong>을 당부합니다.
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 역대상 21~22장 '다윗의 죄악과 회개'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 역대상 21장 -->
+        <div class="chapter-title">역대상 21장 (1~30절)</div>
+        <div class="verse"><span class="verse-num">1</span> 사탄이 일어나 이스라엘을 대적하고 다윗을 충동하여 이스라엘을 계수하게 하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 다윗이 요압과 백성의 지도자들에게 이르되 너희는 가서 브엘세바에서부터 단까지 이스라엘을 계수하고 돌아와 내게 보고하여 그 수효를 알게 하라 하니</div>
+        <div class="verse"><span class="verse-num">3</span> 요압이 아뢰되 여호와께서 그 백성을 지금보다 백 배나 더하시기를 원하나이다 내 주 왕이여 이 백성이 다 내 주의 종이 아니니이까 내 주께서 어찌하여 이 일을 명령하시나이까 어찌하여 이스라엘이 범죄하게 하시나이까 하나</div>
+        <div class="verse"><span class="verse-num">4</span> 왕의 명령이 요압을 재촉한지라 드디어 요압이 떠나 이스라엘 땅에 두루 다닌 후에 예루살렘으로 돌아와</div>
+        <div class="verse"><span class="verse-num">5</span> 요압이 백성의 수효를 다윗에게 보고하니 이스라엘 중에 칼을 뺄 만한 자가 백십만 명이요 유다 중에 칼을 뺄 만한 자가 사십칠만 명이라</div>
+        <div class="verse"><span class="verse-num">6</span> 요압이 왕의 명령을 마땅치 않게 여겨 레위와 베냐민 사람은 계수하지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">7</span> 하나님이 이 일을 악하게 여기사 이스라엘을 치시매</div>
+        <div class="verse"><span class="verse-num">8</span> 다윗이 하나님께 아뢰되 내가 이 일을 행함으로 큰 죄를 범하였나이다 이제 간구하옵나니 종의 죄를 용서하여 주옵소서 내가 심히 미련하게 행하였나이다 하니라</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와께서 다윗의 선견자 갓에게 말씀하여 이르시되</div>
+        <div class="verse"><span class="verse-num">10</span> 가서 다윗에게 말하여 이르기를 여호와의 말씀이 내가 네게 세 가지를 내어 놓으리니 그 중에서 하나를 네가 택하라 내가 그것을 네게 행하리라 하셨다 하라 하신지라</div>
+        <div class="verse"><span class="verse-num">11</span> 갓이 다윗에게 나아가 그에게 말하되 여호와의 말씀이 너는 마음대로 택하라</div>
+        <div class="verse"><span class="verse-num">12</span> 혹 삼년 기근이든지 혹 네가 석 달을 적군에게 패하여 적군의 칼에 쫓길 일이든지 혹 여호와의 칼 곧 전염병이 사흘 동안 이 땅에 유행하며 여호와의 천사가 이스라엘 온 지경을 멸할 일이든지라고 하셨나니 내가 무슨 말로 나를 보내신 이에게 대답할지를 결정하소서 하니</div>
+        <div class="verse"><span class="verse-num">13</span> 다윗이 갓에게 이르되 내가 곤경에 빠졌도다 여호와께서는 긍휼이 심히 크시니 내가 그의 손에 빠지고 사람의 손에 빠지지 아니하기를 원하나이다 하는지라</div>
+        <div class="verse"><span class="verse-num">14</span> 이에 여호와께서 이스라엘 백성에게 전염병을 내리시매 이스라엘 백성 중에서 죽은 자가 칠만 명이었더라</div>
+        <div class="verse"><span class="verse-num">15</span> 하나님이 예루살렘을 멸하러 천사를 보내셨더니 천사가 멸하려 할 때에 여호와께서 보시고 이 재앙 내림을 뉘우치사 멸하는 천사에게 이르시되 족하다 이제는 네 손을 거두라 하시니 그 때에 여호와의 천사가 여부스 사람 오르난의 타작 마당 곁에 선지라</div>
+        <div class="verse"><span class="verse-num">16</span> 다윗이 눈을 들어 보매 여호와의 천사가 천지 사이에 섰고 칼을 빼어 손에 들고 예루살렘 하늘을 향하여 편지라 다윗이 장로들과 더불어 굵은 베를 입고 얼굴을 땅에 대고 엎드려</div>
+        <div class="verse"><span class="verse-num">17</span> 하나님께 아뢰되 명령하여 백성을 계수하게 한 자가 내가 아니니이까 범죄하고 악을 행한 자는 곧 나이니이다 이 양 떼는 무엇을 행하였나이까 청하건대 나의 하나님 여호와여 주의 손으로 나와 내 아버지의 집을 치시고 주의 백성에게 재앙을 내리지 마옵소서 하니라</div>
+        <div class="verse"><span class="verse-num">18</span> 여호와의 천사가 갓에게 명령하여 다윗에게 이르시기를 다윗은 올라가서 여부스 사람 오르난의 타작 마당에서 여호와를 위하여 제단을 쌓으라 하신지라</div>
+        <div class="verse"><span class="verse-num">19</span> 이에 갓이 여호와의 이름으로 이른 말씀대로 다윗이 올라가니라</div>
+        <div class="verse"><span class="verse-num">20</span> 그 때에 오르난이 밀을 타작하다가 돌이켜 천사를 보고 오르난이 네 명의 아들과 함께 숨었더니</div>
+        <div class="verse"><span class="verse-num">21</span> 다윗이 오르난에게 나아가매 오르난이 내다보다가 다윗을 보고 타작 마당에서 나와 얼굴을 땅에 대고 다윗에게 절하매</div>
+        <div class="verse"><span class="verse-num">22</span> 다윗이 오르난에게 이르되 이 타작하는 곳을 내게 넘기라 너는 상당한 값으로 내게 넘기라 내가 여호와를 위하여 여기 한 제단을 쌓으리니 그리하면 전염병이 백성 중에서 그치리라 하니</div>
+        <div class="verse"><span class="verse-num">23</span> 오르난이 다윗에게 말하되 왕은 취하소서 내 주 왕께서 좋게 여기시는 대로 행하소서 보소서 내가 이것들을 드리나이다 소들은 번제물로, 곡식 떠는 기계는 화목으로, 밀은 소제물로 삼으시기 위하여 다 드리나이다 하는지라</div>
+        <div class="verse"><span class="verse-num">24</span> 다윗 왕이 오르난에게 이르되 그렇지 아니하다 내가 반드시 상당한 값으로 사리라 내가 여호와께 드리려고 네 물건을 빼앗지 아니하겠고 값 없이는 번제를 드리지도 아니하리라 하니라</div>
+        <div class="verse"><span class="verse-num">25</span> 그리하여 다윗은 그 터 값으로 금 육백 세겔을 달아 오르난에게 주고</div>
+        <div class="verse"><span class="verse-num">26</span> 다윗이 거기서 여호와를 위하여 제단을 쌓고 번제와 화목제를 드려 여호와께 아뢰었더니 여호와께서 하늘에서부터 번제단 위에 불을 내려 응답하시고</div>
+        <div class="verse"><span class="verse-num">27</span> 여호와께서 천사를 명령하시매 그가 칼을 칼집에 꽂았더라</div>
+        <div class="verse"><span class="verse-num">28</span> 이 때에 다윗이 여호와께서 여부스 사람 오르난의 타작 마당에서 응답하심을 보고 거기서 제사를 드렸으니</div>
+        <div class="verse"><span class="verse-num">29</span> 옛적에 모세가 광야에서 지은 여호와의 성막과 번제단이 그 때에 기브온 산당에 있었으나</div>
+        <div class="verse"><span class="verse-num">30</span> 다윗이 여호와의 천사의 칼을 두려워하여 감히 그 앞에 가서 하나님께 묻지 못하더라</div>
+
+        <!-- 역대상 22장 -->
+        <div class="chapter-title">역대상 22장 (1~19절)</div>
+        <div class="verse"><span class="verse-num">1</span> 다윗이 이르되 이는 여호와 하나님의 성전이요 이는 이스라엘의 번제단이라 하였더라</div>
+        <div class="verse"><span class="verse-num">2</span> 다윗이 명령하여 이스라엘 땅에 거류하는 이방 사람을 모으고 석수를 시켜 하나님의 성전을 건축할 돌을 다듬게 하고</div>
+        <div class="verse"><span class="verse-num">3</span> 다윗이 또 문짝 못과 거멀 못에 쓸 철을 많이 준비하고 또 무게를 달 수 없을 만큼 심히 많은 놋을 준비하고</div>
+        <div class="verse"><span class="verse-num">4</span> 또 백향목을 무수히 준비하였으니 이는 시돈 사람과 두로 사람이 백향목을 다윗에게로 많이 수운하여 왔음이라</div>
+        <div class="verse"><span class="verse-num">5</span> 다윗이 이르되 내 아들 솔로몬은 어리고 미숙하고 여호와를 위하여 건축할 성전은 극히 웅장하여 만국에 명성과 영광이 있게 하여야 할지라 그러므로 내가 이제 그것을 위하여 준비하리라 하고 다윗이 죽기 전에 많이 준비하였더라</div>
+        <div class="verse"><span class="verse-num">6</span> 다윗이 그의 아들 솔로몬을 불러 이스라엘 하나님 여호와를 위하여 성전 건축하기를 부탁하여</div>
+        <div class="verse"><span class="verse-num">7</span> 다윗이 솔로몬에게 이르되 내 아들아 나는 내 하나님 여호와의 이름을 위하여 성전을 건축할 마음이 있었으나</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와의 말씀이 내게 임하여 이르시되 너는 피를 심히 많이 흘렸고 크게 전쟁하였느니라 네가 내 앞에서 땅에 피를 많이 흘렸은즉 내 이름을 위하여 성전을 건축하지 못하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 보라 한 아들이 네게서 나리니 그는 온순한 사람이라 내가 그로 주변 모든 대적에게서 평온을 얻게 하리라 그의 이름을 솔로몬이라 하리니 이는 내가 그의 생전에 평안과 안일함을 이스라엘에게 줄 것임이니라</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 내 이름을 위하여 성전을 건축할지라 그는 내 아들이 되고 나는 그의 아버지가 되어 그 나라 왕위를 이스라엘 위에 굳게 세워 영원까지 이르게 하리라 하셨나니</div>
+        <div class="verse"><span class="verse-num">11</span> 이제 내 아들아 여호와께서 너와 함께 계시기를 원하며 네가 형통하여 여호와께서 네게 대하여 말씀하신 대로 네 하나님 여호와의 성전을 건축하며</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와께서 네게 지혜와 총명을 주사 네게 이스라엘을 다스리게 하시고 네 하나님 여호와의 율법을 지키게 하시기를 더욱 원하노라</div>
+        <div class="verse"><span class="verse-num">13</span> 그 때에 네가 만일 여호와께서 모세를 통하여 이스라엘에게 명령하신 모든 규례와 법도를 삼가 행하면 형통하리니 강하고 담대하여 두려워하지 말고 놀라지 말지어다</div>
+        <div class="verse"><span class="verse-num">14</span> 내가 환난 중에 여호와의 성전을 위하여 금 십만 달란트와 은 백만 달란트와 놋과 철을 그 무게를 달 수 없을 만큼 심히 많이 준비하였고 또 재목과 돌을 준비하였으나 너는 더할 것이며</div>
+        <div class="verse"><span class="verse-num">15</span> 또 장인이 네게 많이 있나니 곧 석수와 목수와 온갖 일에 익숙한 모든 사람이니라</div>
+        <div class="verse"><span class="verse-num">16</span> 금과 은과 놋과 철이 무수하니 너는 일어나 일하라 여호와께서 너와 함께 계실지로다 하니라</div>
+        <div class="verse"><span class="verse-num">17</span> 다윗이 또 이스라엘 모든 방백에게 명령하여 그의 아들 솔로몬을 도우라 하여 이르되</div>
+        <div class="verse"><span class="verse-num">18</span> 너희 하나님 여호와께서 너희와 함께 계시지 아니하시느냐 사면으로 너희에게 평온함을 주지 아니하셨느냐 이 땅 주민을 내 손에 넘기사 이 땅으로 여호와와 그의 백성 앞에 복종하게 하셨나니</div>
+        <div class="verse"><span class="verse-num">19</span> 이제 너희는 마음과 뜻을 바쳐서 너희 하나님 여호와를 구하라 그리고 일어나서 여호와 하나님의 성전을 건축하고 여호와의 언약궤와 하나님 성전의 기물을 가져다가 여호와의 이름을 위하여 건축한 성전에 들이게 하라 하였더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

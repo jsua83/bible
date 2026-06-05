@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 243</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 243</h1>
+        <p class="sub-title">찬송가 199장 나의 사랑하는 책</p>
+        <p class="sub-title">에스겔 1~3장 — 그발 강가의 에스겔</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 199장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/13f5hmhiUNuaMl01sRvU_GyKqFrOb0TZY" alt="찬송가 199장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 에스겔 1~3장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다.</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 성경에서 헤드라이트가 비치는 '무대'는 크게 일곱 번 바뀝니다.</span>
+            <div class="quote">
+                <strong>첫 번째,</strong> 아브라함 때에 <strong>갈대아 우르에서 가나안으로</strong> 바뀝니다.<br><br>
+                <strong>두 번째,</strong> 요셉 때에 <strong>가나안에서 애굽으로</strong> 바뀝니다.<br><br>
+                <strong>세 번째,</strong> 모세 때에 <strong>애굽에서 광야로</strong> 바뀝니다.<br><br>
+                <strong>네 번째,</strong> 여호수아 때에 <strong>광야에서 가나안으로</strong> 바뀝니다.<br><br>
+                <strong>다섯 번째,</strong> 예레미야 때에 <strong>예루살렘에서 바벨론으로</strong> 바뀝니다.<br><br>
+                <strong>여섯 번째,</strong> 스룹바벨 때에 <strong>바벨론과 페르시아에서 예루살렘으로</strong> 바뀝니다.<br><br>
+                <strong>일곱 번째,</strong> 예수님 때에 <strong>예루살렘에서 땅끝으로</strong> 바뀝니다.
+            </div>
+            <div class="quote">
+                <strong>성경에서 에스겔 때의 무대는 예루살렘에서 바벨론으로 바뀐 그때입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 젊은 제사장 에스겔은 바벨론 땅 그발 강가에서 선지자로 사역을 시작합니다.</span>
+            남유다의 여호야긴 왕과 1만여 명의 기술자들과 함께 <strong>바벨론 2차 포로로 끌려온 에스겔 제사장은 강제 노역에 동원되어 바벨론의 그발 강가에서 지내게 됩니다.</strong> 에스겔은 <strong>25세에 바벨론 포로로 끌려온 이후 5년이 지나고 30세 때에 선지자로 소명을 받습니다</strong>(겔 1:1~3).<br><br>
+            에스겔은 <strong>하나님께서 보여주시는 수많은 환상을 보면서 이해하기 힘든 하나님의 명령에도 철저히 순종한 하나님의 사람</strong>이었습니다.
+            <div class="quote">
+                <strong>에스겔 선지자와 하나님의 꿈을 위한 '만남'이 시작됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 히브리어 벤 아담, 즉 사람의 아들. 인자는 이제 하나님의 영광을 목격하게 됩니다.</span>
+            하나님께서는 젊은 제사장 에스겔을 <strong>"인자야"라고 부르십니다</strong>(겔 2:1~2). '인자'는 히브리어로 <strong>'벤 아담', 즉 '사람의 아들'</strong>이라는 뜻입니다. <strong>이는 하나님의 영광을 목격할 한 인간이라는 뜻으로 부르신 것</strong>입니다.
+            <div class="quote">
+                <strong>하나님께서는 에스겔에게 환상을 보이시며 선지자로 부르셔서 바벨론 포로로 끌려와 있는 남유다 백성들에게 보내십니다.</strong> (겔 2:3~10)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 에스겔 선지자는 하나님의 마음을 품되 그의 이마는 금강석같이 강하게 해야 했습니다.</span>
+            하나님께서 에스겔 선지자에게 주신 두루마리는 <strong>입에는 꿀처럼 달았던 계시의 말씀이었으나 배에는 쓴 말씀</strong>이었습니다(겔 3:3, 계 10:10). 에스겔 선지자는 <strong>쓰디쓴 계시의 말씀을 남유다 백성들이 듣든지 아니 듣든지 전해야 합니다.</strong><br><br>
+            하나님께서는 에스겔 선지자에게 <strong>금강석같이 강한 능력을 주시고 하나님의 영을 보내주십니다</strong>(겔 3:12~14).
+            <div class="quote">
+                <strong>"인자야 내가 네게 이를 모든 말을 너는 마음으로 받으며 귀로 듣고"</strong> (겔 3:10)<br>— 즉, <strong>하나님의 마음을 가지고 선포하라는 뜻</strong>입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 에스겔 선지자는 하나님의 파수꾼으로 부름을 받습니다.</span>
+            파수꾼은 <strong>망대에서 망을 보며 적으로부터의 위험을 경고하는 자</strong>입니다. 하나님께서 에스겔에게 주신 <strong>파수꾼의 사명은 하나님을 대신하여 남유다 백성에게 하나님의 경고의 말씀을 전하는 것</strong>입니다(겔 3:17).<br><br>
+            에스겔 선지자가 감당해야 할 파수꾼의 역할과 책임은 다음과 같습니다(겔 3:18~21).
+            <div class="quote">
+                <strong>첫째,</strong> 에스겔 선지자가 파수꾼으로서의 사명을 잘 감당하지 못해 <strong>악인이 경고를 듣지 못하고 죄 가운데에 죽으면 그 책임은 파수꾼인 에스겔에게 있습니다.</strong><br><br>
+                <strong>둘째,</strong> 악인에게 경고를 전했지만 <strong>악인이 회개하지 않고 죽을 경우 그 책임은 악인에게 있습니다.</strong><br><br>
+                <strong>셋째,</strong> 의인이 죄 지을 상황에 경고의 말씀을 전하지 않아 <strong>의인이 죄 가운데 죽으면 그 책임은 에스겔에게 있습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 에스겔 1~3장 '그발 강가의 에스겔'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 에스겔 1장 -->
+        <div class="chapter-title">에스겔 1장 (1~28절)</div>
+        <div class="verse"><span class="verse-num">1</span> 서른째 해 넷째 달 초닷새에 내가 그발 강 가 사로잡힌 자 중에 있을 때에 하늘이 열리며 하나님의 모습이 내게 보이니</div>
+        <div class="verse"><span class="verse-num">2</span> 여호야긴 왕이 사로잡힌 지 오 년 그 달 초닷새라</div>
+        <div class="verse"><span class="verse-num">3</span> 갈대아 땅 그발 강 가에서 여호와의 말씀이 부시의 아들 제사장 나 에스겔에게 특별히 임하고 여호와의 권능이 내 위에 있으니라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 보니 북쪽에서부터 폭풍과 큰 구름이 오는데 그 속에서 불이 번쩍번쩍하여 빛이 그 사방에 비치며 그 불 가운데 단 쇠 같은 것이 나타나 보이고</div>
+        <div class="verse"><span class="verse-num">5</span> 그 속에서 네 생물의 형상이 나타나는데 그들의 모양이 이러하니 그들에게 사람의 형상이 있더라</div>
+        <div class="verse"><span class="verse-num">6</span> 그들에게 각각 네 얼굴과 네 날개가 있고</div>
+        <div class="verse"><span class="verse-num">7</span> 그들의 다리는 곧은 다리요 그들의 발바닥은 송아지 발바닥 같고 광낸 구리 같이 빛나며</div>
+        <div class="verse"><span class="verse-num">8</span> 그 사방 날개 밑에는 각각 사람의 손이 있더라 그 네 생물의 얼굴과 날개가 이러하니</div>
+        <div class="verse"><span class="verse-num">9</span> 날개는 다 서로 연하였으며 갈 때에는 돌이키지 아니하고 일제히 앞으로 곧게 행하며</div>
+        <div class="verse"><span class="verse-num">10</span> 그 얼굴들의 모양은 넷의 앞은 사람의 얼굴이요 넷의 오른쪽은 사자의 얼굴이요 넷의 왼쪽은 소의 얼굴이요 넷의 뒤는 독수리의 얼굴이니</div>
+        <div class="verse"><span class="verse-num">11</span> 그 얼굴은 그러하며 그 날개는 들어 펴서 각기 둘씩 서로 연하였고 또 둘은 몸을 가렸으며</div>
+        <div class="verse"><span class="verse-num">12</span> 영이 어떤 쪽으로 가면 그 생물들도 그대로 가되 돌이키지 아니하고 일제히 앞으로 곧게 행하며</div>
+        <div class="verse"><span class="verse-num">13</span> 또 생물들의 모양은 타는 숯불과 횃불 모양 같은데 그 불이 그 생물 사이에서 오르락내리락 하며 그 불은 광채가 있고 그 가운데에서는 번개가 나며</div>
+        <div class="verse"><span class="verse-num">14</span> 그 생물들은 번개 모양 같이 왕래하더라</div>
+        <div class="verse"><span class="verse-num">15</span> 내가 그 생물들을 보니 그 생물들 곁에 있는 땅 위에는 바퀴가 있는데 그 네 얼굴을 따라 하나씩 있고</div>
+        <div class="verse"><span class="verse-num">16</span> 그 바퀴의 모양과 그 구조는 황옥 같이 보이는데 그 넷은 똑같은 모양을 가지고 있으며 그들의 모양과 구조는 바퀴 안에 바퀴가 있는 것 같으며</div>
+        <div class="verse"><span class="verse-num">17</span> 그들이 갈 때에는 사방으로 향한 대로 돌이키지 아니하고 가며</div>
+        <div class="verse"><span class="verse-num">18</span> 그 둘레는 높고 무서우며 그 네 둘레로 돌아가면서 눈이 가득하며</div>
+        <div class="verse"><span class="verse-num">19</span> 그 생물들이 갈 때에 바퀴들도 그 곁에서 가고 그 생물들이 땅에서 들릴 때에 바퀴들도 들려서</div>
+        <div class="verse"><span class="verse-num">20</span> 영이 어떤 쪽으로 가면 생물들도 영이 가려 하는 곳으로 가고 바퀴들도 그 곁에서 들리니 이는 생물의 영이 그 바퀴들 가운데에 있음이니라</div>
+        <div class="verse"><span class="verse-num">21</span> 그들이 가면 이들도 가고 그들이 서면 이들도 서고 그들이 땅에서 들릴 때에는 이들도 그 곁에서 들리니 이는 생물의 영이 그 바퀴들 가운데에 있음이더라</div>
+        <div class="verse"><span class="verse-num">22</span> 그 생물의 머리 위에는 수정 같은 궁창의 형상이 있어 보기에 두려운데 그들의 머리 위에 펼쳐져 있고</div>
+        <div class="verse"><span class="verse-num">23</span> 그 궁창 밑에 생물들의 날개가 서로 향하여 펴 있는데 이 생물은 두 날개로 몸을 가렸고 저 생물도 두 날개로 몸을 가렸더라</div>
+        <div class="verse"><span class="verse-num">24</span> 생물들이 갈 때에 내가 그 날개 소리를 들으니 많은 물 소리와도 같으며 전능자의 음성과도 같으며 떠드는 소리 곧 군대의 소리와도 같더니 그 생물이 설 때에 그 날개를 내렸더라</div>
+        <div class="verse"><span class="verse-num">25</span> 그 머리 위에 있는 궁창 위에서부터 음성이 나더라 그 생물이 설 때에 그 날개를 내렸더라</div>
+        <div class="verse"><span class="verse-num">26</span> 그 머리 위에 있는 궁창 위에 보좌의 형상이 있는데 그 모양이 남보석 같고 그 보좌의 형상 위에 한 형상이 있어 사람의 모양 같더라</div>
+        <div class="verse"><span class="verse-num">27</span> 내가 보니 그 허리 위의 모양은 단 쇠 같아서 그 속과 주위가 불 같고 내가 보니 그 허리 아래의 모양도 불 같아서 사방으로 광채가 나며</div>
+        <div class="verse"><span class="verse-num">28</span> 그 사방 광채의 모양은 비 오는 날 구름에 있는 무지개 같으니 이는 여호와의 영광의 형상의 모양이라 내가 보고 엎드려 말씀하시는 이의 음성을 들으니라</div>
+
+        <!-- 에스겔 2장 -->
+        <div class="chapter-title">에스겔 2장 (1~10절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그가 내게 이르시되 인자야 네 발로 일어서라 내가 네게 말하리라 하시며</div>
+        <div class="verse"><span class="verse-num">2</span> 그가 내게 말씀하실 때에 그 영이 내게 임하사 나를 일으켜 내 발로 세우시기로 내가 그 말씀하시는 자의 소리를 들으니</div>
+        <div class="verse"><span class="verse-num">3</span> 내게 이르시되 인자야 내가 너를 이스라엘 자손 곧 패역한 백성, 나를 배반하는 자에게 보내노라 그들과 그 조상들이 내게 범죄하여 오늘까지 이르렀나니</div>
+        <div class="verse"><span class="verse-num">4</span> 이 자손은 얼굴이 뻔뻔하고 마음이 굳은 자니라 내가 너를 그들에게 보내노니 너는 그들에게 이르기를 주 여호와의 말씀이 이러하시다 하라</div>
+        <div class="verse"><span class="verse-num">5</span> 그들은 패역한 족속이라 그들이 듣든지 아니 듣든지 그들 가운데에 선지자가 있음을 알지니라</div>
+        <div class="verse"><span class="verse-num">6</span> 인자야 너는 비록 가시와 찔레와 함께 있으며 전갈 가운데에 거주할지라도 그들을 두려워하지 말고 그들의 말을 두려워하지 말지어다 그들은 패역한 족속라도 그 말을 두려워하지 말며 그 얼굴을 무서워하지 말지어다</div>
+        <div class="verse"><span class="verse-num">7</span> 그들은 심히 패역한 자라 그들이 듣든지 아니 듣든지 너는 내 말로 고할지어다</div>
+        <div class="verse"><span class="verse-num">8</span> 너 인자야 내가 네게 이르는 말을 듣고 그 패역한 족속 같이 패역하지 말고 네 입을 벌리고 내가 네게 주는 것을 먹으라 하시기로</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 보니 보라 한 손이 나를 향하여 펴지고 보라 그 안에 두루마리 책이 있더라</div>
+        <div class="verse"><span class="verse-num">10</span> 그가 그것을 내 앞에 펴시니 그 안팎에 글이 있는데 그 위에 애가와 애곡과 재앙의 말이 기록되었더라</div>
+
+        <!-- 에스겔 3장 -->
+        <div class="chapter-title">에스겔 3장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 또 그가 내게 이르시되 인자야 너는 발견한 것을 먹으라 너는 이 두루마리를 먹고 가서 이스라엘 족속에게 말하라 하시기로</div>
+        <div class="verse"><span class="verse-num">2</span> 내가 입을 벌리니 그가 그 두루마리를 내게 먹이시며</div>
+        <div class="verse"><span class="verse-num">3</span> 내게 이르시되 인자야 내가 네게 주는 이 두루마리를 네 배에 넣으며 네 창자에 채우라 하시기에 내가 먹으니 그것이 내 입에서 달기가 꿀 같더라</div>
+        <div class="verse"><span class="verse-num">4</span> 그가 또 내게 이르시되 인자야 이스라엘 족속에게 가서 내 말로 그들에게 고하라</div>
+        <div class="verse"><span class="verse-num">5</span> 너를 언어가 다르거나 말이 어려운 백성에게 보내는 것이 아니요 이스라엘 족속에게 보내는 것이라</div>
+        <div class="verse"><span class="verse-num">6</span> 너를 언어가 다르거나 말이 어려워 네가 그들의 말을 알아 듣지 못할 나라들에게 보내는 것이 아니니라 내가 너를 그들에게 보냈다면 그들은 정녕 네 말을 들었으리라</div>
+        <div class="verse"><span class="verse-num">7</span> 그러나 이스라엘 족속은 이마가 굳고 마음이 굳어 네 말을 듣고자 아니하리니 이는 내 말을 듣고자 아니함이니라</div>
+        <div class="verse"><span class="verse-num">8</span> 보라 내가 그들의 얼굴을 마주보도록 네 얼굴을 굳게 하였고 그들의 이마를 마주보도록 네 이마를 굳게 하였으되</div>
+        <div class="verse"><span class="verse-num">9</span> 네 이마를 화석보다 굳은 금강석 같이 하였으니 그들이 비록 반역하는 족속이라도 두려워하지 말며 그들의 얼굴을 무서워하지 말라 하시니라</div>
+        <div class="verse"><span class="verse-num">10</span> 또 내게 이르시되 인자야 내가 네게 이를 모든 말을 너는 마음으로 받으며 귀로 듣고</div>
+        <div class="verse"><span class="verse-num">11</span> 사로잡힌 네 민족에게로 가서 그들이 듣든지 아니 듣든지 그들에게 고하여 이르기를 주 여호와의 말씀이 이러하시다 하라</div>
+        <div class="verse"><span class="verse-num">12</span> 때에 주의 영이 나를 들어올리시는데 내가 내 뒤에서 크게 울리는 소리를 들으니 찬송할지어다 여호와의 영광이 그의 처소로부터 나오는도다 하니</div>
+        <div class="verse"><span class="verse-num">13</span> 이는 생물들의 날개가 서로 부딪치는 소리와 생물 곁의 바퀴 소리라 크게 울리는 소리더라</div>
+        <div class="verse"><span class="verse-num">14</span> 주의 영이 나를 들어올려 데리고 가시는데 내가 근심하고 분한 마음으로 가니 여호와의 권능이 힘 있게 나를 감동시키시더라</div>
+        <div class="verse"><span class="verse-num">15</span> 이에 내가 델아빕에 이르러 그 사로잡힌 백성 곧 그발 강 가에 거주하는 자들에게 나아가 그 중에서 두려워 떨며 칠 일을 지내니라</div>
+        <div class="verse"><span class="verse-num">16</span> 칠 일 후에 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">17</span> 인자야 내가 너를 이스라엘 족속의 파수꾼으로 세웠으니 너는 내 입의 말을 듣고 나를 대신하여 그들을 깨우치라</div>
+        <div class="verse"><span class="verse-num">18</span> 가령 내가 악인에게 말하기를 너는 꼭 죽으리라 할 때에 네가 깨우치지 아니하거나 말로 악인에게 일러서 그의 악한 길을 떠나 생명을 구원하게 하지 아니하면 그 악인은 그의 죄악 중에서 죽으려니와 내가 그의 피 값을 네 손에서 찾을 것이고</div>
+        <div class="verse"><span class="verse-num">19</span> 네가 악인을 깨우치되 그가 그의 악한 마음과 악한 행위에서 돌이키지 아니하면 그는 그의 죄악 중에서 죽으려니와 너는 네 생명을 보존하리라</div>
+        <div class="verse"><span class="verse-num">20</span> 또 의인이 그의 공의에서 돌이켜 악을 행할 때에는 이미 행한 그의 공의는 기억할 바 아니라 내가 그 앞에 거치는 것을 두면 그가 죽을지니 이는 네가 그를 깨우치지 않음이니라 그는 그의 죄 중에서 죽으려니와 그의 피 값은 내가 네 손에서 찾으리라</div>
+        <div class="verse"><span class="verse-num">21</span> 그러나 네가 그 의인을 깨우쳐 범죄하지 아니하게 함으로 그가 범죄하지 아니하면 정녕 살리니 이는 깨우침을 받음이며 너도 네 영혼을 보존하리라</div>
+        <div class="verse"><span class="verse-num">22</span> 여호와께서 권능으로 거기서 내게 임하시고 또 내게 이르시되 일어나 들로 나아가라 내가 거기서 너와 말하리라 하시기로</div>
+        <div class="verse"><span class="verse-num">23</span> 내가 일어나 들로 나아가니 여호와의 영광이 거기에 머물렀는데 내가 전에 그발 강 가에서 보던 영광과 같은지라 내가 곧 엎드리니</div>
+        <div class="verse"><span class="verse-num">24</span> 주의 영이 내게 임하사 나를 일으켜 내 발로 세우시고 내게 말씀하여 이르시되 너는 가서 네 집에 들어가 문을 닫으라</div>
+        <div class="verse"><span class="verse-num">25</span> 너 인자야 보라 무리가 네 위에 줄을 놓아 너를 동여매리니 네가 그들 가운데에서 나오지 못할 것이라</div>
+        <div class="verse"><span class="verse-num">26</span> 내가 네 혀를 네 입천장에 붙게 하여 네가 말 못하는 자가 되어 그들을 꾸짖는 자가 되지 못하게 하리니 그들은 패역한 족속임이니라</div>
+        <div class="verse"><span class="verse-num">27</span> 그러나 내가 너와 말할 때에 네 입을 열리니 너는 그들에게 이르기를 주 여호와의 말씀이 이러하시다 하라 들을 자는 들을 것이요 듣기 싫은 자는 듣지 아니하리니 그들은 반역하는 족속임이니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

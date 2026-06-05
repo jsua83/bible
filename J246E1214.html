@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 246</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 246</h1>
+        <p class="sub-title">찬송가 274장 나 행한 것 죄뿐이니</p>
+        <p class="sub-title">에스겔 12~14장 — '묵시가 사라진다'는 속담</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 274장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1bCAcWgNqcxyEe5W70imypNGlShuzGo6v" alt="찬송가 274장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 에스겔 12~14장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서는 에스겔 선지자의 퍼포먼스를 통해 남유다가 받을 심판이 확정되었음을 선포하십니다.</span>
+            하나님께서는 에스겔 선지자에게 <strong>두 가지 상징적인 행동을 명령하십니다</strong>(겔 12:3~20).
+            <div class="quote">
+                <strong>첫 번째 상징적 행동 — '포로의 행장을 꾸리는 퍼포먼스'</strong> — 이는 이제 곧 남유다가 완전히 멸망하여 <strong>남유다에 남아 있던 백성들이 3차 바벨론 포로로 끌려올 것을 예언한 것</strong>입니다.<br><br>
+                <strong>두 번째 상징적 행동 — '떨며 음식을 먹고 근심하며 물을 마시는 퍼포먼스'</strong> — 이는 바벨론 제국의 군대가 예루살렘성을 포위함으로 <strong>극심한 공포와 두려움을 겪을 것이며 식량이 없어 자녀들까지 먹는 참담한 비극이 일어날 것</strong>을 말씀하신 것입니다.<br><br>
+                <strong>얼마 후 남유다는 멸망하고 살아남은 남유다 백성들은 바벨론 포로로 끌려가고 그때부터 70년 동안 남유다 땅은 황무한 곳이 됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 그 당시 남유다에는 "날이 더디고 모든 묵시가 사라지리라"라는 속담이 퍼지고 있었습니다.</span>
+            안타까운 사실은 <strong>바벨론 제국에 의해 예루살렘성이 곧 함락될 것임에도 불구하고 남유다에서는 이 속담이 퍼지기 시작한 것</strong>입니다. 이와 함께 <strong>허탄한 묵시와 아첨하는 복술이 만연했습니다.</strong><br><br>
+            여기에서 <strong>'묵시'는 히브리어로 '하존'</strong>입니다. 이는 봄, 응시, 이상, 신탁 등의 뜻으로 <strong>기본적으로 하나님께서 보여주시는 환상이나 계시를 의미</strong>합니다.
+            <div class="quote">
+                <strong>"묵시가 없으면 백성이 방자히 행하거니와"</strong> (잠 29:18)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 그 당시 거짓 선지자들이 거짓을 예언한 이유는 두어 움큼의 보리를 얻기 위한 것이었습니다.</span>
+            성경에서 말하는 <strong>거짓 선지자들이란 "자기 마음대로 예언하는 자"</strong>(겔 13:2), <strong>주 여호와의 말씀에 본 것이 없이 자기 심령에 따라 예언하는 어리석은 선지자</strong>(겔 13:3)를 일컫습니다.<br><br>
+            하나님께서는 <strong>거짓 선지자들을 향한 심판을 선포하십니다</strong>(겔 13:9).
+            <div class="quote">
+                <strong>첫째,</strong> 그들은 이스라엘 백성들의 <strong>공회에 들어오지 못합니다.</strong><br><br>
+                <strong>둘째,</strong> 그들은 이스라엘 족속의 <strong>호적에 기록되지 못합니다.</strong><br><br>
+                <strong>셋째,</strong> 그들은 이스라엘 땅으로 <strong>돌아가지 못합니다.</strong><br><br>
+                <strong>거짓 선지자들에게 있어서 예언을 하는 목적은 두어 움큼의 보리와 두어 조각의 떡을 위한 것이었지 하나님을 위한 것, 백성을 사랑하는 것이 아니었습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님도 섬기고, 우상도 섬기는 남유다의 장로들이 에스겔 선지자를 찾아옵니다.</span>
+            <strong>우상을 숭배하는 이스라엘 장로들이 하나님의 선지자 에스겔을 찾아왔습니다</strong>(겔 14:1~2). 이들은 하나님도 섬기고 우상도 섬기는 자들이었습니다. <strong>그러나 사실 하나님께서 보시기에 이들은 우상을 섬기는 자들이었을 뿐 하나님을 섬기는 자들은 아니었습니다.</strong>
+            <div class="quote">
+                <strong>하나님께서는 에스겔 선지자를 통해 우상숭배로 이끄는 자나 우상을 숭배하는 자는 모두 멸망할 것이라는 엄한 경고의 말씀을 전하십니다.</strong> (겔 14:4~10)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 에스겔 선지자에게 당대의 의인으로 인정받았던 노아, 다니엘, 욥의 중보기도가 있다 해도 남유다의 심판은 반드시 이루어질 것이라고 말씀하십니다.</span>
+            하나님께서는 에스겔 선지자를 통해 <strong>남유다에 임할 하나님의 심판을 구체적으로 말씀하십니다</strong>(겔 14:13~20).
+            <div class="quote">
+                <strong>첫째,</strong> '<strong>기근의 심판</strong>'이 임할 것입니다.<br><br>
+                <strong>둘째,</strong> '<strong>짐승의 심판</strong>'이 임할 것입니다.<br><br>
+                <strong>셋째,</strong> '<strong>칼의 심판</strong>'이 임할 것입니다.<br><br>
+                <strong>넷째,</strong> '<strong>전염병 심판</strong>'이 임할 것입니다.<br><br>
+                <strong>노아, 다니엘, 욥의 중보기도가 있다 해도 남유다의 심판은 반드시 이루어질 것이라고 말씀하십니다.</strong> (창 6:9, 단 10:11, 욥 1:1)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 에스겔 12~14장 ''묵시가 사라진다'는 속담'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 에스겔 12장 -->
+        <div class="chapter-title">에스겔 12장 (1~28절)</div>
+        <div class="verse"><span class="verse-num">1</span> 또 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 네가 반역하는 족속 중에 거주하는도다 그들은 볼 눈이 있어도 보지 아니하고 들을 귀가 있어도 듣지 아니하나니 그들은 반역하는 족속임이라</div>
+        <div class="verse"><span class="verse-num">3</span> 인자야 너는 포로의 행장을 꾸리고 낮에 그들의 목전에서 끌려가라 네가 네 처소를 다른 곳으로 옮기는 것을 그들이 보면 비록 반역하는 족속이라도 혹 생각이 있으리라</div>
+        <div class="verse"><span class="verse-num">4</span> 너는 낮에 그들의 목전에서 네 포로의 행장을 밖에 내놓기를 끌려가는 포로의 행장 같이 하고 저물 때에 너는 그들의 목전에서 밖으로 나가기를 포로되어 가는 자 같이 하라</div>
+        <div class="verse"><span class="verse-num">5</span> 너는 그들의 목전에서 성벽을 뚫고 그리로 따라 옮기되</div>
+        <div class="verse"><span class="verse-num">6</span> 캄캄할 때에 그들의 목전에서 어깨에 메고 나가며 얼굴을 가리고 땅을 보지 말지어다 이는 내가 너를 세워 이스라엘 족속에게 징조가 되게 함이라 하시기로</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 그 명령대로 행하여 낮에 나의 행장을 끌려가는 포로의 행장 같이 내놓고 저물 때에 내 손으로 성벽을 뚫고 캄캄할 때에 행장을 내다가 그들의 목전에서 어깨에 메고 나가니라</div>
+        <div class="verse"><span class="verse-num">8</span> 이튿날 아침에 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">9</span> 인자야 이스라엘 족속 곧 그 반역하는 족속이 네게 묻기를 무엇을 하느냐 하지 아니하더냐</div>
+        <div class="verse"><span class="verse-num">10</span> 너는 그들에게 말하기를 주 여호와의 말씀에 이것은 예루살렘 왕과 그 가운데에 있는 이스라엘 온 족속에 대한 묵시라 하셨다 하고</div>
+        <div class="verse"><span class="verse-num">11</span> 또 말하기를 나는 너희 징조라 내가 행한 대로 그들도 포로로 사로잡혀 가리라</div>
+        <div class="verse"><span class="verse-num">12</span> 무리가 성벽을 뚫고 행장을 그리로 가지고 나가고 그 중에 왕은 어두울 때에 어깨에 행장을 메고 나가며 눈으로 땅을 보지 아니하려고 자기 얼굴을 가리리라 하라</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 또 내 그물을 그의 위에 치고 내 올무에 걸리게 하여 그를 끌고 갈대아 땅 바벨론에 이르리니 그가 거기에서 죽으려니와 그 땅을 보지 못하리라</div>
+        <div class="verse"><span class="verse-num">14</span> 내가 그 호위하는 자와 부대들을 다 사방으로 흩고 또 그 뒤를 따라 칼을 빼리라</div>
+        <div class="verse"><span class="verse-num">15</span> 내가 그들을 이방인 가운데로 흩으며 여러 나라 가운데에 헤친 후에야 내가 여호와인 줄을 그들이 알리라</div>
+        <div class="verse"><span class="verse-num">16</span> 그러나 내가 그 중 몇 사람을 남겨 칼과 기근과 전염병에서 벗어나게 하여 그들이 이르는 이방인 가운데에서 자기의 모든 가증한 일을 자백하게 하리니 내가 여호와인 줄을 그들이 알리라</div>
+        <div class="verse"><span class="verse-num">17</span> 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">18</span> 인자야 너는 떨면서 네 음식을 먹고 놀라고 근심하면서 네 물을 마시며</div>
+        <div class="verse"><span class="verse-num">19</span> 이 땅 백성에게 말하되 주 여호와의 말씀에 예루살렘 주민과 이스라엘 땅에 대하여 이르시기를 그들이 근심하면서 그 음식을 먹으며 놀라면서 그 물을 마실 것은 이 땅 모든 주민의 포악으로 말미암아 땅에 가득한 것이 황폐하게 됨이라</div>
+        <div class="verse"><span class="verse-num">20</span> 사람이 거주하는 성읍들이 황폐하며 땅이 적막하리니 내가 여호와인 줄을 너희가 알리라 하셨다 하라</div>
+        <div class="verse"><span class="verse-num">21</span> 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">22</span> 인자야 이스라엘 땅에서 이르기를 날이 더디고 모든 묵시가 사라지리라 하는 너희의 이 속담이 어찌 됨이냐</div>
+        <div class="verse"><span class="verse-num">23</span> 그러므로 너는 그들에게 이르기를 주 여호와의 말씀에 이같이 말씀하시기를 내가 이 속담을 그치게 하리니 사람이 다시는 이스라엘 가운데에서 이 속담을 사용하지 못하리라 하셨다 하고 또 그들에게 이르기를 날과 모든 묵시의 응함이 가까우니</div>
+        <div class="verse"><span class="verse-num">24</span> 이스라엘 족속 중에 허탄한 묵시나 아첨하는 복술이 다시 있지 못하리라 하라</div>
+        <div class="verse"><span class="verse-num">25</span> 나는 여호와라 내가 말하리니 내가 하는 말이 다시는 더디지 아니하고 응하리라 반역하는 족속이여 내가 너희 생전에 말하고 이루리라 나 주 여호와의 말이니라 하셨다 하라</div>
+        <div class="verse"><span class="verse-num">26</span> 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">27</span> 인자야 이스라엘 족속의 말이 그가 보는 묵시는 여러 날 후의 일이라 그가 멀리 있는 때에 대하여 예언하였다 하느니라</div>
+        <div class="verse"><span class="verse-num">28</span> 그러므로 너는 그들에게 이르기를 주 여호와의 말씀에 나의 말이 하나도 다시 더디지 아니할지니 내가 한 말이 이루어지리라 나 주 여호와의 말이니라 하셨다 하라</div>
+
+        <!-- 에스겔 13장 -->
+        <div class="chapter-title">에스겔 13장 (1~23절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 너는 이스라엘의 예언하는 선지자들에게 경고하여 예언하되 자기 마음대로 예언하는 자에게 말하기를 너희는 여호와의 말씀을 들으라</div>
+        <div class="verse"><span class="verse-num">3</span> 주 여호와의 말씀에 본 것이 없이 자기 심령을 따라 예언하는 어리석은 선지자에게 화가 있을진저</div>
+        <div class="verse"><span class="verse-num">4</span> 이스라엘아 너의 선지자들은 황무지에 있는 여우 같으니라</div>
+        <div class="verse"><span class="verse-num">5</span> 너희 선지자들이 성 무너진 곳에 올라가지도 아니하였으며 이스라엘 족속을 위하여 여호와의 날에 전쟁에서 견디게 하려고 성벽을 수축하지도 아니하였느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 여호와께서 말씀하셨다고 하는 자들이 허탄한 것과 거짓된 점괘를 보며 사람들에게 그 말이 확실히 이루어지기를 바라게 하거니와 그들은 여호와가 보낸 자가 아니라</div>
+        <div class="verse"><span class="verse-num">7</span> 너희가 말하기는 여호와의 말씀이라 하여도 내가 말한 것이 아닌즉 어찌 허탄한 묵시를 보며 거짓된 점괘를 말한 것이 아니냐</div>
+        <div class="verse"><span class="verse-num">8</span> 그러므로 주 여호와께서 이같이 말씀하셨느니라 너희가 허탄한 것을 말하며 거짓된 것을 보았은즉 내가 너희를 치리라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 그 선지자들이 허탄한 묵시를 보며 거짓 것을 점쳤으니 내 손이 그들을 쳐서 내 백성의 공회에 들어오지 못하게 하며 이스라엘 족속의 호적에도 기록되지 못하게 하며 이스라엘 땅에도 들어가지 못하게 하리니 너희가 나를 여호와인 줄 알리라</div>
+        <div class="verse"><span class="verse-num">10</span> 이렇게 칠 것은 그들이 내 백성을 유혹하여 평강이 없으나 평강이 있다 함이라 어떤 사람이 담을 쌓을 때에 그들이 회칠을 하는도다</div>
+        <div class="verse"><span class="verse-num">11</span> 그러므로 너는 회칠하는 자에게 이르기를 그것이 무너지리라 폭우가 내리며 큰 우박덩이가 떨어지며 폭풍이 몰아치리니</div>
+        <div class="verse"><span class="verse-num">12</span> 그 담이 무너진즉 어떤 사람이 너희에게 말하기를 그것에 칠한 회가 어디 있느냐 하지 아니하겠느냐</div>
+        <div class="verse"><span class="verse-num">13</span> 그러므로 나 주 여호와가 말하노라 내가 분노하여 폭풍을 퍼붓고 내가 진노하여 폭우를 내리고 분노하여 큰 우박덩어리로 무너뜨리리라</div>
+        <div class="verse"><span class="verse-num">14</span> 회칠한 담을 내가 이렇게 허물어서 땅에 넘어뜨리고 그 기초를 드러낼 것이라 담이 무너진즉 너희가 그 가운데에서 망하리니 나를 여호와인 줄 알리라</div>
+        <div class="verse"><span class="verse-num">15</span> 이와 같이 내가 내 노를 담과 회칠한 자에게 모두 이루고 또 너희에게 말하기를 담도 없어지고 칠한 자들도 없어졌다 하리니</div>
+        <div class="verse"><span class="verse-num">16</span> 이들은 예루살렘에 대하여 예언하기를 평강이 없으나 평강의 묵시를 보았다고 하는 이스라엘의 선지자들이니라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">17</span> 너 인자야 너의 백성 중 자기 마음대로 예언하는 여자들에게 경고하며 예언하여</div>
+        <div class="verse"><span class="verse-num">18</span> 이르기를 주 여호와의 말씀에 사람의 영혼을 사냥하려고 손목마다 부적을 꿰어 매고 키가 큰 자나 작은 자의 머리를 위하여 수건을 만드는 여자들에게 화 있을진저 너희가 어찌하여 내 백성의 영혼은 사냥하면서 자기를 위하여는 영혼을 살리려 하느냐</div>
+        <div class="verse"><span class="verse-num">19</span> 너희가 두어 움큼 보리와 두어 조각 떡을 위하여 나를 내 백성 가운데에서 욕되게 하여 거짓말을 곧이 듣는 내 백성에게 너희가 거짓말을 지어내어 죽지 아니할 영혼을 죽이고 살지 못할 영혼을 살리는도다</div>
+        <div class="verse"><span class="verse-num">20</span> 그러므로 나 주 여호와가 이같이 말하노라 너희가 새를 사냥하듯 영혼들을 사냥하는 그 부적을 내가 너희 팔에서 떼어 버리고 너희가 새처럼 사냥한 그 영혼들을 놓아 주며</div>
+        <div class="verse"><span class="verse-num">21</span> 또 너희 수건을 찢고 내 백성을 너희 손에서 건지고 다시는 너희 손에 사냥물이 되지 아니하게 하리니 내가 여호와인 줄을 너희가 알리라</div>
+        <div class="verse"><span class="verse-num">22</span> 내가 슬프게 하지 아니한 의인의 마음을 너희가 거짓말로 근심하게 하며 너희가 또 악인의 손을 굳게 하여 그 악한 길에서 돌이켜 떠나 삶을 얻지 못하게 하였은즉</div>
+        <div class="verse"><span class="verse-num">23</span> 너희가 다시는 허탄한 묵시를 보지 못하고 점복도 못할지라 내가 내 백성을 너희 손에서 건져내리니 내가 여호와인 줄을 너희가 알리라 하라</div>
+
+        <!-- 에스겔 14장 -->
+        <div class="chapter-title">에스겔 14장 (1~23절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이스라엘 장로 두어 사람이 나아와 내 앞에 앉으니</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">3</span> 인자야 이 사람들이 자기 우상을 마음에 들이며 죄악의 걸림돌을 자기 앞에 두었으니 그들이 내게 묻기를 내가 조금인들 용납하랴</div>
+        <div class="verse"><span class="verse-num">4</span> 그런즉 너는 그들에게 말하여 이르라 나 주 여호와가 말하노라 이스라엘 족속 중에 그 우상을 마음에 들이며 죄악의 걸림돌을 자기 앞에 두고 선지자에게로 가는 모든 자에게 나 여호와가 그 우상의 수효대로 보응하리니</div>
+        <div class="verse"><span class="verse-num">5</span> 이는 이스라엘 족속이 다 그 우상으로 말미암아 나를 배반하였으므로 내가 그들이 마음먹은 대로 그들을 잡으려 함이라</div>
+        <div class="verse"><span class="verse-num">6</span> 그런즉 너는 이스라엘 족속에게 이르기를 주 여호와의 말씀에 너희는 마음을 돌이켜 우상을 떠나고 얼굴을 돌려 모든 가증한 것을 떠나라</div>
+        <div class="verse"><span class="verse-num">7</span> 이스라엘 족속과 이스라엘 가운데에 거류하는 외국인 중에 누구든지 나를 떠나고 자기 우상을 마음에 들이며 죄악의 걸림돌을 자기 앞에 두고 자기를 위하여 내게 묻고자 하여 선지자에게 가는 모든 자에게는 나 여호와가 친히 응답하여</div>
+        <div class="verse"><span class="verse-num">8</span> 그 사람을 대적하여 그들을 놀라움과 표징과 속담거리가 되게 하여 내 백성 가운데에서 끊으리니 내가 여호와인 줄을 너희가 알리라</div>
+        <div class="verse"><span class="verse-num">9</span> 만일 선지자가 유혹을 받고 말을 하면 나 여호와가 그 선지자를 유혹을 받게 하였음이거니와 내가 손을 펴서 내 백성 이스라엘 가운데에서 그를 멸할 것이라</div>
+        <div class="verse"><span class="verse-num">10</span> 선지자의 죄악과 그에게 묻는 자의 죄악이 같은즉 각각 자기의 죄악을 담당하리니</div>
+        <div class="verse"><span class="verse-num">11</span> 이는 이스라엘 족속이 다시는 미혹되어 나를 떠나지 아니하게 하며 다시는 모든 죄로 스스로 더럽히지 아니하게 하여 그들을 내 백성으로 삼고 나는 그들의 하나님이 되려 함이라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">13</span> 인자야 가령 어떤 나라가 불법을 행하여 내게 범죄하므로 내가 손을 그 위에 펴서 그 의지하는 양식을 끊어 기근을 내려 사람과 짐승을 그 나라에서 끊는다 하자</div>
+        <div class="verse"><span class="verse-num">14</span> 비록 노아, 다니엘, 욥, 이 세 사람이 거기에 있을지라도 그들은 자기의 공의로 자기의 생명만 건지리라 나 주 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 가령 내가 사나운 짐승을 그 땅에 다니게 하여 그 땅을 황폐하게 하여 사람이 그 짐승 때문에 능히 다니지 못하게 한다 하자</div>
+        <div class="verse"><span class="verse-num">16</span> 비록 이 세 사람이 거기에 있을지라도 나의 삶을 두고 맹세하노니 그들도 자녀는 건지지 못하고 자기만 건지겠고 그 땅은 황폐하리라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">17</span> 가령 내가 칼이 그 땅에 임하게 하고 명령하기를 칼아 그 땅에 돌아다니라 하고 내가 사람과 짐승을 거기에서 끊는다 하자</div>
+        <div class="verse"><span class="verse-num">18</span> 비록 이 세 사람이 거기에 있을지라도 나의 삶을 두고 맹세하노니 그들도 자녀는 건지지 못하고 자기만 건지리라 나 주 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">19</span> 가령 내가 그 땅에 전염병을 내려 죽임으로 내 분노를 그 위에 쏟아 사람과 짐승을 거기에서 끊는다 하자</div>
+        <div class="verse"><span class="verse-num">20</span> 비록 노아, 다니엘, 욥이 거기에 있을지라도 나의 삶을 두고 맹세하노니 그들도 자녀는 건지지 못하고 자기의 공의로 자기의 생명만 건지리라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">21</span> 주 여호와께서 이같이 이르시되 내가 나의 네 가지 중한 벌 곧 칼과 기근과 사나운 짐승과 전염병을 예루살렘에 함께 내려 사람과 짐승을 그 중에서 끊으리니 그 해가 더욱 심하지 아니하겠느냐</div>
+        <div class="verse"><span class="verse-num">22</span> 그러나 그 가운데에 피하는 자가 남아 있어 끌려 나오리니 곧 자녀들이라 그들이 너희에게로 나아오리니 너희가 그 행동과 소행을 보면 내가 예루살렘에 내린 재앙 곧 그 내린 모든 일에 대하여 너희가 위로를 받을 것이라</div>
+        <div class="verse"><span class="verse-num">23</span> 너희가 그 행동과 소행을 볼 때에 그들에 의해 위로를 받고 내가 예루살렘에서 행한 모든 일이 이유 없이 한 것이 아닌 줄을 알리라 주 여호와의 말씀이니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

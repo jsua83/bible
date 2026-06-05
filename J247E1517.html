@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 247</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 247</h1>
+        <p class="sub-title">찬송가 546장 주님 약속하신 말씀 위에서</p>
+        <p class="sub-title">에스겔 15~17장 — 옛 언약과 새 언약 약속</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 546장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1vRPUesY0QTLMeEevC6dPo2thAzVVzRgU" alt="찬송가 546장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 에스겔 15~17장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다.</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서는 에스겔 선지자를 통해 열매 맺지 않는 포도나무 비유로 남유다에 임할 심판을 말씀하십니다.</span>
+            하나님께서는 남유다라는 포도나무를 심으셨는데 <strong>남유다는 들포도나무가 되어 쓸모 없게 되었습니다.</strong> 포도나무가 귀한 것은 열매 때문입니다. <strong>하나님의 백성들도 마찬가지입니다.</strong> 하나님의 백성들이 귀한 것은 그들 가운데 <strong>온유와 절제, 희락과 화평, 충성과 오래 참음, 양선과 자비, 사랑의 열매가 있기 때문</strong>입니다.
+            <div class="quote">
+                <strong>열매 없는 포도나무는 다른 어디에도 쓸 데가 없습니다. 땔감밖에는 쓰임이 없기 때문입니다. 하나님께서는 열매 없는 포도나무와 같은 남유다에 임할 심판을 선포하십니다.</strong> (겔 15:6~8)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님께서는 에스겔 선지자를 통해 고아와 같았던 남유다가 하나님의 놀라운 은혜를 받고서도 하나님을 배신했다고 말씀하십니다.</span>
+            하나님께서는 <strong>돌보지 않아 피투성이로 죽을 수밖에 없었던 고아 같은 남유다를 친히 살려 길렀다고 말씀하십니다</strong>(겔 16:4~6). 이는 <strong>출애굽 때부터 시작된 이야기</strong>입니다(출 2:24~25).<br><br>
+            그러나 <strong>남유다는 그 모든 사실을 저버리고 음행과 우상숭배를 일삼았습니다.</strong> 남유다는 온갖 우상을 숭배하며 심지어 <strong>인신제사를 드리는 몰렉까지도 숭배했습니다.</strong> 또한 <strong>애굽과 블레셋과 앗수르와 갈대아 땅의 우상들을 두루 숭배했습니다.</strong>
+            <div class="quote">
+                <strong>하나님께서는 이렇게까지 우상을 섬기며 행음한 남유다에 대해 심판을 선포하십니다.</strong> (겔 16:37~41)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 하나님께서는 남유다와 맺은 옛 언약을 기억하시며 새 언약을 다시 줄 것을 약속하십니다.</span>
+            남유다의 죄는 너무 크고 더러워 차마 입에 담기가 민망할 정도입니다. <strong>그러나 하나님께서는 아브라함의 후손들인 그들과 맺었던 옛 언약을 기억하시고 그들에게 새 언약을 다시 주겠다고 말씀하십니다</strong>(겔 16:60~63).<br><br>
+            하나님께서 예고하신 새 언약은 <strong>옛 언약을 기반으로 합니다.</strong>
+            <div class="quote">
+                <strong>첫째,</strong> 하나님의 은혜로 이루어진 무조건적인 언약, 즉 <strong>'은혜 언약'</strong>입니다.<br><br>
+                <strong>둘째,</strong> 하나님과 이스라엘 백성들이 서로의 의무를 지키는 조건적 언약인 <strong>'쌍무 언약'</strong>입니다.
+            </div>
+            <div class="quote">
+                <strong>이렇게 예레미야와 에스겔 선지자를 통해 예고된 새 언약은 우리 구주 예수 그리스도에 의해 완성됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님께서 남유다 백성들에게 수수께끼와 비유를 통해 말씀하십니다.</span>
+            하나님께서는 에스겔 선지자를 통해 <strong>두 마리의 독수리와 포도나무 비유를 말씀하십니다</strong>(겔 17:2~10).
+            <div class="quote">
+                <strong>첫째,</strong> 큰 독수리 같은 <strong>바벨론의 느부갓네살 왕이 남유다의 여호야긴 왕과 1만여 명을 바벨론 포로로 끌어왔습니다.</strong><br><br>
+                <strong>둘째,</strong> 느부갓네살 왕이 <strong>시드기야 왕을 남유다에 세워 바벨론 제국의 지배하에 있게 했습니다.</strong><br><br>
+                <strong>셋째,</strong> 남유다가 또 다른 큰 독수리 같은 <strong>애굽을 의지하며 동맹을 원했습니다.</strong><br><br>
+                <strong>넷째,</strong> 애굽을 의지하는 것은 오히려 <strong>남유다의 멸망을 더욱 가속화하는 것</strong>입니다.
+            </div>
+            <div class="quote">
+                <strong>남유다의 선택은 역사의 주관자이신 하나님뿐이어야 했습니다. 그러나 남유다는 하나님을 의지하지 않고 강대국을 의지할 뿐이었습니다. 또한 자기들의 죄에 대한 진지한 성찰과 회개의 노력 또한 전혀 없었습니다. 하나님께서 그것을 지적하신 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 에스겔 선지자를 통해 백향목 비유를 말씀하시며 궁극적으로 남유다 백성들은 메시아의 나라에서 구원받을 것이라고 말씀하십니다.</span>
+            하나님께서는 에스겔 선지자를 통해 <strong>백향목 비유를 말씀하십니다.</strong> 궁극적으로는 <strong>메시아의 나라 안에서 남유다가 구원받을 것을 말씀하신 것</strong>입니다.
+            <div class="quote">
+                <strong>이후 예수님께서 비유를 들어 메시아의 나라 곧 '천국'에 대해 말씀하십니다.</strong> (마 13:31~32)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 에스겔 15~17장 '옛 언약과 새 언약 약속'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 에스겔 15장 -->
+        <div class="chapter-title">에스겔 15장 (1~8절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 포도나무가 모든 나무보다 나은 것이 무엇이랴 숲속의 여러 나무 가운데에 있는 그 포도나무 가지가 나은 것이 무엇이랴</div>
+        <div class="verse"><span class="verse-num">3</span> 그 나무를 가지고 무엇을 제조할 수 있겠느냐 그것으로 무슨 그릇을 걸 못을 만들 수 있겠느냐</div>
+        <div class="verse"><span class="verse-num">4</span> 불에 던질 땔감이 될 뿐이라 불이 그 두 끝을 사르고 그 가운데도 태웠으면 제조에 무슨 소용이 있겠느냐</div>
+        <div class="verse"><span class="verse-num">5</span> 그것이 온전할 때에도 아무 제조에 합당하지 아니하였거든 하물며 불에 살라지고 탄 후에 어찌 제조에 합당하겠느냐</div>
+        <div class="verse"><span class="verse-num">6</span> 그러므로 주 여호와께서 이같이 말씀하셨느니라 내가 수풀 가운데에 있는 포도나무를 불에 던질 땔감이 되게 한 것 같이 내가 예루살렘 주민도 그같이 할지라</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 그들을 대적한즉 그들이 그 불에서 나와도 불이 그들을 사르리니 내가 그들을 대적할 때에 내가 여호와인 줄 너희가 알리라</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 그 땅을 황폐하게 하리니 이는 그들이 범법함이니라 나 주 여호와의 말이니라 하시니라</div>
+
+        <!-- 에스겔 16장 -->
+        <div class="chapter-title">에스겔 16장 (1~63절)</div>
+        <div class="verse"><span class="verse-num">1</span> 또 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 예루살렘으로 그 가증한 일을 알게 하여</div>
+        <div class="verse"><span class="verse-num">3</span> 이르기를 주 여호와께서 예루살렘에 관하여 이같이 말씀하시되 네 근본과 난 땅은 가나안이요 네 아버지는 아모리 사람이요 네 어머니는 헷 사람이라</div>
+        <div class="verse"><span class="verse-num">4</span> 네가 난 것을 말하건대 네가 날 때에 네 배꼽 줄을 자르지 아니하였고 너를 물로 씻어 정결하게 하지 아니하였고 네게 소금을 뿌리지 아니하였고 너를 강보로 싸지도 아니하였나니</div>
+        <div class="verse"><span class="verse-num">5</span> 아무도 너를 돌보아 이 중에 한 가지라도 네게 행하여 너를 불쌍히 여긴 자가 없었으므로 네가 나던 날에 네 몸이 천하게 여겨져 네가 들에 버려졌느니라</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 네 곁으로 지나갈 때에 네가 피투성이가 되어 발짓하는 것을 보고 네게 이르기를 너는 피투성이라도 살아 있으라 다시 이르기를 너는 피투성이라도 살아 있으라 하고</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 너를 들의 풀 같이 많게 하였더니 네가 크게 자라고 심히 아름다우며 유방이 뚜렷하고 네 머리털이 자랐으나 네가 여전히 벌거벗은 알몸이더라</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 네 곁으로 지나며 보니 네 때가 사랑을 할 만한 때라 내 옷으로 너를 덮어 벌거벗은 것을 가리고 네게 맹세하고 언약하여 너를 내게 속하게 하였느니라 나 주 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 물로 네 피를 씻어 없애고 네게 기름을 바르고</div>
+        <div class="verse"><span class="verse-num">10</span> 수 놓은 옷을 입히고 물돼지 가죽신을 신기고 가는 베로 두르고 모시로 덧입히고</div>
+        <div class="verse"><span class="verse-num">11</span> 패물을 채우고 팔고리를 손목에 끼우고 목걸이를 목에 걸고</div>
+        <div class="verse"><span class="verse-num">12</span> 코고리를 코에 달고 귀고리를 귀에 달고 화려한 왕관을 머리에 씌웠나니</div>
+        <div class="verse"><span class="verse-num">13</span> 이와 같이 네가 금, 은으로 장식하고 가는 베와 모시와 수 놓은 것을 입으며 또 고운 밀가루와 꿀과 기름을 먹음으로 극히 곱고 형통하여 왕후의 지위에 올랐느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 네 화려함으로 말미암아 네 명성이 이방인 중에 퍼졌음은 내가 네게 입힌 영화로 네 화려함이 온전함이라 나 주 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 그러나 네가 네 화려함을 믿고 네 명성을 가지고 행음하되 지나가는 모든 자와 더불어 음란을 많이 행하므로 네 몸이 그들의 것이 되도다</div>
+        <div class="verse"><span class="verse-num">16</span> 네가 네 의복을 가지고 너를 위하여 각색으로 산당을 꾸미고 거기에서 행음하였나니 이런 일은 전무후무하니라</div>
+        <div class="verse"><span class="verse-num">17</span> 네가 또 내가 준 금, 은 장식품으로 너를 위하여 남자 우상을 만들어 행음하며</div>
+        <div class="verse"><span class="verse-num">18</span> 또 네 수 놓은 옷을 그 우상에게 입히고 나의 기름과 향을 그 앞에 베풀며</div>
+        <div class="verse"><span class="verse-num">19</span> 또 내가 네게 주어 먹게 한 내 음식물 곧 고운 밀가루와 기름과 꿀을 네가 그 앞에 베풀어 향기를 삼았나니 과연 그렇게 하였느니라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 또 네가 나를 위하여 낳은 네 자녀를 그들에게 데리고 가서 드려 제물로 삼아 불살랐느니라 네가 네 음행을 작은 일로 여겨서</div>
+        <div class="verse"><span class="verse-num">21</span> 나의 자녀들을 죽여 우상에게 넘겨 불 가운데로 지나가게 하였느냐</div>
+        <div class="verse"><span class="verse-num">22</span> 네가 어렸을 때에 벌거벗은 몸이었으며 피투성이가 되어서 발짓하던 것을 기억하지 아니하고 네가 모든 가증한 일과 음란을 행하였느니라</div>
+        <div class="verse"><span class="verse-num">23</span> 주 여호와의 말씀이니라 너는 화 있을진저 화 있을진저 네가 모든 악을 행한 후에</div>
+        <div class="verse"><span class="verse-num">24</span> 너를 위하여 누각을 건축하며 모든 거리에 높은 대를 쌓았도다</div>
+        <div class="verse"><span class="verse-num">25</span> 네가 높은 대를 모든 길 어귀에 쌓고 네 아름다움을 가증하게 하여 모든 지나가는 자에게 다리를 벌려 심히 음행하고</div>
+        <div class="verse"><span class="verse-num">26</span> 하체가 큰 네 이웃 나라 애굽 사람과도 음행하되 심히 음란히 하여 내 진노를 샀도다</div>
+        <div class="verse"><span class="verse-num">27</span> 그러므로 내가 내 손을 네 위에 펴서 네 일용할 양식을 감하고 너를 미워하는 블레셋 여자 곧 네 더러운 행실을 부끄러워하는 자에게 너를 넘겨 임의로 하게 하였거늘</div>
+        <div class="verse"><span class="verse-num">28</span> 네가 음욕이 차지 아니하여 또 앗수르 사람과 행음하고 그들과 행음하고도 아직도 부족하게 여겨</div>
+        <div class="verse"><span class="verse-num">29</span> 장사하는 땅 갈대아에까지 심히 행음하되 아직도 족한 줄을 알지 못하였느니라</div>
+        <div class="verse"><span class="verse-num">30</span> 주 여호와의 말씀이니라 네가 이 모든 일을 행하니 이는 방자한 음녀의 행위라 네 마음이 어찌 그리 약한지</div>
+        <div class="verse"><span class="verse-num">31</span> 네가 누각을 모든 길 어귀에 건축하며 높은 대를 모든 거리에 쌓고도 값을 싫어하니 창기 같지도 아니하도다</div>
+        <div class="verse"><span class="verse-num">32</span> 그 남편 대신에 다른 남자들과 내통하여 간음하는 아내로다</div>
+        <div class="verse"><span class="verse-num">33</span> 사람들은 모든 창기에게 선물을 주거늘 오직 너는 네 모든 정든 자에게 선물을 주며 값을 주어서 사방에서 와서 너와 행음하게 하니</div>
+        <div class="verse"><span class="verse-num">34</span> 네 음란함이 다른 여인과 같지 아니함은 행음하려고 너를 따르는 자가 없음이며 또 네가 값을 받지 아니하고 도리어 값을 줌이라 그런즉 다른 여인과 같지 아니하니라</div>
+        <div class="verse"><span class="verse-num">35</span> 그러므로 너 음녀야 여호와의 말씀을 들을지어다</div>
+        <div class="verse"><span class="verse-num">36</span> 주 여호와께서 이같이 말씀하셨느니라 네가 네 누추한 것을 쏟으며 네 정든 자와 행음함으로 벗은 몸을 드러내며 또 가증한 우상을 위하며 네 자녀의 피를 그 우상에게 드렸은즉</div>
+        <div class="verse"><span class="verse-num">37</span> 내가 너의 즐거워하는 정든 자와 사랑하던 모든 자와 미워하던 모든 자를 모으되 사방에서 모아 너를 대적하게 할 것이요 또 네 벗은 몸을 그 앞에 드러내 그들이 그것을 다 보게 할 것이며</div>
+        <div class="verse"><span class="verse-num">38</span> 내가 또 간음하고 사람의 피를 흘리는 여인을 심판함 같이 너를 심판하여 진노의 피와 질투의 피를 네게 돌리고</div>
+        <div class="verse"><span class="verse-num">39</span> 내가 또 너를 그들의 손에 넘기리니 그들이 네 누각을 헐며 네 높은 대를 부수며 네 의복을 벗기고 네 장식품을 빼앗고 네 몸을 벌거벗겨 버려 두며</div>
+        <div class="verse"><span class="verse-num">40</span> 무리를 데리고 와서 너를 돌로 치며 칼로 찌르며</div>
+        <div class="verse"><span class="verse-num">41</span> 불로 네 집들을 사르고 여러 여인의 목전에서 너를 벌할지라 내가 너에게 곧 음행을 그치게 하리니 네가 다시는 값을 주지 아니하리라</div>
+        <div class="verse"><span class="verse-num">42</span> 그리한즉 나는 네게 대한 내 분노가 그치며 내 질투가 네게서 떠나고 마음이 평안하여 다시는 노하지 아니하리라</div>
+        <div class="verse"><span class="verse-num">43</span> 네가 어렸을 때를 기억하지 아니하고 이 모든 일로 나를 분노하게 하였은즉 내가 네 행위대로 네 머리에 보응하리니 네가 이 음란과 네 모든 가증한 일을 다시는 행하지 아니하리라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">44</span> 속담을 말하는 자마다 네게 대하여 속담을 말하기를 어머니가 그러하면 딸도 그러하다 하리라</div>
+        <div class="verse"><span class="verse-num">45</span> 너는 그 남편과 자녀를 싫어한 어머니의 딸이요 너는 그 남편과 자녀를 싫어한 형의 동생이로다 네 어머니는 헷 사람이요 네 아버지는 아모리 사람이며</div>
+        <div class="verse"><span class="verse-num">46</span> 네 형은 그 딸들과 함께 네 왼쪽에 거주하는 사마리아요 네 아우는 그 딸들과 함께 네 오른쪽에 거주하는 소돔이라</div>
+        <div class="verse"><span class="verse-num">47</span> 네가 그들의 행위대로만 행하지 아니하며 그 가증한 대로만 행하지 아니하고 그것을 적게 여겨서 네 모든 행위가 그보다 더욱 부패하였도다</div>
+        <div class="verse"><span class="verse-num">48</span> 주 여호와의 말씀이니라 내가 나의 삶을 두고 맹세하노니 네 아우 소돔 곧 그와 그의 딸들은 너와 네 딸들의 행위 같이 행하지 아니하였느니라</div>
+        <div class="verse"><span class="verse-num">49</span> 네 아우 소돔의 죄악은 이러하니 그와 그의 딸들에게 교만함과 음식물의 풍족함과 태평함이 있음이며 또 그가 가난하고 궁핍한 자를 도와 주지 아니하며</div>
+        <div class="verse"><span class="verse-num">50</span> 거만하여 가증한 일을 내 앞에서 행하였음이라 그러므로 내가 보고 곧 그들을 없이 하였느니라</div>
+        <div class="verse"><span class="verse-num">51</span> 사마리아는 네 죄의 절반도 범하지 아니하였느니라 네가 그들보다 가증한 일을 심히 행하였으므로 네 모든 가증한 행위로 네 형과 아우를 의롭게 하였느니라</div>
+        <div class="verse"><span class="verse-num">52</span> 네가 네 형과 아우를 유리하게 판단하였은즉 너도 네 수치를 담당할지니라 네가 그들보다 더욱 가증한 죄를 범하므로 그들이 너보다 의롭게 되었나니 네가 네 형과 아우를 의롭게 하였은즉 너는 놀라며 네 수치를 담당할지니라</div>
+        <div class="verse"><span class="verse-num">53</span> 내가 그들의 사로잡힘 곧 소돔과 그의 딸들의 사로잡힘과 사마리아와 그의 딸들의 사로잡힘과 그들 중에 너의 사로잡힌 자의 사로잡힘을 풀어 주어</div>
+        <div class="verse"><span class="verse-num">54</span> 네가 네 수욕을 담당하고 네가 행한 모든 일로 말미암아 부끄럽게 하리니 이는 네가 그들에게 위로가 됨이라</div>
+        <div class="verse"><span class="verse-num">55</span> 네 아우 소돔과 그의 딸들이 옛 지위를 회복할 것이요 사마리아와 그의 딸들도 그의 옛 지위를 회복할 것이며 너와 네 딸들도 너희 옛 지위를 회복할 것이니라</div>
+        <div class="verse"><span class="verse-num">56</span> 네가 교만하던 때에 네 아우 소돔을 네 입으로 말하지도 아니하였나니</div>
+        <div class="verse"><span class="verse-num">57</span> 곧 네 악이 드러나기 전이며 아람의 딸들이 너를 능욕하기 전이며 너의 사방에 둘러 있는 블레셋의 딸들이 너를 멸시하기 전이니라</div>
+        <div class="verse"><span class="verse-num">58</span> 네 음란과 네 가증한 일을 네가 담당하였느니라 나 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">59</span> 나 주 여호와가 이같이 말하노라 네가 맹세를 멸시하여 언약을 배반하였은즉 내가 네 행한 대로 네게 행하리라</div>
+        <div class="verse"><span class="verse-num">60</span> 그러나 내가 너의 어렸을 때에 너와 세운 언약을 기억하고 너와 영원한 언약을 세우리라</div>
+        <div class="verse"><span class="verse-num">61</span> 네가 네 형과 아우를 접대할 때에 네 행위를 기억하고 부끄러워할 것이라 내가 그들을 네게 딸로 주려니와 네 언약으로 말미암음이 아니니라</div>
+        <div class="verse"><span class="verse-num">62</span> 내가 네게 내 언약을 세워 내가 여호와인 줄 네가 알게 하리니</div>
+        <div class="verse"><span class="verse-num">63</span> 이는 내가 네 모든 행한 일을 용서한 후에 네가 기억하고 놀라고 부끄러워서 다시는 입을 열지 못하게 하려 함이니라 주 여호와의 말씀이니라</div>
+
+        <!-- 에스겔 17장 -->
+        <div class="chapter-title">에스겔 17장 (1~24절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 너는 이스라엘 족속에게 수수께끼와 비유를 말하라</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와께서 이같이 말씀하여 이르시되 색깔이 화려하고 날개가 크고 깃이 길고 털이 숱한 큰 독수리가 레바논에 이르러 백향목 높은 가지를 꺾되</div>
+        <div class="verse"><span class="verse-num">4</span> 그 연한 가지 끝을 꺾어 가지고 장사하는 땅에 이르러 상인의 성읍에 두고</div>
+        <div class="verse"><span class="verse-num">5</span> 또 그 땅의 종자를 꺾어 옥토에 심되 수양버들 가지처럼 큰 물 가에 심더니</div>
+        <div class="verse"><span class="verse-num">6</span> 그것이 자라며 퍼져서 높지 아니한 포도나무 곧 굵은 가지와 가는 가지가 난 포도나무가 되어 그 가지는 독수리를 향하였고 그 뿌리는 독수리 아래에 있었더라</div>
+        <div class="verse"><span class="verse-num">7</span> 또 날개가 크고 털이 많은 큰 독수리 하나가 있었는데 그 포도나무가 이 독수리에게 물을 받으려고 그 심어진 두둑에서 그를 향하여 뿌리가 뻗고 가지가 퍼졌도다</div>
+        <div class="verse"><span class="verse-num">8</span> 그 포도나무를 큰 물 가 옥토에 심은 것은 가지를 내고 열매를 맺어서 아름다운 포도나무를 이루게 하려 하였음이라</div>
+        <div class="verse"><span class="verse-num">9</span> 너는 이르기를 주 여호와의 말씀에 그 나무가 능히 번성하겠느냐 이 독수리가 어찌 그 뿌리를 빼고 열매를 따며 그 나무가 시들게 하지 아니하겠으며 그 연한 잎사귀가 마르게 하지 아니하겠느냐 많은 백성이나 강한 팔이 아니라도 그 뿌리를 뽑으리라</div>
+        <div class="verse"><span class="verse-num">10</span> 볼지어다 그것이 심어졌으나 번성하겠느냐 동풍에 부딪힐 때에 아주 마르지 아니하겠느냐 그 자라던 두둑에서 마르리라 하셨다 하라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">12</span> 너는 반역하는 족속에게 묻기를 너희가 이 비유를 깨닫지 못하겠느냐 하고 그들에게 말하기를 바벨론 왕이 예루살렘에 이르러 왕과 고관을 사로잡아 바벨론 자기에게로 끌어 가고</div>
+        <div class="verse"><span class="verse-num">13</span> 그 왕족 중에서 하나를 택하여 언약을 세우고 그에게 맹세하게 하고 또 그 땅의 능한 자들을 옮겨 갔나니</div>
+        <div class="verse"><span class="verse-num">14</span> 이는 나라를 낮추어 스스로 서지 못하고 그 언약을 지켜야 능히 서게 하려 하였음이거늘</div>
+        <div class="verse"><span class="verse-num">15</span> 그가 사절을 애굽에 보내 말과 군대를 구함으로 바벨론 왕을 배반하였으니 형통하겠느냐 이런 일을 행한 자가 피하겠느냐 언약을 배반하고야 피하겠느냐</div>
+        <div class="verse"><span class="verse-num">16</span> 주 여호와의 말씀이니라 내가 나의 삶을 두고 맹세하노니 바벨론 왕이 그를 왕으로 세웠거늘 그가 맹세를 저버리고 언약을 배반하였은즉 그 왕이 거주하는 곳 바벨론에서 왕과 함께 있다가 죽을 것이라</div>
+        <div class="verse"><span class="verse-num">17</span> 대적이 토성을 쌓고 사다리를 세우고 많은 사람을 멸절하려 할 때에 바로가 그 큰 군대와 많은 무리로도 그 전쟁에 그를 도와 주지 못하리라</div>
+        <div class="verse"><span class="verse-num">18</span> 그가 이미 손을 내밀어 언약하였거늘 맹세를 업신여겨 언약을 배반하고 이 모든 일을 행하였으니 피하지 못하리라</div>
+        <div class="verse"><span class="verse-num">19</span> 그러므로 주 여호와의 말씀이니라 내가 나의 삶을 두고 맹세하노니 그가 내 맹세를 업신여기고 내 언약을 배반하였은즉 내가 그 죄를 그 머리에 돌리되</div>
+        <div class="verse"><span class="verse-num">20</span> 그 위에 내 그물을 치며 내 올무에 걸리게 하여 끌고 바벨론으로 가서 나를 반역한 그 반역을 거기에서 심판할지며</div>
+        <div class="verse"><span class="verse-num">21</span> 그 모든 군대에서 도망한 자들은 다 칼에 엎드러질 것이요 그 남은 자는 사방으로 흩어지리니 나 여호와가 이것을 말한 줄을 너희가 알리라</div>
+        <div class="verse"><span class="verse-num">22</span> 주 여호와께서 이같이 말씀하시되 내가 백향목 꼭대기에서 높은 가지를 꺾어다가 심으리라 내가 그 높은 새 가지 끝에서 연한 가지를 꺾어 높고 우뚝 솟은 산에 심되</div>
+        <div class="verse"><span class="verse-num">23</span> 이스라엘 높은 산에 심으리니 그 가지가 무성하고 열매를 맺어서 아름다운 백향목이 될 것이요 각종 새가 그 아래에 깃들이며 그 가지 그늘에 살리라</div>
+        <div class="verse"><span class="verse-num">24</span> 들의 모든 나무가 나 여호와는 높은 나무를 낮추고 낮은 나무를 높이며 푸른 나무를 말리고 마른 나무를 무성하게 하는 줄 알리라 나 여호와는 말하고 이루느니라 하라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

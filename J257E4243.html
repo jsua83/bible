@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 257</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 257</h1>
+        <p class="sub-title">찬송가 210장 시온성과 같은 교회</p>
+        <p class="sub-title">에스겔 42~43장 — 성전 동문으로 들어오십니다</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 210장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1mo5HFcT_CU2AJOmrVyPOppvvkDVbL4KL" alt="찬송가 210장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 에스겔 42~43장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다.</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 광야에서 모세에게 성막의 식양을 주셨던 하나님께서 바벨론 포로지에서 에스겔 선지자에게는 환상 가운데 다시 재건될 예루살렘 성전의 구조와 치수를 말씀해주십니다.</span>
+            일찍이 출애굽한 이스라엘이 광야에 머물 때 <strong>하나님께서 모세를 통해 성막의 식양을 주셨습니다</strong>(출 25:8~9). <strong>모세에게 성막의 식양을 주셨던 하나님께서 이제 바벨론 포로지에 있는 에스겔 선지자에게 환상 중에 다시 재건될 예루살렘 성전을 보여주십니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님께서는 에스겔 선지자에게 환상을 통해 다시 재건될 예루살렘 성전의 사방 담을 보여주십니다.</span>
+            에스겔 선지자는 제사장들의 방에 이어 <strong>성전의 사방 담을 보게 됩니다</strong>(겔 42:15~20). 다시 재건될 예루살렘 성전의 담은 <strong>사방이 각 500척으로 성전 외곽을 둘러싸고 있습니다.</strong>
+            <div class="quote">
+                <strong>성전 담의 목적은 거룩한 것과 속된 것을 구별하기 위함입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 에스겔 선지자는 환상 중에 예루살렘 성전을 떠나셨던 하나님의 영광이 다시 성전 동문으로 들어옴을 보게 됩니다.</span>
+            에스겔 선지자는 <strong>하나님의 영광이 죄로 가득한 예루살렘 성전에서 떠나는 환상을 이전에 본 적이 있습니다.</strong> 하나님께서는 성소에서 백성들과 만나기를 원하셨습니다.<br><br>
+            그런데 그동안 <strong>남유다 백성들의 죄로 인해 바벨론 포로 70년 동안 하나님의 영광이 예루살렘 성전 '건물 성소'에서는 떠나셨지만, 하나님께서는 바벨론 포로가 된 남유다 백성들에게 직접 성소가 되어주셨습니다.</strong>
+            <div class="quote">
+                <strong>이제 환상 중에 새 예루살렘 성전에 다시 임재하는 하나님의 영광을 보여주십니다.</strong> (겔 43:2~5)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님께서는 에스겔 선지자를 통해 남유다 백성들이 더 이상 우상을 숭배하지 않는다면 이스라엘에 영원히 거할 것이라고 말씀하십니다.</span>
+            하나님께서는 <strong>다시 재건될 예루살렘 성전은 완전하고 영원할 것이라고 말씀하시며 다시는 내 거룩한 이름을 더럽히지 않겠다고 하십니다.</strong> 또한 <strong>백성들이 우상숭배를 완전히 근절한다면 하나님께서 이스라엘에 영원히 거할 것이라고 약속하십니다</strong>(겔 43:7~9).
+            <div class="quote">
+                <strong>바벨론에 사로잡혀 온 남유다 백성들의 현재의 모습이 곧 미래의 이스라엘을 결정하는 것입니다. 때문에 하나님께서 미래의 일을 말씀하시면서 지금 그들에게 회개와 거룩함과 하나님 앞에서의 성실을 요구하고 계신 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 에스겔 선지자에게 재건될 성전의 조감도를 백성들에게 보여주어 자기들의 죄악이 부끄럽다는 것을 깨달아 알게 하라고 말씀하십니다.</span>
+            하나님께서 에스겔 선지자에게 재건될 성전의 조감도를 바벨론 포로 남유다 백성들에게 보이라고 말씀하신 이유입니다(겔 43:10~11).
+            <div class="quote">
+                <strong>첫째,</strong> 남유다 백성들이 자신들을 돌아보며 <strong>그들의 죄를 회개하게 하기 위함</strong>이었습니다.<br><br>
+                <strong>둘째,</strong> 남유다 백성들이 <strong>다시 제사장 나라의 법을 공부하고 제사장 나라 거룩한 시민으로 살게 하기 위함</strong>이었습니다.
+            </div>
+            <div class="quote">
+                <strong>이는 예레미야에게 주신 새 언약 예고와 같은 말씀입니다.</strong> (렘 31:31~33)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 에스겔 42~43장 '성전 동문으로 들어오십니다'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 에스겔 42장 -->
+        <div class="chapter-title">에스겔 42장 (1~20절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그가 나를 데리고 밖으로 나가 북쪽 뜰로 가서 두 방에 이르니 그 두 방의 하나는 골방 앞 뜰을 향하였고 다른 하나는 북쪽 건물을 향하였는데</div>
+        <div class="verse"><span class="verse-num">2</span> 그 방들의 자리의 길이는 백 척이요 너비는 쉰 척이며 그 문은 북쪽을 향하였고</div>
+        <div class="verse"><span class="verse-num">3</span> 그 방 삼층에 회랑들이 있는데 한 방의 회랑은 스무 척 되는 안뜰과 마주 대하였고 다른 한 방의 회랑은 바깥뜰 박석 깔린 곳과 마주 대하였으며</div>
+        <div class="verse"><span class="verse-num">4</span> 그 두 방 사이에 통한 길이 있어 너비는 열 척이요 길이는 백 척이며 그 문들은 북쪽을 향하였으며</div>
+        <div class="verse"><span class="verse-num">5</span> 그 위층의 방은 가장 좁으니 이는 회랑들로 말미암아 아래층과 가운데 층보다 위층이 더 줄어짐이라</div>
+        <div class="verse"><span class="verse-num">6</span> 그 방은 삼층인데도 뜰의 기둥 같은 기둥이 없으므로 그 위층이 아래층과 가운데 층보다 더욱 좁아짐이더라</div>
+        <div class="verse"><span class="verse-num">7</span> 그 한 방의 바깥 담 곧 뜰의 담과 마주 대한 담의 길이는 쉰 척이니</div>
+        <div class="verse"><span class="verse-num">8</span> 바깥뜰로 향한 방의 길이는 쉰 척이며 성전 앞을 향한 방은 백 척이며</div>
+        <div class="verse"><span class="verse-num">9</span> 이 방들 아래에 동쪽에서 들어가는 통행구가 있으니 곧 바깥뜰에서 들어가는 통행구더라</div>
+        <div class="verse"><span class="verse-num">10</span> 남쪽 골방 뜰 맞은쪽과 남쪽 건물 맞은쪽에도 방 둘이 있는데</div>
+        <div class="verse"><span class="verse-num">11</span> 그 두 방 사이에 길이 있고 그 방들의 모양은 북쪽 방 같고 그 길이와 너비도 같으며 그 출입구와 문도 그와 같으며</div>
+        <div class="verse"><span class="verse-num">12</span> 이 남쪽 방에 출입하는 문이 있는데 담 동쪽 길 어귀에 있더라</div>
+        <div class="verse"><span class="verse-num">13</span> 그가 내게 이르되 좌우 골방 뜰 앞 곧 북쪽과 남쪽에 있는 방들은 거룩한 방이라 여호와를 가까이 하는 제사장들이 지성물을 거기에서 먹을 것이며 지성물 곧 소제와 속죄제와 속건제의 제물을 거기 둘 것이니 이는 거룩한 곳이라</div>
+        <div class="verse"><span class="verse-num">14</span> 제사장의 의복은 거룩하므로 제사장이 성소에 들어갔다가 나올 때에 바로 바깥뜰로 가지 못하고 수종드는 그 의복을 그 방에 두고 다른 옷을 입고 백성의 뜰로 나갈 것이니라 하더라</div>
+        <div class="verse"><span class="verse-num">15</span> 그가 안에 있는 성전 측량하기를 마친 후에 나를 데리고 동쪽을 향한 문의 길로 나가서 사방 담을 측량하는데</div>
+        <div class="verse"><span class="verse-num">16</span> 그가 측량하는 장대 곧 그 장대로 동쪽을 측량하니 오백 척이요</div>
+        <div class="verse"><span class="verse-num">17</span> 그 장대로 북쪽을 측량하니 오백 척이요</div>
+        <div class="verse"><span class="verse-num">18</span> 그 장대로 남쪽을 측량하니 오백 척이요</div>
+        <div class="verse"><span class="verse-num">19</span> 서쪽으로 돌이켜 그 장대로 측량하니 오백 척이라</div>
+        <div class="verse"><span class="verse-num">20</span> 그가 이같이 그 사방을 측량하니 그 사방 담 안 마당의 길이가 오백 척이며 너비가 오백 척이라 그 담은 거룩한 것과 속된 것을 구별하는 것이더라</div>
+
+        <!-- 에스겔 43장 -->
+        <div class="chapter-title">에스겔 43장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 후에 그가 나를 데리고 문에 이르니 곧 동쪽을 향한 문이라</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 하나님의 영광이 동쪽에서부터 오는데 하나님의 음성이 많은 물 소리 같고 땅은 그 영광으로 말미암아 빛나니</div>
+        <div class="verse"><span class="verse-num">3</span> 그 모양이 내가 본 환상 곧 전에 성읍을 멸하러 올 때에 보던 환상 같고 그발 강 가에서 보던 환상과도 같기로 내가 곧 얼굴을 땅에 대고 엎드렸더니</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와의 영광이 동문을 통하여 성전으로 들어가고</div>
+        <div class="verse"><span class="verse-num">5</span> 영이 나를 들어 데리고 안뜰에 들어가시기로 내가 보니 여호와의 영광이 성전에 가득하더라</div>
+        <div class="verse"><span class="verse-num">6</span> 성전에서 내게 하는 말을 내가 듣고 있을 때에 어떤 사람이 내 곁에 서 있더라</div>
+        <div class="verse"><span class="verse-num">7</span> 그가 내게 이르시되 인자야 이는 내 보좌의 처소, 내 발을 두는 처소, 내가 이스라엘 족속 가운데에 영원히 있을 곳이라 이스라엘 족속 곧 그들과 그들의 왕들이 음행하며 그 죽은 왕들의 시체로 다시는 내 거룩한 이름을 더럽히지 아니하리라</div>
+        <div class="verse"><span class="verse-num">8</span> 그들이 그 문지방을 내 문지방 곁에 두며 그 문설주를 내 문설주 곁에 두어서 그들과 나 사이에 겨우 한 담이 막히게 하였고 또 그 행하는 가증한 일로 내 거룩한 이름을 더럽혔으므로 내가 노하여 멸망시켰거니와</div>
+        <div class="verse"><span class="verse-num">9</span> 이제는 그들이 그 음란과 그 왕들의 시체를 내게서 멀리 제거하여 버려야 할 것이라 그리하면 내가 그들 가운데에 영원히 살리라</div>
+        <div class="verse"><span class="verse-num">10</span> 인자야 너는 이 성전을 이스라엘 족속에게 보여서 그들이 자기의 죄악을 부끄러워하고 그 형상을 측량하게 하라</div>
+        <div class="verse"><span class="verse-num">11</span> 만일 그들이 자기들이 행한 모든 일을 부끄러워하거든 너는 이 성전의 제도와 구조와 그 출입하는 곳과 그 모든 형상을 보이며 또 그 모든 규례와 그 모든 법도와 그 모든 율례를 알게 하고 그 목전에 그것을 써서 그들로 그 모든 법도와 그 모든 규례를 지켜 행하게 하라</div>
+        <div class="verse"><span class="verse-num">12</span> 성전의 법은 이러하니라 산 꼭대기 지점의 주위는 지극히 거룩하리라 성전의 법은 이러하니라</div>
+        <div class="verse"><span class="verse-num">13</span> 제단의 크기는 이러하니라 한 자는 팔꿈치에서부터 손가락에 이르고 한 손바닥 넓이가 더한 것이라 제단 밑받침의 높이는 한 척이요 그 사방 가장자리의 너비는 한 척이며 그 가로 둘린 턱의 너비는 한 뼘이니 이는 제단 밑받침이요</div>
+        <div class="verse"><span class="verse-num">14</span> 이 땅에 닿은 밑받침 면에서 아래층의 높이는 두 척이요 그 가장자리의 너비는 한 척이며 이 아래층 면에서 이 층의 높이는 네 척이요 그 가장자리의 너비는 한 척이며</div>
+        <div class="verse"><span class="verse-num">15</span> 그 번제단 위층의 높이는 네 척이며 그 번제하는 바닥에서 솟은 뿔이 넷이며</div>
+        <div class="verse"><span class="verse-num">16</span> 그 번제하는 바닥의 길이는 열두 척이요 너비도 열두 척이니 네모 반듯하고</div>
+        <div class="verse"><span class="verse-num">17</span> 그 아래층의 길이는 열네 척이요 너비는 열네 척이니 네모 반듯하고 그 밑받침에 둘린 턱의 너비는 반 척이며 그 가장자리의 너비는 한 척이니라 그 층계는 동쪽을 향하게 할지니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그가 내게 이르시되 인자야 주 여호와께서 이같이 말씀하셨느니라 이 제단을 만드는 날에 그 위에 번제를 드리며 피를 뿌리는 규례는 이러하니라</div>
+        <div class="verse"><span class="verse-num">19</span> 주 여호와의 말씀이니라 나를 가까이 하여 내게 수종드는 사독의 자손 레위 사람 제사장에게 너는 어린 수송아지 한 마리를 주어 속죄제물을 삼되</div>
+        <div class="verse"><span class="verse-num">20</span> 네가 그 피를 가져다가 제단의 네 뿔과 아래층 네 모퉁이와 사방 가장자리에 발라 속죄하여 제단을 정결하게 하고</div>
+        <div class="verse"><span class="verse-num">21</span> 그 속죄제물의 수송아지를 가져다가 성전의 정한 처소 곧 성소 밖에서 불사를지며</div>
+        <div class="verse"><span class="verse-num">22</span> 다음 날에는 흠 없는 숫염소 한 마리를 속죄제물로 삼아 드려서 그 제단을 정결하게 하기를 수송아지로 정결하게 함과 같이 하고</div>
+        <div class="verse"><span class="verse-num">23</span> 정결하게 하기를 마친 후에는 흠 없는 수송아지 한 마리와 떼 가운데에서 흠 없는 숫양 한 마리를 드리되</div>
+        <div class="verse"><span class="verse-num">24</span> 나 여호와 앞에 받들어다가 제사장은 그 위에 소금을 쳐서 나 여호와께 번제로 드릴 것이며</div>
+        <div class="verse"><span class="verse-num">25</span> 칠 일 동안은 매일 염소 한 마리를 갖추어 속죄제물을 삼고 또 어린 수송아지 한 마리와 떼 가운데에서 숫양 한 마리를 흠 없는 것으로 갖출 것이며</div>
+        <div class="verse"><span class="verse-num">26</span> 이같이 칠 일 동안 제단을 위하여 속죄제를 드려 정결하게 하며 드릴 것이요</div>
+        <div class="verse"><span class="verse-num">27</span> 이 모든 날이 찬 후 제팔일과 그 다음에는 제사장이 제단 위에서 너희 번제와 감사제를 드릴 것이라 그리하면 내가 너희를 즐겁게 받으리라 주 여호와의 말씀이니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

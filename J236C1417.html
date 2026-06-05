@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 236</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 236</h1>
+        <p class="sub-title">찬송가 542장 구주 예수 의지함이</p>
+        <p class="sub-title">역대하 14~17장 — 아사의 신앙 운동</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 542장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1bCAcWgNqcxyEe5W70imypNGlShuzGo6v" alt="찬송가 542장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 역대하 14~17장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 역대기는 남유다 3대 왕 아사의 초기 10년간의 평안은 아사가 하나님께 순종했기 때문이라고 평가합니다.</span>
+            남유다는 총 350여 년 동안 20명의 왕들이 나라를 다스렸습니다. 남유다의 왕들 가운데 <strong>'여로보암의 길'이 아닌 '다윗의 길'로 행했던 왕들은 아사, 여호사밧, 요아스, 히스기야, 요시야</strong>입니다.<br><br>
+            역대기 기자는 <strong>아사 왕 초기 10년간의 남유다의 평안은 아사가 신앙 개혁을 단행하고 하나님께 순종했기 때문이라고 평가합니다.</strong> 아사 왕의 행적은 다음과 같습니다(대하 14:1~8).
+            <div class="quote">
+                <strong>첫째,</strong> 신앙 갱신 운동으로서 <strong>'1차 신앙 개혁'을 일으켰습니다.</strong><br><br>
+                <strong>둘째,</strong> 남유다에 <strong>견고한 성읍들을 건축했습니다.</strong><br><br>
+                <strong>셋째,</strong> 남유다를 <strong>강력한 국방력을 갖춘 나라로 이끌었습니다.</strong>
+            </div>
+            <div class="quote">
+                <strong>아사 왕의 시대에는 왕을 중심으로 남유다의 온 백성들이 모든 우상을 철폐하고 성읍에서 산당과 태양상을 없애버리며 하나님만 섬겼기 때문에 나라가 평안했습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 역대기는 아사 왕의 '신앙 갱신 운동'으로 북이스라엘 백성들 중에 아사에게 돌아온 자들이 많았다고 기록합니다.</span>
+            아사 왕은 <strong>구스와의 전쟁에서 이기고 신앙 개혁을 단행하면서 하나님께 희생 제사를 드렸습니다.</strong> 그리고 그 자리에서 <strong>하나님만 섬기겠다고 하나님께 약속합니다.</strong> 또한 남유다 백성들에게 <strong>우상숭배자는 처단하겠다고 공포합니다.</strong><br><br>
+            그런데 얼마 후 <strong>아사 왕의 어머니(새번역은 할머니)가 우상을 숭배하다가 발각됩니다.</strong> 그러자 <strong>아사 왕은 어머니를 태후의 자리에서 폐하며 앞장서 본보기를 보여줍니다.</strong> 아사 왕은 이처럼 <strong>하나님의 마음에 합한 자</strong>였습니다.
+            <div class="quote">
+                <strong>그런데 아사 왕의 한 가지 잘못은 우상숭배의 근원이 될 수 있는 산당만은 그대로 남겨둔 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 역대기는 아사 왕의 신앙 갱신 운동의 결과로 하나님께서 남유다의 국방을 책임져주셨다고 기록합니다.</span>
+            열왕기에서는 아사 왕의 1차와 2차 신앙 개혁을 하나로 묶어 표기하고 있으나 <strong>역대기는 이를 각각 표기하고 있습니다.</strong> 이렇게 아사 왕이 두 번에 걸쳐 <strong>남유다에서 신앙 개혁을 단행하자 하나님께서 남유다의 국방을 책임져주십니다.</strong>
+            <div class="quote">
+                <strong>이는 하나님께서 신명기를 통해 주신 말씀이 성취된 것입니다.</strong> (신 30:16)
+            </div>
+            아사 왕은 하나님께서 베푸시는 은혜로 남유다가 평안하자 <strong>자신의 아버지가 구별해둔 것과 자신이 구스와의 전쟁에서 얻은 전리품 등을 하나님의 전에 바칩니다</strong>(대하 15:18).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 역대기는 아사 왕의 후반 실패의 원인을 아람과의 동맹과 선지자를 통한 하나님의 책망을 듣지 않았기 때문이라고 지적합니다.</span>
+            <strong>하나님을 사랑하던 아사 왕의 마음이 흔들리기 시작합니다.</strong> 아사 왕은 아사랴 선지자를 통한 하나님의 말씀을 듣고 신앙 개혁을 단행했는데, <strong>집권 후반기에는 하나님의 말씀을 전하는 선지자를 감옥에 가두기까지 합니다</strong>(대하 16:7~10).
+            <div class="quote">
+                <strong>결국 아사 왕은 병들어 남유다의 왕이 된 지 41년 만에 죽습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 남유다 4대 왕 여호사밧은 철저한 '신앙 갱신 운동'으로 남유다에서 우상을 척결합니다.</span>
+            아사 왕이 죽고 아사의 아들 <strong>여호사밧이 남유다의 네 번째 왕이 됩니다.</strong> 여호사밧은 <strong>'다윗의 길'로 행한 남유다 다섯 명의 왕들 가운데 한 명</strong>입니다. 여호사밧은 <strong>그의 아버지 아사의 말년 정치로 가지 않고 '다윗의 길'로 행했습니다</strong>(대하 17:3~4).
+            <div class="quote">
+                <strong>여호사밧 왕이 남유다를 제사장 나라로 바로 세워가자 하나님께서는 레위기에서 이미 약속해주신 대로 남유다의 경제와 국방을 책임져주셨습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 역대하 14~17장 '아사의 신앙 운동'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 역대하 14장 -->
+        <div class="chapter-title">역대하 14장 (1~15절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아비야가 그의 조상들과 함께 누우매 다윗 성에 장사되고 그의 아들 아사가 대신하여 왕이 되니 그의 시대에 그의 땅이 십 년 동안 평안하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 아사가 그의 하나님 여호와 보시기에 선과 정의를 행하여</div>
+        <div class="verse"><span class="verse-num">3</span> 이방 제단과 산당을 없애고 주상을 깨뜨리며 아세라 상을 찍고</div>
+        <div class="verse"><span class="verse-num">4</span> 유다 사람에게 명하여 그 조상들의 하나님 여호와를 찾게 하며 그의 율법과 명령을 행하게 하고</div>
+        <div class="verse"><span class="verse-num">5</span> 또 유다 모든 성읍에서 산당과 태양상을 없애매 나라가 그 앞에서 평안함을 누리니라</div>
+        <div class="verse"><span class="verse-num">6</span> 여호와께서 아사에게 평안을 주셨으므로 그 땅이 평안하여 여러 해 싸움이 없은지라 그가 견고한 성읍들을 유다에 건축하니라</div>
+        <div class="verse"><span class="verse-num">7</span> 아사가 일찍이 유다 사람에게 이르되 우리가 우리 하나님 여호와를 찾았으므로 이 땅이 아직 우리 앞에 있나니 우리가 이 성읍들을 건축하고 그 주위에 성곽과 망대와 문과 빗장을 만들자 우리가 주를 찾았으므로 주께서 우리 사방에 평안을 주셨느니라 하고 이에 그들이 성읍을 형통하게 건축하였더라</div>
+        <div class="verse"><span class="verse-num">8</span> 아사의 군대는 유다 중에서 큰 방패와 창을 잡는 자가 삼십만 명이요 베냐민 중에서 작은 방패를 잡으며 활을 당기는 자가 이십팔만 명이라 그들은 다 큰 용사였더라</div>
+        <div class="verse"><span class="verse-num">9</span> 구스 사람 세라가 그들을 치려 하여 군사 백만 명과 병거 삼백 대를 거느리고 마레사에 이르매</div>
+        <div class="verse"><span class="verse-num">10</span> 아사가 마주 나가서 마레사의 스바다 골짜기에 전열을 갖추고</div>
+        <div class="verse"><span class="verse-num">11</span> 아사가 그의 하나님 여호와께 부르짖어 이르되 여호와여 힘이 강한 자와 약한 자 사이에는 주밖에 도와 줄 이가 없사오니 우리 하나님 여호와여 우리를 도우소서 우리가 주를 의지하오며 주의 이름을 의탁하옵고 이 많은 무리를 치러 왔나이다 여호와여 주는 우리 하나님이시오니 원하건대 사람이 주를 이기지 못하게 하옵소서 하였더니</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와께서 구스 사람들을 아사와 유다 사람들 앞에서 치시니 구스 사람들이 도망하는지라</div>
+        <div class="verse"><span class="verse-num">13</span> 아사와 그와 함께 한 백성이 구스 사람들을 추격하여 그랄까지 이르매 이에 구스 사람들이 엎드러지고 살아 남은 자가 없었으니 이는 여호와 앞에서와 그의 군대 앞에서 패망하였음이라 노략한 물건이 매우 많았더라</div>
+        <div class="verse"><span class="verse-num">14</span> 여호와께서 그랄 사면 모든 성읍 백성을 두렵게 하시니 무리가 그의 모든 성읍을 치고 그 가운데에 있는 많은 물건을 노략하고</div>
+        <div class="verse"><span class="verse-num">15</span> 또 짐승 지키는 천막을 치고 양과 낙타를 많이 이끌고 예루살렘으로 돌아왔더라</div>
+
+        <!-- 역대하 15장 -->
+        <div class="chapter-title">역대하 15장 (1~19절)</div>
+        <div class="verse"><span class="verse-num">1</span> 하나님의 영이 오뎃의 아들 아사랴에게 임하시매</div>
+        <div class="verse"><span class="verse-num">2</span> 그가 나가서 아사를 맞아 이르되 아사와 및 유다와 베냐민의 무리들아 내 말을 들으라 너희가 여호와와 함께 하면 여호와께서 너희와 함께 하실지라 너희가 만일 그를 찾으면 그가 너희와 만나게 되시려니와 너희가 만일 그를 버리면 그도 너희를 버리시리라</div>
+        <div class="verse"><span class="verse-num">3</span> 이스라엘에는 참 신이 없고 가르치는 제사장도 없고 율법도 없은 지가 오래 되었으나</div>
+        <div class="verse"><span class="verse-num">4</span> 그들이 그 환난 때에 이스라엘 하나님 여호와께로 돌아가서 찾으매 그가 그들과 만나게 되셨나니</div>
+        <div class="verse"><span class="verse-num">5</span> 그 때에 온 땅의 모든 주민이 크게 요란하여 사람의 출입이 평안하지 못하며</div>
+        <div class="verse"><span class="verse-num">6</span> 이 나라와 저 나라가 서로 치고 이 성읍이 저 성읍과 또한 그러하여 피차 상한 바 되었나니 이는 하나님이 여러 가지 고난으로 요란하게 하셨음이라</div>
+        <div class="verse"><span class="verse-num">7</span> 그런즉 너희는 강하게 하라 너희의 손이 약하지 않게 하라 너희 행위에는 상급이 있음이라 하니라</div>
+        <div class="verse"><span class="verse-num">8</span> 아사가 이 말 곧 선지자 오뎃의 예언을 듣고 마음을 강하게 하여 가증한 물건들을 유다와 베냐민 온 땅에서 없애고 또 에브라임 산지에서 빼앗은 성읍들에서도 없애고 또 여호와의 낭실 앞에 있는 여호와의 제단을 재건하고</div>
+        <div class="verse"><span class="verse-num">9</span> 또 유다와 베냐민의 무리를 모으고 에브라임과 므낫세와 시므온 가운데에서 나와서 저희 중에 머물러 사는 자들을 모았으니 이는 이스라엘 사람들이 아사의 하나님 여호와께서 그와 함께 하심을 보고 아사에게로 돌아오는 자가 많았음이더라</div>
+        <div class="verse"><span class="verse-num">10</span> 아사 왕 제십오년 셋째 달에 그들이 예루살렘에 모이고</div>
+        <div class="verse"><span class="verse-num">11</span> 그 날에 노략하여 온 물건 중에서 소 칠백 마리와 양 칠천 마리로 여호와께 제사를 지내고</div>
+        <div class="verse"><span class="verse-num">12</span> 또 마음을 다하고 목숨을 다하여 조상들의 하나님 여호와를 찾기로 언약하고</div>
+        <div class="verse"><span class="verse-num">13</span> 이스라엘 하나님 여호와를 찾지 아니하는 자는 대소 남녀를 막론하고 죽이는 것이 마땅하다 하고</div>
+        <div class="verse"><span class="verse-num">14</span> 무리가 큰 소리로 외치며 피리와 나팔을 불어 여호와께 맹세하매</div>
+        <div class="verse"><span class="verse-num">15</span> 온 유다가 이 맹세를 기뻐한지라 무리가 마음을 다하여 맹세하고 뜻을 다하여 여호와를 찾았으므로 여호와께서도 그들을 만나 주시고 그들의 사방에 평안을 주셨더라</div>
+        <div class="verse"><span class="verse-num">16</span> 아사 왕의 어머니 마아가가 아세라의 가증한 목상을 만들었으므로 아사가 그의 태후의 자리를 폐하고 그의 우상을 찍고 빻아 기드론 시냇가에서 불살랐으니</div>
+        <div class="verse"><span class="verse-num">17</span> 산당은 이스라엘 중에서 제하지 아니하였으나 아사의 마음이 일평생 온전하였더라</div>
+        <div class="verse"><span class="verse-num">18</span> 그가 또 그의 아버지가 구별한 물건과 자기가 구별한 물건 곧 은과 금과 그릇들을 하나님의 전에 드렸더니</div>
+        <div class="verse"><span class="verse-num">19</span> 이 때부터 아사 왕 제삼십오년까지 다시는 전쟁이 없으니라</div>
+
+        <!-- 역대하 16장 -->
+        <div class="chapter-title">역대하 16장 (1~14절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아사 왕 제삼십육년에 이스라엘 왕 바아사가 유다를 치러 올라와서 라마를 건축하여 사람을 유다 왕 아사에게 왕래하지 못하게 하려 한지라</div>
+        <div class="verse"><span class="verse-num">2</span> 아사가 여호와의 전 곳간과 왕궁 곳간의 은금을 내어다가 다메섹에 사는 아람 왕 벤하닷에게 보내며 이르되</div>
+        <div class="verse"><span class="verse-num">3</span> 내 아버지와 당신의 아버지 사이에와 같이 나와 당신 사이에 약조하자 내가 당신에게 은금을 보내노니 와서 이스라엘 왕 바아사와 세운 약조를 깨뜨려 그가 나를 떠나게 하라 하매</div>
+        <div class="verse"><span class="verse-num">4</span> 벤하닷이 아사 왕의 말을 듣고 그의 군대 지휘관들을 보내어 이스라엘 성읍들을 치되 이욘과 단과 아벨마임과 납달리의 모든 국고성들을 쳤더니</div>
+        <div class="verse"><span class="verse-num">5</span> 바아사가 듣고 라마 건축하는 일을 포기하고 그 공사를 그친지라</div>
+        <div class="verse"><span class="verse-num">6</span> 아사 왕이 온 유다 무리를 거느리고 바아사가 라마를 건축하던 돌과 재목을 운반하여다가 게바와 미스바를 건축하였더라</div>
+        <div class="verse"><span class="verse-num">7</span> 그 때에 선견자 하나니가 유다 왕 아사에게 나와서 그에게 이르되 왕이 아람 왕을 의지하고 왕의 하나님 여호와를 의지하지 아니하였으므로 아람 왕의 군대가 왕의 손에서 벗어났나이다</div>
+        <div class="verse"><span class="verse-num">8</span> 구스 사람과 룹 사람의 군대가 크지 아니하며 말과 병거가 심히 많지 아니하더이까 그러나 왕이 여호와를 의지하였으므로 여호와께서 왕의 손에 넘기셨나이다</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와의 눈은 온 땅을 두루 감찰하사 전심으로 자기에게 향하는 자들을 위하여 능력을 베푸시나니 이 일은 왕이 망령되이 행하였은즉 이 후부터는 왕에게 전쟁이 있으리이다 하매</div>
+        <div class="verse"><span class="verse-num">10</span> 아사가 노하여 선견자를 옥에 가두었으니 이는 그의 말에 크게 노하였음이며 그 때에 아사가 또 백성 중에서 몇 사람을 학대하였더라</div>
+        <div class="verse"><span class="verse-num">11</span> 아사의 처음부터 끝까지의 행적은 유다와 이스라엘 열왕기에 기록되니라</div>
+        <div class="verse"><span class="verse-num">12</span> 아사가 왕이 된 지 삼십구 년에 그의 발이 병들어 매우 위독했으나 병이 있을 때에 그가 여호와께 구하지 아니하고 의원들에게 구하였더라</div>
+        <div class="verse"><span class="verse-num">13</span> 아사가 왕위에 있은 지 사십일 년 후에 죽어 그의 조상들과 함께 누우매</div>
+        <div class="verse"><span class="verse-num">14</span> 다윗 성에 자기를 위하여 파 두었던 묘실에 무리가 장사하되 그의 시체를 법대로 만든 각양 향 재료를 가득히 채운 상에 두고 또 그것을 위하여 많이 분향하였더라</div>
+
+        <!-- 역대하 17장 -->
+        <div class="chapter-title">역대하 17장 (1~19절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아사의 아들 여호사밧이 대신하여 왕이 되어 스스로 강하게 하여 이스라엘을 방어하되</div>
+        <div class="verse"><span class="verse-num">2</span> 유다 모든 견고한 성읍에 군대를 주둔시키고 또 유다 땅과 그의 아버지 아사가 정복한 에브라임 성읍들에 영문을 두었더라</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와께서 여호사밧과 함께 하셨으니 이는 그가 그의 조상 다윗의 처음 길로 행하여 바알들에게 구하지 아니하고</div>
+        <div class="verse"><span class="verse-num">4</span> 오직 그의 아버지의 하나님께 구하며 그의 계명을 행하고 이스라엘의 행위를 따르지 아니하였음이라</div>
+        <div class="verse"><span class="verse-num">5</span> 그러므로 여호와께서 나라를 그의 손에서 견고하게 하시매 유다 무리가 여호사밧에게 예물을 드렸으므로 그가 부귀와 영광을 크게 떨쳤더라</div>
+        <div class="verse"><span class="verse-num">6</span> 그가 전심으로 여호와의 길을 걸어 산당들과 아세라 목상들도 유다에서 제거하였더라</div>
+        <div class="verse"><span class="verse-num">7</span> 그가 왕위에 있은 지 삼 년에 그의 방백들 벤하일과 오바댜와 스가랴와 느다넬과 미가야를 보내어 유다 여러 성읍에 가서 가르치게 하고</div>
+        <div class="verse"><span class="verse-num">8</span> 또 그들과 함께 레위 사람 스마야와 느다냐와 스바댜와 아사헬과 스미라못과 여호나단과 아도니야와 도비야와 도바도니야 등 레위 사람들을 보내고 또 저희와 함께 제사장 엘리사마와 여호람을 보내었더니</div>
+        <div class="verse"><span class="verse-num">9</span> 그들이 여호와의 율법책을 가지고 유다에서 가르치되 그 모든 유다 성읍들로 두루 다니며 백성들을 가르쳤더라</div>
+        <div class="verse"><span class="verse-num">10</span> 여호와께서 유다 사방의 모든 나라에 두려움을 주사 여호사밧과 싸우지 못하게 하시매</div>
+        <div class="verse"><span class="verse-num">11</span> 블레셋 사람들 중에서는 여호사밧에게 예물을 드리며 은으로 조공을 바쳤고 아라비아 사람들도 짐승 떼 곧 숫양 칠천칠백 마리와 숫염소 칠천칠백 마리를 드렸더라</div>
+        <div class="verse"><span class="verse-num">12</span> 여호사밧이 점점 강대하여 유다에 견고한 요새와 국고성을 건축하고</div>
+        <div class="verse"><span class="verse-num">13</span> 유다 여러 성에 공사를 많이 하고 또 예루살렘에 크게 용맹스러운 군사를 두었으니</div>
+        <div class="verse"><span class="verse-num">14</span> 군사의 수효가 그들의 족속대로 이러하니라 유다에 속한 천부장 중에는 아드나가 으뜸이 되어 큰 용사 삼십만 명을 거느렸고</div>
+        <div class="verse"><span class="verse-num">15</span> 그 다음은 지휘관 여호하난이니 이십팔만 명을 거느렸고</div>
+        <div class="verse"><span class="verse-num">16</span> 그 다음은 시그리의 아들 아마시야니 그는 자기를 여호와께 즐거이 드린 자라 큰 용사 이십만 명을 거느렸고</div>
+        <div class="verse"><span class="verse-num">17</span> 베냐민에 속한 자 중에 큰 용사 엘리아다는 활과 방패를 잡은 자 이십만 명을 거느렸고</div>
+        <div class="verse"><span class="verse-num">18</span> 그 다음은 여호사밧이라 싸움을 준비한 자 십팔만 명을 거느렸으니</div>
+        <div class="verse"><span class="verse-num">19</span> 이는 다 왕을 모시는 자요 이 외에 또 온 유다 견고한 성읍들에 왕이 군사를 두었더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

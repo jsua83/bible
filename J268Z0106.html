@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 268</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 268</h1>
+        <p class="sub-title">찬송가 208장 내 주의 나라와</p>
+        <p class="sub-title">스가랴 1~6장 — 오직 성령의 능력으로 다시</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 208장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1lcRDOMMrtfZlYyRyqmZJmdHWJSalFU5l" alt="찬송가 208장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 스가랴 1~6장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서는 귀환 공동체에게 학개 선지자를 보내신 지 2개월 만에 스가랴 선지자도 보내주십니다.</span>
+            하나님께서는 스가랴 선지자를 통해 <strong>귀환 공동체의 조상들의 과거의 모습을 상기시키십니다.</strong> 귀환 공동체의 조상들은 <strong>레위기 26장에 따라 불순종에 대한 하나님의 처벌로 3단계의 징계를 받았습니다.</strong>
+            <div class="quote">
+                <strong>하나님께서는 귀환 공동체에게 하나님이 '만군의 여호와'라는 사실을 강조하시기 위해 만군의 여호와라는 말씀을 세 번이나 반복하시며 '내게로 돌아오라'고 당부하십니다.</strong> (슥 1:3)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님께서 스가랴 선지자에게 예루살렘을 영화롭게 하기 위한 '측량줄을 가진 사람 환상'을 보여주십니다.</span>
+            하나님께서 스가랴 선지자에게 보여주신 여덟 가지 환상 가운데 <strong>세 번째 환상은 '측량줄을 가진 사람 환상'입니다</strong>(슥 2장). 이는 <strong>하나님께서 예루살렘을 회복시키시고 다시 영화롭게 하실 것을 의미</strong>했습니다.
+            <div class="quote">
+                <strong>이 사실이 감동적인 이유는 과거 예루살렘이 예레미야 선지자가 바라보며 한없이 울던 성이었기 때문입니다.</strong> (애 1:1)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 하나님께서는 사탄을 꾸짖으시고 죄인의 모습으로 서 있는 대제사장 여호수아(예수아)를 깨끗하게 하십니다.</span>
+            하나님께서 스가랴 선지자에게 보여주신 <strong>네 번째 환상은 '대제사장 여호수아가 정결케 되는 환상'입니다</strong>(슥 3장). 스가랴 선지자에게 <strong>더러운 옷을 입고 여호와의 천사 앞에 선 대제사장 여호수아의 모습을 보여주십니다.</strong> 이는 <strong>성전 재건을 중단하고 영적으로 나태하며 하나님을 잃어버린 백성들의 대표로서의 모습</strong>이었습니다.
+            <div class="quote">
+                <strong>그러나 하나님께서 대제사장 여호수아를 다시 정결하게 하시고 사명을 맡기십니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님께서 스가랴 선지자에게 주신 다섯 번째 환상인 '순금 등잔대와 두 감람나무 환상'은 스룹바벨과 여호수아에게 주실 능력을 의미합니다.</span>
+            <strong>다섯 번째 환상 '순금 등잔대와 두 감람나무 환상'은 하나님의 영이 스룹바벨과 여호수아에게 능력 주심을 의미</strong>했습니다(슥 4장). 하나님께서는 스룹바벨에게 <strong>성전 재건을 끝까지 이루어낼 것을 촉구하십니다</strong>(슥 4:9~10).
+            <div class="quote">
+                <strong>성전 재건의 시작부터 끝까지 책임질 것과 성전 재건이 완성되는 날에 하나님께서 기뻐하실 것을 말씀하신 것입니다. 스가랴 선지자가 환상으로 본 두 감람나무는 곧 스룹바벨과 여호수아였던 것입니다.</strong> (슥 4:14)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 장차 싹이 날 메시아의 예표로 대제사장 여호수아에게 면류관을 씌워주십니다.</span>
+            다섯 개의 환상이 <strong>'위로'를 상징</strong>했다면 이제 남은 세 개의 환상은 <strong>'심판'을 상징</strong>합니다.
+            <div class="quote">
+                <strong>여섯 번째 환상</strong> — '날아가는 두루마리 환상': 개인들의 죄가 하나님의 심판을 받는 환상 (슥 5:1~4)<br>
+                <strong>일곱 번째 환상</strong> — '에바 속의 여인 환상': 민족의 죄악이 제거될 것을 의미 (슥 5:5~11)<br>
+                <strong>여덟 번째 환상</strong> — '네 병거 환상': 하나님의 심판이 열방에 임할 것을 의미 (슥 6:1~8)
+            </div>
+            이후에 하나님께서는 <strong>대제사장 여호수아에게 왕의 면류관을 씌워주십니다</strong>(슥 6:9~15). 마치 여덟 개 환상의 결론처럼 거행되는 <strong>'여호수아의 대관식'</strong>입니다.
+            <div class="quote">
+                <strong>이는 메시아로 오실 예수님을 예표한 것입니다. 장차 싹, 곧 메시아이신 예수님에 의해 영원한 하나님 나라의 성전이 건축될 것입니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 스가랴 1~6장 '오직 성령의 능력으로 다시'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 스가랴 1장 -->
+        <div class="chapter-title">스가랴 1장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 다리오 왕 제이년 여덟째 달에 여호와의 말씀이 잇도의 손자 베레갸의 아들 선지자 스가랴에게 임하니라 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와가 너희의 조상들에게 심히 진노하였느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 그러므로 너는 그들에게 말하기를 만군의 여호와께서 이처럼 이르시되 너희는 내게로 돌아오라 만군의 여호와의 말이니라 그리하면 내가 너희에게로 돌아가리라 만군의 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">4</span> 너희 조상들을 본받지 말라 옛적 선지자들이 그들에게 외쳐 이르되 만군의 여호와께서 이같이 말씀하시기를 너희가 악한 길, 악한 행위를 떠나서 돌아오라 하셨다 하나 그들이 듣지 아니하고 내게 귀를 기울이지 아니하였느니라 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 너희 조상들이 어디 있느냐 또 선지자들이 영원히 살겠느냐</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 나의 종 선지자들에게 명령한 내 말과 내 법도들이 어찌 너희 조상들에게 임하지 아니하였느냐 그러므로 그들이 돌이켜 이르기를 만군의 여호와께서 우리 길대로, 우리 행위대로 우리에게 행하시려고 뜻하신 것을 우리에게 행하셨도다 하였느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 다리오 왕 제이년 열한째 달 곧 스밧월 이십사일에 잇도의 손자 베레갸의 아들 선지자 스가랴에게 여호와의 말씀이 임하니라</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 밤에 보니 한 사람이 붉은 말을 타고 골짜기 속 화석류나무 사이에 섰고 그 뒤에는 붉은 말과 자줏빛 말과 백마가 있기로</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 말하되 내 주여 이들이 무엇이니이까 하니 내게 말하는 천사가 내게 이르되 이들이 무엇인지 내가 네게 보이리라 하니</div>
+        <div class="verse"><span class="verse-num">10</span> 화석류나무 사이에 선 자가 대답하여 이르되 이는 여호와께서 땅에 두루 다니라고 보내신 자들이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 그들이 화석류나무 사이에 선 여호와의 천사에게 말하되 우리가 땅에 두루 다녀 보니 온 땅이 평안하고 조용하더이다 하더라</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와의 천사가 대답하여 이르되 만군의 여호와여 여호와께서 언제까지 예루살렘과 유다 성읍들을 불쌍히 여기지 아니하시려 하나이까 이를 노하신 지 칠십 년이 되었나이다 하매</div>
+        <div class="verse"><span class="verse-num">13</span> 여호와께서 내게 말하는 천사에게 선한 말씀, 위로하는 말씀으로 대답하시더라</div>
+        <div class="verse"><span class="verse-num">14</span> 내게 말하는 천사가 내게 이르되 너는 외쳐 이르기를 만군의 여호와의 말씀에 내가 예루살렘을 위하며 시온을 위하여 크게 질투하며</div>
+        <div class="verse"><span class="verse-num">15</span> 안일한 여러 나라들 때문에 심히 진노하나니 나는 조금 노하였거늘 그들은 힘을 내어 고난을 더하였음이라</div>
+        <div class="verse"><span class="verse-num">16</span> 그러므로 여호와가 이처럼 말하노라 내가 불쌍히 여기므로 예루살렘에 돌아왔은즉 내 집이 그 가운데에 건축되리니 예루살렘 위에 먹줄이 쳐지리라 만군의 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">17</span> 그가 다시 외쳐 이르기를 만군의 여호와의 말씀에 나의 성읍들이 넘치도록 다시 풍부할 것이라 여호와가 다시 시온을 위로하며 다시 예루살렘을 택하리라 하라 하니라</div>
+        <div class="verse"><span class="verse-num">18</span> 내가 눈을 들어 본즉 네 개의 뿔이 보이기로</div>
+        <div class="verse"><span class="verse-num">19</span> 이에 내게 말하는 천사에게 묻되 이들이 무엇이니이까 하니 내게 대답하되 이들은 유다와 이스라엘과 예루살렘을 흩뜨린 뿔이니라</div>
+        <div class="verse"><span class="verse-num">20</span> 그 때에 여호와께서 대장장이 네 명을 내게 보이시기로</div>
+        <div class="verse"><span class="verse-num">21</span> 내가 말하되 그들이 무엇하러 왔나이까 하니 대답하여 이르시되 그 뿔들이 유다를 흩뜨려서 사람들이 능히 머리를 들지 못하게 하니 이 대장장이들이 와서 그것들을 두렵게 하고 이전의 뿔들을 들어 유다 땅을 흩뜨린 여러 나라의 뿔들을 떨어뜨리려 하느니라 하시더라</div>
+
+        <!-- 스가랴 2장 -->
+        <div class="chapter-title">스가랴 2장 (1~13절)</div>
+        <div class="verse"><span class="verse-num">1</span> 내가 또 눈을 들어 본즉 한 사람이 측량줄을 그의 손에 잡았기로</div>
+        <div class="verse"><span class="verse-num">2</span> 네가 어디로 가느냐 물은즉 그가 내게 대답하되 예루살렘을 측량하여 그 너비와 길이를 보고자 하노라 하고 말할 때에</div>
+        <div class="verse"><span class="verse-num">3</span> 내게 말하는 천사가 나가고 다른 천사가 나와서 그를 맞으며</div>
+        <div class="verse"><span class="verse-num">4</span> 이르되 너는 달려가서 그 소년에게 말하여 이르기를 예루살렘은 그 가운데 사람과 가축이 많으므로 성곽 없는 성읍이 될 것이라 하라</div>
+        <div class="verse"><span class="verse-num">5</span> 여호와의 말씀에 내가 불로 둘러싼 성곽이 되며 그 가운데에서 영광이 되리라</div>
+        <div class="verse"><span class="verse-num">6</span> 오호라 너희는 북방 땅에서 도피할지어다 여호와의 말씀이니라 이는 내가 너희를 하늘 사방에 바람 같이 흩어지게 하였음이니라 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">7</span> 바벨론 성에 거주하는 시온아 이제 너는 피할지니라</div>
+        <div class="verse"><span class="verse-num">8</span> 만군의 여호와께서 이같이 말씀하시되 영광을 위하여 나를 너희를 노략한 여러 나라로 보내셨나니 너희를 범하는 자는 그의 눈동자를 범하는 것이라</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 손을 그들 위에 움직인즉 그들이 자기를 섬기던 자들에게 노략거리가 되리라 하셨나니 너희가 만군의 여호와께서 나를 보내신 줄 알리라</div>
+        <div class="verse"><span class="verse-num">10</span> 여호와의 말씀에 시온의 딸아 노래하고 기뻐하라 이는 내가 와서 네 가운데에 머물 것임이라</div>
+        <div class="verse"><span class="verse-num">11</span> 그 날에 많은 나라가 여호와께 속하여 내 백성이 될 것이요 나는 네 가운데에 머물리라 네가 만군의 여호와께서 나를 네게 보내신 줄 알리라</div>
+        <div class="verse"><span class="verse-num">12</span> 여호와께서 장차 유다를 거룩한 땅에서 자기 소유를 삼으시고 다시 예루살렘을 택하시리니</div>
+        <div class="verse"><span class="verse-num">13</span> 모든 육체가 여호와 앞에서 잠잠할 것은 여호와께서 그의 거룩한 처소에서 일어나심이니라 하라 하더라</div>
+
+        <!-- 스가랴 3장 -->
+        <div class="chapter-title">스가랴 3장 (1~10절)</div>
+        <div class="verse"><span class="verse-num">1</span> 대제사장 여호수아는 여호와의 천사 앞에 섰고 사탄은 그의 오른쪽에 서서 그를 대적하는 것을 여호와께서 내게 보이시니라</div>
+        <div class="verse"><span class="verse-num">2</span> 여호와께서 사탄에게 이르시되 사탄아 여호와께서 너를 책망하노라 예루살렘을 택한 여호와께서 너를 책망하노라 이는 불에서 꺼낸 그슬린 나무가 아니냐 하실 때에</div>
+        <div class="verse"><span class="verse-num">3</span> 여호수아가 더러운 옷을 입고 천사 앞에 서 있는지라</div>
+        <div class="verse"><span class="verse-num">4</span> 여호와께서 자기 앞에 선 자들에게 명령하사 그 더러운 옷을 벗기라 하시고 또 여호수아에게 이르시되 내가 네 죄악을 제거하여 버렸으니 네게 아름다운 옷을 입히리라 하시기로</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 말하되 정결한 관을 그의 머리에 씌우소서 하매 곧 정결한 관을 그 머리에 씌우며 옷을 입히고 여호와의 천사는 곁에 섰더라</div>
+        <div class="verse"><span class="verse-num">6</span> 여호와의 천사가 여호수아에게 증언하여 이르되</div>
+        <div class="verse"><span class="verse-num">7</span> 만군의 여호와의 말씀에 네가 만일 내 도를 행하며 내 규례를 지키면 네가 내 집을 다스릴 것이요 내 뜰을 지킬 것이며 내가 또 너로 여기 섰는 자들 가운데에 왕래하게 하리라</div>
+        <div class="verse"><span class="verse-num">8</span> 대제사장 여호수아야 너와 네 앞에 앉은 네 동료들은 내 말을 들을 것이니라 이들은 예표의 사람들이라 내가 내 종 싹을 나게 하리라</div>
+        <div class="verse"><span class="verse-num">9</span> 만군의 여호와가 말하노라 내가 너 여호수아 앞에 세운 돌을 보라 한 돌에 일곱 눈이 있느니라 내가 거기에 새길 것을 새기며 이 땅의 죄악을 하루에 제거하리라</div>
+        <div class="verse"><span class="verse-num">10</span> 만군의 여호와가 말하노라 그 날에 너희가 각각 포도나무와 무화과나무 아래로 서로 초대하리라 하셨느니라</div>
+
+        <!-- 스가랴 4장 -->
+        <div class="chapter-title">스가랴 4장 (1~14절)</div>
+        <div class="verse"><span class="verse-num">1</span> 내게 말하던 천사가 다시 와서 나를 깨우니 마치 자는 사람이 잠에서 깨어난 것 같더라</div>
+        <div class="verse"><span class="verse-num">2</span> 그가 내게 묻되 네가 무엇을 보느냐 내가 대답하되 내가 보니 순금 등잔대가 있는데 그 위에는 기름 그릇이 있고 또 그 기름 그릇 위에 일곱 등잔이 있으며 그 기름 그릇 위에 있는 등잔을 위해서 일곱 관이 있고</div>
+        <div class="verse"><span class="verse-num">3</span> 그 등잔대 곁에 두 감람나무가 있는데 하나는 그 기름 그릇 오른쪽에 있고 하나는 그 왼쪽에 있나이다 하고</div>
+        <div class="verse"><span class="verse-num">4</span> 내게 말하는 천사에게 물어 이르되 내 주여 이것들이 무엇이니이까 하니</div>
+        <div class="verse"><span class="verse-num">5</span> 내게 말하는 천사가 대답하여 이르되 네가 이것들이 무엇인지 알지 못하느냐 하므로 내가 대답하되 내 주여 내가 알지 못하나이다 하니</div>
+        <div class="verse"><span class="verse-num">6</span> 그가 내게 대답하여 이르되 여호와께서 스룹바벨에게 하신 말씀이 이러하니라 만군의 여호와께서 말씀하시되 이는 힘으로 되지 아니하며 능력으로 되지 아니하고 오직 나의 영으로 되느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 큰 산아 네가 무엇이냐 네가 스룹바벨 앞에서 평지가 되리라 그가 머릿돌을 내놓을 때에 무리가 외치기를 은총, 은총이 그에게 있을지어다 하리라 하셨고</div>
+        <div class="verse"><span class="verse-num">8</span> 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">9</span> 스룹바벨의 손이 이 성전의 기초를 놓았은즉 그의 손이 또한 그 일을 마치리라 하셨나니 만군의 여호와께서 나를 너희에게 보내신 줄을 네가 알리라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">10</span> 작은 일의 날이라고 멸시하는 자가 누구냐 사람들이 스룹바벨의 손에 다림줄이 있음을 보고 기뻐하리라 이 일곱은 온 세상에 두루 다니는 여호와의 눈이라 하니라</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 그에게 물어 이르되 등잔대 좌우의 두 감람나무는 무슨 뜻이니이까 하고</div>
+        <div class="verse"><span class="verse-num">12</span> 다시 그에게 물어 이르되 금 기름을 흘리는 두 금관 옆에 있는 이 감람나무 두 가지는 무슨 뜻이니이까 하니</div>
+        <div class="verse"><span class="verse-num">13</span> 그가 내게 대답하여 이르되 네가 이것이 무엇인지 알지 못하느냐 하는지라 내가 대답하되 내 주여 알지 못하나이다 하니</div>
+        <div class="verse"><span class="verse-num">14</span> 이르되 이는 기름 부음 받은 자 둘이니 온 세상의 주 앞에 서 있는 자니라 하더라</div>
+
+        <!-- 스가랴 5장 -->
+        <div class="chapter-title">스가랴 5장 (1~11절)</div>
+        <div class="verse"><span class="verse-num">1</span> 내가 다시 눈을 들어 본즉 날아가는 두루마리가 있더라</div>
+        <div class="verse"><span class="verse-num">2</span> 그가 내게 묻되 네가 무엇을 보느냐 하기로 내가 대답하되 날아가는 두루마리를 보나이다 그 길이가 이십 규빗이요 너비가 십 규빗이니이다</div>
+        <div class="verse"><span class="verse-num">3</span> 그가 내게 이르되 이는 온 땅 위에 내리는 저주라 도둑질하는 자는 그 이쪽 글대로 끊어지고 맹세하는 자는 그 저쪽 글대로 끊어지리라 하니</div>
+        <div class="verse"><span class="verse-num">4</span> 만군의 여호와께서 이르시되 내가 이것을 보냈나니 도둑의 집에도 들어가며 내 이름을 가리켜 망령되이 맹세하는 자의 집에도 들어가서 그의 집에 머무르며 그 집을 나무와 돌과 아울러 사르리라 하셨느니라 하니라</div>
+        <div class="verse"><span class="verse-num">5</span> 내게 말하던 천사가 나아와서 내게 이르되 너는 눈을 들어 나오는 이것이 무엇인가 보라 하기로</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 묻되 이것이 무엇이니이까 하니 그가 이르되 나오는 이것이 에바이니라 하시고 또 이르되 온 땅에서 그들의 모양이 이러하니라</div>
+        <div class="verse"><span class="verse-num">7</span> 이 에바 가운데에는 한 여인이 앉았느니라 하니 그 때에 둥근 납 한 조각이 들리더라</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 이르되 이는 악이라 하고 그 여인을 에바 속으로 던져 넣고 납 조각을 에바 아귀 위에 던져 덮더라</div>
+        <div class="verse"><span class="verse-num">9</span> 내가 또 눈을 들어 본즉 두 여인이 나오는데 학의 날개 같은 날개가 있고 그 날개에 바람이 있더라 그들이 그 에바를 천지 사이에 들었기로</div>
+        <div class="verse"><span class="verse-num">10</span> 내가 내게 말하는 천사에게 묻되 그들이 에바를 어디로 옮겨 가나이까 하니</div>
+        <div class="verse"><span class="verse-num">11</span> 그가 내게 이르되 그들이 시날 땅으로 가서 그것을 위하여 집을 지으려 함이니라 준공되면 그것이 제 처소에 머물게 되리라 하더라</div>
+
+        <!-- 스가랴 6장 -->
+        <div class="chapter-title">스가랴 6장 (1~15절)</div>
+        <div class="verse"><span class="verse-num">1</span> 내가 또 눈을 들어 본즉 네 병거가 두 산 사이에서 나오는데 그 산은 구리 산이더라</div>
+        <div class="verse"><span class="verse-num">2</span> 첫째 병거는 붉은 말들이, 둘째 병거는 검은 말들이,</div>
+        <div class="verse"><span class="verse-num">3</span> 셋째 병거는 흰 말들이, 넷째 병거는 어룽지고 건장한 말들이 메었는지라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 내게 말하는 천사에게 물어 이르되 내 주여 이것들이 무엇이니이까 하니</div>
+        <div class="verse"><span class="verse-num">5</span> 천사가 대답하여 이르되 이는 하늘의 네 바람인데 온 세상의 주 앞에 서 있다가 나가는 것이라 하더라</div>
+        <div class="verse"><span class="verse-num">6</span> 검은 말은 북쪽 땅으로 나가고 흰 말은 그 뒤를 따르고 어룽진 말은 남쪽 땅으로 나가고</div>
+        <div class="verse"><span class="verse-num">7</span> 건장한 말은 나가서 땅에 두루 다니고자 하니 그가 이르되 너희는 여기서 나가서 땅에 두루 다니라 하매 곧 땅에 두루 다니더라</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 내게 외쳐 말하여 이르되 북쪽으로 나간 자들이 북쪽에서 내 영을 쉬게 하였느니라 하더라</div>
+        <div class="verse"><span class="verse-num">9</span> 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">10</span> 사로잡힌 자 가운데 바벨론에서부터 돌아온 헬대와 도비야와 여다야가 스바냐의 아들 요시아의 집에 들어갔나니 너는 이 날에 그 집에 들어가서 그들에게서 받되</div>
+        <div class="verse"><span class="verse-num">11</span> 은과 금을 받아 면류관을 만들어 여호사닥의 아들 대제사장 여호수아의 머리에 씌우고</div>
+        <div class="verse"><span class="verse-num">12</span> 말하여 이르기를 만군의 여호와께서 이같이 말씀하시되 보라 싹이라 이름하는 사람이 자기 곳에서 돋아나서 여호와의 전을 건축하리라</div>
+        <div class="verse"><span class="verse-num">13</span> 그가 여호와의 전을 건축하고 영광도 얻고 그 자리에 앉아서 다스릴 것이요 또 제사장이 자기 자리에 있으리니 이 둘 사이에 평화의 의논이 있으리라 하셨다 하고</div>
+        <div class="verse"><span class="verse-num">14</span> 그 면류관은 헬렘과 도비야와 여다야와 스바냐의 아들 헨을 기념하기 위하여 여호와의 전 안에 두라 하시니라</div>
+        <div class="verse"><span class="verse-num">15</span> 먼 데 사람들이 와서 여호와의 전을 건축하리니 만군의 여호와께서 나를 너희에게 보내신 줄을 너희가 알리라 너희가 만일 너희의 하나님 여호와의 말씀을 들을진대 이같이 되리라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 251</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 251</h1>
+        <p class="sub-title">찬송가 149장 주 달려 죽은 십자가</p>
+        <p class="sub-title">에스겔 25~28장 — 세계 최고 해상 무역국 두로의 멸망</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 149장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1KNf3ZXzrdTkAO4ZdPuTkLtTfFBjjOgNx" alt="찬송가 149장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 에스겔 25~28장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다.</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 세계가 다 내게 속했다고 말씀하신 하나님께서는 남유다 주변국인 암몬, 모압, 에돔, 블레셋이 받을 심판을 말씀하십니다.</span>
+            하나님께서는 에스겔 선지자를 통해 <strong>남유다 주변 국가들인 암몬, 모압, 에돔, 블레셋의 죄악을 밝히시고 그들이 우상을 섬긴 죄와 교만함으로 인해 하나님의 심판을 받을 것이라고 말씀하십니다</strong>(겔 25장).
+            <div class="quote">
+                <strong>하나님께서 이렇게 남유다 주변의 모든 나라에 대해 심판을 말씀하신 것은 세계가 다 하나님께 속해 있기 때문입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 두로가 그들의 무역 경쟁국인 남유다가 망하자 크게 기뻐하며 좋아했지만 결국 바벨론 제국에 정복당하고 이후 헬라 제국의 알렉산더에 의해 완전히 멸망합니다.</span>
+            두로가 심판받는 이유는 <strong>만민의 문인 예루살렘이 멸망하여 황폐해지면 그 이득을 자신들이 얻게 될 것이라며 좋아했기 때문</strong>입니다(겔 26장). 다윗과 솔로몬 시대 때에 우호적인 관계를 유지하며 성전 건축의 재료들을 공급했던 두로도 <strong>그들의 죄악으로 인해 하나님의 심판을 벗어날 수 없었습니다.</strong><br><br>
+            두로는 <strong>국제무역을 통해 부를 축적하고 교만할 대로 교만해졌습니다.</strong> 심지어 <strong>무역 경쟁국인 예루살렘이 망하자 자기들에게 큰 이익이 올 것을 기대하며 기뻐했습니다.</strong>
+            <div class="quote">
+                <strong>그러나 하나님께서는 두로가 노략당할 것이라고 말씀하십니다. 두로는 바벨론 제국에 의해 정복된 이후 헬라 제국 알렉산더에 의해 완전히 멸망합니다. 하나님의 말씀대로 두로는 다시는 일어나지 못하게 됩니다.</strong> (겔 26:21)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 에스겔 선지자는 세계 최고의 해상 무역국이었던 두로의 영광을 자세히 묘사합니다.</span>
+            에스겔서에는 <strong>두로에 대한 세 편의 애가</strong>가 있습니다. 애가에는 <strong>화려했던 두로의 지난날의 영광이 자세히 묘사되어 있습니다</strong>(겔 27:3~25). 고대 근동의 수많은 나라가 두로와 교역하기를 원했고 <strong>앞다투어 자국 최상의 특산품을 들고 와 두로와의 교역을 시도했습니다.</strong>
+            <div class="quote">
+                <strong>그러나 하나님께서는 두로를 향해 '영원히 다시 있지 못할 것'이라고 선언하십니다.</strong> (겔 27:36)
+            </div>
+            <div class="quote">
+                <strong>두로는 수많은 보화를 그들의 것으로 착각하고 그 보화로 인해 교만했습니다. 두로는 단지 보화의 사용자일 뿐입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님께서는 두로가 갑작스럽게 멸망함으로 수많은 무역 국가가 두로를 애도하게 될 것이라고 말씀하십니다.</span>
+            다른 나라들과 달리 두로는 <strong>'다시 일어나지 못할 것'</strong>이라고 말씀하십니다(겔 27:26~36). <strong>두로의 풍족함은 부인할 수 없는 사실이었으나 그 풍족함은 영원히 이어지지 못합니다.</strong>
+            <div class="quote">
+                <strong>두로의 멸망이 의미하는 것은 물질적 풍요가 정신적 풍요를 앞섰을 때에 대한 경고입니다. 하나님께서 맡겨주신 물질에 대한 청지기적 태도를 버리고 자신들의 잇속 차리기에만 급급한 개인, 공동체, 민족은 그 부를 지킬 수 없습니다. 이는 비단 수천 년 전 두로의 모습만은 아닐 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 두로의 멸망 원인이 두로 왕의 교만 때문이라고 말씀하십니다.</span>
+            두로 왕은 이렇게 교만했습니다.
+            <div class="quote">
+                <strong>"나는 신이라 내가 하나님의 자리에 있다"</strong><br><br>
+                <strong>"나는 다니엘보다 지혜로워서 은밀한 것을 깨닫지 못할 것이 없다"</strong><br><br>
+                <strong>"나는 큰 지혜와 무역으로 재물을 얻었다"</strong>
+            </div>
+            무엇보다도 하나님께서 지적하신 핵심은 다음과 같습니다.
+            <div class="quote">
+                <strong>"네 마음이 하나님의 마음 같은 체하였으니"</strong> (겔 28:6)
+            </div>
+            과거에 두로 왕은 <strong>지혜가 충족하며 아름다웠고 하나님의 동산 에덴과 같았습니다.</strong> 두로 왕은 <strong>하나님께 기름 부음을 받았고 하나님의 성산을 드나드는 복을 받았습니다.</strong> 그런데 <strong>두로가 받았던 복은 그들의 교만으로 말미암아 불의로 변했습니다.</strong><br><br>
+            계속해서 두로에 이어 <strong>시돈이 받을 하나님의 심판</strong>에 대해서도 말씀하십니다(겔 28:21~22). 시돈이 심판을 받는 것은 <strong>시돈으로부터 남유다로 유입된 우상이 큰 원인이었을 것</strong>입니다(왕상 16:31~33).
+            <div class="quote">
+                <strong>이렇게 두로와 시돈의 멸망을 말씀하신 하나님께서 다시 남유다의 회복을 말씀하십니다.</strong> 하나님께서 에스겔 선지자를 통해 <strong>1차적으로는 바벨론 70년 이후 포로 귀환을, 궁극적으로는 메시아 나라를 말씀하십니다.</strong> (겔 28:25)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 에스겔 25~28장 '세계 최고 해상 무역국 두로의 멸망'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 에스겔 25장 -->
+        <div class="chapter-title">에스겔 25장 (1~17절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 네 얼굴을 암몬 족속에게 돌리고 그들에게 예언하라</div>
+        <div class="verse"><span class="verse-num">3</span> 너는 암몬 족속에게 이르기를 너희는 주 여호와의 말씀을 들을지어다 주 여호와께서 이같이 말씀하셨느니라 내 성소가 더럽힘을 받을 때에 네가 그것에 관하여, 이스라엘 땅이 황폐할 때에 네가 그것에 관하여, 유다 족속이 사로잡힐 때에 네가 그들에 대하여 이르기를 아하 좋다 하였도다</div>
+        <div class="verse"><span class="verse-num">4</span> 그러므로 내가 너를 동방 사람에게 기업으로 넘겨 주리니 그들이 네 가운데에 진을 치며 네 가운데에 그 거처를 베풀며 네 열매를 먹으며 네 젖을 마실지라</div>
+        <div class="verse"><span class="verse-num">5</span> 내가 랍바를 낙타의 우리로 만들며 암몬 족속의 땅을 양 떼가 눕는 곳으로 삼은즉 내가 주 여호와인 줄을 너희가 알리라</div>
+        <div class="verse"><span class="verse-num">6</span> 주 여호와께서 이같이 말씀하셨느니라 네가 이스라엘 땅에 대하여 손뼉을 치며 발을 구르며 마음을 다하여 멸시하며 즐거워하였나니</div>
+        <div class="verse"><span class="verse-num">7</span> 그런즉 내가 손을 네 위에 펴서 너를 다른 민족에게 넘겨 주어 노략을 당하게 하며 너를 만민 중에서 끊어 버리며 너를 여러 나라 가운데에서 패망하게 하여 멸하리니 내가 주 여호와인 줄을 너희가 알리라 하셨다 하라</div>
+        <div class="verse"><span class="verse-num">8</span> 주 여호와께서 이같이 말씀하셨느니라 모압과 세일이 이르기를 유다 족속은 모든 이방과 다름이 없다 하도다</div>
+        <div class="verse"><span class="verse-num">9</span> 그러므로 내가 모압의 한편 곧 그 나라 국경에 있는 영화로운 성읍들 벧여시못과 바알므온과 기랴다임을 열고</div>
+        <div class="verse"><span class="verse-num">10</span> 암몬 족속과 더불어 동방 사람에게 넘겨 주어 기업을 삼게 할 것이라 암몬 족속이 다시는 이방 가운데에서 기억되지 아니하게 하려니와</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 모압에 벌을 내리리니 내가 주 여호와인 줄을 너희가 알리라</div>
+        <div class="verse"><span class="verse-num">12</span> 주 여호와께서 이같이 말씀하셨느니라 에돔이 유다 족속을 쳐서 원수를 갚았고 원수를 갚음으로 심히 범죄하였도다</div>
+        <div class="verse"><span class="verse-num">13</span> 그러므로 주 여호와께서 이같이 말씀하셨느니라 내가 내 손을 에돔 위에 펴서 사람과 짐승을 그 가운데에서 끊어 데만에서부터 황폐하게 하리니 드단까지 칼에 엎드러지리라</div>
+        <div class="verse"><span class="verse-num">14</span> 내가 내 백성 이스라엘의 손으로 내 원수를 에돔에게 갚으리니 그들이 내 진노와 분노를 따라 에돔에 행한즉 내가 원수를 갚음인 줄을 에돔이 알리라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 주 여호와께서 이같이 말씀하셨느니라 블레셋 사람이 옛날부터 미워하여 멸시하는 마음으로 원수를 갚아 진멸하고자 하였도다</div>
+        <div class="verse"><span class="verse-num">16</span> 그러므로 주 여호와께서 이같이 말씀하셨느니라 내가 블레셋 사람 위에 손을 펴서 그렛 사람을 끊으며 해변에 남은 자를 진멸하되</div>
+        <div class="verse"><span class="verse-num">17</span> 분노의 책벌로 내 원수를 그들에게 크게 갚으리라 내가 그들에게 원수를 갚은즉 내가 여호와인 줄을 그들이 알리라 하시니라</div>
+
+        <!-- 에스겔 26장 -->
+        <div class="chapter-title">에스겔 26장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 열한째 해 어느 달 초하루에 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 두로가 예루살렘에 관하여 이르기를 아하 만민의 문이 깨져서 내게로 돌아왔도다 그가 황폐하였으니 내가 충만함을 얻으리라 하였도다</div>
+        <div class="verse"><span class="verse-num">3</span> 그러므로 주 여호와께서 이같이 말씀하셨느니라 두로야 내가 너를 대적하여 바다가 그 파도를 굽이치게 함 같이 여러 민족들이 와서 너를 치게 하리니</div>
+        <div class="verse"><span class="verse-num">4</span> 그들이 두로의 성벽을 무너뜨리며 그 망대를 헐 것이요 나도 티끌을 그 위에서 쓸어 버려 맨 바위가 되게 하며</div>
+        <div class="verse"><span class="verse-num">5</span> 바다 가운데에 그물 치는 곳이 되게 하리니 내가 말하였음이라 주 여호와의 말씀이니라 그가 이방의 노략거리가 될 것이요</div>
+        <div class="verse"><span class="verse-num">6</span> 들에 있는 그의 딸들은 칼에 죽으리니 그들이 나를 여호와인 줄을 알리라</div>
+        <div class="verse"><span class="verse-num">7</span> 주 여호와께서 이같이 말씀하셨느니라 내가 왕들 중의 왕 곧 바벨론의 느부갓네살 왕으로 하여금 북쪽에서 말과 병거와 기병과 군대와 백성의 큰 무리를 거느리고 와서 두로를 치게 할 때에</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 들에 있는 너의 딸들을 칼로 죽이고 너를 치려고 사다리를 세우며 토성을 쌓으며 방패를 갖출 것이며</div>
+        <div class="verse"><span class="verse-num">9</span> 공성퇴를 가지고 네 성을 치며 도끼로 망대를 찍을 것이며</div>
+        <div class="verse"><span class="verse-num">10</span> 말이 많으므로 그 티끌이 너를 가릴 것이며 사람이 무너진 성 구멍으로 들어가는 것 같이 그가 네 성문으로 들어갈 때에 그 기병과 수레와 병거의 소리로 말미암아 네 성곽이 진동할 것이며</div>
+        <div class="verse"><span class="verse-num">11</span> 그가 그 말굽으로 네 모든 거리를 밟을 것이며 칼로 네 백성을 죽일 것이며 네 견고한 석상을 땅에 엎드러뜨릴 것이며</div>
+        <div class="verse"><span class="verse-num">12</span> 네 재물을 빼앗을 것이며 네가 무역한 것을 노략할 것이며 네 성을 헐 것이며 네가 기뻐하는 집을 무너뜨릴 것이며 또 네 돌들과 네 재목과 네 흙을 다 물 가운데에 던질 것이라</div>
+        <div class="verse"><span class="verse-num">13</span> 내가 네 노래 소리를 그치게 하며 네 수금 소리를 다시 들리지 않게 하고</div>
+        <div class="verse"><span class="verse-num">14</span> 너를 맨 바위가 되게 한즉 네가 그물 말리는 곳이 되고 다시는 건축되지 못하리니 나 여호와가 말하였음이니라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 주 여호와께서 이같이 두로에 대하여 말씀하시되 네가 엎드러지는 소리에 모든 섬이 진동하지 아니하겠느냐 곧 너희 가운데에 상한 자가 부르짖으며 죽임을 당할 때에라</div>
+        <div class="verse"><span class="verse-num">16</span> 그 때에 바다의 모든 왕이 그 보좌에서 내려 조복을 벗으며 수 놓은 옷을 버리고 떨림을 입듯 하고 땅에 앉아서 너로 말미암아 무시로 떨며 놀랄 것이며</div>
+        <div class="verse"><span class="verse-num">17</span> 그들이 너를 위하여 슬픈 노래를 불러 이르기를 항해자가 살았던 유명한 성읍이여 너와 너의 주민이 바다 가운데에 있어 견고하였도다 해변의 모든 주민을 두렵게 하였더니 어찌 그리 멸망하였는고</div>
+        <div class="verse"><span class="verse-num">18</span> 네가 무너지는 그날에 섬들이 진동할 것임이여 바다 가운데의 섬들이 네 결국을 보고 놀라리로다 하리라</div>
+        <div class="verse"><span class="verse-num">19</span> 주 여호와께서 이같이 말씀하셨느니라 내가 너를 주민이 없는 성읍과 같이 황폐한 성읍이 되게 하고 깊은 바다가 네 위에 오르게 하며 큰 물이 너를 덮게 할 때에</div>
+        <div class="verse"><span class="verse-num">20</span> 내가 너를 구덩이에 내려가는 자와 함께 내려가서 옛적 사람에게로 나아가게 하고 너를 그 구덩이에 내려간 자와 함께 땅 깊은 곳 예로부터 황폐한 곳에 살게 하리라 네가 다시는 사람이 거주하는 곳이 되지 못하리니 살아 있는 자의 땅에서 영광을 얻지 못하리라</div>
+        <div class="verse"><span class="verse-num">21</span> 내가 너를 패망하게 하여 다시 있지 못하게 하리니 사람이 비록 너를 찾으나 다시는 영원히 만나지 못하리라 주 여호와의 말씀이니라</div>
+
+        <!-- 에스겔 27장 -->
+        <div class="chapter-title">에스겔 27장 (1~36절)</div>
+        <div class="verse"><span class="verse-num">1</span> 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 너는 두로를 위하여 슬픈 노래를 지으라</div>
+        <div class="verse"><span class="verse-num">3</span> 너는 두로를 향하여 이르기를 바다 어귀에 거주하면서 여러 섬 백성과 거래하는 자여 주 여호와께서 이같이 말씀하시되 두로야 네가 말하기를 나는 온전히 아름답다 하였도다</div>
+        <div class="verse"><span class="verse-num">4</span> 네 땅이 바다 가운데에 있음이여 너를 지은 자가 네 아름다움을 온전하게 하였도다</div>
+        <div class="verse"><span class="verse-num">5</span> 스닐의 잣나무로 네 판자를 만들었음이여 너를 위하여 레바논의 백향목을 가져다 돛대를 만들었도다</div>
+        <div class="verse"><span class="verse-num">6</span> 바산의 상수리나무로 네 노를 만들었음이여 깃딤 섬 황양목에 상아로 꾸며 갑판을 만들었도다</div>
+        <div class="verse"><span class="verse-num">7</span> 애굽의 수 놓은 가는 베로 돛을 만들어 깃발을 삼았음이여 엘리사 섬의 청색 자색 베로 차일을 만들었도다</div>
+        <div class="verse"><span class="verse-num">8</span> 시돈과 아르왓 주민들이 네 사공이 되었음이여 두로야 네 가운데에 있는 지혜자들이 네 선장이 되었도다</div>
+        <div class="verse"><span class="verse-num">9</span> 그발의 노인들과 지혜자들이 네 가운데에서 배의 틈을 막는 자가 되었음이여 바다의 모든 배와 그 사공들은 네 가운데에서 무역하였도다</div>
+        <div class="verse"><span class="verse-num">10</span> 바사와 룻과 붓이 네 군대 가운데에서 병정이 되었음이여 네 가운데에서 방패와 투구를 달아 네 영광을 나타냈도다</div>
+        <div class="verse"><span class="verse-num">11</span> 아르왓 사람과 네 군대는 네 사방 성 위에 있었고 용사들은 네 여러 망대에 있었음이여 네 사방 성 위에 방패를 달아 네 아름다움을 온전하게 하였도다</div>
+        <div class="verse"><span class="verse-num">12</span> 다시스는 각종 보화가 풍부하므로 너와 거래하였음이여 은과 철과 주석과 납을 네 물품과 바꾸어 갔도다</div>
+        <div class="verse"><span class="verse-num">13</span> 야완과 두발과 메섹은 네 상인이 되었음이여 사람과 놋그릇을 가지고 네 상품을 바꾸어 갔도다</div>
+        <div class="verse"><span class="verse-num">14</span> 도갈마 족속은 말과 군마와 노새를 네 물품과 바꾸었으며</div>
+        <div class="verse"><span class="verse-num">15</span> 드단 사람은 네 상인이 되었음이여 여러 섬이 너와 거래하여 상아와 박달나무를 네 물품과 바꾸어 갔도다</div>
+        <div class="verse"><span class="verse-num">16</span> 너의 제품이 풍부하므로 아람은 너와 거래하였음이여 남보석과 자색 베와 수 놓은 것과 가는 베와 산호와 홍보석을 네 물품과 바꾸어 갔도다</div>
+        <div class="verse"><span class="verse-num">17</span> 유다와 이스라엘 땅 사람이 네 상인이 되었음이여 민닛 밀과 과자와 꿀과 기름과 유향을 네 물품과 바꾸어 갔도다</div>
+        <div class="verse"><span class="verse-num">18</span> 너의 제품이 많고 각종 보화가 풍부하므로 다메섹이 너와 거래하였음이여 헬본 포도주와 흰 양털을 너와 거래하였도다</div>
+        <div class="verse"><span class="verse-num">19</span> 워단과 야완은 길쌈하는 실로 네 물품을 거래하였음이여 가공한 쇠와 계피와 대나무 제품이 네 상품 중에 있었도다</div>
+        <div class="verse"><span class="verse-num">20</span> 드단은 네 상인이 되었음이여 말을 탈 때 까는 천을 너와 거래하였도다</div>
+        <div class="verse"><span class="verse-num">21</span> 아라비아와 게달의 모든 고관은 네 손아래 상인이 되어 어린 양과 숫양과 염소들, 그것으로 너와 거래하였도다</div>
+        <div class="verse"><span class="verse-num">22</span> 스바와 라아마의 상인들도 너의 상인들이 됨이여 각종 극상품 향 재료와 각종 보석과 황금으로 네 물품을 바꾸어 갔도다</div>
+        <div class="verse"><span class="verse-num">23</span> 하란과 간네와 에덴과 스바와 앗수르와 길맛의 장사꾼들도 너의 상인들이라</div>
+        <div class="verse"><span class="verse-num">24</span> 이들이 아름다운 물품 곧 청색 옷과 수 놓은 물품과 빛난 옷을 백향목 상자에 담고 노끈으로 묶어 가지고 너와 거래하여 네 물품을 바꾸어 갔도다</div>
+        <div class="verse"><span class="verse-num">25</span> 다시스의 배는 떼를 지어 네 화물을 나르니 네가 바다 중심에서 풍부하여 영화가 매우 크도다</div>
+        <div class="verse"><span class="verse-num">26</span> 네 사공이 너를 인도하여 큰 물에 이르게 함이여 동풍이 바다 한가운데에서 너를 무찔렀도다</div>
+        <div class="verse"><span class="verse-num">27</span> 네 재물과 상품과 바꾼 물건과 네 사공과 선장과 네 배의 틈을 막는 자와 네 상인과 네 가운데에 있는 모든 용사와 네 가운데에 있는 모든 무리가 네가 패망하는 날에 다 바다 한가운데에 빠질 것임이여</div>
+        <div class="verse"><span class="verse-num">28</span> 네 선장이 부르짖는 소리에 물결이 흔들리리로다</div>
+        <div class="verse"><span class="verse-num">29</span> 노를 잡은 모든 자와 사공과 바다의 선장들이 다 배에서 내려 언덕에 서서</div>
+        <div class="verse"><span class="verse-num">30</span> 너를 위하여 크게 소리 질러 통곡하고 티끌을 머리에 덮어쓰며 재 가운데에 뒹굴며</div>
+        <div class="verse"><span class="verse-num">31</span> 그들이 다 너를 위하여 머리털을 밀고 굵은 베로 띠를 띠고 마음이 아프게 슬피 통곡하리로다</div>
+        <div class="verse"><span class="verse-num">32</span> 그들이 통곡할 때에 너를 위하여 슬픈 노래를 불러 애도하여 말하기를 두로와 같이 바다 가운데에서 적막한 자 누구인고</div>
+        <div class="verse"><span class="verse-num">33</span> 네 물품을 바다로 실어 낼 때에 네가 여러 백성을 풍족하게 하였음이여 네 재물과 무역품이 많으므로 세상 왕들을 풍부하게 하였었도다</div>
+        <div class="verse"><span class="verse-num">34</span> 네가 바다 깊은 데에서 파선한 때에 네 무역품과 네 승객이 다 빠졌음이여</div>
+        <div class="verse"><span class="verse-num">35</span> 섬의 주민들이 너로 말미암아 놀라고 왕들이 심히 두려워하여 얼굴에 근심이 가득하도다</div>
+        <div class="verse"><span class="verse-num">36</span> 많은 민족의 상인들이 다 너를 비웃음이여 네가 공포의 대상이 되고 네가 영원히 다시 있지 못하리라 하셨느니라</div>
+
+        <!-- 에스겔 28장 -->
+        <div class="chapter-title">에스겔 28장 (1~26절)</div>
+        <div class="verse"><span class="verse-num">1</span> 또 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 너는 두로 왕에게 이르기를 주 여호와께서 이같이 말씀하시되 네 마음이 교만하여 말하기를 나는 신이라 내가 하나님의 자리 곧 바다 가운데에 앉아 있다 하도다 네 마음이 하나님의 마음 같은 체할지라도 너는 사람이요 신이 아니거늘</div>
+        <div class="verse"><span class="verse-num">3</span> 네가 다니엘보다 지혜로워서 은밀한 것을 깨닫지 못할 것이 없다 하고</div>
+        <div class="verse"><span class="verse-num">4</span> 네 지혜와 총명으로 재물을 얻었으며 금과 은을 곳간에 저축하였으며</div>
+        <div class="verse"><span class="verse-num">5</span> 네 큰 지혜와 네 무역으로 재물을 더하고 그 재물로 말미암아 네 마음이 교만하였도다</div>
+        <div class="verse"><span class="verse-num">6</span> 그러므로 주 여호와께서 이같이 말씀하셨느니라 네 마음이 하나님의 마음 같은 체하였으니</div>
+        <div class="verse"><span class="verse-num">7</span> 그런즉 내가 이방인 곧 여러 나라의 강포한 자를 거느리고 와서 너를 치리니 그들이 칼을 빼어 네 지혜의 아름다운 것을 치며 네 영화를 더럽히며</div>
+        <div class="verse"><span class="verse-num">8</span> 또 너를 구덩이에 빠뜨려서 너를 바다 가운데에서 죽임을 당한 자의 죽음 같이 바다 가운데에서 죽게 할지라</div>
+        <div class="verse"><span class="verse-num">9</span> 네가 너를 죽이는 자 앞에서도 내가 하나님이라고 말하겠느냐 너를 치는 자들 앞에서 사람일 뿐이요 신이 아니라</div>
+        <div class="verse"><span class="verse-num">10</span> 네가 이방인의 손에서 죽기를 할례 받지 않은 자의 죽음 같이 하리니 내가 말하였음이니라 주 여호와의 말씀이니라 하셨다 하라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">12</span> 인자야 두로 왕을 위하여 슬픈 노래를 지어 그에게 이르기를 주 여호와의 말씀에 너는 완전한 도장이었고 지혜가 충족하며 온전히 아름다웠도다</div>
+        <div class="verse"><span class="verse-num">13</span> 네가 옛적에 하나님의 동산 에덴에 있어서 각종 보석 곧 홍보석과 황보석과 금강석과 황옥과 홍마노와 창옥과 청보석과 남보석과 홍옥과 황금으로 단장하였음이여 네가 지음을 받던 날에 너를 위하여 소고와 비파가 준비되었도다</div>
+        <div class="verse"><span class="verse-num">14</span> 너는 기름 부음을 받고 지키는 그룹임이여 내가 너를 세우매 네가 하나님의 성산에 있어서 불타는 돌들 사이에 왕래하였도다</div>
+        <div class="verse"><span class="verse-num">15</span> 네가 지음을 받던 날로부터 네 모든 길에 완전하더니 마침내 네게서 불의가 드러났도다</div>
+        <div class="verse"><span class="verse-num">16</span> 네 무역이 많으므로 네 가운데에 강포가 가득하여 네가 범죄하였도다 너 지키는 그룹아 그러므로 내가 너를 더럽게 여겨 하나님의 산에서 쫓아냈고 불타는 돌들 사이에서 멸하였도다</div>
+        <div class="verse"><span class="verse-num">17</span> 네가 아름다우므로 마음이 교만하였으며 네가 영화로우므로 네 지혜를 더럽혔음이여 내가 너를 땅에 던져 왕들 앞에 두어 그들의 구경거리가 되게 하였도다</div>
+        <div class="verse"><span class="verse-num">18</span> 네가 죄악이 많고 무역이 불의하므로 네 모든 성소를 더럽혔음이여 내가 네 가운데에서 불을 내어 너를 사르게 하고 너를 보고 있는 모든 자 앞에서 너를 땅 위에 재가 되게 하였도다</div>
+        <div class="verse"><span class="verse-num">19</span> 만민 중에 너를 아는 자가 너로 말미암아 다 놀랄 것임이여 네가 공포의 대상이 되고 네가 영원히 다시 있지 못하리로다 하셨다 하라</div>
+        <div class="verse"><span class="verse-num">20</span> 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">21</span> 인자야 너는 얼굴을 시돈으로 향하고 그에게 예언하라</div>
+        <div class="verse"><span class="verse-num">22</span> 너는 이르기를 주 여호와께서 이같이 말씀하시되 시돈아 내가 너를 대적하나니 네 가운데에서 내 영광이 나타나리라 하셨다 하라 내가 그 가운데에서 심판을 행하여 내 거룩함을 나타낼 때에 무리가 나를 여호와인 줄을 알지라</div>
+        <div class="verse"><span class="verse-num">23</span> 내가 그에게 전염병을 보내며 그의 거리에 피가 흐르게 하리니 사방에서 오는 칼에 상한 자가 그 가운데에 엎드러질 것인즉 무리가 나를 여호와인 줄을 알겠고</div>
+        <div class="verse"><span class="verse-num">24</span> 이스라엘 족속에게는 그 사방에서 그들을 멸시하는 자 중에 찌르는 가시와 아프게 하는 가시가 다시는 없으리니 내가 주 여호와인 줄을 그들이 알리라</div>
+        <div class="verse"><span class="verse-num">25</span> 주 여호와께서 이같이 말씀하셨느니라 내가 여러 민족 가운데에 흩어져 있는 이스라엘 족속을 모으고 그들로 말미암아 여러 나라의 눈 앞에서 내 거룩함을 나타낼 때에 그들이 고국 땅 곧 내 종 야곱에게 준 땅에 거주할지라</div>
+        <div class="verse"><span class="verse-num">26</span> 그들이 그 가운데에 평안히 살면서 집을 건축하며 포도원을 만들고 그들의 사방에서 멸시하던 모든 자를 내가 심판할 때에 그들이 평안히 살며 내가 그 하나님 여호와인 줄을 그들이 알리라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

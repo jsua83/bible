@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 238</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 238</h1>
+        <p class="sub-title">찬송가 208장 내 주의 나라와</p>
+        <p class="sub-title">역대하 23~25장 — 용기 있는 제사장 여호야다</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 208장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1lcRDOMMrtfZlYyRyqmZJmdHWJSalFU5l" alt="찬송가 208장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 역대하 23~25장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 제사장 '여호야다의 개혁'에 대해 열왕기에서는 왕의 시위대를 중심으로, 역대기에서는 남유다 전역의 레위 사람들을 중심으로 기록합니다.</span>
+            남유다는 아합과 이세벨의 딸인 아달랴가 6년을 통치한 후, <strong>제사장 여호야다가 일으킨 혁명으로 다시 다윗의 후손으로 왕위가 이어집니다</strong>(대하 23장).
+            <div class="quote">
+                <strong>열왕기</strong> — 여호야다 제사장과 가리 사람과 <strong>왕의 시위대 중심</strong>으로 기록<br><br>
+                <strong>역대기</strong> — 여호야다 제사장과 다섯 명의 백부장, <strong>남유다 전역의 레위 사람들과 족장들</strong> 중심으로 기록
+            </div>
+            <div class="quote">
+                <strong>이는 혁명 세력들이 남유다 백성들의 전폭적인 지지를 받으며 다윗의 자손을 다시 왕위에 오르게 했다는 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 남유다의 여덟 번째 왕 요아스는 '성전 보수'를 실행함으로 '신앙 갱신 운동'을 펼칩니다.</span>
+            어린 요아스 왕이 <strong>제사장 여호야다의 도움을 받으며 예루살렘 성전 보수 계획을 세웁니다</strong>(대하 24:4~5). 요아스 왕은 성전 보수를 원활하게 진행하기 위해 <strong>세금을 내도록 합니다.</strong> 그리고 성전의 수리와 보수를 위한 세금을 걷어 <strong>전 국민이 함께하는 '국가 차원의 프로젝트'가 되게 한 것</strong>입니다.
+            <div class="quote">
+                <strong>이와 같은 요아스 왕의 월등한 추진력은 결국 예루살렘 성전을 수리하고 보수하도록 이끕니다.</strong> (대하 24:13~14)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 요아스 왕은 제사장 여호야다가 죽은 뒤로는 선지자의 경고를 듣지 않습니다.</span>
+            제사장 여호야다는 왕이 아니었음에도 불구하고 <strong>끊어질 뻔했던 다윗의 자손으로 왕위를 다시 잇게 하고 제사장 나라를 회복하게 한 공로로 왕의 묘실에 장사됩니다</strong>(대하 24:15~16).<br><br>
+            제사장 여호야다가 죽은 뒤 <strong>안타깝게도 요아스 왕은 남유다 방백들의 간언에 넘어가 우상숭배를 하기 시작합니다.</strong> 심지어 <strong>요아스 왕은 명령을 내려 하나님의 말씀을 전하는 제사장 여호야다의 아들 스가랴 선지자를 돌로 쳐 죽이기까지 합니다</strong>(대하 24:19~21).
+            <div class="quote">
+                <strong>하나님께서 아람 군대를 도구로 삼으셔서 우상숭배에 빠진 남유다를 심판하신 것입니다.</strong> 아람 군대의 침략으로 <strong>큰 부상을 입게 된 요아스는 결국 그의 신하들에게 죽임을 당합니다.</strong> 여호야다는 <strong>제사장으로서 왕의 묘실에 장사되었지만, 요아스는 왕이었음에도 불구하고 왕의 묘실에 장사되지 못합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 남유다 아홉 번째 왕 아마샤는 아버지 요아스를 죽인 신하들을 처단하되 그들의 자녀들에게는 보복하지 않습니다.</span>
+            아마샤 왕은 <strong>통치 전반기에 하나님께서 보시기에 정직하게 행하기는 했으나 온전한 마음으로 행하지는 않았다고 평가를 받습니다</strong>(대하 25:2). 아마샤는 자신의 자리가 튼튼해지자 먼저 <strong>아버지 요아스를 죽인 신하들을 처단합니다.</strong> 그러나 <strong>그들의 자녀들에게는 율법대로 보복하지 않습니다</strong>(신 24:16).<br><br>
+            이 일 후에 아마샤 왕은 에돔과의 전쟁을 앞두고 <strong>군사 30만 명과 북이스라엘의 용병 10만 명을 모집합니다.</strong> 그런데 <strong>하나님께서 아마샤 왕에게 북이스라엘의 용병을 금지시키십니다</strong>(대하 25:7~8).
+            <div class="quote">
+                <strong>이는 하나님께서는 북이스라엘과 함께 하시지 않는다는 것이고 또한 사람을 의지하지 말고 하나님만을 의지하라는 것</strong>입니다.
+            </div>
+            아마샤 왕은 하나님의 말씀에 순종하며 <strong>북이스라엘 용병 10만 명을 모두 돌려보냅니다.</strong> 그리고 <strong>아마샤 왕은 에돔과의 전쟁에서 크게 승리합니다</strong>(대하 25:11~12).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님의 도움으로 에돔과의 전쟁에서 승리한 아마샤는 그 이후 스스로 교만해져 북이스라엘과 전쟁을 합니다.</span>
+            에돔과의 전쟁에서 큰 승리를 거둔 <strong>아마샤 왕은 에돔의 우상을 가지고 돌아와 숭배합니다</strong>(대하 25:14). 아마샤 왕이 우상을 숭배하자 하나님께서 선지자를 보내시지만 <strong>아마샤는 선지자를 통한 하나님의 경고를 듣지 않습니다.</strong><br><br>
+            결국 <strong>남유다는 북이스라엘과의 전쟁에서 패하고 맙니다.</strong>
+            <div class="quote">
+                <strong>북이스라엘과의 전쟁 패배로 인해 남유다의 아마샤 왕과 백성들이 포로로 잡혀 사마리아로 끌려가고 예루살렘 성벽 일부가 파괴되며 예루살렘 성전의 보물과 왕궁의 보물도 빼앗기고 맙니다.</strong> (대하 25:22~24)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 역대하 23~25장 '용기 있는 제사장 여호야다'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 역대하 23장 -->
+        <div class="chapter-title">역대하 23장 (1~21절)</div>
+        <div class="verse"><span class="verse-num">1</span> 제칠년에 여호야다가 용기를 내어 백부장 곧 여로함의 아들 아사랴와 여호하난의 아들 이스마엘과 오벳의 아들 아사랴와 아다야의 아들 마아세야와 시그리의 아들 엘리사밧 등과 더불어 언약을 세우매</div>
+        <div class="verse"><span class="verse-num">2</span> 그들이 유다를 두루 다니며 유다 모든 고을에서 레위 사람들과 이스라엘 족장들을 모아 예루살렘에 이른지라</div>
+        <div class="verse"><span class="verse-num">3</span> 온 회중이 하나님의 전에서 왕과 언약을 세우매 여호야다가 무리에게 이르되 여호와께서 다윗의 자손에게 대하여 말씀하신 대로 왕자가 즉위하여야 할지니</div>
+        <div class="verse"><span class="verse-num">4</span> 이제 너희는 이와 같이 행하라 너희 제사장들과 레위 사람들 곧 안식일에 당번인 자들의 삼분의 일은 문을 지키고</div>
+        <div class="verse"><span class="verse-num">5</span> 삼분의 일은 왕궁에 있고 삼분의 일은 기초문에 있고 백성들은 여호와의 전 뜰에 있을지라</div>
+        <div class="verse"><span class="verse-num">6</span> 제사장들과 수종 드는 레위 사람들은 거룩한즉 여호와의 전에 들어오려니와 그 외의 다른 사람은 들어오지 못할 것이니 모든 백성은 여호와께 지켜야 할 바를 지킬지며</div>
+        <div class="verse"><span class="verse-num">7</span> 레위 사람들은 각각 손에 무기를 잡고 왕을 호위하며 다른 사람이 성전에 들어오거든 죽이고 왕이 출입할 때에 경호할지니라 하니</div>
+        <div class="verse"><span class="verse-num">8</span> 레위 사람들과 모든 유다 사람들이 제사장 여호야다가 명령한 모든 것을 준행하여 각기 수하에 안식일에 당번인 자와 안식일에 비번인 자들을 거느리고 있었으니 이는 제사장 여호야다가 비번인 자들을 보내지 아니함이더라</div>
+        <div class="verse"><span class="verse-num">9</span> 제사장 여호야다가 하나님의 전 안에 있는 다윗 왕의 창과 큰 방패와 작은 방패를 백부장들에게 주고</div>
+        <div class="verse"><span class="verse-num">10</span> 또 백성들에게 각각 손에 무기를 잡고 왕을 호위하되 성전 오른쪽에서부터 성전 왼쪽까지 제단과 성전 곁에 서게 하고</div>
+        <div class="verse"><span class="verse-num">11</span> 무리가 왕자를 인도해 내어 면류관을 씌우며 율법책을 주고 세워 왕으로 삼을새 여호야다와 그의 아들들이 그에게 기름을 붓고 이르기를 왕이여 만세수를 누리소서 하니라</div>
+        <div class="verse"><span class="verse-num">12</span> 아달랴가 백성들이 뛰며 왕을 찬송하는 소리를 듣고 여호와의 전에 들어가서 백성에게 이르러</div>
+        <div class="verse"><span class="verse-num">13</span> 보매 왕이 성전 문 기둥 곁에 섰고 지휘관들과 나팔수들이 왕의 곁에 모셔 서 있으며 그 땅의 모든 백성들이 즐거워하여 나팔을 불며 노래하는 자들은 주악하며 찬송을 인도하는지라 이에 아달랴가 그의 옷을 찢으며 외치되 반역이로다 반역이로다 하매</div>
+        <div class="verse"><span class="verse-num">14</span> 제사장 여호야다가 군대를 거느린 백부장들을 불러내어 이르되 반열 밖으로 몰아내라 그를 따르는 자는 칼로 죽이라 하니 제사장의 이 말은 여호와의 전에서는 그를 죽이지 말라 함이라</div>
+        <div class="verse"><span class="verse-num">15</span> 이에 무리가 그에게 길을 열어 주고 그가 왕궁 말문 어귀에 이를 때에 거기서 죽였더라</div>
+        <div class="verse"><span class="verse-num">16</span> 여호야다가 자기와 모든 백성과 왕 사이에 언약을 세워 여호와의 백성이 되리라 한지라</div>
+        <div class="verse"><span class="verse-num">17</span> 온 국민이 바알의 신당으로 가서 그 신당을 부수고 그의 제단들과 형상들을 깨뜨리고 그 제단 앞에서 바알의 제사장 맛단을 죽이니라</div>
+        <div class="verse"><span class="verse-num">18</span> 여호야다가 여호와의 전의 직원들을 세워 레위 제사장의 수하에 맡기니 이들은 다윗이 전에 그들의 반열을 나누어서 여호와의 전에서 모세의 율법에 기록한 대로 여호와께 번제를 드리며 다윗이 정한 규례대로 즐거이 부르고 노래하게 하였던 자들이더라</div>
+        <div class="verse"><span class="verse-num">19</span> 또 문지기를 여호와의 전 여러 문에 두어 무슨 일에든지 부정한 모든 자는 들어오지 못하게 하고</div>
+        <div class="verse"><span class="verse-num">20</span> 백부장들과 존귀한 자들과 백성의 방백들과 그 땅의 모든 백성을 거느리고 왕을 인도하여 여호와의 전에서 내려와 윗문으로부터 왕궁에 이르러 왕을 나라 보좌에 앉히매</div>
+        <div class="verse"><span class="verse-num">21</span> 그 땅의 모든 백성이 즐거워하고 성중이 평온하더라 아달랴를 무리가 칼로 죽였었더라</div>
+
+        <!-- 역대하 24장 -->
+        <div class="chapter-title">역대하 24장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 요아스가 왕위에 오를 때에 나이가 칠 세라 예루살렘에서 사십 년 동안 다스리니라 그의 어머니의 이름은 시비아요 브엘세바 사람이더라</div>
+        <div class="verse"><span class="verse-num">2</span> 제사장 여호야다가 세상에 사는 모든 날에 요아스가 여호와 보시기에 정직하게 행하였으며</div>
+        <div class="verse"><span class="verse-num">3</span> 여호야다가 그를 두 아내에게 장가들게 하였더니 자녀를 낳았더라</div>
+        <div class="verse"><span class="verse-num">4</span> 그 후에 요아스가 여호와의 전을 보수할 뜻을 두고</div>
+        <div class="verse"><span class="verse-num">5</span> 제사장들과 레위 사람들을 모으고 그들에게 이르되 너희는 유다 여러 성읍에 가서 모든 이스라엘에게 해마다 너희의 하나님의 전을 수리할 돈을 거두되 그 일을 빨리 하라 하였으나 레위 사람이 빨리 하지 아니한지라</div>
+        <div class="verse"><span class="verse-num">6</span> 왕이 대제사장 여호야다를 불러 이르되 네가 어찌하여 레위 사람들을 시켜서 여호와의 종 모세와 이스라엘의 회중이 성막을 위하여 정한 세를 유다와 예루살렘에서 거두게 하지 아니하였느냐 하니</div>
+        <div class="verse"><span class="verse-num">7</span> 이는 그 악한 여인 아달랴의 아들들이 하나님의 전을 파괴하고 또 여호와의 전의 모든 성물들을 바알들을 위하여 사용하였음이었더라</div>
+        <div class="verse"><span class="verse-num">8</span> 이에 왕이 말하여 한 궤를 만들어 여호와의 전 문 밖에 두게 하고</div>
+        <div class="verse"><span class="verse-num">9</span> 유다와 예루살렘에 공포하여 하나님의 종 모세가 광야에서 이스라엘에게 정한 세를 여호와께 드리라 하였더니</div>
+        <div class="verse"><span class="verse-num">10</span> 모든 방백들과 백성들이 기뻐하여 마치기까지 돈을 가져다가 궤에 던지니라</div>
+        <div class="verse"><span class="verse-num">11</span> 레위 사람들이 언제든지 궤를 메고 왕의 관리에게 가지고 가서 돈이 많은 것을 보이면 왕의 서기관과 대제사장에게 속한 관원이 와서 그 궤를 쏟고 다시 그 곳에 가져다 두었더라 때때로 이렇게 하여 돈을 많이 거두매</div>
+        <div class="verse"><span class="verse-num">12</span> 왕과 여호야다가 그 돈을 여호와의 전 감독자에게 주어 석수와 목수를 고용하여 여호와의 전을 보수하며 또 철공과 놋쇠공을 고용하여 여호와의 전을 수리하게 하였더니</div>
+        <div class="verse"><span class="verse-num">13</span> 기술자들이 맡아서 수리하는 공사가 점점 진척되므로 하나님의 전을 이전 모양대로 견고하게 하니라</div>
+        <div class="verse"><span class="verse-num">14</span> 공사를 마친 후에 그 남은 돈을 왕과 여호야다 앞으로 가져왔으므로 그것으로 여호와의 전에 쓸 그릇을 만들었으니 곧 섬겨 제사 드리는 그릇이며 또 숟가락과 금은 그릇들이라 여호야다가 세상에 사는 모든 날에 여호와의 전에 항상 번제를 드렸더라</div>
+        <div class="verse"><span class="verse-num">15</span> 여호야다가 나이가 많고 늙어서 죽으니 죽을 때에 백삼십 세라</div>
+        <div class="verse"><span class="verse-num">16</span> 무리가 다윗 성 여러 왕의 묘실 중에 장사하였으니 이는 그가 이스라엘과 하나님과 그의 성전에 대하여 선을 행하였음이더라</div>
+        <div class="verse"><span class="verse-num">17</span> 여호야다가 죽은 후에 유다 방백들이 와서 왕에게 절하매 왕이 그들의 말을 듣고</div>
+        <div class="verse"><span class="verse-num">18</span> 그의 조상들의 하나님 여호와의 전을 버리고 아세라 목상과 우상을 섬겼으므로 그 죄로 말미암아 진노가 유다와 예루살렘에 임하니라</div>
+        <div class="verse"><span class="verse-num">19</span> 그러나 여호와께서 그들에게 선지자를 보내사 다시 여호와에게로 돌아오게 하려 하시매 선지자들이 그들에게 경고하였으나 듣지 아니하니라</div>
+        <div class="verse"><span class="verse-num">20</span> 이에 하나님의 영이 제사장 여호야다의 아들 스가랴를 감동시키시매 그가 백성 앞에 높이 서서 그들에게 이르되 하나님이 이같이 말씀하시기를 너희가 어찌하여 여호와의 명령을 거역하여 스스로 형통하지 못하게 하느냐 하셨나니 너희가 여호와를 버렸으므로 여호와께서도 너희를 버리셨느니라 하나</div>
+        <div class="verse"><span class="verse-num">21</span> 무리가 함께 꾀하고 왕의 명령을 따라 그를 여호와의 전 뜰 안에서 돌로 쳐죽였더라</div>
+        <div class="verse"><span class="verse-num">22</span> 요아스 왕이 이와 같이 스가랴의 아버지 여호야다가 베푼 은혜를 기억하지 아니하고 그의 아들을 죽이니 그가 죽을 때에 이르되 여호와는 감찰하시고 신원하여 주옵소서 하니라</div>
+        <div class="verse"><span class="verse-num">23</span> 일 주년 말에 아람 군대가 요아스를 치려고 올라와서 유다와 예루살렘에 이르러 백성 중에서 모든 방백들을 다 죽이고 노략한 물건을 다메섹 왕에게로 보내니라</div>
+        <div class="verse"><span class="verse-num">24</span> 아람 군대가 적은 무리로 왔으나 여호와께서 심히 큰 군대를 그들의 손에 넘기셨으니 이는 유다 사람들이 그들의 조상들의 하나님 여호와를 버렸음이라 이와 같이 아람 사람들이 요아스를 징벌하였더라</div>
+        <div class="verse"><span class="verse-num">25</span> 요아스가 크게 부상하매 적군이 그를 버리고 간 후에 그의 신하들이 제사장 여호야다의 아들들의 피로 말미암아 반역하여 그를 그의 침상에서 쳐죽인지라 다윗 성에 장사하였으나 왕들의 묘실에는 장사하지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">26</span> 반역한 자들은 암몬 여인 시므앗의 아들 사밧과 모압 여인 시므릿의 아들 여호사밧이더라</div>
+        <div class="verse"><span class="verse-num">27</span> 요아스의 아들들의 사적과 요아스가 중대한 경책을 받은 것과 하나님의 전을 보수한 사적은 다 열왕기 주석에 기록되니라 그의 아들 아마샤가 대신하여 왕이 되니라</div>
+
+        <!-- 역대하 25장 -->
+        <div class="chapter-title">역대하 25장 (1~28절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아마샤가 왕위에 오를 때에 나이가 이십오 세라 예루살렘에서 이십구 년 동안 다스리니라 그의 어머니의 이름은 여호앗단이요 예루살렘 사람이더라</div>
+        <div class="verse"><span class="verse-num">2</span> 아마샤가 여호와께서 보시기에 정직하게 행하기는 하였으나 온전한 마음으로 행하지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">3</span> 그의 나라가 굳게 서매 그의 부왕을 죽인 신하들을 죽였으나</div>
+        <div class="verse"><span class="verse-num">4</span> 그들의 자녀들은 죽이지 아니하였으니 이는 모세의 율법책에 기록된 대로 함이라 곧 여호와께서 명령하여 이르시기를 자녀로 말미암아 아버지를 죽이지 말 것이요 아버지로 말미암아 자녀를 죽이지 말 것이라 오직 각 사람은 자기의 죄로 말미암아 죽을 것이니라 하셨더라</div>
+        <div class="verse"><span class="verse-num">5</span> 아마샤가 유다 사람들을 모으고 그 여러 족속을 따라 천부장들과 백부장들을 세우되 유다와 베냐민을 함께 그리하고 이십 세 이상으로 계수하여 창과 방패를 잡고 능히 전장에 나갈 만한 자 삼십만 명을 얻고</div>
+        <div class="verse"><span class="verse-num">6</span> 또 은 백 달란트로 이스라엘 나라에서 큰 용사 십만 명을 고용하였더니</div>
+        <div class="verse"><span class="verse-num">7</span> 어떤 하나님의 사람이 아마샤에게 나아와서 이르되 왕이여 이스라엘 군대를 왕과 함께 가게 하지 마옵소서 여호와께서는 이스라엘 곧 온 에브라임 자손과 함께 하지 아니하시나니</div>
+        <div class="verse"><span class="verse-num">8</span> 왕이 만일 가시거든 힘써 싸우소서 하나님이 왕을 적군 앞에 엎드러지게 하시리이다 하나님은 능히 돕기도 하시고 능히 패하게도 하시나이다 하니</div>
+        <div class="verse"><span class="verse-num">9</span> 아마샤가 하나님의 사람에게 이르되 내가 백 달란트를 이스라엘 군대에게 주었으니 어찌할까 하나님의 사람이 말하되 여호와께서 능히 이보다 많은 것을 왕에게 주실 수 있나이다 하니라</div>
+        <div class="verse"><span class="verse-num">10</span> 아마샤가 이에 에브라임에서 자기에게 온 군대를 나누어 그들의 고향으로 돌아가게 하였더니 그 무리가 유다 사람에게 심히 노하여 분연히 고향으로 돌아갔더라</div>
+        <div class="verse"><span class="verse-num">11</span> 아마샤가 담력을 내어 그의 백성을 거느리고 소금 골짜기에 이르러 세일 자손 만 명을 죽이고</div>
+        <div class="verse"><span class="verse-num">12</span> 유다 자손이 또 만 명을 사로잡아 가지고 바위 꼭대기에 올라가서 거기서 밀쳐 내려뜨려서 그들의 온 몸이 부서지게 하였더라</div>
+        <div class="verse"><span class="verse-num">13</span> 아마샤가 자기와 함께 전장에 나가지 못하게 하고 돌려보낸 군사들이 사마리아에서부터 벧호론까지 유다 성읍들을 약탈하고 사람 삼천 명을 죽이고 물건을 많이 노략하였더라</div>
+        <div class="verse"><span class="verse-num">14</span> 아마샤가 에돔 사람들을 죽이고 돌아올 때에 세일 자손의 신들을 가져와서 자기의 신으로 세우고 그것들 앞에 경배하며 분향한지라</div>
+        <div class="verse"><span class="verse-num">15</span> 그러므로 여호와께서 아마샤에게 진노하사 한 선지자를 그에게 보내시니 그가 이르되 저 백성의 신들이 그들의 백성을 왕의 손에서 능히 구원하지 못하였거늘 왕은 어찌하여 그 신들에게 구하나이까 하며</div>
+        <div class="verse"><span class="verse-num">16</span> 선지자가 아직 그에게 말할 때에 왕이 그에게 이르되 우리가 너를 왕의 모사로 삼았느냐 그치라 어찌하여 맞으려 하느냐 하니 선지자가 그치며 이르되 왕이 이 일을 행하고 나의 경고를 듣지 아니하니 하나님이 왕을 멸하시기로 작정하신 줄 아노라 하였더라</div>
+        <div class="verse"><span class="verse-num">17</span> 유다 왕 아마샤가 상의하고 예후의 손자 여호아하스의 아들 이스라엘 왕 요아스에게 사신을 보내어 이르되 오라 서로 대면하자 한지라</div>
+        <div class="verse"><span class="verse-num">18</span> 이스라엘 왕 요아스가 유다 왕 아마샤에게 사람을 보내어 이르되 레바논 가시나무가 레바논 백향목에게 전갈을 보내어 이르기를 네 딸을 내 아들에게 주어 아내로 삼게 하라 하였더니 레바논 들짐승이 지나가다가 그 가시나무를 짓밟았느니라</div>
+        <div class="verse"><span class="verse-num">19</span> 네가 에돔 사람들을 쳤다고 네 마음이 교만하여 자긍하는도다 네 궁에나 있으라 어찌하여 화를 자초하여 너와 유다가 함께 망하고자 하느냐 하나</div>
+        <div class="verse"><span class="verse-num">20</span> 아마샤가 듣지 아니하였으니 이는 하나님께로 말미암은 것이라 그들이 에돔 신들에게 구하였으므로 그 대적의 손에 넘기려 하심이더라</div>
+        <div class="verse"><span class="verse-num">21</span> 이스라엘 왕 요아스가 올라와서 유다 왕 아마샤와 더불어 유다의 벧세메스에서 대면하였더니</div>
+        <div class="verse"><span class="verse-num">22</span> 유다가 이스라엘 앞에서 패하여 각기 장막으로 도망한지라</div>
+        <div class="verse"><span class="verse-num">23</span> 이스라엘 왕 요아스가 벧세메스에서 여호아하스의 손자 요아스의 아들 유다 왕 아마샤를 사로잡고 예루살렘에 이르러 예루살렘 성벽을 에브라임 문에서부터 성 모퉁이 문까지 사백 규빗을 헐고</div>
+        <div class="verse"><span class="verse-num">24</span> 또 하나님의 전 안에서 오벧에돔이 지키는 모든 금은과 그릇과 왕궁의 재물을 빼앗고 또 사람들을 볼모로 잡아 가지고 사마리아로 돌아갔더라</div>
+        <div class="verse"><span class="verse-num">25</span> 이스라엘 왕 여호아하스의 아들 요아스가 죽은 후에도 유다 왕 요아스의 아들 아마샤가 십오 년 간 생존하였더라</div>
+        <div class="verse"><span class="verse-num">26</span> 아마샤의 이 외의 처음부터 끝까지의 행적은 유다와 이스라엘 열왕기에 기록되지 아니하였느냐</div>
+        <div class="verse"><span class="verse-num">27</span> 아마샤가 돌아서서 여호와를 버린 후로부터 예루살렘에서 무리가 그를 반역하였으므로 그가 라기스로 도망하였더니 반역한 무리가 사람을 라기스로 따라 보내어 그를 거기서 죽이게 하고</div>
+        <div class="verse"><span class="verse-num">28</span> 그의 시체를 말에 실어다가 그의 조상들과 함께 유다 성읍에 장사하였더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 무사게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

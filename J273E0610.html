@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 273</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 273</h1>
+        <p class="sub-title">찬송가 95장 나의 기쁨 나의 소망</p>
+        <p class="sub-title">에스더 6~10장 — 부림절과 모르드개</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 95장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1Gl9LtvJ_NffBEgQv64hF7td-LJbZeGNR" alt="찬송가 95장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 에스더 6~10장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 에스더의 두 번째 잔치 전날 밤 하나님께서는 아하수에로 왕에게 궁중의 역대 일기를 읽게 하십니다.</span>
+            에스더 왕후의 두 번째 잔치가 열리기 전날 밤, <strong>아하수에로 왕은 잠이 오지 않아 궁중의 역대 일기를 읽게 됩니다</strong>(에 6:1~2). <strong>자신의 목숨을 구해준 모르드개에게 지난 5년 동안이나 은혜를 갚지 않았음을 깨닫게 된 것</strong>입니다.
+            <br><br>
+            하만은 <strong>나라의 모든 백성 앞에서 높아지기를 원하는 자신의 마음을 그대로 왕 앞에 말합니다</strong>(에 6:8~9). 그런데 놀랍게도 <strong>왕이 생각하고 있던 사람은 자신이 죽이려고 치밀하게 계획 중인 모르드개</strong>였습니다.
+            <div class="quote">
+                <strong>결국 이날은 모르드개에게는 영광의 날이요 하만에게는 수치의 날이 되고 맙니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 에스더 왕후는 두 번째 잔치 절정의 순간에 왕과 하만에게 자신이 유다인임을 밝힙니다.</span>
+            드디어 <strong>에스더가 아하수에로 왕에게 그동안 준비해두었던 말을 꺼냅니다.</strong> 그 말은 바로 <strong>하만의 유다 민족 말살 계획에 대한 것</strong>으로, 이를 왕 앞에서 하만을 옆에 두고 밝힌 것입니다(에 7:3~4).
+            <br><br>
+            에스더의 요구는 다음과 같습니다.
+            <div class="quote">
+                <strong>첫째,</strong> 왕의 은혜를 입은 왕후인 <strong>자신의 생명을 구원해달라고 요청하여 먼저 왕의 마음을 잡습니다.</strong><br>
+                <strong>둘째,</strong> 자신의 유다 민족이 <strong>"죽임과 도륙함과 진멸함을 당하게 되었나이다"라는 표현으로 절대적 위기감을 강조합니다.</strong><br>
+                <strong>셋째,</strong> 자신의 민족이 살육을 당한다면 <strong>왕에게 군사적, 경제적으로 큰 손해가 있을 것을 지적합니다.</strong>
+            </div>
+            <div class="quote">
+                <strong>이렇게 에스더는 목숨을 걸고 자기 민족이 진멸 직전에 있다는 사실과 이 일을 도모한 자가 하만이라는 사실을 폭로합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 에스더는 아하수에로 왕에게 진검승부로 '유다인 진멸 조서' 철회를 부탁합니다.</span>
+            하만에 대한 배신감에 부들부들 떨던 <strong>아하수에로 왕은 하만을 나무에 달아 죽이고 나서야 겨우 마음을 진정합니다.</strong> 그런데 <strong>에스더가 다시 왕 앞에 섭니다.</strong> 이미 반포된 조서를 <strong>철회시키기 위해서</strong>였습니다.
+            <div class="quote">
+                <strong>에스더가 다시 왕 앞에 나아가서 왕이 이미 명령한 통치 조서를 취소해달라고 청원한 것은 에스더 왕후의 목숨을 건 '정치'이자 진검승부라 할 수 있습니다.</strong> (에 8:3~6) 페르시아 제국에서 <strong>왕의 조서 철회는 왕의 체면과 권세를 모두 내려놓는 일</strong>이었기 때문입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 3일 금식과 2일간의 잔치로 에스더는 왕의 새로운 조서와 왕의 준마 사용을 허락받습니다.</span>
+            에스더 왕후의 상상할 수 없는 요청에 <strong>아하수에로 왕은 조서 철회 대신 새로운 조서를 쓸 권한을 에스더에게 줍니다</strong>(에 8:8~14). 새 조서의 내용은 <strong>하만이 정한 '유다 민족 말살의 날'인 아달월 13일에 오히려 유다 민족이 자위권을 발동할 수 있도록 한 조치</strong>였습니다.
+            <div class="quote">
+                <strong>새 조서의 반포는 기적이자 반전이었고, 페르시아 제국 내에서 유다인들이 생명과 재산을 지키게 된 놀라운 조치였습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 유다인들은 하나님께서 죽음의 날을 승리의 날로 바꾸어주신 '부림절'을 가난한 이웃을 구제하는 명절로 지킵니다.</span>
+            유다인들은 아달월 13일과 14일, 그들의 대적들 <strong>75,000명을 진멸하고 그들의 재산은 취하지 않았습니다.</strong> 이때 놀라운 명절인 <strong>'부림절'이 제정됩니다.</strong>
+            <div class="quote">
+                <strong>이후 유다인들은 아달월 14일과 15일을 '부림절', 곧 잔치를 베풀고 예물을 나누며 가난한 자를 구제하는 날로 지켰습니다.</strong>
+            </div>
+            <div class="quote">
+                <strong>이날을 계기로 유다인들은 주변의 가난한 자들을 돌봄으로 제사장 나라 사명에 한 발 다가섭니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 에스더 6~10장 '부림절과 모르드개'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 에스더 6장 -->
+        <div class="chapter-title">에스더 6장 (1~14절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 날 밤에 왕이 잠이 오지 아니하므로 명령하여 역대 일기를 가져다가 자기 앞에서 읽히더니</div>
+        <div class="verse"><span class="verse-num">2</span> 그 속에 기록하기를 문을 지키던 왕의 두 내시 빅다나와 데레스가 아하수에로 왕을 암살하려는 음모를 모르드개가 고발하였다 하였는지라</div>
+        <div class="verse"><span class="verse-num">3</span> 왕이 이르되 이 일에 대하여 무슨 존귀와 관작을 모르드개에게 베풀었느냐 하니 측근 신하들이 대답하되 아무것도 베풀지 아니하였나이다 하니라</div>
+        <div class="verse"><span class="verse-num">4</span> 왕이 이르되 누가 뜰에 있느냐 하매 마침 하만이 자기가 세운 나무에 모르드개 달기를 왕께 구하고자 하여 왕궁 바깥뜰에 이른지라</div>
+        <div class="verse"><span class="verse-num">5</span> 측근 신하들이 아뢰되 하만이 뜰에 섰나이다 하니 왕이 이르되 들어오게 하라 하니</div>
+        <div class="verse"><span class="verse-num">6</span> 하만이 들어오거늘 왕이 묻되 왕이 존귀하게 하기를 원하는 사람에게 어떻게 하여야 하겠느냐 하만이 심중에 이르되 왕이 존귀하게 하기를 원하시는 자는 나 외에 누구리요 하고</div>
+        <div class="verse"><span class="verse-num">7</span> 왕께 아뢰되 왕께서 사람을 존귀하게 하시려면</div>
+        <div class="verse"><span class="verse-num">8</span> 왕께서 입으시는 왕복과 왕께서 타시는 말과 머리에 쓰시는 왕관을 가져다가</div>
+        <div class="verse"><span class="verse-num">9</span> 그 왕복과 말을 왕의 신하 중 가장 존귀한 자의 손에 맡겨서 왕이 존귀하게 하시기를 원하시는 사람에게 옷을 입히고 말을 태워서 성 중 거리로 다니며 그 앞에서 반포하여 이르기를 왕이 존귀하게 하기를 원하시는 사람에게는 이같이 할 것이라 하게 하소서 하니라</div>
+        <div class="verse"><span class="verse-num">10</span> 이에 왕이 하만에게 이르되 너는 네 말대로 속히 왕복과 말을 가져다가 대궐 문에 앉은 유다 사람 모르드개에게 행하되 무릇 네가 말한 것에서 조금도 빠짐이 없이 하라</div>
+        <div class="verse"><span class="verse-num">11</span> 하만이 왕복과 말을 가져다가 모르드개에게 옷을 입히고 말을 태워 성 중 거리로 다니며 그 앞에서 반포하되 왕이 존귀하게 하시기를 원하시는 사람에게는 이같이 할 것이라 하니라</div>
+        <div class="verse"><span class="verse-num">12</span> 모르드개는 다시 대궐 문으로 돌아오고 하만은 번뇌하여 머리를 싸고 급히 집으로 돌아가서</div>
+        <div class="verse"><span class="verse-num">13</span> 자기가 당한 모든 일을 그의 아내 세레스와 모든 친구에게 말하매 그 중 지혜로운 자와 그의 아내 세레스가 이르되 모르드개가 과연 유다 사람의 후손이면 당신이 그 앞에서 굴욕을 당하기 시작하였으니 능히 그를 이기지 못하고 분명히 그 앞에 엎드러지리이다</div>
+        <div class="verse"><span class="verse-num">14</span> 아직 말이 그치지 아니하여서 왕의 내시들이 이르러 하만을 데리고 에스더가 베푼 잔치에 빨리 나아가니라</div>
+
+        <!-- 에스더 7장 -->
+        <div class="chapter-title">에스더 7장 (1~10절)</div>
+        <div class="verse"><span class="verse-num">1</span> 왕이 하만과 함께 또 왕후 에스더의 잔치에 가니라</div>
+        <div class="verse"><span class="verse-num">2</span> 왕이 이 둘째 날 잔치에 술을 마실 때에 다시 에스더에게 물어 이르되 왕후 에스더여 그대의 소청이 무엇이냐 곧 허락하겠노라 그대의 요구가 무엇이냐 곧 나라의 절반이라 할지라도 시행하겠노라</div>
+        <div class="verse"><span class="verse-num">3</span> 왕후 에스더가 대답하여 이르되 왕이여 내가 만일 왕의 목전에서 은혜를 입었으며 왕이 좋게 여기시면 내 소청대로 내 생명을 내게 주시고 내 요구대로 내 민족을 내게 주소서</div>
+        <div class="verse"><span class="verse-num">4</span> 나와 내 민족이 팔려서 죽임과 도륙함과 진멸함을 당하게 되었나이다 만일 우리가 노비로 팔렸더라면 내가 잠잠하였으리이다 그래도 대적이 왕의 손해를 보충하지 못하였으리이다 하니</div>
+        <div class="verse"><span class="verse-num">5</span> 아하수에로 왕이 왕후 에스더에게 말하여 이르되 감히 이런 일을 심중에 품은 자가 누구며 그가 어디 있느냐 하니</div>
+        <div class="verse"><span class="verse-num">6</span> 에스더가 이르되 대적과 원수는 이 악한 하만이니이다 하니 하만이 왕과 왕후 앞에서 두려워하거늘</div>
+        <div class="verse"><span class="verse-num">7</span> 왕이 노하여 일어나서 잔치 자리를 떠나 왕궁 후원으로 들어가니라 하만이 일어서서 왕후 에스더에게 생명을 구하니 이는 왕이 자기에게 벌을 내리기로 결심한 줄 앎이더라</div>
+        <div class="verse"><span class="verse-num">8</span> 왕이 후원으로부터 잔치 자리에 돌아오니 하만이 에스더가 앉은 걸상 위에 엎드렸거늘 왕이 이르되 저가 궁중 내 앞에서 왕후를 강간까지 하고자 하는가 하니 이 말이 왕의 입에서 나오매 무리가 하만의 얼굴을 싸더라</div>
+        <div class="verse"><span class="verse-num">9</span> 왕을 모신 내시 중에 하르보나가 왕에게 아뢰되 왕을 위하여 충성된 말로 고발한 모르드개를 달고자 하여 하만이 높이가 오십 규빗 되는 나무를 준비하였는데 이제 그 나무가 하만의 집에 섰나이다 왕이 이르되 하만을 그 나무에 달라 하매</div>
+        <div class="verse"><span class="verse-num">10</span> 모르드개를 매달려고 한 나무에 하만을 다니 왕의 노가 그치니라</div>
+
+        <!-- 에스더 8장 -->
+        <div class="chapter-title">에스더 8장 (1~17절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 날 아하수에로 왕이 유다인의 대적 하만의 집을 왕후 에스더에게 주니라 에스더가 모르드개는 자기에게 어떻게 관계됨을 왕께 아뢰었으므로 모르드개가 왕 앞에 나오니</div>
+        <div class="verse"><span class="verse-num">2</span> 왕이 하만에게서 거둔 반지를 빼어 모르드개에게 준지라 에스더가 모르드개에게 하만의 집을 관리하게 하니라</div>
+        <div class="verse"><span class="verse-num">3</span> 에스더가 다시 왕 앞에서 말씀하며 왕의 발 아래 엎드려 아각 사람 하만이 유다인을 해하려 한 악한 꾀를 제거하기를 울며 구하니</div>
+        <div class="verse"><span class="verse-num">4</span> 왕이 에스더를 향하여 금 규를 내미는지라 에스더가 일어나 왕 앞에 서서</div>
+        <div class="verse"><span class="verse-num">5</span> 이르되 왕이 만일 즐거워하시며 내가 왕의 목전에 은혜를 입었고 또 왕이 이 일을 좋게 여기시며 나를 좋게 보실진대 조서를 내리사 아각 사람 함므다다의 아들 하만이 왕의 각 지방에 있는 유다인을 진멸하려고 꾀하고 쓴 조서를 철회하소서</div>
+        <div class="verse"><span class="verse-num">6</span> 내가 어찌 내 민족이 화 당함을 차마 보며 내 친척의 멸망함을 차마 보리이까 하니</div>
+        <div class="verse"><span class="verse-num">7</span> 아하수에로 왕이 왕후 에스더와 유다인 모르드개에게 이르되 하만이 유다인을 살해하려 하므로 나무에 매달렸고 내가 그 집을 에스더에게 주었으니</div>
+        <div class="verse"><span class="verse-num">8</span> 너희는 왕의 명의로 유다인에게 조서를 뜻대로 쓰고 왕의 반지로 인을 칠지어다 왕의 이름을 쓰고 왕의 반지로 인친 조서는 누구든지 철회할 수 없음이니라 하니라</div>
+        <div class="verse"><span class="verse-num">9</span> 그 때 시완월 곧 삼월 이십삼일에 왕의 서기관이 소집되고 모르드개가 시키는 대로 조서를 써서 인도로부터 구스까지의 백이십칠 지방 유다인과 대신과 지방관과 관원에게 전할새 각 지방의 문자와 각 민족의 언어와 유다인의 문자와 언어로 쓰되</div>
+        <div class="verse"><span class="verse-num">10</span> 아하수에로 왕의 명의로 쓰고 왕의 반지로 인을 치고 그 조서를 역졸들에게 부쳐 전하게 하니 그들은 왕궁에서 길러서 왕의 일에 쓰는 준마를 타는 자들이라</div>
+        <div class="verse"><span class="verse-num">11</span> 조서에는 왕이 여러 고을에 있는 유다인에게 허락하여 그들이 함께 모여 스스로 생명을 보호하여 각 지방의 백성 중 세력을 가지고 그들을 치려하는 자들과 그들의 처자를 죽이고 도륙하고 진멸하고 그 재산을 탈취하게 하되</div>
+        <div class="verse"><span class="verse-num">12</span> 아하수에로 왕의 각 지방에서 아달월 곧 십이월 십삼일 하루 동안에 하게 하였고</div>
+        <div class="verse"><span class="verse-num">13</span> 이 조서 초본을 각 지방에 전하고 각 민족에게 반포하고 유다인들에게 준비하였다가 그 날에 대적에게 원수를 갚게 한지라</div>
+        <div class="verse"><span class="verse-num">14</span> 왕의 어명이 매우 급하매 역졸이 왕의 일에 쓰는 준마를 타고 빨리 나가고 그 조서가 도성 수산에도 반포되니라</div>
+        <div class="verse"><span class="verse-num">15</span> 모르드개가 푸르고 흰 조복을 입고 큰 금관을 쓰고 자색 가는 베 겉옷을 입고 왕 앞에서 나오니 수산 성이 즐거이 부르며 기뻐하고</div>
+        <div class="verse"><span class="verse-num">16</span> 유다인에게는 영광과 즐거움과 기쁨과 존귀함이 있는지라</div>
+        <div class="verse"><span class="verse-num">17</span> 왕의 어명이 이르는 각 지방, 각 읍에서 유다인들이 즐기고 기뻐하여 잔치를 베풀고 그 날을 명절로 삼으니 본토 백성이 유다인을 두려워하여 유다인 되는 자가 많더라</div>
+
+        <!-- 에스더 9장 -->
+        <div class="chapter-title">에스더 9장 (1~32절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아달월 곧 열두째 달 십삼일은 왕의 어명을 시행하게 된 날이라 유다인의 대적들이 그들을 제거하기를 바랐더니 유다인이 도리어 자기들을 미워하는 자들을 제거하게 된 그 날에</div>
+        <div class="verse"><span class="verse-num">2</span> 유다인들이 아하수에로 왕의 각 지방, 각 읍에 모여 자기들을 해하고자 한 자를 죽이려 하니 모든 민족이 그들을 두려워하여 능히 막을 자가 없고</div>
+        <div class="verse"><span class="verse-num">3</span> 각 지방 모든 지방관과 대신들과 총독들과 왕의 사무를 보는 자들이 모르드개를 두려워하므로 다 유다인을 도우니</div>
+        <div class="verse"><span class="verse-num">4</span> 모르드개가 왕궁에서 존귀하여 점점 창대하매 이 사람 모르드개의 명성이 각 지방에 퍼지더라</div>
+        <div class="verse"><span class="verse-num">5</span> 유다인이 칼로 그 모든 대적들을 쳐서 도륙하고 진멸하고 자기를 미워하는 자에게 마음대로 행하고</div>
+        <div class="verse"><span class="verse-num">6</span> 유다인이 또 도성 수산에서 오백 명을 죽이고 진멸하고</div>
+        <div class="verse"><span class="verse-num">7</span> 또 바산다다와 달본과 아스바다와</div>
+        <div class="verse"><span class="verse-num">8</span> 보라다와 아달리야와 아리다다와</div>
+        <div class="verse"><span class="verse-num">9</span> 바마스다와 아리새와 아리대와 왜사다</div>
+        <div class="verse"><span class="verse-num">10</span> 곧 함므다다의 손자요 유다인의 대적 하만의 열 아들을 죽였으나 그들의 재산에는 손을 대지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">11</span> 그 날에 도성 수산에서 도륙한 자의 수효를 왕께 아뢰니</div>
+        <div class="verse"><span class="verse-num">12</span> 왕이 왕후 에스더에게 이르되 유다인이 도성 수산에서 이미 오백 명을 죽이고 멸하고 또 하만의 열 아들을 죽였으니 왕의 다른 지방에서는 어떠하였겠느냐 이제 그대의 소청이 무엇이냐 곧 허락하겠노라 그대의 요구가 무엇이냐 또한 시행하겠노라 하니</div>
+        <div class="verse"><span class="verse-num">13</span> 에스더가 이르되 왕이 만일 좋게 여기시면 수산에 사는 유다인들이 내일도 오늘 조서대로 행하게 하시고 하만의 열 아들의 시체를 나무에 매달게 하소서 하니</div>
+        <div class="verse"><span class="verse-num">14</span> 왕이 그대로 행하기를 허락하고 조서를 수산에 내리니 하만의 열 아들의 시체가 매달리니라</div>
+        <div class="verse"><span class="verse-num">15</span> 아달월 십사일에도 수산에 있는 유다인이 모여 또 삼백 명을 수산에서 도륙하되 그들의 재산에는 손을 대지 아니하였고</div>
+        <div class="verse"><span class="verse-num">16</span> 왕의 각 지방에 있는 다른 유다인들이 모여 스스로 생명을 보호하여 대적들에게서 벗어나며 자기들을 미워하는 자 칠만 오천 명을 도륙하되 그들의 재산에는 손을 대지 아니하였더라</div>
+        <div class="verse"><span class="verse-num">17</span> 아달월 십삼일에 그 일을 행하였고 십사일에 쉬며 그 날에 잔치를 베풀어 즐겼고</div>
+        <div class="verse"><span class="verse-num">18</span> 수산에 사는 유다인들은 십삼일과 십사일에 모였고 십오일에 쉬며 이 날에 잔치를 베풀어 즐긴지라</div>
+        <div class="verse"><span class="verse-num">19</span> 그러므로 시골의 유다인 곧 성이 없는 고을고을에 사는 자들이 아달월 십사일을 명절로 삼아 잔치를 베풀고 즐기며 서로 예물을 주더라</div>
+        <div class="verse"><span class="verse-num">20</span> 모르드개가 이 일을 기록하고 아하수에로 왕의 각 지방에 있는 모든 유다인에게 원근을 막론하고 글을 보내어 이르기를</div>
+        <div class="verse"><span class="verse-num">21</span> 한 규례를 세워 해마다 아달월 십사일과 십오일을 지키라</div>
+        <div class="verse"><span class="verse-num">22</span> 이 달 이 날에 유다인들이 대적에게서 벗어나서 평안함을 얻어 슬픔이 변하여 기쁨이 되고 애통이 변하여 길한 날이 되었으니 이 두 날을 지켜 잔치를 베풀고 즐기며 서로 예물을 주며 가난한 자를 구제하라 하매</div>
+        <div class="verse"><span class="verse-num">23</span> 유다인이 자기들이 이미 시작한 대로 또한 모르드개가 보낸 글대로 계속하여 행하였으니</div>
+        <div class="verse"><span class="verse-num">24</span> 곧 아각 사람 함므다다의 아들 모든 유다인의 대적 하만이 유다인을 진멸하기를 꾀하고 부르 곧 제비를 뽑아 그들을 죽이고 멸하려 하였으나</div>
+        <div class="verse"><span class="verse-num">25</span> 에스더가 왕 앞에 나아감으로 말미암아 왕이 조서를 내려 하만이 유다인을 해하려던 악한 꾀를 그의 머리에 돌려보내어 하만과 그의 여러 아들을 나무에 달게 하였으므로</div>
+        <div class="verse"><span class="verse-num">26</span> 무리가 부르의 이름을 따라 이 두 날을 부림이라 하고 유다인이 이 글의 모든 말과 이 일에 보고 당한 것으로 말미암아</div>
+        <div class="verse"><span class="verse-num">27</span> 뜻을 정하고 자기들과 자손과 자기들과 화합한 자들이 해마다 그 기록하고 정해 놓은 때 이 두 날을 이어서 지켜 폐하지 아니하기로 작정하고</div>
+        <div class="verse"><span class="verse-num">28</span> 각 지방, 각 읍, 각 집에서 대대로 이 두 날을 기념하여 지키되 이 부림일을 유다인 중에서 폐하지 않게 하고 그들의 후손들이 계속해서 기념하게 하였더라</div>
+        <div class="verse"><span class="verse-num">29</span> 아비하일의 딸 왕후 에스더와 유다인 모르드개가 전권으로 글을 쓰고 부림에 대한 이 둘째 편지를 굳게 지키게 하되</div>
+        <div class="verse"><span class="verse-num">30</span> 화평하고 진실한 말로 편지를 써서 아하수에로의 나라 백이십칠 지방에 있는 유다 모든 사람에게 보내어</div>
+        <div class="verse"><span class="verse-num">31</span> 정한 기간에 이 부림일을 지키게 하였으니 이는 유다인 모르드개와 왕후 에스더가 명령한 바와 유다인이 금식하며 부르짖은 것으로 말미암아 자기와 자기 자손을 위하여 정한 바가 있음이더라</div>
+        <div class="verse"><span class="verse-num">32</span> 에스더의 명령이 이 부림에 대한 일을 견고하게 하였고 그 일이 책에 기록되었더라</div>
+
+        <!-- 에스더 10장 -->
+        <div class="chapter-title">에스더 10장 (1~3절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아하수에로 왕이 그의 본토와 바다 섬들로 하여금 조공을 바치게 하였더라</div>
+        <div class="verse"><span class="verse-num">2</span> 왕의 능력 있는 모든 행적과 모르드개를 높여 존귀하게 한 사적이 메대와 바사 왕들의 일기에 기록되지 아니하였느냐</div>
+        <div class="verse"><span class="verse-num">3</span> 유다인 모르드개가 아하수에로 왕의 다음이 되고 유다인 중에 크게 존경받고 그의 허다한 형제에게 사랑을 받고 그의 백성의 이익을 도모하며 그의 모든 종족을 안위하였더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

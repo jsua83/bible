@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 276</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 276</h1>
+        <p class="sub-title">찬송가 208장 내 주의 나라와</p>
+        <p class="sub-title">느헤미야 1~3장 — 최종 목표를 위한 중간 목표</p>
+    </div>
+
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 208장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1lcRDOMMrtfZlYyRyqmZJmdHWJSalFU5l" alt="찬송가 208장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 느헤미야 1~3장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 예레미야와 느헤미야는 책 서두에 동일하게 아버지의 이름을 밝히며 글을 시작합니다.</span>
+            예레미야는 책 서두에 자신을 이렇게 소개합니다.
+            <div class="quote">
+                <strong>"베냐민 땅 아나돗의 제사장들 중 힐기야의 아들 예레미야의 말이라"</strong> (렘 1:1)
+            </div>
+            150여 년 후에 느헤미야는 책 서두에 자신을 이렇게 소개합니다.
+            <div class="quote">
+                <strong>"하가랴의 아들 느헤미야의 말이라 아닥사스다 왕 제이십년 기슬르월에 내가 수산 궁에 있는데"</strong> (느 1:1)
+            </div>
+            <div class="quote">
+                <strong>예레미야와 느헤미야의 공통점은 어릴 적부터 부모로부터 제사장 나라를 교육받았다는 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 평신도인 느헤미야의 기도는 레위기 26장을 시작으로 1,000년의 시간을 담고 있습니다.</span>
+            예루살렘의 형편에 대해 전해 들은 느헤미야는 <strong>금식하며 하늘의 하나님께 기도합니다</strong>(느 1:5~11). 다섯 문장으로 이루어진 느헤미야의 기도를 통해 <strong>느헤미야가 레위기 26장과 신명기의 모든 말씀이 그대로 이루어졌음을 인정하며 하나님께 기도한 것</strong>을 볼 수 있습니다.
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 에스더에 이어 느헤미야도 페르시아 왕과 담판을 시도합니다.</span>
+            느헤미야가 페르시아의 아닥사스다 왕에게 <strong>'파견 조서'를 요청해 조서를 받는 과정</strong>입니다(느 2:1~9).
+            <div class="quote">
+                <strong>첫째,</strong> 아닥사스다 왕의 술 관원인 느헤미야가 <strong>유대 총독으로 파견을 허락받겠다고 결심하고 그 일을 실행합니다.</strong><br>
+                <strong>둘째,</strong> 느헤미야가 왕에게 <strong>자신의 얼굴에 수심이 있는 이유를 아룁니다.</strong><br>
+                <strong>셋째,</strong> 느헤미야가 <strong>정공법으로 왕에게 예루살렘 파견을 요청합니다.</strong><br>
+                <strong>넷째,</strong> 느헤미야는 자신에게 필요한 왕의 조서를 요청하고 <strong>아닥사스다 왕은 느헤미야의 요청대로 흔쾌히 왕의 조서를 써줍니다.</strong>
+            </div>
+            아닥사스다 왕이 느헤미야에게 부여한 권한은 다음과 같습니다.
+            <div class="quote">
+                <strong>예루살렘 지역 총독의 권한</strong> / <strong>유프라테스강 서쪽 전 지역 통과 권한</strong> / <strong>왕의 창고에서 재목을 무제한 사용할 수 있는 권한</strong> / <strong>왕의 군대와 마병을 사용할 수 있는 권한</strong>
+            </div>
+            <div class="quote">
+                <strong>특히 왕의 군대와 마병 사용 권한은 말 그대로 '특권 중의 특권'이었습니다. 이는 아닥사스다 왕이 느헤미야가 권한을 남용하지 않고 사용할 것을 믿고 신뢰했기 때문에 가능한 일이었습니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 느헤미야는 황폐한 예루살렘 답사 3일 후 귀환 공동체의 지도자들에게 자신이 예루살렘에 귀환한 이유를 밝힙니다.</span>
+            느헤미야는 <strong>예루살렘 총독으로 부임한 지 3일 만에 아무에게도 말하지 않고 밤에 최소 인원만 대동하고 예루살렘 시찰을 나갑니다.</strong> 시찰 중에 <strong>예루살렘 성벽이 다 무너져 있고 성문은 불탄 채로 방치되어 있는 것을 확인합니다.</strong>
+            <br><br>
+            느헤미야는 비밀리에 시찰을 마치고 모든 상황 파악을 끝낸 후 <strong>귀환 공동체의 제사장들과 귀족들과 방백들을 모두 모이게 합니다.</strong> 모인 그들에게 <strong>예루살렘 성벽을 중건하여 더 이상 수치를 당하지 말자고 말하며 공사 계획을 발표합니다</strong>(느 2:15~18).
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 느헤미야는 예루살렘 성벽 재건을 위해 자신과 함께 땀과 눈물로 동역한 동지들의 명단을 기록으로 남깁니다.</span>
+            느헤미야 3장에는 <strong>성벽을 건축한 소중한 사람들의 이름이 나열되어 있습니다.</strong> 성벽과 성문, 골짜기 문, 성문 빗장과 자물쇠 등이 <strong>누구의 손을 거쳐 완성되었는지 기록되어 있습니다.</strong>
+            <div class="quote">
+                <strong>느헤미야는 자신의 이름 대신 그 일을 눈물과 땀으로 이루어낸 소중한 사람들의 이름을 하나하나 열거합니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 느헤미야 1~3장 '최종 목표를 위한 중간 목표'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 느헤미야 1장 -->
+        <div class="chapter-title">느헤미야 1장 (1~11절)</div>
+        <div class="verse"><span class="verse-num">1</span> 하가랴의 아들 느헤미야의 말이라 아닥사스다 왕 제이십년 기슬르월에 내가 수산 궁에 있는데</div>
+        <div class="verse"><span class="verse-num">2</span> 내 형제들 가운데 하나인 하나니가 두어 사람과 함께 유다에서 내게 이르렀기로 내가 그 사로잡힘을 면하고 남아 있는 유다와 예루살렘 사람들의 형편을 물은즉</div>
+        <div class="verse"><span class="verse-num">3</span> 그들이 내게 이르되 사로잡힘을 면하고 남아 있는 자들이 그 지방 거기에서 큰 환난을 당하고 능욕을 받으며 예루살렘 성은 허물어지고 성문들은 불탔다 하는지라</div>
+        <div class="verse"><span class="verse-num">4</span> 내가 이 말을 듣고 앉아서 울고 수일 동안 슬퍼하며 하늘의 하나님 앞에 금식하며 기도하여</div>
+        <div class="verse"><span class="verse-num">5</span> 이르되 하늘의 하나님 여호와 크고 두려우신 하나님이여 주를 사랑하고 주의 계명을 지키는 자에게 언약을 지키시며 긍휼을 베푸시는 주여 간구하나이다</div>
+        <div class="verse"><span class="verse-num">6</span> 이제 종이 주의 종들인 이스라엘 자손을 위하여 주야로 기도하오며 우리 이스라엘 자손이 주께 범죄한 죄들을 자복하오니 주는 귀를 기울이시며 눈을 여시사 종의 기도를 들으시옵소서 나와 내 아버지의 집이 범죄하여</div>
+        <div class="verse"><span class="verse-num">7</span> 주를 향하여 크게 악을 행하여 주께서 주의 종 모세에게 명령하신 계명과 율례와 규례를 지키지 아니하였나이다</div>
+        <div class="verse"><span class="verse-num">8</span> 옛적에 주께서 주의 종 모세에게 명령하여 이르시되 만일 너희가 범죄하면 내가 너희를 여러 나라 가운데에 흩을 것이요</div>
+        <div class="verse"><span class="verse-num">9</span> 만일 내게로 돌아와 내 계명을 지켜 행하면 너희 쫓긴 자가 하늘 끝에 있을지라도 내가 거기서부터 그들을 모아 내 이름을 두려고 택한 곳에 돌아오게 하리라 하신 말씀을 이제 청하건대 기억하옵소서</div>
+        <div class="verse"><span class="verse-num">10</span> 이들은 주께서 일찍이 큰 권능과 강한 손으로 구속하신 주의 종들이요 주의 백성이니이다</div>
+        <div class="verse"><span class="verse-num">11</span> 주여 구하오니 귀를 기울이사 종의 기도와 주의 이름을 경외하기를 기뻐하는 종들의 기도를 들으시고 오늘 종이 형통하여 이 사람 앞에서 은혜를 입게 하옵소서 하였나니 그 때에 내가 왕의 술 관원이 되었느니라</div>
+
+        <!-- 느헤미야 2장 -->
+        <div class="chapter-title">느헤미야 2장 (1~20절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아닥사스다 왕 제이십년 니산월에 왕 앞에 포도주가 있기로 내가 그 포도주를 왕에게 드렸는데 이전에는 내가 왕 앞에서 수심이 없었더니</div>
+        <div class="verse"><span class="verse-num">2</span> 왕이 내게 이르시되 네가 병이 없거늘 어찌하여 얼굴에 수심이 있느냐 이는 필연 네 마음에 근심이 있음이로다 하더라 그 때에 내가 크게 두려워하여</div>
+        <div class="verse"><span class="verse-num">3</span> 왕께 대답하되 왕은 만세수를 하옵소서 내 조상들의 묘실이 있는 성읍이 이제까지 황폐하고 성문이 불탔사오니 내가 어찌 얼굴에 수심이 없사오리이까 하니</div>
+        <div class="verse"><span class="verse-num">4</span> 왕이 내게 이르시되 그러면 네가 무엇을 원하느냐 하시기로 내가 곧 하늘의 하나님께 묵도하고</div>
+        <div class="verse"><span class="verse-num">5</span> 왕에게 아뢰되 왕이 만일 좋게 여기시고 종이 왕의 목전에서 은혜를 얻었사오면 나를 유다 땅 나의 조상들의 묘실이 있는 성읍에 보내어 그 성을 건축하게 하옵소서 하였는데</div>
+        <div class="verse"><span class="verse-num">6</span> 그 때에 왕후도 왕 곁에 앉아 있었더라 왕이 내게 이르시되 네가 몇 날에 다녀올 길이며 어느 때에 돌아오겠느냐 하고 왕이 나를 보내기를 좋게 여기시기로 내가 기한을 정하고</div>
+        <div class="verse"><span class="verse-num">7</span> 내가 또 왕에게 아뢰되 왕이 만일 좋게 여기시거든 강 서쪽 총독들에게 내리시는 조서를 내게 주사 그들이 나를 용납하여 유다에 들어가기까지 통과하게 하시고</div>
+        <div class="verse"><span class="verse-num">8</span> 또 왕의 삼림 감독 아삽에게 조서를 내리사 그가 성전에 속한 영문의 문과 성곽과 내가 들어갈 집을 위하여 들보로 쓸 재목을 내게 주게 하옵소서 하매 내 하나님의 선한 손이 나를 도우시므로 왕이 허락하고</div>
+        <div class="verse"><span class="verse-num">9</span> 군대 장관과 마병을 보내어 나와 함께 하게 하시기로 내가 강 서쪽에 있는 총독들에게 이르러 왕의 조서를 전하였더니</div>
+        <div class="verse"><span class="verse-num">10</span> 호론 사람 산발랏과 종이었던 암몬 사람 도비야가 이스라엘 자손을 흥왕하게 하려는 사람이 왔다 함을 듣고 심히 근심하더라</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 예루살렘에 이르러 머무른 지 사흘 만에</div>
+        <div class="verse"><span class="verse-num">12</span> 내 하나님께서 예루살렘을 위해 무엇을 할 것인지 내 마음에 주신 것을 내가 아무에게도 말하지 아니하고 밤에 일어나 몇몇 사람과 함께 나갈새 내가 탄 짐승 외에는 다른 짐승이 없더라</div>
+        <div class="verse"><span class="verse-num">13</span> 그 밤에 골짜기 문으로 나가서 용정으로 분문에 이르는 동안에 보니 예루살렘 성벽이 다 무너졌고 성문은 불탔더라</div>
+        <div class="verse"><span class="verse-num">14</span> 앞으로 나아가 샘문과 왕의 못에 이르러서는 탄 짐승이 지나갈 곳이 없는지라</div>
+        <div class="verse"><span class="verse-num">15</span> 그 밤에 시내를 따라 올라가서 성벽을 살펴본 후에 돌아서 골짜기 문으로 들어와 돌아왔으나</div>
+        <div class="verse"><span class="verse-num">16</span> 방백들은 내가 어디 갔었으며 무엇을 하였는지 알지 못하였고 나도 그 일을 유다 사람들에게나 제사장들에게나 귀족들에게나 방백들에게나 그 외에 일하는 자들에게 알리지 아니하다가</div>
+        <div class="verse"><span class="verse-num">17</span> 후에 그들에게 이르기를 우리가 당한 곤경은 너희도 보고 있는 바라 예루살렘이 황폐하고 성문이 불탔으니 자, 예루살렘 성을 건축하여 다시 수치를 당하지 말자 하고</div>
+        <div class="verse"><span class="verse-num">18</span> 또 그들에게 하나님의 선한 손이 나를 도우신 일과 왕이 내게 이른 말씀을 전하였더니 그들의 말이 일어나 건축하자 하고 모두 힘을 내어 이 선한 일을 하려 하매</div>
+        <div class="verse"><span class="verse-num">19</span> 호론 사람 산발랏과 종이었던 암몬 사람 도비야와 아라비아 사람 게셈이 이 말을 듣고 우리를 업신여기고 우리를 비웃어 이르되 너희가 하는 일이 무엇이냐 너희가 왕을 배반하고자 하느냐 하기로</div>
+        <div class="verse"><span class="verse-num">20</span> 내가 그들에게 대답하여 이르되 하늘의 하나님이 우리를 형통하게 하시리니 그의 종들인 우리가 일어나 건축하려니와 오직 너희에게는 예루살렘에서 아무 기업도 없고 권리도 없고 기억되는 바도 없다 하였느니라</div>
+
+        <!-- 느헤미야 3장 -->
+        <div class="chapter-title">느헤미야 3장 (1~32절)</div>
+        <div class="verse"><span class="verse-num">1</span> 그 때에 대제사장 엘리아십이 그의 형제 제사장들과 함께 일어나 양문을 건축하여 성별하고 문짝을 달고 또 성벽을 건축하여 함메아 망대에서부터 하나넬 망대까지 성별하였고</div>
+        <div class="verse"><span class="verse-num">2</span> 그 다음은 여리고 사람들이 건축하였고 또 그 다음은 이므리의 아들 삭굴이 건축하였으며</div>
+        <div class="verse"><span class="verse-num">3</span> 어문은 하스나아의 자손들이 건축하여 그 들보를 얹고 문짝을 달고 자물쇠와 빗장을 갖추었고</div>
+        <div class="verse"><span class="verse-num">4</span> 그 다음은 학고스의 손자 우리야의 아들 므레못이 중수하였고 그 다음은 므세사벨의 손자 베레갸의 아들 므술람이 중수하였고 그 다음은 바아나의 아들 사독이 중수하였고</div>
+        <div class="verse"><span class="verse-num">5</span> 그 다음은 드고아 사람들이 중수하였으나 그 귀족들은 그들의 주인들의 공사를 분담하지 아니하였으며</div>
+        <div class="verse"><span class="verse-num">6</span> 옛 문은 바세아의 아들 요야다와 브소드야의 아들 므술람이 중수하여 그 들보를 얹고 문짝을 달고 자물쇠와 빗장을 갖추었고</div>
+        <div class="verse"><span class="verse-num">7</span> 그 다음은 기브온 사람 믈라댜와 메로놋 사람 야돈이 강 서쪽 총독의 관할에 속한 기브온 사람들 및 미스바 사람들과 더불어 중수하였고</div>
+        <div class="verse"><span class="verse-num">8</span> 그 다음은 금장색 할해야의 아들 웃시엘 등이 중수하였고 그 다음은 향품 장사 하나냐 등이 중수하되 그들이 예루살렘의 넓은 성벽까지 하였고</div>
+        <div class="verse"><span class="verse-num">9</span> 그 다음은 예루살렘 지방의 절반을 다스리는 후르의 아들 르바야가 중수하였고</div>
+        <div class="verse"><span class="verse-num">10</span> 그 다음은 하루맙의 아들 여다야가 자기 집과 마주 대한 곳을 중수하였고 그 다음은 하삽느야의 아들 핫두스가 중수하였고</div>
+        <div class="verse"><span class="verse-num">11</span> 하림의 아들 말기야와 바핫모압의 아들 핫숩이 한 부분과 화덕 망대를 중수하였고</div>
+        <div class="verse"><span class="verse-num">12</span> 그 다음은 예루살렘 지방 절반을 다스리는 할로헤스의 아들 살룸과 그의 딸들이 중수하였고</div>
+        <div class="verse"><span class="verse-num">13</span> 골짜기 문은 하눈과 사노아 주민이 중수하여 문을 세우며 문짝을 달고 자물쇠와 빗장을 갖추고 또 분문까지 성벽 천 규빗을 중수하였고</div>
+        <div class="verse"><span class="verse-num">14</span> 분문은 벧학게렘 지방을 다스리는 레갑의 아들 말기야가 중수하여 문을 세우며 문짝을 달고 자물쇠와 빗장을 갖추었고</div>
+        <div class="verse"><span class="verse-num">15</span> 샘문은 미스바 지방을 다스리는 골호세의 아들 살룬이 중수하여 문을 세우고 덮었으며 문짝을 달고 자물쇠와 빗장을 갖추고 또 왕의 동산 근처 셀라 못 가의 성벽을 중수하여 다윗 성에서 내려오는 층계까지 이르렀고</div>
+        <div class="verse"><span class="verse-num">16</span> 그 다음은 벧술 지방 절반을 다스리는 아스북의 아들 느헤미야가 중수하여 다윗의 묘실과 마주 대한 곳에 이르고 또 파서 만든 못을 지나 용사의 집까지 이르렀고</div>
+        <div class="verse"><span class="verse-num">17</span> 그 다음은 레위 사람 바니의 아들 르훔이 중수하였고 그 다음은 그일라 지방 절반을 다스리는 하사뱌가 그 지방을 대표하여 중수하였고</div>
+        <div class="verse"><span class="verse-num">18</span> 그 다음은 그들의 형제들 가운데 그일라 지방 절반을 다스리는 헤나닷의 아들 바왜가 중수하였고</div>
+        <div class="verse"><span class="verse-num">19</span> 그 다음은 미스바를 다스리는 예수아의 아들 에셀이 한 부분을 중수하여 성 굽이에 있는 군기고 맞은편까지 이르렀고</div>
+        <div class="verse"><span class="verse-num">20</span> 그 다음은 삽배의 아들 바룩이 한 부분을 힘써 중수하여 성 굽이에서부터 대제사장 엘리아십의 집 문에 이르렀고</div>
+        <div class="verse"><span class="verse-num">21</span> 그 다음은 학고스의 손자 우리야의 아들 므레못이 한 부분을 중수하여 엘리아십의 집 문에서부터 엘리아십의 집 모퉁이에 이르렀고</div>
+        <div class="verse"><span class="verse-num">22</span> 그 다음은 평지에 사는 제사장들이 중수하였고</div>
+        <div class="verse"><span class="verse-num">23</span> 그 다음은 베냐민과 핫숩이 자기 집 맞은편 부분을 중수하였고 그 다음은 아나냐의 손자 마아세야의 아들 아사랴가 자기 집에서 가까운 부분을 중수하였고</div>
+        <div class="verse"><span class="verse-num">24</span> 그 다음은 헤나닷의 아들 빈누이가 한 부분을 중수하되 아사랴의 집에서부터 성 굽이를 지나 성 모퉁에 이르렀고</div>
+        <div class="verse"><span class="verse-num">25</span> 우새의 아들 발랄은 성 굽이 맞은편과 왕의 윗 궁에서 내민 망대 맞은편 곧 시위청에서 가까운 부분을 중수하였고 그 다음은 바로스의 아들 브다야가 중수하였고</div>
+        <div class="verse"><span class="verse-num">26</span> (그 때에 느디님 사람은 오벨에 거주하여 동쪽 수문과 마주 대한 곳에서부터 내민 망대까지 이르렀느니라)</div>
+        <div class="verse"><span class="verse-num">27</span> 그 다음은 드고아 사람들이 한 부분을 중수하여 내민 큰 망대와 마주 대한 곳에서부터 오벨 성벽까지 이르렀느니라</div>
+        <div class="verse"><span class="verse-num">28</span> 마문 위로부터는 제사장들이 각각 자기 집과 마주 대한 부분을 중수하였고</div>
+        <div class="verse"><span class="verse-num">29</span> 그 다음은 임멜의 아들 사독이 자기 집과 마주 대한 부분을 중수하였고 그 다음은 동문지기 스가냐의 아들 스마야가 중수하였고</div>
+        <div class="verse"><span class="verse-num">30</span> 그 다음은 셀레먀의 아들 하나냐와 살랍의 여섯째 아들 하눈이 한 부분을 중수하였고 그 다음은 베레갸의 아들 므술람이 자기의 방과 마주 대한 부분을 중수하였고</div>
+        <div class="verse"><span class="verse-num">31</span> 그 다음은 금장색 말기야가 함밉갓 문과 마주 대한 부분을 중수하여 느디님 사람과 상인들의 집에서부터 성 모퉁이 성루에 이르렀고</div>
+        <div class="verse"><span class="verse-num">32</span> 성 모퉁이 성루에서 양문까지는 금장색과 상인들이 중수하였느니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- -->
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

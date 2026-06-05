@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 274</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 274</h1>
+        <p class="sub-title">찬송가 36장 주 예수 이름 높이어</p>
+        <p class="sub-title">에스라 7~8장 — 에스라의 산헤드린 공회 설립</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 36장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1rgPVj5zdmqk0Ns1q2Krvy_I9ma2ZQ32E" alt="찬송가 36장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 에스라 7~8장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 율법 학자이면서 페르시아 왕의 자문 학사인 에스라는 B.C.458년, 유대인 1,754명과 함께 예루살렘으로 2차로 귀환합니다.</span>
+            1차 귀환의 지도자가 스룹바벨이었다면, <strong>2차 귀환의 지도자는 에스라</strong>입니다. 에스라는 <strong>율법 학자이자 제사장이고 페르시아 왕의 자문 학사</strong>였습니다. 에스라가 황폐한 예루살렘으로의 귀환을 결심한 이유는 다음과 같습니다.
+            <div class="quote">
+                <strong>"에스라가 여호와의 율법을 연구하여 준행하며 율례와 규례를 이스라엘에게 가르치기로 결심하였었더라"</strong> (스 7:10)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 페르시아 제국의 아닥사스다 왕은 지방화 정책 성공을 위하여 에스라를 레반트 지역에 파견합니다.</span>
+            아닥사스다 왕이 에스라를 예루살렘에 파견한 것은 크게 <strong>세 가지 이유</strong> 때문입니다(스 7:11~26).
+            <div class="quote">
+                <strong>첫째,</strong> 페르시아 제국에서 <strong>유대 지역의 정치와 종교적 형편을 살피기 위해서</strong>입니다.<br>
+                <strong>둘째,</strong> <strong>유프라테스강 서편의 사법 체계를 바로 세우기 위해서</strong>입니다.<br>
+                <strong>셋째,</strong> 바벨론에 의해 황폐된 <strong>레반트 지역의 사법 책임자로 파견</strong>한 것입니다.
+            </div>
+            <div class="quote">
+                <strong>아닥사스다 왕은 예루살렘 성전에서 일하는 사람들에게 세금을 면제하고, 유프라테스강 서편의 사법부 구성권을 에스라에게 일임하는 등 에스라 파견을 위한 조서를 내립니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 에스라는 예루살렘에 유대인들의 최고 의결 기구인 산헤드린 공회를 설립합니다.</span>
+            에스라 때에 세워진 유대인들의 자치 최고 의결 기관이 바로 <strong>70명에서 71명의 위원회로 구성된 '산헤드린 공회'</strong>입니다. 산헤드린 공회는 페르시아 제국이 에스라와 느헤미야에게 <strong>"너희 법대로 재판하라"</strong>라며 공식적으로 인정해주면서부터 시작된 것입니다(스 7:25~26).
+            <div class="quote">
+                <strong>산헤드린 공회는 페르시아 제국에서 250년 동안 계속 이어졌고 헬라 제국과 하스몬 왕조 때까지 300년을 더 유지해갔습니다. A.D.6년에는 로마에 의해 '준사법기관'으로까지 인정을 받았고, A.D.70년 맛사다 항쟁을 끝으로 막을 내립니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 에스라는 2차 귀환을 위해 레위인들을 찾았고 아하와 강가에서 금식기도로 귀환을 준비했다고 회상합니다.</span>
+            에스라는 2차 귀환자들과 바벨론에서 예루살렘으로 출발하기 전에 다음과 같이 준비합니다(스 8:1~23).
+            <div class="quote">
+                <strong>첫째,</strong> <strong>2차 귀환자의 명단을 파악합니다.</strong> 각 가문별로 귀환자 명단을 파악한 것입니다.<br>
+                <strong>둘째,</strong> <strong>2차 귀환을 앞두고 레위인들을 찾습니다.</strong> 2차 귀환자 중에는 레위인이 아예 없는 것을 발견하고 에스라가 서둘러 <strong>레위인 40여 명과 성전 일꾼들 220명을 모아 귀환자 그룹에 합류시킵니다.</strong><br>
+                <strong>셋째,</strong> <strong>아하와 강가에서 금식기도를 선포합니다.</strong> 에스라가 왕에게 보호를 요청하기보다 <strong>하나님의 도우심을 구하며 2차 귀환자들과 함께 금식하며 기도한 것</strong>입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 에스라는 1차 귀환자들처럼 2차 귀환자들과 함께 '이스라엘 열두 지파 전체'를 위해 하나님께 제사를 드립니다.</span>
+            마침내 <strong>1월 12일에 출발하여 약 4개월 후 예루살렘에 도착합니다.</strong> 마침내 예루살렘에 도착한 에스라와 2차 귀환자들은 <strong>준비한 예물을 다시 정확히 세고 예루살렘 성전에 모두 바칩니다.</strong>
+            <div class="quote">
+                <strong>그리고 성전에서 '이스라엘 열두 지파 전체'를 위해 하나님께 제사를 드립니다.</strong> (스 8:35)
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 에스라 7~8장 '에스라의 산헤드린 공회 설립'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 에스라 7장 -->
+        <div class="chapter-title">에스라 7장 (1~28절)</div>
+        <div class="verse"><span class="verse-num">1</span> 이 일 후에 바사 왕 아닥사스다가 왕위에 있을 때에 에스라라 하는 자가 있으니라 그는 스라야의 아들이요 아사랴의 손자요 힐기야의 증손이요</div>
+        <div class="verse"><span class="verse-num">2</span> 살룸의 현손이요 사독의 오대 손이요 아히둡의 육대 손이요</div>
+        <div class="verse"><span class="verse-num">3</span> 아마랴의 칠대 손이요 아사랴의 팔대 손이요 므라욧의 구대 손이요</div>
+        <div class="verse"><span class="verse-num">4</span> 스라히야의 십대 손이요 웃시엘의 십일대 손이요 북기의 십이대 손이요</div>
+        <div class="verse"><span class="verse-num">5</span> 아비수아의 십삼대 손이요 비느하스의 십사대 손이요 엘르아살의 십오대 손이요 대제사장 아론의 십육대 손이라</div>
+        <div class="verse"><span class="verse-num">6</span> 이 에스라가 바벨론에서 올라왔으니 그는 이스라엘의 하나님 여호와께서 주신 모세의 율법에 익숙한 학자로서 그의 하나님 여호와의 도우심을 입음으로 왕에게 구하는 것은 다 받는 자이더니</div>
+        <div class="verse"><span class="verse-num">7</span> 아닥사스다 왕 제칠년에 이스라엘 자손과 제사장들과 레위 사람들과 노래하는 자들과 문지기들과 느디님 사람들 중에 몇 사람이 예루살렘으로 올라올 때에</div>
+        <div class="verse"><span class="verse-num">8</span> 이 에스라가 올라왔으니 왕의 제칠년 다섯째 달이라</div>
+        <div class="verse"><span class="verse-num">9</span> 첫째 달 초하루에 바벨론에서 길을 떠났고 하나님의 선한 손의 도우심을 입어 다섯째 달 초하루에 예루살렘에 이르니라</div>
+        <div class="verse"><span class="verse-num">10</span> 에스라가 여호와의 율법을 연구하여 준행하며 율례와 규례를 이스라엘에게 가르치기로 결심하였었더라</div>
+        <div class="verse"><span class="verse-num">11</span> 여호와의 계명의 말씀과 이스라엘에게 주신 율례 학자요 학자 겸 제사장인 에스라에게 아닥사스다 왕이 내린 조서의 초본은 아래와 같으니라</div>
+        <div class="verse"><span class="verse-num">12</span> 모든 왕의 왕 아닥사스다는 하늘의 하나님의 율법에 완전한 학자 겸 제사장 에스라에게</div>
+        <div class="verse"><span class="verse-num">13</span> 조서를 내리노니 우리 나라에 있는 이스라엘 백성과 그들 제사장들과 레위 사람들 중에 예루살렘으로 올라갈 뜻이 있는 자는 누구든지 너와 함께 갈지어다</div>
+        <div class="verse"><span class="verse-num">14</span> 너는 네 손에 있는 네 하나님의 율법을 따라 유다와 예루살렘의 형편을 살피기 위하여 왕과 일곱 자문관의 보냄을 받았으니</div>
+        <div class="verse"><span class="verse-num">15</span> 왕과 자문관들이 예루살렘에 거하시는 이스라엘 하나님께 성심으로 드리는 은금을 가져가고</div>
+        <div class="verse"><span class="verse-num">16</span> 또 네가 바벨론 온 도에서 얻을 모든 은금과 및 백성과 제사장들이 예루살렘에 있는 그들의 하나님의 성전을 위하여 기쁘게 드릴 예물을 가져다가</div>
+        <div class="verse"><span class="verse-num">17</span> 그들의 돈으로 수송아지와 숫양과 어린 양과 그 소제와 그 전제의 물품을 신속히 사서 예루살렘 네 하나님의 성전 제단 위에 드리고</div>
+        <div class="verse"><span class="verse-num">18</span> 그 나머지 은금은 너와 너의 형제가 좋게 여기는 일에 너희 하나님의 뜻을 따라 쓸지며</div>
+        <div class="verse"><span class="verse-num">19</span> 네 하나님의 성전에서 섬기는 일을 위하여 네게 준 그릇은 예루살렘 하나님 앞에 드리고</div>
+        <div class="verse"><span class="verse-num">20</span> 그 외에도 네 하나님의 성전에 쓰일 것이 있어서 네가 드리고자 하거든 무엇이든지 궁중창고에서 내다가 드릴지니라</div>
+        <div class="verse"><span class="verse-num">21</span> 나 곧 아닥사스다 왕이 유브라데 강 건너편 모든 창고지기에게 조서를 내려 이르기를 하늘의 하나님의 율법 학자 겸 제사장 에스라가 무릇 너희에게 구하는 것을 신속히 시행하되</div>
+        <div class="verse"><span class="verse-num">22</span> 은은 백 달란트까지, 밀은 백 고르까지, 포도주는 백 밧까지, 기름도 백 밧까지 하고 소금은 정량 없이 하라</div>
+        <div class="verse"><span class="verse-num">23</span> 무릇 하늘의 하나님의 전을 위하여 하늘의 하나님이 명령하신 것은 삼가 행하라 어찌하여 진노가 왕과 왕자의 나라에 임하게 하랴</div>
+        <div class="verse"><span class="verse-num">24</span> 내가 너희에게 이르노니 제사장들이나 레위 사람들이나 노래하는 자들이나 문지기들이나 느디님 사람들이나 혹 하나님의 성전에서 일하는 자들에게 조공과 관세와 통행세를 받는 것이 옳지 않으니라 하였노라</div>
+        <div class="verse"><span class="verse-num">25</span> 에스라여 너는 네 손에 있는 네 하나님의 지혜를 따라 네 하나님의 율법을 아는 자를 법관과 재판관을 삼아 강 건너편 모든 백성을 재판하게 하고 그 중 알지 못하는 자는 너희가 가르치라</div>
+        <div class="verse"><span class="verse-num">26</span> 무릇 네 하나님의 명령과 왕의 명령을 준행하지 아니하는 자는 속히 그 죄를 정하여 혹 죽이거나 귀양 보내거나 가산을 몰수하거나 옥에 가둘지니라 하였더라</div>
+        <div class="verse"><span class="verse-num">27</span> 우리 조상들의 하나님 여호와를 송축할지로다 그가 왕의 마음에 예루살렘 여호와의 성전을 아름답게 할 뜻을 두시고</div>
+        <div class="verse"><span class="verse-num">28</span> 또 나로 왕과 그의 보좌관들 앞과 왕의 권세 있는 모든 방백의 앞에서 은혜를 얻게 하셨도다 내 하나님 여호와의 손이 내 위에 있으므로 내가 힘을 얻어 이스라엘 중에 우두머리들을 모아 나와 함께 올라오게 하였노라</div>
+
+        <!-- 에스라 8장 -->
+        <div class="chapter-title">에스라 8장 (1~36절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아닥사스다 왕이 왕위에 있을 때에 나와 함께 바벨론에서 올라온 족장들과 그들의 계보는 이러하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 비느하스 자손 중에서는 게르솜이요 이다말 자손 중에서는 다니엘이요 다윗 자손 중에서는 핫두스요</div>
+        <div class="verse"><span class="verse-num">3</span> 스가냐 자손 곧 바로스 자손 중에서는 스가랴니 그와 함께 족보에 기록된 남자가 백오십 명이요</div>
+        <div class="verse"><span class="verse-num">4</span> 바핫모압 자손 중에서는 스라히야의 아들 엘여호에내니 그와 함께 있는 남자가 이백 명이요</div>
+        <div class="verse"><span class="verse-num">5</span> 스가냐 자손 중에서는 야하시엘의 아들이니 그와 함께 있는 남자가 삼백 명이요</div>
+        <div class="verse"><span class="verse-num">6</span> 아딘 자손 중에서는 요나단의 아들 에벳이니 그와 함께 있는 남자가 오십 명이요</div>
+        <div class="verse"><span class="verse-num">7</span> 엘람 자손 중에서는 아달리야의 아들 여사야니 그와 함께 있는 남자가 칠십 명이요</div>
+        <div class="verse"><span class="verse-num">8</span> 스바댜 자손 중에서는 미가엘의 아들 스바댜니 그와 함께 있는 남자가 팔십 명이요</div>
+        <div class="verse"><span class="verse-num">9</span> 요압 자손 중에서는 여히엘의 아들 오바댜니 그와 함께 있는 남자가 이백십팔 명이요</div>
+        <div class="verse"><span class="verse-num">10</span> 슬로밋 자손 중에서는 요시뱌의 아들이니 그와 함께 있는 남자가 백육십 명이요</div>
+        <div class="verse"><span class="verse-num">11</span> 베배 자손 중에서는 베배의 아들 스가랴니 그와 함께 있는 남자가 이십팔 명이요</div>
+        <div class="verse"><span class="verse-num">12</span> 아스갓 자손 중에서는 학가단의 아들 요하난이니 그와 함께 있는 남자가 백십 명이요</div>
+        <div class="verse"><span class="verse-num">13</span> 아도니감 자손 중에 나중된 자의 이름은 엘리벨렛과 여우엘과 스마야니 그와 함께 있는 남자가 육십 명이요</div>
+        <div class="verse"><span class="verse-num">14</span> 비그왜 자손 중에서는 우대와 사붓이니 그와 함께 있는 남자가 칠십 명이었느니라</div>
+        <div class="verse"><span class="verse-num">15</span> 내가 무리를 아하와로 흐르는 강 가에 모으고 거기서 삼 일 동안 장막에 머물며 백성과 제사장들을 살핀즉 그 중에 레위 자손이 한 사람도 없는지라</div>
+        <div class="verse"><span class="verse-num">16</span> 이에 모든 족장 곧 엘리에셀과 아리엘과 스마야와 엘라단과 야립과 엘라단과 나단과 스가랴와 므술람을 부르고 또 명철한 사람 요야립과 엘라단을 불러</div>
+        <div class="verse"><span class="verse-num">17</span> 가시뱌 지방으로 보내어 그 곳 족장 잇도에게 나아가게 하고 잇도와 그의 형제 곧 가시뱌 지방에 사는 느디님 사람들에게 할 말을 일러 주고 우리 하나님의 성전을 위하여 섬길 자를 데리고 오라 하였더니</div>
+        <div class="verse"><span class="verse-num">18</span> 우리 하나님의 선한 손의 도우심을 입고 그들이 이스라엘의 손자 레위의 아들 말리의 자손 중에서 한 명철한 사람을 데려오고 또 세레뱌와 그의 아들들과 형제 십팔 명과</div>
+        <div class="verse"><span class="verse-num">19</span> 하사뱌와 므라리 자손 중 여사야와 그의 형제와 그의 아들들 이십 명을 데려오고</div>
+        <div class="verse"><span class="verse-num">20</span> 다윗과 방백들이 레위 사람들을 섬기라고 준 느디님 사람 중 성전 일꾼은 이백이십 명이었는데 그들은 모두 지명 받은 이들이었더라</div>
+        <div class="verse"><span class="verse-num">21</span> 그 때에 내가 아하와 강 가에서 금식을 선포하고 우리 하나님 앞에서 스스로 겸비하여 우리와 우리 어린 아이와 모든 소유를 위하여 평탄한 길을 그에게 간구하였으니</div>
+        <div class="verse"><span class="verse-num">22</span> 이는 우리가 전에 왕에게 아뢰기를 우리 하나님의 손은 자기를 찾는 모든 자에게 선을 베푸시고 자기를 배반하는 모든 자에게는 권능과 진노를 내리신다 하였으므로 길에서 적군을 막고 우리를 도울 보병과 마병을 왕에게 구하기를 부끄러워 하였음이라</div>
+        <div class="verse"><span class="verse-num">23</span> 그러므로 우리가 이를 위하여 금식하며 우리 하나님께 간구하였더니 그의 응낙하심을 입었느니라</div>
+        <div class="verse"><span class="verse-num">24</span> 그 때에 내가 제사장의 우두머리들 중 열두 명 곧 세레뱌와 하사뱌와 그의 형제 열 명을 따로 세우고</div>
+        <div class="verse"><span class="verse-num">25</span> 그들에게 왕과 모사들과 방백들과 또 그 곳에 있는 이스라엘 무리가 우리 하나님의 성전을 위하여 드린 은과 금과 그릇들을 달아서 주었으니</div>
+        <div class="verse"><span class="verse-num">26</span> 내가 달아서 그들 손에 준 것은 은이 육백오십 달란트요 은 그릇이 백 달란트요 금이 백 달란트며</div>
+        <div class="verse"><span class="verse-num">27</span> 또 금잔이 스무 개라 그 무게는 천 다릭이요 또 아름답고 빛나 금 같이 보배로운 놋 그릇이 두 개라</div>
+        <div class="verse"><span class="verse-num">28</span> 내가 그들에게 이르되 너희는 여호와께 거룩한 자요 이 그릇들도 거룩하고 그 은과 금은 너희 조상들의 하나님 여호와께 즐거이 드린 예물이니</div>
+        <div class="verse"><span class="verse-num">29</span> 너희는 예루살렘 여호와의 성전 골방에 이르러 제사장들과 레위 사람의 우두머리들과 이스라엘의 족장들 앞에서 이 그릇을 달기까지 삼가 지키라</div>
+        <div class="verse"><span class="verse-num">30</span> 이에 제사장들과 레위 사람들이 은과 금과 그릇을 예루살렘 우리 하나님의 성전으로 가져가려 하여 그 무게대로 받으니라</div>
+        <div class="verse"><span class="verse-num">31</span> 첫째 달 십이 일에 우리가 아하와 강을 떠나 예루살렘으로 갈새 우리 하나님의 손이 우리를 도우사 대적과 길에 매복한 자의 손에서 건지신지라</div>
+        <div class="verse"><span class="verse-num">32</span> 이에 예루살렘에 이르러 거기서 삼 일 간 머물고</div>
+        <div class="verse"><span class="verse-num">33</span> 제사일에 우리 하나님의 성전에서 은과 금과 그릇을 달아서 제사장 우리야의 아들 므레못의 손에 넘기니 비느하스의 아들 엘르아살과 레위 사람 예수아의 아들 요사밧과 빈누이의 아들 노아댜가 함께 있어</div>
+        <div class="verse"><span class="verse-num">34</span> 모든 것을 다 세고 달아 보고 그 무게의 총량을 그 때에 기록하였느니라</div>
+        <div class="verse"><span class="verse-num">35</span> 사로잡혔던 자의 자손 곧 이방에서 돌아온 자들이 이스라엘의 하나님께 번제를 드렸는데 이스라엘 전체를 위한 수송아지가 열두 마리요 또 숫양이 아흔여섯 마리요 어린 양이 일흔일곱 마리요 또 속죄제의 숫염소가 열두 마리니 모두 여호와께 드린 번제물이라</div>
+        <div class="verse"><span class="verse-num">36</span> 무리가 또 왕의 조서를 왕의 총독들과 유브라데 강 건너편 총독들에게 넘겨 주매 그들이 백성과 하나님의 성전을 도왔느니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

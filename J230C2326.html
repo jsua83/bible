@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 230</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 230</h1>
+        <p class="sub-title">찬송가 323장 부름 받아 나선 이 몸</p>
+        <p class="sub-title">역대상 23~26장 — 다윗 시대 직분자 계보</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 323장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1EzaUsInPprIQQkjA3ZPSmk1vVsPmgOGi" alt="찬송가 323장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 역대상 23~26장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다.</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 다윗은 레위 지파 38,000명을 모으고 성전 건축 후에 그들이 각자 해야 할 일들을 정해줍니다.</span>
+            다윗이 나이가 많아 늙자 <strong>왕위를 솔로몬에게 승계하고 성전에서 일할 레위 지파 제사장들을 '조직화'하기 위한 준비에 들어갑니다.</strong> 다윗이 모은 레위 지파 사람들은 <strong>30세 이상의 남자들로 38,000명</strong>입니다.
+            <div class="quote">
+                <strong>성전 직무자</strong> — 24,000명<br>
+                <strong>관원과 재판관</strong> — 6,000명<br>
+                <strong>성전 문지기</strong> — 4,000명<br>
+                <strong>성전 찬양대</strong> — 4,000명 (대상 23:1~5)
+            </div>
+            <div class="quote">
+                <strong>다윗이 재정비한 제사장 규례와 레위 지파 규례를 이후 솔로몬이 잘 계승하고 유지시킵니다</strong>(대하 8:14). 이 조직은 바벨론 포로기 동안 모두 와해되었다가 <strong>바벨론 포로에서 귀환한 후 에스라와 느헤미야 때에 다시 회복됩니다</strong>(느 12:1~7).
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 여호와의 성전의 일을 보살피는 자로 선택받은 레위 자손의 게르손, 그핫, 므라리 자손들은 24개 반으로 나누어 차등 없이 제비를 뽑아 순번대로 제사장 돕는 일을 감당합니다.</span>
+            다윗은 38,000명의 레위 지파 사람들 가운데 <strong>성전에서 일할 24,000명을 24개 반으로 나누어 성전에서 가장 효과적으로 일을 감당하게 합니다</strong>(대상 23:6~32).
+            <div class="quote">
+                <strong>게르손 자손</strong> — 10개 반<br>
+                <strong>그핫 자손</strong> — 9개 반 (제사 분향, 하나님 섬김, 백성들 축복하기 담당)<br>
+                <strong>므라리 자손</strong> — 5개 반
+            </div>
+            다윗의 제사장과 레위 지파 조직에서 특이한 점은 <strong>성전 봉사 연령을 30세에서 20세로 조정한 것</strong>입니다.
+            <div class="quote">
+                <strong>성전에서 봉사하는 일은 20세부터도 가능했고 무엇보다 제사장과 레위 지파 사람들의 숫자 확보를 위한 것으로도 추정됩니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 레위 지파 가운데 성전에서 찬양대를 맡은 자들도 24개 반으로 나누어 차등 없이 제비를 뽑아 순번대로 직무를 감당합니다.</span>
+            다윗은 <strong>성전의 찬양대를 3대 악사인 아삽, 헤만, 여두둔의 자손을 중심으로 24개 반으로 나누어 조직합니다</strong>(대상 25장).
+            <div class="quote">
+                <strong>아삽</strong> — 놋제금을 치는 자. 헤만의 오른편에서 일하며 <strong>시편 50편, 73~83편</strong>이 아삽의 시입니다. 바벨론 포로 귀환 후 성전 기초를 놓을 때 아삽의 후손들이 찬송했습니다(스 3:10).<br>
+                <strong>헤만</strong> — 놋제금을 치는 자입니다.<br>
+                <strong>여두둔</strong> — 왕의 선견자이기도 했으며 에단과 동일인으로 추정됩니다. <strong>시편 39편, 62편, 77편</strong>은 여두둔의 법칙에 따라 부르는 노래입니다(대하 35:15).
+            </div>
+            성전의 찬양대는 <strong>1개 반에 12명씩 24개 반 총 288명</strong>이며 이들이 성전의 찬양대 4,000명에게 찬양과 악기를 가르칩니다.
+            <div class="quote">
+                <strong>큰 자나 작은 자나 스승이나 제자를 막론하고 다 같이 제비뽑아 열두 명씩 돌아가며 직무를 맡도록 한 것입니다. 다윗은 하나님께 올려드리는 예배 찬양의 특권이 다른 모습으로 변질되지 않도록 하나님께 지혜를 구하고 조직과 제도를 만들었던 것</strong>입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 성전의 문지기도 24개 반에서 차등 없이 제비를 뽑아 직무를 맡깁니다.</span>
+            성전의 문지기를 담당한 자들도 <strong>24개 반으로 나누어 조직을 만듭니다</strong>(대상 26:1~19). 특이한 점은 <strong>성전의 문지기 24개 반 가운데 고라의 자손들이 7개 반을 담당했다는 것</strong>입니다.<br><br>
+            비록 고라는 모세 때 당을 짓고 반역했다가 죽었지만 <strong>그의 후손들은 살아남아 번성하여 성전의 문지기와 찬양대로 직무를 맡게 된 것</strong>입니다. 또한 <strong>오벧에돔의 자손들 가운데에도 많은 문지기가 배출되었습니다.</strong>
+            <div class="quote">
+                <strong>다윗은 '성전의 문지기' 또한 차등 없이 제비뽑기를 통해 직임을 감당하게 합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 다윗은 그 외에 레위 지파 사람들에게 관원과 재판관 등의 직임을 맡깁니다.</span>
+            다윗은 38,000명의 레위 지파 사람들 가운데 <strong>성전 직무자, 찬양대, 성전 문지기를 선발하고 남은 6,000명 중의 일부는 관원과 재판관 등이 되게 합니다.</strong> 그리고 제외된 레위 사람들 중 <strong>1,700명의 용사들에게는 요단 서편을, 2,700명의 용사들에게는 요단 동편을 맡깁니다.</strong>
+            <div class="quote">
+                <strong>하나님의 일은 질서와 규례대로 각자 맡은 사람들이 조화와 협력으로 동역할 때 멋지게 진행될 수 있습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 역대상 23~26장 '다윗 시대 직분자 계보'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 역대상 23장 -->
+        <div class="chapter-title">역대상 23장 (1~32절)</div>
+        <div class="verse"><span class="verse-num">1</span> 다윗이 나이가 많아 늙으매 아들 솔로몬을 이스라엘 왕으로 삼고</div>
+        <div class="verse"><span class="verse-num">2</span> 이스라엘 모든 방백과 제사장과 레위 사람을 모았더라</div>
+        <div class="verse"><span class="verse-num">3</span> 레위 사람은 삼십 세 이상으로 계수하니 모든 남자의 수가 삼만 팔천 명인데</div>
+        <div class="verse"><span class="verse-num">4</span> 그 중의 이만 사천 명은 여호와의 성전의 일을 보살피는 자요<br>육천 명은 관원과 재판관이요</div>
+        <div class="verse"><span class="verse-num">5</span> 사천 명은 문지기요 사천 명은 그가 여호와께 찬송을 드리기 위하여 만든<br>악기로 찬송하는 자들이라</div>
+        <div class="verse"><span class="verse-num">6</span> 다윗이 레위의 아들들을 게르손과 그핫과 므라리에 따라<br>각 반으로 나누었더라</div>
+        <div class="verse"><span class="verse-num">7</span> 게르손 자손은 라단과 시므이라</div>
+        <div class="verse"><span class="verse-num">8</span> 라단의 아들들은 우두머리 여히엘과 또 세담과 요엘 세 사람이요</div>
+        <div class="verse"><span class="verse-num">9</span> 시므이의 아들들은 슬로밋과 하시엘과 하란 세 사람이니<br>이는 라단의 우두머리들이며</div>
+        <div class="verse"><span class="verse-num">10</span> 또 시므이의 아들들은 야핫과 시나와 여우스와 브리아이니<br>이 네 사람도 시므이의 아들이라</div>
+        <div class="verse"><span class="verse-num">11</span> 그 우두머리는 야핫이요 그 다음은 시사며 여우스와 브리아는<br>아들이 많지 아니하므로 그들과 한 조상의 가문으로 계수되었더라</div>
+        <div class="verse"><span class="verse-num">12</span> 그핫의 아들들은 아므람과 이스할과 헤브론과 웃시엘 네 사람이라</div>
+        <div class="verse"><span class="verse-num">13</span> 아므람의 아들들은 아론과 모세이니 아론은 그 자손들과 함께 구별되어<br>몸을 성결하게 하여 영원토록 심히 거룩한 자가 되어<br>여호와 앞에 분향하고 섬기며 영원토록 그 이름으로 축복하게 되었느니라</div>
+        <div class="verse"><span class="verse-num">14</span> 하나님의 사람 모세의 아들들은 레위 지파 중에 기록되었으니</div>
+        <div class="verse"><span class="verse-num">15</span> 모세의 아들은 게르솜과 엘리에셀이라</div>
+        <div class="verse"><span class="verse-num">16</span> 게르솜의 아들중에 스브엘이 우두머리가 되었고</div>
+        <div class="verse"><span class="verse-num">17</span> 엘리에셀의 아들들은 우두머리 르하뱌라 엘리에셀에게 이 외에는<br>다른 아들이 없고 르하뱌의 아들들은 심히 많았으며</div>
+        <div class="verse"><span class="verse-num">18</span> 이스할의 아들들은 우두머리 슬로밋이요</div>
+        <div class="verse"><span class="verse-num">19</span> 헤브론의 아들들은 우두머리 여리야와 둘째 아마랴와<br>셋째 야하시엘과 넷째 여가므암이며</div>
+        <div class="verse"><span class="verse-num">20</span> 웃시엘의 아들들은 우두머리 미가와 그 다음 잇시야더라</div>
+        <div class="verse"><span class="verse-num">21</span> 므라리의 아들들은 마흘리와 무시요<br>마흘리의 아들들은 엘르아살과 기스라</div>
+        <div class="verse"><span class="verse-num">22</span> 엘르아살이 아들이 없이 죽고 딸만 있더니<br>그의 형제 기스의 아들이 그에게 장가 들었으며</div>
+        <div class="verse"><span class="verse-num">23</span> 무시의 아들들은 마흘리와 에델과 여레못 세 사람이더라</div>
+        <div class="verse"><span class="verse-num">24</span> 이는 다 레위 자손이니 그 조상의 가문을 따라 계수된 이름이 기록되고<br>여호와의 성전에서 섬기는 일을 하는 이십세 이상 된 우두머리들이라</div>
+        <div class="verse"><span class="verse-num">25</span> 다윗이 이르기를 이스라엘 하나님 여호와께서 평강을<br>그의 백성에게 주시고 예루살렘에 영원히 거하시나니</div>
+        <div class="verse"><span class="verse-num">26</span> 레위 사람이 다시는 성막과<br>그 가운데에서 쓰는 모든 기구를 멜 필요가 없다 한지라</div>
+        <div class="verse"><span class="verse-num">27</span> 다윗의 유언대로 레위 자손이 이십 세 이상으로 계수되었으니</div>
+        <div class="verse"><span class="verse-num">28</span> 그 직분은 아론의 자손을 도와 여호와의 성전과 뜰과 골방에서 섬기고<br>또 모든 성물을 정결하게 하는 일 곧 하나님의 성전에서 섬기는 일과</div>
+        <div class="verse"><span class="verse-num">29</span> 또 진설병과 고운 가루의 소제물 곧 무교전병이나 과자를 굽는 것이나<br>반죽하는 것이나 또 모든 저울과 자를 맡고</div>
+        <div class="verse"><span class="verse-num">30</span> 아침과 저녁마다 서서 여호와께 감사하고 찬송하며</div>
+        <div class="verse"><span class="verse-num">31</span> 또 안식일과 초하루와 절기에 모든 번제를 여호와께 드리되<br>그가 명령하신 규례의 정한 수효대로 항상 여호와 앞에 드리며</div>
+        <div class="verse"><span class="verse-num">32</span> 또 회막의 직무와 성소의 직무와 그들의 형제 아론 자손의 직무를 지켜<br>여호와의 성전에서 수종드는 것이더라</div>
+
+        <!-- 역대상 24장 -->
+        <div class="chapter-title">역대상 24장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아론 자손의 계열들이 이러하니라<br>아론의 아들들은 나답과 아비후와 엘르아살과 이다말이라</div>
+        <div class="verse"><span class="verse-num">2</span> 나답과 아비후가 그들의 아버지보다 먼저 죽고 그들에게 아들이 없으므로<br>엘르아살과 이다말이 제사장의 직분을 행하였더라</div>
+        <div class="verse"><span class="verse-num">3</span> 다윗이 엘르아살의 자손 사독과 이다말의 자손 아히멜렉과 더불어<br>그들을 나누어 각각 그 섬기는 직무를 맡겼는데</div>
+        <div class="verse"><span class="verse-num">4</span> 엘르아살의 자손 중에 우두머리가 이다말의 자손보다 많으므로<br>나눈 것이 이러하니 엘르아살 자손의 우두머리가 열여섯 명이요<br>이다말 자손은 그 조상들의 가문을 따라 여덟 명이라</div>
+        <div class="verse"><span class="verse-num">5</span> 이에 제비 뽑아 피차에 차등이 없이 나누었으니<br>이는 성전의 일을 다스리는 자와 하나님의 일을 다스리는 자가<br>엘르아살의 자손 중에도 있고 이다말의 자손 중에도 있음이라</div>
+        <div class="verse"><span class="verse-num">6</span> 레위 사람 느다넬의 아들 서기관 스마야가 왕과 방백과 제사장 사독과<br>아비아달의 아들 아히멜렉과 및 제사장과 레위 사람의 우두머리 앞에서<br>그 이름을 기록하여 엘르아살의 자손 중에서 한 집을 뽑고<br>이다말의 자손 중에서 한 집을 뽑았으니</div>
+        <div class="verse"><span class="verse-num">7</span> 첫째로 제비 뽑힌 자는 여호야립이요 둘째는 여다야요</div>
+        <div class="verse"><span class="verse-num">8</span> 셋째는 하림이요 넷째는 스오림이요</div>
+        <div class="verse"><span class="verse-num">9</span> 다섯째는 말기야요 여섯째는 미야민이요</div>
+        <div class="verse"><span class="verse-num">10</span> 일곱째는 학고스요 여덟째는 아비야요</div>
+        <div class="verse"><span class="verse-num">11</span> 아홉째는 예수아요 열째는 스가냐요</div>
+        <div class="verse"><span class="verse-num">12</span> 열한째는 엘리아십이요 열두째는 야김이요</div>
+        <div class="verse"><span class="verse-num">13</span> 열셋째는 훕바요 열넷째는 예세브압이요</div>
+        <div class="verse"><span class="verse-num">14</span> 열다섯째는 빌가요 열여섯째는 임멜이요</div>
+        <div class="verse"><span class="verse-num">15</span> 열일곱째는 헤실이요 열여덟째는 합비세스요</div>
+        <div class="verse"><span class="verse-num">16</span> 열아홉째는 브다히야요 스무째는 여헤스겔이요</div>
+        <div class="verse"><span class="verse-num">17</span> 스물한째는 야긴이요 스물두째는 가물이요</div>
+        <div class="verse"><span class="verse-num">18</span> 스물셋째는 들라야요 스물넷째는 마아시야라</div>
+        <div class="verse"><span class="verse-num">19</span> 이와 같은 직무에 따라 여호와의 성전에 들어가서<br>그의 아버지 아론을 도왔으니<br>이는 이스라엘의 하나님 여호와께서 명하신 규례더라</div>
+        <div class="verse"><span class="verse-num">20</span> 레위 자손 중에 남은 자는 이러하니 아므람의 아들들 중에는 수바엘이요<br>수바엘의 아들들 중에는 예드야며</div>
+        <div class="verse"><span class="verse-num">21</span> 르하뱌에게 이르러는 그의 아들들 중에 우두머리 잇시야요</div>
+        <div class="verse"><span class="verse-num">22</span> 이스할의 아들들 중에는 슬로못이요 슬로못의 아들들 중에는 야핫이요</div>
+        <div class="verse"><span class="verse-num">23</span> 헤브론의 아들들은 장자 여리야와 둘째 아마랴와 셋째 야하시엘과<br>넷째 여가므암이요</div>
+        <div class="verse"><span class="verse-num">24</span> 웃시엘의 아들들은 미가요 미가의 아들들 중에는 사밀이요</div>
+        <div class="verse"><span class="verse-num">25</span> 미가의 아우는 잇시야라 잇시야의 아들들 중에는 스가랴이며</div>
+        <div class="verse"><span class="verse-num">26</span> 므라리의 아들들은 마흘리와 무시요 야아시야의 아들들은 브노이니</div>
+        <div class="verse"><span class="verse-num">27</span> 므라리의 자손 야아시야에게서 난 자는 브노와 소함과 삭굴과 이브리요</div>
+        <div class="verse"><span class="verse-num">28</span> 마흘리의 아들 중에는 엘르아살이니 엘르아살은 아들이 없으며</div>
+        <div class="verse"><span class="verse-num">29</span> 기스에게 이르러는 그의 아들 여라므엘이요</div>
+        <div class="verse"><span class="verse-num">30</span> 무시의 아들들은 마흘리와 에델과 여리못이니<br>이는 다 그 조상의 가문에 따라 기록한 레위 자손이라</div>
+        <div class="verse"><span class="verse-num">31</span> 이 여러 사람도 다윗 왕과 사독과 아히멜렉과 제사장과<br>레위 우두머리 앞에서 그들의 형제 아론 자손처럼 제비 뽑혔으니<br>장자의 가문과 막내 동생의 가문이 다름이 없더라</div>
+
+        <!-- 역대상 25장 -->
+        <div class="chapter-title">역대상 25장 (1~31절)</div>
+        <div class="verse"><span class="verse-num">1</span> 다윗이 군대 지휘관들과 더불어 아삽과 헤만과<br>여두둔의 자손 중에서 구별하여 섬기게 하되 수금과 비파와 제금을 잡아.<br>신령한 노래를 하게 하였으니 그 직무대로 일하는 자의 수효는 이러하니라</div>
+        <div class="verse"><span class="verse-num">2</span> 아삽의 아들들은 삭굴과 요셉과 느다냐와 아사렐라니<br>이 아삽의 아들들이 아삽의 지휘 아래 왕의 명령을 따라 신령한 노래를 하며</div>
+        <div class="verse"><span class="verse-num">3</span> 여두둔에게 이르러서는 그의 아들들 그달리야와 스리와 여사야와<br>시므이와 하사뱌와 맛디디야 여섯 사람이니<br>그의 아버지 여두둔의 지휘 아래 수금을 잡아 신령한 노래를 하며<br>여호와께 감사하며 찬양하며</div>
+        <div class="verse"><span class="verse-num">4</span> 헤만에게 이르러는 그의 아들들 북기야와 맛다냐와 웃시엘과 스브엘과<br>여리못과 하나냐와 하나니와 엘리아다와 깃달디와 로맘디에셀과<br>요스브가사와 말로디와 호딜과 마하시옷이라</div>
+        <div class="verse"><span class="verse-num">5</span> 이는 다 헤만의 아들들이니 나팔을 부는 자들이며<br>헤만은 하나님의 말씀을 가진 왕의 선견자라<br>하나님이 헤만에게 열네 아들과 세 딸을 주셨더라</div>
+        <div class="verse"><span class="verse-num">6</span> 이들이 다 그들의 아버지의 지휘 아래 제금과 비파와 수금을 잡아<br>여호와의 전에서 노래하여 하나님의 전을 섬겼으며<br>아삽과 여두둔과 헤만은 왕의 지휘 아래 있었으니</div>
+        <div class="verse"><span class="verse-num">7</span> 그들과 모든 형제 곧 여호와 찬송하기를 배워<br>익숙한 자의 수효가 이백팔십팔 명이라</div>
+        <div class="verse"><span class="verse-num">8</span> 이 무리의 큰 자나 작은 자나 스승이나 제자를 막론하고<br>다같이 제비 뽑아 직임을 얻었으니</div>
+        <div class="verse"><span class="verse-num">9</span> 첫째로 제비 뽑힌 자는 아삽의 아들 중 요셉이요<br>둘째는 그달리야이니 그와 그의 형제들과 아들들 십이 명이요</div>
+        <div class="verse"><span class="verse-num">10</span> 셋째는 삭굴이니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">11</span> 넷째는 이스리이니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">12</span> 다섯째는 느다냐니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">13</span> 여섯째는 북기야니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">14</span> 일곱째는 여사렐라니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">15</span> 여덟째는 여사야니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">16</span> 아홉째는 맛다냐니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">17</span> 열째는 시므이니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">18</span> 열한째는 아사렐이니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">19</span> 열두째는 하사뱌니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">20</span> 열셋째는 수바엘이니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">21</span> 열넷째는 맛디디야니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">22</span> 열다섯째는 여레못이니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">23</span> 열여섯째는 하나냐니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">24</span> 열일곱째는 요스브가사니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">25</span> 열여덟째는 하나니니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">26</span> 열아홉째는 말로디니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">27</span> 스무째는 엘리아다니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">28</span> 스물한째는 호딜이니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">29</span> 스물두째는 깃달디니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">30</span> 스물셋째는 마하시옷이니 그의 아들들과 형제들과 십이 명이요</div>
+        <div class="verse"><span class="verse-num">31</span> 스물넷째는 로맘디에셀이니 그의 아들들과 형제들과 십이 명이었더라</div>
+
+        <!-- 역대상 26장 -->
+        <div class="chapter-title">역대상 26장 (1~32절)</div>
+        <div class="verse"><span class="verse-num">1</span> 고라 사람들의 문지기 반들은 이러하니라<br>아삽의 가문 중 고레의 아들 므셀레먀라</div>
+        <div class="verse"><span class="verse-num">2</span> 므셀레먀의 아들들인 맏아들 스가랴와 둘째 여디야엘과<br>셋째 스바댜와 넷째 야드니엘과</div>
+        <div class="verse"><span class="verse-num">3</span> 다섯째 엘람과 여섯째 여호하난과 일곱째 엘여호에내이며</div>
+        <div class="verse"><span class="verse-num">4</span> 오벧에돔의 아들들은 맏아들 스마야와 둘째 여호사밧과 셋째 요아와<br>넷째 사갈과 다섯째 느다넬과</div>
+        <div class="verse"><span class="verse-num">5</span> 여섯째 암미엘과 일곱째 잇사갈과 여덟째 브울래대이니<br>이는 하나님이 오벧에돔에게 복을 주셨음이라</div>
+        <div class="verse"><span class="verse-num">6</span> 그의 아들 스마야도 두어 아들을 낳았으니<br>그들의 조상의 가문을 다스리는 자요 큰 용사라</div>
+        <div class="verse"><span class="verse-num">7</span> 스마야의 아들들은 오드니와 르바엘과 오벳과 엘사밧이며<br>엘사밧의 형제 엘리후와 스마갸는 능력이 있는 자이니</div>
+        <div class="verse"><span class="verse-num">8</span> 이는 다 오벧에돔의 자손이라 그들과 그의 아들들과<br>그의 형제들은 다 능력이 있어 그 직무를 잘하는 자이니<br>오벧에돔에게서 난 자가 육십이 명이며</div>
+        <div class="verse"><span class="verse-num">9</span> 또 므셀레먀의 아들과 형제 열여덟 명은 능력이 있는 자라</div>
+        <div class="verse"><span class="verse-num">10</span> 므라리 자손 중 호사에게도 아들들이 있으니 그의 장자는 시므리라<br>시므리는 본래 맏아들이 아니나 그의 아버지가 장자로 삼았고</div>
+        <div class="verse"><span class="verse-num">11</span> 둘째는 힐기야요 셋째는 드발리야요 넷째는 스가랴이니<br>호사의 아들들과 형제들이 열세 명이더라</div>
+        <div class="verse"><span class="verse-num">12</span> 이상은 다 문지기의 반장으로서 그 형제처럼 직임을 얻어<br>여호와의 성전에서 섬기는 자들이라</div>
+        <div class="verse"><span class="verse-num">13</span> 각 문을 지키기 위하여 그의 조상의 가문을 따라 대소를 막론하고<br>다 제비 뽑혔으니</div>
+        <div class="verse"><span class="verse-num">14</span> 셀레먀는 동쪽을 뽑았고 그의 아들 스가랴는 명철한 모사라<br>모사를 위하여 제비 뽑으니 북쪽을 뽑았고</div>
+        <div class="verse"><span class="verse-num">15</span> 오벧에돔은 남쪽을 뽑았고 그의 아들들은 곳간에 뽑혔으며</div>
+        <div class="verse"><span class="verse-num">16</span> 숩빔과 호사는 서쪽을 뽑아 큰 길로 통한 살래겟 문 곁에 있어<br>서로 대하여 파수하였으니</div>
+        <div class="verse"><span class="verse-num">17</span> 동쪽 문에 레위 사람이 여섯이요 북쪽 문에 매일 네 사람이요<br>남쪽 문에 매일 네 사람이요 곳간에는 둘씩이며</div>
+        <div class="verse"><span class="verse-num">18</span> 서쪽 뜰에 있는 큰 길에 네 사람 그리고 뜰에 두 사람이라</div>
+        <div class="verse"><span class="verse-num">19</span> 고라와 므라리 자손의 문지기의 직책은 이러하였더라</div>
+        <div class="verse"><span class="verse-num">20</span> 레위 사람 중에 아히야는 하나님의 전 곳간과 성물 곳간을 맡았으며</div>
+        <div class="verse"><span class="verse-num">21</span> 라단의 자손은 곧 라단에게 속한 게르손 사람의 자손이니<br>게르손 사람 라단에게 속한 가문의 우두머리는 여히엘리라</div>
+        <div class="verse"><span class="verse-num">22</span> 여히엘리의 아들들은 스담과 그의 아우 요엘이니<br>여호와의 성전 곳간을 맡았고</div>
+        <div class="verse"><span class="verse-num">23</span> 아므람 자손과 이스할 자손과 헤브론 자손과 웃시엘 자손 중에</div>
+        <div class="verse"><span class="verse-num">24</span> 모세의 아들 게르솜의 자손 스브엘은 곳간을 맡았고</div>
+        <div class="verse"><span class="verse-num">25</span> 그의 형제 곧 엘리에셀에게서 난 자는 그의 아들 르하뱌와<br>그의 아들 여사야와 그의 아들 요람과 그의 아들 시그리와<br>그의 아들 슬로못이라</div>
+        <div class="verse"><span class="verse-num">26</span> 이 슬로못과 그의 형제는 성물의 모든 곳간을 맡았으니<br>곧 다윗 왕과 가문의 우두머리와 천부장과 백부장과<br>군대의 모든 지휘관이 구별하여 드린 성물이라</div>
+        <div class="verse"><span class="verse-num">27</span> 그들이 싸울 때에 노략하여 얻은 물건 중에서 구별하여 드려<br>여호와의 성전을 개수한 일과</div>
+        <div class="verse"><span class="verse-num">28</span> 선견자 사무엘과 기스의 아들 사울과 넬의 아들 아브넬과<br>스루야의 아들 요압이 무엇이든지 구별하여 드린 성물은 다 슬로못과<br>그의 형제의 지휘를 받았더라</div>
+        <div class="verse"><span class="verse-num">29</span> 이스할 자손 중에 그나냐와 그의 아들들은<br>성전 밖에서 이스라엘의 일을 다스리는 관원과 재판관이 되었고</div>
+        <div class="verse"><span class="verse-num">30</span> 헤브론 자손 중에 하사뱌와 그의 동족 용사 천칠백 명은<br>요단 서쪽에서 이스라엘을 주관하여 여호와의 모든 일과<br>왕을 섬기는 직임을 맡았으며</div>
+        <div class="verse"><span class="verse-num">31</span> 헤브론 자손 중에서는 여리야가 그의 족보와 종족대로<br>헤브론 자손의 우두머리가 되었더라<br>다윗이 왕 위에 있은 지 사십 년에 길르앗 야셀에서<br>그들 중에 구하여 큰 용사를 얻었으니</div>
+        <div class="verse"><span class="verse-num">32</span> 그의 형제 중 이천칠백 명이 다 용사요 가문의 우두머리라<br>다윗 왕이 그들로 르우벤과 갓과 므낫세 반 지파를 주관하여<br>하나님의 모든 일과 왕의 일을 다스리게 하였더라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

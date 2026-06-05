@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 250</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 250</h1>
+        <p class="sub-title">찬송가 286장 주 예수님 내 맘에 오사</p>
+        <p class="sub-title">에스겔 23~24장 — 녹슨 가마 비유</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 286장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1nfRaGMYdIIFwLMTx4m9jeyRogYvpxv33" alt="찬송가 286장 악보" class="hymn-image">
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 에스겔 23~24장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다.</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서는 오홀라와 오홀리바 두 자매 비유를 통해 이스라엘이 하나님 대신 주변 강대국들을 의지하고 우상숭배한 잘못을 말씀하십니다.</span>
+            하나님께서 에스겔 선지자를 통해 <strong>'오홀라와 오홀리바 두 자매 비유'를 말씀하십니다</strong>(겔 23장).
+            <div class="quote">
+                <strong>오홀라</strong> — 사마리아, 즉 <strong>북이스라엘</strong>을 의미합니다.<br><br>
+                <strong>오홀리바</strong> — 예루살렘, 즉 <strong>남유다</strong>를 의미합니다.
+            </div>
+            <strong>북이스라엘은 애굽에서 시작해 앗수르에 이르기까지 각종 우상숭배로 더럽혀졌고 결국 앗수르 제국에게 멸망하고 말았습니다.</strong> 남유다는 <strong>북이스라엘의 행음을 그대로 본받고 심지어 더 부패했으며 하나님 대신 주변 강대국들을 의지했고 우상을 숭배하는 죄를 지었습니다.</strong>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 하나님께서는 남유다가 먼저 멸망한 북이스라엘의 뒤를 따랐다고 말씀하십니다.</span>
+            하나님께서는 예루살렘과 사마리아의 악행을 구체적으로 밝히십니다(겔 23:36~42).
+            <div class="quote">
+                <strong>첫째,</strong> 그들은 <strong>인신제사를 비롯해 우상을 숭배했습니다.</strong><br><br>
+                <strong>둘째,</strong> 그들은 <strong>성소를 더럽히고 안식일을 범하는 죄를 지었습니다.</strong><br><br>
+                <strong>셋째,</strong> 그들은 <strong>하나님께 드리는 향과 기름을 이방 사절단을 위해 사용하는 죄를 지었습니다.</strong><br><br>
+                <strong>넷째,</strong> 그들은 <strong>이방과 교제하며 이방 풍속을 따라하는 죄를 지었습니다.</strong>
+            </div>
+            <div class="quote">
+                <strong>그러므로 북이스라엘에 이어 남유다도 하나님의 심판을 면치 못할 것입니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 하나님께서는 바벨론 제국이 예루살렘성을 3차로 침략하자 에스겔 선지자에게 '녹슨 가마 상징'을 행하게 하십니다.</span>
+            하나님께서 에스겔 선지자에게 명령하신 <strong>'녹슨 가마 상징'</strong>은 다음과 같습니다(겔 24:3~14).
+            <div class="quote">
+                <strong>첫째,</strong> 가마를 걸고 불을 피우게 하십니다. <strong>녹슨 가마는 '예루살렘'을, 가마 안의 양고기는 남유다 백성들을, 가마의 녹은 남유다 백성들이 저지른 죄를, 불은 하나님의 도구인 바벨론 제국을 의미합니다.</strong><br><br>
+                <strong>둘째,</strong> '빈 가마를 숯불 위에 놓고 <strong>더러운 녹이 녹을 때까지 불을 지피게'</strong> 하십니다.<br><br>
+                <strong>셋째,</strong> <strong>"죄악 중 가장 더러운 우상 숭배를 없애라"</strong>라고 말씀하십니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 하나님께서는 선지자들을 통해 당시 상황을 가장 빠르게 이해하게 하는 방법으로 '비유'와 '상징'을 주셨습니다.</span>
+            <div class="quote">
+                <strong>첫째, 이사야 선지자의 '벗은 몸과 벗은 발' 상징</strong> — 남유다로 하여금 <strong>애굽과 구스를 의지하지 말라는 상징</strong>이었습니다(사 20:3).<br><br>
+                <strong>둘째, 예레미야 선지자의 '줄과 멍에' 상징</strong> — 하나님의 측량은 끝났으니 <strong>이제 멍에를 메고 바벨론 포로로 가라는 상징</strong>이었습니다(렘 27:2~3).<br><br>
+                <strong>셋째, 에스겔 선지자의 '녹슨 가마' 상징</strong> — 하나님께서는 <strong>녹슨 가마와 같은 예루살렘을 소독하시고 녹슨 아브라함의 후손들을 소독하셔서 그들을 다시 제사장 나라 거룩한 시민으로 만들려고 하신 것</strong>입니다.
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 하나님께서는 에스겔 선지자에게 아내의 죽음을 울거나 슬퍼하지 말고 조용히 탄식하라고 명령하십니다.</span>
+            하나님께서는 <strong>에스겔 선지자의 아내의 죽음을 통해 남유다의 심판을 말씀하십니다</strong>(겔 24:16~18). 이는 <strong>갑작스런 예루살렘의 멸망을 상징하는 것</strong>입니다.
+            <div class="quote">
+                <strong>하나님께서 에스겔 선지자 개인에게 이와 같은 큰 아픔을 주셨던 것은 그에게 민족을 향한 하나님의 가슴 아픔을 전하시기 위함이었습니다.</strong>
+            </div>
+            에스겔 선지자는 <strong>남유다 백성들이 죄에서 돌이켜 하나님의 말씀에 순종하기를 바라며 끝까지 쉬지 않고 그들을 설득합니다.</strong>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 에스겔 23~24장 '녹슨 가마 비유'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 에스겔 23장 -->
+        <div class="chapter-title">에스겔 23장 (1~49절)</div>
+        <div class="verse"><span class="verse-num">1</span> 또 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 두 여인이 있었으니 한 어머니의 딸이라</div>
+        <div class="verse"><span class="verse-num">3</span> 그들이 애굽에서 행음하되 어렸을 때에 행음하여 그들의 유방이 눌리며 그 처녀의 가슴이 어루만져졌나니</div>
+        <div class="verse"><span class="verse-num">4</span> 그 이름이 형은 오홀라요 아우는 오홀리바라 그들이 내게 속하여 자녀를 낳았나니 그 이름으로 말하면 오홀라는 사마리아요 오홀리바는 예루살렘이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 오홀라가 내게 속하였을 때에 행음하여 그가 연애하는 자 곧 그의 이웃 앗수르 사람을 사모하였나니</div>
+        <div class="verse"><span class="verse-num">6</span> 그들은 다 자색 옷을 입은 고관과 감독이요 준수한 청년이요 말 타는 자들이라</div>
+        <div class="verse"><span class="verse-num">7</span> 그가 앗수르 사람들 가운데에 잘 생긴 그 모든 자들과 행음하고 누구를 연애하든지 그들의 모든 우상으로 자신을 더럽혔으며</div>
+        <div class="verse"><span class="verse-num">8</span> 그가 젊었을 때에 애굽 사람과 동침하매 그 처녀의 가슴이 어루만져졌으며 그의 몸에 음란을 쏟음을 당한 바 되었더니 그가 그 때부터 행음함을 마지아니하였느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 그러므로 내가 그를 그의 정든 자 곧 그가 연애하는 앗수르 사람의 손에 넘겼더니</div>
+        <div class="verse"><span class="verse-num">10</span> 그들이 그의 하체를 드러내고 그의 자녀를 빼앗으며 칼로 그를 죽여 여인들에게 이야깃거리가 되게 하였나니 이는 그들이 그에게 심판을 행함이니라</div>
+        <div class="verse"><span class="verse-num">11</span> 그 아우 오홀리바가 이것을 보고도 그의 형보다 음욕을 더하며 그의 형의 간음함보다 그 간음이 더 심하므로 그의 형보다 더 부패하여졌느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 그가 그의 이웃 앗수르 사람을 연애하였나니 그들은 화려한 의복을 입은 고관과 감독이요 말 타는 자들과 준수한 청년이었느니라</div>
+        <div class="verse"><span class="verse-num">13</span> 그 두 여인이 한 길로 행하므로 그도 더러워졌음을 내가 보았노라</div>
+        <div class="verse"><span class="verse-num">14</span> 그가 음행을 더하였음은 붉은 색으로 벽에 그린 사람의 형상 곧 갈대아 사람의 형상을 보았음이니</div>
+        <div class="verse"><span class="verse-num">15</span> 그 형상은 허리를 띠로 동이고 머리를 긴 수건으로 쌌으며 그의 용모는 다 준수한 자 곧 그의 고향 갈대아 바벨론 사람 같은 것이라</div>
+        <div class="verse"><span class="verse-num">16</span> 그가 보고 곧 사랑하게 되어 사절을 갈대아 그들에게로 보내매</div>
+        <div class="verse"><span class="verse-num">17</span> 바벨론 사람이 나아와 연애하는 침상에 올라 음행으로 그를 더럽히매 그가 더럽힘을 입은 후에 그들을 싫어하는 마음이 생겼느니라</div>
+        <div class="verse"><span class="verse-num">18</span> 그가 이같이 그의 음행을 나타내며 그가 하체를 드러내므로 내 마음이 그의 형을 싫어한 것 같이 그를 싫어하였으나</div>
+        <div class="verse"><span class="verse-num">19</span> 그가 그의 음행을 더하여 젊었을 때 곧 애굽 땅에서 행음하던 때를 생각하고</div>
+        <div class="verse"><span class="verse-num">20</span> 그의 하체는 나귀 같고 그의 정수는 말 같은 음란한 간부를 사랑하였도다</div>
+        <div class="verse"><span class="verse-num">21</span> 네가 젊었을 때에 행음하여 애굽 사람에게 네 가슴과 유방이 어루만져졌던 것을 아직도 생각하도다</div>
+        <div class="verse"><span class="verse-num">22</span> 그러므로 오홀리바야 주 여호와께서 이같이 말씀하셨느니라 나는 네가 사랑하다가 싫어하던 자들을 충동하여 그들이 사방에서 와서 너를 치게 하리니</div>
+        <div class="verse"><span class="verse-num">23</span> 그들은 바벨론 사람과 갈대아 모든 무리 브곳과 소아와 고아 사람과 또 그와 함께 한 모든 앗수르 사람 곧 준수한 청년이며 다 고관과 감독이며 귀인과 유명한 자요 다 말 타는 자들이라</div>
+        <div class="verse"><span class="verse-num">24</span> 그들이 무기와 병거와 수레와 크고 작은 방패를 이끌고 투구 쓴 군대를 거느리고 치러 와서 너를 에워싸리라 내가 재판을 그들에게 맡긴즉 그들이 그들의 법대로 너를 재판하리라</div>
+        <div class="verse"><span class="verse-num">25</span> 내가 너를 향하여 질투하리니 그들이 분내어 네 코와 귀를 깎아 버리고 남은 자를 칼로 엎드러뜨리며 네 자녀를 빼앗고 그 남은 자를 불에 사르며</div>
+        <div class="verse"><span class="verse-num">26</span> 또 네 옷을 벗기며 네 장식품을 빼앗을지라</div>
+        <div class="verse"><span class="verse-num">27</span> 이와 같이 내가 네 음란과 애굽 땅에서부터 행음하던 것을 그치게 하여 너로 그들을 향하여 눈을 들지도 못하게 하며 다시는 애굽을 기억하지도 못하게 하리라</div>
+        <div class="verse"><span class="verse-num">28</span> 주 여호와께서 이같이 말씀하셨느니라 나는 네가 미워하는 자와 네 마음에 싫어하는 자의 손에 너를 붙이리니</div>
+        <div class="verse"><span class="verse-num">29</span> 그들이 미워하는 마음으로 네게 행하여 네 모든 수고한 것을 빼앗고 너를 벌거벗은 몸으로 두어서 네 음행의 벗은 몸 곧 네 음란하며 행음하던 것을 드러낼 것이라</div>
+        <div class="verse"><span class="verse-num">30</span> 네가 이같이 당할 것은 네가 음란하게 이방을 따르고 그 우상들로 더럽혔기 때문이로다</div>
+        <div class="verse"><span class="verse-num">31</span> 네가 네 형의 길로 행하였은즉 내가 그의 잔을 네 손에 주리라</div>
+        <div class="verse"><span class="verse-num">32</span> 주 여호와께서 이같이 말씀하셨느니라 깊고 크고 가득히 담긴 네 형의 잔을 네가 마시고 코웃음과 조롱을 당하리라</div>
+        <div class="verse"><span class="verse-num">33</span> 네가 네 형 사마리아의 잔 곧 놀람과 패망의 잔에 넘치게 취하고 근심할지라</div>
+        <div class="verse"><span class="verse-num">34</span> 네가 그 잔을 다 기울여 마시고 그 깨어진 조각을 씹으며 네 유방을 꼬집을 것은 내가 이렇게 말하였음이라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">35</span> 그러므로 주 여호와께서 이같이 말씀하셨느니라 네가 나를 잊었고 또 나를 네 등 뒤에 버렸은즉 너는 네 음란과 네 음행의 죄를 담당할지니라 하시니라</div>
+        <div class="verse"><span class="verse-num">36</span> 여호와께서 또 내게 이르시되 인자야 네가 오홀라와 오홀리바를 심판하려느냐 그러면 그 가증한 일을 그들에게 말하라</div>
+        <div class="verse"><span class="verse-num">37</span> 그들이 행음하였으며 피를 손에 묻혔으며 또 그 우상과 행음하며 내게 낳아 준 자식들을 우상을 위하여 화제로 살랐으며</div>
+        <div class="verse"><span class="verse-num">38</span> 이 외에도 그들이 내게 행한 것이 있나니 당일에 내 성소를 더럽히며 내 안식일을 범하였도다</div>
+        <div class="verse"><span class="verse-num">39</span> 그들이 자녀를 죽여 그 우상에게 드린 그 날에 내 성소에 들어와서 더럽혔으되 그들이 내 성전 가운데에서 그렇게 행하였으며</div>
+        <div class="verse"><span class="verse-num">40</span> 또 사절을 먼 곳에 보내 사람을 불러오게 하고 그들이 오매 그들을 위하여 목욕하며 눈썹을 그리며 스스로 단장하고</div>
+        <div class="verse"><span class="verse-num">41</span> 화려한 자리에 앉아 앞에 상을 차리고 내 향과 기름을 그 위에 놓고</div>
+        <div class="verse"><span class="verse-num">42</span> 그 무리와 편히 지껄이고 즐겼으며 또 광야에서 잡류와 술 취한 사람을 청하여 오매 그들이 팔찌를 그 손목에 끼우고 아름다운 관을 그 머리에 씌웠도다</div>
+        <div class="verse"><span class="verse-num">43</span> 내가 음행으로 쇠한 여인을 가리켜 말하노라 그가 그래도 그들과 피차 행음하는도다</div>
+        <div class="verse"><span class="verse-num">44</span> 그들이 그에게 나오기를 기생에게 나옴 같이 음란한 여인 오홀라와 오홀리바에게 나왔은즉</div>
+        <div class="verse"><span class="verse-num">45</span> 의인이 간통한 여자들을 재판함 같이 재판하며 피를 흘린 여인을 재판함 같이 재판하리니 그들은 간통한 여자들이요 또 피가 그 손에 묻었음이라</div>
+        <div class="verse"><span class="verse-num">46</span> 주 여호와께서 이같이 말씀하셨느니라 그들에게 무리를 올려 보내 그들이 공포와 약탈을 당하게 하라</div>
+        <div class="verse"><span class="verse-num">47</span> 무리가 그들을 돌로 치며 칼로 죽이고 그 자녀도 죽이며 그 집들을 불사르리라</div>
+        <div class="verse"><span class="verse-num">48</span> 이같이 내가 이 땅에서 음란을 그치게 한즉 모든 여인이 정신이 깨어 너희 음행을 본받지 아니하리라</div>
+        <div class="verse"><span class="verse-num">49</span> 그들이 너희 음란으로 너희에게 보응한즉 너희가 모든 우상을 위하던 죄를 담당할지라 내가 주 여호와인 줄을 너희가 알리라 하시니라</div>
+
+        <!-- 에스겔 24장 -->
+        <div class="chapter-title">에스겔 24장 (1~27절)</div>
+        <div class="verse"><span class="verse-num">1</span> 아홉째 해 열째 달 열째 날에 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 인자야 너는 날짜 곧 오늘의 이름을 기록하라 바벨론 왕이 오늘 예루살렘에 가까이 왔느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 너는 이 반역하는 족속에게 비유를 베풀어 이르기를 주 여호와께서 이같이 말씀하시기를 가마 하나를 걸라</div>
+        <div class="verse"><span class="verse-num">4</span> 건 후에 물을 붓고 양 떼에서 한 마리를 골라 각을 뜨고 그 넓적다리와 어깨 고기의 모든 좋은 덩이를 그 가운데에 모아 넣으며 고른 뼈를 가득히 담고 그 뼈를 위하여 가마 밑에 나무를 쌓아 넣고 잘 삶되 가마 속의 뼈가 무르도록 삶을지어다</div>
+        <div class="verse"><span class="verse-num">5</span> (4절에 포함)</div>
+        <div class="verse"><span class="verse-num">6</span> 그러므로 주 여호와께서 이같이 말씀하셨느니라 피를 흘린 성읍, 녹슨 가마 곧 그 속의 녹을 없이하지 아니한 가마여 화 있을진저 제비 뽑을 것도 없이 그 덩이를 하나하나 꺼낼지어다</div>
+        <div class="verse"><span class="verse-num">7</span> 그 피가 그 가운데에 있음이여 피를 땅에 쏟아 티끌이 덮이게 하지 않고 맨 바위 위에 두었도다</div>
+        <div class="verse"><span class="verse-num">8</span> 내가 그 피를 맨 바위 위에 두고 덮이지 아니하게 함은 분노를 나타내어 보응하려 함이로라</div>
+        <div class="verse"><span class="verse-num">9</span> 그러므로 주 여호와께서 이같이 말씀하셨느니라 화 있을진저 피를 흘린 성읍이여 내가 또 나무 무더기를 크게 하리라</div>
+        <div class="verse"><span class="verse-num">10</span> 나무를 많이 쌓고 불을 피워 그 고기를 삶아 녹이고 국물을 졸이고 그 뼈를 태우고</div>
+        <div class="verse"><span class="verse-num">11</span> 가마가 빈 후에는 숯불 위에 놓아 뜨겁게 하며 그 가마의 놋을 달궈서 그 속에 더러운 것을 녹게 하며 녹이 소멸되게 하라</div>
+        <div class="verse"><span class="verse-num">12</span> 이 성읍이 수고하므로 스스로 피곤하나 많은 녹이 그 속에서 벗겨지지 아니하며 불에서도 없어지지 아니하는도다</div>
+        <div class="verse"><span class="verse-num">13</span> 너의 더러운 것들 중에 음란이 그 하나이니라 내가 너를 깨끗하게 하나 네가 깨끗하여지지 아니하니 내가 네게 향한 분노를 풀기 전에는 네 더러움이 다시 깨끗하여지지 아니하리라</div>
+        <div class="verse"><span class="verse-num">14</span> 나 여호와가 말하였은즉 그 일이 이루어질지라 내가 돌이키지도 아니하고 아끼지도 아니하며 뉘우치지도 아니하고 행하리니 그들이 네 모든 행위대로 너를 재판하리라 주 여호와의 말씀이니라</div>
+        <div class="verse"><span class="verse-num">15</span> 여호와의 말씀이 또 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">16</span> 인자야 내가 네 눈에 기뻐하는 것을 한 번 쳐서 빼앗으리니 너는 슬퍼하거나 울거나 눈물을 흘리거나 하지 말며</div>
+        <div class="verse"><span class="verse-num">17</span> 죽은 자들을 위하여 슬퍼하지 말고 조용히 탄식하며 수건으로 머리를 동이고 발에 신을 신고 입술을 가리지 말고 사람이 초상집에서 먹는 음식물을 먹지 말라 하신지라</div>
+        <div class="verse"><span class="verse-num">18</span> 내가 아침에 백성에게 말하였더니 저녁에 내 아내가 죽었으므로 아침에 내가 받은 명령대로 행하매</div>
+        <div class="verse"><span class="verse-num">19</span> 백성이 내게 이르되 네가 행하는 이 일이 우리와 무슨 상관이 있는지 너는 우리에게 말하지 아니하겠느냐 하므로</div>
+        <div class="verse"><span class="verse-num">20</span> 내가 그들에게 대답하기를 여호와의 말씀이 내게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">21</span> 너는 이스라엘 족속에게 이르기를 주 여호와의 말씀에 내 성소는 너희 세력의 영광이요 너희 눈의 기쁨이요 너희 마음에 아낌이 되거니와 내가 더럽힐 것이며 너희의 버려 둔 자녀를 칼에 엎드러지게 할지라</div>
+        <div class="verse"><span class="verse-num">22</span> 너희가 에스겔이 행한 바와 같이 행하여 입술을 가리지 아니하며 사람의 음식물을 먹지 아니하며</div>
+        <div class="verse"><span class="verse-num">23</span> 수건으로 머리를 동인 채, 발에 신을 신은 채로 두고 슬퍼하지도 아니하며 울지도 아니하되 죄악 중에 패망하여 피차 바라보고 탄식하리라</div>
+        <div class="verse"><span class="verse-num">24</span> 이같이 에스겔이 너희에게 표징이 되리니 그가 행한 대로 너희가 다 행할지라 이 일이 이루어지면 내가 주 여호와인 줄을 너희가 알리라 하라 하셨느니라</div>
+        <div class="verse"><span class="verse-num">25</span> 인자야 내가 그 힘과 그 즐거워하는 영광과 그 눈이 기뻐하는 것과 그 마음이 간절하게 생각하는 자녀를 데려가는 날</div>
+        <div class="verse"><span class="verse-num">26</span> 곧 그 날에 도피한 자가 네게 나와서 네 귀에 그 일을 들려 주지 아니하겠느냐</div>
+        <div class="verse"><span class="verse-num">27</span> 그 날에 네 입이 열려서 도피한 자에게 말하고 다시는 잠잠하지 아니하리라 이같이 너는 그들에게 표징이 되고 그들은 내가 여호와인 줄 알리라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>

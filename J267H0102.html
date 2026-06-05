@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>역사 순으로 읽는 365일 말씀대행진 성경통독 267</title>
+    <!-- 웹 폰트 적용 (나눔고딕) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 - 전체 글자 크기를 대폭 키웠습니다 (기본 20px) */
+        body {
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 20px; 
+            line-height: 1.9; /* 글씨가 커진 만큼 줄간격도 여유롭게 */
+            color: #222222;
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 20px 10px;
+        }
+        
+        /* 문서 전체를 감싸는 흰색 박스 */
+        .container {
+            max-width: 900px; /* 더 넓은 텍스트 영역 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- 1. 상단 타이틀 섹션 (반복 부분: 진한 네이비 배경으로 강조) --- */
+        .header-section {
+            text-align: center;
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 35px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+        }
+        .header-section h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        .header-section .sub-title {
+            font-size: 22px;
+            color: #90cdf4; /* 밝은 하늘색 */
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        /* --- 공통 박스 디자인 (사도신경, 주기도문 - 반복 부분 강조) --- */
+        .confession-box {
+            background-color: #fef8ec; /* 따뜻한 배경 */
+            border: 2px solid #f6e0b5;
+            border-left: 8px solid #d69e2e;
+            padding: 20px 15px; /* 내부 여백 축소 */
+            margin: 25px 0; /* 외부 상하 여백 축소 */
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.9; /* 줄 간격 약간 축소 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .confession-title {
+            font-weight: 800;
+            color: #975a16;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
+            font-size: 24px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        
+        .lords-prayer-box {
+            background-color: #ebf8ff; /* 시원한 배경 */
+            border: 2px solid #bee3f8;
+            border-left: 8px solid #3182ce;
+        }
+        .lords-prayer-box .confession-title {
+            color: #2b6cb0;
+        }
+
+        /* --- 2. 찬송가 섹션 --- */
+        .hymn-section {
+            text-align: center;
+            margin: 50px 0;
+            background-color: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .hymn-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .hymn-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 3. 5가지 포인트 섹션 (개별 카드 형태 적용) --- */
+        .points-wrapper {
+            background-color: #f0fdf4; /* 아주 연한 녹색 배경 */
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 1px solid #bbf7d0;
+        }
+        .points-main-title {
+            color: #166534;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #86efac;
+            padding-bottom: 15px;
+        }
+        
+        /* 포인트 항목 각각을 하얀색 박스로 분리 */
+        .point-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-left: 6px solid #22c55e;
+            font-size: 20px;
+        }
+        .point-title {
+            display: block;
+            font-weight: 800;
+            color: #15803d;
+            font-size: 22px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0fdf4;
+        }
+
+        /* --- 도입 문구 --- */
+        .intro-text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b6cb0;
+            margin: 50px 0;
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* --- 4. 성경 본문 섹션 (글자를 가장 크게) --- */
+        .bible-section {
+            margin-top: 60px;
+        }
+        .bible-main-title {
+            color: #2c5282;
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chapter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #c53030;
+            margin: 50px 0 20px 0;
+            background-color: #fff5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #c53030;
+        }
+        /* 본문 글자 크기 대폭 확대 */
+        .verse {
+            margin-bottom: 12px;
+            font-size: 22px; 
+            text-align: justify;
+        }
+        /* 구절 번호를 동그란 뱃지 형태로 예쁘게 디자인 */
+        .verse-num {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .amen-text {
+            text-align: right;
+            font-weight: 800;
+            font-size: 24px;
+            color: #e53e3e;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        /* --- 5. 마무리 및 푸터 (반복 부분 강조) --- */
+        .closing-words {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            padding: 40px 30px;
+            background-color: #2d3748; /* 다크 그레이 배경 */
+            color: #f7fafc; /* 밝은 글씨 */
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 2.2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .closing-highlight {
+            color: #ecc94b; /* 노란색 강조 */
+            font-size: 26px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 모바일 화면 맞춤 설정 */
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header-section h1 { font-size: 24px; }
+            .header-section .sub-title { font-size: 18px; }
+            .points-main-title { font-size: 22px; }
+            .point-title { font-size: 20px; }
+            .verse { font-size: 20px; } /* 모바일에서도 크게 */
+        }
+        
+        /* 추가 스타일: 인용구 디자인 */
+        .quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 10px 15px;
+            margin: 15px 0;
+            color: #334155;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- ============================================== -->
+    <!-- 1. 상단 타이틀 -->
+    <!-- ============================================== -->
+    <div class="header-section">
+        <h1>역사 순으로 읽는 365일 말씀대행진 성경통독 267</h1>
+        <p class="sub-title">찬송가 526장 목마른 자들아</p>
+        <p class="sub-title">학개 1~2장 — 학개, 우선순위를 기억하라</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 2. 사도신경 -->
+    <!-- ============================================== -->
+    <div class="confession-box">
+        <div class="confession-title">사도신경</div>
+        나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,<br>
+        본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+        장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+        하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+        거기로 부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+        죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 3. 찬송가 이미지 -->
+    <!-- ============================================== -->
+    <div class="hymn-section">
+        <div class="hymn-title">찬송가 526장</div>
+        <!-- 구글 드라이브 보안 정책에 맞춰 외부 표시가 가능한 우회 주소로 변경했습니다. -->
+        <img src="https://lh3.googleusercontent.com/d/1AoSmwTa2GSiLC12WJEf-1UnAVeT1UplQ" alt="찬송가 526장 악보" class="hymn-image">
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4. 오늘의 굿 뉴스 (5가지 포인트) -->
+    <!-- ============================================== -->
+    <div class="points-wrapper">
+        <h2 class="points-main-title">오늘의 굿 뉴스, 학개 1~2장의<br>다섯 가지 포인트를 먼저 말씀드리겠습니다</h2>
+        
+        <div class="point-item">
+            <span class="point-title">첫 번째 포인트 : 하나님께서는 예루살렘 성전 재건이 약 16년 동안 중단된 시점에 귀환 공동체에 학개 선지자를 보내십니다.</span>
+            성전 재건이 16년 동안이나 중단되었던 이유는 <strong>사마리아인들의 외부 방해도 있었지만 귀환 공동체가 내부적으로 성전 재건이 아직 시기상조라는 이유를 대며 미루고 있었기 때문</strong>입니다.
+            <div class="quote">
+                <strong>그러나 하나님의 뜻은 이미 70년이 다 찼고 건축할 시기가 지났다는 것입니다.</strong> (학 1:2)<br><br>
+                <strong>이에 학개 선지자가 전한 하나님의 말씀을 듣고 귀환 공동체가 다시 마음을 다져 성전 재건을 준비합니다.</strong>
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">두 번째 포인트 : 귀환 공동체는 학개 선지자의 책망을 듣고 성전 재건을 다시 시작합니다.</span>
+            학개 선지자의 책망을 듣고 <strong>귀환 공동체가 크게 회개하여 다시 용기를 냅니다.</strong> 비록 성전 재건의 일이 난관에 부딪쳤지만 <strong>하나님께서 말씀하시면 순종하겠다는 자세로 그들이 바뀐 것</strong>입니다.
+            <div class="quote">
+                <strong>귀환 공동체는 학개 선지자가 하나님의 말씀을 전한 날로부터 23일 만에 성전 재건 공사를 재개했습니다.</strong> (학 1:12~15)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">세 번째 포인트 : 학개 선지자를 통해 주신 두 번째 메시지는 "스스로 굳세게 할지어다"입니다.</span>
+            성전 재건 공사가 다시 시작된 지 <strong>약 한 달 후</strong> 학개 선지자를 통한 <strong>하나님의 두 번째 메시지가 귀환 공동체에게 전해집니다</strong>(학 2:1~2). 하나님께서 이 메시지를 주신 이유는 <strong>옛 성전보다 못한 새 성전을 보고 실망하는 이들을 위로하시고 용기를 주시기 위함</strong>이었습니다.
+            <div class="quote">
+                <strong>"스스로 굳세게 할지어다"</strong> — 하나님께서 이 말씀을 <strong>세 번이나 반복하시며 귀환 공동체에게 용기를 주십니다.</strong> (학 2:4)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">네 번째 포인트 : 학개 선지자를 통해 주신 세 번째 메시지는 성전 재건 중단 후 오히려 힘들었던 때를 상기시키며 성전 재건 완수를 촉구하는 말씀입니다.</span>
+            세 번째 메시지는 <strong>두 번째 메시지를 주신 지 두 달 후에 주신 말씀</strong>입니다. 그 메시지의 내용은 <strong>과거를 돌아보며 정결케 하고 하나님의 말씀에 순종하라는 것</strong>이었습니다.
+            <div class="quote">
+                <strong>그러면 하나님께서 복을 주실 것이라는 약속이었습니다.</strong> (학 2:10~19)
+            </div>
+        </div>
+
+        <div class="point-item">
+            <span class="point-title">다섯 번째 포인트 : 학개 선지자를 통해 주신 네 번째 메시지는 스룹바벨로 예표되는 메시아의 심판과 통치 예언입니다.</span>
+            <strong>네 번째 메시지를 주신 날은 세 번째 메시지와 같은 날</strong>이었습니다. 하나님께서는 <strong>스룹바벨로 예표되는 메시아이신 예수님의 때에 이루어질 하나님의 심판과 통치, 구원의 약속을 말씀하십니다</strong>(학 2:20~23).
+            <div class="quote">
+                <strong>학개 선지자를 통해 주신 네 가지 메시지는 귀환 공동체가 성전 재건의 우선순위를 다시 붙잡고 하나님 앞에 신실하게 서도록 이끄는 하나님의 사랑이었습니다.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도입 문구 -->
+    <div class="intro-text">
+        오늘은 학개 1~2장 '학개, 우선순위를 기억하라'입니다.<br>
+        성경을 쉽고 재미있는 이야기로 함께 통독하겠습니다.
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 5. 성경 본문 -->
+    <!-- ============================================== -->
+    <div class="bible-section">
+        <h2 class="bible-main-title">📖 성경 본문 읽기</h2>
+
+        <!-- 학개 1장 -->
+        <div class="chapter-title">학개 1장 (1~15절)</div>
+        <div class="verse"><span class="verse-num">1</span> 다리오 왕 제이년 여섯째 달 곧 그 달 초하루에 여호와의 말씀이 선지자 학개로 말미암아 스알디엘의 아들 유다 총독 스룹바벨과 여호사닥의 아들 대제사장 여호수아에게 임하니라 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 만군의 여호와가 이같이 말하여 이르노라 이 백성이 말하기를 여호와의 전을 건축할 시기가 이르지 아니하였다 하느니라</div>
+        <div class="verse"><span class="verse-num">3</span> 여호와의 말씀이 선지자 학개에게 임하여 이르시되</div>
+        <div class="verse"><span class="verse-num">4</span> 이 성전이 황폐하였거늘 너희가 이 때에 판벽한 집에 거주하는 것이 옳으냐</div>
+        <div class="verse"><span class="verse-num">5</span> 그러므로 이제 만군의 여호와가 이같이 말하노니 너희는 너희의 행위를 살필지니라</div>
+        <div class="verse"><span class="verse-num">6</span> 너희가 많이 뿌릴지라도 수확이 적으며 먹을지라도 배부르지 못하며 마실지라도 흡족하지 못하며 입어도 따뜻하지 못하며 일꾼이 삯을 받아도 그것을 구멍 뚫어진 전대에 넣음이 되느니라</div>
+        <div class="verse"><span class="verse-num">7</span> 만군의 여호와가 말하노니 너희는 자기의 행위를 살필지니라</div>
+        <div class="verse"><span class="verse-num">8</span> 너희는 산에 올라가서 나무를 가져다가 성전을 건축하라 그리하면 내가 그것으로 말미암아 기뻐하고 또 영광을 얻으리라 여호와가 말하였느니라</div>
+        <div class="verse"><span class="verse-num">9</span> 너희가 많은 것을 바랐으나 도리어 적었고 너희가 그것을 집으로 가져갔으나 내가 불어 버렸느니라 나 만군의 여호와가 말하노라 이것이 무슨 까닭이냐 내 집은 황폐하였으되 너희는 각각 자기의 집을 짓기 위하여 빨랐음이라</div>
+        <div class="verse"><span class="verse-num">10</span> 그러므로 너희로 말미암아 하늘은 이슬을 그쳤고 땅은 산물을 그쳤으며</div>
+        <div class="verse"><span class="verse-num">11</span> 내가 이 땅과 산과 곡물과 새 포도주와 기름과 땅의 모든 소산과 사람과 가축과 손으로 수고하는 모든 일에 한재를 들게 하였느니라</div>
+        <div class="verse"><span class="verse-num">12</span> 스알디엘의 아들 스룹바벨과 여호사닥의 아들 대제사장 여호수아와 남은 모든 백성이 그들의 하나님 여호와의 목소리와 선지자 학개의 말을 들었으니 이는 그들의 하나님 여호와께서 그를 보내셨음이라 백성이 다 여호와를 경외하매</div>
+        <div class="verse"><span class="verse-num">13</span> 그 때에 여호와의 사자 학개가 여호와의 위임을 받아 백성에게 말하여 이르되 여호와가 말하노니 내가 너희와 함께 하노라 하니라</div>
+        <div class="verse"><span class="verse-num">14</span> 여호와께서 스알디엘의 아들 유다 총독 스룹바벨의 마음과 여호사닥의 아들 대제사장 여호수아의 마음과 남은 모든 백성의 마음을 감동시키시매 그들이 와서 만군의 여호와 그들의 하나님의 전 공사를 하였으니</div>
+        <div class="verse"><span class="verse-num">15</span> 그 때는 다리오 왕 제이년 여섯째 달 이십사일이었더라</div>
+
+        <!-- 학개 2장 -->
+        <div class="chapter-title">학개 2장 (1~23절)</div>
+        <div class="verse"><span class="verse-num">1</span> 일곱째 달 곧 그 달 이십일일에 여호와의 말씀이 선지자 학개에게 임하니라 이르시되</div>
+        <div class="verse"><span class="verse-num">2</span> 너는 스알디엘의 아들 유다 총독 스룹바벨과 여호사닥의 아들 대제사장 여호수아와 남은 백성에게 말하여 이르라</div>
+        <div class="verse"><span class="verse-num">3</span> 너희 가운데에 남아 있는 자 중에서 이 성전의 이전 영광을 본 자가 누구냐 이제 이것이 너희에게 어떻게 보이느냐 이것이 너희 눈에 보잘것없지 아니하냐</div>
+        <div class="verse"><span class="verse-num">4</span> 그러나 여호와가 이르노라 스룹바벨아 스스로 굳세게 할지어다 여호사닥의 아들 대제사장 여호수아야 스스로 굳세게 할지어다 여호와의 말이니라 이 땅 모든 백성아 스스로 굳세게 하여 일할지어다 내가 너희와 함께 하노라 만군의 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">5</span> 너희가 애굽에서 나올 때에 내가 너희와 언약한 말과 나의 영이 계속하여 너희 가운데에 머물러 있나니 너희는 두려워하지 말지어다</div>
+        <div class="verse"><span class="verse-num">6</span> 만군의 여호와가 이같이 말하노라 조금 있으면 내가 하늘과 땅과 바다와 육지를 진동시킬 것이요</div>
+        <div class="verse"><span class="verse-num">7</span> 또한 모든 나라를 진동시킬 것이며 모든 나라의 보배가 이르리니 내가 이 성전에 영광이 충만하게 하리라 만군의 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">8</span> 은도 내 것이요 금도 내 것이니라 만군의 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">9</span> 이 성전의 나중 영광이 이전 영광보다 크리라 만군의 여호와의 말이니라 내가 이 곳에 평강을 주리라 만군의 여호와의 말이니라</div>
+        <div class="verse"><span class="verse-num">10</span> 다리오 왕 제이년 아홉째 달 이십사일에 여호와의 말씀이 선지자 학개에게 임하니라 이르시되</div>
+        <div class="verse"><span class="verse-num">11</span> 만군의 여호와가 말하노니 너는 제사장에게 율법에 대하여 물어 이르기를</div>
+        <div class="verse"><span class="verse-num">12</span> 사람이 옷자락에 거룩한 고기를 쌌는데 그 옷자락이 만일 떡에나 국에나 포도주에나 기름에나 다른 음식물에 닿았으면 그것이 성물이 되겠느냐 하라 학개가 물으매 제사장들이 대답하여 이르되 아니니라 하는지라</div>
+        <div class="verse"><span class="verse-num">13</span> 학개가 이르되 시체를 만져서 부정하여진 자가 만일 그것들 가운데 하나를 만지면 그것이 부정하겠느냐 하니 제사장들이 대답하여 이르되 부정하리라 하더라</div>
+        <div class="verse"><span class="verse-num">14</span> 이에 학개가 대답하여 이르되 여호와의 말씀에 내 앞에서 이 백성이 그러하고 이 나라가 그러하고 그들의 손의 모든 일도 그러하고 그들이 거기에서 드리는 것도 부정하니라</div>
+        <div class="verse"><span class="verse-num">15</span> 이제 원하건대 너희는 오늘부터 이전 곧 여호와의 전에 돌이 돌 위에 놓이지 아니하였던 때를 기억하라</div>
+        <div class="verse"><span class="verse-num">16</span> 그 때에는 이십 고르 곡식 더미에 이른즉 십 고르뿐이었고 포도즙 틀에 오십 고르를 길으러 이른즉 이십 고르뿐이었었느니라</div>
+        <div class="verse"><span class="verse-num">17</span> 만군의 여호와가 말하노라 내가 너희 손으로 지은 모든 일에 곡식을 마르게 하는 재앙과 깜부기 재앙과 우박으로 쳤으나 너희가 내게로 돌이키지 아니하였느니라</div>
+        <div class="verse"><span class="verse-num">18</span> 너희는 오늘 이전을 기억하라 아홉째 달 이십사일 곧 여호와의 성전 지대를 쌓던 날부터 기억하여 보라</div>
+        <div class="verse"><span class="verse-num">19</span> 곡식 종자가 아직도 창고에 있느냐 포도나무, 무화과나무, 석류나무, 감람나무에 열매가 맺지 못하였느니라 그러나 오늘부터는 내가 너희에게 복을 주리라</div>
+        <div class="verse"><span class="verse-num">20</span> 그 달 이십사일에 여호와의 말씀이 다시 학개에게 임하니라 이르시되</div>
+        <div class="verse"><span class="verse-num">21</span> 너는 유다 총독 스룹바벨에게 말하여 이르라 내가 하늘과 땅을 진동시킬 것이요</div>
+        <div class="verse"><span class="verse-num">22</span> 여러 왕국들의 보좌를 엎을 것이요 여러 나라의 세력을 멸할 것이요 그 병거들과 그 탄 자를 엎드러뜨리리니 말과 그 탄 자가 각각 그의 동료의 칼에 엎드러지리라</div>
+        <div class="verse"><span class="verse-num">23</span> 만군의 여호와가 말하노라 스알디엘의 아들 내 종 스룹바벨아 여호와가 말하노라 그 날에 내가 너를 세우고 너를 인장으로 삼으리니 이는 내가 너를 택하였음이니라 만군의 여호와의 말이니라 하시니라</div>
+
+        <p class="amen-text">
+            이 말씀은 살아계신 하나님의 말씀입니다. 아멘
+        </p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 6. 주기도문 -->
+    <!-- ============================================== -->
+    <div class="confession-box lords-prayer-box">
+        <div class="confession-title">주기도문</div>
+        하늘에 계신 우리 아버지,<br>
+        아버지의 이름을 거룩하게 하시며 아버지의 나라가 오게 하시며,<br>
+        아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지게 하소서.<br>
+        오늘 우리에게 일용할 양식을 주시고,<br>
+        우리가 우리에게 잘못한 사람을 용서하여 준 것같이 우리 죄를 용서하여 주시고,<br>
+        우리를 시험에 빠지지 않게 하시고 악에서 구하소서.<br>
+        나라와 권능과 영광이 영원히 아버지의 것입니다. 아멘.
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 7. 마무리 문구 및 푸터 -->
+    <!-- ============================================== -->
+    <div class="closing-words">
+        모든 성경은 유익합니다.<br>
+        모든 성경을 모든 가정에서<br>
+        성경 스토리로 듣게 되면 성경은 쉽고 재미있는 책이 될 것입니다.<br>
+        <span class="closing-highlight">성경 한 권이면 충분합니다.</span>
+    </div>
+
+    <div class="footer">
+        &copy; 성경통독. 푸른동산 지산교회 정재학 목사
+    </div>
+
+</div>
+
+</body>
+</html>
