@@ -53,18 +53,18 @@
             background-color: #1e8449;
         }
 
-        /* --- 날짜별 구간 나누기 바(Bar) 스타일 --- */
+        /* --- 날짜별 구간 나누기 바(Bar) 크기 축소 --- */
         .day-divider {
             background-color: #ecf0f1;
             color: #2c3e50;
-            padding: 12px 20px;
-            border-radius: 8px;
-            border-left: 5px solid #7f8c8d;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.1em;
+            padding: 8px 15px; /* 내부 여백 축소 */
+            border-radius: 6px;
+            border-left: 4px solid #7f8c8d; /* 테두리 두께 축소 */
+            margin-top: 30px; /* 외부 여백 축소 */
+            margin-bottom: 15px; /* 외부 여백 축소 */
+            font-size: 1.0em; /* 글자 크기 축소 */
             font-weight: bold;
-            scroll-margin-top: 20px; /* 점프했을 때 윗부분 여백 확보 */
+            scroll-margin-top: 20px;
         }
         .day-divider.nt-divider {
             background-color: #e9f7ef;
@@ -126,10 +126,10 @@
     <h2 class="section-title">🗓️ 조병호 성경통독 365일</h2>
 
     <div class="nav-buttons">
-        <a href="#section-1">📘 구약 1 ~ 100일</a>
-        <a href="#section-101">📘 구약 101 ~ 200일</a>
-        <a href="#section-201">📘 구약 201 ~ 280일</a>
-        <a href="#section-281" class="nt-btn">📗 신약 281 ~ 365일</a>
+        <a href="#section-1"> 구약 1 ~ 100일</a>
+        <a href="#section-101"> 구약 101 ~ 200일</a>
+        <a href="#section-201"> 구약 201 ~ 280일</a>
+        <a href="#section-281" class="nt-btn"> 신약 281 ~ 365일</a>
     </div>
 
     <div id="section-1" class="day-divider">📘 구약 성경 (1일 ~ 100일)</div>
