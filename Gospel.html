@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이렇게 복음을 제시하자</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #7f8c8d;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 헤더 및 타이틀 */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        h1 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* 네비게이션 버튼 */
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 10px;
+            z-index: 10;
+        }
+        .nav-buttons a {
+            background-color: var(--card-bg);
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            transition: all 0.2s;
+        }
+        .nav-buttons a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* 섹션 및 카드 스타일 */
+        .section-wrap {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: white;
+            background-color: var(--primary-color);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--secondary-color);
+        }
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 10px;
+        }
+
+        /* 특수 텍스트 블록 스타일 */
+        .speech {
+            background-color: #f1f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-size: 1.05rem;
+            color: #0c5460;
+            border-left: 4px solid #17a2b8;
+        }
+        .speech strong { color: #0056b3; }
+        
+        .action {
+            color: var(--accent-color);
+            font-style: italic;
+            font-size: 0.9rem;
+            display: block;
+            margin: 10px 0;
+            background-color: #fff3f3;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        .bible-verse {
+            background-color: #f8f9fa;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #155724;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .illustration {
+            background-color: #fffdb8;
+            border: 1px solid #ffeeba;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .illustration h4 {
+            margin-top: 0;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .transition {
+            text-align: center;
+            font-weight: bold;
+            color: var(--text-light);
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .transition::before, .transition::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px dashed #ccc;
+            margin: 0 15px;
+        }
+
+        .prayer-box {
+            background-color: #e2e3e5;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 2;
+            font-weight: bold;
+        }
+
+        ul.check-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul.check-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        ul.check-list li::before {
+            content: '✔️';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        /* TOP 버튼 */
+        #topBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        #topBtn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 15px; }
+            .card { padding: 15px; }
+            h1 { font-size: 1.5rem; }
+            #topBtn { bottom: 20px; right: 20px; padding: 12px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>이렇게 복음을 제시하자</h1>
+        <p style="color: var(--text-light);">예수님은 누구신가? <BR> 효과적인 전도를 위한 복음 제시 가이드</p>
+    </header>
+
+    <nav class="nav-buttons">
+        <a href="#section-1">1. 서론</a>
+        <a href="#section-2">2. 복음</a>
+        <a href="#section-3">3. 결신</a>
+        <a href="#section-4">4. 즉석양육</a>
+    </nav>
+
+    <!-- 1. 서론 -->
+    <div id="section-1" class="section-wrap">
+        <h2>1. 서론 (접근 및 마음 열기)</h2>
+        <div class="card">
+            <ul class="check-list">
+                <li><strong>가. 그들의 일반 생활</strong> (가벼운 대화로 시작)</li>
+                <li><strong>나. 그들의 종교 배경</strong> (종교적 경험 파악)</li>
+                <li><strong>다. 개인 간증</strong> (나의 구원 이야기 짧게 나누기)</li>
+            </ul>
+
+            <div class="transition">주제 전환</div>
+
+            <div class="speech">
+                <strong>(선생님)</strong> 제가 질문 하나 드려도 되겠습니까?
+            </div>
+
+            <h3>라. 확신 질문</h3>
+            <div class="speech">
+                <strong>(선생님)</strong>께서 만일 오늘이라도 이 세상을 떠나신다면 천국에 들어간다는 것을 확신하고 계십니까?
+            </div>
+
+            <h3>마. 이유 질문</h3>
+            <div class="speech">
+                <strong>(선생님)</strong>은 어떻게 하면 영생을 얻어 천국에 들어갈 수 있다고 생각하십니까?
+            </div>
+
+            <div class="transition">주제 전환</div>
+
+            <div class="speech">
+                <strong>(선생님)</strong>의 대답을 듣고 보니 <strong>(선생님)</strong>께 가장 기쁜 소식을 전해드릴 수 있겠군요. 그 기쁜 소식은...
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. 복음 -->
+    <div id="section-2" class="section-wrap">
+        <h2>2. 복음 (Gospel)</h2>
+        
+        <!-- 가. 은혜 -->
+        <div class="card">
+            <h3>가. 은혜 (Grace)</h3>
+            <ul class="check-list">
+                <li>영생은 값없이 주시는 하나님의 선물입니다.</li>
+                <li>그러므로 영생은 돈이나 공로나 자격으로 얻는 것이 아닙니다.</li>
+            </ul>
+
+            <div class="bible-verse">
+                📖 "너희는 그 은혜에 의하여 믿음으로 말미암아 구원을 받았으니 이것은 너희에게서 난 것이 아니요 하나님의 선물이라. 행위에서 난 것이 아니니 이는 누구든지 자랑하지 못하게 함이라." (엡 2:8-9)
+            </div>
+
+            <div class="illustration">
+                <h4>💡 햇빛, 공기, 물 예화</h4>
+                <p>사실 우리가 살면서 생명과 관계되는 가장 중요한 것은 다 선물로 받았어요. 예를 들면 밝은 햇빛, 공기, 물 등은 값없이 다 선물로 거저 받았습니다.<br><br>
+                이와 같이 영생도 하나님이 우리에게 값없이 선물로 주신다는 것입니다.</p>
+            </div>
+
+            <div class="transition">주제 전환</div>
+            <div class="speech">
+                그렇다면 하나님은 영생을 왜 선물로 주셔야만 할까요? 이것은 성경이 인간에 관하여 하신 말씀을 잘 이해할 때 좀 더 분명히 알 수 있습니다.
+            </div>
+        </div>
+
+        <!-- 나. 인간 -->
+        <div class="card">
+            <h3>나. 인간 (Man)</h3>
+            <ul class="check-list">
+                <li>인간은 죄인입니다.</li>
+                <li>그러므로 죄인은 자신을 구원할 수 없습니다.</li>
+            </ul>
+
+            <div class="bible-verse">
+                📖 "모든 사람이 죄를 범하였으매 하나님의 영광에 이르지 못하더니" (롬 3:23)
+            </div>
+
+            <div class="illustration">
+                <h4>💡 죄의 정의와 하루 세 번의 죄 예화</h4>
+                <p>성경에서는 죄를 이렇게 정의하고 있습니다.<br>
+                <strong>첫째</strong>, (강도나 살인, 도적질이나 간음처럼) 하지 말아야 할 것을 하는 것이 죄이고<br>
+                <strong>둘째</strong>, (부모 공경이나 이웃 사랑처럼) 해야 하는 것을 하지 않는 것도 역시 죄이며<br>
+                <strong>셋째</strong>, (교만, 정욕, 미움, 탐심, 시기, 질투, 거짓말처럼) 나쁜 마음이나 나쁜 생각을 하는 것도 죄입니다.<br>
+                그러나 무엇보다도 <strong>하나님을 하나님으로 믿지 않는 것이 가장 큰 죄</strong>입니다.</p>
+
+                <div class="speech" style="background-color: #fff; border-left-color:#ffc107;">
+                    <strong>나:</strong> 이런 기준으로 볼 때 선생님은 하루에 몇 번 정도 죄를 짓는다고 생각하세요?<br>
+                    <strong>상대방:</strong> 그렇게 본다면 하루에 수십 번도 더 죄를 짓는 것 같군요.<br>
+                    <strong>나:</strong> 물론 저도 그래요. 사실 우리는 자신도 모르게 많은 죄를 짓고 살지요.
+                </div>
+
+                <p>성경의 기준으로 볼 때 어떤 사람이 하루에 열 번이나 다섯 번, 아니 단지 세 번만 죄를 짓는다고 생각해 보십시다. 그 사람은 걸어 다니는 천사라고 할 수 있을 것입니다. <br><br>
+                그러나 그런 천사와 같은 자라도 하루 세 번이면, 일 년이면 천 번 이상, 90평생을 산다면 9만 번 이상의 죄를 짓게 되는 셈이지요. 그래서 이 세상에서 자신은 죄인이 아니라고 주장할 수 있는 사람은 단 한 사람도 없습니다.</p>
+            </div>
+
+            <div class="transition">주제 전환</div>
+            <div class="speech">
+                그렇다면 이런 죄인이 어떻게 영생을 선물로 받을 수 있을까요? 이것은 성경이 하나님에 관하여 하신 말씀을 잘 이해할 때 좀 더 분명히 알 수 있습니다.
+            </div>
+        </div>
+
+        <!-- 다. 하나님 -->
+        <div class="card">
+            <h3>다. 하나님 (God)</h3>
+            <ul class="check-list">
+                <li>하나님은 자비로우셔서 우리를 벌하시는 것을 원치 않으십니다.</li>
+                <li>하지만 하나님은 의로우시기 때문에 반드시 우리 죄를 벌하셔야만 합니다.</li>
+            </ul>
+
+            <div class="bible-verse">
+                📖 "...하나님은 사랑이심이라." (요일 4:8하)<br>
+                📖 "...벌을 면제하지는 아니하고... 보응하리라." (출 34:7하)
+            </div>
+
+            <div class="illustration">
+                <h4>💡 가르시아 예화</h4>
+                <p>전쟁 중인 러시아 제국에서 부족한 식량을 훔치는 사건이 종종 발생했습니다. 화가 난 지휘관 가르시아 장군은 누구든지 식량을 훔치다 잡힌 사람에게는 끔찍한 채찍질을 가하겠다고 선포했습니다.<br><br>
+                그런데 도둑을 잡고 보니 다른 사람이 아닌 그의 어머니였습니다. 장군은 원칙대로 사랑하는 어머니에게 채찍을 가하자니 늙으신 어머님이 돌아가실 것 같고, 원칙을 무시하고 그냥 넘어가자니 부하들에게 군기가 서지 않을 것 같았습니다.<br><br>
+                결국 지휘관이 만든 원칙에 따라 처벌해야 하는 날, 그는 어머니 앞에서 겉옷을 벗었습니다. 그리고 부하들에게 명했습니다. <strong>“어머니 대신 나에게 채찍을 가하라!”</strong><br><br>
+                그는 어머니 대신 채찍에 맞음으로써 어머니를 향한 사랑을 실천했을 뿐만 아니라 동시에 죄인을 처벌하는 공의도 실천하게 된 것입니다. 이처럼...</p>
+            </div>
+
+            <div class="transition">주제 전환</div>
+            <div class="speech">
+                자비로우시고 의로우신 하나님은 우리의 죄 문제를 예수 그리스도 안에서 단번에 해결하셨습니다.
+            </div>
+        </div>
+
+        <!-- 라. 예수 그리스도 -->
+        <div class="card">
+            <h3>라. 예수 그리스도 (Christ)</h3>
+            <ul class="check-list">
+                <li>예수 그리스도는 참 하나님이신 동시에 참 인간이십니다.</li>
+                <li>예수 그리스도는 우리에게 영생을 선물로 주시기 위하여 십자가에서 죽으심으로 우리의 죗값을 대신 치르시고 부활하셨습니다.</li>
+            </ul>
+
+            <div class="illustration">
+                <h4>💡 죄를 기록한 책 예화 (행동 지침)</h4>
+                <span class="action">(오른손으로 책을 들어 올리면서)</span>
+                <p>이 책이 제가 태어나서 지금까지 지은 모든 죄와 모든 생각, 모든 말, 모든 행위가 낱낱이 기록되어 있는 책이라고 생각해 보십시다. 성경은 어느 날 이 책이 하나님 앞에 펼쳐지고...</p>
+                <span class="action">(책을 펼쳐서 왼손 위에 올려놓는다)</span>
+                <p>제가 행한 대로 심판을 받게 될 것</p>
+                <span class="action">(오른손으로 펼쳐진 책을 단호하게 한두 번 친다)</span>
+                <p>이라고 말씀하십니다. 그런데 바로 이 책에 기록된 저의 죄가 문제입니다.</p>
+                <span class="action">(펼쳐진 책을 덮어서 왼손 위에 둔다)</span>
+                <p>하나님은 저를 사랑하시기 때문에 저를 벌하실 수도 없고,</p>
+                <span class="action">(오른손으로 왼손 등을 쓰다듬는다)</span>
+                <p>또한 하나님은 의로우시기 때문에 저의 죄는 반드시</p>
+                <span class="action">(오른손으로 책을 가리킨다)</span>
+                <p>벌하셔야만</p>
+                <span class="action">(단호하게 한두 번 책을 친다)</span>
+                <p>합니다. 이 문제를 해결하기 위하여 하나님은 그의 사랑하시는 아들 예수 그리스도를</p>
+                <span class="action">(오른손을 공중으로 높이 든다)</span>
+                <p>이 세상에</p>
+                <span class="action">(오른손을 책을 가진 왼손과 평행하게 천천히 내린다)</span>
+                <p>보내셨습니다.</p>
+            </div>
+
+            <div class="bible-verse">
+                📖 "우리는 다 양 같아서 그릇 행하여 각기 제 길로 갔거늘 
+                <span class="action" style="display:inline; background:none; padding:0;">(시선은 왼손을 보면서, 책을 가진 왼손은 수평으로 떠내려가는 시늉을 한다)</span><br>
+                여호와께서는 우리 모두의 죄악을 
+                <span class="action" style="display:inline; background:none; padding:0;">(책을 가진 왼손으로 반원을 그린 후 원위치에 온다)</span><br>
+                그에게 (예수 그리스도에게) 
+                <span class="action" style="display:inline; background:none; padding:0;">(오른손을 바라본다)</span> 
+                담당시키셨도다 
+                <span class="action" style="display:inline; background:none; padding:0;">(왼손에 있는 책을 오른손에 단호하게 옮긴다)</span>" (사 53:6)
+            </div>
+
+            <p>하나님이 미워하시는 저의 모든 죄가 그의 사랑하시는 아들 예수 그리스도께로 옮겨졌습니다.</p>
+            <span class="action">(왼손으로 오른손에 있는 책을 가리킨다. 그리고 조용히 책을 내려놓는다)</span>
+            
+            <p>예수 그리스도는 그 자신의 몸으로 우리의 모든 죗값을 치르시기 위하여 친히 십자가에 달려 돌아가셨습니다.<br>
+            십자가 위에서 우리의 죗값이 다 치러졌을 때 예수 그리스도께서는 <strong>"다 이루었다."</strong>라고 말씀하셨습니다.<br>
+            범죄한 우리의 모든 죗값을 예수 그리스도께서 대신 갚아주신 것입니다. 예수 그리스도는 우리의 모든 죗값을 치르신 후 사흘 만에 부활하셔서 우리에게 영생을 선물로 주시기 위하여 승천하셨습니다.</p>
+
+            <div class="speech">
+                지금 예수님은 영생을 선물로 주시고자 하십니다. 그렇다면 우리가 이 영생의 선물을 어떻게 받을 수가 있을까요?
+            </div>
+
+            <div class="transition">주제 전환</div>
+            <div class="speech">
+                이 영생의 선물은 오직 예수 그리스도를 믿음으로 받습니다. 그러나 중요한 사실은...
+            </div>
+        </div>
+
+        <!-- 마. 믿음 -->
+        <div class="card">
+            <h3>마. 믿음 (Faith)</h3>
+            <ul class="check-list">
+                <li>단순한 지식적 동의와 일시적, 현세적 믿음은 구원받는 믿음이 아닙니다.</li>
+                <li>구원받는 참 믿음은 우리의 구원을 위해서 <strong>오직 예수 그리스도만을 신뢰하는 것</strong>입니다.</li>
+            </ul>
+
+            <div class="bible-verse">
+                📖 "...주 예수를 믿으라. 그리하면 너와 네 집이 구원을 받으리라." (행 16:31)
+            </div>
+
+            <div class="illustration">
+                <h4>💡 의자 예화 (행동 지침)</h4>
+                <p>구원 받는 참 믿음이 무엇인지 이 의자를 가지고 설명하겠습니다.</p>
+                <span class="action">(자리에서 일어난다)</span>
+                <p>여기 의자가 있다는 사실을 알고 계시지요. 그러나 단순히 의자가 여기 있다는 것만 알고 앉지 않는다면</p>
+                <span class="action">(의자 옆에 서 있다)</span>
+                <p>여기 있는 의자가 저에게 무슨 소용이 있겠습니까?<br><br>
+                송구한 말씀이지만 이 의자를 예수님이라고 가정해 봅시다. 의자가 편하게 해줄 것을 알면서도 의자 옆에 서 있기만 하듯이, 예수 그리스도가 구원자란 사실을 머리로만 알고, 예수 그리스도를 신뢰하지 않는다면,</p>
+                <span class="action">(의자 옆에 서 있다)</span>
+                <p>그 믿음은 단순히 지식적인 동의에 불과하므로 우리 자신을 구원하는 믿음이 아닙니다.<br><br>
+                또한 예수그리스도를 건강, 재정, 자녀문제 등 일시적이고 현실적인 문제들만 해결할 분으로 알고 각종 문제들은 예수 그리스도께</p>
+                <span class="action">(각종 짐을 의자에 올려놓으면서)</span>
+                <p>부탁드리면서도, 자신은 여전히</p>
+                <span class="action">(의자 옆에 서 있으면서)</span>
+                <p>예수 그리스도를 신뢰하지 않는다면 그 믿음은 일시적, 현세적 문제만을 해결하려는 믿음으로 우리 자신을 구원하는 믿음이 아닙니다.<br><br>
+                성경이 가르치는 구원 받는 참 믿음은</p>
+                <span class="action">(의자에 올려놓았던 모든 짐을 가슴에 안고)</span>
+                <p>자신의 모든 문제를 가지고 이처럼</p>
+                <span class="action">(의자에 앉으면서)</span>
+                <p><strong>자기 자신이 예수님을 온전히 신뢰하는 것</strong>을 말합니다.<br><br>
+                어느 날 저는</p>
+                <span class="action">(각종 짐을 안은 채로)</span>
+                <p>제 삶의 모든 문제를 안은 채로 저 자신을 예수 그리스도께 맡겼습니다. 비로소 저는 영생을 선물로 받게 되었습니다. 얼마나 평안하고 기뻤는지 몰라요.</p>
+            </div>
+
+            <div class="transition">주제 전환</div>
+            <div class="speech">
+                <strong>(선생님)</strong>께서 영생을 선물로 얻고 천국에 들어가려면 신뢰의 대상을 자신의 선한 행위로부터 오직 예수 그리스도께로 옮기셔야만 합니다.
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. 결신 -->
+    <div id="section-3" class="section-wrap">
+        <h2>3. 결신 (Decision)</h2>
+        <div class="card">
+            <h3>가. 확인 질문</h3>
+            <div class="speech">
+                <strong>(선생님)</strong>, 이해가 되십니까?
+            </div>
+
+            <h3>나. 결신 질문</h3>
+            <div class="speech">
+                <strong>(선생님)</strong>, 이 영생의 선물을 받기를 원하십니까?
+            </div>
+
+            <h3>다. 결신 설명</h3>
+            <div class="speech">
+                <strong>(선생님)</strong>, 참으로 중요한 결정을 하셨습니다. 이제 <strong>(선생님)</strong>의 결정이 무엇을 뜻하는지 간단히 말씀 드리겠습니다.
+            </div>
+            
+            <ul class="check-list">
+                <li>영생을 얻기 위하여 자신을 신뢰하지 않고 오직 예수 그리스도만을 신뢰하겠다는 뜻입니다.</li>
+                <li>부활하여 살아계신 예수 그리스도를 구원자로 삶의 주인으로 모시겠다는 뜻입니다.</li>
+                <li>자신이 지었던 죄를 회개하고 삶의 방향을 하나님께로 돌리겠다는 뜻입니다.</li>
+            </ul>
+
+            <div class="speech">
+                <strong>그렇게 하시겠습니까?</strong>
+            </div>
+
+            <h3>라. 결신 기도</h3>
+            <div class="speech">
+                <strong>(선생님)</strong>, 하나님께서는 우리의 기도에 귀를 기울여 들어주십니다. 저를 따라서 하나님께 한 마디씩 기도해 주세요.
+            </div>
+
+            <div class="prayer-box">
+                하나님 아버지 / 지금까지 저는 /<br>제 자신을 믿고 살아온 죄인입니다 /<br>저의 죄를 회개하오니 용서해 주십시오. /<br>예수님이 저의 죄 때문에 /<br>십자가에서 죽으시고 / 부활하신 것을 믿습니다. /<br>지금 이 시간 / 제 마음의 문을 엽니다. /<br>예수님이 제 마음에 들어오셔서 /<br>저의 구원자와 / 삶의 주인이 되어주십시오. /<br>이제부터 제가 / 하나님 앞에 설 때까지 /<br>저의 삶을 인도해 주십시오. /<br>예수님의 이름으로 기도드립니다. / 아멘!
+            </div>
+
+            <h3>마. 구원의 확신</h3>
+            <div class="speech">
+                지금 기도하신 일이 무엇을 의미하는지 예수 그리스도께서 하신 말씀을 읽어 주시면 좋겠습니다.
+            </div>
+
+            <div class="bible-verse">
+                📖 "진실로 진실로 너희에게 이르노니 믿는 자는 영생을 가졌나니" (요한복음 6:47)
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. 즉석양육 -->
+    <div id="section-4" class="section-wrap">
+        <h2>4. 즉석양육 (Immediate Nurture)</h2>
+        <div class="card">
+            <h3>가. 축하</h3>
+            <div class="speech">
+                오늘 <strong>(선생님)</strong>이 예수 그리스도를 믿고 영생을 얻어 하나님의 자녀가 되신 것을 축하합니다.
+            </div>
+
+            <h3>나. 함께 성장해요</h3>
+            
+            <h3>다. 신앙 성장의 다섯 가지 방안</h3>
+            <ul class="check-list">
+                <li><strong>성경</strong> (7일 후 재방문)</li>
+                <li><strong>기도</strong></li>
+                <li><strong>예배</strong> (주일예배 참석 약속)</li>
+                <li><strong>교제</strong></li>
+                <li><strong>전도</strong></li>
+            </ul>
+
+            <h3>라. 주일예배 참석 약속 확인</h3>
+            
+            <h3>마. 마침기도</h3>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 한 성도, 한 영혼을 주님께로.
+    </footer>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+</div>
+
+<script>
+    // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            document.getElementById("topBtn").style.display = "block";
+        } else {
+            document.getElementById("topBtn").style.display = "none";
+        }
+    }
+
+    // 부드럽게 맨 위로 스크롤
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
