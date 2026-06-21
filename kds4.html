@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성경이 말하는 거짓말 - 말씀묵상</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        strong {
+            color: #111827;
+            font-weight: 600;
+        }
+
+        /* 시작 기도문 커스텀 스타일 */
+        .intro-prayer-box {
+            background-color: #f9fafb;
+            border: 1px dashed #cbd5e1;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .intro-prayer-box p {
+            font-size: 1.15rem !important;
+            margin-bottom: 0.75rem;
+            color: #475569;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <article class="max-w-2xl w-full fade-in">
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-snug">
+                성경이 말하는 거짓말
+            </h1>
+            <p class="text-gray-500 tracking-wider text-base sm:text-lg">
+                창세기 2:23, 3:12
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <!-- 시작 기도문 -->
+            <div class="intro-prayer-box">
+                <p class="text-sm font-bold text-gray-400 mb-4 tracking-widest">🙏 시작하는 기도</p>
+                <p>살아계신 아버지 하나님, 은혜를 감사합니다.</p>
+                <p>사람이 떡으로만 사는 것이 아니요 하나님의 입에서 나오는 말씀으로 산다고 하셨기에,<br>오늘 그 말씀을 먹기 위해서 왔습니다.</p>
+                <p>저희들에게 하나님의 음성을 들려주시고,<br>우리가 영적인 배부름을 누릴 수 있도록 은혜 베풀어 주시옵소서.</p>
+                <p class="mb-0">예수님의 이름으로 기도하옵나이다. 아멘.</p>
+            </div>
+
+            <p>요한복음 9장에 보면 예수님께서 제자들과 함께 날 때부터 맹인 된 사람 앞을 지나가십니다. 예수님이 제자들과 길을 가다가 구걸하고 있는 이 사람을 보시고 길을 멈추십니다. 그냥 스치고 지나가는 것이 아니라 의지를 가지고 지긋이 쳐다보십니다. 그러자 제자들이 질문을 합니다.</p>
+            
+            <p>"이 사람이 맹인 된 것이 자기 죄입니까, 아버지 죄입니까?"</p>
+            <p>주님께서 이렇게 대답하십니다.</p>
+            <p>"자기 죄도 아니고 아버지 죄도 아니다."</p>
+            
+            <p>그리고 하나님이 목적이 있어서, 하시고자 하는 일이 있어서 그렇게 됐다고 말씀하십니다. 여기서 유명한 말이 나옵니다. <strong>고난에는 뜻이 있다.</strong> 우연히 당한 것이 아니라, 죄 때문에 당한 것이 아니라, 하나님의 목적과 뜻이 있어서 일어난 일이라는 것입니다.</p>
+
+            <h2>진리가 아닌 것을 진리처럼 믿는 착각</h2>
+            <p>제자들은 사람이 고난을 받는 것은 죄 때문이다, 다만 자기 죄냐 아버지 죄냐 그 차이일 뿐이라고 생각했습니다. 이것은 동서양을 막론하고 모든 사람이 가지고 있는 기본적인 생각입니다.</p>
+            <p>"이렇게 된 것은 죄 때문이다"라는 이 생각은 진리가 아니었습니다. 예수님이 "아니야"라고 부정하셨기 때문입니다. 그런데도 제자들은 진리가 아닌 것을 진리처럼 생각하고 있었습니다.</p>
+            <p>제자들은 예수님께 많은 시간 배웠음에도 불구하고 진리가 아닌 걸 진리처럼 믿고 있었습니다. '나는 교회를 나오니까, 성경을 많이 읽었으니까, 직분이 있으니까' 하면서 우리도 모르는 사이에 내가 알고 있는 모든 생각이 진리라고 생각한다면, 그것은 착각입니다.</p>
+            <p>신앙이 성장한다는 것은, 우리가 매번 성경을 읽고 말씀을 듣고 시간이 흘러가면서 잘못된 생각을 성경적인 생각으로 바꾸는 것입니다. 그것을 성경에서는 <strong>회개</strong>라 합니다.</p>
+            <p>우리의 지식과 생각에는 한계가 있습니다. 그래서 우리는 죽을 때까지 공부해야 됩니다. 오늘 뭔가를 깨달았다는 것은 그동안 잘못 알았다는 뜻입니다.</p>
+
+            <h2>성경이 말하는 거짓말</h2>
+            <p>오늘 제목은 <strong>'성경이 말하는 거짓말'</strong>입니다. 이 제목 속에는 우리가 생각하는 거짓말도 있다는 의미가 숨어 있습니다. 다시 말하면 '성경이 말하는 거짓말'은 거짓말에 대한 하나님의 생각입니다. 만일 내가 알고 있는 거짓말과 하나님이 생각하시는 거짓말이 다르다면, 이것은 상당히 심각한 문제입니다.</p>
+            <p>오늘 설교의 목표는 간단합니다. <strong>여러분을 전부 다 거짓말쟁이로 만드는 것</strong>입니다.</p>
+            <p>재밌는 것은, 예수 믿는 사람치고 자기가 거짓말쟁이라고 말하는 사람을 본 적이 없습니다. 오히려 "너무나 솔직해서 문제"라고 얘기합니다. 오늘 설교 한 시간 듣고 나서도 그렇게 버티는지 한번 보겠습니다.</p>
+
+            <h2>바울이 버린 말</h2>
+            <p>바울은 고린도전서에서 이렇게 말합니다.</p>
+            
+            <blockquote>
+                <p>"내가 어렸을 때에는 말하는 것이 어린아이와 같고 깨닫는 것이 어린아이와 같고 생각하는 것이 어린아이와 같다가 장성한 사람이 되어서는 어린아이의 일을 버렸노라."</p>
+            </blockquote>
+            
+            <p>바울은 어느 날 자기가 말하는 것에 문제가 있다는 것을 깨달았습니다. 우리가 무엇인가를 버린다는 것은 그것을 쓸모없다고, 가치 없다고 생각하니까 버리는 것입니다.</p>
+            <p>바울이 버린 말은 외국어 문제도, 욕설도, 품위 없는 말의 문제도 아니었습니다. 사도 바울은 명문 집안에 태어나 어려서부터 하나님 말씀을 배운 사람이었습니다. 여기서 '어렸을 때'는 영적으로 어렸을 때를 얘기하는 것입니다.</p>
+            <p>그렇다면 바울이 버린 말의 정체가 무엇일까요. 바울은 반평생 동안 바리새인으로 살았습니다. 바리새인은 자기를 의롭다고 믿고 다른 사람을 멸시하는 사람입니다. 자기 의에 가득 차 있으면 그 사람 입에서 나오는 말은 문제가 있는 것입니다.</p>
+            <p>전라도에서 태어나 30년 동안 사투리를 썼다면 그곳에서는 문제가 안 됩니다. 그런데 서울로 이사 가면 사람들이 다시 쳐다봅니다. 그때서야 '아, 내가 사투리를 쓰는구나' 알게 됩니다.</p>
+            <p>바울은 예수 믿기 전 바리새인으로 살면서 썼던 언어가 예수 믿고 나서 보니 심각한 문제가 있는, <strong>버려야 할 쓰레기</strong>였다는 것을 깨달은 것입니다.</p>
+            <p>만일 여러분이 바울처럼 그 말을 버리지 않았다면, 몇 년을 믿었든 직분이 무엇이든 그 사람은 성숙한 사람이 아닙니다. 대부분 사람들은 자기 말에 문제가 있다는 생각을 하지 않습니다. 말 때문에 큰 어려움을 당한 적이 없고, 말싸움에서 이겨 왔기 때문입니다. 그래서 자기 말이 다 옳다고 생각합니다.</p>
+
+            <h2>하나님, 마귀, 사람에 대한 성경의 소개</h2>
+            <p>성경은 하나님과 마귀와 사람을 각각 다르게 소개합니다.</p>
+            
+            <p><strong>하나님에 대해서는 이렇게 말합니다.</strong></p>
+            <blockquote>
+                <p>"하나님은 사람이 아니시니 거짓말을 하지 않으시고…" (민 23:19)</p>
+            </blockquote>
+            <p>하나님이 자신을 소개하는 두 가지가 있습니다. "나는 사랑이야", "나는 거짓말하지 않아." 이 두 가지를 합하면, 하나님이 여러분을 사랑하신다는 말은 거짓말이 아니라는 것입니다.</p>
+            <p>만일 여러분이 하나님의 사랑을 의심한다면, 두 가지를 다 범하는 것입니다. 하나님이 사랑하신다는 말을 안 믿는 것이고, 또 하나님이 거짓말하지 않으신다는 것을 믿지 않는 것입니다.</p>
+            <p>이 구절을 잘 보면 "하나님은 거짓말하지 않는다"고만 해도 되는데 꼭 <strong>"사람이 아니시니"</strong>라는 말을 넣습니다. 이 말 속에는 사람은 거짓말한다는 의미가 숨어 있습니다.</p>
+            <p>만일 우리가 "저는 거짓말하지 않아요"라고 말한다면, 그 말은 곧 "저는 사람이 아니에요, 저는 하나님이에요"라는 말이 되는 것입니다. 틀린 말입니다.<br>
+            하나님은 거짓말을 해서도 안 되고, 할 수도 없고, 하지도 않습니다. 만일 하나님이 거짓말을 하는 순간 하나님은 하나님이 아니게 됩니다.</p>
+            
+            <p><strong>마귀에 대해서는 이렇게 말합니다.</strong></p>
+            <blockquote>
+                <p>"너희는 너희 아비 마귀에게서 났으니… 그는 처음부터 살인한 자요 진리가 그 속에 없으므로 진리에 서지 못하고 거짓말을 한다 그는 거짓말쟁이요 거짓의 아비가 되었음이라." (요 8:44)</p>
+            </blockquote>
+            <p>마귀는 거짓의 아비, 거짓말하는 자입니다. 그 속에 진리가 없으므로 비진리, 곧 거짓말을 가지고 있습니다.</p>
+            
+            <p><strong>사람에 대해서는 이렇게 말합니다.</strong></p>
+            <blockquote>
+                <p>"만물보다 거짓되고 심히 부패한 것은 마음이라 누가 능히 이를 알리요마는." (렘 17:9)</p>
+            </blockquote>
+            <p>성경은 사람의 마음을 '거짓됐다', <strong>'심히 부패했다'</strong>고 표현합니다. 부패된 마음에서 죄가 나오고, 거짓된 마음에서는 거짓말이 나옵니다.</p>
+            <p>우리는 거짓말을 해서 거짓말쟁이가 아니라, 내 존재 자체가 본질적으로 거짓이라는 것입니다. 자기 마음이 거짓된 줄을 자기는 모릅니다. "누가 능히 이를 알리요"라는 말씀처럼, 거짓된 마음, 부패된 마음을 본인은 알지 못합니다.</p>
+            <p>혹시 아내나 남편이 "당신은 몇십 년을 같이 살았는데도 아직도 내 마음을 모르는 것 같아"라고 말한다면, "내 마음도 모르는데 네 마음을 내가 어떻게 알아?" 하고 답해 보세요. 성경은 우리가 우리 자신의 마음도 모른다고 말합니다.</p>
+            <p>교회에서 분쟁이 일어나면 해결할 길이 없는 이유가 있습니다. 싸우는 두 주체가 다 자기 말이 거짓말이 아니라고, 사실이라고 확신하기 때문에 절대로 싸움을 포기하지 않습니다.</p>
+
+            <h2>사전적 거짓말 vs 성경적 거짓말</h2>
+            <p>국어사전의 거짓말 정의는 이렇습니다.<br>
+            <em>'사실이 아닌 걸 사실인 것처럼 꾸며서 하는 말.'</em></p>
+            <p>나이를 35살인데 30살이라고 하거나, 몸무게가 75kg인데 60kg이라고 말하면 거짓말이라고 생각합니다. 그러나 이것은 세상적인 기준입니다. 성경은 거짓말을 다르게 정의합니다.</p>
+            
+            <p>요한일서 2장을 보겠습니다.</p>
+            <blockquote>
+                <p>"거짓말하는 자가 누구냐 예수께서 그리스도이심을 부인하는 자가 아니냐."</p>
+            </blockquote>
+            <p>예수가 메시아인 것을 믿지 않으면 그것이 거짓말입니다. 그렇다면 예수를 구세주로 믿지 않는 모든 사람은 거짓말쟁이입니다. 우리도 예수를 믿기 전에는 거짓말쟁이였습니다.</p>
+            
+            <blockquote>
+                <p>"누구든지 하나님을 사랑하노라 하고 그 형제를 미워하면 이는 거짓말하는 자니."</p>
+            </blockquote>
+            <p>하나님을 사랑하면서도 옆에 있는 사람을 미워한다면, 그것이 거짓말입니다.</p>
+            
+            <blockquote>
+                <p>"그를 아노라 하고 그의 계명을 지키지 아니하는 자는 거짓말하는 자요."</p>
+            </blockquote>
+            <p>하나님을 안다고 하면서 말씀에 순종하지 않으면 그것도 거짓말입니다.</p>
+            
+            <p>우리가 범하는 모든 불순종의 죄를 성경은 다른 말로 거짓말이라고 합니다. 하나님의 말씀을 믿지 못하겠다고 하는 것도 결국 "그건 거짓말이죠"라고 말하는 것과 같습니다.</p>
+            <p>예를 들어, "남편들아 아내를 귀히 여기라"는 말씀이 있습니다. 만일 아내가 귀하지 않은데 귀하게 여기라고 했다면 하나님이 거짓말한 것입니다. 그러나 하나님은 거짓말하지 않으시는 분입니다. 그러므로 이 말씀은 <strong>"네가 가지고 있는 재산 중에 아내보다 더 큰 재산은 없다"</strong>는 사실을 말씀하시는 것입니다.</p>
+            <p>그것이 마음에 와닿지 않는 것을 <strong>'철이 안 들었다'</strong>고 합니다. 시간이 흐르고 나이가 들면 아내 없이는 못 산다는 것을 깨닫게 됩니다. 그것이 사실로 드러나는 것입니다.</p>
+
+            <h2>창세기 2장과 3장 — 죄가 인간을 바꾸다</h2>
+            <p>오늘 본문을 보겠습니다. 아담의 입에서 나온 두 말입니다.</p>
+            
+            <blockquote>
+                <p>"이는 내 뼈 중의 뼈요 살 중의 살이라." (창 2:23)<br><br>
+                "하나님이 주셔서 나와 함께 있게 하신 여자, 그가 나무 열매를 내게 주므로 내가 먹었나이다." (창 3:12)</p>
+            </blockquote>
+            
+            <p>둘 다 아담의 말이고, 둘 다 하와에 대한 이야기입니다. 그런데 내용이 완전히 다릅니다. 2장은 긍정적이고, 3장은 부정적입니다. 둘 중 하나는 거짓말입니다.</p>
+            <p><strong>2장이 진리이고, 3장이 거짓말입니다.</strong></p>
+            <p>2장과 3장의 차이는 죄를 짓기 전과 후입니다. 그러면 죄는 인간을 어떻게 달라지게 했는가? 2장의 인간을 3장의 인간으로 만들었습니다.</p>
+            <p>아담은 2장으로 지음을 받았다가 죄를 지어서 3장으로 갔습니다. 그런데 우리는 태어날 때부터 죄인으로, 3장으로 태어납니다. 살다가 예수님을 만나서 다시 2장으로 돌아가는 것입니다.</p>
+            <p>예수 믿고 2장으로 건너오면, 3장에서 했던 모든 말을 버려야 합니다. 그것이 구습입니다. 바울이 버렸다고 한 그 말입니다.</p>
+            <p>하나님은 거짓말하지 않으시고, 마귀는 거짓말쟁이입니다. 만일 내가 거짓말을 한다면 마귀를 닮은 것이고, 진실을 말하면 하나님을 닮은 것입니다.</p>
+            <p>창세기 3장 12절이 중요한 이유는 인간이 범죄하고 난 다음에 최초로 그의 입에서 나온 말이기 때문입니다. 이를 통해 죄가 인간에게 어떤 영향을 미쳤는지 알 수 있습니다.</p>
+            <p>창세기 3장 12절 속에는 두 가지 거짓말이 있습니다.<br>
+            첫째, 좋으신 하나님을 좋지 않다고 말하는, <strong>하나님에 대한 거짓말</strong>입니다.<br>
+            둘째, 뼈 중의 뼈라고 했던 아내를 멸시하고 비난하는, <strong>하와에 대한 거짓말</strong>입니다.</p>
+            <p>흥미로운 것은, 아담은 자기가 거짓말하고 있다는 것을 몰랐습니다. "하나님이 주셨다", "여자가 먹으라고 했다" — 이 두 가지는 아담 입장에서 보면 사실처럼 보였습니다.</p>
+
+            <h2>사실인데 거짓말인 이유</h2>
+            <p>예를 들어 보겠습니다. 설교를 3시까지 했다면, "무슨 설교를 3시까지 해" 하고 불평하는 말은 사실입니다. 그러나 말씀을 전한 자를 배나 존경하라는 말씀에 위배되면 거짓말이 됩니다.</p>
+            <p>밥을 태운 아내에게 "밥도 못 하냐, 정신 어디다 뒀냐"고 말하는 것도 사실(태운 것)이지만, 아내를 귀히 여기라는 진리에 비춰 보면 거짓말입니다.</p>
+            <p>잠자는 아내에게 밤 12시에 커피를 끓여 달라고 흔들어 깨운 것도 사실이지만, 투덜거리고 덤비는 것은 남편에게 순종하고 존경하라는 말씀에 비추면 거짓입니다.</p>
+            <p>원수가 나에게 피해를 준 것은 사실이지만, 그 사람을 미워하면 원수를 사랑하라는 말씀을 어기는 거짓말입니다.</p>
+            <p>우리 그리스도인이 범하는 모든 잘못은 다 거짓말입니다. 사람들은 사실을 부풀려서 말하지 않았으니까 거짓말 안 한다고 생각합니다. 그러나 하나님을 사랑하면서 형제를 미워하고, 하나님을 안다면서 말씀에 불순종하는 것 자체가 다 거짓말입니다.</p>
+
+            <h2>해결책 — 마음에 말씀을 두라</h2>
+            <p>마귀는 그 속에 진리가 없으므로 거짓말을 합니다. 우리 마음속에 진리가 없으면 거짓말하게 됩니다. <strong>진리가 있으면 거짓말하지 않습니다.</strong></p>
+            
+            <blockquote>
+                <p>"내가 죄짓지 않기 위해서 내 마음에 말씀을 두었나이다." (시 119:11)</p>
+            </blockquote>
+            
+            <p>그러면 어떻게 마음속에 하나님의 말씀을 둘 수 있을까요. 간단합니다. <strong>말씀을 사랑하는 것</strong>입니다. 누군가를 사랑하면 그 사람이 내 생각 속에, 마음속에 있습니다.</p>
+            <p>하나님을 사랑하지 않고 말씀을 사랑하지 않는 사람의 마음속에는 하나님의 말씀이 없습니다. 영적으로 기대할 게 없는 것입니다. 그런 사람은 새빨간 거짓말을 하는 것입니다.</p>
+
+            <!-- 기도문 / 결단 섹션 -->
+            <div class="mt-16 bg-[#f0f9ff] border border-blue-200 rounded-xl p-6 md:p-10 shadow-sm">
+                <h3 class="text-xl md:text-2xl font-bold text-blue-900 mb-6 flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <div class="space-y-5 text-gray-700 leading-relaxed text-[1.05rem] md:text-lg word-break-keep text-center">
+                    <p>오늘 말씀의 목표는 우리 모두를 <strong>'거짓말하는 자'</strong>로 인정하게 하는 것입니다.</p>
+                    <p>거짓말하지 맙시다.</p>
+                    <p>하나님 말씀을 내 마음속에 두고,<br>내가 하는 모든 말을 말씀의 진리에 근거해서 하는 법을 배워야 합니다.</p>
+                    <p class="mt-4 text-sm font-normal text-blue-800">우리가 하는 말 한 마디 한 마디가 진리인지 거짓말인지 생각하며,<br>승리하는 삶이 되시기를 소망합니다.</p>
+                </div>
+            </div>
+          
+        </article>
+
+        <!-- 첨부 이미지 -->
+        <div class="meet-section">
+            <div class="meet-title">첨부자료</div>
+            <img src="https://lh3.googleusercontent.com/d/1hzvebn6QfQWqgC-hO8e2ZXwvjbf-PR3S" alt="말씀교안 4-1" class="meet-image" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1zYm38Nu62FzF145sp0KUGI0-qIe69GU-" alt="말씀교안 4-2" class="meet-image" loading="lazy">
+        </div>
+        
+        <!-- Footer Section -->
+        <footer class="mt-20 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
+            <p>© 2026 푸른동산 지산교회 말씀사경회 김덕신 목사</p>
+        </footer>
+
+    </main>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

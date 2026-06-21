@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성경이 말하는 원망 - 말씀묵상</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 첨부자료 섹션 스타일 */
+        .meet-section {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px dashed #e5e7eb;
+            text-align: center;
+        }
+        
+        .meet-title {
+            display: inline-block;
+            background-color: #f3f4f6;
+            color: #4b5563;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            margin-bottom: 2rem;
+        }
+        
+        .meet-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 결론 박스 스타일 */
+        .conclusion-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .conclusion-box li {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 1.5rem;
+        }
+        .conclusion-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .conclusion-box { padding: 1.5rem; }
+            .conclusion-box li { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <!-- max-w-3xl 로 너비 확장 -->
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                성경이 말하는 원망
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                창세기 2:23, 3:12
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <p>에덴동산에는 하나님께서 아담과 하와에게 이렇게 말씀하신 것이 있었습니다.</p>
+            
+            <blockquote>
+                <p>"선악을 알게 하는 나무의 실과는 먹지 말라."</p>
+            </blockquote>
+            
+            <p>이것이 하나님의 말씀, 곧 <strong>진리</strong>입니다. 그다음에는 사탄의 말이 있었습니다.</p>
+
+            <blockquote>
+                <p>"먹어라, 안 죽는다."</p>
+            </blockquote>
+
+            <p>이것을 비진리라 합니다. 죄라고 하는 것은 <strong>진리를 거부하고 비진리를 받아들인 것</strong>입니다. 그렇다면 회개란 <strong>비진리를 거부하고 진리를 받아들이는 것</strong>입니다. 영적 전쟁이란 진리 전쟁입니다. 얼마만큼 진리를 정확하게 아느냐 하는 전쟁입니다.</p>
+            
+            <p>오전에는 최초의 거짓말, 곧 사탄의 말이 거짓말이었다는 것을 다뤘습니다. 먹어도 안 죽는다는 것은 거짓말이고, 먹으면 죽는다는 것은 사실이었습니다. 그런데 아담과 하와의 눈에는 <strong>진리보다 비진리가, 거짓말이 더 그럴듯하게</strong> 보였던 것입니다.</p>
+            
+            <p>저와 여러분은 비진리에 너무나 취약합니다. 그래서 '나의 모든 생각은 거짓말이야, 하나님 말씀만 진리야' 하고 믿으셔야 합니다.</p>
+            
+            <p>베드로는 이렇게 말합니다.</p>
+            
+            <blockquote>
+                <p>"누가 말하려면 하나님의 말씀을 하는 것 같이 하고 누가 봉사하려면 하나님이 공급하시는 힘으로 하는 것 같이 하라." <span class="text-sm text-gray-500">(벧전 4:11)</span></p>
+            </blockquote>
+            
+            <p>신앙생활이란 말과 일, 이 두 가지로 사는 것입니다. 말할 때는 <strong>하나님의 말씀처럼</strong> 하고, 일할 때는 <strong>하나님이 공급하시는 힘으로</strong> 해야 합니다.</p>
+
+            <!-- Section 1 -->
+            <h2>죄가 인간에게서 가져간 것 — 감사</h2>
+            
+            <p>로마서 1장 21절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"하나님을 알되 하나님을 영화롭게도 아니하며 감사하지도 아니하고…"</p>
+            </blockquote>
+            
+            <p>이 말은 그 전에는 감사했다는 것입니다. 인간이 죄를 짓기 전에는 하나님께 감사했습니다. <strong>죄를 짓고 나서 감사를 잃어버린 것</strong>입니다.</p>
+            
+            <p>죄를 해결하는 것을 복음이라 합니다. 우리가 복음을 만나면 죄 때문에 잃어버린 감사를 회복해야 됩니다.</p>
+            
+            <p>만일 어떤 사람이 감사하지 않는다면, 그것은 단순히 '감사하지 않는다'는 사실이 아니라 <strong>'죄가 그를 지배하고 있다'는 증거</strong>입니다.</p>
+            
+            <p>남편이 아내를 귀히 여기라고 했는데 순종하지 않는다면, 그것은 죄가 그를 지배하고 있다는 증거입니다. 만일 어떤 사람의 입에서 감사가 나온다면 죄를 이기고 있다는 것입니다.</p>
+            
+            <p>아내를 귀히 여기지 못해 죄에 지고 있는 사람은, 그 부분만이 아니라 다른 모든 부분에도 죄의 열매가 나타납니다. 하나를 보면 열을 알 수 있다는 것입니다.</p>
+            
+            <p>욥은 자녀들의 생일 잔치가 끝나면 한 사람 한 사람 이름을 불러가며 죄를 용서해 달라는 제사를 드렸습니다. 성경은 그 사건을 기록하고 이렇게 토를 답니다.</p>
+            
+            <blockquote>
+                <p>"욥의 행사가 항상 이러하였더라."</p>
+            </blockquote>
+            
+            <p>내가 정말로 감사하면 복음의 사람이고, 감사하지 못하면 구원은 받았다 할지라도 복음적인 사람은 아닙니다.</p>
+
+            <!-- Section 2 -->
+            <h2>창세기 2장과 3장 — 감사와 원망</h2>
+            
+            <p>오늘의 본문은 '성경이 말하는 원망'입니다. 같은 본문이지만 메시지가 다릅니다.</p>
+            
+            <div class="bg-gray-50 p-6 rounded-xl my-8 border border-gray-200">
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="font-bold text-gray-800 mr-3 shrink-0">창세기 2:23</span>
+                        <span>"내 뼈 중의 뼈요 살 중의 살이라" &rarr; <strong class="text-blue-700 bg-transparent shadow-none px-0">키워드는 감사</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-gray-800 mr-3 shrink-0">창세기 3:12</span>
+                        <span>"저 여자 때문에 내가 먹었습니다" &rarr; <strong class="text-red-700 bg-transparent shadow-none px-0">키워드는 책임 전가, 곧 원망</strong></span>
+                    </li>
+                </ul>
+            </div>
+
+            <p>창세기 2장 23절은 죄짓기 전, 3장 12절은 죄짓고 난 후입니다. 그것을 죄성이라 합니다.</p>
+            
+            <p>내가 죄를 이기면 그 표시는 감사로 나타나고, 죄의 지배를 받으면 원망으로 나타납니다. 감사하는 사람을 영적으로 건강한 사람, <strong>원망하는 사람을 영적으로 병든 사람</strong>이라고 합니다.</p>
+            
+            <p>병이라고 하는 것은 나이나 직업에 상관없습니다. 의사도 병들 수 있습니다. 목사이지만 영적으로 건강하지 않을 수도 있습니다. 문제는 직분이 아니라 내가 지금 영적으로 건강하냐는 것입니다.</p>
+            
+            <p>여러분이 얼굴 찡그리고 인상 쓰면 창세기 3장 12절이고, 감사하고 아멘하면 창세기 2장 23절입니다. 식사하면서 국이 짜네 싱겁네 짜증 내면 그게 창세기 3장 12절입니다.</p>
+            
+            <p>성경에서 미워하시는 것 중 첫째가 <strong>'교만한 눈'</strong>입니다. 누군가에게 덤빌 때, 불순종할 때, 화났을 때 꼭 눈에 힘이 먼저 들어갑니다.</p>
+            
+            <p>갈라디아 교회 성도들이 영적인 상태가 좋았을 때는 바울을 위해 눈이라도 빼 주려고 했지만, 거짓 교사가 와서 변질된 복음을 전하니 바울의 눈을 뽑으려고 했습니다. 바울은 똑같았습니다. 다만 그들의 영적인 상태가 달라진 것입니다.</p>
+            
+            <p>2장과 3장의 차이는, <strong>말씀이 지배하면 2장</strong>이 되고 <strong>죄가 지배하면 3장</strong>이 됩니다. 사람이 좋고 안 좋고가 문제가 아닙니다.</p>
+            
+            <p>2장에서 3장으로 넘어가는 것은 1초도 안 걸립니다. "되게 못생겼네" 한마디 하면 끝입니다. 그것을 삐졌다, 시험 들었다고 합니다.</p>
+            
+            <p>3장에서 2장으로 넘어가는 것을 <strong>회개</strong>라 하고, 2장에서 3장으로 가는 것을 타락이라 합니다. 신앙이 좋다는 것은 2장에서 오랫동안 머무는 것이고, 3장으로 넘어가도 곧장 2장으로 돌아오는 것입니다.</p>
+
+            <!-- Section 3 -->
+            <h2>아담을 통해 배우는 원망</h2>
+            
+            <p>로마서 1장 21~23절은 죄짓고 난 후의 인간 모습을 보여줍니다.</p>
+            
+            <blockquote>
+                <p>"생각이 허망하여지며 마음이 어두워졌나니… 스스로 지혜 있다 하나 어리석게 되어…"</p>
+            </blockquote>
+            
+            <p>인간이 죄를 짓고 나서 마음과 생각이 고장 났습니다. 자동차로 비유하면 마음과 생각은 엔진에 해당됩니다.</p>
+            
+            <p>1억짜리 자동차라도 엔진이 고장 나면 시동이 안 걸리고 달리지 못합니다. 그러면 그것은 비싼 고철입니다. 인간이 범죄하고 난 다음 찾아온 죄의 결과는, 자동차의 엔진에 해당하는 <strong>마음과 생각이 고장 난 것</strong>입니다. 그런데 본인은 자기 엔진이 고장 났다는 것을 인정하지 않고 "나는 1억짜리야"라고 합니다.</p>
+            
+            <p>스스로 지혜롭다 하나 어리석게 됐다는 것도 마찬가지입니다.</p>
+            
+            <p>어리석은 사람의 특징은 배우려고 하지 않고, 자기가 똑똑하다고 생각하며, 말이 많고, 자기 생각대로 안 되면 화를 내고, 자꾸 누군가를 가르치려 합니다.</p>
+            
+            <p>아담을 통해 배울 수 있는 원망이란, 범죄하기 전에 없었던 것으로, <strong>감사의 반대</strong>입니다.</p>
+
+            <!-- Section 4 -->
+            <h2>욥을 통해 배우는 원망 — 하나님을 욕하는 것</h2>
+            
+            <p>욥기 1장 11절에서 사탄은 하나님께 말합니다.</p>
+            
+            <blockquote>
+                <p>"이제 주의 손을 펴서 그의 모든 소유물을 치소서 그리하시면 틀림없이 주를 향하여 욕하지 않겠나이까?"<br><br>
+                "이제 주의 손을 펴서 그의 뼈와 살을 치소서 그리하면 틀림없이 주를 향하여 욕하지 않겠나이까?" <span class="text-sm text-gray-500">(욥 2:5)</span></p>
+            </blockquote>
+            
+            <p>첫째는 소유물, 둘째는 건강입니다. 마귀의 목적은 우리의 돈을 가져가는 것이 아니라, <strong>우리 입에서 하나님을 향한 원망이 나오게 하는 것</strong>입니다.</p>
+            
+            <p>만일 여러분의 입에서 원망이 안 나오면 여러분은 승리하는 것이고, 원망이 나오면 마귀가 승리하는 것입니다.</p>
+            
+            <p>소유물을 빼앗기고 건강을 잃었을 때도 욥은 어떻게 했을까요.</p>
+            
+            <blockquote>
+                <p>"욥이 일어나 겉옷을 찢고 머리털을 밀고 땅에 엎드려 예배하고 이르되… 여호와의 이름이 찬송을 받으실지니이다 하니." <span class="text-sm text-gray-500">(욥 1:20~21)</span></p>
+            </blockquote>
+            
+            <p>욥은 욥기 1장 22절에서 <strong>"범죄하지 아니하였더라"</strong>라는 평가를 받습니다.</p>
+            
+            <p>욕이라는 단어, 범죄라는 단어, 원망이라는 단어는 표현은 다르지만 의미는 같습니다. <strong>하나님을 원망하는 것은 하나님을 욕하는 것</strong>입니다.</p>
+            
+            <p>너무나 많은 사람들이 하나님을 향해 투덜투덜하고 원망하면서도, 그것이 하나님을 욕하는 행위라는 생각을 못 합니다.</p>
+            
+            <p>건강을 잃었을 때 욥의 아내가 말합니다.</p>
+            
+            <blockquote>
+                <p>"당신이 그래도 자기의 온전함을 굳게 지키겠느냐 하나님을 욕하고 죽으라." <span class="text-sm text-gray-500">(욥 2:9)</span></p>
+            </blockquote>
+            
+            <p>욥은 이렇게 대답합니다.</p>
+            
+            <blockquote>
+                <p>"그대의 말이 한 어리석은 여자의 말 같도다." <span class="text-sm text-gray-500">(욥 2:10)</span></p>
+            </blockquote>
+            
+            <p>원망이란 어리석은 사람이 하는 말입니다. 내가 원망한다는 것은 <strong>내 스스로 어리석음을 보여 주는 것</strong>입니다.</p>
+            
+            <p>바울은 "내 인생에 다가온 모든 것이 합력하여 선을 이룬다"고 고백했습니다. 그것은 "내 인생에 버릴 것이 하나도 없다"는 말입니다. 반대로 "내가 재수 없어, 저런 남편 얻었어" 하고 말하는 사람은 어리석은 사람입니다.</p>
+            
+            <p>요셉이 사명을 몰랐을 때는 형들과 보디발의 아내를 원망했지만, 지혜로운 사람이 됐을 때는 원망하지 않고 형들을 용서하고 감사했습니다.</p>
+            
+            <p>욥을 통해서 배울 수 있는 원망은, <strong>하나님을 향하여 욕하는 것</strong>입니다.</p>
+
+            <!-- Section 5 -->
+            <h2>나를 비춰 주는 세 가지 거울</h2>
+            
+            <p>인간은 범죄하고 난 다음에 자기 자신을 보는 객관성을 잃어버렸습니다. 성경은 나를 비춰 주는 거울 세 가지를 말합니다.</p>
+            
+            <ol class="list-decimal list-outside ml-6 space-y-4 my-8 text-gray-800 font-medium text-[1.15rem]">
+                <li><strong class="bg-transparent shadow-none px-0 text-blue-700">성경입니다.</strong> 성경을 보면 나 자신의 모습이 그대로 드러납니다.</li>
+                <li><strong class="bg-transparent shadow-none px-0 text-blue-700">사람입니다.</strong> 내가 어떤 사람을 만나면 그 사람을 통해 내 모습이 비춰집니다. 이스라엘 백성들의 이야기가 우리의 거울이 됩니다.</li>
+                <li><strong class="bg-transparent shadow-none px-0 text-blue-700">사건입니다.</strong> 어떤 사건을 함께 겪으면서 그 사람이 어떻게 반응하는가를 보면 그 사람의 모습을 알 수 있습니다.</li>
+            </ol>
+
+            <!-- Section 6 -->
+            <h2>신분과 상태 — 고린도전서 10장과 광야의 네 가지 죄</h2>
+            
+            <p>고린도전서 10장 1절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"형제들아 나는 너희가 알지 못하기를 원하지 아니하노니…"</p>
+            </blockquote>
+            
+            <p>바울은 자기가 아는 것을 고린도교회 성도들도 알았으면 좋겠다는 안타까운 마음을 표현합니다.</p>
+            <p>형제들아, 너희가 모르는 그 지식이 너에게도 있었다면 너는 절대로 지금처럼 살지 않았을 것이라는 마음입니다.</p>
+            
+            <p>고린도전서 10장 1~4절은 이스라엘 백성들이 모세에게 속하여 세례를 받고 신령한 음식과 음료를 먹었다는 긍정적인 신분을 말합니다. 그런데 5절에 <strong>"그러나"</strong>가 나오며 부정적인 상태로 전환됩니다.</p>
+            
+            <p>신분과 상태는 다릅니다. 내가 아들이라는 것은 신분이고, 효자가 되느냐 불효자가 되느냐는 상태입니다. 구원받아 하나님의 자녀가 된 것은 신분이지만, <strong>자녀답게 살지 못하는 것은 상태의 문제</strong>입니다.</p>
+            
+            <p>광야에서 이스라엘 백성이 지은 죄가 네 가지 나옵니다 <span class="text-sm text-gray-500">(고전 10:7~10)</span>.</p>
+            
+            <ul class="list-disc list-inside ml-4 space-y-3 my-6 text-gray-800 font-medium">
+                <li>첫째, <strong>우상 숭배</strong></li>
+                <li>둘째, <strong>음행</strong> (하루 23,000명이 죽음)</li>
+                <li>셋째, <strong>시험</strong></li>
+                <li>넷째, <strong>원망</strong></li>
+            </ul>
+            
+            <p>여기서 묻고 싶습니다. 가장 많이 죄 때문에 죽은 죄가 무엇이었을까요. 음행으로는 23,000명이 죽었지만, <strong>원망하다가 여호수아와 갈렙을 제외한 60만 명이 죽었습니다.</strong></p>
+            
+            <p>원망이 <strong>음행보다 못하지 않은 죄</strong>라는 것입니다. 우리는 술과 담배는 죄라고 생각하니까 끊지만, 원망은 죄라고 생각하지 않으니까 끊지 못합니다.</p>
+            
+            <p>원망이라는 단어의 의미는 불평을 품고 중얼중얼하는 것입니다.</p>
+            <p>커피를 끓여 오면서도 "지는 손이 없나, 지가 끓여 먹지" 투덜대면서 끓여 오는 것, 그것이 원망입니다.</p>
+            <p>원망은 아담이 범죄하고 난 다음에 즉각적으로 한 것이기 때문에, 의인은 없나니 하나도 없기에, 모든 사람이 원망이라는 죄로부터 자유로운 사람이 하나도 없습니다.</p>
+            <p>저도 설교하면서 "왜 이렇게 아멘을 안 하는가" 하고 원망할 수 있습니다. 원망을 설교하면서도 원망할 수 있는 것입니다.</p>
+            
+            <p>모든 교회에서 일어나는 문제의 밑바닥에는 원망이 있습니다. 초대교회 첫 번째 문제도 헬라파 과부들의 원망이었습니다. 사탄이 교회를 공격하는 방법 중 하나가 원망입니다. 원망 문제를 제대로 다루지 못하면 목회를 할 수 없습니다.</p>
+
+            <!-- Section 7 -->
+            <h2>민수기 14장 — 열 명과 두 명의 차이</h2>
+            
+            <p>민수기 14장은 12명의 정탐꾼 중 열 명의 부정적 보고와 두 명의 긍정적 보고에 대한 백성들의 원망 사건입니다.</p>
+            <p>열 명의 보고는 거짓말이 아니었습니다. 40일 동안 관찰한 것을 그대로 얘기한 것이었습니다. 그들은 결코 멍청한 사람들이 아니었습니다.</p>
+            <p>열 명과 두 명, 둘 다 같은 것을 40일 동안 봤습니다. 그러나 차이가 있었습니다.</p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-5 rounded-r-lg my-6">
+                <p class="mb-0 text-blue-900 font-semibold text-[1.15rem] leading-relaxed">
+                    열 명은 말씀 없는 현실만 보았고,<br>두 명은 현실에 더하여 하나님의 말씀으로 보았습니다.
+                </p>
+            </div>
+            
+            <p>결혼한 지 50년 된 사람이 신혼부부 주례를 보면서 결혼 생활의 차가운 현실을 압니다. 목회 현실, 인생의 현실 앞에 누구나 무너질 수 있습니다. 그러나 <strong>말씀을 가지고 현실을 만나느냐, 말씀 없는 현실을 만나느냐</strong>의 차이가 있을 뿐입니다.</p>
+            
+            <p>하나님께서는 원망하는 자들에게 이렇게 말씀하십니다.</p>
+            
+            <blockquote>
+                <p>"내 영광과 애굽과 광야에서 행한 내 이적을 보고도 이같이 열 번이나 나를 시험하고 내 목소리를 청종하지 아니한… 또 나를 멸시하는 한 사람도 그것을 보지 못하리라." <span class="text-sm text-gray-500">(민 14:22~23)</span></p>
+            </blockquote>
+            
+            <p>원망은 순종하지 않는 것이며, <strong>하나님을 멸시하는 것</strong>입니다.</p>
+
+            <!-- Section 8 -->
+            <h2>원망도 기도다</h2>
+            
+            <p>민수기 14장 27절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"나를 원망하는 이 악한 회중에게 내가 어느 때까지 참으랴 이스라엘 자손이 나를 향하여 원망하는 바 그 원망하는 바를 내가 들었노라."</p>
+            </blockquote>
+            
+            <p>왜 원망이 기도인 줄 아십니까? 첫째, <strong>하나님이 그것을 들으시기 때문</strong>입니다.</p>
+            
+            <blockquote>
+                <p>"여호와의 말씀에 내 삶을 두고 맹세하노니 너희 말이 내 귀에 들린 대로 내가 너희에게 행하리니." <span class="text-sm text-gray-500">(민 14:28)</span></p>
+            </blockquote>
+            
+            <p>둘째, <strong>그대로 응답되기 때문</strong>입니다. 이스라엘 백성들은 모세를 원망했지만, 하나님은 그 말을 들으셨고 그대로 행하셨습니다. 결국 여호수아와 갈렙을 제외한 60만 명이 광야에서 죽었습니다.</p>
+            
+            <p>내가 언제 어디서 누구에게 하든 내 입에서 나가는 모든 말은 기도입니다. 하나님이 들으시고, 그대로 행하시기 때문입니다. 주일과 월요일이 다르지 않아야 합니다.</p>
+
+            <!-- Conclusion -->
+            <h2>결론 및 묵상</h2>
+            
+            <div class="conclusion-box">
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <span class="bg-gray-800 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 shrink-0 font-bold">1</span>
+                        <span>원망은 아담의 불순종으로 인해 인간에게 찾아온 죄의 열매요 결과요 증상입니다. 이 원망으로부터 자유로울 사람은 아무도 없습니다.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-gray-800 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 shrink-0 font-bold">2</span>
+                        <span>원망은 감사의 반대이며, 하나님을 욕하는 것이며, 하나님을 멸시하는 것입니다.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-gray-800 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 shrink-0 font-bold">3</span>
+                        <span>원망은 불순종이며, 하나님을 대적하는 것입니다.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-gray-800 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 shrink-0 font-bold">4</span>
+                        <span><strong>원망은 기도입니다.</strong> 하나님이 들으시고, 응답하시기 때문입니다.</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <p class="text-center font-bold text-[1.35rem] text-blue-900 mt-12 mb-6">
+                원망이라고 하는 것을 잘 해결하고,<br class="sm:hidden"> 원망 대신 감사가 넘쳐나는 여러분 되시길 축원합니다.
+            </p>
+
+        </div>
+      </div>
+          
+        </article>
+
+        <!-- 첨부 이미지 -->
+        <div class="meet-section">
+            <div class="meet-title">첨부자료</div>
+            <img src="https://lh3.googleusercontent.com/d/1tMRHNcU33g5ZO5FmuU8URsN_lf5An4cH" alt="말씀교안 5-1" class="meet-image" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1ISyjlEYkhf-VCqa8mxhZ3_BWFKU2REMb" alt="말씀교안 5-2" class="meet-image" loading="lazy">
+        </div>
+        
+        <!-- Footer Section -->
+        <footer class="mt-20 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
+            <p>© 2026 푸른동산 지산교회 말씀사경회 김덕신 목사</p>
+        </footer>
+
+    </main>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
