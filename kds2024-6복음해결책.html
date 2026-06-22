@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복음이 가난에 대한 해결책입니다 - 말씀묵상</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 기도문 및 결단 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+        .prayer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .prayer-box { padding: 2rem 1.5rem; }
+            .prayer-box p { font-size: 1.05rem !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                복음이 가난에 대한 해결책입니다
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                마태복음 11:2~5
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <p>복음이 가난에 대한 해결책입니다. 그럼 복음이 뭘까요?</p>
+            
+            <blockquote>
+                <p>"복음은 하나님이 선지자들을 통하여 그의 아들에 관하여 성경에 미리 약속하신 것이라." <span class="text-sm text-gray-500">(롬 1:2~3)</span></p>
+            </blockquote>
+            
+            <p>복음이란 하나님의 아들에 관한 것입니다. 하나님의 아들이 예수님입니다. 그러니 복음을 예수로 바꿔서 다시 읽어볼 수 있습니다. <strong>"예수님이 가난에 대한 해결책입니다."</strong></p>
+
+            <!-- Section 1 -->
+            <h2>제목 속에 숨은 부정문</h2>
+            
+            <p>이 제목은 긍정문이지만, 그 앞에 부정문이 숨어 있습니다.</p>
+            <p>완성된 문장은 이것입니다. <strong>"돈이 가난에 대한 해결책이 아니라, 복음이 가난에 대한 해결책입니다."</strong> 너무 길어서 앞부분을 잘라낸 것뿐입니다.</p>
+            <p>많은 사람들이 돈이 가난에 대한 해결책이라고 착각합니다.</p>
+            
+            <p>믿지 않는 사람들은 1번(돈)으로 생각하지만, 예수 믿는 사람은 2번(복음)으로 생각해야 합니다. 1번은 비진리이고, 2번이 진리입니다. <strong>마음속에 1번이 있는 한 절대로 행복할 수 없습니다.</strong></p>
+            
+            <p>만일 돈이 가난의 해결책이라면 반드시 부자가 되어야만 해결됩니다. 그러나 복음이 해결책이라면, 지금 처한 가난한 조건 속에서도 이미 해결된 것입니다.</p>
+            
+            <p>1번을 진리로 믿고 산다면 죽을 때까지 가난을 해결하지 못합니다. 가난이 나를 지배하면 인색해지고, 기쁨과 행복을 잃어버립니다.</p>
+
+            <!-- Section 2 -->
+            <h2>세례 요한의 질문과 예수님의 대답</h2>
+            
+            <p>세례 요한이 감옥에서 예수님이 하신 일을 듣고 의심이 생겼습니다.</p>
+            
+            <blockquote>
+                <p>"당신이 그리스도이오니이까 우리가 다른 이를 기다리오리이까." <span class="text-sm text-gray-500">(마 11:3)</span></p>
+            </blockquote>
+            
+            <p>예수님이 대답하십니다.</p>
+            
+            <blockquote>
+                <p>"가서 너희가 듣고 보는 것을 요한에게 고하되." <span class="text-sm text-gray-500">(마 11:4)</span></p>
+            </blockquote>
+            
+            <p>이어지는 5절은 이사야의 예언이 성취되고 있음을 보여줍니다.</p>
+            
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 text-gray-800">
+                <p class="mb-0 leading-relaxed font-medium">
+                    맹인, 못 걷는 사람, 나병 환자, 못 듣는 자, 죽은 자, 가난한 자 — 이것이 <strong>1번 '문제'</strong>입니다. 예수님이 행하신 일은 그 문제에 대한 <strong>2번 '해결책'</strong>입니다.
+                </p>
+            </div>
+            
+            <p>가난의 해결책은 무엇입니까? 본문이 없었다면 우리는 '돈'이라고 답했을 것입니다. 그러나 돈 벌어서 가난을 해결한 사람이 있습니까?</p>
+
+            <!-- Section 3 -->
+            <h2>마음은 돈으로 채워지지 않는다</h2>
+            
+            <blockquote>
+                <p>"만물보다 거짓되고 심히 부패한 것은 마음이라." <span class="text-sm text-gray-500">(예레미야 17:9)</span></p>
+            </blockquote>
+            
+            <p>마음은 이 세상에 있는 모든 것을 다 집어넣어도 채워지지 않습니다. <strong>돈으로는 마음을 채울 수 없습니다.</strong> 그러나 하나님을 집어넣으면 마음이 꽉 차게 됩니다.</p>
+            
+            <p>가난을 다른 표현으로 하면 '부족'입니다. 모든 인생은 이 부족과의 싸움입니다.</p>
+            
+            <p>부족한 것이 돈만은 아닙니다. 사랑이 부족해서 싸우고, 감사가 부족해서 원망하고, 기쁨이 부족해서 짜증 나고, 용서가 부족해서 원수가 생기고, 행복이 부족해서 불행합니다. <strong>돈만 채워지면 부족함이 없어질 거라 생각하지만, 돈을 벌고도 사랑이 부족해서 이혼하는 경우가 많습니다.</strong></p>
+
+            <!-- Section 4 -->
+            <h2>가난은 죄의 열매</h2>
+            
+            <p>가난은 죄 때문에 온 것입니다. 아담은 죄짓기 전에 하와에게 부족을 느끼지 않고 "내 뼈 중에 뼈요 살 중에 살이라" 했습니다. 그러나 죄를 짓고 나서는 "저 여자 때문에 그랬습니다"라고 했습니다.</p>
+            
+            <p>죄와 저주는 끊을 수 없이 연결되어 있습니다. 죄가 있는 곳에는 반드시 저주가 있습니다. <strong>가난은 죄를 지은 저주의 결과</strong>입니다. 그러므로 죄가 해결되면 저주도 해결됩니다.</p>
+            
+            <p>예수를 믿는다고 하면서도 여전히 가난의 지배를 받는다면, 그 믿음은 추상적이고 피상적인 것입니다.</p>
+
+            <!-- Section 5 -->
+            <h2>예수님의 가치를 높이라</h2>
+            
+            <p>바울은 빌립보서에서 이렇게 말합니다.</p>
+            <p>예수를 아는 지식이 가장 고상하다. 가장 가치가 있다는 것입니다.</p>
+            
+            <p>가난을 해결하려면, <strong>예수님의 가치를 높여야 합니다.</strong></p>
+            
+            <p>우리는 보통 복음을 이렇게 전합니다. "예수 믿으면 구원받고 천국 갑니다." 틀린 말은 아닙니다. 그러나 초대교회는 다른 개념도 가지고 있었습니다.</p>
+            <p>예수 믿으면 하나님의 자녀가 되고, 자녀는 곧 상속자라는 개념입니다.</p>
+
+            <!-- Section 6 -->
+            <h2>베드로와 성전 미문의 거지</h2>
+            
+            <p>사도행전 3장을 보겠습니다. 베드로와 요한이 성전에 올라가다가 미문에 앉아 있는 한 못 걷는 거지를 만났습니다. 베드로가 말합니다.</p>
+            
+            <blockquote>
+                <p>"은과 금은 내게 없거니와 내게 있는 것으로 네게 주노니 나사렛 예수 그리스도의 이름으로 일어나 걸으라." <span class="text-sm text-gray-500">(행 3:6)</span></p>
+            </blockquote>
+            
+            <p>베드로는 <strong>돈을 주지 않고 예수를, 곧 복음을 주었습니다.</strong></p>
+            
+            <p>그 사람이 그다음 날 부자가 됐을까요. 아닙니다. 그러나 흥미로운 변화가 있었습니다.</p>
+            <p>부자는 되지 않았지만, 구걸을 하지 않게 됐습니다. 그다음 날 그는 성전 안으로 들어가 다른 사람들과 함께 하나님을 찬양했습니다.</p>
+
+            <!-- Section 7 -->
+            <h2>은을 사랑하는 자는 만족하지 못한다</h2>
+            
+            <blockquote>
+                <p>"은을 사랑하는 자는 은으로 만족하지 못하고 풍요를 사랑하는 자는 소득으로 만족하지 아니하나니." <span class="text-sm text-gray-500">(전 5:10)</span></p>
+            </blockquote>
+            
+            <p>만족이란 부족을 해결하는 것입니다. 만족하지 못한다는 것은 부족하다는 것입니다.</p>
+            
+            <p>돈이 적어서 부족한 것이 아니라, <strong>돈을 사랑하기 때문에 부족함을 느끼는 것</strong>입니다. 예수 믿으면서도 가난에 시달린다는 것은, 사실 "나는 돈을 사랑합니다"라는 뜻입니다. 돈을 사랑하면 아무리 많이 모아도 부족합니다.</p>
+            
+            <p>반대로 하나님을 사랑하면, 적은 소득으로도 만족합니다.</p>
+
+            <!-- Conclusion -->
+            <div class="prayer-box">
+                <h3>
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <p>돈이 가난에 대한 해결책이 아닙니다.<br>
+                욕심은 채워질수록 더 커지고, 우리의 빈 마음은 결코 돈으로 채울 수 없습니다.</p>
+                <p>예수님이 복음, 곧 하나님의 해결책인 이유는,<br>
+                <strong>하나님을 사랑하고 예수님을 사랑할 때 우리의 마음이 온전히 채워지기 때문입니다.</strong></p>
+                <p class="font-bold text-blue-900 mt-6">
+                    실제로 부자가 되기 이전에 먼저 하나님을 목숨 걸고 사랑하십시다.<br>
+                    그러면 사랑에도, 기쁨에도, 행복에도 부족을 느끼지 않게 됩니다.<br>
+                    무언가가 부족하다고 느낄 때마다,<br class="hidden md:block"> 다시 한번 나 자신을 돌아보며 하나님을 더 사랑하겠노라 결단하시기를 소망합니다.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 2024 푸른동산 지산교회 말씀사경회 김덕신 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
