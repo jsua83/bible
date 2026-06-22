@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영적승리의 비결을 아십니까? - 말씀묵상</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 기도문 및 결단 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+        .prayer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .prayer-box { padding: 2rem 1.5rem; }
+            .prayer-box p { font-size: 1.05rem !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                영적승리의 비결을 아십니까?
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                로마서 8:35~37
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <!-- Intro -->
+            <p>모든 말과 모든 글에는 말하는 사람과 글 쓴 사람의 의도가 들어 있습니다. 그 의도를 다른 말로 마음이라고 합니다.</p>
+            <p>우리는 저자의 마음을 읽어야 합니다. 엄마가 아이에게 야단치며 거친 말을 해도, 그 마음을 읽으면 그것은 사랑입니다. 남편이 "보따리 싸서 친정 가라"고 해도, 그 마음을 읽으면 <strong>"너 없으면 못 산다"</strong>는 말입니다.</p>
+            
+            <blockquote>
+                <p>"누가 주의 마음을 알아서 가르치겠느냐." <span class="text-sm text-gray-500">(고전 2:16)</span></p>
+            </blockquote>
+            
+            <p>우리는 성경을 가르치는 것이 아니라, <strong>성경 속에 담긴 하나님의 마음, 하나님의 의도를 가르치고 듣는 것</strong>입니다.</p>
+
+            <!-- Section 1 -->
+            <h2>바울의 편지 — 교회 문제의 해결책</h2>
+            
+            <p>사도행전 교회가 어떤 문제를 만나면, 바울은 그 문제를 해결하기 위해 편지를 썼습니다.</p>
+            <p>고린도전서 1장 11절에서 바울은 <strong>"너희 중에 다툼이 있다"</strong>는 소식을 듣고 편지를 씁니다. 고린도전서 13장 사랑장은 결혼식 주례사가 아니라, 고린도 교회의 분쟁 문제에 대한 해결책으로 주어진 것입니다.</p>
+            <p>바울은 그들의 문제를 <strong>"너희가 사랑을 몰라서 그렇다"</strong>고 봤습니다. 사랑하지 않으니 시기하고, 자기 자랑을 하고, 무례히 행한 것입니다.</p>
+
+            <!-- Section 2 -->
+            <h2>에베소서 — 하나님을 알게 해달라는 기도</h2>
+            
+            <p>에베소서 1장 16~17절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"내가 기도할 때에 기억하며… 지혜와 계시의 영을 너희에게 주사 하나님을 알게 하시고."</p>
+            </blockquote>
+            
+            <p>바울이 에베소 교회를 위해 기도한 첫 제목은 "하나님을 알게 해주세요"였습니다. 에베소 교회의 문제는 하나님에 대한 무지에서 비롯됐다고 본 것입니다.</p>
+            <p>저는 믿지 않는 집안에서 태어났습니다. 아버지는 술을 마시면 자식들을 괴롭히고 때리셨습니다. 그러나 하나님을 알고 나서, 저는 무슨 일이 있어도 아내와 자식들에게 손찌검하지 않겠다고 결심했습니다.</p>
+            <p>하나님을 알았기에, 우리 가정에 일어날 많은 문제가 일어나지 않았습니다. 우리 가정과 교회의 문제는 대부분 돈이 없어서가 아니라, <strong>하나님을 더 알지 못해서 일어나는 것</strong>입니다.</p>
+            <p>예수님은 자신을 죽이는 사람들을 향해 <strong>"아버지여 저들을 사하여 주옵소서 자기들이 하는 것을 알지 못함이니이다"</strong>라고 하셨습니다. 스데반도 자기에게 돌 던지는 사람을 보며 <strong>"저들이 몰라서 그럽니다"</strong>라고 했습니다.</p>
+
+            <!-- Section 3 -->
+            <h2>하나님의 사랑을 알게 해주세요</h2>
+            
+            <p>에베소서 3장 18~19절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"능히 모든 성도와 함께 지식에 넘치는 그리스도의 사랑을 알고 그 넓이와 길이와 높이와 깊이가 어떠함을 깨달아…"</p>
+            </blockquote>
+            
+            <p>신앙생활의 본질은 하나님의 사랑을 알아가는 것입니다. 50년 예수 믿었는데 하나님의 사랑을 더 알지 못했다면, 신앙생활이 헛된 것입니다.</p>
+            <p>성경은 <strong>"지식을 따라 아내를 사랑하라"</strong>고 합니다. <span class="text-sm text-gray-500">(벧전 3:7)</span> 사랑하려면 알아야 합니다. 한번 와이셔츠를 선물 받았는데 사이즈가 맞지 않았습니다. 그 사람은 나를 사랑했지만, 나에 대한 지식이 없었습니다. <strong>하나님을 사랑하려면 하나님을 알아야 합니다.</strong></p>
+
+            <!-- Section 4 -->
+            <h2>고린도전서 13장 — 사랑이 아닌 것을 통해 사랑을 배운다</h2>
+            
+            <p>바울은 사랑이 무엇인지 가르칠 때, 사랑인 것과 사랑이 아닌 것을 비교합니다. "사랑은 무례히 행하지 아니하며, 사랑은 성내지 아니하며" — 성내는 것은 사랑이 아니라 자기 사랑, 이기심입니다.</p>
+            <p>고린도 교회의 문제 해결책은 사랑의 부재였습니다. <strong>하나님의 사랑을 안다면, 교회와 가정의 모든 문제가 해결될 것</strong>입니다.</p>
+
+            <!-- Section 5 -->
+            <h2>로마서 8장 — 넉넉히 이기는 비결</h2>
+            
+            <blockquote>
+                <p>"누가 우리를 그리스도의 사랑에서 끊으리요 환난이나 곤고나 박해나 기근이나 적신이나 위험이나 칼이랴." <span class="text-sm text-gray-500">(롬 8:35)</span></p>
+            </blockquote>
+            
+            <p>37절에 <strong>"그러나"</strong>가 나옵니다. 앞과 뒤가 상반됨을 나타내는 접속사입니다.</p>
+            
+            <blockquote>
+                <p>"그러나 이 모든 일에 우리를 사랑하시는 이로 말미암아 우리가 넉넉히 이기느니라." <span class="text-sm text-gray-500">(롬 8:37)</span></p>
+            </blockquote>
+            
+            <p>오늘 제목이 영적 승리의 비결입니다. 바울은 환난을 넉넉하게 이겼습니다. 어떻게요? <strong>우리를 사랑하시는 이로 말미암아, 곧 하나님의 사랑으로 이긴 것</strong>입니다.</p>
+            <p>가난을 돈으로 이기려 해도, 돈을 많이 벌어도 교만하면 가난을 이긴 것이 아닙니다. 가난 속에서 찬송하고 감사하면, 그것이 가난을 이긴 것입니다. 바울은 풍부할 때나 가난할 때나 자족했습니다. <span class="text-sm text-gray-500">(빌 4:11~13)</span></p>
+
+            <!-- Section 6 -->
+            <h2>하나님의 사랑을 어떻게 확인하는가 — 십자가</h2>
+            
+            <p>요한은 <strong>"하나님이 이처럼 사랑하사 독생자를 주셨다"</strong>고 하나님의 사랑을 확인했습니다. <span class="text-sm text-gray-500">(요 3:16)</span></p>
+            <p>바울도 <strong>"내가 죄인 되었을 때 그리스도께서 죽으심으로 우리에 대한 사랑을 확증하셨느니라"</strong>고 했습니다. <span class="text-sm text-gray-500">(롬 5:8)</span></p>
+            
+            <blockquote>
+                <p>"자기 아들을 아끼지 아니하시고 내주신 이가 어찌 그와 함께 모든 것을 우리에게 주지 아니하시겠느냐." <span class="text-sm text-gray-500">(롬 8:32)</span></p>
+            </blockquote>
+            
+            <p>하나님께 받은 것 중 최고의 선물은 아들입니다. 요한이나 바울이나 모두 예수 그리스도, <strong>십자가로 하나님의 사랑을 확인</strong>했습니다.</p>
+
+            <!-- Section 7 -->
+            <h2>야고보서 2장 — 사랑의 반대는 차별</h2>
+            
+            <blockquote>
+                <p>"너희가 만일 성경에 기록된 대로 네 이웃을 네 몸과 같이 사랑하라 하신 최고의 법을 지키면 잘하는 것이거니와 만일 너희가 사람을 차별하여 대하면 죄를 짓는 것이니…" <span class="text-sm text-gray-500">(약 2:8~9)</span></p>
+            </blockquote>
+            
+            <p>사랑의 반대는 차별입니다. 이웃을 내 몸과 같이 사랑한다는 것은, 이웃과 나를 차별하지 않는 것입니다.</p>
+            <p>마태복음 5장 43~44절도 같은 원리입니다. 바리새인들은 "이웃은 사랑하고 원수는 미워하라"고 가르쳤지만, 이것은 곧 차별하라는 것입니다. 주님은 <strong>"원수를 사랑하라"</strong>고 하셨습니다. 즉, 이웃과 원수를 차별하지 말라는 것입니다.</p>
+            <p>"너를 선대하는 자만 사랑하면 칭찬받을 것이 없느니라." 선대하는 사람만 사랑하는 것도 차별입니다.</p>
+
+            <!-- Section 8 -->
+            <h2>하나님은 우리를 차별하지 않으신다</h2>
+            
+            <p>오늘의 핵심 문장은 이것입니다. <strong>"하나님은 우리를 사랑하십니다."</strong> 이 말은 곧, <strong>"하나님은 우리를 차별하지 않으십니다."</strong></p>
+            <p>하나님이 우리를 차별 없이 사랑하신다는 것을 이해한다면, 교만할 이유도, 분노할 이유도, 열등의식을 가질 이유도 없습니다.</p>
+            <p>비유로 설명하겠습니다. 하나님이 모든 사람에게 똑같이 막대한 가치의 선물(예수님, 구원)을 주셨다고 합시다. 그런데 어떤 사람에게는 그 외에 추가로 작은 물건들(건강, 자녀, 재능 등)을 더 주셨고, 어떤 사람에게는 안 주셨습니다.</p>
+            <p>그 막대한 선물의 가치를 안다면, 추가로 받은 작은 것들의 차이 때문에 자랑하거나 좌절할 이유가 없습니다. 큰 것을 받았는데 작은 것 때문에 자랑하거나 불평한다면, 그 사람은 자신이 받은 큰 선물의 가치를 모르는 것입니다.</p>
+            <p>하나님이 차별 없이 똑같이 주신 것은 <strong>오직 예수님, 구원</strong>입니다. 배우자, 자녀, 건강, 재산 등은 사람마다 다릅니다. 그러나 차별이 없는 단 하나는 예수입니다.</p>
+
+            <!-- Section 9 -->
+            <h2>마태복음 20장 — 포도원 비유와 천국</h2>
+            
+            <blockquote>
+                <p>"천국은 마치 품꾼을 얻어 포도원에 들여보내려고 이른 아침에 나간 집주인과 같으니." <span class="text-sm text-gray-500">(마 20:1)</span></p>
+            </blockquote>
+            
+            <p>12시간 일한 사람과 1시간 일한 사람에게 주인은 똑같이 주었습니다. 이것이 천국입니다. <strong>천국은 차별을 없앤 곳입니다.</strong></p>
+            <p>12시간 일한 사람은 차별이 없다는 것에 분노했습니다. 이 사람의 속에는 천국이 없는 것입니다. "나를 좀 알아달라, 나를 좀 인정해 달라"는 마음이 곧 천국을 거부하는 마음입니다.</p>
+            <p>주인은 1시간 일한 사람에게 은혜를 베풀었습니다. 그 은혜가 임하면, 12시간 일한 사람이든 1시간 일한 사람이든 마음속에 천국이 생깁니다.</p>
+
+            <!-- Conclusion -->
+            <div class="prayer-box">
+                <h3>
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <p>당신은 영적 승리의 비결을 아십니까?<br>
+                어떻게 하면 세상을 넉넉하게 이길 수 있습니까?</p>
+                <p><strong>오직 하나님의 사랑으로 이깁니다.</strong></p>
+                <p class="font-bold text-blue-900 mt-6">
+                    십자가를 통해 확증된 하나님의 차별 없는 사랑을 깨닫고,<br class="hidden md:block">
+                    그 크신 사랑 안에서 어떠한 환난이나 어려움도<br class="hidden md:block">
+                    넉넉히 이기는 승리의 삶을 살게 하옵소서.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 2019 푸른동산 지산교회 말씀사경회 김덕신 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
