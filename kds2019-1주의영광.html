@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주의 영광을 보게하소서 - 말씀묵상</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 기도문 및 결단 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+        .prayer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .prayer-box { padding: 2rem 1.5rem; }
+            .prayer-box p { font-size: 1.05rem !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                주의 영광을 보게하소서
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                창세기 40:14~15
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <!-- Intro -->
+            <blockquote>
+                <p>"당신이 잘 되시거든 나를 생각하고 내게 은혜를 베풀어서 내 사정을 바로에게 아뢰어 이 집에서 나를 건져 주소서. 나는 히브리 땅에서 끌려온 자요 여기서도 옥에 갇힐 일은 행하지 아니하였나이다."</p>
+            </blockquote>
+
+            <!-- Section 1 -->
+            <h2>요셉의 생애 — 28살과 39살의 차이</h2>
+            
+            <p>요셉의 생애를 도표로 그려 보겠습니다.</p>
+            <p>17살에 종으로 팔리고, 28살에 감옥에 들어가고(국무총리가 되기 2년 전), 30살에 국무총리가 되고, 110살에 죽습니다.</p>
+            
+            <p>28살, 감옥에서 술 맡은 관원장에게 요셉이 말합니다.</p>
+            
+            <blockquote>
+                <p>"당신이 잘되시거든 나를 생각하고 나를 여기서 건져 주세요. 나는 형들에게 팔려 왔습니다. 보디발의 아내에게 누명을 썼습니다. 나는 이 감옥이 너무 싫어요."</p>
+            </blockquote>
+            
+            <p>이 말 속에는 억울함, 상처, 한이 있습니다. 형들에 대한 미움과 보디발의 아내에 대한 억울함이 그 속에 있습니다.</p>
+            
+            <p>30살에 국무총리가 되고, 7년 풍년과 2년 흉년이 지나 39살에 아버지와 형들이 애굽으로 내려옵니다. 그때 요셉이 창세기 45장에서 형들에게 말합니다.</p>
+            
+            <blockquote>
+                <p>"당신들이 나를 이곳에 팔았다고 해서 근심하지 마소서 한탄하지 마소서 하나님이 생명을 구원하시려고 나를 당신들보다 먼저 보내셨나이다." <span class="text-sm text-gray-500">(창 45:5)</span></p>
+            </blockquote>
+            <blockquote>
+                <p>"그런즉 나를 이리로 보내신 이는 당신들이 아니요 하나님이시라." <span class="text-sm text-gray-500">(창 45:8)</span></p>
+            </blockquote>
+            
+            <p>28살 때는 "형들이 나를 팔았다"고 했던 요셉이, 11년이 지난 39살에는 <strong>"하나님이 보내셨다"</strong>고 말합니다. 내 인생에 일어난 모든 일은 우연이 아니라 하나님의 손이라는 것입니다.</p>
+
+            <!-- Section 2 -->
+            <h2>영적 성장이란 — 사건에 대한 해석이 달라지는 것</h2>
+            
+            <p>28살과 39살의 차이는 무엇입니까? 사건은 똑같습니다. 형들이 동생을 판 것은 사실입니다. 그러나 <strong>그 사건에 대한 해석이 달라진 것</strong>입니다.</p>
+            <p>영적으로 성장한다는 것은, 사건이 변경되는 것이 아니라 그 사건을 바라보는 관점과 해석이 달라지는 것입니다.</p>
+            <p>자녀가 사춘기 때 거친 말을 한다고 속상해하는 부모님들이 있습니다. 그러나 시간이 지나면서 영적으로 성숙해질 수 있음을 기다려 주어야 합니다.</p>
+
+            <!-- Section 3 -->
+            <h2>욥과 세 친구 — 고난에 대한 다른 해석</h2>
+            
+            <p>욥이 고난을 당했을 때, 세 친구가 욥을 위로하러 찾아왔습니다. 그러나 위로의 말 대신 욥과 끊임없이 논쟁을 벌입니다.</p>
+            <p>논쟁을 한다는 것은, <strong>고난에 대한 해석이 서로 달랐다는 것</strong>입니다.</p>
+            
+            <p>욥의 아내도 욥과 생각이 달랐습니다.</p>
+            <blockquote>
+                <p>"하나님을 저주하고 죽으시오… 당신이 그래도 그 순전을 굳게 지키겠나이까." <span class="text-sm text-gray-500">(욥 2:9)</span></p>
+            </blockquote>
+            
+            <p>고난에 대한 해석의 차이는 곧 신앙의 차이였습니다.</p>
+            <p>욥기 42장에서 하나님이 욥과 세 친구 사이에 끼어들어 판결하십니다.</p>
+            
+            <blockquote>
+                <p>"내가 너와 네 두 친구에게 노하노니 이는 너희가 나를 가리켜 말한 것이 옳지 못함이라." <span class="text-sm text-gray-500">(욥 42:7)</span></p>
+            </blockquote>
+            
+            <p>하나님이 분노하신 이유는, 세 친구의 신학, 곧 <strong>하나님에 대한 생각이 틀렸기 때문</strong>입니다.</p>
+            <p>세 친구가 가졌던 해석은 이것이었습니다.</p>
+            
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 text-gray-800">
+                <p class="mb-0 font-medium">
+                    "욥, 네가 이런 고난을 당하는 걸 보니 죄지었지? 회개해. 그러면 하나님이 고난을 거두실 거야."
+                </p>
+            </div>
+            
+            <p>어떤 고난은 죄 때문에 오기도 합니다. 그러나 인생에 다가오는 모든 고난이 다 죄 때문이라고 생각하면 심각합니다. 누군가의 어려움을 보면서 '저 사람이 지금 하나님께 벌받고 있다'고 생각한다면, 우리도 욥의 세 친구와 똑같은 신학을 가진 것입니다.</p>
+            
+            <p>욥의 신학은 달랐습니다.</p>
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-5 rounded-r-lg my-6">
+                <p class="mb-0 text-blue-900 font-semibold text-[1.15rem] leading-relaxed">
+                    "이것은 죄 때문에 오는 것이 아닙니다. 하나님이 나를 위해 유익하게 주시는 것입니다. 이 고난을 통과하면 정금같이 될 것이고, 고난 너머에 계신 하나님은 좋으신 하나님입니다."
+                </p>
+            </div>
+            
+            <p>하나님은 결국 욥의 신학이 옳았다고 평가하십니다. 세 친구는 잘못을 인정하고 욥에게 가서 번제를 드리며 수정했습니다.</p>
+            <p>이렇게 잘못을 수정하는 것을 <strong>회개</strong>라 합니다. 회개를 하는 순간, 여러분의 신학이 달라지는 것입니다.</p>
+
+            <!-- Section 4 -->
+            <h2>그리스도인이 해석해야 할 두 가지</h2>
+            
+            <p>그리스도인은 두 가지를 해석해야 합니다. 첫째는 성경을 해석하는 것, 둘째는 나에게 다가오는 사건을 해석하는 것입니다. 결국, <strong>성경을 가지고 나에게 다가온 사건을 해석하는 것이 신앙</strong>입니다.</p>
+            <p>신앙 없이도 "왜 저런 남편을 만났을까" 하고 해석할 수 있습니다. 그러나 신앙이 들어가면 "저 아내에게 내가 꼭 맞는 사람이구나" 하고 해석할 수 있습니다. 그 해석이 달라진 것이 바로 영적 성장입니다.</p>
+
+            <!-- Section 5 -->
+            <h2>주의 영광을 보게 하소서</h2>
+            
+            <p>오늘 주제는 '주의 영광을 보여 주소서'입니다. 성경에서 <strong>'본다'</strong>는 개념이 무엇인지 먼저 정리해 보겠습니다.</p>
+            <p>마태복음 13장에서 제자들이 예수님께 묻습니다.</p>
+            
+            <blockquote>
+                <p>"어찌하여 그들에게 비유로 말씀하시나이까." <span class="text-sm text-gray-500">(마 13:10)</span></p>
+            </blockquote>
+            <blockquote>
+                <p>"천국의 비밀을 아는 것이 너희에게는 허락되었으나 그들에게는 아니 되었나니." <span class="text-sm text-gray-500">(마 13:11)</span></p>
+            </blockquote>
+            
+            <p>선택받은 사람과 그렇지 않은 사람의 결정적인 차이는, 천국의 비밀을 아느냐 모르느냐입니다. 영생은 하나님의 아들을 아는 것이라 했습니다. 아는 것이 핵심입니다.</p>
+            
+            <blockquote>
+                <p>"그러므로 내가 그들에게 비유로 말하는 것은 그들이 보아도 보지 못하며 들어도 듣지 못하며 깨닫지 못함이니라." <span class="text-sm text-gray-500">(마 13:13)</span></p>
+            </blockquote>
+            
+            <p>우리는 <strong>보고 듣고 깨닫는 사람</strong>이어야 합니다.</p>
+            <p>마태복음 15장에서도 비슷한 장면이 나옵니다.</p>
+            
+            <blockquote>
+                <p>"무리를 불러 이르시되 듣고 깨달으라." <span class="text-sm text-gray-500">(마 15:10~11)</span></p>
+            </blockquote>
+            
+            <p>바리새인들이 이 말씀을 깨닫지 못했을 때, 주님은 그들을 이렇게 평가하십니다.</p>
+            
+            <blockquote>
+                <p>"심은 것마다 내 하늘 아버지께서 심으시지 않은 것은 뽑힐 것이니 그냥 두라… 그들은 맹인이 되어 맹인을 인도하는 자라." <span class="text-sm text-gray-500">(마 15:13~14)</span></p>
+            </blockquote>
+            
+            <p>말씀을 듣고 깨닫지 못하는 것을, 성경은 <strong>'보지 못한다'</strong>고 표현합니다.</p>
+
+            <!-- Section 6 -->
+            <h2>보는 것과 아는 것은 같다</h2>
+            
+            <p>에베소서 1장 18~19절에서 바울은 이렇게 기도합니다.</p>
+            
+            <blockquote>
+                <p>"너희 마음의 눈을 밝히사 그의 부르심의 소망이 무엇이며… 그 능력의 지극히 크심이 어떠한 것을 너희가 알게 하시기를 구하노라."</p>
+            </blockquote>
+            
+            <p>'마음의 눈을 밝히사'라고 했으면서 결론은 '알게 하옵소서'입니다. 이것은 영적인 세계에서 보는 것과 아는 것이 같다는 뜻입니다.</p>
+            <p>우리는 보통 "은혜받았습니다"라고 말합니다. 더 정확하게 표현하면 <strong>"몰랐던 것을 알았습니다"</strong>입니다. 그리고 성경적인 표현으로는 <strong>"주의 영광을 봤습니다"</strong>가 됩니다.</p>
+            <p>은혜받았다, 깨달았다, 알았다, 들었다, 보았다 — 이 모든 말이 같은 의미입니다.</p>
+
+            <!-- Section 7 -->
+            <h2>어둠에서 빛으로 — 구원의 본질</h2>
+            
+            <p>고린도후서 4장 3~4절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"만일 우리의 복음이 가리었으면 망하는 자들에게 가리어진 것이라 그중에 이 세상의 신이 믿지 아니하는 자들의 마음을 혼미하게 하여 그리스도의 영광의 복음의 광채가 비치지 못하게 함이니."</p>
+            </blockquote>
+            
+            <p>6절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"어두운 데에 빛이 비치라 말씀하셨던 그 하나님께서 예수 그리스도의 얼굴에 있는 하나님의 영광을 아는 빛을 우리 마음에 비추셨느니라."</p>
+            </blockquote>
+            
+            <p>사람은 둘 중 하나입니다. 어둠 가운데 있든지, 빛 가운데 있든지. 마귀는 그리스도를 아는 영광의 빛을 비추지 못하게 막습니다. 그런데 하나님께서 그 빛을 비춰 주셔서, 우리는 1번(어둠)에서 2번(빛)으로 옮겨졌습니다.</p>
+            <p>창조주 하나님, 곧 "빛이 있으라" 말씀하신 그 하나님이 우리 마음속에도 <strong>영적인 빛을 비추셔서 영적인 어둠을 몰아내신 것</strong>, 그것이 구원입니다.</p>
+
+            <!-- Section 8 -->
+            <h2>구원과 닮아감 — 둘 다 주의 영광을 보는 것</h2>
+            
+            <p>고린도후서 3장 18절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"우리가 다 수건을 벗은 얼굴로 거울을 보는 것같이 주의 영광을 보매 그와 같은 형상으로 변화하여 영광으로부터 영광에 이르니."</p>
+            </blockquote>
+            
+            <p>구원받지 못한 사람이 주의 영광을 보면 구원을 받습니다. 구원받은 사람이 주의 영광을 보면 주님을 닮아갑니다. 똑같이 주의 영광을 보는 것이지만, 결과가 다른 것입니다.</p>
+            <p>신앙생활을 오래 했는데도 주님을 닮아가지 못하는 이유는, <strong>주의 영광을 보지 않기 때문</strong>입니다. 주의 영광을 보지 않고 봉사하면 영적으로 성장하지 못하고 오히려 이상해질 수 있습니다.</p>
+            <p>부흥회를 하는 이유는 여러분이 미처 몰랐던 것을 깨닫게 하고, 듣게 하고, 알게 하고, 보게 하기 위함입니다. 그것이 주의 영광을 보는 것이고, 주의 영광을 보면 주님을 닮아갑니다.</p>
+            <p>제자훈련을 해서 사람이 달라진다는 말보다 더 정확한 표현은, 제자훈련을 통하여 성경을 공부하고 암송하면서 <strong>주의 영광을 볼 기회가 많아지기 때문에 달라지는 것</strong>입니다.</p>
+
+            <!-- Section 9 -->
+            <h2>왜 보지 못하는가 — 마음에 진리가 거할 곳이 없다</h2>
+            
+            <p>고린도후서 3장 14~15절을 보겠습니다.</p>
+            <blockquote>
+                <p>"그들의 마음이 완고하여… 오늘까지 모세의 글을 읽을 때에 수건이 마음을 덮었도다."</p>
+            </blockquote>
+            
+            <p>요한복음 8장 37절, 42절을 보겠습니다.</p>
+            <blockquote>
+                <p>"내 말이 너희 안에 있을 곳이 없으므로 나를 죽이려 하는도다." <span class="text-sm text-gray-500">(요 8:37)</span></p>
+            </blockquote>
+            <blockquote>
+                <p>"어찌하여 내 말을 깨닫지 못하느냐 이는 내 말을 들을 줄 알지 못함이라." <span class="text-sm text-gray-500">(요 8:42~43)</span></p>
+            </blockquote>
+            
+            <p>바리새인들의 마음속에는 비진리가 가득 차서 진리가 비집고 들어갈 틈이 없었습니다. 은혜받는다는 것은, <strong>내 속에 있는 진리가 전해지는 진리를 화답하고 영접하는 것</strong>입니다.</p>
+            <p>어떤 사람은 하나님의 말씀을 들을 줄 모릅니다. 신앙생활을 영적으로 성장하려면, 하나님 말씀을 듣는 법을 배우고 훈련해야 합니다.</p>
+
+            <!-- Section 10 -->
+            <h2>성령이 주의 영광을 나타내신다</h2>
+            
+            <p>요한복음 16장 12~14절을 보겠습니다.</p>
+            <blockquote>
+                <p>"내가 아직도 너희에게 이를 것이 많으나 지금은 너희가 감당하지 못하리라 그러나 진리의 성령이 오시면 그가 너희를 모든 진리 가운데로 인도하시리니… 그가 내 영광을 나타내리니 내 것을 가지고 너희에게 알리겠음이라."</p>
+            </blockquote>
+            
+            <p><strong>성령께서 진리를 통해 주의 영광을 나타내십니다.</strong></p>
+            <p>주의 영광은 성경 속에 담겨져 있고, 숨겨져 있습니다. 그것을 보려면 성경을 열고, 읽고, 찾아야 합니다. 성령이 그 담겨지고 숨겨진 영광을 깨닫게 해 주십니다.</p>
+            <p>하나님이 어떤 사람을 쓰시는 것은, 그 사람의 입에서 진리가 나오기 때문입니다. 여러분의 입에서 끊임없이 진리가 나오면 성령이 역사하실 것입니다.</p>
+
+            <!-- Section 11 -->
+            <h2>요한복음을 기록한 목적</h2>
+            
+            <blockquote>
+                <p>"예수께서 제자들 앞에서 이 책에 기록되지 아니한 다른 표적도 많이 행하셨으나 이것을 기록함은 너희로 예수께서 하나님의 아들 그리스도이심을 믿게 하려 함이요." <span class="text-sm text-gray-500">(요 20:30~31)</span></p>
+            </blockquote>
+            
+            <p>요한복음 2장, 가나의 혼인잔치를 보겠습니다.</p>
+            <blockquote>
+                <p>"예수께서 이 첫 표적을 갈릴리 가나에서 행하여 그의 영광을 나타내시매 제자들이 믿으니라." <span class="text-sm text-gray-500">(요 2:11)</span></p>
+            </blockquote>
+            <p>제자들이 믿은 이유는, 물이 포도주가 되는 것을 통해 주의 영광을 본 것입니다.</p>
+            <p>그런데 가나의 혼인잔치에서 포도주를 마신 사람 중에는 "이렇게 맛있는 술 처음 봤소"라고만 말한 사람들도 있었습니다. 그들은 술 이야기만 했을 뿐, 주의 영광을 보지 못했습니다.</p>
+            
+            <p>요한복음 6장, 오병이어의 사건을 보겠습니다.</p>
+            <p>5,000명이 넘는 사람들이 떡을 먹었지만, 예수께서는 그들에게 말씀하십니다.</p>
+            <blockquote>
+                <p>"너희가 나를 찾는 것은 표적을 본 까닭이 아니요 떡을 먹고 배부른 까닭이라." <span class="text-sm text-gray-500">(요 6:26)</span></p>
+            </blockquote>
+            <p>떡을 먹었지만 그들은 주의 영광을 보지 못했습니다.</p>
+            
+            <p>베드로의 그물 사건(누가복음 5장)을 보겠습니다.</p>
+            <p>다른 사람들은 고기를 잡는 데 급급했지만, 베드로는 엎드러졌습니다. <strong>고기를 본 것이 아니라 주의 영광을 본 것</strong>입니다.</p>
+            
+            <p>열 명의 나병 환자 중 한 사람만 돌아왔습니다.</p>
+            <p>나머지 아홉은 나병이 나았다고만 얘기했지만, 돌아온 한 사람은 "나병이 나았다"고 말하지 않고 <strong>"주님을 만났다"</strong>고 했습니다.</p>
+            
+            <p>십자가 위의 두 강도도 마찬가지입니다.</p>
+            <p>한 강도는 "당신의 나라에 임하실 때에 나를 생각하소서" 하며 예수님을 보았습니다. 다른 한 사람은 보지 못했습니다.</p>
+            <p>주의 영광을 본다는 것은, 인생을 이렇게 달라지게 하는 것입니다. 어떤 사람은 입만 열면 술 얘기, 돈 얘기를 합니다. <strong>주의 영광을 본 사람은 예수님 얘기를 합니다.</strong></p>
+
+            <!-- Conclusion -->
+            <div class="prayer-box">
+                <h3>
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <p>주의 영광은 말씀 속에 담겨져 있고 숨겨져 있습니다.</p>
+                <p>하나님, 내게 일어난 사건과 상황을 성경적 관점으로 해석하게 하시고<br>
+                비진리의 어두움을 몰아내는 <strong>영광의 빛</strong>을 우리 마음에 비추어 주옵소서.</p>
+                <p class="font-bold text-blue-900 mt-6">
+                    "하나님, 오늘 깨닫게 하시고 주의 영광을 보여주시니 감사합니다."
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 2019 푸른동산 지산교회 말씀사경회 김덕신 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

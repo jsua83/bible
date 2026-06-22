@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영적 장애물을 아십니까? - 말씀묵상</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 기도문 및 결단 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+        .prayer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .prayer-box { padding: 2rem 1.5rem; }
+            .prayer-box p { font-size: 1.05rem !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                영적 장애물을 아십니까?
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                로마서 10:1~3
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <!-- Intro -->
+            <p>우리가 주의 영광을 본 것은, 빛을 창조하신 하나님께서 우리에게 영광의 빛을 비추셔서 일어난 일입니다.</p>
+            <p>구원도, 성화도 모두 '주의 영광을 보는 것'입니다. 구원은 아버지께서 하시고, 성화는 성령께서 하시지만, 둘 다 정답은 같습니다 — <strong>주의 영광을 보는 것</strong>입니다.</p>
+            <p>그렇다면 반대로 생각해야 합니다. 무엇이 우리의 구원을 가로막고, 무엇이 우리의 성화를 방해하고 있습니까? 왜 우리는 영적으로 성숙해지지 않습니까?</p>
+            <p>정답을 먼저 말씀드리겠습니다. <strong>구원의 장애물은 '자기'입니다. 영적 성숙의 장애물도 역시 '자기'입니다.</strong></p>
+            <p>여러분이 만일 구원받지 못한 사람이라면 구원받기 위해 자기가 깨져야 하고, 영적으로 성장하려면 자기가 깨져야 합니다.</p>
+
+            <!-- Section 1 -->
+            <h2>로마서 10장 — 이스라엘의 실패 이유</h2>
+            
+            <p>사도 바울은 자기 민족 이스라엘이 그토록 열심히 하나님을 섬겼는데도 왜 실패했는지를 설명합니다.</p>
+            
+            <blockquote>
+                <p>"내가 증언하노니 그들이 하나님께 열심이 있으나 올바른 지식을 따른 것이 아니니라." <span class="text-sm text-gray-500">(롬 10:2)</span></p>
+            </blockquote>
+            
+            <p>열심은 있었지만 지식이 없었습니다.</p>
+            
+            <blockquote>
+                <p>"하나님의 의를 모르고 자기 의를 세우려고 힘써 하나님의 의에 복종하지 아니하였느니라." <span class="text-sm text-gray-500">(롬 10:3)</span></p>
+            </blockquote>
+            
+            <p>이스라엘 백성의 문제는, <strong>하나님의 의를 모르고 자기 의를 세우려 했다는 것</strong>입니다. 자기 의 때문에 그들은 하나님을 대적하게 됩니다.</p>
+
+            <!-- Section 2 -->
+            <h2>바리새인과 세리 — 예수님의 태도</h2>
+            
+            <p>예수님은 바리새인을 향해서는 <strong>"독사의 자식아, 회칠한 무덤"</strong>이라며 강력하게 책망하셨지만, 세리와 창기는 친구처럼 대하셨습니다.</p>
+            <p>이 태도는 윤리적이지도, 일반적이지도, 보편적이지도, 종교적이지도, 전통적이지도 않았습니다. 당시 사람들은 이를 이해하지 못했고, 결국 예수님을 십자가에 못 박았습니다.</p>
+
+            <!-- Section 3 -->
+            <h2>지금도 있는 바리새인</h2>
+            
+            <p>지금 바리새인이라는 직책이나 직분으로 불리는 사람은 없습니다. 그러나 바리새인은 있습니다.</p>
+            <p>그 바리새인은 교회 안에, 그리고 새신자가 아니라 오래 믿은 사람들 중에 있습니다. 목사, 장로, 권사, 사모를 포함해서요.</p>
+            <p>2000년 전의 바리새인은 지금 다른 이름으로 불립니다. <strong>위선자</strong>입니다. 겉과 속이 다르고, 사람을 의식하면서 하나님을 의식하지 않는 사람입니다. 여러분이 예수를 잘못 오래 믿으면 바리새인이 될 확률이 매우 높습니다.</p>
+            <p>우리는 주님의 모든 영역을 닮아야 합니다. 사랑, 겸손, 온유함만이 아니라, 위선에 대한 거룩한 분노도 닮아야 합니다.</p>
+
+            <!-- Section 4 -->
+            <h2>왜 바리새인이 되는가 — 죄와 수치심에서 시작된 옷과 담</h2>
+            
+            <p>아담과 하와는 범죄하기 전에는 벌거벗었으나 부끄러워하지 않았습니다. 그러나 죄를 짓자마자 수치심이 찾아왔고, 그들은 무화과나무 잎으로 옷을 만들었습니다.</p>
+            <p>옷은 두 가지 기능을 합니다. 부끄러운 것을 감추는 기능, 그리고 자기를 더 돋보이게 하는 기능입니다.</p>
+            <p>인간은 죄를 짓자마자 옷을 만들어 입었습니다. 이제는 감추는 영역이 생겼고, 실제보다 더 아름답게 꾸미려는 죄성이 찾아왔습니다.</p>
+            <p><strong>회개란, 하나님 앞에 나아가 그 모든 옷을 내려놓고, 감추지 않고 포장하지 않고, 벌거벗은 모습으로 나아가는 것</strong>입니다.</p>
+            <p>우리가 입은 옷, 그것은 곧 담입니다. 약점을 보이지 않기 위해 담을 치는데, 그러다 보면 그 담 안에 갇혀 관계가 끊어지고 외로워집니다.</p>
+            <p>사람은 외모를 보지만, 하나님은 중심을 보십니다. (삼상 16:7) 사람은 외모로 속을 수 있지만, 하나님은 속일 수 없습니다. 아담이 죄를 짓고 하나님 앞에서 숨었던 것도 그 때문입니다.</p>
+            <p>외모와 중심의 차이가 생기는 것, 그것이 바리새인입니다. 하나님을 의식하는 사람은 외모보다 중심을 가꿉니다.</p>
+            
+            <blockquote>
+                <p>"너희에게나 다른 이에게나 판단받는 것이 내게는 매우 작은 일이라." <span class="text-sm text-gray-500">(고전 4:3)</span></p>
+            </blockquote>
+
+            <!-- Section 5 -->
+            <h2>누가복음 5장 — 죄인을 부르러 왔다</h2>
+            
+            <blockquote>
+                <p>"건강한 자에게는 의사가 쓸 데 없고 병든 자에게라야 쓸 데 있나니 내가 의인을 부르러 온 것이 아니요 죄인을 불러 회개시키러 왔노라." <span class="text-sm text-gray-500">(눅 5:31~32)</span></p>
+            </blockquote>
+            
+            <p>예수님은 죄 문제를 해결하러 오셨습니다. 그런데 바리새인들은 "내가 죄인입니다"라고 말하지 않았습니다. 그 말은 곧 "당신은 나에게 필요 없습니다"라는 뜻입니다.</p>
+            <p>지금 이 시대의 바리새인은, 예수님에 대한 절박함이 없는 사람입니다. <strong>"예수 없어도 잘 산다, 예수님의 도움이 필요 없다"는 마음, 이것이 자기 의입니다.</strong></p>
+            <p>등 따습고 배부르면 절박함을 잃어버립니다. 신약 시대에는 "심령이 가난한 자가 복이 있다, 애통하는 자가 복이 있다"고 말씀합니다. 구약의 복(물질, 건강, 장수)은 그리스도를 가리키는 표지판이었습니다. 표지판이 가리키던 그 복(예수님)이 이미 왔으므로, 신약에서는 복의 개념이 마음의 상태로 바뀌었습니다.</p>
+
+            <!-- Section 6 -->
+            <h2>디모데전서 1장 — 죄인 중에 내가 괴수</h2>
+            
+            <p>바울은 다메섹 도상에서 주의 영광을 본 후 평생 주님을 섬겼습니다. 그런데 인생의 마지막에 그가 한 고백은 이것입니다.</p>
+            
+            <blockquote>
+                <p>"미쁘다 모든 사람이 받을 만한 이 말이여 그리스도 예수께서 죄인을 구원하시려고 세상에 임하셨다 하였도다 <strong>죄인 중에 내가 괴수니라.</strong>" <span class="text-sm text-gray-500">(딤전 1:15)</span></p>
+            </blockquote>
+            
+            <p>이것은 죄가 더 많아져서 한 말이 아닙니다. <strong>죄를 더 깨달았기 때문입니다.</strong> 이것이 진정한 겸손입니다.</p>
+
+            <!-- Section 7 -->
+            <h2>누가복음 18장 — 자기를 의롭다고 믿는 자</h2>
+            
+            <blockquote>
+                <p>"또 자기를 의롭다고 믿고 다른 사람을 멸시하는 자들에게…" <span class="text-sm text-gray-500">(눅 18:9)</span></p>
+            </blockquote>
+            
+            <p>자기 의가 있는 사람은, 자기 의의 잣대로 사람을 보기 때문에 자기가 만나는 모든 사람이 죄인이 됩니다. 자기 의가 있는 남편에게는 아내가 죄인이 되고, 자기 의가 있는 아내에게는 남편이 죄인이 됩니다.</p>
+            <p>사랑은 귀히 여기는 것입니다. (벧전 3:7) 그런데 자기 의가 있는 사람은 다른 사람을 귀히 여길 수 없습니다. 자기 의가 있으면 사랑할 수 없고, 사랑할 수 없으면 행복할 수 없습니다.</p>
+            
+            <blockquote>
+                <p>"무릇 자기를 높이는 자는 낮아지고 자기를 낮추는 자는 높아지리라." <span class="text-sm text-gray-500">(눅 18:14)</span></p>
+            </blockquote>
+            
+            <p>자기를 높이는 것이 자기 의이고, 자기 의의 다른 표현이 교만입니다.</p>
+
+            <!-- Section 8 -->
+            <h2>교만의 두 가지 증상 — 자랑과 비난</h2>
+            
+            <p>자기 의가 있는 사람은 두 가지로 나타납니다. 자기를 향해서는 <strong>자랑</strong>으로, 다른 사람을 향해서는 <strong>비난</strong>으로 나타납니다.</p>
+            <p>바울도 한때 자기 자랑이 많았던 사람이었지만, 깨지고 나서는 <strong>"오직 예수 그리스도의 십자가 외에는 자랑할 것이 없다"</strong>고 고백합니다.</p>
+            <p>외모를 자랑하는 사람은 외모가 부족한 사람을 무시합니다. 헌금이나 사역의 숫자를 자랑하는 사람은 작은 교회 목사를 무시합니다. 반면 작은 것도 은혜로 받았다고 생각하는 사람은 작은 교회 목사도 귀히 여깁니다.</p>
+            <p>교만한 사람은 절대로 다른 사람의 말을 듣지 않습니다. 그래서 배우지 못하고, 그래서 영적으로 성장하지 못합니다.</p>
+
+            <!-- Section 9 -->
+            <h2>바울에게 주신 고난과 가시</h2>
+            
+            <p>바울이 구원받기 전에는 교만과 자아가 있었습니다. 그러나 다메섹 도상에서 주의 영광을 보고 자기가 깨졌습니다.</p>
+            <p>그런데 구원받고 난 후, 하나님은 바울에게 고난과 가시, 두 가지를 주셨습니다.</p>
+            <p>고린도후서 1장 8~9절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"우리가 아시아에서 당한 환난을 너희가 모르기를 원하지 아니하노니… 우리로 자기를 의지하지 말고 오직 죽은 자를 다시 살리시는 하나님만 의지하게 하려 하심이라."</p>
+            </blockquote>
+            
+            <p>자기를 의지하는 것이 자기 의이고, 하나님만 의지하는 것이 겸손입니다. 고난을 주신 이유는, <strong>바울이 교만해지지 않고 겸손하도록 한 것</strong>입니다.</p>
+            <p>고난과 가시(고후 12장)의 공통점은, 둘 다 자기 의에 빠지지 않도록 겸손하게 하는 목적입니다. 차이점은, 고난은 지나가지만, 가시는 평생 끌어안고 가야 한다는 것입니다.</p>
+            <p>바울이 가시를 없애 달라고 기도했지만, 하나님은 그것을 없애지 않으셨습니다. 결혼이나 출산 같은 한때의 고민은 지나갑니다. 그러나 바꿀 수 없는 것(체형, 배우자, 자녀 등)은 끌어안고 가야 하는 것입니다.</p>
+            <p>하나님은 고난을 주시면서도 피할 길을 함께 주셨습니다. 바울에게는 의사 누가를 동행자로 붙여 주셨습니다.</p>
+            <p>그토록 철저히 깨졌던 바울에게조차 하나님이 가시를 주셨다는 것은, <strong>자기라는 존재와는 평생 싸워야 한다는 뜻</strong>입니다. 훈련받고 고난을 통과했다 할지라도 자기는 언제든지 다시 꿈틀거립니다.</p>
+            <p>자아는 의로운 행위를 할 때 가장 교묘하게 따라옵니다. 오래 믿은 사람, 헌신을 많이 한 사람일수록 자기 의의 함정에 빠질 확률이 높습니다.</p>
+
+            <!-- Section 10 -->
+            <h2>욥의 예 — 고난을 통한 정금</h2>
+            
+            <p>욥에게 다가온 고난은 그를 정금으로 만드는 작업이었습니다.</p>
+            
+            <blockquote>
+                <p>"내가 가는 길을 그가 아시나니 그가 나를 단련하신 후에는 내가 정금같이 나오리라." <span class="text-sm text-gray-500">(욥 23:10)</span></p>
+            </blockquote>
+            
+            <p>욥기 42장 5절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"내가 주께 대하여 귀로 듣기만 하였사오나 이제는 눈으로 주를 뵈옵나이다."</p>
+            </blockquote>
+            
+            <p>고난을 통해 귀로 듣던 것에서 눈으로 보는 것으로 바뀌었습니다. 욥은 하나님을 더 정확하게, 더 확신 있게 알게 됐습니다.</p>
+            
+            <blockquote>
+                <p>"그러므로 내가 스스로 거두어들이고 티끌과 재 가운데서 회개하나이다." <span class="text-sm text-gray-500">(욥 42:6)</span></p>
+            </blockquote>
+            
+            <p>하나님을 알면 자기 자신을 알게 됩니다. 회개란, 자기가 죄인인 것을 깨달았다는 것입니다.</p>
+            <p>욥기 31장에는 욥이 하나님 앞에 내밀었던 것들(자신의 의로운 행위)이 나옵니다. 처녀를 주목하지 않았다, 고아를 아버지처럼 돌봤다, 가난한 자를 외면하지 않았다 등.</p>
+            <p>그러나 하나님은 욥기 40장 8절에서 반문하십니다.</p>
+            
+            <blockquote>
+                <p>"네가 내 공의를 부인하려느냐 네 의를 세우려고 나를 악하다 하겠느냐."</p>
+            </blockquote>
+            
+            <p>사람들이 다른 사람을 깎아내리는 이유는, 그래야 자기가 세워진다고 생각하기 때문입니다. 자기라는 함정에 빠지면 상대방을 죄인으로 만들고, 심지어 하나님까지도 죄인으로 만듭니다.</p>
+            <p>자아는 다른 사람의 희생을 먹고 큽니다. 십자군 전쟁이나 종교 재판에서 사람을 죽이면서도 죄책감을 느끼지 못한 것도 자기 의 때문입니다.</p>
+            <p>상대방을 죄인으로 만드는 것이 곧 살인입니다. 그래서 주님은 바리새인을 향해 <strong>"처음부터 살인한 자"</strong>라고 하셨습니다.</p>
+
+            <!-- Section 11 -->
+            <h2>은혜가 통치한다는 것</h2>
+            
+            <p>아내가 밥을 태웠을 때를 예로 들어보겠습니다.</p>
+            <p>남편이 "밥도 못 하냐, 정신 어디다 뒀냐" 한다면, 그것은 아내를 죄인으로 만드는 것이고, 자기 의가 통치하는 것입니다.</p>
+            <p>반대로 "괜찮아, 누룽지 끓여 먹고 싶었는데" 한다면, 그것은 <strong>은혜가 통치하는 것</strong>입니다.</p>
+            <p>하나님의 은혜 때문에 죄인이었던 우리가 의인이 됐습니다. 마찬가지로 우리도 다른 사람을 용서하고 의인으로 대하는 것, 그것이 은혜가 통치하는 것입니다.</p>
+
+            <!-- Conclusion -->
+            <div class="prayer-box">
+                <h3>
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <p>구원과 영적 성장의 가장 큰 장애물은 자기 의요, 교만입니다.<br>
+                자기 의는 특히 우리가 사명을 감당하고 말씀대로 살려 할 때 더욱 교묘하게 찾아옵니다.</p>
+                <p>오늘 이 말씀을 붙잡고 주님 앞에 엎드립니다.</p>
+                <p class="font-bold text-blue-900 mt-6">
+                    "하나님, 남과 싸우지 않고 내 안의 자아와 싸우게 하옵소서.<br class="hidden md:block">
+                    내가 죄인입니다. 내가 죄인 중의 괴수입니다.<br class="hidden md:block">
+                    판단과 비난을 멈추고 은혜가 통치하는 삶을 살게 하옵소서."
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 2019 푸른동산 지산교회 말씀사경회 김덕신 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

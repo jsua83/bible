@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성경이 말하는 믿음 - 말씀묵상</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+        
+        h3 {
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            color: #1f2937 !important;
+            margin-top: 2.5rem !important;
+            margin-bottom: 1.25rem !important;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 강조 리스트 박스 스타일 */
+        .highlight-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-box p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 1.5rem;
+        }
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 결단 박스 스타일 */
+        .conclusion-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .conclusion-box li {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 1.5rem;
+        }
+        .conclusion-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 기도문 및 결단 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+        .prayer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .highlight-box, .prayer-box, .conclusion-box { padding: 1.5rem; }
+            .highlight-box p, .prayer-box p, .conclusion-box li { font-size: 1.05rem !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <!-- max-w-3xl 로 너비 확장 -->
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                성경이 말하는 믿음
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                로마서 10:17
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <p>믿음이라고 하는 것은 우리가 생각하는 것보다 훨씬 더 중요합니다. 신앙생활은 믿음으로 시작합니다. 우리는 구원을 믿음으로 받습니다.</p>
+            
+            <blockquote>
+                <p>"믿음으로 하지 아니한 모든 것은 죄니라." <span class="text-sm text-gray-500">(롬 14:23)</span></p>
+            </blockquote>
+            
+            <p>구원만 믿음이 아니라, 구원받고 난 다음에도 <strong>믿음으로 하지 아니한 모든 것은 죄</strong>입니다. 무슨 일을 하느냐가 중요한 게 아니라, 그 일을 믿음으로 하느냐가 중요합니다.</p>
+            
+            <blockquote>
+                <p>"믿음이 없이는 하나님을 기쁘시게 하지 못하나니." <span class="text-sm text-gray-500">(히 11:6)</span></p>
+            </blockquote>
+            
+            <p>목회를 믿음으로 하지 않으면 죄지만, 시장에서 장사를 믿음으로 하면 하나님을 기쁘시게 하는 것입니다. 어떤 행위가 기쁘시게 하는 것이 아니라, 그 일을 <strong>믿음으로 하느냐</strong>가 중요합니다.</p>
+            
+            <p>정확하게 알지 못하면, 자기가 말하는 것을 확신하지 못하면 거기에 목숨을 내놓을 수 없습니다. 초대교회 성도들은 우리보다 지식이 부족했지만, 자기가 아는 것에 목숨을 걸었습니다. 우리는 더 많이 알지만 목숨을 못 겁니다.</p>
+
+            <!-- Section 1 -->
+            <h2>믿음의 대상 — 하나님</h2>
+            
+            <p>성경에서 나오는 모든 것은 대상이 있습니다. 감사에는 감사의 대상이, 사랑에는 사랑의 대상이 있습니다. 믿음에도 대상이 있습니다.</p>
+            
+            <p>믿음이 없는 사람은 없습니다. 어떤 사람은 귀신을, 어떤 사람은 돈을, 어떤 사람은 자기를 믿습니다. 문제는 <strong>믿음의 대상이 누구냐</strong>는 것입니다.</p>
+            <p>성경에서 말하는 <strong>믿음의 대상은 하나님</strong>입니다.</p>
+            
+            <p>처음 만난 사람에게 천만 원을 빌려달라고 하면 빌려주지 않습니다. "네가 누군 줄 알고, 뭘 믿고?" 라고 합니다. 누군가를 믿으려면 반드시 믿음의 대상을 알아야 합니다.</p>
+            
+            <p>믿으려면 두 가지가 필요합니다. <strong>능력과 인격</strong>입니다. 1억을 빌려주고 100억을 벌었는데 그것을 안 갚으면 능력은 있는데 인격이 없는 것입니다.</p>
+            
+            <p>하나님은 좋으신 하나님(사랑의 하나님)이시며, 능력 많으신 하나님이십니다. 우리가 하나님께 헌금하고 봉사하는 것은 하나님께 꿔주는 것과 같습니다.</p>
+            
+            <p>국민은행, 농협의 이자는 3~5%인데, 성경에서 하나님은 30배, 60배, 100배를 약속하십니다. 이런 기가 막힌 거래를 외면하는 것은, 사람들이 은행보다도 하나님을 믿지 않는다는 증거입니다.</p>
+            
+            <p>하나님을 믿으려면 하나님을 알아야 합니다. 그리고 신앙생활 속에서 하나님을 경험해야 합니다. <strong>신앙생활하면서 하나님을 경험하는 것은 영적 재산이 됩니다.</strong></p>
+
+            <!-- Section 2 -->
+            <h2>믿음의 내용 — 말씀</h2>
+            
+            <p>무엇을 믿느냐, 이것은 믿음의 내용입니다. <strong>그리스도인은 하나님의 말씀을 믿습니다.</strong></p>
+            <p>하나님은 믿음의 대상이고, 말씀은 믿음의 내용입니다. 믿음의 대상인 하나님도 알아야 하고, 믿음의 내용인 말씀도 알아야 합니다. 알지 못하는 걸 어떻게 믿습니까?</p>
+
+            <!-- Section 3 -->
+            <h2>믿음은 들음에서</h2>
+            
+            <p>본문 말씀입니다.</p>
+            
+            <blockquote>
+                <p>"믿음은 들음에서 나며 들음은 그리스도의 말씀으로 말미암았느니라." <span class="text-sm text-gray-500">(롬 10:17)</span></p>
+            </blockquote>
+            
+            <p>말을 하고 듣는 것은 시간적으로 동시지만, 논리적으로는 말하는 것이 먼저입니다. 믿음은 들음에서 납니다. 들었다는 것은 누군가가 먼저 말을 했다는 것입니다. <strong>하나님이 먼저 말씀하셨기 때문에 내가 들은 것</strong>입니다. 그래서 믿음도 은혜입니다.</p>
+            
+            <p>로마서 10장 8~9절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"말씀이 네게 가까워 네 입에 있으며 네 마음에 있다 하였으니… 네가 만일 네 입으로 예수를 주로 시인하며 네 마음에 하나님이 그를 죽은 자 가운데서 살리신 것을 믿으면 구원을 받으리라."</p>
+            </blockquote>
+            
+            <p>말씀이 점점 가까워져서 입에 있고, 마음에 있게 됩니다. 하나님의 말씀은 입과 귀를 통해 마음속으로 들어갑니다.</p>
+            
+            <p>그래서 성경은 말씀을 떡, 양식, 꿀처럼 단 것으로 표현합니다. 모두 입과 연관된 표현입니다. 여러분이 말씀을 들을 때 입을 통해 들어가기 때문에 입을 잘 활용해야 합니다.</p>
+            
+            <blockquote>
+                <p>"마음으로 믿어 의에 이르고 입으로 시인하여 구원에 이르느니라." <span class="text-sm text-gray-500">(롬 10:10)</span></p>
+            </blockquote>
+            
+            <p>마음으로는 믿지만 입으로 시인하지 않는 것을 짝사랑이라 합니다. <strong>입으로 표현해야 역사가 일어납니다.</strong></p>
+            
+            <p>또한 귀를 통해서도 말씀이 들어갑니다. "들을 귀 있는 자는 들으라." 앉아 있어도 귀를 닫아 놓은 사람이 있습니다.</p>
+            
+            <p>하나님의 말씀이 입과 귀를 통해 마음으로 들어갔다가, 다시 입을 통해 표현되는 것을 <strong>믿음, 곧 순종</strong>이라 합니다.</p>
+
+            <!-- Section 4 -->
+            <h2>마음속에서 일어나는 세 가지 일</h2>
+            
+            <p>하나님의 말씀이 마음속에 들어와서 일어나는 일은 세 가지로 나뉩니다.</p>
+            
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 space-y-4 text-gray-800">
+                <ul class="list-disc list-inside space-y-3 font-medium ml-2">
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">첫째,</strong> 말씀이 내 생각과 부딪혀서, 내 생각이 하나님의 말씀을 이겨버리고 말씀이 사라지는 경우입니다. 들어도 아무 소용이 없습니다.</li>
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">둘째,</strong> 말씀이 내 생각과 섞여서 변질되는 경우입니다. 큰 물그릇에 작은 오물을 떨어뜨리면 똥물이 되듯, 말씀에 내 생각을 섞으면 변질됩니다. 이런 사람을 성경은 거짓 교사라 합니다.</li>
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">셋째,</strong> <strong>말씀이 내 생각을 굴복시키고 그대로 입을 통해 표현되는 경우</strong>입니다. 이것이 진정한 순종입니다.</li>
+                </ul>
+            </div>
+            
+            <p>베드로의 예를 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"우리가 밤이 새도록 수고하였으되 잡은 것이 없지마는 말씀에 의지하여 내가 그물을 내리리이다." <span class="text-sm text-gray-500">(눅 5:5)</span></p>
+            </blockquote>
+            
+            <p>베드로의 경험과 생각이 말씀과 부딪혔지만, 순종하겠다고 굴복한 것입니다. 이것이 위대한 순종입니다.</p>
+            
+            <p>여러분이 입을 통해 "아멘"이라고 반응하지 않으면, 들은 말씀이 사라질 수 있습니다. <strong>아멘은 하나님의 말씀을 여러분 것으로 받는 행위</strong>입니다.</p>
+            <p>'예', '아니요' 한마디로 결혼이 결정되듯, 말 한마디가 운명을 바꿉니다.</p>
+
+            <!-- Section 5 -->
+            <h2>바울의 설명 — 아브라함과 약속, 기다림</h2>
+            
+            <p>로마서 4장을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"아브라함이 바랄 수 없는 중에 바라고 믿었으니… 그가 백 세나 되어 자기 몸이 죽은 것 같고 사라의 태가 죽은 것 같음을 알고도 믿음이 약해지지 아니하고… 약속하신 그것을 또한 능히 이루실 줄을 확신하였더라."</p>
+            </blockquote>
+            
+            <p>바울은 믿음을 설명하면서 아브라함을 모델로 제시합니다. 하나님이 아브라함에게 하신 말씀은 아들을 주겠다는 약속이었습니다.</p>
+            
+            <p><strong>약속에 대한 반응은 기다림입니다.</strong> 그래서 믿음이란, 하나님의 약속을 믿고 기다리는 것입니다.</p>
+            
+            <p>우리는 모든 은혜의 선물을 기다려서 받았습니다. 한나가 아들을 약속받고 기다린 것처럼, 이삭은 약속의 자녀이고 이스마엘은 기다리지 못한 불신앙의 산물입니다.</p>
+            
+            <p>믿음이 좋은 사람은 잘 기다리는 사람입니다. 이 기다림을 성경은 인내라 합니다. 인내의 모델은 욥입니다. 입을 다물고, 원망하지 않는 것이 인내입니다.</p>
+
+            <!-- Section 6 -->
+            <h2>야고보의 설명 — 아브라함과 명령, 순종</h2>
+            
+            <p>야고보서 2장 20~21절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"행함이 없는 믿음이 헛것인 줄을 알고자 하느냐 우리 조상 아브라함이 그 아들 이삭을 제단에 바칠 때에 행함으로 의롭다 하심을 받은 것이 아니냐."</p>
+            </blockquote>
+            
+            <p>야고보도 아브라함을 모델로 믿음을 설명합니다. 그런데 이번에는 "이삭을 바쳐라"는 명령입니다.</p>
+            
+            <p><strong>명령에 대한 반응은 순종입니다.</strong> 바울과 야고보가 충돌하는 것이 아니라, 사건의 성격이 다른 것입니다. 하나는 약속, 하나는 명령입니다.</p>
+            
+            <p>하나님이 우리에게 하시는 모든 말씀은 <strong>약속 아니면 명령</strong>입니다. 약속에는 기다리고, 명령에는 순종해야 합니다.</p>
+
+            <!-- Section 7 -->
+            <h2>사도행전 27장 — 바울의 믿음 증명</h2>
+            
+            <p>바울이 죄수의 몸으로 로마로 가는 길에 유라굴로라는 큰 풍랑을 만났습니다. 모두 죽는다고 했지만 바울은 다르게 말했습니다.</p>
+            
+            <blockquote>
+                <p>"내가 너희를 권하노니 이제는 안심하라." <span class="text-sm text-gray-500">(행 27:22)</span></p>
+            </blockquote>
+            
+            <p>"안심하라"는 곧 "안 죽는다"는 말입니다.</p>
+            
+            <blockquote>
+                <p>"너희 중 아무도 생명에는 손상이 없겠고 오직 배뿐이리라." <span class="text-sm text-gray-500">(행 27:22)</span></p>
+            </blockquote>
+            
+            <p>바울은 자기 믿음의 근거를 밝힙니다.</p>
+            
+            <blockquote>
+                <p><strong>"내가 속한 바 곧 내가 섬기는 하나님의 사자가 어제 밤에 내 곁에 서서 말하되 바울아 두려워하지 말라."</strong> <span class="text-sm text-gray-500">(행 27:23~24)</span></p>
+            </blockquote>
+            
+            <p>이 말씀은 약속입니다. 바울은 그 약속에 반응하여 두려워하지 않았습니다. 파도는 계속 치고 있었지만, 바울은 파도의 소리를 듣지 않고 하나님의 말씀을 들었습니다.</p>
+            
+            <p>제자들이 풍랑 속에서 "주여 우리가 죽게 된 것을 돌보지 아니하시나이까" 한 것은, 파도의 소리를 들은 결과 죽는다는 믿음이 생긴 것입니다. 믿음은 들음에서 나기 때문입니다.</p>
+
+            <!-- Section 8 -->
+            <h2>야곱과 요셉 — 들은 약속을 붙잡는 믿음</h2>
+            
+            <p>요셉의 일생을 보겠습니다.</p>
+            <p>17살에 종으로 팔려, 30살에 국무총리(2년 감옥), 37살에 풍년 7년을 거치고, 39살에 야곱과 형제들을 만났습니다. 야곱은 그때 130세였고, 147세에 죽습니다. 야곱이 죽을 때 요셉은 56세였고, 요셉은 그 후 54년을 더 살았습니다.</p>
+            
+            <p>야곱이 죽기 전 요셉에게 부탁한 것은 무엇입니까.</p>
+            
+            <blockquote class="bg-gray-50 border-l-4 border-gray-300 px-6 py-4 my-6 text-gray-800 text-center font-bold text-xl shadow-sm">
+                <p>"가나안 땅에 묻어 달라."</p>
+            </blockquote>
+            
+            <p>야곱이 그렇게 부탁한 이유는, 젊었을 때 가나안 땅 루스에서 하나님께 직접 들은 약속 때문이었습니다.</p>
+            
+            <blockquote>
+                <p>"전능하신 하나님이 내게 나타나사… 내가 이 땅을 네 후손에게 주어 영원한 소유가 되게 하리라 하셨느니라." <span class="text-sm text-gray-500">(창 48:3~4)</span></p>
+            </blockquote>
+            
+            <p>야곱은 하나님께 직접 들은 그 약속을 잊지 않았습니다.</p>
+            <p>요셉도 죽을 때 같은 부탁을 합니다.</p>
+            
+            <blockquote>
+                <p>"하나님이 반드시 당신들을 돌보시리니 당신들은 여기서 내 해골을 메고 올라가겠다 하라." <span class="text-sm text-gray-500">(창 50:25)</span></p>
+            </blockquote>
+            
+            <p>히브리서 11장 22절은 요셉의 믿음을 이렇게 설명합니다.</p>
+            
+            <blockquote>
+                <p>"믿음으로 요셉은 임종시에 이스라엘 자손들이 떠날 것을 말하고 자기 뼈를 위하여 명하였으며."</p>
+            </blockquote>
+            
+            <p>요셉은 국무총리가 됐다는 것이 믿음이 아니라, <strong>죽을 때 한 말이 그의 믿음이었습니다.</strong> 54년 전 아버지로부터 들은 약속을 끝까지 간직했습니다.</p>
+            
+            <p>야곱은 하나님께 직접 들었고, 요셉은 아버지로부터 들었습니다. 여러분은 직접 들었다면 야곱이고, 자녀에게 전했다면 그 자녀는 요셉이 됩니다. 믿음은 그렇게 다음 세대로 전해져야 합니다.</p>
+
+            <!-- Conclusion -->
+            <h2>결론 및 묵상</h2>
+            
+            <div class="conclusion-box">
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <span class="bg-gray-800 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 shrink-0 font-bold">1</span>
+                        <span>믿음은 하나님의 말씀에 대한 반응입니다.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-gray-800 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 shrink-0 font-bold">2</span>
+                        <span>하나님의 말씀은 약속과 명령으로 나눌 수 있습니다.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-gray-800 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 shrink-0 font-bold">3</span>
+                        <span><strong>약속에는 기다리는 것이, 명령에는 순종하는 것이 믿음입니다.</strong></span>
+                    </li>
+                </ul>
+            </div>
+            
+            <p class="text-center font-bold text-[1.35rem] text-blue-900 mt-12 mb-6">
+                오늘의 결론입니다.<br>
+                "성경이 말하는 믿음이 무엇입니까?"<br class="sm:hidden">
+                <strong>약속에는 기다리고, 명령에는 순종하는 것입니다.</strong>
+            </p>
+
+            <!-- 마무리 결단 박스 -->
+            <div class="prayer-box">
+                <h3>
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <p>하나님, 내 생각과 고집을 내려놓고<br>
+                하나님의 말씀에 온전히 반응하는 믿음을 주시옵소서.</p>
+                <p><strong>약속의 말씀 앞에서는 인내로 기다리며, <br class="hidden md:block">명령의 말씀 앞에서는 즉각적으로 순종하는 삶을 살게 하옵소서.</strong></p>
+                <p class="mb-0">예수님의 이름으로 기도합니다. 아멘.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 2024 푸른동산 지산교회 말씀사경회 김덕신 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

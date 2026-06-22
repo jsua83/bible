@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바울과 회개 - 말씀묵상</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+        
+        h3 {
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            color: #1f2937 !important;
+            margin-top: 2.5rem !important;
+            margin-bottom: 1.25rem !important;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 결론 박스 스타일 */
+        .conclusion-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .conclusion-box li {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 1.5rem;
+        }
+        .conclusion-box li:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* 기도문 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .conclusion-box { padding: 1.5rem; }
+            .conclusion-box li { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <!-- max-w-3xl 로 너비 확장 -->
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                바울과 회개
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                사도행전 9:19~22
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <p>오전에 배운 것을 정리해 보겠습니다. 죄란 진리를 비진리로 바꾸는 것입니다. 우리 마음속에 비진리가 있으면 그것이 죄입니다. 비진리란 하나님 말씀과 다른 모든 생각입니다. 그것이 아무리 인간적으로 그럴듯해도, 하나님의 말씀인 진리와 다른 것이 위험한 것입니다.</p>
+            
+            <p><strong>회개란, 비진리를 진리로 바꾸는 것</strong>입니다. 그러면 오늘 여러분은 무엇을 하러 오셨습니까? 회개하러 오신 것입니다.</p>
+            
+            <p>이제 진리를 설명할 텐데, 온유하게 설명하겠습니다. 여러분은 훈계를 받아야 하니 겸손해야 합니다.</p>
+            
+            <p>겸손한 청중과 온유한 설교자가 만날 때 하나님이 주시는 것이 회개라는 선물입니다. 회개는 하나님이 주시는 것입니다. 예배 끝나고 나가실 때 뭔가 진리가 찾아왔고 생각을 바꿨다면, 선물을 받은 것입니다. 방긋 웃으며 행복하고 감사한 마음으로 나가셔야 합니다.</p>
+
+            <!-- Section 1 -->
+            <h2>1번과 2번 — 바리새인과 그리스도인</h2>
+            
+            <p>빌립보서 3장 5~6절을 1번, 디모데전서 1장 13~15절을 2번으로 표시해 보겠습니다.</p>
+            
+            <p><strong>1번 — 빌립보서 3장 5~6절</strong>은 바울이 예수님을 만나기 전의 모습입니다.</p>
+            <blockquote>
+                <p>"나는 팔일 만에 할례를 받고 이스라엘 족속이요 베냐민 지파요 히브리인 중의 히브리인이요 율법으로는 바리새인이요 열심으로는 교회를 박해하고 율법의 의로는 흠이 없는 자라."</p>
+            </blockquote>
+            
+            <p><strong>2번 — 디모데전서 1장 13~15절</strong>은 바울이 그리스도인이 된 모습입니다.</p>
+            <blockquote>
+                <p>"내가 전에는 비방자요 박해자요 폭행자였으나 도리어 긍휼을 입은 것은 내가 믿지 아니할 때에 알지 못하고 행하였음이라."</p>
+            </blockquote>
+            
+            <p>1번이 바리새인이고, 2번이 그리스도인입니다. 1번이었다가 2번이 됐다는 것은 중간에 무엇이 있었다는 것입니다. <strong>그것이 바로 회개입니다.</strong></p>
+            
+            <p>여러분도 오늘 설교 듣기 전에는 몰랐는데, 듣고 나서 알게 됐다면, 들어올 때와 나갈 때는 전혀 다른 사람이 된 것입니다. 그것을 기독교적 변화라고 합니다.</p>
+            
+            <p>1번이 회개하면 2번이 됩니다. 그러나 말씀을 공부하고 깨닫지 않고는 아무리 열심히 봉사해도 1번에 머무릅니다.</p>
+
+            <!-- Section 2 -->
+            <h2>결정적인 차이 — 죄에 대한 깨달음</h2>
+            
+            <p>1번에서는 <strong>"율법의 의로 흠이 없었다"</strong>고 했습니다. 2번에서는 <strong>"죄인 중에 내가 괴수라"</strong>고 했습니다.</p>
+            
+            <p>바울이 1번일 때보다 2번일 때 죄를 더 많이 지었을까요? 아닙니다. 죄를 더 깨달은 것입니다. 1번일 때는 죄가 무엇인지 모르고 의인이라고 생각했고, 2번이 되니 죄가 무엇인지 알게 된 것입니다.</p>
+            
+            <p>1번과 2번의 결정적인 차이는 죄에 대한 이해도가 달랐다는 것입니다.</p>
+            
+            <p>성경에는 하나님이 미워하시는 것 일곱 가지 중 첫째가 <strong>"교만한 눈"</strong>이라고 나옵니다 (잠 6:17). 누군가를 째려보는 것을 우리는 죄라고 생각하지 않지만, 그것이 가장 무서운 죄입니다.</p>
+            
+            <p>1번으로 신앙생활을 계속하면 자기는 의인이라는 생각이 굳어집니다. 그래서 회개하지 않습니다. 그리고 다른 사람을 자꾸 비난하게 됩니다.</p>
+            
+            <p>바리새인은 기도하러 가서 이렇게 말합니다.</p>
+            <blockquote>
+                <p>"하나님이여 나는 다른 사람들… 같지 아니함을 감사하나이다." (눅 18:11)</p>
+            </blockquote>
+            
+            <p>자기는 기도라고 하지만, 하나님은 그것을 기도라고 듣지 않으십니다. 그것은 기도가 아니라 자랑이고, 감사가 아니라 비난입니다. <strong>자기 의가 있는 사람, 자기를 의인이라고 생각하는 사람은 성경적 기도를 할 수가 없습니다.</strong></p>
+            
+            <p>반면 2번의 사람은 숨만 쉬어도 기도가 됩니다. 죄를 깨닫고 또 깨달으면서 회개하면서 신앙생활을 한다면 2번입니다.</p>
+            
+            <p>외적인 것은 끊었는데 내적인 문제가 있는 사람이 가장 무서운 사람입니다. 새벽기도 나오고, 술도 안 먹고, 담배도 안 피우는데 이상하게 독한 사람들이 있습니다. 그것은 마음의 문제입니다.</p>
+
+            <!-- Section 3 -->
+            <h2>바울이 회개한 세 가지 죄</h2>
+            
+            <p>사도 바울은 예수님 다음으로 기독교 역사에 영향을 미친 사람입니다. 바울이 없었다면 기독교는 유대교의 한 종파로 남았을 것이고, 복음은 정리되지 않았을 것입니다.</p>
+            
+            <p>바울이 회개한 죄를 우리도 똑같이 가지고 있습니다. 바울이 회개한 그 세 가지를 정확하게 회개하면, 우리도 바울을 닮은 사람이 됩니다.</p>
+
+            <h3>첫 번째 회개 — 예수님에 대한 생각</h3>
+            
+            <p>바울이 다메섹으로 가던 길에서 주님을 만난 사건을 바울의 회심 사건이라 합니다.</p>
+            <p>다메섹 가기 전(1번)과 회심 후(2번)를 비교하면, 어떤 비진리를 어떤 진리로 바꿨는지 알 수 있습니다.</p>
+            
+            <p>1번일 때 바울은 예수님을 <strong>"하나님의 아들을 사칭하다 저주받아 나무에 달려 죽은 자"</strong>라고 생각했습니다. 유대인들은 신명기 말씀에 따라 나무에 달린 자는 하나님께 저주받은 자라고 알고 있었기 때문입니다. 바울은 이 생각이 비진리인 줄 모르고 진리라고 착각하며 살았습니다.</p>
+            
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 space-y-4 text-gray-800">
+                <p><strong>[1번]</strong> "사울이 주의 제자들에 대하여 여전히 위협과 살기가 등등하여…" <span class="text-sm text-gray-500">(행 9:1~2)</span></p>
+                <p><strong>[2번]</strong> "음식을 먹으매 강건하여지니라 사울이 다메섹에 있는 제자들과 함께 며칠 있을새 즉시로 각 회당에서 예수가 하나님의 아들이라고 전파했다." <span class="text-sm text-gray-500">(행 9:19~20)</span></p>
+            </div>
+            
+            <p>다메섹 길에서 바울이 "당신은 누구십니까?" 물었을 때, 예수님이 대답하셨습니다.</p>
+            
+            <blockquote>
+                <p><strong>"나는 네가 핍박하는 예수다."</strong></p>
+            </blockquote>
+            
+            <p>이 말은 곧 "나 부활했어"라는 말이었습니다. 사람은 죽었다 살아날 수 없습니다. 죽었다가 살아났다는 것은 그가 메시아라는 증거입니다.</p>
+            
+            <p>바울은 그 말을 알아들었습니다. 비진리를 비진리라고 생각하지 못했던 사람이, 그것이 진리가 아니었음을 깨달은 것입니다.</p>
+            
+            <p>회개하려면 몰랐던 것을 알아야 합니다. 어떤 사람은 알게 되면 바로 바꿉니다. 그런 사람을 <strong>'마음밭이 좋다'</strong>고 합니다. 어떤 사람은 알면서도 안 바꿉니다. 그런 사람을 악하다, 완악하다고 합니다.</p>
+            
+            <p>바울은 진실한 사람이었습니다. 1번과 2번 사이는 불과 3일밖에 걸리지 않았지만, 완전히 다른 사람이 됐습니다. 바울의 첫 번째 회개는, 예수님에 대한 비진리를 진리로 바꾼 것입니다.</p>
+
+            <h3>두 번째 회개 — 능력에 대한 생각</h3>
+            
+            <p>로마서 7장 18절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"내 속 곧 내 육신에 선한 것이 거하지 아니하는 줄을 아노니 원함은 내게 있으나 선을 행하는 것은 없노라."</p>
+            </blockquote>
+            
+            <p>바울은 그전에 <strong>'소원도 있고 능력도 있다'</strong>고 생각했습니다. 그러나 어느 날 자기에게 소원은 있지만 능력이 없다는 것을 깨달았습니다. 여기서 '선'은 헬라어로 사랑의 능력을 의미합니다.</p>
+            
+            <p>소원도 있고 능력도 있으면 <strong>'하면 된다'</strong>가 됩니다. 이것을 적극적 사고라 합니다. 바리새인은 자기 능력으로 사는 사람이었습니다. 그런데 능력이 없다면, 누군가의 도움이 필요합니다.</p>
+            
+            <p>신앙생활은 철저하게 하나님을 의존하는 것입니다. 누구에게 도움을 청해야 합니까. <strong>성령 하나님</strong>입니다.</p>
+            
+            <p>성령 하나님은 우리를 도우려고 우리 안에 오셨지만, 우리가 도와달라고 할 때까지 기다리십니다. 자녀가 처절하게 경험을 해본 뒤에 도움을 받으면 더 감사한 것과 같습니다.</p>
+            
+            <p>인간이 범죄하고 가장 잃어버린 것이 사랑하는 능력입니다. 우리는 사랑이 없습니다. 그래서 결혼이란, 수십억 여자 중에 한 사람을 선택했는데도 그것마저 사랑할 수 없다는 것을 확인하는 일이라고 한 목사님의 말도 있습니다.</p>
+            
+            <p>바울은 이렇게 외칩니다.</p>
+            <blockquote>
+                <p><strong>"오호라 나는 곤고한 사람이로다 누가 나를 건져내랴."</strong> <span class="text-sm text-gray-500">(롬 7:24)</span></p>
+            </blockquote>
+            
+            <p>'나는 할 수 있다'는 것은 소원도 있고 능력도 있다는 비진리이며, 교만한 사람을 만들거나 위선자를 만듭니다.</p>
+            
+            <p>로마서 8장 1절은 <strong>"그러므로"</strong>로 시작합니다.</p>
+            <p>'그러므로'는 앞의 내용이 뒤의 내용의 원인, 근거, 이유가 될 때 쓰는 접속사입니다. 로마서 7장의 '나를 좀 도와주세요'라는 기도에 대한 답이 로마서 8장의 성령입니다.</p>
+            
+            <p>바울이 두 번째로 바꾼 것은, '소원도 있고 능력도 있다'는 비진리를 <strong>'소원은 있지만 능력이 없어서 성령의 도움이 필요하다'</strong>는 진리로 바꾼 것입니다. 그래서 바울은 성령의 사람이 됐습니다.</p>
+
+            <h2>예수님과 성령님이 오신 법칙</h2>
+            
+            <p>예수님과 성령님은 똑같은 법칙으로 오셨습니다.</p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-5 rounded-r-lg my-6">
+                <ul class="space-y-2 text-blue-900 font-medium">
+                    <li><span class="font-bold mr-2">예수님:</span> 약속(창 3:15) → 때가 차매 → 성취</li>
+                    <li><span class="font-bold mr-2">성령님:</span> 약속(새 언약) → 때가 이르매 → 성취</li>
+                </ul>
+            </div>
+            
+            <p>하나님이 인간의 몸을 입으신 것이 기적이고, 그 하나님이 우리 안에 오신 것이 기적입니다.</p>
+            <p>예수님과 성령님이 오신 이유도 같습니다. 둘 다 죄 때문에 오셨습니다.</p>
+            
+            <p>에스겔, 예레미야의 새 언약 약속을 보면 <strong>"내가 새 영을 너희 속에 두어 부드러운 마음을 줄 것이고 율법을 이루게 하리라"</strong>고 했습니다. 우리는 율법을 이룰 힘이 없습니다. 성령이 오셔서 사랑을 주어 율법을 완성하게 하시는 것입니다.</p>
+            
+            <p>성령의 사람의 특성은 부드러운 마음입니다. 마음이 딱딱하고 차갑고 완악하다면 성령을 거역하는 것입니다.</p>
+
+            <h2>예수님을 대적했던 세 부류</h2>
+            
+            <p>예수님이 오셨을 때 세 부류의 사람이 예수님을 알아보지 못했습니다.</p>
+            
+            <ul class="list-disc list-inside space-y-4 my-6 text-gray-800 font-medium ml-2">
+                <li><strong>첫째, 바리새인</strong> — "나는 죄인 아니야, 의인이야" 하며 예수를 대적했습니다. 그러나 회개하지 않았습니다.</li>
+                <li><strong>둘째, 아볼로</strong> — 구약에서 신약으로 시대가 넘어간 줄 모르고 "메시아를 기다립시다"라고 구약적 설교를 했습니다. 브리스길라와 아굴라의 가르침을 받고 메시지를 바꿨습니다. 회개한 것입니다.</li>
+                <li><strong>셋째, 엠마오로 가는 제자</strong> — 예수가 정치적으로 민족을 구원할 줄 알았던 비진리를 가르침 받고 진리로 바꿨습니다.</li>
+            </ul>
+            
+            <p>성령이 오셨을 때도 똑같은 반응이 있었습니다. 어떤 사람은 <strong>"새 술에 취했다"</strong>고 몰라봤고, 소수는 알아봤습니다.</p>
+            
+            <p>예수님을 대적하는 것은, 자기 죄를 인정하지 않는 것입니다. 성령을 대적하는 것은, 성령의 도움을 구하지 않고 자기 힘으로 신앙생활 하는 것입니다. 둘 다 윤리적으로 문제가 없고 열심히 합니다. 그러나 자기 힘으로 산다는 점이 같습니다.</p>
+            
+            <blockquote>
+                <p>"너희가 무슨 일을 하려거든 하나님이 공급하시는 힘으로 하는 것 같이 하라." <span class="text-sm text-gray-500">(벧전 4:11)</span></p>
+            </blockquote>
+
+            <h2>영상 예배와 직접 예배</h2>
+            
+            <p>영상 예배에는 좋은 점이 있습니다. 복음이 못 들어가는 곳에 들어갈 수 있습니다. 도저히 참석할 수 없는 사람에게는 영상 예배가 최고입니다.</p>
+            <p>그러나 올 수 있는데 안 오고 영상으로 대체하는 것은 문제가 있습니다.</p>
+            <p>손녀와 영상통화를 하며 "보고 싶다"고 말하지만, 그것은 가짜로 보는 것입니다. 영상 예배는 주도권이 나에게 있습니다. 듣기 싫으면 꺼버립니다. 그러나 직접 참석하는 자리에서는 그럴 수 없기에, 참고 듣다 보면 은혜를 받게 됩니다.</p>
+
+            <h2>세 번째 회개 — 강할 때 강하다는 비진리</h2>
+            
+            <p>바울은 가시를 없애 달라고 하나님께 간구했습니다.</p>
+            <p>바울은 <strong>'강할 때 강하다'</strong>고 생각했습니다. 그런데 가시 때문에 약하니까 강해지지 못한다고 여겨 없애 달라고 한 것입니다.</p>
+            
+            <p>하나님은 이렇게 대답하셨습니다.</p>
+            <blockquote>
+                <p>"내 은혜가 네게 족하도다 이는 내 능력이 약한 데서 온전하여짐이라." <span class="text-sm text-gray-500">(고후 12:9)</span></p>
+            </blockquote>
+            
+            <p>'강할 때 강하다'는 것이 비진리였고, <strong>'약할 때 강하다'</strong>는 것이 진리였습니다. 한 번에 못 알아들어서 주님은 여러 번 거듭 가르쳐 주셨습니다.</p>
+            <p>바울이 바꾸고 나니 약한 것을 자랑하고 기뻐했습니다.</p>
+
+            <!-- Conclusion -->
+            <h2>결론 및 묵상</h2>
+            
+            <p>바울이 회개한 세 가지 비진리는 다음과 같습니다.</p>
+            
+            <div class="conclusion-box">
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <span class="bg-gray-800 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 shrink-0 font-bold">1</span>
+                        <span>예수는 메시아를 사칭한 이단이라는 생각 &rarr; <strong>예수는 진짜 메시아라는 진리로</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-gray-800 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 shrink-0 font-bold">2</span>
+                        <span>나는 선을 행할 능력이 있다는 생각 &rarr; <strong>소원은 있지만 능력이 없어 성령의 도움이 필요하다는 진리로</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-gray-800 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 shrink-0 font-bold">3</span>
+                        <span>강할 때 강하다는 생각 &rarr; <strong>약할 때 강하다는 진리로</strong></span>
+                    </li>
+                </ul>
+            </div>
+            
+            <p class="text-center font-bold text-[1.35rem] text-blue-900 mt-12 mb-6">
+                이 세 가지만 바꿔도 우리의 인생이 바뀝니다.<br class="sm:hidden">
+                여러분 속에 진리라고 착각하고 살았던 것이 하나님의 은혜로<br class="sm:hidden"> 진리로 바뀌어지는 회개의 놀라운 일이 있기를 소망합니다.
+            </p>
+
+            <!-- 마무리 기도문 -->
+            <div class="prayer-box">
+                <h3 class="text-xl md:text-2xl font-bold text-blue-900 mb-6 flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    함께 기도합니다
+                </h3>
+                <p>하나님 아버지,<br>내 힘으로 무엇이든 할 수 있다는 비진리를 버리고<br><strong>오직 성령님의 도우심만을 구하는 겸손함</strong>을 주시옵소서.</p>
+                <p>약할 때 강함 되시는 주님을 온전히 신뢰하게 하옵소서.</p>
+                <p class="mb-0">예수님의 이름으로 기도합니다. 아멘.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 2024 푸른동산 지산교회 말씀사경회 김덕신 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+ 

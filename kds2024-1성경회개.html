@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성경이 말하는 회개 - 말씀묵상</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+        
+        h3 {
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            color: #1f2937 !important;
+            margin-top: 2.5rem !important;
+            margin-bottom: 1.25rem !important;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 강조 리스트 박스 스타일 */
+        .highlight-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-box p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 1.5rem;
+        }
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 기도문 및 결단 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+        .prayer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .highlight-box, .prayer-box { padding: 1.5rem; }
+            .highlight-box p, .prayer-box p { font-size: 1.05rem !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <!-- max-w-3xl 로 너비 확장 -->
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                성경이 말하는 회개
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                창세기 2:16~17
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <p>성경에서는 어떤 사람의 영적인 수준과 상태를 그 사람이 <strong>말하는 것, 생각하는 것, 깨닫는 것</strong>으로 평가합니다. 말하는 수준이 안 좋으면 영적인 수준이 안 좋은 것이고, 말을 지혜롭게 하면 영적인 수준이 높은 사람입니다.</p>
+
+            <!-- Section 1 -->
+            <h2>말을 못 하는 두 가지 이유</h2>
+            
+            <p>한 살 먹은 아이에게 "겸손이 뭐야?" 하고 물으면 대답을 못 합니다. 두 가지 이유 때문입니다.</p>
+            
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 space-y-4 text-gray-800">
+                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-2 font-medium">
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">첫째,</strong> 말 자체를 못 합니다.</li>
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">둘째,</strong> 겸손에 대한 개념을 모릅니다.</li>
+                </ul>
+            </div>
+            
+            <p>그런데 스무 살, 서른 살 먹은 사람에게 "사랑이 뭐예요, 회개가 뭐예요?" 물으면, 말은 할 줄 알지만 <strong>그 개념을 모르면 또 말을 못 합니다.</strong></p>
+            
+            <p>한 살 먹은 아이가 말을 못 하는 것은 말을 못 해서이고, 어른이 말을 못 하는 것은 몰라서입니다.</p>
+            <p>여러분에게 묻습니다. 여러분은 1번에 속합니까, 2번에 속합니까? 2번입니다. 그렇기 때문에 만일 여러분이 말을 못 한다면, 말을 못 해서가 아니라 <strong>몰라서 못 하는 것</strong>입니다.</p>
+            <p>오늘 "회개가 무엇입니까?" 물었을 때, 여러분이 대답을 못 한다면 말을 못 해서가 아니라 내용을 확실하게 모르기 때문입니다.</p>
+            
+            <p>예를 들어 "여러분 고향이 어디세요?" 하면 즉각 대답하지만, "제 고향이 어딥니까?" 하면 대답을 못 합니다. 모르니까요. 그런데 제 고향이 군산이라고 한 번 알려드리면, 그다음부터는 즉시 대답할 수 있습니다.</p>
+            
+            <p>이렇게 한 번만 배우면 평생 알게 되는 지식이 있습니다. 그러나 알면서도 못 하는 것도 있습니다. 간음이 죄인 줄 알면서도 간음을 하고, 말씀을 들을 때 아멘 해야 된다는 것을 알면서도 아멘을 안 합니다.</p>
+            <p>이런 것을 습관이라고 합니다. 전라도 사투리가 30년 동안 습관이 된 사람에게 표준말을 알려준다고 해서 바로 고쳐지지 않습니다. 그것은 강의가 아니라 훈련이 필요한 것입니다.</p>
+            <p>이번 부흥회 기간에는 한 번만 들으면 평생 가는 지식, 곧 <strong>회개에 대한 정확한 이해</strong>를 전해드리겠습니다.</p>
+
+            <!-- Section 2 -->
+            <h2>회개를 모르면서 회개했다고 말하는 사람들</h2>
+            
+            <p>어떤 분이 설교 듣고 회개했다고 말했습니다. "무슨 죄를 회개했나요?" 물으니 모른다고 합니다.</p>
+            <p>회개를 했다고 하는데 무슨 죄를 회개했는지 대답할 수 없다면, 그것은 <strong>회개가 아니라 그냥 감정</strong>입니다. 찬송가를 들으며 뭉클해서 눈물 흘리는 것이 회개가 아닙니다.</p>
+            <p>삶이 달라지려면 '내가 이것이 죄인 줄 몰랐는데 깨달았습니다, 그래서 이 죄를 회개했습니다' 하고 <strong>구체적으로 자기가 회개한 죄가 있어야 회개인 것</strong>입니다.</p>
+
+            <!-- Section 3 -->
+            <h2>회개의 중요성</h2>
+            
+            <p>회개는 그 어떤 단어보다 중요합니다. 왜일까요.</p>
+            
+            <div class="highlight-box">
+                <p><strong class="bg-transparent shadow-none px-0 text-blue-700">첫째, 회개는 복음과 연관이 있습니다.</strong><br>주님께서 "회개하고 복음을 믿으라"고 하셨습니다(막 1:15). 회개가 없는 한 복음을 믿는 일은 없습니다.</p>
+                <p><strong class="bg-transparent shadow-none px-0 text-blue-700">둘째, 회개는 구원과 연관이 있습니다.</strong><br>지옥 간 부자가 형제들에게 회개하도록 알려달라고 부탁한 것처럼(눅 16:30), 회개하지 않고 구원받을 수 없습니다.</p>
+                <p><strong class="bg-transparent shadow-none px-0 text-blue-700">셋째, 회개는 죄와 연관이 있습니다.</strong><br>회개는 죄를 해결하는 유일한 비결입니다. 회개를 안 하면 죄가 차곡차곡 쌓이고, 마음속에 죄가 있는 한 행복할 수 없습니다. 회개의 열매는 평안과 행복입니다.</p>
+                <p><strong class="bg-transparent shadow-none px-0 text-blue-700">넷째, 회개는 성화와 연관이 있습니다.</strong><br>주님을 닮아가지 못하는 것은 회개하지 않았다는 것입니다. 죄를 깨닫고 회개하면서 점점 주님을 닮아가는 것입니다.</p>
+            </div>
+            
+            <p>우리는 회개라는 단어가 너무 익숙해서 안다고 생각하지만, 실제로 회개를 설명해 보라 하면 말을 못 하는 사람이 많습니다.</p>
+
+            <!-- Section 4 -->
+            <h2>사사 시대 — 자기 소견에 옳은 대로</h2>
+            
+            <p>사사 시대의 가장 중요한 키워드는 이것입니다.</p>
+            
+            <blockquote>
+                <p>"그때에 이스라엘에 왕이 없으므로 사람이 각기 <strong>자기의 소견에 옳은 대로</strong> 행하였더라."</p>
+            </blockquote>
+            
+            <p>자기 생각에 옳다고 여기는 것만 했다는 것입니다. 자기가 죄라고 생각하면 안 했고, 옳다고 생각하면 했습니다. 그러나 하나님께서는 뭐라 평가하십니까.</p>
+            
+            <blockquote>
+                <p>"이스라엘 자손이 다시 <strong>여호와의 목전에 악을 행하였더라.</strong>"</p>
+            </blockquote>
+            
+            <p>자기 소견에는 옳은데, 하나님은 그것을 악이라 하십니다. <strong>죄에 대한 개념이 다른 것</strong>입니다.</p>
+            
+            <p>이것은 예수님 시대에도 마찬가지였습니다. 바리새인은 자기를 의롭다고 믿었지만 하나님은 그들을 <strong>'독사의 자식'</strong>이라 하셨습니다.</p>
+            <p>사사 시대도, 예수님 시대도, 지금도 마찬가지입니다. 우리 모두는 자기 소견에 옳은 대로 살고 있습니다. 문제는 자기 주관적인 생각이지, 하나님의 평가가 아니라는 것입니다.</p>
+            
+            <p>바울도 이렇게 말합니다.</p>
+            <blockquote>
+                <p>"너희에게나 다른 이에게나 판단받는 것이 내게는 매우 작은 일이라… 나도 나를 판단하지 아니하노니… 다만 나를 심판하실 이는 주시니라." <span class="text-sm text-gray-500">(고전 4:3~4)</span></p>
+            </blockquote>
+
+            <!-- Section 5 -->
+            <h2>룻기 — 나오미의 10년 만의 회개</h2>
+            
+            <p>룻기는 사사기와 시간적으로 동시대의 이야기입니다. 룻기는 "사사들이 치리하던 때"라고 시작합니다.</p>
+            <p>베들레헴에 흉년이 들자 나오미의 가족은 모압으로 떠납니다. 그들은 그것이 죄라고 생각하지 않았습니다. 가족이 함께 논의해서 내린, <strong>자기 소견에 옳은 당연한 결정</strong>이었습니다.</p>
+            <p>그런데 10년이 흘러 남편과 두 아들이 죽고, 나오미는 베들레헴으로 돌아오면서 이렇게 말합니다.</p>
+            
+            <blockquote>
+                <p>"나를 나오미라 부르지 말고 마라라 부르라 이는 전능자가 나를 심히 괴롭게 하셨음이니라."</p>
+            </blockquote>
+            
+            <p>나오미는 <strong>10년 만에 회개</strong>합니다. 10년 전에는 죄라고 생각하지 않았던 것을, 10년이라는 세월과 사건을 통해 하나님의 섭리 속에서 죄였다는 것을 깨닫게 된 것입니다.</p>
+            
+            <p>회개를 안 한다는 것은 자기 죄를 깨닫지 못하기 때문입니다. 자기 죄를 깨닫지 못하는 것을 <strong>자기 의</strong>라고 합니다.</p>
+            <p>신앙이 성장한다는 것은, 깨닫지 못했던 죄를 깨닫고 회개하는 것입니다. 그 죄를 깨닫게 하는 것이 성령이 하시는 일입니다. 죄를 깨닫지 못한다면 방언을 한다 할지라도 성령의 사람이 아닙니다.</p>
+
+            <!-- Section 6 -->
+            <h2>회개는 강요할 수 없다</h2>
+            
+            <p>회개하라고 말로 강요해서는 회개가 일어나지 않습니다. 예를 들어보겠습니다.</p>
+            <p>친구들과 설악산 단풍놀이를 가는데 아내가 전화해서 "여보, 돌아오세요" 합니다. 아무리 간절히 말해도 돌아가지 않습니다. 그런데 "아버님 쓰러지셨어, 오늘 못 넘긴대" 하는 소식을 들으면, '돌아오세요'라는 말 한마디 없이도 즉시 돌아갑니다.</p>
+            <p>회개하세요, 회개하세요 하고 아무리 말해도 회개하지 않습니다. 회개 안 하면 목사님 눈치 보여 회개하는 척만 합니다. 그러나 회개라는 말을 한마디도 안 해도, <strong>죄를 정확하게 깨닫게 하면 성령이 역사하여 회개하게 됩니다.</strong></p>
+
+            <!-- Section 7 -->
+            <h2>회개와 자백의 차이</h2>
+            
+            <p>사도행전 11장 18절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"이 말을 듣고 잠잠하여 하나님께 영광을 돌려 이르되 그러면 하나님께서 이방인에게도 <strong>생명 얻는 회개</strong>를 주셨도다 하니라."</p>
+            </blockquote>
+            
+            <p>베드로의 설교에 3천 명이 회개했을 때, 그들은 어떤 죄를 회개했을까요. 유대인들은 십계명을 지키며 살았기에 살인이나 도둑질, 간음 같은 죄는 짓지 않았습니다. 그들이 회개한 죄는 이것이었습니다.</p>
+            
+            <div class="bg-gray-50 border-l-4 border-blue-400 p-5 rounded-r-lg my-6">
+                <p class="mb-0 text-blue-900 font-semibold text-[1.15rem] leading-relaxed">
+                    "하나님이 메시아를 보내셨는데 너희가 그 메시아를 몰라보고 십자가에 못 박았다."
+                </p>
+            </div>
+            
+            <p>간음하지 말라고 해서 간음을 안 했다고 구원받는 게 아닙니다. 구원이란 예수 믿지 않는 죄를 회개해야 받는 것입니다. 이것이 생명을 얻는 회개입니다.</p>
+            
+            <p>요한일서 1장 9절에는 또 다른 표현이 나옵니다.</p>
+            
+            <blockquote>
+                <p>"만일 우리가 우리 죄를 자백하면…"</p>
+            </blockquote>
+            
+            <p>자백이란, 성령께서 진리를 통해 "그것은 죄야"라고 말씀하실 때 <strong>"예, 맞습니다" 하고 동의하는 것</strong>입니다.</p>
+            <p>회개와 자백의 공통점은, 둘 다 '죄'라는 단어와 연결되어 있다는 것입니다.</p>
+
+            <!-- Section 8 -->
+            <h2>아담의 죄 — 죄의 본질</h2>
+            
+            <p>성경에서 죄를 말할 때 반드시 등장하는 것이 아담의 죄입니다.</p>
+            
+            <blockquote>
+                <p>"한 사람으로 말미암아 죄가 세상에 들어오고… 모든 사람이 죄인 된 것 같이…" <span class="text-sm text-gray-500">(롬 5:12)</span></p>
+            </blockquote>
+            
+            <p>아담이 무슨 죄를 지었을까요. 술을 마셨나요? 노름을 했나요? 도박했나요? 살인했나요? 간음했나요? 거짓말했나요? 도둑질했나요? 아내를 때렸나요? 전부 <strong>"아니요"</strong>입니다.</p>
+            <p>성경이 말하는 최초의 죄, 아담의 죄는 우리가 일상적으로 생각하는 죄의 개념과 다릅니다.</p>
+            
+            <p>에덴동산에는 두 가지가 있었습니다.</p>
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 space-y-4 text-gray-800">
+                <p><strong class="bg-transparent shadow-none px-0 text-blue-700 mr-2">1번, 진리</strong> — 하나님의 말씀 ("선악과를 먹지 말라, 먹는 날에는 죽으리라")</p>
+                <p><strong class="bg-transparent shadow-none px-0 text-blue-700 mr-2">2번, 비진리</strong> — 마귀의 말 ("먹어라, 안 죽는다")</p>
+            </div>
+            
+            <p>아담은 1번 진리를 선택하지 않고 2번 비진리를 선택했습니다. <strong>그것을 성경은 죄라고 합니다.</strong></p>
+            <p>성경이 말하는 죄란, 진리를 거부하고 마귀의 말을 받아들인 것입니다. 도덕·윤리적으로 죄를 하나도 안 짓는다 할지라도, 마음과 생각 속에 비진리가 있다면 그것이 아담의 죄입니다.</p>
+            <p>그렇다면 회개란 무엇입니까. <strong>마음속에 있는 비진리를 거부하고 진리를 받아들이는 것</strong>입니다.</p>
+
+            <!-- Section 9 -->
+            <h2>비진리의 예 — 남편을 향한 잘못된 신앙</h2>
+            
+            <p>"남편들아 아내를 사랑하라, 아내들아 남편에게 순종하라"는 말씀에 어떤 분이 "남편도 남편 나름이죠, 우리 남편 몰라서 그런 말 하시는데"라고 말한다면, 그것이 <strong>비진리</strong>입니다.</p>
+            <p>성경은 "착하고 능력 있는 남편에게만 순종하라"고 하지 않았습니다. 진리가 살짝 비틀어져서 비진리가 되는 것입니다. 많은 사람들이 자기 마음속에 비진리가 있는데도 그것을 죄라고 생각하지 않습니다.</p>
+            <p>마음속에 비진리가 있는 한, 하나님은 그런 사람을 쓰실 수가 없습니다. 술 한 잔, 담배 한 대보다 더 악한 죄는 마음속의 비진리입니다.</p>
+            
+            <p><strong>죄란 진리를 거부하고 비진리를 받아들인 것이고, 회개란 비진리를 진리로 바꾸는 것입니다.</strong></p>
+            
+            <p>설교를 듣고 깨달았다면 그 순간 회개가 이미 일어난 것입니다. 마지막 시간에 손 들고 찬송 부르며 우는 그것이 회개가 아닙니다. 회개는 말씀을 들으면서 비진리를 진리로 바꾸는 순간 일어나는 것입니다.</p>
+
+            <!-- Section 10 -->
+            <h2>회개는 하나님의 선물</h2>
+            
+            <p>디모데후서 2장 24~26절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"주의 종은 마땅히 다투지 아니하고 모든 사람에 대하여 온유하며 가르치기를 잘하며 참으며 거역하는 자를 온유함으로 훈계할지니 혹 하나님이 그들에게 <strong>회개함을 주사 진리를 알게 하실까</strong> 하며 그들로 깨어 마귀의 올무에서 벗어나…"</p>
+            </blockquote>
+            
+            <p>여기서 핵심은, 누가 회개를 주는가입니다. <strong>하나님</strong>입니다.</p>
+            <p>회개는 하나님의 선물입니다. 회개함을 주신 결과 진리를 알게 됩니다. 회개하기 전에는 진리를 몰랐고, 잘 가르치는 종이 가르쳤더니 진리를 알게 된 것입니다.</p>
+            <p>만일 여러분이 오늘 말씀을 듣고 회개했고 몰랐던 진리를 알게 됐다면, 여러분은 <strong>선물을 받은 것</strong>입니다. 그런데 받고도 "왜 이렇게 설교를 길게 해" 하면서 나가면, 그 선물의 가치를 모르는 것입니다.</p>
+            <p>이 두 시간 동안 받은 선물에 대해 식사하면서도 그 깨달음을 나누지 않고, 아파트 가격이나 다른 이야기만 한다면, 회개가 무엇이고 은혜가 무엇인지 모르는 것입니다.</p>
+            <p>이 본문에서 설교자는 온유해야 하고, 청중은 겸손해야 합니다.</p>
+            
+            <p class="font-bold text-center text-[1.35rem] text-blue-900 mt-10 mb-6">
+                온유한 설교자와 겸손한 청중이 만날 때,<br class="sm:hidden"> 하나님이 회개라는 선물을 주십니다.
+            </p>
+
+            <!-- Section 11 -->
+            <h2>설교의 목표는 회개</h2>
+            
+            <p>설교의 목표는 회개입니다. 설교자가 무엇을 가르쳐서 성도들로 하여금 무엇을 회개하게 할 것인가, 그것이 설교의 초점입니다.</p>
+            <p>여러분도 마찬가지입니다. 설교를 듣는 목표도 회개입니다. 교회 나오시면서 <strong>"오늘도 말씀을 들어서 내 비진리를 진리로 바꾸게 해주세요"</strong> 하는 마음으로 와야 합니다.</p>
+
+            <!-- Section 12 -->
+            <h2>에덴동산의 마귀 — 의지와 전략</h2>
+            
+            <p>마귀가 하와를 찾아왔을 때는 전략, 의지, 목표를 가지고 왔습니다. 어떻게 비진리를 마음속에 집어넣을지 계획을 세운 것입니다.</p>
+            <p>그런데 하와는 마귀와 대화하면서 목표도 전략도 의지도 없었습니다. 만일 하와에게 의지가 있었다면 "그래, 먹으면 죽는다, 안 먹어" 하고 쉽게 끝낼 수 있었을 텐데, 그렇게 하지 못했습니다. 멍하니 당한 것입니다.</p>
+            <p>어떤 성도들은 마치 에덴동산의 하와처럼 아무 의지 없이 부흥회에 앉아 있습니다. 그러나 어떤 성도는 <strong>"나는 오늘 이번 부흥회에 내 운명을 바꿀 거야, 나는 회개하고 비진리를 바꿀 거야"</strong> 하는 강한 의지를 가지고 옵니다.</p>
+            <p>저도 목표와 전략과 의지를 가지고 이 자리에 왔습니다. 여러분도 그런 목표와 전략과 의지를 가지고 부흥회에 참석하시는 여러분 되시길 바랍니다.</p>
+
+            <!-- 마무리 묵상과 결단 -->
+            <div class="prayer-box">
+                <h3>
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <p>하나님, 내 마음속에 여전히 남아있는 비진리가 있다면 깨닫게 하옵소서.</p>
+                <p>나의 소견에 옳은 대로 살았던 교만을 회개합니다.</p>
+                <p><strong>진리의 말씀을 기쁘게 받아들이며, <br class="hidden md:block">내 안의 거짓을 진리로 바꾸는 회개의 삶을 살게 하옵소서.</strong></p>
+                <p class="mb-0">예수님의 이름으로 기도합니다. 아멘.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 2024 푸른동산 지산교회 말씀사경회 김덕신 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
