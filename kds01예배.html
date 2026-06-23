@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예배 - 특강</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+        
+        h3 {
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            color: #1f2937 !important;
+            margin-top: 2.5rem !important;
+            margin-bottom: 1.25rem !important;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 기도문 및 결단 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+        .prayer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .prayer-box { padding: 2rem 1.5rem; }
+            .prayer-box p { font-size: 1.05rem !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <!-- max-w-3xl 로 너비 확장 -->
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                예배
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                창세기 22:5, 요한복음 4:20~24
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <!-- Section 1 -->
+            <h2>"성경이 무엇을 말하느냐" — 성경적 근거의 중요성</h2>
+            
+            <p>로마서 1~3장에서 바울은 죄를 고발한 후, 율법으로는 의로워질 사람이 하나도 없다는 결론을 맺고 복음을 전합니다. 4장으로 넘어가면 바울은 그 원리를 성경으로 증명합니다.</p>
+            
+            <blockquote>
+                <p>"그런즉 우리 조상 아브라함이 무엇을 얻었다 하리요… 그러면 성경이 무엇을 말하느냐." <span class="text-sm text-gray-500">(롬 4:1~3)</span></p>
+            </blockquote>
+            
+            <p>바울은 자신이 사도라는 권위로 말하지 않고, 성경의 근거를 대며 말합니다. 갈라디아서 4장 30절에서도 이삭과 이스마엘을 비교하며 같은 표현을 씁니다.</p>
+            <p>우리가 하는 모든 말과 생각에는 <strong>성경적 근거</strong>가 있어야 합니다. 성경적 근거를 대지 못한다면 거짓일 확률이 높습니다. 우리 마음은 부패하고 거짓되기 때문입니다.</p>
+            <p>엠마오로 가는 두 제자의 이야기(눅 24장)도 같은 원리를 보여줍니다.</p>
+            <p>부활을 의심하는 제자들에게 예수님은 못 자국과 창 자국을 보여주지 않으셨습니다. 대신 <strong>"모세와 모든 선지자의 글로 시작하여 모든 성경에 쓴 바 자기에 관한 것을 자세히 설명하셨다"</strong>고 했습니다. 믿음은 봄으로 나는 것이 아니라 들음으로 납니다.</p>
+            <p>신앙생활을 하며 여기저기서 들은 이야기들이 짬뽕이 되어 있다면, 우리는 성경에 근거해서 말하는 법을 배워야 합니다.</p>
+
+            <!-- Section 2 -->
+            <h2>1. 사람 앞에 붙는 수식어 — 지도자와 예배자</h2>
+            
+            <p>창세기 1장 26절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"하나님이 이르시되 우리의 형상을 따라… 사람을 만들고 그들로 바다의 물고기와 하늘의 새와… 다스리게 하자."</p>
+            </blockquote>
+            
+            <p>새 앞에는 '하늘'이, 물고 앞에는 '바다'가 붙습니다. 이것은 하나님이 새를 하늘을 나는 존재로, 물고기를 바다를 헤엄치는 존재로 창조하셨다는 뜻입니다. 독수리가 날지 못하면 비참하고, 물고기가 물을 떠나면 죽은 것입니다.</p>
+            <p>그렇다면 사람 앞에 붙는 수식어는 무엇일까요.</p>
+            
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 space-y-4 text-gray-800">
+                <ul class="list-disc list-inside space-y-3 font-medium ml-2">
+                    <li><strong>첫째, '지도자'입니다.</strong> "모든 것을 다스리게 하자"고 하셨기에, 사람은 지도자로 창조되었습니다. 시간이 흐르면 누구나 지도자가 됩니다. 부모가 되고, 목사가 되고, 선생이 됩니다. 문제는 좋은 지도자가 되느냐입니다.</li>
+                    <li><strong>둘째, '예배자'입니다.</strong> 하나님은 사람을 예배자로 창조하셨습니다. 우리는 예배를 드려서 예배자가 되는 것이 아니라, 예배자이기 때문에 예배를 드리는 것입니다.</li>
+                </ul>
+            </div>
+            
+            <p>모든 인생은 예배자입니다. 단 하나의 차이는, 하나님을 예배하느냐 다른 것을 예배하느냐입니다. 하나님 아닌 것을 예배하는 것을 우상숭배라고 합니다. 그래서 모든 사람은 예배자이거나 우상숭배자, 둘 중 하나입니다.</p>
+            
+            <p class="font-bold text-center text-[1.35rem] text-blue-900 mt-10 mb-6">
+                "당신은 무엇을 예배하고 있습니까?<br class="sm:hidden"> 무엇에 미쳐서 살고 있습니까? 이것이 올바른 질문입니다."
+            </p>
+
+            <!-- Section 3 -->
+            <h2>2. 요한복음 3장과 4장 — 거듭남과 예배의 모델</h2>
+            
+            <p>요한복음 3장의 주제는 거듭남이고, 모델은 니고데모입니다.</p>
+            <p>니고데모는 율법이 만들 수 있는 최고의 사람이었습니다. 그런데도 거듭나야 했습니다. 이것은 "윤리적으로 완벽해도 거듭나야 한다"는 것을 보여줍니다. 기독교는 윤리가 아닙니다.</p>
+            <p>요한복음 4장의 주제는 예배이고, 모델은 남편이 다섯이나 있던 수가성 여인입니다.</p>
+            <p>수가성 여인은 <strong>목마른 인생</strong>을 상징합니다. 성경은 주님을 떠난 인생을 수고하고 무거운 짐, 그리고 목마름으로 표현합니다. 복음은 이 목마름을 해결합니다.</p>
+            <p>여인은 남자를 계속 바꾸며 목마름을 채우려 했지만, 어떤 남자도 그 목마름을 해결하지 못했습니다. 주님을 만나고서야 목마름이 해결됐습니다.</p>
+            <p>예배란, <strong>인생의 목마름에 대한 하나님의 해결책</strong>입니다.</p>
+            
+            <blockquote>
+                <p>"이 물을 마시는 자마다 다시 목마르려니와…" <span class="text-sm text-gray-500">(요 4:13)</span></p>
+            </blockquote>
+            
+            <p>다시 목마른다는 것은, 그것이 목마름을 진짜로 해결해 주지 못한다는 뜻입니다. 이것이 심리학적 중독이며, 기독교적으로는 우상입니다.</p>
+
+            <h3>장소가 아니라 때 — 오순절 성령 강림</h3>
+            
+            <p>여인이 묻습니다.</p>
+            <p>"우리 조상들은 이 산에서 예배하였는데 당신들의 말은 예배할 곳이 예루살렘에 있다 하더이다." <span class="text-sm text-gray-500">(요 4:20)</span></p>
+            <p>여인은 예배의 장소를 물었습니다. 그러나 예수님은 장소가 아니라 <strong>때</strong>로 대답하십니다.</p>
+            <p>"이 산에서도 말고 예루살렘에서도 말고… 너희가 아버지께 예배할 때가 이르리라." <span class="text-sm text-gray-500">(요 4:21)</span></p>
+            <p>"예루살렘에서도 말고"는 당시 기준으로는 이단의 말이었습니다. 예배는 장소의 문제가 아니라는 것입니다.</p>
+            <p>이 미래형으로 말씀하신 "때"는 우리에게는 이미 과거가 됐습니다. 그 계기는 <strong>오순절 성령 강림</strong>입니다. 성령이 믿는 자 안에 오심으로, 우리는 더 이상 예루살렘에 갈 필요가 없어졌습니다. 예루살렘 성전의 파괴는 이것을 보여주는 그림 언어입니다.</p>
+
+            <h3>하나님이 찾으시는 것 — 예배자</h3>
+            
+            <blockquote>
+                <p>"아버지께서 자기에게 이렇게 예배하는 자들을 찾으시느니라." <span class="text-sm text-gray-500">(요 4:23)</span></p>
+            </blockquote>
+            
+            <p>하나님이 찾는다고 한 사람은 예배자뿐입니다. 돈 많은 사람도, 똑똑한 사람도 아닙니다. 죄인에게는 "오라"고 하시지만, 예배자는 <strong>"찾는다"</strong>고 하십니다. 이 '찾는다'는 표현은 잃어버린 자녀를 찾는 부모의 마음과 같은 단어입니다.</p>
+            <p>다윗은 대표적인 예배자였습니다. 천만인이 그를 대적해도, 하나님은 예배자를 들어 쓰셨습니다. 가난해도, 부족해도, 무식해도 예배자가 된다면 하나님은 그 사람을 찾고 쓰십니다.</p>
+            <p>하나님은 예배 프로그램을 찾지 않으십니다. 만 명이 모여도 그중 예배자가 한 명도 없다면 예배는 존재하지 않습니다. <strong>예배자가 있어야 예배가 존재하는 것</strong>입니다.</p>
+
+            <!-- Section 4 -->
+            <h2>3. 예배의 문자적·신학적 정의</h2>
+            
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 text-gray-800">
+                <ul class="list-disc list-inside space-y-3 font-medium ml-2">
+                    <li><strong>문자적 정의:</strong> 엎드리다, 절하다, 무릎을 꿇다. 몸은 앉아 있어도, 마음이 하나님 앞에 엎드려 있지 않으면 예배는 존재하지 않습니다.</li>
+                    <li><strong>사전적 정의(웹스터):</strong> 최고의 대상에게 최고의 경의를 표하는 것.</li>
+                    <li><strong>본질적 의미:</strong> 드리는 것입니다. 이기적인 사람은 받으려고만 하기 때문에 예배자가 될 수 없습니다.</li>
+                    <li><strong>신학적 정의:</strong> 계시에 대한 인간의 응답입니다. 계시에 대한 긍정적 응답이 곧 순종이고, 그 순종이 예배입니다.</li>
+                </ul>
+            </div>
+
+            <!-- Section 5 -->
+            <h2>창세기 22장 — 아브라함의 예배</h2>
+            
+            <blockquote>
+                <p>"이에 아브라함이 종들에게 이르되 너희는 나귀와 함께 여기서 기다리라 나와 아이는 저기 가서 예배하고 우리가 너희에게로 돌아오리라." <span class="text-sm text-gray-500">(창 22:5)</span></p>
+            </blockquote>
+            
+            <p>아브라함이 이삭을 데리고 가서 한 일이 곧 예배입니다. 그는 아들을 바치며 <strong>"내 아들보다 하나님을 더 사랑합니다"</strong>라는 것을 증명했습니다.</p>
+            <p>"사자가 이르시되… 네가 네 아들 네 독자까지도 내게 아끼지 아니하였으니." <span class="text-sm text-gray-500">(창 22:12)</span></p>
+            <p>모든 예배에는 두 가지 요소가 있습니다. <strong>하나님을 위하여</strong>, 그리고 <strong>최선을 다하는 것</strong>입니다.</p>
+            <p>뒤이어 이렇게 평가됩니다.</p>
+            <p>"네가 네 아들 독자까지도 아끼지 아니하였으니 내가 이제야 네가 하나님을 경외하는 줄을 아노라." <span class="text-sm text-gray-500">(창 22:12)</span></p>
+            <p>하나님은 경외라는 뿌리에서 순종이라는 열매가 맺힌 것을 보십니다. 예배, 경외, 순종, 사랑 — 이 단어들은 표현은 다르지만 같은 의미입니다.</p>
+
+            <!-- Section 6 -->
+            <h2>마귀도 예배를 원한다 — 교환의 개념</h2>
+            
+            <blockquote>
+                <p>"마귀가 또 그를 데리고 지극히 높은 산으로 가서 천하 만국과 그 영광을 보여 이르되 내게 만일 엎드려 경배하면 이 모든 것을 네게 주리라." <span class="text-sm text-gray-500">(마 4:8~9)</span></p>
+            </blockquote>
+            
+            <p>마귀도 예배자를 찾습니다. 예배에는 <strong>교환, 바꾼다는 특성</strong>이 있습니다. 주중에 마귀와 거래해서 예배를 빼앗기면, 주일에 와도 하나님께 드릴 것이 없어 의미 없이 졉니다.</p>
+            <p>바꾸는 기준은 가치관입니다. 예배를 10억짜리로 여기면 마귀가 주는 5천 원짜리와 바꾸지 않습니다. 그러나 예배를 만 원짜리로, 마귀가 주는 것을 1,000억짜리로 여기면 바꾸게 됩니다.</p>
+            <p><strong>"너희는 먼저 그의 나라와 그의 의를 구하라."</strong> (마 6:33) 하나님과 바꾸면 예배자가 되고, 마귀와 바꾸면 우상숭배자가 됩니다. 그 선택은 우리의 가치관을 보여줍니다.</p>
+
+            <!-- Conclusion -->
+            <h2>결론</h2>
+            
+            <p>한 남편이 아내에게 10억짜리 반지를 사줬는데, 아내가 그것을 엿장수에게 주고 엿을 바꿔 먹었다면 누구나 "미쳤다"고 할 것입니다. 그 반지의 가치를 진짜로 안다면 그렇게 바꿀 리가 없습니다.</p>
+            <p>예배자가 되려면, 오늘 들은 말씀의 가치를 높여야 합니다. <strong>"오늘 이 말씀은 천억짜리야"</strong>라고 여길 수 있어야 진짜 예배자가 됩니다.</p>
+            
+            <!-- 마무리 묵상과 결단 -->
+            <div class="prayer-box">
+                <h3>
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <p>하나님 아버지, 은혜를 감사합니다.<br>
+                마귀도 우리에게 찾아와 가치 없는 것들로<br class="hidden md:block">우리의 예배를 바꾸자고 유혹합니다.</p>
+                <p><strong>우리의 가치관이 십자가의 복음으로 바로 서게 하옵소서.</strong></p>
+                <p class="font-bold text-blue-900 mt-6">
+                    이 세상 어떤 것과도 예배를 맞바꾸지 않는 믿음의 사람,<br class="hidden md:block">
+                    하나님을 하나님으로 온전히 인정하며<br class="hidden md:block">
+                    마음의 무릎을 꿇는 참된 예배자가 되게 해 주옵소서.
+                </p>
+                <p class="mb-0 mt-4 text-sm font-normal text-gray-500">예수님의 이름으로 기도하옵나이다. 아멘.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 말씀묵상. 푸른동산 지산교회 정재학 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

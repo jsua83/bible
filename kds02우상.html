@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우상 - 특강</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+        
+        h3 {
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            color: #1f2937 !important;
+            margin-top: 2.5rem !important;
+            margin-bottom: 1.25rem !important;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 기도문 및 결단 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+        .prayer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .prayer-box { padding: 2rem 1.5rem; }
+            .prayer-box p { font-size: 1.05rem !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <!-- max-w-3xl 로 너비 확장 -->
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                우상
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                출애굽기 20:4~6
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <!-- Intro -->
+            <p>오늘은 <strong>우상</strong>이라고 하는 개념입니다. 예배와 우상은 정반대 개념입니다. 하나님이 우리를 예배자로 만드셨기 때문에, 저와 여러분이 예배자가 되지 못하면 우리는 우상숭배자가 되는 것입니다.</p>
+            <p>예배의 정의는 순종입니다. 아브라함이 하나님께 순종하는 것을 예배라고 정의했습니다. 예배와 우상이 반대라면, <strong>순종이 예배이고 불순종이 우상</strong>입니다.</p>
+
+            <!-- Section 1 -->
+            <h2>우상에 대한 세 가지 오해</h2>
+            
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 space-y-4 text-gray-800">
+                <ul class="list-disc list-inside space-y-3 font-medium ml-2">
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">첫째,</strong> "나는 예수 믿는 사람이니 우상하고 상관없다"는 오해입니다. 그러나 성경에서 우상을 섬기지 말라고 한 대상은 이미 믿는 사람들, 곧 구약의 이스라엘 백성과 신약의 그리스도인이었습니다. 안식일을 어기지 않던 이스라엘 백성도 우상을 섬길 수 있었습니다.</li>
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">둘째,</strong> "나는 무신론자니 우상을 섬기지 않는다"는 오해입니다. 인간은 예배자로 창조되었기에, 하나님이 아니면 반드시 다른 것을 우상으로 섬기게 되어 있습니다.</li>
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">셋째,</strong> "나는 무엇을 만들어 놓고 절하지 않으니 우상과 상관없다"는 오해입니다. 이것도 우상이 무엇인지 모르기 때문에 하는 생각입니다.</li>
+                </ul>
+            </div>
+
+            <!-- Section 2 -->
+            <h2>소유권과 통치권 — 신앙생활의 본질</h2>
+            
+            <p>무언가를 만든 사람은 그것에 대한 소유권과 통치권을 갖습니다. 하나님은 세상과 우리를 창조하셨기에, 하나님은 우리에 대한 모든 소유권과 통치권을 가지고 계십니다.</p>
+            <p>순종이란, 하나님이 소유권과 통치권을 가지고 있다는 것을 인정하는 행위입니다. 신앙생활의 본질은 매 순간 그것을 인정하는 것입니다.</p>
+            
+            <blockquote>
+                <p>"너희는 나를 불러 주여 주여 하면서도 어찌하여 내가 말하는 것을 행하지 아니하느냐." <span class="text-sm text-gray-500">(눅 6:46)</span></p>
+            </blockquote>
+            
+            <p>입으로는 "주여"라고 하면서 순종하지 않는 것은, "사랑해"라고 말하면서 뺨을 때리는 것과 같습니다. 말과 행동이 모순되는 것입니다. 순종이란, <strong>"하나님은 나의 주인입니다"</strong>라는 것을 보여주는 구체적인 행위입니다.</p>
+            
+            <blockquote>
+                <p>"너희 자신을 종으로 내주어 누구에게 순종하든지 순종함을 받는 자의 종이 되는 줄을 너희가 알지 못하느냐." <span class="text-sm text-gray-500">(롬 6:16)</span></p>
+            </blockquote>
+            
+            <p>내가 하나님께 순종하면, 하나님은 나의 주인이시고 나는 하나님의 종입니다.</p>
+            <p>커피를 끓여 오면서 짜증을 내며 던진다면, 그 행위는 순종이 아닙니다. 순종은 행위만이 아니라 태도와 자세를 포함합니다. 같은 짜장면 한 그릇을 사줘도, 태도에 따라 상대방을 거지로 만들거나 왕으로 대접할 수 있습니다.</p>
+            <p>에덴동산에서 선악과를 먹지 말라고 한 것은, "내가 너의 주인임을 증명하라"는 의미였습니다. 아담과 하와가 선악과를 먹은 것은, <strong>"당신은 나의 주인이 아니다"</strong>라는 행위적 선언이었습니다.</p>
+
+            <!-- Section 3 -->
+            <h2>우상은 내가 만든 가짜 신</h2>
+            
+            <p>예배란, 하나님이 나의 창조주이심을 인정하는 것입니다. 우상은 그것을 부인하고 "내가 주인이다, 나는 내 맘대로 살겠다"고 하는 것입니다.</p>
+            <p>우상이란 단지 무언가를 조각해 절하는 것이 아니라, <strong>내 마음속에 내가 만든 가짜 하나님을 섬기는 것</strong>입니다. 누군가 내 아내를 험담할 때, 그가 말하는 "내 아내"는 그가 만들어낸 가짜 아내입니다. 마찬가지로, 내가 믿는 하나님이 성경의 하나님과 다르다면 그것은 내가 만든 가짜 하나님입니다.</p>
+
+            <!-- Section 4 -->
+            <h2>금송아지 사건 — 불안이 만드는 우상</h2>
+            
+            <p>출애굽기 32장, 이스라엘 백성이 금송아지를 만든 사건을 보겠습니다.</p>
+            <p>모세가 율법을 받으러 산에 올라가 오래 내려오지 않자, 백성들 마음속에 불안이 생겼습니다. 그 불안이 그들로 하여금 금송아지를 만들게 했습니다. 그들은 금송아지를 만들어 놓고 <strong>"우리를 애굽에서 인도한 신"</strong>이라 부르며 예배했습니다. 아론조차 이것이 우상숭배인 줄 몰랐습니다. 모세만 분별했습니다.</p>
+            <p>우상숭배의 밑바닥에는 <strong>인간의 불안, 불확실성</strong>이 있습니다. 미래를 알 수 없는 불안 때문에 사람들은 점쟁이에게 가거나 우상에게 갑니다.</p>
+            <p>이 불안을 가지고 하나님께 갈 것인가, 우상에게 갈 것인가, 그것이 문제입니다. 불안 자체가 나쁜 것이 아니라, 그 불안을 누구에게 가져가느냐가 중요합니다.</p>
+
+            <!-- Section 5 -->
+            <h2>구약의 키워드 — 질투</h2>
+            
+            <blockquote>
+                <p>"너를 위하여 새긴 우상을 만들지 말고… 나 네 하나님 여호와는 질투하는 하나님인즉…" <span class="text-sm text-gray-500">(출 20:4~5)</span></p>
+            </blockquote>
+            
+            <p>질투란, 사랑하기 때문에 생기는 것입니다. 사랑하지 않으면 질투도 없습니다. 하나님이 "나는 질투하는 하나님"이라고 하신 것은, <strong>"나도 너를 사랑한다, 그런데 너는 왜 나를 사랑하지 않느냐"</strong>는 의미입니다.</p>
+            <p>우상이란, 하나님은 나를 사랑하는데 내가 하나님을 사랑하지 않는 것입니다. 간단히 정의하면, <strong>우상은 사랑의 변질</strong>입니다.</p>
+            
+            <p>사랑의 변질은 두 가지 측면에서 일어납니다.</p>
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-5 rounded-r-lg my-6">
+                <ul class="space-y-3 text-blue-900 font-medium ml-2">
+                    <li><span class="font-bold mr-2">첫째,</span> <strong>대상이 잘못됐습니다.</strong> 하나님을 사랑해야 하는데 다른 것을 사랑하는 것입니다.</li>
+                    <li><span class="font-bold mr-2">둘째,</span> <strong>질이 달라졌습니다.</strong> 부부 간의 사랑은 숭고하지만, 배우자 아닌 다른 사람을 사랑하는 것은 같은 '사랑'이라는 단어를 써도 더럽고 수치스러운 것입니다. 그것을 간음이라 부릅니다.</li>
+                </ul>
+            </div>
+            
+            <p>디모데후서를 보면 말세에 사람들이 <strong>"자기를 사랑하고 돈을 사랑한다"</strong>고 했습니다. 마음속 모든 고통의 근본 원인은, 하나님을 사랑하지 않고 다른 것을 사랑하는 것입니다.</p>
+
+            <!-- Section 6 -->
+            <h2>신약의 키워드 — 간음</h2>
+            
+            <p>신약에서는 우상을 설명하는 키워드가 간음입니다.</p>
+            <blockquote>
+                <p>"간음하는 여인들이여 세상과 벗된 것이 하나님과 원수 됨을 알지 못하느냐." <span class="text-sm text-gray-500">(약 4:4)</span></p>
+            </blockquote>
+            <p>질투와 간음은 모두 사랑의 표현입니다. 대상이 달라지고 질이 달라진 것을 보여주는 같은 개념입니다.</p>
+
+            <!-- Section 7 -->
+            <h2>가장 위험한 우상의 후보 — 자식과 돈</h2>
+            
+            <p>우상이란, 하나님의 자리를 차지한 것입니다. 하나님을 제외한 모든 대상이 우상의 후보가 될 수 있지만, 가장 좋아하고 귀히 여기는 것이 가장 위험한 우상의 후보입니다.</p>
+            <p>모든 그리스도인이 가장 빠지기 쉬운 우상의 1번, 2번 후보는 <strong>'자식'과 '돈'</strong>입니다. 하나님이 아브라함에게 "네 아들 이삭을 번제로 드리라"고 하신 것은, <strong>"너 자식한테 걸려 넘어질래, 아니면 넘어갈래?"</strong>라는 질문이었습니다.</p>
+            <p>무엇을 섬기는지 알려면, 무엇이 당신을 가장 웃게 하고 울게 하는지 보면 됩니다. 자식 때문에, 돈 때문에 많이 울고 웃었다면, "나는 언제 하나님 때문에 그렇게 울어봤나" 돌아봐야 합니다.</p>
+
+            <!-- Section 8 -->
+            <h2>시편 115편 — 우상의 정체는 시체</h2>
+            
+            <blockquote>
+                <p>"그들의 우상은 은과 금이요 사람이 손으로 만든 것이라 입이 있어도 말하지 못하며 눈이 있어도 보지 못하며 귀가 있어도 듣지 못하며…" <span class="text-sm text-gray-500">(시 115:4~6)</span></p>
+            </blockquote>
+            
+            <p>이것은 시체에 대한 묘사입니다. 우상은 죽은 것입니다. 죽은 시체는 우리를 도울 수 없습니다. 그래서 성경은 하나님을 부를 때 '살아계신 하나님'이라 합니다. 이것은 곧, 내가 필요할 때 나를 도울 수 있는 하나님이라는 뜻입니다.</p>
+            <p>그다음에 충격적인 말씀이 나옵니다.</p>
+            
+            <blockquote>
+                <p>"우상을 만드는 자들과 그것을 의지하는 자들이 다 그와 같으리라." <span class="text-sm text-gray-500">(시 115:8)</span></p>
+            </blockquote>
+            
+            <p>우상을 섬기면 우상을 닮아갑니다. 돈을 사랑하는 목사는 설교가 장사꾼처럼 보이게 됩니다. 반대로, 사랑하고 존경하는 사람을 닮아가게 됩니다. 그래서 성경은 말씀을 가르치는 자를 존경하라고 합니다.</p>
+            <p>하나님이 우리에게 "나를 사랑하라"고 거듭 말씀하시는 이유는, <strong>우리가 하나님을 닮아가게 하시려는 것</strong>입니다. 사랑하면 닮습니다.</p>
+
+            <!-- Section 9 -->
+            <h2>결론</h2>
+            
+            <p>성경이 말하는 우상은 다음과 같이 정리할 수 있습니다.</p>
+            
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 space-y-4 text-gray-800">
+                <ul class="list-decimal list-inside space-y-3 font-medium ml-2">
+                    <li>우상이란 <strong>불순종</strong>입니다.</li>
+                    <li>우상이란 <strong>자기가 주인이 되는 것</strong>입니다.</li>
+                    <li>우상이란 <strong>사랑의 변질</strong>입니다.</li>
+                    <li>우상이란 <strong>영적 간음</strong>입니다.</li>
+                </ul>
+            </div>
+            
+            <p>우상을 이기는 비결은 <strong>하나님을 더 사랑하는 것</strong>입니다. 간음하지 않는 비결은 "간음하지 말아야지" 생각하는 것이 아니라, 아내를 죽도록 사랑하는 것입니다. 마찬가지로, 누군가 우상을 섬기고 있다면 그것은 "하나님 사랑하는 데 실패했다"는 뜻입니다.</p>
+            
+            <p class="font-bold text-center text-[1.35rem] text-blue-900 mt-10 mb-6">
+                하나님을 더 사랑하세요.<br class="sm:hidden">
+                그것이 우상을 이기는 유일한 비결입니다.
+            </p>
+
+            <!-- 마무리 묵상과 결단 -->
+            <div class="prayer-box">
+                <h3>
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <p>하나님 아버지, 은혜를 감사합니다.<br>
+                귀한 자리에 저희를 불러 주셔서 말씀 들려주시니 진짜로 감사합니다.</p>
+                <p>아버지 하나님, 하나님을 더 사랑합니다.<br>
+                지금보다도 더 세게 하나님을 사랑하겠습니다.</p>
+                <p class="font-bold text-blue-900 mt-6">
+                    내 삶의 불안을 세상의 우상이 아닌 주님께로 가져가며,<br class="hidden md:block">
+                    자식보다, 돈보다 하나님을 더 사랑하는 저희들이 될 수 있도록<br class="hidden md:block">
+                    은혜를 베풀어 주시옵소서.
+                </p>
+                <p class="mb-0 mt-4 text-sm font-normal text-gray-500">예수님의 이름으로 기도하옵나이다. 아멘.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 말씀묵상. 푸른동산 지산교회 정재학 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

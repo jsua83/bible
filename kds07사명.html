@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사명 - 특강</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+        
+        h3 {
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            color: #1f2937 !important;
+            margin-top: 2.5rem !important;
+            margin-bottom: 1.25rem !important;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 기도문 및 결단 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+        .prayer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .prayer-box { padding: 2rem 1.5rem; }
+            .prayer-box p { font-size: 1.05rem !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                사명
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                사도행전 20:24, 23:11
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <!-- Intro -->
+            <p>사람이 행복한 삶을 살려면 기본적으로 해결해야 될 문제가 있습니다.</p>
+            <p>첫째, 죄와 죄책감을 해결해야 합니다. 이것은 예수를 믿으면 복음이 해결해 줍니다. 예수를 믿으면서도 죄와 죄책감 문제가 해결되지 않았다면, 복음을 다시 한번 정리해야 합니다.</p>
+            <p>둘째, 허무 문제를 해결해야 합니다. 허무란 "당신은 왜 삽니까?", "왜 존재합니까?"라는 질문에 답이 없는 것입니다. 허무에 빠지면 인생은 절대로 행복할 수 없습니다.</p>
+            <p>허무를 이기는 것이 의미입니다. 그 의미를 우리는 <strong>사명</strong>이라 합니다.</p>
+
+            <!-- Section 1 -->
+            <h2>사명이란 무엇인가 — 맡겨진 임무</h2>
+            
+            <p>지우개에게 "왜 존재하니?" 물으면 "지우려고 있습니다"라고 답할 것입니다. 마찬가지로 모든 존재하는 것에는 존재 이유가 있습니다. 하나님의 관점에서 보면, 이것은 창조하신 목적입니다.</p>
+            <p>컵을 예로 들어보겠습니다. 컵을 만든 목적은 강대상에서 강사에게 물을 주는 것입니다. 만일 그 컵이 주일날 강대상이 아닌 술집의 소주잔이 되어 있다면 어떨까요. 자기가 있어야 될 자리를 이탈한 것입니다. 그것이 죄입니다. 죄란 자리를 이탈하는 것입니다. 남편이 간음을 하면, 그는 남편의 자리를 이탈하고 남편의 사명을 감당하지 못하는 것입니다.</p>
+            <p>사명의 사전적 정의는 '맡겨진 임무'입니다. 그 임무를 누가 맡겼습니까? <strong>하나님께서 맡기셨습니다.</strong></p>
+            <p>만일 하나님이 맡기신 사명을 발견하지 못하면, 그 사람은 일을 하긴 하는데 자기가 좋아하는 일, 자기가 결정한 일을 하게 됩니다. 하나님이 맡겨 준 사명을 감당하는 사람은 하나님을 주인으로 섬깁니다. 그러나 자기가 선택한 일을 계속하는 사람은, 그 일을 하면서도 자기가 주인이 됩니다.</p>
+            <p>하나님이 맡겨주신 일은 피곤해도, 하기 싫어도, 기분 나빠도 해야 합니다. 내가 결정한 일이라면 그만둘 수 있지만, <strong>하나님이 맡겨준 일은 내 감정과 상관없이 계속되어야 합니다.</strong></p>
+            <p>마태복음 7장의 원리를 보면, 하나님은 우리가 자기 마음대로 한 일에 대해 상을 주지 않으십니다. "내가 언제 그 일을 하라고 했니?" — 하나님이 시키지 않은 일을 자기 마음대로 했다면, 그것은 상관이 없는 일입니다. 오히려 하나님이 하라는 A를 하지 않고 자기가 원하는 B를 하는 것, 이것이 죄입니다.</p>
+
+            <!-- Section 2 -->
+            <h2>바울을 통해 본 사명의 정의</h2>
+            
+            <p>사도행전 20장 24절을 보겠습니다.</p>
+            
+            <blockquote>
+                <p>"오직 성령이 각 성에서 내게 증언하여 결박과 환난이 나를 기다린다 하시나 내가 달려갈 길과 주 예수께 받은 사명, 곧 하나님의 은혜의 복음 증언하는 일을 마치려 함에는 나의 생명조차 조금도 귀한 것으로 여기지 아니하노라."</p>
+            </blockquote>
+            
+            <p>바울은 사명을 <strong>'일'</strong>이라고 정의합니다. 사명이란 일차적으로 일입니다.</p>
+            <p>마이크가 하는 일이 마이크의 사명이고, 피아노가 소리를 내는 것이 피아노의 사명입니다. 소리 나지 않는 피아노, 달리지 못하는 자동차는 겉이 멀쩡해도 쓰레기입니다. 마찬가지로 사명을 감당하지 못하면서 그 자리에 있는 것은 의미가 없습니다.</p>
+
+            <!-- Section 3 -->
+            <h3>사명은 나를 통해 이루시려는 일</h3>
+            
+            <p>사명이란, 하나님께서 나를 통하여 이루기를 원하시는 일입니다. 내가 이 땅에 살아 있다는 것은, 하나님이 나를 통해 이루시려는 어떤 일이 있다는 뜻입니다.</p>
+            <p>사람마다 사명이 다릅니다. 바울은 "나는 심었고 아볼로는 물을 주었다"고 했습니다. <span class="text-sm text-gray-500">(고전 3:6)</span> 두 사람 다 설교자였지만 사명이 달랐습니다. 베드로는 유대인의 사도로, 바울은 이방인의 사도로 부름받았습니다. 베드로의 설교에는 3천 명이 구원받았지만, 바울이 회당에서 전할 때는 핍박만 받았습니다. 그것은 사명이 다르기 때문입니다.</p>
+            <p>자기 사명을 발견한 사람은 다른 사람의 사명과 비교하지 않습니다. 경쟁하지도, 시기하지도 않습니다. <strong>누구와도 비교할 필요 없는, 나만의 달려갈 길이 있다는 것</strong>을 이해하면, 열등의식과 교만으로부터 보호받습니다.</p>
+
+            <!-- Section 4 -->
+            <h3>사명은 생명보다 귀한 일</h3>
+            
+            <p>사명이란 생명보다 귀한 일입니다. 하나님이 우리에게 생명을 주신 것은 이 사명을 감당하라고 주신 것입니다.</p>
+            <p>노후 준비에는 건강, 돈, 친구 외에도 <strong>'일'</strong>이 있어야 합니다. 일을 빼앗긴다는 것은 살아야 할 이유를 빼앗긴 것과 같습니다.</p>
+            <p>사명에서 멀어지고 생명과 돈에 가까워질수록 사람은 짐승이 됩니다. 사명이 없는 사람은 "왜 사세요?" 물으면 "죽지 못해 산다"고 답합니다. 그래서 우울증과 허무에 빠지는 것입니다.</p>
+            <p>사명이 목적이 될 때, 생명과 돈은 수단이 됩니다. 사명 없이 사는 사람은 결국 자기를 위해 사는 것이고, <strong>사명을 위해 사는 사람은 하나님을 위해 사는 것</strong>입니다.</p>
+
+            <!-- Section 5 -->
+            <h2>사도행전 20장 — 예루살렘을 향한 발걸음</h2>
+            
+            <p>바울이 예루살렘으로 가는데, 주변 사람들이 환난과 결박이 기다린다며 가지 말라고 눈물로 말립니다. 그러나 바울은 이렇게 말합니다.</p>
+            
+            <blockquote>
+                <p>"너희가 어찌하여 내 마음을 상하게 하느냐… 나는 예루살렘으로 간다."</p>
+            </blockquote>
+            
+            <p>무엇이 바울을 환난이 기다리는 예루살렘으로 가게 했을까요? 바울의 마음속에 있는 사명의식입니다. <strong>"나는 이 사명을 감당해야 돼"</strong>라는 의식이 그를 움직였습니다.</p>
+
+            <!-- Section 6 -->
+            <h2>사도행전 23장 — 담대하라</h2>
+            
+            <p>예루살렘에 도착한 바울이 결박당하고 어려움을 당한 날 밤, 하나님이 나타나셔서 말씀하십니다.</p>
+            
+            <blockquote>
+                <p>"바울아 담대하라 네가 예루살렘에서 나의 일을 증언한 것 같이 로마에서도 증언하여야 하리라." <span class="text-sm text-gray-500">(행 23:11)</span></p>
+            </blockquote>
+            
+            <p>'담대하라'는 '두려워하지 말라'는 뜻이고, '두려워하지 말라'는 '안 죽는다'는 뜻입니다. 모든 두려움의 원인은 죽음입니다. 강아지는 안 무섭지만 불독은 무섭고, 전쟁 게임은 안 무섭지만 실제 전쟁은 무서운 것은, 목숨이 달려 있기 때문입니다.</p>
+            <p>구원이란 죽음 문제가 해결된 것입니다. 그리스도인은 본질적으로 담대해야 합니다. 성격이 담대해서가 아니라, 죽음을 초월했기 때문입니다.</p>
+            <p>하나님은 바울에게 <strong>"네가 감당해야 될 사명이 있는데 네가 왜 죽냐"</strong>고 말씀하십니다. 사명자는 죽지 않습니다. 사명이 있는 한 죽지 않습니다. 바울을 죽이려는 40여 명의 결사대가 있었지만, 하나님은 그를 지켜주셨습니다.</p>
+            <p>사명자는 하나님이 보호하시고 지켜주십니다. <strong>살아 있다는 것 자체가 사명이 있다는 증거입니다.</strong> 바울이 예루살렘에서 복음을 전했지만 예루살렘이 회심한 것은 아닙니다. 그러나 주님은 "사명을 감당했다"고 평가하십니다. 사명자의 길은 화려하고 성공적인 것만이 아닙니다.</p>
+
+            <!-- Section 7 -->
+            <h2>사도행전 27장 — 가이사 앞에 서야 한다</h2>
+            
+            <p>바울이 죄수의 몸으로 로마로 끌려가는 길에 유라굴로라는 풍랑을 만났습니다. 하나님이 다시 나타나셨습니다.</p>
+            
+            <blockquote>
+                <p>"바울아 두려워하지 말라 네가 가이사 앞에 서야 하겠고." <span class="text-sm text-gray-500">(행 27:24)</span></p>
+            </blockquote>
+            
+            <p>가이사 앞에 서야 할 사명이 있는데, 왜 죽겠습니까. 사명이 있기에 바울은 죽지 않은 것입니다.</p>
+
+            <!-- Section 8 -->
+            <h2>사명을 잃은 인간 — 창세기 2장과 3장</h2>
+            
+            <p>창세기 2장에서 하나님은 사람을 창조하시고 <strong>"경작하고 다스리라"</strong>고 하셨습니다. 그것이 인간의 사명이었습니다.</p>
+            <p>창세기 2장에서 일은 하나님을 위한 일, 하나님의 영광을 위한 일이었습니다. 그러나 죄를 짓고 3장으로 넘어오면서, 일은 먹고살기 위한 수단으로 변했습니다. 죄 때문에 인간은 사명을 상실한 채 이 땅에 태어납니다. 복음 때문에 우리는 다시 3장에서 2장으로 회복되어야 합니다.</p>
+            
+            <blockquote>
+                <p>"그가 모든 사람을 대신하여 죽으심은 살아 있는 자들로 하여금 다시는 그들 자신을 위하여 살지 않고 그들을 대신하여 죽었다가 다시 살아나신 이를 위하여 살게 하려 함이라." <span class="text-sm text-gray-500">(고후 5:15)</span></p>
+            </blockquote>
+            
+            <p>구원받으면 잃어버린 사명을 회복해야 합니다. 복음이 잃어버린 사명을 회복하게 합니다.</p>
+
+            <!-- Section 9 -->
+            <h2>요셉의 예 — 사명을 깨달으면 과거를 재해석한다</h2>
+            
+            <p>요셉은 형들에게 팔리고 감옥에 갇혔습니다. 처음에는 억울함이 가득했습니다. 그러나 국무총리가 되고 나서 형들에게 말합니다.</p>
+            
+            <blockquote>
+                <p>"당신들이 나를 이곳에 팔았다고 해서 근심하지 마소서 한탄하지 마소서 하나님이 생명을 구원하시려고 나를 당신들보다 먼저 보내셨나이다." <span class="text-sm text-gray-500">(창 45:5)</span></p>
+            </blockquote>
+            
+            <p>요셉은 자기 사명을 깨달았습니다. <strong>사명을 깨닫는 순간, 과거의 모든 사건을 재해석합니다.</strong> 억울함과 쓴 뿌리가 있던 자리에 용서가 들어옵니다. 사명을 깨달으면 누구를 미워하지 않고 용서하게 됩니다. 사명을 모르면 과거의 사건에 매여 쓴 뿌리와 미움 속에 살게 됩니다.</p>
+
+            <!-- Section 10 -->
+            <h2>바울과 예루살렘 사도들 — 사명을 인정하는 교제</h2>
+            
+            <p>바울이 구원받자마자 예루살렘 사도들에게 교제를 청했지만 거절당했습니다. 그러나 14년이 흐른 후, 그들은 바울의 손을 잡았습니다.</p>
+            
+            <blockquote>
+                <p>"또 기둥같이 여기는 야고보와 게바와 요한도 내게 주신 은혜를 알므로 나와 바나바에게 친교의 악수를 하였으니 우리는 이방인에게로 그들은 할례자에게로 가게 하려 함이라." <span class="text-sm text-gray-500">(갈 2:9)</span></p>
+            </blockquote>
+            
+            <p>그들이 바울의 사명을 인정한 것입니다. 14년 동안 바울이 묵묵히 자기 사명을 감당하는 것을 보고, 그의 사명을 인정한 것입니다. <strong>자기 사명을 깨달은 사람은 다른 사람의 사명도 귀하게 여깁니다.</strong> 자기 사명을 우습게 여기는 사람이 다른 사람의 사명을 존중할 수 없습니다.</p>
+
+            <!-- Section 11 -->
+            <h2>사명을 감당하기 위한 네 가지 선물</h2>
+            
+            <p>하나님이 사명을 맡기실 때, 그 사명을 감당하도록 네 가지를 함께 주십니다.</p>
+
+            <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6 text-gray-800">
+                <ul class="list-disc list-inside space-y-3 font-medium ml-2">
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">첫째, 은사입니다.</strong> 은사는 일을 하라고 주신 것입니다. 내 사명이 무엇인지 알려면 "나는 어떤 은사를 받았는가"를 물으면 됩니다.</li>
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">둘째, 시간(생명)입니다.</strong> 시간 없이는 일할 수 없습니다. 시간을 사명과 관계없이 보내는 것은 비참한 일입니다.</li>
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">셋째, 돈(물질)입니다.</strong> 어떤 일이든 물질이 들어갑니다. 돈을 사명과 연결해서 사용해야 합니다.</li>
+                    <li><strong class="bg-transparent shadow-none px-0 text-blue-700">넷째, 동역자입니다.</strong> 하나님이 맡겨주신 일은 혼자 감당하는 것이 아닙니다.</li>
+                </ul>
+            </div>
+
+            <p>하나님은 항상 내 능력보다 큰 일을 맡기십니다. 그래야 겸손해지고, 자기가 했다고 자랑하지 않게 됩니다. 그래서 사람들을 보내주십니다. 동역자를 무시하는 사람은 자기 사명을 제대로 이해하지 못한 것입니다.</p>
+            <p>이 네 가지를 잘 관리하는 비결은 <strong>'귀히 여기는 것'</strong>입니다. 은사를, 시간을, 물질을, 동역자를 귀히 여기는 것입니다.</p>
+
+            <!-- Section 12 -->
+            <h2>결론 — 최선을 다하는 것이 사명</h2>
+            
+            <p>바울은 다메섹 도상에서 구원과 사명을 동시에 받았습니다. "이방인을 위해 택한 나의 그릇", 이것이 바울의 사명이었고, 그는 평생 그 사명에 목숨을 걸었습니다.</p>
+            <p><strong>사명은 생명보다 귀한 일입니다.</strong> 목숨 걸고, 생명 걸고 하는 것, 그것이 곧 최선을 다하는 것입니다.</p>
+
+            <!-- 마무리 묵상과 결단 -->
+            <div class="prayer-box">
+                <h3>
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <p>하나님 아버지, 내가 이 땅에 존재하는 이유,<br>
+                나를 향한 하나님의 <strong>사명</strong>을 깨닫게 하옵소서.</p>
+                <p>하나님이 주신 은사와 시간과 물질과 동역자를 귀히 여기며,<br>
+                목숨 다해 사명 감당하는 삶을 살게 하옵소서.</p>
+                <p class="font-bold text-blue-900 mt-6">
+                    "사명을 깨달음으로 과거의 쓴 뿌리가 용서로 변하고,<br class="hidden md:block">
+                    어떤 환난 앞에서도 담대하게 나아가게 하옵소서."
+                </p>
+                <p class="mb-0 mt-4 text-sm font-normal text-gray-500">예수님의 이름으로 기도합니다. 아멘.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 말씀묵상. 푸른동산 지산교회 정재학 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

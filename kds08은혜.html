@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>은혜 - 특강</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Serif KR Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #fbfaf8; /* 부드러운 종이 질감의 배경색 */
+            color: #333333;
+            word-break: keep-all; /* 한국어 단어 끊김 방지 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 본문 문단 스타일 */
+        p {
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem !important;
+            color: #4a4a4a;
+        }
+
+        /* 소제목 스타일 */
+        h2 {
+            position: relative;
+            margin-top: 4.5rem !important;
+            margin-bottom: 1.75rem !important;
+            font-weight: 800 !important;
+            font-size: 1.65rem !important;
+            color: #111827 !important;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #9ca3af;
+            margin-top: 1.2rem;
+        }
+        
+        h3 {
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            color: #1f2937 !important;
+            margin-top: 2.5rem !important;
+            margin-bottom: 1.25rem !important;
+        }
+
+        /* 인용구 스타일 */
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #4b5563;
+            font-size: 1.2rem;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+
+        /* 형광펜 하이라이트 효과 */
+        strong {
+            color: #111827;
+            font-weight: 700;
+            background-color: #fef08a; /* 연한 노란색 하이라이트 */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 -5px 0 0 rgba(250, 204, 21, 0.5); /* 하단 포인트 라인 */
+        }
+
+        /* 기도문 및 결단 박스 */
+        .prayer-box {
+            margin-top: 4rem;
+            background-color: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .prayer-box h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prayer-box p {
+            color: #374151;
+            margin-bottom: 1rem;
+            font-size: 1.15rem !important;
+        }
+        .prayer-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* TOP 버튼 스타일 */
+        #topBtn {
+            display: none; 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.2s;
+            line-height: 1.2;
+            text-align: center;
+        }
+        #topBtn:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            #topBtn { bottom: 20px; right: 20px; padding: 10px 12px; font-size: 12px; }
+            p { font-size: 1.15rem !important; }
+            blockquote { padding: 1.25rem 1.5rem; font-size: 1.1rem; }
+            .prayer-box { padding: 2rem 1.5rem; }
+            .prayer-box p { font-size: 1.05rem !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center pt-16 pb-12 px-5 sm:px-8">
+
+    <article class="max-w-3xl w-full fade-in bg-white shadow-sm border border-gray-100 rounded-2xl p-8 sm:p-14 lg:p-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-gray-900 leading-snug tracking-tight">
+                은혜
+            </h1>
+            <p class="text-gray-500 font-semibold tracking-wider text-base sm:text-lg border-b-2 border-gray-200 inline-block pb-3 px-4">
+                사무엘하 9장
+            </p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="content">
+            
+            <!-- Intro -->
+            <p>오늘 제목이 성경이 말하는 은혜입니다. <strong>은혜</strong>, 참 가슴이 떨리는 단어입니다.</p>
+            <p>은혜에 대한 사전적 정의는 잘 알다시피 자격과 조건이 없는 자에게 부어 주시는 하나님의 호의 혹은 하나님의 선물입니다. 우리가 은혜가 무엇인지를 알려면 두 가지를 기본적으로 이해해야 합니다. <strong>첫째, 내가 얼마나 자격과 조건이 없는가. 둘째, 이렇게 자격과 조건이 없는 나에게 주신 하나님의 선물이 무엇인가.</strong></p>
+            <p>우리가 자격과 조건이 없다는 말은 곧 하나님 앞에서 '죄인'이라는 뜻입니다. 세상 사람들이 말하는 죄는 지극히 자기 양심에 근거하지만, 성경이 말하는 죄는 하나님을 믿지 않고, 감사하지 않고, 순종하지 않는 것입니다. 하나님을 믿지 않는 것이 가장 흉악한 죄입니다.</p>
+            <p>또한, 하나님의 선물에 대한 이해도 필요합니다. 건강, 물질, 가족 모두 하나님의 선물이지만, 성경에서 말하는 은혜 중의 은혜, 가장 큰 선물은 바로 <strong>하나님께서 당신의 아들을 주셨다는 것</strong>입니다. 아들을 주셨다는 것은 우리에게 곧 '구원'으로 적용됩니다.</p>
+
+            <blockquote>
+                <p>만일 남편이 아내에게 10억짜리 반지를 사주었고, 또 5만 원짜리 청바지도 사주었다고 가정해 봅시다. 이 아내가 밖에 나가서 사람들에게 10억짜리 반지는 언급도 안 하고 5만 원짜리 청바지만 자랑한다면 어떨까요?<br><br>
+                자기가 손에 낀 반지가 얼마나 가치 있는 것인지를 모르는 사람입니다. 마찬가지로 우리가 구원(아들)의 가치를 모르고 다른 부수적인 축복들만 이야기하며 자랑한다면, 그것은 참된 은혜의 가치를 모르는 것입니다.</p>
+            </blockquote>
+
+            <!-- Section 1 -->
+            <h2>베드로와 바울을 통해 본 은혜</h2>
+            
+            <p>어떤 사람이 하나님께 놀랍게 쓰임 받았다는 것은 하나님의 은혜가 그에게 넘쳤음을 의미합니다. 자격 없는 베드로를 주님께서 수제자로 삼으셨습니다. 가룟 유다의 길을 가지 않은 것은 주님이 그를 위해 기도하시고 꽉 붙잡아 주셨기 때문입니다. 오직 하나님의 은혜입니다.</p>
+            <p>베드로는 생의 마지막에 이렇게 권면합니다.</p>
+            
+            <blockquote>
+                <p>"오직 우리 주 곧 구주 예수 그리스도의 은혜와 그를 아는 지식에서 자라 가라" <span class="text-sm text-gray-500">(벧후 3:18)</span></p>
+            </blockquote>
+            
+            <p>영적 성장이란 주님의 은혜와 주님에 대한 지식에서 자라가는 것입니다. 이것이 신앙생활의 본질입니다. 겉보기엔 똑같아 보여도 각 사람의 영적인 무게, 즉 은혜의 분량은 다 다릅니다.</p>
+            <p>바울 또한 생의 마지막에 <strong>"내가 죄인 중에 괴수"</strong>라고 고백했습니다. 그가 죄를 더 많이 지었기 때문이 아니라, 은혜를 깊이 알게 되니 자신의 죄가 얼마나 큰지를 깨달았기 때문입니다. 하나님의 은혜를 참으로 아는 사람은 자기 죄가 얼마나 추악한가를 압니다. 자기 의가 있는 사람은 은혜를 모르는 사람입니다.</p>
+
+            <!-- Section 2 -->
+            <h2>율법주의의 함정</h2>
+            
+            <p>갈라디아서 5장 4절은 율법 안에서 의롭다 함을 얻으려는 자를 향해 <strong>"그리스도에게서 끊어지고 은혜에서 떨어진 자"</strong>라고 말합니다. 만일 우리 마음속에 은혜가 충만하지 못하면, 우리도 모르는 사이에 율법주의의 함정에 빠지게 됩니다.</p>
+            <p>우리가 구원은 은혜로 받았다고 믿으면서도, 삶의 다른 영역에서는 율법주의자가 될 수 있습니다. 내가 율법주의에 빠졌는지 알아보는 아주 간단한 방법이 있습니다. <strong>다른 사람을 대할 때 은혜로 대하지 않고 있다면</strong>, 율법주의의 함정에 빠진 것입니다. 은혜에서 떨어지면 가장 먼저 나타나는 현상이 누군가와 싸우는 것입니다.</p>
+            <p>또한, 교회에서 일을 할 때 그 삯(인정받기, 보상)을 요구하고, 그것이 채워지지 않아 분노하거나 삐친다면 은혜 없이 일하는 것입니다. 바울은 모든 사도보다 더 많이 수고했지만 "나의 나 된 것은 하나님의 은혜로 된 것"이라고 고백했습니다.</p>
+
+            <!-- Section 3 -->
+            <h2>사무엘하 9장: 은혜의 그림 언어</h2>
+            
+            <p>사무엘하 9장은 구약에서 하나님의 은혜가 무엇인지를 보여주는 아주 중요한 그림 언어(사건)입니다.</p>
+            <p>다윗이 왕이 된 후 묻습니다. <strong>"사울의 집에 남은 사람이 있느냐?"</strong> 고대 사회에서 새 왕이 전 왕의 가족을 찾는 것은 보통 숙청을 의미했습니다. 그래서 사울의 손자 므비보셋은 두려움에 떨며 살았습니다.</p>
+            <p>다윗은 므비보셋을 불러 말합니다.</p>
+            
+            <blockquote>
+                <p>"무서워하지 말라. 내가 네 아버지 요나단으로 말미암아 네게 은총을 베풀리라."</p>
+            </blockquote>
+            
+            <p>다윗은 므비보셋을 왕의 상에서 함께 먹게 하고 모든 재산을 회복시켜 주었습니다.</p>
+
+            <!-- Section 4 -->
+            <h3>성경의 사각지대: "두 발을 절었더라"</h3>
+            
+            <p>사무엘하 9장에는 므비보셋이 <strong>'다리를 전다'</strong>는 표현이 계속해서 반복됩니다. 이 말의 참된 의미를 알기 위해서는 사무엘하 5장으로 가보아야 합니다. 다윗이 예루살렘(여부스)을 점령할 때, 여부스 사람들은 "맹인과 다리 저는 자라도 너를 물리치리라"며 다윗을 모욕했습니다. 그 후로 다윗은 맹인과 다리 저는 자를 몹시 미워하게 되었습니다.</p>
+            <p>그런데 므비보셋은 다리를 저는 자였습니다. 다윗이 가장 미워하는 조건을 갖춘 사람이었음에도 불구하고, 다윗은 그 조건 때문에 그를 내치지 않았습니다. <strong>"내가 요나단으로 인하여"</strong> 그를 사랑한 것입니다.</p>
+            <p>이것이 은혜입니다. 하나님은 우리의 알량한 선행이나 조건 때문에 우리를 사랑하시는 것이 아닙니다. 다윗이 미워하는 조건을 므비보셋이 가졌지만 요나단 때문에 은총을 입었듯, 우리도 우리의 자격 때문이 아니라 <strong>오직 '예수 그리스도' 때문에</strong> 하나님의 사랑과 은총을 받는 것입니다.</p>
+
+            <!-- Section 5 -->
+            <h2>결론 — 은혜가 왕 노릇 하라</h2>
+            
+            <p>므비보셋은 <strong>"두 발이 다 절었더라. 그러나 예루살렘에 사니라"</strong>로 묘사됩니다. 우리 역시 연약함(저는 두 다리)을 고치려고 평생을 발버둥 치며 열등감에 시달릴 것이 아니라, 자격 없는 나를 왕의 상에 앉혀주신 그 은혜를 찬송해야 합니다. 저는 두 다리는 우리를 겸손하게 하고 감사하게 하는 조건입니다.</p>
+            <p>은혜가 무엇입니까? 죄가 더한 곳에 은혜가 더욱 넘칩니다(롬 5:20). 하나님의 은혜는 '죄인인 나를 의인 되게 하신 것'입니다. 그렇다면 은혜의 지배를 받는 사람, 은혜가 왕 노릇 하는 삶은 어떠해야 할까요?</p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-5 rounded-r-lg my-6">
+                <p class="mb-0 text-blue-900 font-semibold text-[1.15rem] leading-relaxed">
+                    "내가 만나는 사람을 의인으로 대하는 것입니다."
+                </p>
+            </div>
+            
+            <p>나에게 잘못한 가해자, 원수 같은 사람이라도 은혜로 대하면 그를 의인으로 만듭니다. 가정에서, 교회에서 만나는 사람들을 정죄하지 않고 은혜의 눈으로 바라보는 것, 그것이 바로 은혜의 사람이 살아가는 방식입니다.</p>
+
+            <!-- 마무리 묵상과 결단 -->
+            <div class="prayer-box">
+                <h3>
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    오늘의 묵상과 결단
+                </h3>
+                <p>고마우신 아버지 하나님, 주님의 은혜를 감사합니다.<br>
+                다윗이 두 다리를 저는 므비보셋을 왕의 상에서 먹게 하고<br>
+                예루살렘 성에서 살게 하며 아들의 대우를 했던 것처럼,<br>
+                우리가 하나님 앞에 엄청난 죄인인데도<br>
+                <strong>은혜로 말미암아 의인으로 대해 주시니 참으로 감사합니다.</strong></p>
+                <p class="font-bold text-blue-900 mt-6">
+                    내가 만나는 사람을 비난하지 않도록 도와주시고,<br class="hidden md:block">
+                    내가 만나는 사람을 죄인으로 보지 않도록 도와주시며,<br class="hidden md:block">
+                    하나님의 은혜로 그 죄인을 의인으로 바꾸는<br class="hidden md:block">
+                    그런 놀라운 은혜가 우리 속에 있게 하여 주시옵소서.
+                </p>
+                <p class="mb-0 mt-4 text-sm font-normal text-gray-500">예수님의 이름으로 기도하옵나이다. 아멘.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 말씀묵상. 푸른동산 지산교회 정재학 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

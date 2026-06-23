@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐심 - 특강</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Noto Sans KR (본문용) & Noto Serif KR (제목 및 강조용) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans KR"', 'sans-serif'],
+                        serif: ['"Noto Serif KR"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            700: '#0f766e',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for subtle animations and overrides -->
+    <style>
+        body {
+            background-color: #fcfcfc;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .content-area p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #374151; /* Tailwind gray-700 */
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased selection:bg-brand-100 selection:text-brand-900">
+
+    <header class="w-full pt-16 pb-12 px-6 fade-in">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">탐심</h1>
+            <p class="text-lg md:text-xl text-gray-500 font-serif">누가복음 12:13~21</p>
+            <div class="w-12 h-1 bg-brand-500 mx-auto mt-8 rounded-full"></div>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 pb-24 fade-in content-area text-lg sm:text-base md:text-lg">
+        
+        <!-- 도입부 -->
+        <h2 class="font-serif text-2xl font-bold text-gray-900 mt-8 mb-6">비유란 무엇인가</h2>
+        <div class="mb-12">
+            <p>비유의 문자적 의미는 <strong>'나란히 곁에 놓다'</strong>입니다. 어떤 목사님이 "제 아내는 장미를 닮았어요"라고 말한다면, 내가 모르는 것(아내)을 내가 아는 것(장미)으로 설명하는 것입니다.</p>
+            <p>성경에서 비유는 땅의 것으로 하늘의 것을, 육신적인 것으로 영적인 것을, 보이는 것으로 보이지 않는 것을 설명합니다.</p>
+            <p>비유 해석의 기본 원리는, 그 비유에는 말하려는 <strong class="text-brand-700">한 가지 핵심 메시지</strong>가 있다는 것입니다. 비유에 등장하는 모든 세부 요소를 다 해석하려 하면 안 됩니다. 핵심은 두 대상 사이의 공통점을 찾는 것입니다.</p>
+        </div>
+
+        <div class="my-16 border-t border-b border-gray-200 py-12">
+            <h2 class="font-serif text-2xl font-bold text-gray-900 mb-6">1. 누구에게, 왜 이 비유를 하셨는가</h2>
+            <p>누가복음 12장 1절을 보면, 수만 명의 무리 가운데 예수님은 먼저 제자들에게 말씀하고 계셨습니다.</p>
+            <p>무리 중 한 사람이 끼어들어 <span class="font-serif italic text-gray-600">"내 형을 명하여 유산을 나와 나누게 하소서"</span>라고 요청했습니다. 그러자 주님은 <strong>"그들에게"</strong> 이르시되 <strong class="text-brand-700">"삼가 모든 탐심을 물리치라"</strong>고 하셨습니다.</p>
+            <p>이 동생 한 사람의 질문을 그 자리에 있던 무리 전체와 동일시하시며, 탐심을 설명하기 위해 어리석은 부자의 비유를 들려주신 것입니다.</p>
+
+            <h3 class="font-serif text-xl font-bold text-gray-800 mt-10 mb-4">동생과 어리석은 부자의 공통점 — 우리의 생각과는 다른 탐심</h3>
+            <p>우리가 일반적으로 생각하는 탐심에는 세 가지 오해가 있습니다.</p>
+            <ul class="list-disc pl-6 space-y-4 mb-8 text-gray-700 marker:text-brand-500">
+                <li><strong class="text-gray-900">첫째, 탐심은 부자와만 연관된다고 생각합니다.</strong> 가난한 사람은 탐심과 무관하다고 여깁니다.</li>
+                <li><strong class="text-gray-900">둘째, 탐심은 가해자와 연관된다고 생각합니다.</strong> 피해자는 탐심과 무관하다고 여깁니다.</li>
+                <li><strong class="text-gray-900">셋째, 윤리적으로 문제없으면 탐심과 무관하다고 생각합니다.</strong></li>
+            </ul>
+            
+            <p>그러나 본문의 동생은 가난한 피해자였고, 율법대로 정당하게 자기 몫을 찾으려는 사람이었습니다. 그런데도 주님은 그에게 "탐심을 물리치라"고 하셨습니다.</p>
+            <p>어리석은 부자도 윤리적으로 문제없이, 성실하게 일해서 부자가 된, 인생을 즐길 줄도 아는 성공한 사람이었습니다. 그런데도 주님은 그를 탐심의 사람이라고 평가하셨습니다.</p>
+            
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 my-8">
+                <p class="mb-0 text-gray-800 font-medium leading-relaxed">
+                    둘의 공통점은 윤리가 아니라, <strong class="text-brand-700">마음과 생각을 지배하는 것이 돈</strong>이었다는 것입니다. 동생은 최고의 설교를 들으면서도 "형에게 빼앗긴 돈"만 생각했고, 부자는 평생 어떻게 돈을 벌고 모으고 쓸지만 생각했습니다.
+                </p>
+            </div>
+            
+            <p>성경이 말하는 탐심이란, 그 돈이 어떤 성격이든 상관없이, <strong>하나님과 하나님의 말씀보다 돈이 더 우리의 마음과 생각을 지배하는 상태</strong>입니다. 가해자든 피해자든, 부자든 가난한 자든 상관없습니다.</p>
+        </div>
+
+        <h2 class="font-serif text-2xl font-bold text-gray-900 mt-16 mb-6">2. 관심이 자기에게만 있다</h2>
+        <p>동생도, 어리석은 부자도 하나님께는 관심이 없고 오직 자기에게만 관심이 있었습니다. "내 영혼아, 내 영혼아"라는 부자의 독백이 이를 보여줍니다.</p>
+
+        <h2 class="font-serif text-2xl font-bold text-gray-900 mt-16 mb-6">3. 탐심은 우상숭배</h2>
+        <blockquote class="border-l-4 border-brand-500 pl-5 py-3 my-6 bg-brand-50/50 rounded-r-lg text-gray-700 italic font-serif leading-relaxed">
+            "자기를 위하여 새긴 우상을 만들지 말라." (출 20:4 참조)
+        </blockquote>
+        <p>우상이란 자기를 위해서 하는 모든 것입니다.</p>
+        <p>어리석은 부자에 대해 성경은 <span class="font-serif italic text-gray-600">"자기를 위하여 재물을 쌓아두고 하나님께 대하여 부유하지 못한 자"</span>라고 했습니다. (눅 12:21) 하나님을 위하면 예배이고, 자기를 위하면 우상입니다.</p>
+
+        <blockquote class="border-l-4 border-brand-500 pl-5 py-3 my-6 bg-brand-50/50 rounded-r-lg text-gray-700 italic font-serif leading-relaxed">
+            "너희가 어떻게 우상을 버리고 하나님께로 돌아와서 살아 계시고 참되신 하나님을 섬기는지를 말하니." (살전 1:9)
+        </blockquote>
+        <p>그리스도인이란, 우상(자신)을 섬기는 1번 자리에서 버리고, 하나님을 섬기는 2번 자리로 옮겨진 사람입니다.</p>
+
+        <blockquote class="border-l-4 border-brand-500 pl-5 py-3 my-6 bg-brand-50/50 rounded-r-lg text-gray-700 italic font-serif leading-relaxed">
+            "그가 모든 사람을 대신하여 죽으심은 살아 있는 자들로 하여금 다시는 그들 자신을 위하여 살지 않고… 그들을 대신하여 죽었다가 다시 살아나신 이를 위하여 살게 하려 함이라." (고후 5:15)
+        </blockquote>
+        <p>복음이란, 자기를 위해 살던 사람이 하나님을 위해 사는 사람으로 바뀌는 것입니다. 1번에서 2번으로 옮겨지는 것, 그 사이에 복음이 있습니다.</p>
+        <p>주님이 이 동생과 무리에게 하신 말씀의 핵심은 이것입니다. <strong class="text-brand-900 bg-brand-50 px-2">"네가 피해자지만, 가난하지만, 윤리적으로 문제없지만, 너는 여전히 1번(자기 중심)에 있다. 2번(하나님 중심)으로 건너오라."</strong> 돈을 찾느냐 못 찾느냐가 중요한 것이 아니라, 1번에서 2번으로 건너오는 것이 중요합니다.</p>
+
+        <div class="my-16 border-t border-b border-gray-200 py-12">
+            <h2 class="font-serif text-2xl font-bold text-gray-900 mb-6">4. 탐심을 이기는 비결 — 나눔</h2>
+            <blockquote class="border-l-4 border-brand-500 pl-5 py-3 my-6 bg-brand-50/50 rounded-r-lg text-gray-700 italic font-serif leading-relaxed">
+                "네가 이 세대에 부한 자들을 명하여 마음을 높이지 말고 정함이 없는 재물에 소망을 두지 말고… 후히 주시는 하나님께 두라." (딤전 6:17)
+            </blockquote>
+            <p>'명한다'는 것은 권위자만 할 수 있는 것입니다. 세상은 돈이 권위가 되어 부자가 명령하지만, 교회는 돈이 권위가 아닙니다. 오히려 부자에게 명할 권위가 목회자에게 있습니다.</p>
+            <p>탐심을 이기는 비결은 나누는 것입니다. 성경은 뒤이어 "나눠 주라"는 명령을 선포합니다.</p>
+
+            <h3 class="font-serif text-xl font-bold text-gray-800 mt-10 mb-4">씨와 양식 — 성경적 물질관</h3>
+            <blockquote class="border-l-4 border-brand-500 pl-5 py-3 my-6 bg-brand-50/50 rounded-r-lg text-gray-700 italic font-serif leading-relaxed">
+                "심는 자에게는 씨와 먹을 양식을 주시나니." (고후 9:10)
+            </blockquote>
+            <p>하나님이 주시는 물질은 두 가지 성격이 있습니다. <strong>씨(심으라고 준 것)</strong>와 <strong>양식(먹으라고 준 것)</strong>입니다.</p>
+            <p>극한 가난이 오면 사람들은 종자(씨)까지 먹어버립니다. 씨를 먹으면 인생이 더 이상 풍요로워지지 않습니다. 반대로, 모든 수입을 다 헌금하느라 양식이 없으면 가정이 무너집니다. 씨와 양식을 구분하지 못하는 것이 문제입니다.</p>
+            <p>진짜 복을 받는다는 것은 양식이 많아지는 게 아니라 씨가 많아지는 것입니다. 수입이 늘어도 양식의 비중을 늘리지 않고 <strong>씨(나누는 부분)를 늘려가는 것</strong>이 지혜로운 삶입니다. 양식의 비중을 계속 늘리는 것을 탐욕이라 합니다.</p>
+
+            <blockquote class="border-l-4 border-brand-500 pl-5 py-3 my-6 bg-brand-50/50 rounded-r-lg text-gray-700 italic font-serif leading-relaxed">
+                "너희가 너희의 땅에서 곡식을 거둘 때에는 밭모퉁이까지 다 거두지 말고… 가난한 사람과 거류민을 위하여 버려두라." (레 19:9~10)
+            </blockquote>
+            <p>보아스는 룻을 위해 일부러 곡식 단에서 이삭을 더 많이 떨어뜨렸습니다. 우리도 일부러 이삭을 떨어뜨려, 즉 나누어 다른 사람을 배려하는 삶을 살아야 합니다.</p>
+
+            <h3 class="font-serif text-xl font-bold text-gray-800 mt-10 mb-4">돈을 이기는 비결 — 무력화시키기</h3>
+            <p>부자 앞에서 기죽지 않는 비결은, 그 사람의 돈에 관심을 갖지 않고 오히려 내가 베푸는 것입니다. "제가 선물로 드릴게요"라고 하는 순간, 그 사람의 돈은 나에게 영향력을 잃습니다.</p>
+            <p>율법주의란, 내가 가진 행위와 하나님의 의를 거래하려는 것입니다. 그러나 하나님은 거래가 아니라 <strong>공짜, 선물</strong>로 은혜를 주십니다. 하나님의 은혜는 우리가 가진 모든 자랑거리를 무력화시킵니다.</p>
+            <p>거래하는 사람의 특징은 감사가 없다는 것입니다. 사고 팔았기 때문입니다. 그러나 선물로 받으면 감사가 있습니다. 교회는 은혜의 법칙이 지배하는 곳이지, 세상의 권력이 통하는 곳이 아닙니다.</p>
+        </div>
+
+        <h2 class="font-serif text-2xl font-bold text-gray-900 mt-16 mb-6">결론</h2>
+        <p>성경이 말하는 탐심이란, 돈이 우리의 마음과 생각을 지배하는 상태입니다. 그 돈이 어떤 성격의 돈이든 상관없습니다. 하나님보다, 하나님 말씀보다 돈이 더 좋아 우리의 마음과 생각을 지배하는 것, 그것이 탐심입니다.</p>
+        <p>오늘 들은 말씀을 가지고 서로 교제하시기 바랍니다. 파마나 옷 이야기가 아니라, 말씀이 여러분을 지배하는 삶을 사시기 바랍니다.</p>
+        
+        <p class="text-xl font-medium text-brand-900 bg-brand-50 p-6 rounded-lg text-center my-8 shadow-sm">
+            "나눔으로, 베풂으로, 다른 사람을 배려함으로<br>탐심으로부터 자유로워지는 저희가 되기를 소망합니다."
+        </p>
+
+        <!-- 기도문 -->
+        <div class="mt-20 bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
+            <h3 class="font-serif text-xl font-bold text-brand-900 mb-6 text-center">기도</h3>
+            <p class="text-gray-600 leading-loose text-center italic font-serif">
+                하나님 아버지, 은혜를 감사합니다.<br>
+                귀한 자리에 저희들을 불러 모아 주셔서 하나님 말씀 듣게 해 주시니 참 감사합니다.<br><br>
+                나는 가난했고, 나는 열심히 일했고, 나는 윤리적으로 문제가 없기에<br>
+                탐심이라는 단어와 아무런 상관이 없다고 생각했지만,<br>
+                오늘 말씀을 듣고 보니 참 기가 막힙니다.<br>
+                돈 생각이 우리의 마음과 생각을 지배했습니다.<br><br>
+                저희를 붙잡아 주셔서 탐심이라는 우상숭배의 함정에서 우리를 구원해 주시고,<br>
+                돈에 지배받는 사람이 되지 않도록 도와주시며,<br>
+                나눔으로, 베풂으로, 다른 사람을 배려함으로 탐심으로부터 자유로워지는<br>
+                저희들 되게 해 주시옵소서.<br><br>
+                예수님 이름으로 기도하옵나이다. 아멘.
+            </p>
+
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-20 border-t border-gray-200 pt-8 pb-4 text-center text-gray-400 text-sm">
+            <p>© 말씀묵상. 푸른동산 지산교회 정재학 목사</p>
+        </footer>
+
+    </article>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="topBtn" onclick="scrollToTop()">↑<br>TOP</button>
+
+    <script>
+        // 화면 스크롤에 따라 TOP 버튼 보이기/숨기기
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("topBtn").style.display = "block";
+            } else {
+                document.getElementById("topBtn").style.display = "none";
+            }
+        }
+
+        // 부드럽게 맨 위로 스크롤
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
